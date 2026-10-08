@@ -18,7 +18,9 @@ terminar, así que **todo lo que tenga que perdurar va al repo y se pushea a `ma
 | funnel   | todos los días | Monitor de Growth | #adqui-notificaciones-canales   | Orbi (futuro)        |
 | meta     | todos los días | Panel Meta Ads + guardia | #adqui-notificaciones-canales | Turbo (futuro) |
 | inversion | lunes y jueves | (carga al SPA 1052) | DM D0BRVS7A4A3 (tabla de lo cargado) | — |
-| redes    | solo lunes     | Panel de redes    | DM D0BRVS7A4A3                  | Conti (futuro)       |
+| redes_general | todos los días | Panel de redes (números al día y leads del Q) | DM D0BRVS7A4A3 | Conti (futuro) |
+| redes_semana  | solo lunes     | Panel de redes (conclusiones de la semana cerrada) | DM D0BRVS7A4A3 | Conti (futuro) |
+| limpieza | solo lunes, al final | — | DM D0BRVS7A4A3 | — |
 
 **Qué toca hoy no lo decido yo.** Lo decide `python3 que_toca_hoy.py` (lee `agenda.yaml`, la
 fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelve, ni más ni menos.
@@ -34,7 +36,7 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 - `parte.py` — registra el resultado de un análisis o una preparación en `partes/AAAA-MM-DD.json`.
 - `partes/` — un parte por día. Es lo que leen los agentes que vienen después.
 - `procedimientos/` — los pasos de cada análisis y preparación (`gasto_meta.md`, `meta.md`,
-  `inversion.md`, `redes.md`; el funnel está más abajo en este archivo).
+  `inversion.md`, `redes_semana.md`, `redes_general.md`; el funnel está más abajo en este archivo).
 - `comparar.py` — en ensayo, compara mis paneles y mi guardia contra los de las rutinas viejas.
 - `memoria/` — lo que ya revisamos con Joana y no hay que volver a marcar. **Leer el archivo
   del análisis antes de alertar** (`memoria/funnel.md`, etc.).
@@ -45,7 +47,7 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
   `growth/inversion.py` y `growth/google_ads.py` (`run.py inversion`).
 - Redes (copiado de `agente-redes`): todo en `redes/` (scripts de medición y del panel, datos
   por semana desde la W34, memoria de aprendizajes en `redes/memoria/conclusiones.md`). Ver
-  `procedimientos/redes.md`.
+  `procedimientos/redes_semana.md` y `procedimientos/redes_general.md`.
 - Meta (copiado de `agente-meta-ads`): todo en `meta/` (scripts de guardia y panel, datos
   crudos del MCP, CRM, config, referencias). Ver `meta/README.md`.
 
@@ -156,6 +158,25 @@ error mío por definición: entre una corrida y otra el CRM y Meta cambian. Se e
 Es uno solo, como el Monitor y el de Meta: lo creo una vez y **cada lunes lo actualizo con la
 semana nueva, guardando el histórico** (no se arma de cero cada semana). Se republica en su
 mismo link, leyéndolo antes (regla 7).
+
+## Histórico y limpieza
+
+El repo guarda el histórico para comparar y aprender, sin crecer sin control. La limpieza corre
+los lunes, al final de la corrida (análisis `limpieza`): `python3 limpieza.py` muestra el plan y
+`python3 limpieza.py --aplicar` borra. El detalle de lo borrado va al parte.
+
+- **Se guardan siempre** (pesan pocos KB): los resúmenes semanales (`redes/data/<semana>/`), las
+  lecturas, `redes/memoria/conclusiones.md`, los resúmenes diarios (`redes/general/<fecha>.json`),
+  los partes, `memoria/`, los informes de la guardia y el gasto acumulado de Meta (`data/meta_spend.json`).
+- **Crudos de Metricool y de Meta: 8 semanas** y después se borran (`redes/data/raw/`,
+  `redes/general/raw/`, `meta/datos/meta-ads/`). Excepciones: los crudos de Meta que el Panel Meta
+  Ads todavía usa (desde el inicio del trimestre anterior, porque compara contra el Q anterior
+  entero), y los mapas conjunto → campaña y los exports históricos.
+- **Fotos diarias del CRM** (`data/snapshots/`, y la foto que guarda la guardia en
+  `meta/datos/meta-ads/guardia/<fecha>/crm/`): todas las de los últimos 90 días; las más viejas
+  se reducen a una por semana (la última de cada semana ISO). **Las fotos semanales no se borran
+  nunca** (`redes/data/raw/<semana>/crm.json`, `meta/datos/crm/<semana>/`): sin ellas no se puede
+  reconstruir el funnel del pasado.
 
 ## Formato del parte (`partes/AAAA-MM-DD.json`)
 

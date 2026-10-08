@@ -11,5 +11,5 @@ parte en `partes/` para los agentes que siguen. Mide y alerta: no propone ni eje
 ```bash
 python3 que_toca_hoy.py                      # qué toca hoy (hora de Argentina)
 python3 que_toca_hoy.py --fecha 2026-10-12   # simular otro día
-python3 parte.py redes ok --resumen "..." --datos datos.json
+python3 parte.py redes_semana ok --resumen "..." --datos datos.json
 ```

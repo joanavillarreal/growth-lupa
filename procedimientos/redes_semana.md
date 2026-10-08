@@ -1,4 +1,4 @@
-# Análisis `redes` — la semana cerrada en Metricool + leads de redes
+# Análisis `redes_semana` — la semana cerrada en Metricool (lunes)
 
 Copiado de Lupa en `agente-redes` (`.claude/agents/lupa.md`, skills `informe-redes-semanal` y
 `boxer-cruce-crm`; ver `redes/referencias/`). **Solo medición**: las direcciones de contenido,
@@ -51,9 +51,12 @@ creativo). Lunes. Marcas: Boxer Gestión (brandId 4938672, IG + FB + LinkedIn) y
    está confirmado o descartado.
 6. **Memoria:** `redes/memoria/conclusiones.md`. Parte 2 (log de la semana, aprendizajes, no
    números) siempre; Parte 1 solo si la semana confirma o tira abajo algo.
-7. **Panel:** `python3 redes/scripts/panel_redes.py`. Arma `redes/panel/index.html` con todo el
-   histórico más la semana nueva y las alertas automáticas. Leer el link de `paneles.yaml` →
-   `panel_redes.link` y republicar `redes/panel/index.html` en ese mismo link (este panel se
-   publica también en ensayo).
-8. `parte.py redes ok` con titular, prospectos, alertas y el link; commit de `redes/` y push;
-   mensaje al DM con el titular, el dato más importante y el link.
+7. **Panel:** `python3 redes/scripts/panel_redes.py`. El bloque de conclusiones pasa a ser la
+   semana nueva (reemplaza a la anterior: el panel muestra solo la última semana cerrada). Leer el
+   link de `paneles.yaml` → `panel_redes.link` y republicar `redes/panel/index.html` ahí. Si ese
+   día `redes_general` ya publicó, igual se republica: el panel junta los dos.
+8. `parte.py redes_semana ok` con titular, prospectos, alertas y el link; commit de `redes/` y
+   push; mensaje al DM con el titular, el dato más importante y el link.
+
+El histórico semanal (`redes/data/<semana>/`, la lectura y `redes/memoria/conclusiones.md`) queda
+en el repo para comparar y aprender. No se muestra en el panel.

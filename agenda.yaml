@@ -86,11 +86,11 @@ analisis:
     slack: "D0BRVS7A4A3"            # la tabla de lo cargado, a Joana
     disparar_despues: []
 
-  redes:
-    descripcion: Semana cerrada en redes (Metricool) + leads de redes en Bitrix + Panel de redes
+  redes_semana:
+    descripcion: Semana cerrada en Metricool (una sola vez, el lunes) + cruce con el CRM + conclusiones
     dias: [lunes]
     artefacto: panel_redes
-    procedimiento: procedimientos/redes.md
+    procedimiento: procedimientos/redes_semana.md
     entorno: [BITRIX_WEBHOOK_URL]
     herramientas:
       - getBrandSettings
@@ -98,3 +98,23 @@ analisis:
       - ads_get_ad_entities         # gasto de awareness de la semana
     slack: "D0BRVS7A4A3"
     disparar_despues: []      # futuro: [conti]
+
+  redes_general:
+    descripcion: Seguidores, alcance y engagement al día de hoy + leads de redes del trimestre
+    dias: todos
+    artefacto: panel_redes
+    procedimiento: procedimientos/redes_general.md
+    entorno: [BITRIX_WEBHOOK_URL]
+    herramientas:
+      - getAnalyticsDataByMetrics
+    slack: "D0BRVS7A4A3"
+    disparar_despues: []
+
+  limpieza:
+    descripcion: Limpieza del histórico (crudos 8 semanas; fotos diarias del CRM 90 días y después una por semana)
+    dias: [lunes]
+    artefacto: null
+    procedimiento: CLAUDE.md (sección Histórico y limpieza)
+    herramientas: []
+    slack: "D0BRVS7A4A3"
+    disparar_despues: []

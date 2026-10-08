@@ -17,12 +17,16 @@ Cada llamada suma un intento del día para ese análisis.
 import argparse
 import datetime as dt
 import json
+import os
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import yaml
 
 RAIZ = Path(__file__).resolve().parent
+# Con LUPA_SIMULACION=1 los partes van a partes/simulacion/: una corrida simulada nunca
+# deja un parte que una corrida real lea como "ya hecho".
+PARTES = RAIZ / "partes" / ("simulacion" if os.environ.get("LUPA_SIMULACION") == "1" else "")
 
 
 def main():
@@ -48,7 +52,7 @@ def main():
     tz = ZoneInfo(agenda["zona_horaria"])
     ahora = dt.datetime.now(tz)
     fecha = args.fecha or ahora.date()
-    ruta = RAIZ / "partes" / f"{fecha.isoformat()}.json"
+    ruta = PARTES / f"{fecha.isoformat()}.json"
     parte = json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {
         "fecha": fecha.isoformat(), "modo": paneles["modo"], "analisis": {}}
     seccion = parte.setdefault("preparacion" if es_prep else "analisis", {})
@@ -83,7 +87,7 @@ def main():
     if previo:
         seccion[args.analisis]["intentos_previos"] = previo.get("intentos_previos", []) + [
             {k: previo.get(k) for k in ("estado", "hora", "error", "herramientas")}]
-    ruta.parent.mkdir(exist_ok=True)
+    ruta.parent.mkdir(parents=True, exist_ok=True)
     ruta.write_text(json.dumps(parte, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     r = seccion[args.analisis]
     print(f"parte actualizado: {ruta.relative_to(RAIZ)} → {args.analisis}: {args.estado} (intento {r['intentos']})")

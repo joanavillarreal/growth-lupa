@@ -14,6 +14,7 @@ Uso:
 import argparse
 import datetime as dt
 import json
+import os
 import sys
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -21,6 +22,9 @@ from zoneinfo import ZoneInfo
 import yaml
 
 RAIZ = Path(__file__).resolve().parent
+# Con LUPA_SIMULACION=1 los partes van a partes/simulacion/: una corrida simulada nunca
+# deja un parte que una corrida real lea como "ya hecho".
+PARTES = RAIZ / "partes" / ("simulacion" if os.environ.get("LUPA_SIMULACION") == "1" else "")
 DIAS = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"]
 
 
@@ -37,7 +41,7 @@ def toca(dias, dia_semana):
 
 
 def leer_parte(fecha):
-    ruta = RAIZ / "partes" / f"{fecha.isoformat()}.json"
+    ruta = PARTES / f"{fecha.isoformat()}.json"
     if not ruta.exists():
         return {}, {}
     parte = json.loads(ruta.read_text(encoding="utf-8"))

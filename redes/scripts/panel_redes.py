@@ -4,18 +4,15 @@
 Uso:
     python3 redes/scripts/panel_redes.py        (desde la raíz de growth-lupa)
 
-Lee
-    redes/data/<semana>/boxer-gestion.json, boxer-taller.json   (de analizar.py)
-    redes/data/<semana>/crm.json                                 (de cruce_crm.py)
-    redes/data/<semana>/lectura.json                             (la lectura de Lupa)
-    data/snapshots/ (el último)                                  (leads de redes del trimestre,
-                                                                  el mismo snapshot del Monitor)
-No recalcula lo que ya calculó analizar.py. Lo único nuevo son:
-    - las alertas automáticas de cada semana (reglas fijas, cada una con su número)
-    - los leads del canal "Redes Sociales" por trimestre, desde el snapshot del funnel.
-Donde un número no existe va null ("sin dato"), nunca cero.
+El panel tiene tres partes:
+  1. Las cuentas al día de hoy   <- redes/general/<fecha>.json más reciente (general.py, diario)
+  2. Leads de redes del trimestre <- data/snapshots/ (el último: el mismo snapshot del Monitor)
+  3. La última semana cerrada     <- redes/data/<semana>/ (analizar.py, cruce_crm.py, lectura.json)
+     Solo la última: cada lunes se reemplaza. El histórico semanal queda en el repo, no en el panel.
 
-El panel es uno solo: cada lunes se suma la semana nueva y el histórico queda.
+No recalcula lo que ya calcularon analizar.py o general.py. Lo único nuevo son las alertas
+automáticas de la semana (reglas fijas, cada una con su número) y los leads por trimestre.
+Donde un número no existe va null ("sin dato"), nunca cero.
 """
 import json
 import re
@@ -183,23 +180,39 @@ def leads_por_trimestre(hoy):
                       "(config/definitions.yaml), snapshot diario del funnel"}
 
 
+def ultima_general(hoy):
+    archivos = sorted(p for p in (REDES / "general").glob("????-??-??.json")
+                      if p.stem <= hoy.isoformat()) if (REDES / "general").exists() else []
+    if not archivos:
+        return None
+    g = json.loads(archivos[-1].read_text(encoding="utf-8"))
+    g["al_dia"] = g["fecha"] == hoy.isoformat()
+    return g
+
+
+def ultima_semana():
+    for s in reversed(semanas()):
+        if all(leer(s, clave) for clave, _ in MARCAS):
+            return s
+    return None
+
+
 def construir():
     tz = ZoneInfo("America/Argentina/Buenos_Aires")
     ahora = datetime.now(tz)
-    sems = semanas()
-    datos = {"generado": ahora.isoformat(timespec="minutes"), "semanas": [], "marcas": {}}
-    for clave, nombre in MARCAS:
-        datos["marcas"][clave] = {"nombre": nombre, "por_semana": {}}
-    for s in sems:
-        fila = {"semana": s, "alertas": [], "crm": None, "lectura": leer(s, "lectura")}
+    hoy = ahora.date()
+    datos = {"generado": ahora.isoformat(timespec="minutes"), "hoy": hoy.isoformat(),
+             "general": ultima_general(hoy), "leads": leads_por_trimestre(hoy), "semana": None}
+    s = ultima_semana()
+    if s:
+        fila = {"semana": s, "alertas": [], "crm": None, "lectura": leer(s, "lectura"), "marcas": {}}
         for clave, nombre in MARCAS:
-            d = leer(s, clave)
-            if not d:
-                continue
-            r = resumen_marca(d)
-            datos["marcas"][clave]["por_semana"][s] = r
-            fila["alertas"] += alertas_auto(r, nombre)
+            r = resumen_marca(leer(s, clave))
             fila["desde"], fila["hasta"] = r["desde"], r["hasta"]
+            fila["alertas"] += alertas_auto(r, nombre)
+            fila["marcas"][clave] = {"nombre": nombre, "top_engagement": r["top_engagement"],
+                                     "top_seguidores": r["top_seguidores"],
+                                     "publicaciones": r["ig"]["publicaciones"]}
         crm = leer(s, "crm")
         if crm:
             fila["crm"] = {"prospectos_redes": crm.get("prospectos_redes"),
@@ -208,8 +221,7 @@ def construir():
                            "var_pct": (crm.get("comparativa") or {}).get("prospectos_redes_var_pct")}
             if crm.get("prospectos_redes") == 0:
                 fila["alertas"].append("Las redes no trajeron ningún prospecto al CRM esta semana.")
-        datos["semanas"].append(fila)
-    datos["leads"] = leads_por_trimestre(ahora.date())
+        datos["semana"] = fila
 
     destino = REDES / "panel"
     destino.mkdir(exist_ok=True)
@@ -220,9 +232,11 @@ def construir():
     html = re.sub(r'(<script type="application/json" id="datos">).*?(</script>)',
                   lambda m: m.group(1) + bloque + m.group(2), plantilla, count=1, flags=re.S)
     (destino / "index.html").write_text(html, encoding="utf-8")
-    ultima = datos["semanas"][-1]["semana"] if datos["semanas"] else "—"
-    print(f"Panel de redes: {len(sems)} semanas ({sems[0]} a {ultima}), "
-          f"leads {datos['leads']['trimestres'][0]['etiqueta']}: {datos['leads']['trimestres'][0]['total']}")
+    g = datos["general"]
+    print(f"Panel de redes: cuentas al {g['datos_hasta'] if g else 'SIN DATO'}"
+          f"{'' if not g or g['al_dia'] else ' (ATRASADO: no es de hoy)'} · "
+          f"leads {datos['leads']['trimestres'][0]['etiqueta']}: {datos['leads']['trimestres'][0]['total']} · "
+          f"semana {s or 'ninguna'}")
     print(f"  -> {destino / 'index.html'}")
 
 

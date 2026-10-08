@@ -71,7 +71,7 @@ section{display:flex;flex-direction:column;gap:14px;min-width:0}
 
 /* gráficos */
 .charts{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
-@media (min-width:700px){ .charts{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (min-width:700px){ .charts{grid-template-columns:repeat(3,minmax(0,1fr))} .charts.dos{grid-template-columns:repeat(2,minmax(0,1fr))} }
 .ch{display:flex;flex-direction:column;gap:4px;min-width:0}
 .ch .ct{font-size:12.5px;font-weight:600;color:var(--ink-2)}
 .ch svg{width:100%;height:auto;max-height:240px;display:block;overflow:visible}
@@ -117,6 +117,7 @@ td .pz small{color:var(--ink-3)}
 #tip{position:fixed;pointer-events:none;z-index:10;background:var(--ink);color:var(--surface);font-size:12.5px;line-height:1.4;padding:6px 9px;border-radius:7px;white-space:nowrap}
 @media (prefers-reduced-motion:no-preference){ .bar{transition:opacity .15s} }
 .bar.dim{opacity:.35}
+.atraso{font-size:14px;color:var(--bad);background:var(--bad-bg);border:1.5px solid var(--bad);border-radius:10px;padding:10px 14px}
 </style>
 
 <script type="application/json" id="datos">null</script>
@@ -128,13 +129,11 @@ td .pz small{color:var(--ink-3)}
       <h1>Panel de redes</h1>
       <span class="sub" id="sub"></span>
     </div>
-    <label class="selector" for="semana">Semana
-      <select id="semana"></select>
-    </label>
   </header>
+  <div id="atraso"></div>
 
   <section aria-labelledby="h-cuentas">
-    <div class="sec-h"><h2 id="h-cuentas">Las cuentas</h2><span class="sub" id="cuentas-sub"></span></div>
+    <div class="sec-h"><h2 id="h-cuentas">Las cuentas hoy</h2><span class="sub" id="cuentas-sub"></span></div>
     <div class="stack" id="cuentas"></div>
   </section>
 
@@ -144,7 +143,7 @@ td .pz small{color:var(--ink-3)}
   </section>
 
   <section aria-labelledby="h-semana">
-    <div class="sec-h"><h2 id="h-semana">La semana</h2><span class="sub" id="semana-sub"></span></div>
+    <div class="sec-h"><h2 id="h-semana">La última semana</h2><span class="sub" id="semana-sub"></span></div>
     <div class="card" id="semana-c"></div>
   </section>
 
@@ -157,60 +156,55 @@ const D = JSON.parse(document.getElementById("datos").textContent);
 const $ = id => document.getElementById(id);
 const fmt = (v, d = 0) => v == null ? "sin dato" : Number(v).toLocaleString("es-AR", {minimumFractionDigits: d, maximumFractionDigits: d});
 const pct = v => v == null ? "sin dato" : fmt(v, 1) + "%";
-const sd = v => v == null ? '<span class="muted">sin dato</span>' : v;
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const corta = s => s.replace(/^\d{4}-/, "");
 const dm = iso => iso ? `${iso.slice(8,10)}/${iso.slice(5,7)}` : "";
 const fechaPz = f => f ? `${f.slice(6,8)}/${f.slice(4,6)}` : "";
-const SEMANAS = D.semanas.map(s => s.semana);
-let sel = SEMANAS.length - 1;
-try { const g = localStorage.getItem("panel-redes-semana"); if (g && SEMANAS.includes(g)) sel = SEMANAS.indexOf(g); } catch (e) {}
 
 /* ---------- gráficos SVG (una escala por gráfico, marcas finas, tooltip) ---------- */
-let W = 300; const H = 130, PL = 34, PR = 8, PT = 12, PB = 22;
-function escala(max){ const m = max <= 0 ? 1 : max; const p = Math.pow(10, Math.floor(Math.log10(m))); const n = Math.ceil(m / p * 2) / 2 * p; return n; }
-function ejes(max, n){
+let W = 300; const H = 130, PL = 40, PR = 8, PT = 12, PB = 22;
+function escala(max){ const m = max <= 0 ? 1 : max; const p = Math.pow(10, Math.floor(Math.log10(m))); return Math.ceil(m / p * 2) / 2 * p; }
+function ejes(max){
   const top = escala(max), y = v => PT + (H - PT - PB) * (1 - v / top);
   let g = "";
   [0, top / 2, top].forEach(v => { g += `<line class="grid" x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${PL - 5}" y="${y(v) + 4}" text-anchor="end">${fmt(v, v < 10 && v % 1 ? 1 : 0)}</text>`; });
-  return {g, y, top};
+  return {g, y};
 }
 function xs(n){ const w = W - PL - PR; return i => PL + (n === 1 ? w / 2 : w * (i + .5) / n); }
-function etiquetasX(labels, x){ return labels.map((l, i) => (labels.length <= 8 || i % 2 === 0 || i === labels.length - 1) ? `<text class="ax" x="${x(i)}" y="${H - 6}" text-anchor="middle">${esc(l)}</text>` : "").join(""); }
+function etiquetasX(labels, x){ const paso = Math.max(1, Math.ceil(labels.length / 6)); return labels.map((l, i) => ((labels.length - 1 - i) % paso === 0) ? `<text class="ax" x="${x(i)}" y="${H - 6}" text-anchor="middle">${esc(l)}</text>` : "").join(""); }
 
 function linea(labels, vals, color, opts = {}){
-  const ok = vals.filter(v => v != null), mn = opts.desdeCero ? 0 : Math.min(...ok), mx = Math.max(...ok);
-  const pad = opts.desdeCero ? 0 : Math.max((mx - mn) * .25, 1), lo = Math.max(0, mn - pad), hi = mx + pad;
+  const ok = vals.filter(v => v != null);
+  if (!ok.length) return '<p class="muted">sin dato</p>';
+  const mn = Math.min(...ok), mx = Math.max(...ok), pad = Math.max((mx - mn) * .25, 1), lo = Math.max(0, mn - pad), hi = mx + pad;
   const y = v => PT + (H - PT - PB) * (1 - (v - lo) / (hi - lo || 1)), x = xs(labels.length);
   let g = "";
-  [lo, (lo + hi) / 2, hi].forEach(v => { g += `<line class="grid" x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${PL - 5}" y="${y(v) + 4}" text-anchor="end">${fmt(v, opts.dec ?? 0)}</text>`; });
+  [lo, (lo + hi) / 2, hi].forEach(v => { g += `<line class="grid" x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${PL - 5}" y="${y(v) + 4}" text-anchor="end">${fmt(v)}</text>`; });
   const pts = vals.map((v, i) => v == null ? null : [x(i), y(v)]);
   let d = "", abierto = false;
   pts.forEach(p => { if (!p) { abierto = false; return; } d += (abierto ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); abierto = true; });
-  const marcas = pts.map((p, i) => p ? `<circle cx="${p[0]}" cy="${p[1]}" r="${i === opts.marca ? 4.5 : 3}" fill="${i === opts.marca ? color : "var(--surface)"}" stroke="${color}" stroke-width="2" data-tip="${esc(labels[i] + " · " + (opts.tip ? opts.tip(vals[i], i) : fmt(vals[i], opts.dec ?? 0)))}"/>` : "").join("");
+  const marcas = pts.map((p, i) => p ? `<circle cx="${p[0]}" cy="${p[1]}" r="6" fill="transparent" data-tip="${esc(labels[i] + " · " + fmt(vals[i]) + " seguidores")}"/>` : "").join("");
   const fin = pts.map((p, i) => [p, i]).filter(a => a[0]).pop();
-  const lab = fin ? `<text class="val" x="${Math.min(fin[0][0], W - PR)}" y="${fin[0][1] - 8}" text-anchor="end">${fmt(vals[fin[1]], opts.dec ?? 0)}${opts.suf || ""}</text>` : "";
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "")}">${g}<path d="${d}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round"/>${marcas}${lab}${etiquetasX(labels, x)}</svg>`;
+  const lab = `<circle cx="${fin[0][0]}" cy="${fin[0][1]}" r="4" fill="${color}"/><text class="val" x="${fin[0][0]}" y="${fin[0][1] - 9}" text-anchor="end">${fmt(vals[fin[1]])}</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "")}">${g}<path d="${d}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round"/>${lab}${marcas}${etiquetasX(labels, x)}</svg>`;
 }
 
 function apiladas(labels, a, b, opts = {}){
-  const tot = labels.map((_, i) => (a[i] || 0) + (b[i] || 0)), {g, y} = ejes(Math.max(...tot), labels.length), x = xs(labels.length);
-  const bw = Math.min(26, (W - PL - PR) / labels.length * .6);
+  const tot = labels.map((_, i) => (a[i] || 0) + (b[i] || 0)), {g, y} = ejes(Math.max(...tot)), x = xs(labels.length);
+  const bw = Math.max(2, Math.min(22, (W - PL - PR) / labels.length * .62));
   let barras = "";
   labels.forEach((l, i) => {
     if (a[i] == null && b[i] == null) return;
     const ya = y(a[i] || 0), yb = y((a[i] || 0) + (b[i] || 0)), y0 = y(0);
-    const tip = esc(`${l} · orgánico ${fmt(a[i])} · pauta ${fmt(b[i])}`);
-    const dim = opts.marca != null && i !== opts.marca ? " dim" : "";
-    barras += `<g class="bar${dim}" data-tip="${tip}"><rect x="${x(i) - bw / 2}" y="${ya}" width="${bw}" height="${Math.max(y0 - ya, 0)}" fill="var(--org)" rx="2"/>`
-      + `<rect x="${x(i) - bw / 2}" y="${yb}" width="${bw}" height="${Math.max(ya - yb - 2, 0)}" fill="var(--pago)" rx="2"/>`
-      + `<rect x="${x(i) - bw / 2 - 3}" y="${PT}" width="${bw + 6}" height="${y0 - PT}" fill="transparent"/></g>`;
+    barras += `<g class="bar" data-tip="${esc(`${l} · orgánico ${fmt(a[i])} · pauta ${fmt(b[i])}`)}"><rect x="${x(i) - bw / 2}" y="${ya}" width="${bw}" height="${Math.max(y0 - ya, 0)}" fill="var(--org)" rx="1.5"/>`
+      + `<rect x="${x(i) - bw / 2}" y="${yb}" width="${bw}" height="${Math.max(ya - yb - 1.5, 0)}" fill="var(--pago)" rx="1.5"/>`
+      + `<rect x="${x(i) - bw / 2 - 2}" y="${PT}" width="${bw + 4}" height="${y0 - PT}" fill="transparent"/></g>`;
   });
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "")}">${g}${barras}${etiquetasX(labels, x)}</svg>`;
 }
 
 function barras(labels, vals, opts = {}){
-  const {g, y} = ejes(Math.max(...vals, 1), labels.length), x = xs(labels.length);
+  const {g, y} = ejes(Math.max(...vals, 1)), x = xs(labels.length);
   const bw = Math.min(22, (W - PL - PR) / labels.length * .65);
   const b = labels.map((l, i) => {
     const color = opts.color ? opts.color(i) : "var(--org)";
@@ -220,101 +214,91 @@ function barras(labels, vals, opts = {}){
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "")}">${g}${b}${etiquetasX(labels, x)}</svg>`;
 }
 
-/* ---------- secciones ---------- */
-function delta(v, suf = ""){ if (v == null) return '<span class="muted">sin dato</span>'; const c = v > 0 ? "up" : v < 0 ? "down" : ""; return `<span class="${c}">${v > 0 ? "+" : ""}${fmt(v)}${suf}</span>`; }
+function delta(v, suf = ""){ if (v == null) return '<span class="muted">sin dato</span>'; const c = v > 0 ? "up" : v < 0 ? "down" : ""; return `<span class="${c}">${v > 0 ? "+" : ""}${fmt(v, suf === " pp" || (v % 1) ? 1 : 0)}${suf}</span>`; }
 
+/* ---------- 1. las cuentas hoy ---------- */
 function cuentas(){
-  const s = SEMANAS[sel], labels = SEMANAS.map(corta);
-  const fila = D.semanas[sel];
-  $("cuentas-sub").textContent = `semana ${s}, del ${dm(fila.desde)} al ${dm(fila.hasta)} · evolución desde ${SEMANAS[0]}`;
-  $("cuentas").innerHTML = Object.entries(D.marcas).map(([clave, m]) => {
-    const r = m.por_semana[s];
-    if (!r) return `<div class="card"><h3>${m.nombre}</h3><p class="muted">Sin datos para ${s}.</p></div>`;
-    const serie = k => SEMANAS.map(w => m.por_semana[w]?.ig[k] ?? null);
-    const engRaro = (r.ig.formatos || []).some(f => (f.engagement_pct || 0) > 100) || r.ig.muestra_chica;
-    const otras = [`<span>Facebook <b>${sd(fmt(r.fb.seguidores))}</b> seguidores (${delta(r.fb.seguidores_delta)}) · <b>${fmt(r.fb.views)}</b> views</span>`];
-    if (r.li) otras.push(`<span>LinkedIn <b>${fmt(r.li.seguidores)}</b> seguidores (${delta(r.li.seguidores_delta)}) · <b>${fmt(r.li.impresiones)}</b> impresiones</span>`);
+  const G = D.general;
+  if (!G) { $("cuentas").innerHTML = '<div class="card"><p class="muted">Todavía no hay números diarios de las cuentas.</p></div>'; return; }
+  if (!G.al_dia) $("atraso").innerHTML = `<div class="atraso" role="alert"><b>Números de las cuentas sin actualizar desde el ${dm(G.datos_hasta)}.</b> Metricool no respondió en las últimas corridas: lo que ves abajo no es de hoy.</div>`;
+  $("cuentas-sub").textContent = `últimos 7 días, del ${dm(G.ventana.desde)} al ${dm(G.ventana.hasta)}, contra los 7 anteriores`;
+  $("cuentas").innerHTML = Object.values(G.marcas).map(m => {
+    if (m.sin_dato) return `<div class="card"><h3>${m.nombre}</h3><p class="muted">Sin dato: ${esc(m.sin_dato)}.</p></div>`;
+    const u = m.ultimos_7, v = m.variacion_pct, s = m.serie_30d, labels = s.map(p => dm(p.fecha));
+    const otras = [];
+    if (u.fb) otras.push(`<span>Facebook <b>${fmt(u.fb.seguidores)}</b> seguidores (${delta(u.fb.seguidores_delta)} en 7 días) · <b>${fmt(u.fb.views)}</b> views</span>`);
+    if (u.li) otras.push(`<span>LinkedIn <b>${fmt(u.li.seguidores)}</b> seguidores (${delta(u.li.seguidores_delta)}) · <b>${fmt(u.li.impresiones)}</b> impresiones</span>`);
+    const raro = u.engagement_no_confiable || u.muestra_chica;
     return `<div class="card">
-      <div class="brand-h"><h3>${m.nombre}</h3><span class="chip">${r.modo_lectura === "lanzamiento" ? "cuenta en lanzamiento" : "cuenta en optimización"}</span></div>
+      <h3>${m.nombre}</h3>
       <div class="kpis">
-        <div class="kpi"><span class="k">Seguidores en Instagram</span><span class="v num">${fmt(r.ig.seguidores)}</span><span class="d">${delta(r.ig.seguidores_delta)} en la semana</span></div>
-        <div class="kpi"><span class="k">Alcance de la semana</span><span class="v num">${fmt(r.ig.alcance_total)}</span><span class="d">orgánico ${fmt(r.ig.alcance_organico)} · pauta ${fmt(r.ig.alcance_pago)}</span></div>
-        <div class="kpi"><span class="k">Engagement orgánico</span><span class="v num">${pct(r.ig.engagement_pct)}</span><span class="d">${fmt(r.ig.interacciones)} interacciones / alcance orgánico</span>${engRaro ? '<span class="flag">no confiable esta semana</span>' : ""}</div>
+        <div class="kpi"><span class="k">Seguidores en Instagram</span><span class="v num">${fmt(u.seguidores)}</span><span class="d">${delta(u.seguidores_delta)} en 7 días · ${delta(m.seguidores_delta_30d)} en 30</span></div>
+        <div class="kpi"><span class="k">Alcance, últimos 7 días</span><span class="v num">${fmt(u.alcance_total)}</span><span class="d">orgánico ${fmt(u.alcance_organico)} (${delta(v.alcance_organico, "%")}) · pauta ${fmt(u.alcance_pago)}</span></div>
+        <div class="kpi"><span class="k">Engagement orgánico, 7 días</span><span class="v num">${pct(u.engagement_pct)}</span><span class="d">${fmt(u.interacciones)} interacciones · ${delta(v.engagement_pp, " pp")} contra los 7 anteriores</span>${raro ? `<span class="flag">${u.muestra_chica ? "muestra chica: el % es ruido" : "no confiable: arrastre de piezas viejas"}</span>` : ""}</div>
       </div>
-      <div class="charts">
-        <div class="ch"><span class="ct">Seguidores en Instagram</span>${linea(labels, serie("seguidores"), "var(--org)", {marca: sel, aria: "Seguidores por semana"})}</div>
-        <div class="ch"><span class="ct">Alcance por semana</span>${apiladas(labels, serie("alcance_organico"), serie("alcance_pago"), {marca: sel, aria: "Alcance orgánico y pago por semana"})}
+      <div class="charts dos">
+        <div class="ch"><span class="ct">Seguidores en Instagram, 30 días</span>${linea(labels, s.map(p => p.seguidores), "var(--org)", {aria: "Seguidores por día"})}</div>
+        <div class="ch"><span class="ct">Alcance por día, 30 días</span>${apiladas(labels, s.map(p => p.alcance_organico), s.map(p => p.alcance_pago), {aria: "Alcance orgánico y pago por día"})}
           <div class="legend"><span><i style="background:var(--org)"></i>orgánico</span><span><i style="background:var(--pago)"></i>pauta</span></div></div>
-        <div class="ch"><span class="ct">Engagement orgánico (%)</span>${linea(labels, serie("engagement_pct"), "var(--org)", {marca: sel, dec: 1, suf: "%", desdeCero: true, aria: "Engagement orgánico por semana", tip: v => pct(v)})}</div>
       </div>
       <div class="otras">${otras.join("")}</div>
     </div>`;
   }).join("");
 }
 
+/* ---------- 2. leads ---------- */
 function leads(){
   const L = D.leads, [act, prev] = L.trimestres;
-  const delTramo = prev.mismo_tramo, var_ = delTramo.total ? Math.round((act.total - delTramo.total) / delTramo.total * 1000) / 10 : null;
-  const semanas = [...prev.por_semana.map(w => ({...w, q: prev.etiqueta})), ...act.por_semana.map(w => ({...w, q: act.etiqueta}))];
-  // una semana partida entre dos Q aparece una vez por Q: se suman para el gráfico
-  const unidas = []; semanas.forEach(w => { const u = unidas.find(x => x.semana === w.semana); u ? (u.leads += w.leads, u.q += " / " + w.q) : unidas.push({...w}); });
+  const tramo = prev.mismo_tramo, var_ = tramo.total ? Math.round((act.total - tramo.total) / tramo.total * 1000) / 10 : null;
+  const unidas = [];
+  [...prev.por_semana.map(w => ({...w, q: prev.etiqueta})), ...act.por_semana.map(w => ({...w, q: act.etiqueta}))]
+    .forEach(w => { const u = unidas.find(x => x.semana === w.semana); u ? (u.leads += w.leads, u.q += " / " + w.q) : unidas.push({...w}); });
+  const svg = (() => { W = 620; const r = barras(unidas.map(w => corta(w.semana)), unidas.map(w => w.leads), {aria: "Leads de redes por semana", color: i => unidas[i].q.includes(act.etiqueta) ? "var(--org)" : "var(--pago)", tip: i => `${unidas[i].semana} (${unidas[i].q}) · ${unidas[i].leads} leads`}); W = 300; return r; })();
   $("leads").innerHTML = `
     <div style="display:flex;flex-direction:column;gap:10px">
       <span class="eyebrow">${act.etiqueta}${act.en_curso ? " · en curso" : ""}</span>
       <span class="big num">${act.total}</span>
-      <span class="sub">leads del ${dm(act.desde)} al ${dm(act.hasta)} · contra ${delTramo.total} en el mismo tramo del ${prev.etiqueta}${var_ != null ? ` (${var_ > 0 ? "+" : ""}${fmt(var_, 1)}%)` : ""}</span>
-      <div class="estados">
-        <span class="chip">derivados ${act.derivados}</span><span class="chip">en gestión ${act.en_gestion}</span>
-        <span class="chip">no útiles ${act.no_utiles}</span><span class="chip">inactivos ${act.inactivos}</span>
-      </div>
+      <span class="sub">leads del ${dm(act.desde)} al ${dm(act.hasta)} · contra ${tramo.total} en el mismo tramo del ${prev.etiqueta}${var_ != null ? ` (${var_ > 0 ? "+" : ""}${fmt(var_, 1)}%)` : ""}</span>
+      <div class="estados"><span class="chip">derivados ${act.derivados}</span><span class="chip">en gestión ${act.en_gestion}</span><span class="chip">no útiles ${act.no_utiles}</span><span class="chip">inactivos ${act.inactivos}</span></div>
       <span class="sub">${prev.etiqueta} completo: <b class="num">${prev.total}</b> leads · ${prev.derivados} derivados</span>
       <p class="nota">${esc(L.fuente)}. Datos al ${dm(L.corte_snapshot)}. Son leads del canal: no se atribuyen a ninguna publicación.</p>
     </div>
-    <div class="ch"><span class="ct">Leads de redes por semana</span>
-      ${(() => { W = 620; const svg = barras(unidas.map(w => corta(w.semana)), unidas.map(w => w.leads), {aria: "Leads de redes por semana", color: i => unidas[i].q.includes(act.etiqueta) ? "var(--org)" : "var(--pago)", tip: i => `${unidas[i].semana} (${unidas[i].q}) · ${unidas[i].leads} leads`}); W = 300; return svg; })()}
-      <div class="legend"><span><i style="background:var(--pago)"></i>${prev.etiqueta}</span><span><i style="background:var(--org)"></i>${act.etiqueta}</span></div>
-    </div>`;
+    <div class="ch"><span class="ct">Leads de redes por semana</span>${svg}
+      <div class="legend"><span><i style="background:var(--pago)"></i>${prev.etiqueta}</span><span><i style="background:var(--org)"></i>${act.etiqueta}</span></div></div>`;
 }
 
-function piezas(r){
-  if (!r || !r.top_engagement.length) return '<p class="muted">Sin piezas publicadas.</p>';
+/* ---------- 3. la última semana ---------- */
+function piezas(m){
+  if (!m || !m.top_engagement.length) return '<p class="muted">Sin piezas publicadas.</p>';
   return `<div class="tw"><table><thead><tr><th>Pieza</th><th>Alcance</th><th>Interacciones</th><th>Engagement</th><th>Follows</th></tr></thead><tbody>${
-    r.top_engagement.map(p => `<tr><td><div class="pz"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.tipo)} del ${fechaPz(p.fecha)}</a><small>${esc(p.texto)}</small></div></td><td>${fmt(p.alcance)}</td><td>${fmt(p.interacciones)}</td><td>${pct(p.engagement_pct)}</td><td>${p.follows == null ? '<span class="muted">sin dato</span>' : fmt(p.follows)}</td></tr>`).join("")
+    m.top_engagement.map(p => `<tr><td><div class="pz"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.tipo)} del ${fechaPz(p.fecha)}</a><small>${esc(p.texto)}</small></div></td><td>${fmt(p.alcance)}</td><td>${fmt(p.interacciones)}</td><td>${pct(p.engagement_pct)}</td><td>${p.follows == null ? '<span class="muted">sin dato</span>' : fmt(p.follows)}</td></tr>`).join("")
   }</tbody></table></div>`;
 }
-
 function semana(){
-  const f = D.semanas[sel], lec = f.lectura || {};
-  $("semana-sub").textContent = `${f.semana}, del ${dm(f.desde)} al ${dm(f.hasta)}`;
+  const f = D.semana;
+  if (!f) { $("semana-c").innerHTML = '<p class="muted">Todavía no hay una semana medida.</p>'; return; }
+  const lec = f.lectura || {};
+  $("semana-sub").textContent = `${f.semana}, del ${dm(f.desde)} al ${dm(f.hasta)} · se reemplaza cada lunes`;
   const lista = (t, items, color) => items && items.length ? `<div class="lista"><h3><span class="dot" style="background:${color}"></span>${t}</h3><ul>${items.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
   const cuerpo = lec.funciono || lec.no_funciono
     ? `<div class="listas">${lista("Qué funcionó", lec.funciono, "var(--good)")}${lista("Qué no funcionó", lec.no_funciono, "var(--bad)")}</div>`
     : (lec.puntos ? `<div class="lista"><h3>Lectura de la semana</h3><ul>${lec.puntos.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "");
   const crm = f.crm ? `<div class="crm">
-      <div><span class="v num">${sd(f.crm.prospectos_redes)}</span><span class="k">prospectos de redes${f.crm.var_pct != null ? ` (${f.crm.var_pct > 0 ? "+" : ""}${fmt(f.crm.var_pct, 1)}%)` : ""}</span></div>
+      <div><span class="v num">${f.crm.prospectos_redes ?? "sin dato"}</span><span class="k">prospectos de redes en la semana${f.crm.var_pct != null ? ` (${f.crm.var_pct > 0 ? "+" : ""}${fmt(f.crm.var_pct, 1)}%)` : ""}</span></div>
       <div><span class="v num">${f.crm.inversion_redes_ars == null ? "sin dato" : "$ " + fmt(f.crm.inversion_redes_ars)}</span><span class="k">gasto en awareness de Meta (ARS)</span></div>
-      <div><span class="v num">${f.crm.costo_por_prospecto_ars == null ? "sin dato" : "$ " + fmt(f.crm.costo_por_prospecto_ars)}</span><span class="k">costo por prospecto (ARS)</span></div>
-    </div>` : '<p class="muted">Sin cruce con el CRM para esta semana.</p>';
+      <div><span class="v num">${f.crm.costo_por_prospecto_ars == null ? "sin dato" : "$ " + fmt(f.crm.costo_por_prospecto_ars)}</span><span class="k">costo por prospecto (ARS)</span></div></div>` : '<p class="muted">Sin cruce con el CRM para esta semana.</p>';
   const al = f.alertas.length ? `<div class="alertas"><h3>Alertas</h3><ul>${f.alertas.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
-  $("semana-c").innerHTML = `
-    ${lec.titular ? `<p class="titular">${esc(lec.titular)}</p>` : '<p class="muted">Sin lectura escrita para esta semana.</p>'}
+  $("semana-c").innerHTML = `${lec.titular ? `<p class="titular">${esc(lec.titular)}</p>` : '<p class="muted">Sin lectura escrita para esta semana.</p>'}
     ${cuerpo}${al}
-    <div class="stack">${Object.values(D.marcas).map(m => `<div style="display:flex;flex-direction:column;gap:8px;min-width:0"><h3>${m.nombre}: lo más exitoso</h3>${piezas(m.por_semana[f.semana])}</div>`).join("")}</div>
+    <div class="stack">${Object.values(f.marcas).map(m => `<div style="display:flex;flex-direction:column;gap:8px;min-width:0"><h3>${m.nombre}: el contenido más exitoso</h3>${piezas(m)}</div>`).join("")}</div>
     ${crm}`;
 }
 
-function pintar(){
-  const ult = D.semanas[D.semanas.length - 1];
-  $("sub").textContent = `${D.semanas.length} semanas medidas, de ${SEMANAS[0]} a ${ult.semana} (cerrada el ${dm(ult.hasta)})`;
-  cuentas(); semana();
-}
-$("semana").innerHTML = SEMANAS.map((s, i) => `<option value="${i}">${s} · ${dm(D.semanas[i].desde)} al ${dm(D.semanas[i].hasta)}</option>`).reverse().join("");
-$("semana").value = sel;
-$("semana").addEventListener("change", e => { sel = +e.target.value; try { localStorage.setItem("panel-redes-semana", SEMANAS[sel]); } catch (er) {} pintar(); });
-leads(); pintar();
-$("pie").textContent = `Métricas de Metricool (cada semana se mide una vez, el lunes después del cierre) y prospectos de Bitrix. Orgánico y pauta van separados: lo que se dice del contenido sale del orgánico. Actualizado ${D.generado.slice(0, 10).split("-").reverse().join("/")}.`;
+const G = D.general;
+$("sub").textContent = G ? `Cuentas al ${dm(G.datos_hasta)} · leads al ${dm(D.leads.corte_snapshot)}${D.semana ? ` · última semana cerrada ${D.semana.semana}` : ""}` : "";
+cuentas(); leads(); semana();
+$("pie").textContent = `Métricas de Metricool y prospectos de Bitrix. Los números de las cuentas se actualizan todos los días (hasta el día anterior: el de hoy no cerró). La semana se mide una sola vez, el lunes después del cierre. Orgánico y pauta van separados: lo que se dice del contenido sale del orgánico. Generado ${D.generado.slice(0, 10).split("-").reverse().join("/")}.`;
 
-/* tooltip */
 const tip = $("tip");
 document.addEventListener("pointermove", e => {
   const t = e.target.closest && e.target.closest("[data-tip]");
