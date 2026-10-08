@@ -79,6 +79,64 @@
         }
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "16:18",
+      "resumen": "Nada para cargar: Meta y Google ya estaban cargados hasta 2026-10-07 (dry-run, ensayo).",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "modo": "dry-run (ensayo)",
+        "al_dia": true,
+        "ultimo_cargado": {
+          "meta": "2026-10-07",
+          "google": "2026-10-07"
+        },
+        "huecos_previos": {
+          "meta": [],
+          "google": []
+        },
+        "comparacion": "nada que cargar; la rutina vieja ya cargó hasta 2026-10-07 en ambos canales"
+      },
+      "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "16:19",
+      "resumen": "Gestión 5.981 seguidores (-3 en 7d), alcance 25.334; Taller 121 (+11), alcance 12.965. Leads redes Q4: 2. Panel republicado.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "boxer_gestion": {
+            "seguidores_ig": 5981,
+            "delta_7d": -3,
+            "alcance_7d": 25334,
+            "engagement_pct": 6.3
+          },
+          "boxer_taller": {
+            "seguidores_ig": 121,
+            "delta_7d": 11,
+            "alcance_7d": 12965,
+            "engagement_pct": 23.3
+          },
+          "leads_redes_Q4": 2
+        },
+        "notas": [
+          "Los crudos de redes/general/raw/2026-10-08 ya estaban en el repo de una extracción anterior del mismo día (misma ventana 08/09–07/10). Los volví a pedir a Metricool y comparé fila por fila ig_evolucion (ambas marcas) y fb_evolucion (Gestión): idénticos. ig_por_tipo, li_evolucion y fb_evolucion de Taller no se compararon fila por fila; se conservaron los de la extracción anterior."
+        ],
+        "engagement_no_confiable": "flag del panel en ambas marcas (arrastre de piezas viejas)"
+      },
+      "para": []
     }
   },
   "preparacion": {
