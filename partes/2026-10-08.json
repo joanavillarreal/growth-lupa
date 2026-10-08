@@ -1,0 +1,45 @@
+{
+  "fecha": "2026-10-08",
+  "modo": "ensayo",
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "16:12",
+      "resumen": "Funnel ingerido y Monitor generado (no publicado, ensayo). Alarma: Google Ads sin prospectos 2 días seguidos (06 y 07/10).",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "no publicado (ensayo): dashboard/index.html",
+      "datos": {
+        "alertas": [
+          "Google Ads sin prospectos 2 días seguidos (2026-10-06 y 2026-10-07)"
+        ],
+        "comparacion": {
+          "monitor_growth": {
+            "diferencias": 178,
+            "nota": "Lupa de ayer (generado 08/10 18:30 UTC) vs oficial (08/10 12:04 UTC): difieren por movimientos del CRM entre ambas lecturas (p. ej. generados Q anterior 584→585, derivación sin actividad, cartera a futuro 471→470) y por el experimento EXP-001 (n 24 vs 22). Detalle en cmp_monitor.json; no se publicó nada."
+          }
+        }
+      },
+      "para": []
+    }
+  },
+  "preparacion": {
+    "gasto_meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "16:10",
+      "resumen": "Gasto de Meta ya estaba al día hasta 2026-10-07; no faltaban días",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "meta_spend_hasta": "2026-10-07",
+        "meta_adsets_hasta": "2026-10-07"
+      },
+      "para": []
+    }
+  }
+}

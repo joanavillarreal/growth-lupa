@@ -1,5 +1,5 @@
 {
- "generado_en": "2026-10-08T18:30:10+00:00",
+ "generado_en": "2026-10-08T19:10:44+00:00",
  "ventana": {
   "desde": "2026-04-01",
   "hasta": "2026-10-08"
@@ -24867,6 +24867,21 @@
    "COMPANY_TITLE": null,
    "UF_CRM_1772731499441": null,
    "UF_CRM_1772648753515": "944"
+  },
+  {
+   "ID": "4988",
+   "DATE_CREATE": "2026-10-08T21:46:25+03:00",
+   "DATE_MODIFY": "2026-10-08T21:46:25+03:00",
+   "DATE_CLOSED": "",
+   "SOURCE_ID": "UC_WD7A6R",
+   "STATUS_ID": "PROCESSED",
+   "ASSIGNED_BY_ID": "38",
+   "HAS_PHONE": "N",
+   "HAS_EMAIL": "N",
+   "TITLE": "Karen romero - Repuestos Varela",
+   "COMPANY_TITLE": null,
+   "UF_CRM_1772731499441": null,
+   "UF_CRM_1772648753515": "958"
   }
  ],
  "negociaciones": [
@@ -59153,6 +59168,10 @@
    ],
    [
     "4942",
+    "2026-10-08"
+   ],
+   [
+    "4988",
     "2026-10-08"
    ]
   ],
