@@ -105,9 +105,10 @@ Responsable). Pedí confirmación explícita.
    python3 -c "import sys;sys.path.insert(0,'.');from growth import experiments,ingest;from growth.config import Config;print([ (e['id'],e['resultado']['estado_lectura']) for e in experiments.para_monitor(ingest.cargar_ultimo(),Config())])"
    ```
 3. `python3 run.py dashboard`.
-4. Republicá `dashboard/index.html` en el link del Monitor que corresponda al
-   `modo` de `paneles.yaml` (`monitor_growth.ensayo` u `.oficial`), leyéndolo
-   antes. Si el publish se
+4. Si `paneles.yaml` dice `modo: oficial`, republicá `dashboard/index.html` en
+   `monitor_growth.link`, leyéndolo antes. **En `modo: ensayo` no se publica**:
+   avisá que el experimento queda en el repo y aparece en el Monitor cuando Lupa
+   pase a oficial. Si el publish se
    rechaza porque la corrida diaria publicó una versión más nueva, leé esa
    versión, confirmá que lo único distinto es el experimento nuevo y volvé a
    publicar.

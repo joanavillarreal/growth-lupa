@@ -1,22 +1,31 @@
-# Links de los paneles que actualiza Lupa.
+# Paneles que actualiza Lupa. Un solo link por panel: el oficial. No hay copias.
 #
-# modo: ensayo  → se publica SOLO en las copias de prueba (`ensayo`).
-# modo: oficial → se publica en los links oficiales. Lo cambia Joana, no Lupa.
+# modo: ensayo
+#   - Paneles con `en_ensayo: comparar`: se generan en el repo (`archivo`) y se comparan
+#     contra el oficial, SIN publicar. Las rutinas viejas siguen publicando ahí.
+#   - Paneles con `en_ensayo: publicar`: son nuevos y Lupa es su única dueña; se publican
+#     en su link desde el primer día.
+# modo: oficial
+#   - Todos se publican en su link (leyéndolo antes). Pasa en el paso 6, el mismo día en
+#     que Joana pausa las rutinas viejas. Lo cambia Joana, no Lupa.
 #
-# Mientras estemos en ensayo, las rutinas viejas siguen publicando en los oficiales.
+# NUNCA publicar en un link `comparar` mientras modo sea ensayo.
 
 modo: ensayo
 
 paneles:
   monitor_growth:
     nombre: Monitor de Growth
-    oficial: https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y   # lo publica la rutina de agente-growth
-    ensayo: https://claude.ai/artifact/Cn4BcgRCh8gz7iS1JVNNpM    # copia de Lupa (08/10/2026)
+    link: https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y
+    archivo: dashboard/index.html
+    en_ensayo: comparar        # hoy lo publica la rutina "Agente Growth · Monitor y alarma diaria"
   panel_meta_ads:
     nombre: Panel Meta Ads
-    oficial: https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12
-    ensayo: null    # copia de prueba, se crea en el paso 3
+    link: https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12
+    archivo: null              # se define en el paso 3
+    en_ensayo: comparar        # hoy lo publica la rutina de agente-meta-ads
   panel_redes:
     nombre: Panel de redes
-    oficial: null   # panel nuevo; se define cuando salgamos de ensayo
-    ensayo: null    # se crea en el paso 4
+    link: null                 # se crea una sola vez en el paso 4 y queda como oficial
+    archivo: null              # se define en el paso 4
+    en_ensayo: publicar

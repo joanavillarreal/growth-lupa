@@ -61,7 +61,10 @@ def main():
                                               if args.analisis in a.get("necesita", [])}))}
     else:
         cfg = agenda["analisis"][args.analisis]
-        artefacto = paneles["paneles"][cfg["artefacto"]][paneles["modo"]]
+        panel = paneles["paneles"][cfg["artefacto"]]
+        publica = paneles["modo"] == "oficial" or panel.get("en_ensayo") == "publicar"
+        # En ensayo, los paneles "comparar" se generan en el repo y no se publican.
+        artefacto = panel["link"] if publica else f"no publicado (ensayo): {panel.get('archivo')}"
     previo = seccion.get(args.analisis, {})
     seccion[args.analisis] = {
         "estado": args.estado,

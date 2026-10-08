@@ -23,7 +23,8 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 - `agenda.yaml` — qué análisis existen, qué días tocan, qué preparaciones necesitan, qué
   herramientas y variables de entorno usan, dónde se avisa y a quién se dispara después
   (`disparar_despues`, vacío por ahora).
-- `paneles.yaml` — links oficial y de ensayo de cada panel, y el `modo` actual.
+- `paneles.yaml` — el link oficial de cada panel, su archivo en el repo, qué se hace con él en
+  ensayo (`comparar` o `publicar`) y el `modo` actual.
 - `que_toca_hoy.py` — devuelve las preparaciones y los análisis pendientes para hoy.
 - `parte.py` — registra el resultado de un análisis o una preparación en `partes/AAAA-MM-DD.json`.
 - `partes/` — un parte por día. Es lo que leen los agentes que vienen después.
@@ -53,8 +54,9 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 
 ### Funnel
 
-`python3 run.py ingest && python3 run.py dashboard`, leer la copia del Monitor que indique
-`paneles.yaml` y republicar `dashboard/index.html` en ese mismo link, y `python3 run.py alarma`.
+`python3 run.py ingest && python3 run.py dashboard` y `python3 run.py alarma`. Después, según el
+modo (ver "Modo ensayo"): en ensayo, leer el Monitor oficial y comparar; en oficial, leerlo y
+republicar `dashboard/index.html` en ese mismo link.
 Bitrix entra por la variable `BITRIX_WEBHOOK_URL`: nunca se muestra, ni se escribe en un archivo
 ni en un mensaje. Las definiciones (`config/definitions.yaml`) no se tocan.
 
@@ -95,8 +97,18 @@ ni en un mensaje. Las definiciones (`config/definitions.yaml`) no se tocan.
 
 ## Modo ensayo
 
-Mientras `paneles.yaml` diga `modo: ensayo`, publico **solo en las copias de prueba**. Las
-rutinas viejas siguen publicando en los links oficiales. El modo lo cambia Joana, no yo.
+No hay copias de prueba: cada panel tiene un solo link, el oficial (`paneles.yaml`).
+
+- Mientras `modo: ensayo`, los paneles con `en_ensayo: comparar` (Monitor de Growth y Panel Meta
+  Ads) **se generan en el repo y NO se publican**: leo el oficial (`Artifact` con
+  `action: read`), comparo sus números con los míos y anoto las diferencias en el parte. Las
+  rutinas viejas siguen publicando en esos links.
+- **Nunca publico en el Monitor de Growth ni en el Panel Meta Ads mientras el modo sea ensayo.**
+- El Panel de redes es nuevo (`en_ensayo: publicar`): lo creo una sola vez y ese link es el
+  oficial; lo actualizo desde el primer día.
+- En el paso 6, cuando se crea mi rutina, Joana pasa el modo a `oficial` y pausa las rutinas
+  viejas ese mismo día. Recién ahí publico en los links del Monitor y de Meta. El modo lo
+  cambia Joana, no yo.
 
 ## Formato del parte (`partes/AAAA-MM-DD.json`)
 

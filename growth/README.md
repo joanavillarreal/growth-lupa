@@ -4,7 +4,7 @@ Analiza el funnel de adquisición de punta a punta, general y desagregado por
 canal, sobre los datos reales de Bitrix24.
 
 > Copiado de `agente-growth` (commit 1953e30), sin Viajes Comerciales (que sigue allá).
-> En Lupa el link del Monitor sale de `paneles.yaml` según el `modo` (ensayo u oficial).
+> En Lupa el link del Monitor está en `paneles.yaml`; en modo ensayo no se publica (ver CLAUDE.md).
 
 
 ## Uso
