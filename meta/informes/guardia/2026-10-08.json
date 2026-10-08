@@ -4,18 +4,18 @@
   "ventana_dias": 14,
   "controles": {
     "anuncio": {
-      "gasto_diario_sumado": 431676.99,
-      "gasto_total": 431676.99,
+      "gasto_diario_sumado": 431797.05,
+      "gasto_total": 431797.05,
       "diferencia_pct": 0.0,
       "cuadra": true
     },
     "campana": {
-      "gasto_diario_sumado": 431676.99,
-      "gasto_total": 431676.99,
+      "gasto_diario_sumado": 431797.05,
+      "gasto_total": 431797.05,
       "diferencia_pct": 0.0,
       "cuadra": true
     },
-    "gasto_de_ayer": 31735.24,
+    "gasto_de_ayer": 31855.3,
     "errores": {
       "errores_leidos": 50,
       "sobre_entidades_vivas": 0
@@ -98,7 +98,7 @@
       "entidad_id": "120252699641360427",
       "entidad": "JY | Conversiones",
       "titulo": "JY | Conversiones: el costo por resultado sube hace 1 dia",
-      "detalle": "De 2.419 a 4.501 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "detalle": "De 2.419 a 4.523 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
       "valor": 1,
       "primer_aviso": "2026-10-08",
       "motivo_aviso": "ya avisada"

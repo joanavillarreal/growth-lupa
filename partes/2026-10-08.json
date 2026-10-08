@@ -22,6 +22,63 @@
         }
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "16:17",
+      "resumen": "Guardia sin novedades (datos al 07/10); gasto de ayer 31.855 ARS, leads Meta 8 / CRM 7. Panel Meta Ads generado, no publicado (ensayo). Campaña a confirmar: JY | Webinar Orden Stock.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "no publicado (ensayo): meta/informes/panel-trimestral.html",
+      "datos": {
+        "alertas_enviadas": [],
+        "alertas_silenciadas": 4,
+        "guardia": "SIN NOVEDADES (4 alertas aplican, las 4 ya figuraban como avisadas en memoria/guardia.jsonl)",
+        "gasto_ayer_ars": 31855,
+        "conciliacion": {
+          "leads_meta": 8,
+          "leads_crm": 7,
+          "avisados_slack": 1,
+          "faltan": 0
+        },
+        "errores_mcp": {
+          "total": 50,
+          "sobre_entidades_vivas": 0
+        },
+        "panel": {
+          "gasto_total_ars": 226940,
+          "cpl_real_ars": 4576,
+          "derivacion": "41.2% (7 de 17)",
+          "leads_con_campana": "33 de 36"
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Orden Stock (AGENTE META)"
+        ],
+        "cambios_en_cuenta": "registro de actividad leído: 9 cambios en la respuesta, 0 nuevos",
+        "notas": [
+          "Las respuestas chicas de Meta (anuncio-total, campana-total, errores, roster, anuncio-activos, anuncio-historico) se transcribieron a mano desde lo que devolvió el conector; se verificó: errores, roster y anuncio-activos idénticos al archivo de la mañana, y anuncio-total/campana-total cuadran con la suma de los diarios.",
+          "creativos.json no se volvió a pedir: no faltaba ningún creative_id."
+        ],
+        "comparacion": {
+          "panel_meta_ads": {
+            "diferencias": 15,
+            "nota": "mi versión de ayer vs oficial: solo filas de leads del CRM (bloque/contacto/razón) que cambiaron entre ambas lecturas"
+          },
+          "guardia": {
+            "diferencias": 1,
+            "nota": "mi guardia no manda (manda=False), la vieja mandó 2 alertas G3 a las 08:04. Causa: memoria/guardia.jsonl ya trae esas alertas (primer_aviso 2026-10-08) como avisadas, estado copiado del repo viejo; no es un fallo de medición."
+          }
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
