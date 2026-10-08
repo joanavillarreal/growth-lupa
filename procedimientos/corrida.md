@@ -9,8 +9,10 @@ Esto es lo que hace la rutina diaria (7:50, hora de Argentina). La rutina solo d
   en `main` al día. Leer lo que imprimió: si dice ERROR, eso va al mensaje final.
 - Si no existe `/home/user/growth-lupa/que_toca_hoy.py`, la rutina no tiene el repo como fuente:
   mandar una sola línea al DM D0BRVS7A4A3 diciéndolo y terminar. No intentar clonarlo.
-- Leer `paneles.yaml` → `modo`. En `ensayo`, todo Slack va al DM D0BRVS7A4A3 con "[ensayo]"
-  adelante; en `oficial`, cada aviso a su destino de `agenda.yaml`.
+- Leer `paneles.yaml` → `modo`. En `oficial` (desde el 09/10/2026): cada aviso de análisis a su
+  `slack` de `agenda.yaml` (#adqui-notificaciones-canales = `C0C2XKTLT9N` para la alarma del
+  funnel, la guardia y la tabla de inversión; redes y limpieza al DM) y el resumen de cierre al
+  DM `slack_resumen`, sin "[ensayo]". En `ensayo`, todo al DM D0BRVS7A4A3 con "[ensayo]" adelante.
 
 ## 1. Qué toca
 
@@ -40,12 +42,14 @@ Seguir su `procedimiento` (en `agenda.yaml`). Al terminar cada uno, sin esperar 
    inversión) se mandan **tal cual** los imprime su script, al destino que corresponda según el
    modo. Si el script dice que no hay novedades, no se manda ese aviso aparte.
 
-En **ensayo**, además, la comparación de "Cómo se compara en ensayo" (CLAUDE.md) para el funnel,
+En **oficial**, el Monitor y el Panel Meta Ads se publican en su link (leyéndolo antes, regla
+7) y la inversión se carga de verdad (sin `--dry-run`). En **ensayo**, en cambio, la comparación de "Cómo se compara en ensayo" (CLAUDE.md) para el funnel,
 meta e inversión, con el resultado en `--datos` → `comparacion`.
 
 ## 4. El mensaje final (regla 5: siempre)
 
-Uno solo por corrida, aunque no haya tocado nada. Formato:
+Uno solo por corrida, aunque no haya tocado nada, al DM `slack_resumen`. Formato (el
+"[ensayo]" va solo en modo ensayo):
 
 ```
 [ensayo] Lupa · <día> <dd/mm> · <hh:mm>

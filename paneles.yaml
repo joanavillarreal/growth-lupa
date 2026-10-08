@@ -1,13 +1,14 @@
 # Paneles que actualiza Lupa. Un solo link por panel: el oficial. No hay copias.
 #
-# modo: ensayo
+# modo: oficial
 #   - Paneles con `en_ensayo: comparar`: se generan en el repo (`archivo`) y se comparan
 #     contra el oficial, SIN publicar. Las rutinas viejas siguen publicando ahí.
 #   - Paneles con `en_ensayo: publicar`: son nuevos y Lupa es su única dueña; se publican
 #     en su link desde el primer día.
 # modo: oficial
-#   - Todos se publican en su link (leyéndolo antes). Pasa en el paso 6, el mismo día en
-#     que Joana pausa las rutinas viejas. Lo cambia Joana, no Lupa.
+#   - Todos se publican en su link (leyéndolo antes). Joana pidió pasar a oficial el
+#     08/10/2026 y pausó ese día las tres rutinas viejas; rige desde la corrida del 09/10.
+#     El modo solo se cambia por pedido de Joana.
 #
 # NUNCA publicar en un link `comparar` mientras modo sea ensayo.
 
@@ -18,12 +19,12 @@ paneles:
     nombre: Monitor de Growth
     link: https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y
     archivo: dashboard/index.html
-    en_ensayo: comparar        # hoy lo publica la rutina "Agente Growth · Monitor y alarma diaria"
+    en_ensayo: comparar        # desde el 09/10/2026 lo publica solo Lupa
   panel_meta_ads:
     nombre: Panel Meta Ads
     link: https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12
     archivo: meta/informes/panel-trimestral.html
-    en_ensayo: comparar        # hoy lo publica la rutina de agente-meta-ads
+    en_ensayo: comparar        # desde el 09/10/2026 lo publica solo Lupa
   panel_redes:
     nombre: Panel de redes
     link: https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9   # creado el 08/10/2026, es el oficial

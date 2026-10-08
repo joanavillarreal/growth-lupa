@@ -33,6 +33,10 @@ herramientas_siempre:
 # "[ensayo]" adelante, para no duplicar en el canal del equipo lo que mandan las rutinas viejas.
 slack_ensayo: "D0BRVS7A4A3"
 
+# El resumen de cierre de cada corrida (regla 5) va siempre a este DM de Joana. En oficial,
+# sin "[ensayo]" (Joana, 08/10/2026). Los avisos de cada análisis van a su `slack`.
+slack_resumen: "D0BRVS7A4A3"
+
 # Pasos compartidos. Corren una vez por día, antes del primer análisis que los
 # necesita, y su resultado queda en el parte bajo "preparacion".
 preparaciones:
@@ -82,7 +86,7 @@ analisis:
               GOOGLE_ADS_REFRESH_TOKEN, GOOGLE_ADS_CUSTOMER_ID, GOOGLE_ADS_LOGIN_CUSTOMER_ID]
     herramientas:
       - ads_get_ad_entities
-    slack: "D0BRVS7A4A3"            # la tabla de lo cargado, a Joana
+    slack: "#adqui-notificaciones-canales"   # la tabla de lo cargado, como la rutina vieja
     disparar_despues: []
 
   redes_semana:

@@ -25,10 +25,11 @@ Joana el 08/10/2026: crear registros de gasto en el SPA "Inversiones y Gastos". 
    se carga igual y Meta queda pendiente.
 3. `python3 run.py inversion cargar --meta <scratchpad>/meta_inversion.json`. Si falla a mitad
    de camino se puede volver a correr una vez: lo creado se saltea.
-4. Mandar a Joana por Slack la tabla que imprime el script, tal cual (registros creados por día,
+4. Mandar a #adqui-notificaciones-canales (`C0C2XKTLT9N`) la tabla que imprime el script, tal cual (registros creados por día,
    canal, ARS, USD e ID; salteados; días sin gasto; pendientes y huecos). Si algo falló, decir
    exactamente qué días quedaron cargados y cuáles no.
 5. `parte.py inversion ok|fallido` con el reporte en `--datos`.
 
-**En modo ensayo no se carga** (la rutina vieja sigue cargando): se corre con `--dry-run` y se
+**En modo oficial (desde el 09/10/2026) se carga de verdad**: la rutina vieja está pausada.
+**En modo ensayo no se carga**: se corre con `--dry-run` y se
 compara lo que se habría creado contra lo que la rutina vieja cargó (ver CLAUDE.md).

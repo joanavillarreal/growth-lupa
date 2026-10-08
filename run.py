@@ -6,6 +6,7 @@
   python3 run.py alerts
   python3 run.py dashboard
   python3 run.py daily               # ingest + dashboard + alertas (rutina diaria)
+  python3 run.py gasto-meta rango | cargar <carpeta>   # preparación gasto_meta, sin escribir montos a mano
   python3 run.py origenes [--aplicar] # orígenes sin canal (Visita Presencial entra sola)
   python3 run.py inversion rango     # qué días faltan cargar en el SPA de inversión
   python3 run.py inversion cargar --meta meta.json [--dry-run]
@@ -110,6 +111,20 @@ def cmd_dashboard(args, cfg):
     print(f"Dashboard generado: {salida}")
 
 
+def cmd_gasto_meta(args, cfg):
+    """Preparación gasto_meta: de respuestas de Meta guardadas tal cual a meta_spend/meta_adsets."""
+    import sys
+    from growth import gasto_meta
+    if args.accion == "rango":
+        print(json.dumps(gasto_meta.rango(), ensure_ascii=False, indent=1))
+        return
+    try:
+        print(gasto_meta.cargar(args.carpeta))
+    except gasto_meta.NoCuadra as e:
+        print(f"NO CUADRA — no se escribió nada: {e}")
+        sys.exit(1)
+
+
 def cmd_origenes(args, cfg):
     """Orígenes sin canal: los de prefijo automático se suman solos; el resto, a Joana."""
     from growth import origenes_nuevos
@@ -155,6 +170,8 @@ def main():
     x.add_argument("--canal", required=True, help="clave de canal: meta, google, redes_sociales, general...")
     x.add_argument("--dias", type=int, default=28)
     sub.add_parser("daily")
+    gm = sub.add_parser("gasto-meta"); gm.add_argument("accion", choices=["rango", "cargar"])
+    gm.add_argument("carpeta", nargs="?")
     o = sub.add_parser("origenes"); o.add_argument("--aplicar", action="store_true")
     i = sub.add_parser("inversion"); i.add_argument("accion", choices=["rango", "cargar"])
     i.add_argument("--meta", help="JSON con la respuesta de ads_get_ad_entities")
@@ -165,7 +182,7 @@ def main():
      "dashboard": cmd_dashboard, "daily": cmd_daily,
      "alarma": cmd_alarma, "semanal": cmd_semanal,
      "contexto-experimento": cmd_contexto_experimento,
-     "inversion": cmd_inversion, "origenes": cmd_origenes}[args.cmd](args, cfg)
+     "inversion": cmd_inversion, "origenes": cmd_origenes, "gasto-meta": cmd_gasto_meta}[args.cmd](args, cfg)
 
 
 if __name__ == "__main__":

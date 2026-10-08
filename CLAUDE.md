@@ -17,7 +17,7 @@ terminar, así que **todo lo que tenga que perdurar va al repo y se pushea a `ma
 |----------|----------------|-------------------|---------------------------------|----------------------|
 | funnel   | todos los días | Monitor de Growth | #adqui-notificaciones-canales   | Orbi (futuro)        |
 | meta     | todos los días | Panel Meta Ads + guardia | #adqui-notificaciones-canales | Turbo (futuro) |
-| inversion | lunes y jueves | (carga al SPA 1052) | DM D0BRVS7A4A3 (tabla de lo cargado) | — |
+| inversion | lunes y jueves | (carga al SPA 1052) | #adqui-notificaciones-canales (tabla de lo cargado) | — |
 | redes_general | todos los días | Panel de redes (números al día y leads del Q) | DM D0BRVS7A4A3 | Conti (futuro) |
 | redes_semana  | solo lunes     | Panel de redes (conclusiones de la semana cerrada) | DM D0BRVS7A4A3 | Conti (futuro) |
 | limpieza | solo lunes, al final | — | DM D0BRVS7A4A3 | — |
@@ -67,8 +67,12 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
    seguir con el siguiente.
 5. Mensaje final a Slack siempre (regla 5), incluyendo lo que quedó en `agotados`.
 
-**Slack según el modo.** En `oficial`, cada aviso va al `slack` de su análisis en `agenda.yaml`.
-En `ensayo`, **todo** va al DM `slack_ensayo` (D0BRVS7A4A3) con "[ensayo]" adelante, para no
+**Slack según el modo.** En `oficial` (el modo actual, desde el 09/10/2026), cada aviso va al
+`slack` de su análisis en `agenda.yaml`: la alarma del funnel, la guardia de Meta y la tabla de
+la inversión a #adqui-notificaciones-canales (`C0C2XKTLT9N`), como hacían las rutinas viejas, y
+solo si el script dice que hay algo para avisar (la tabla de la inversión va siempre que se
+cargue algo). El resumen de cierre de cada corrida va siempre al DM de Joana (`slack_resumen`,
+D0BRVS7A4A3), sin "[ensayo]". En `ensayo`, **todo** va al DM `slack_ensayo` (D0BRVS7A4A3) con "[ensayo]" adelante, para no
 duplicar en el canal del equipo lo que mandan las rutinas viejas. `slack_send_message` se
 verifica en todas las corridas (`herramientas_siempre`).
 
@@ -105,8 +109,8 @@ no lo asigno yo.
    tope aviso por Slack y no lo intento más hasta el día siguiente. `que_toca_hoy.py` ya hace
    la cuenta: lo que está en `agotados` no se corre y se menciona en el mensaje final.
 5. **Nunca termino en silencio.** Toda corrida manda un mensaje a Slack, aunque sea "hoy no
-   tocaba nada" o "todo en orden". Funnel y Meta → #adqui-notificaciones-canales.
-   Redes → DM D0BRVS7A4A3.
+   tocaba nada" o "todo en orden": el resumen de cierre al DM D0BRVS7A4A3. Los avisos de
+   funnel, Meta e inversión → #adqui-notificaciones-canales; redes → DM D0BRVS7A4A3.
 6. **Diagnostico con hechos.** Si algo falla, digo qué herramientas cargó la sesión y qué error
    devolvió. Nada de suposiciones. Si no sé la causa, lo digo.
 7. **Antes de republicar un artefacto, lo leo** (`Artifact` con `action: read`) y parto de
@@ -115,7 +119,7 @@ no lo asigno yo.
 9. **Nunca transcribo a mano una respuesta de un conector.** Guardo siempre la respuesta exacta:
    si es grande, copio el archivo de resultado que deja el entorno; si es chica, escribo el texto
    tal cual vino, sin reformatear. Antes de seguir, un script valida que el JSON abre y que los
-   totales cuadran (Meta: `meta/scripts/validar_mcp.py`); si no cuadra, se vuelve a pedir y, si
+   totales cuadran (Meta: `meta/scripts/validar_mcp.py`; gasto de Meta: `run.py gasto-meta cargar`); si no cuadra, se vuelve a pedir y, si
    sigue, el análisis es fallido. Ver `procedimientos/meta.md`.
 
 ## Límites
@@ -148,7 +152,12 @@ no lo asigno yo.
   y la menciono en el mensaje del día hasta que Joana confirme producto y origen del CRM; esos
   dos datos no los invento. Cuando exista Turbo, las campañas nuevas me llegan por su parte.
 
-## Modo ensayo
+## Modo ensayo (terminó el 08/10/2026)
+
+**Desde la corrida del 09/10/2026 el modo es `oficial`**: Joana lo pidió el 08/10 y pausó ese
+día las tres rutinas viejas. Publico en el Monitor de Growth y en el Panel Meta Ads (leyéndolos
+antes, regla 7), cargo la inversión de verdad y no hay comparación. Lo que sigue queda como
+referencia por si Joana vuelve a poner `modo: ensayo`.
 
 No hay copias de prueba: cada panel tiene un solo link, el oficial (`paneles.yaml`).
 
@@ -162,8 +171,8 @@ No hay copias de prueba: cada panel tiene un solo link, el oficial (`paneles.yam
 - En el paso 6, cuando se crea mi rutina, Joana pasa el modo a `oficial` y pausa las rutinas
   viejas ese mismo día ("Agente Growth · Monitor y alarma diaria", "Agente Meta - Guardia
   diaria" y "Agente Growth · Carga de inversión al SPA"). Recién ahí publico en los links del
-  Monitor y de Meta, mando la guardia al canal y cargo la inversión de verdad. El modo lo
-  cambia Joana, no yo.
+  Monitor y de Meta, mando la guardia al canal y cargo la inversión de verdad. El modo solo
+  cambia por pedido de Joana.
 
 ### Cómo se compara en ensayo
 
@@ -230,7 +239,7 @@ los lunes, al final de la corrida (análisis `limpieza`): `python3 limpieza.py` 
 ```json
 {
   "fecha": "2026-10-12",
-  "modo": "ensayo",
+  "modo": "oficial",
   "analisis": {
     "redes_semana": {
       "estado": "ok | fallido",

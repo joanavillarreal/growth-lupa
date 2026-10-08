@@ -67,10 +67,10 @@ def plan(hoy):
     for d in sorted(base.glob("guardia/????-??-??")):
         ultima_de_semana[date.fromisoformat(d.name).isocalendar()[:2]] = d
     for d in sorted([*base.glob("guardia/????-??-??"), *base.glob("????-W??*"), *base.glob("????-??-??-*"),
-                     *base.glob("actividad/????-??-??.json")]):
+                     *base.glob("actividad/????-??-??.json"), *base.glob("gasto/????-??-??")]):
         if "mapa" in d.name or "historico" in d.name:
             continue
-        if d.parent.name in ("guardia", "actividad") or re.match(r"\d{4}-\d{2}-\d{2}-", d.name):
+        if d.parent.name in ("guardia", "actividad", "gasto") or re.match(r"\d{4}-\d{2}-\d{2}-", d.name):
             dia = date.fromisoformat(d.name[:10])
         else:
             dia = fin_semana(d.name)
