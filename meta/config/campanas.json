@@ -261,7 +261,8 @@
         "Webinar Ordenar Stock"
       ],
       "activa": true,
-      "nota": "Agregada por Lupa el 2026-10-08. Joana confirmo el 08/10: producto Boxer Gestion, origen Webinar Ordenar Stock (UC_V7TMQ9). Destino formulario como las otras campanas de webinar (no verificado en Meta: el objetivo no vino en las respuestas del 08/10). Falta fecha_evento: sin ella la guardia no avisa si gasta despues del webinar."
+      "nota": "Agregada por Lupa el 2026-10-08. Joana confirmo el 08/10: producto Boxer Gestion, origen Webinar Ordenar Stock (UC_V7TMQ9). Destino formulario como las otras campanas de webinar (no verificado en Meta: el objetivo no vino en las respuestas del 08/10). Fecha del webinar 22/10/2026 (Joana, 08/10).",
+      "fecha_evento": "2026-10-22"
     }
   ],
   "conjuntos_excepcion": [
