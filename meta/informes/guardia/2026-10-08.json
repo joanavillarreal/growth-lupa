@@ -1,0 +1,127 @@
+{
+  "corrida": "2026-10-08",
+  "datos_hasta": "2026-10-07",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 431676.99,
+      "gasto_total": 431676.99,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 431676.99,
+      "gasto_total": 431676.99,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 31735.24,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-01": 1,
+      "2026-10-02": 1,
+      "2026-10-03": 6,
+      "2026-10-04": 9,
+      "2026-10-05": 5,
+      "2026-10-06": 7,
+      "2026-10-07": 8
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-01": 1,
+        "2026-10-02": 2,
+        "2026-10-03": 4,
+        "2026-10-04": 6,
+        "2026-10-05": 6,
+        "2026-10-06": 8,
+        "2026-10-07": 7
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-01": 1,
+      "2026-10-02": 0,
+      "2026-10-03": 2,
+      "2026-10-04": 2,
+      "2026-10-05": 0,
+      "2026-10-06": 2,
+      "2026-10-07": 1
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254620299960427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254620299960427",
+      "entidad": "Placa Santi  - Bariloche",
+      "titulo": "Placa Santi  - Bariloche: 6.238 ARS en 4 dias sin un solo resultado (4 dias seguidos)",
+      "detalle": "Campana JY | Viajes Presenciales Santiago · conjunto Bariloche - Frio - LAL CRM - Placa. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 4,
+      "primer_aviso": "2026-10-06",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120254695162960427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254695162960427",
+      "entidad": "DemoLu | Video | Frio-Repuesteras | v2 | 2026-10",
+      "titulo": "DemoLu | Video | Frio-Repuesteras | v2 | 2026-10: 7.271 ARS en 3 dias sin un solo resultado (3 dias seguidos)",
+      "detalle": "Campana JY | Conversiones · conjunto Conversión - LAL Vieron video 1-3% (AGENTE META). Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-10-07",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:ctr:120254281335700427",
+      "tipo": "ctr_cayendo",
+      "nivel": "anuncio",
+      "entidad_id": "120254281335700427",
+      "entidad": "Boxer + lectora y impresora de etiquetas",
+      "titulo": "Boxer + lectora y impresora de etiquetas: el CTR cae hace 1 dia",
+      "detalle": "De 2.02% a 1.03% de un dia para el otro. Campana JY | Conversiones. Suele ser fatiga de creativo: se confirma mirando la frecuencia del periodo, no subiendo el presupuesto.",
+      "valor": 1,
+      "primer_aviso": "2026-10-08",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120252699641360427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120252699641360427",
+      "entidad": "JY | Conversiones",
+      "titulo": "JY | Conversiones: el costo por resultado sube hace 1 dia",
+      "detalle": "De 2.419 a 4.501 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "primer_aviso": "2026-10-08",
+      "motivo_aviso": "ya avisada"
+    }
+  ],
+  "se_mandan": [],
+  "silenciadas": [
+    {
+      "clave": "G2:120254620299960427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120254695162960427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G3:ctr:120254281335700427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120252699641360427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": []
+}

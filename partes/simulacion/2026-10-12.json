@@ -22,6 +22,49 @@
         "publicado": false
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "15:26",
+      "resumen": "Guardia sin novedades (4 alertas ya avisadas). Panel generado (no publicado: ensayo); coincide con el oficial.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP_Meta__ads_get_ad_entities",
+        "mcp__MCP_Meta__ads_get_errors",
+        "mcp__MCP_Meta__ads_get_creatives",
+        "mcp__MCP_Meta__ads_get_ad_accounts",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "no publicado (ensayo): meta/informes/panel-trimestral.html",
+      "datos": {
+        "guardia": {
+          "resultado": "SIN NOVEDADES",
+          "alertas_que_aplican": 4,
+          "se_mandan": 0,
+          "ya_avisadas": 4,
+          "gasto_de_ayer_ars": 31735,
+          "leads_de_ayer": {
+            "meta": 8,
+            "crm": 7,
+            "reingresos_slack": 1,
+            "sin_explicar": 0
+          }
+        },
+        "panel": {
+          "cpl_real_ars": 4573,
+          "derivacion_pct": 41.2,
+          "leads_pagos_crm_q4": 36,
+          "alertas_vivas_q": 15
+        },
+        "comparacion": {
+          "panel_de_ayer_vs_oficial": "coincide",
+          "panel_de_hoy_vs_oficial": "15 diferencias: leads del CRM que cambiaron de etapa después de las 8:00",
+          "llamada_de_control_campana_total": "mismo formato; centavos corregidos por Meta desde las 8:00"
+        },
+        "nota_simulacion": "datos de Meta del día tomados de la guardia vieja de las 8:00 (mismos parámetros), más una llamada real de control"
+      },
+      "para": []
     }
   },
   "preparacion": {
