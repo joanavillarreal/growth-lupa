@@ -16,12 +16,23 @@
 #   necesita:      preparaciones (abajo) que tienen que correr antes, una sola vez por día
 #                  aunque las usen varios análisis.
 #   entorno:       variables de entorno que tienen que existir (nunca se muestran).
+#   fuentes:       repos de otros agentes que se leen (nunca se escriben). Tienen que estar
+#                  en /home/user/<repo>: la rutina los trae como fuente.
+#   procedimiento: los pasos del análisis.
 
 zona_horaria: America/Argentina/Buenos_Aires
 
 # Intentos por análisis por día. Al llegar al tope: aviso por Slack y no se
 # reintenta hasta el día siguiente.
 max_intentos_por_dia: 3
+
+# Toda corrida manda un mensaje a Slack (regla 5): esto se verifica siempre.
+herramientas_siempre:
+  - slack_send_message
+
+# Mientras paneles.yaml diga `modo: ensayo`, todo lo que va a Slack va a este DM con
+# "[ensayo]" adelante, para no duplicar en el canal del equipo lo que mandan las rutinas viejas.
+slack_ensayo: "D0BRVS7A4A3"
 
 # Pasos compartidos. Corren una vez por día, antes del primer análisis que los
 # necesita, y su resultado queda en el parte bajo "preparacion".
@@ -39,6 +50,7 @@ analisis:
     descripcion: Funnel de adquisición (leads → demos → ventas) desde Bitrix
     dias: todos
     artefacto: monitor_growth
+    procedimiento: CLAUDE.md (sección Funnel)
     necesita: [gasto_meta]
     entorno: [BITRIX_WEBHOOK_URL]   # Bitrix entra por webhook, no por conector
     herramientas: []
@@ -46,15 +58,33 @@ analisis:
     disparar_despues: []      # futuro: [orbi]
 
   meta:
-    descripcion: Lectura de la cuenta de Meta Ads (solo lectura, nada de cambios)
+    descripcion: Guardia diaria de Meta Ads + Panel Meta Ads (solo lectura)
     dias: todos
     artefacto: panel_meta_ads
+    procedimiento: procedimientos/meta.md
     necesita: [gasto_meta]
-    herramientas:             # se ajusta en el paso 3
-      - ads_get_ad_accounts
+    entorno: [BITRIX_WEBHOOK_URL]
+    fuentes: [agente-meta-ads]      # cambios, alertas y experimentos (hasta que exista Turbo)
+    herramientas:
       - ads_get_ad_entities
+      - ads_get_errors
+      - ads_get_creatives
+      - ads_get_ad_accounts
+      - slack_read_channel          # re-ingresos de #adqui-automatizaciones
     slack: "#adqui-notificaciones-canales"
     disparar_despues: []      # futuro: [turbo]
+
+  inversion:
+    descripcion: Carga del gasto de Meta y Google Ads al SPA 1052 de Bitrix (única escritura permitida)
+    dias: [lunes, jueves]
+    artefacto: null
+    procedimiento: procedimientos/inversion.md
+    entorno: [BITRIX_WEBHOOK_URL, GOOGLE_ADS_CLIENT_ID, GOOGLE_ADS_CLIENT_SECRET,
+              GOOGLE_ADS_REFRESH_TOKEN, GOOGLE_ADS_CUSTOMER_ID, GOOGLE_ADS_LOGIN_CUSTOMER_ID]
+    herramientas:
+      - ads_get_ad_entities
+    slack: "D0BRVS7A4A3"            # la tabla de lo cargado, a Joana
+    disparar_despues: []
 
   redes:
     descripcion: Semana cerrada en redes (Metricool) + leads de redes en Bitrix

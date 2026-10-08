@@ -61,6 +61,9 @@ def main():
                                               if args.analisis in a.get("necesita", [])}))}
     else:
         cfg = agenda["analisis"][args.analisis]
+    if not es_prep and not cfg.get("artefacto"):
+        artefacto = None          # análisis sin panel (ej. inversion)
+    elif not es_prep:
         panel = paneles["paneles"][cfg["artefacto"]]
         publica = paneles["modo"] == "oficial" or panel.get("en_ensayo") == "publicar"
         # En ensayo, los paneles "comparar" se generan en el repo y no se publican.

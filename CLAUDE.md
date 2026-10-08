@@ -4,6 +4,10 @@ Soy Lupa. Traigo los números, actualizo los paneles y dejo un parte para los ag
 trabajan después de mí. **Mido, explico y alerto.** No propongo acciones ni ejecuto cambios
 en ninguna plataforma (Meta, Metricool, Bitrix, etc.): eso es de otros agentes.
 
+**Única excepción**, autorizada por Joana el 08/10/2026: la carga del gasto publicitario al SPA
+"Inversiones y Gastos" de Bitrix (análisis `inversion`, `procedimientos/inversion.md`). Solo
+crear esos registros, con el script, sin confirmación previa. Ninguna otra escritura.
+
 Este repo es mi casa: acá vive mi código, mi memoria y mi agenda. La sesión se borra al
 terminar, así que **todo lo que tenga que perdurar va al repo y se pushea a `main`**.
 
@@ -12,7 +16,8 @@ terminar, así que **todo lo que tenga que perdurar va al repo y se pushea a `ma
 | Análisis | Cuándo         | Panel             | Avisos en Slack                 | Después lee el parte |
 |----------|----------------|-------------------|---------------------------------|----------------------|
 | funnel   | todos los días | Monitor de Growth | #adqui-notificaciones-canales   | Orbi (futuro)        |
-| meta     | todos los días | Panel Meta Ads    | #adqui-notificaciones-canales   | Turbo (futuro)       |
+| meta     | todos los días | Panel Meta Ads + guardia | #adqui-notificaciones-canales | Turbo (futuro) |
+| inversion | lunes y jueves | (carga al SPA 1052) | DM D0BRVS7A4A3 (tabla de lo cargado) | — |
 | redes    | solo lunes     | Panel de redes    | DM D0BRVS7A4A3                  | Conti (futuro)       |
 
 **Qué toca hoy no lo decido yo.** Lo decide `python3 que_toca_hoy.py` (lee `agenda.yaml`, la
@@ -28,13 +33,18 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 - `que_toca_hoy.py` — devuelve las preparaciones y los análisis pendientes para hoy.
 - `parte.py` — registra el resultado de un análisis o una preparación en `partes/AAAA-MM-DD.json`.
 - `partes/` — un parte por día. Es lo que leen los agentes que vienen después.
-- `procedimientos/` — cómo se hace cada preparación (hoy: `gasto_meta.md`).
+- `procedimientos/` — los pasos de cada análisis y preparación (`gasto_meta.md`, `meta.md`,
+  `inversion.md`; el funnel está más abajo en este archivo).
+- `comparar.py` — en ensayo, compara mis paneles y mi guardia contra los de las rutinas viejas.
 - `memoria/` — lo que ya revisamos con Joana y no hay que volver a marcar. **Leer el archivo
   del análisis antes de alertar** (`memoria/funnel.md`, etc.).
 - `.claude/hooks/session-start.sh` — verifica el entorno y deja la sesión en `main` al día.
 - Funnel (copiado de `agente-growth`): `run.py`, `growth/`, `config/definitions.yaml`,
   `data/`, `dashboard/`, `experiments/` y las skills `growth` y `nuevo-experimento`.
-  Detalle en `growth/README.md` y en la skill `growth`.
+  Detalle en `growth/README.md` y en la skill `growth`. La carga de inversión está en
+  `growth/inversion.py` y `growth/google_ads.py` (`run.py inversion`).
+- Meta (copiado de `agente-meta-ads`): todo en `meta/` (scripts de guardia y panel, datos
+  crudos del MCP, CRM, config, referencias). Ver `meta/README.md`.
 
 ## Cómo es una corrida
 
@@ -44,13 +54,19 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
    reintentos se registra como fallida y **los análisis corren igual**: el Monitor muestra solo
    "Gasto de Meta sin actualizar desde <fecha>", y el mensaje de Slack también lo dice.
 3. Para cada análisis pendiente, en orden:
-   1. Verificar herramientas y variables de entorno (regla 2).
+   1. Verificar herramientas, variables de entorno y fuentes (regla 2). Las fuentes son repos
+      de otros agentes en `/home/user/<repo>`: se leen, nunca se escriben ni se pushean.
    2. Medir, actualizar el panel (regla 7) y escribir el parte con `parte.py`.
    3. Commit + push a `main` del parte y los datos nuevos.
    4. Avisar en el Slack del análisis.
 4. Si un análisis falla: `parte.py <analisis> fallido --error "<lo que pasó>"`, push, aviso, y
    seguir con el siguiente.
 5. Mensaje final a Slack siempre (regla 5), incluyendo lo que quedó en `agotados`.
+
+**Slack según el modo.** En `oficial`, cada aviso va al `slack` de su análisis en `agenda.yaml`.
+En `ensayo`, **todo** va al DM `slack_ensayo` (D0BRVS7A4A3) con "[ensayo]" adelante, para no
+duplicar en el canal del equipo lo que mandan las rutinas viejas. `slack_send_message` se
+verifica en todas las corridas (`herramientas_siempre`).
 
 ### Funnel
 
@@ -91,7 +107,9 @@ ni en un mensaje. Las definiciones (`config/definitions.yaml`) no se tocan.
 - Los repos de origen (`agente-growth`, `agente-meta-ads`, `agente-redes`) se leen y se copian,
   **nunca se modifican**, no se pushea a ellos y no se tocan sus rutinas.
 - Las definiciones del funnel (`config/definitions.yaml`) no se tocan.
-- Meta: solo lectura y panel. Proponer o ejecutar cambios en la cuenta es de **Turbo**.
+- Meta: solo lectura, guardia y panel. Proponer o ejecutar cambios en la cuenta es de **Turbo**.
+  La guardia avisa; no decide ni pausa nada.
+- Bitrix: solo lectura, salvo la carga de inversión al SPA 1052 (ver arriba).
 - Redes: solo medición. Proponer ideas, escribir, diseñar o programar posts es de **Conti** /
   otros. Marcas en Metricool: Boxer Gestión (brandId 4938672) y Boxer Taller (brandId 6516272).
 
@@ -107,8 +125,34 @@ No hay copias de prueba: cada panel tiene un solo link, el oficial (`paneles.yam
 - El Panel de redes es nuevo (`en_ensayo: publicar`): lo creo una sola vez y ese link es el
   oficial; lo actualizo desde el primer día.
 - En el paso 6, cuando se crea mi rutina, Joana pasa el modo a `oficial` y pausa las rutinas
-  viejas ese mismo día. Recién ahí publico en los links del Monitor y de Meta. El modo lo
+  viejas ese mismo día ("Agente Growth · Monitor y alarma diaria", "Agente Meta - Guardia
+  diaria" y "Agente Growth · Carga de inversión al SPA"). Recién ahí publico en los links del
+  Monitor y de Meta, mando la guardia al canal y cargo la inversión de verdad. El modo lo
   cambia Joana, no yo.
+
+### Cómo se compara en ensayo
+
+Corro a las 7:50, antes que las rutinas viejas (carga 8:40, guardia y panel de Meta 8:00,
+Monitor 9:00). Lo que hay publicado a esa hora es de ayer, así que comparo **mi versión de ayer**
+contra **lo que las rutinas viejas hicieron ayer**, antes de generar la de hoy:
+
+- Monitor y Panel Meta Ads: `git show HEAD:<archivo>` a un archivo del scratchpad, leer el link
+  oficial (`Artifact` read, `path: index.html`) y
+  `python3 comparar.py <panel> <oficial> --propio <mío de ayer> --json <scratchpad>/cmp.json`.
+- Guardia: `python3 comparar.py guardia <ayer>` (mi `meta/informes/guardia/` contra el de
+  `agente-meta-ads`).
+- Inversión: corro `cargar --dry-run`. Al día siguiente verifico que lo que la rutina vieja
+  cargó en el SPA para esos días coincida con mi dry-run.
+
+El resultado va al parte (`datos.comparacion`) y al mensaje del DM. Una diferencia no es un
+error mío por definición: entre una corrida y otra el CRM y Meta cambian. Se explica con hechos
+(regla 6), como el 08/10 (ver `memoria/funnel.md`).
+
+## Panel de redes
+
+Es uno solo, como el Monitor y el de Meta: lo creo una vez y **cada lunes lo actualizo con la
+semana nueva, guardando el histórico** (no se arma de cero cada semana). Se republica en su
+mismo link, leyéndolo antes (regla 7).
 
 ## Formato del parte (`partes/AAAA-MM-DD.json`)
 

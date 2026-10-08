@@ -6,6 +6,8 @@
   python3 run.py alerts
   python3 run.py dashboard
   python3 run.py daily               # ingest + dashboard + alertas (rutina diaria)
+  python3 run.py inversion rango     # qué días faltan cargar en el SPA de inversión
+  python3 run.py inversion cargar --meta meta.json [--dry-run]
 """
 from __future__ import annotations
 import argparse
@@ -107,6 +109,15 @@ def cmd_dashboard(args, cfg):
     print(f"Dashboard generado: {salida}")
 
 
+def cmd_inversion(args, cfg):
+    """Carga del gasto de Meta y Google al SPA 1052 (rutina de lunes y jueves)."""
+    from growth import inversion
+    if args.accion == "rango":
+        print(json.dumps(inversion.rango(cfg), ensure_ascii=False, indent=1))
+    else:
+        print(inversion.cargar(cfg, args.meta, args.desde, args.hasta, args.dry_run))
+
+
 def cmd_daily(args, cfg):
     cmd_ingest(args, cfg)
     cmd_dashboard(args, cfg)
@@ -127,12 +138,16 @@ def main():
     x.add_argument("--canal", required=True, help="clave de canal: meta, google, redes_sociales, general...")
     x.add_argument("--dias", type=int, default=28)
     sub.add_parser("daily")
+    i = sub.add_parser("inversion"); i.add_argument("accion", choices=["rango", "cargar"])
+    i.add_argument("--meta", help="JSON con la respuesta de ads_get_ad_entities")
+    i.add_argument("--desde"); i.add_argument("--hasta"); i.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
     cfg = Config()
     {"ingest": cmd_ingest, "report": cmd_report, "alerts": cmd_alerts,
      "dashboard": cmd_dashboard, "daily": cmd_daily,
      "alarma": cmd_alarma, "semanal": cmd_semanal,
-     "contexto-experimento": cmd_contexto_experimento}[args.cmd](args, cfg)
+     "contexto-experimento": cmd_contexto_experimento,
+     "inversion": cmd_inversion}[args.cmd](args, cfg)
 
 
 if __name__ == "__main__":

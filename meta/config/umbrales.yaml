@@ -1,0 +1,357 @@
+# Reglas de gobierno del canal de Meta Ads. El agente alerta cuando se rompen.
+#
+# OJO: los cuatro umbrales de abajo estan HEREDADOS del canal de Google Ads
+# (definidos por Joana el 2026-09-07 para ese canal). Se cargan como punto de
+# partida y estan PENDIENTES de confirmar para Meta. Un canal de descubrimiento
+# trabaja con intencion mas baja que la busqueda: es esperable que derive peor
+# sin que eso signifique que este roto.
+#
+# Hasta que Joana defina umbrales propios, el agente reporta los dos numeros:
+# contra el umbral heredado Y contra la linea base del propio canal.
+
+estado_umbrales: heredados_a_confirmar
+
+no_calificados:
+  maximo_aceptable_pct: 15
+  origen_del_numero: "canal Google Ads, Joana 2026-09-07"
+  medir_por: [total, origen, tipo_negocio]
+  linea_base_meta: "13,3% (129 de 973), mar-sep 2026 — dentro del techo"
+
+derivacion:
+  minimo_aceptable_pct: 50
+  origen_del_numero: "canal Google Ads, Joana 2026-09-07"
+  linea_base_meta: "29,4% (286 de 973), mar-sep 2026 — muy por debajo"
+  referencia_organico: "55,6% (65 de 117) — techo realista, no piso"
+  nota: >
+    Este es el umbral que mas urge revisar. 50% es el rendimiento del organico
+    de redes, o sea gente que ya conoce la marca. Pedirle a Joana un piso propio
+    para Meta pago.
+
+inactivo:
+  sin_umbral: true
+  linea_base_meta: "57,1% (556 de 973)"
+  nota: >
+    Es el bloque mas grande del canal, mas del doble que los no calificados.
+    NO se arregla tocando Meta Ads: son leads que servian y se perdieron en el
+    seguimiento (razon dominante: "No responde mensajes ni llamada", 251 casos).
+    El agente lo reporta y lo nombra como problema comercial. Nunca proponer
+    cambios de campana para arreglarlo.
+
+costo_por_lead:
+  objetivo_operativo:
+    # DEFINIDO POR JOANA PARA META el 2026-09-08. Ya no es heredado.
+    valor_ars: 3000
+    base: bruto
+    origen_del_numero: "Joana, 2026-09-08, especifico para Meta"
+  techo_negocio:
+    valor_usd: 200
+    base: convertido
+    cotizacion_ars_por_usd: 1500
+    valor_ars: 300000
+    origen_del_numero: "canal Google Ads, Joana 2026-09-07 — a confirmar para Meta"
+  medido_mar_sep_2026:
+    gasto_cruzable_ars: 5691275   # nucleo que da leads, menos conjuntos de evento
+    cpl_real_ars: 5813            # gasto cruzable / leads que llegaron al CRM
+    cpl_que_reporta_meta_ars: 5091
+    costo_por_convertido_ars: 19900
+    costo_por_convertido_usd: 13.3
+  nota: >
+    El CPL real esta 1,9x por encima del objetivo Y el canal es rentable al
+    mismo tiempo: cada Convertido cuesta 13,3 USD contra un techo de 200.
+    Ese es el caso 2 de referencias/calculos.md — fuera de objetivo, dentro del
+    techo: se reporta como MATIZ y como decision de Joana, no como alarma.
+    OJO con los dos CPL: el que reporta Meta (5.091) cuenta resultados que el
+    CRM nunca vio. El que gobierna es el real (5.813), sobre leads que llegaron.
+    Y ojo con el numerador: solo entra el gasto de campanas nucleo, descontados
+    los conjuntos de evento. Ver referencias/calculos.md.
+  inflacion:
+    revisar_cada: 8_semanas
+    equivalente_usd_al_definirlo: 2.0    # 3.000 / 1500, al 2026-09-08
+    avisar_si_equivalente_usd_baja_de: 1.5
+
+mezcla_de_publico:
+  # Umbral propio de Meta, definido desde los datos del canal (2026-09-07).
+  maximo_no_icp_pct: 25
+  boxer_taller_activo: true   # Joana, 2026-09-08. Cambia la recomendacion:
+  # los 220 leads de talleres y lubricentros ya no son desperdicio, son el
+  # publico de otro producto. NO excluirlos: derivarlos.
+  linea_base_meta: "36,3% (355 de 979) no son ICP"
+  nota: >
+    ICP deriva 43,0% (266/619); adyacentes 5,5% (12/219); sin tipificar
+    5,9% (8/135). Es el hallazgo mas accionable del canal y se trabaja EN Meta:
+    segmentacion, exclusiones, copy que filtre y preguntas de calificacion.
+
+atribucion:
+  cobertura_utm_minima_pct: 90
+  linea_base_meta: "0% (0 de 1.096)"
+  nota: >
+    Bloqueante numero uno. Los leads entran por una app propia de Meta a n8n
+    (Joana, 2026-09-07), asi que la solucion es directa: mapear campaign_name /
+    adset_name / ad_name del webhook de leadgen a los campos UTM de Bitrix.
+    Ver referencias/atribucion.md.
+
+conciliacion_meta_crm:
+  # Control semanal gratis: cuantos resultados dice Meta contra cuantos leads
+  # entraron al CRM. Si la brecha crece, hay algo roto en n8n.
+  minimo_ubicados_pct: 85
+  medido_mar_sep_2026: "88% (979 de 1.118) — dentro del piso. 139 sin ubicar."
+  nota: >
+    Se compara SOLO contra el gasto cruzable (campanas nucleo menos conjuntos de
+    evento). La primera medicion dio 65% porque contaba el gasto de los eventos
+    contra los leads del origen de Meta: numerador y denominador de embudos
+    distintos. Mecanismo conocido de los 139 que faltan: la rama de "contacto
+    existente" del workflow de n8n avisa por Slack y no crea el prospecto.
+    Ver referencias/n8n.md.
+
+conciliacion_eventos:
+  # Control aparte, y este SI esta roto.
+  minimo_ubicados_pct: 85
+  medido_mar_sep_2026: "34% (129 de 379). Faltan 250, ~950.000 ARS sin trazar."
+  nota: >
+    Los conjuntos de evento (Lead Magnet, Clases de IA, Demo Masiva,
+    Presencialidad, After Automechanika) cobraron 379 resultados y los origenes
+    de evento del CRM suman 129. No es de este canal —cada evento tiene su
+    propio workflow en n8n— pero se reporta igual. Primera sospecha: el trigger
+    del workflow principal escucha un solo formulario. EXP-008.
+
+creativos:
+  minimo_anuncios_activos_por_conjunto: 3
+  maximo_anuncios_activos_por_conjunto: 6
+  maximo_conjuntos_simultaneos: 6      # con ~37 leads/semana, mas fragmenta el aprendizaje
+  medido_mar_sep_2026: "28 de 32 conjuntos con menos de 3 anuncios; 19 con uno solo"
+  frecuencia_maxima_7_dias: 2.5
+  nota: >
+    Frecuencia por encima de 2,5 en 7 dias con CTR cayendo = fatiga de creativo.
+    Rotar, no subir presupuesto.
+
+ventanas_de_analisis:
+  # ~37 leads/semana: 7 veces el volumen del canal de Google Ads.
+  # Aca la semana SI se puede leer.
+  alerta: 1_semana
+  decision: 4_semanas_moviles
+  minimo_leads_para_decidir_por_segmento: 30
+  cohorte_inmadura_semanas: 2
+  nota: >
+    Las cohortes de las ultimas 1-2 semanas todavia pueden convertir: su
+    derivacion es provisional. Una caida reciente se confirma la corrida
+    siguiente antes de tratarla como tendencia.
+
+aprendizaje:
+  eventos_para_salir_de_aprendizaje: 50
+  nota: >
+    Ningun veredicto de experimento se da sin chequear esto primero. Si el
+    conjunto no acumulo ~50 eventos desde el cambio, el veredicto es sin_señal
+    y se extiende revisar_en. Dar por muerta una hipotesis dentro del
+    aprendizaje es el error mas comun en Meta.
+
+efecto_de_descomposicion:
+  regla_dura: >
+    NUNCA recomendar pausar ni bajarle presupuesto a un segmento (ubicacion,
+    edad, dispositivo, genero) solo porque su CPA o su CPM promedio en un
+    desglose es mas alto. Meta optimiza por costo MARGINAL, no promedio:
+    cortar un segmento de promedio alto suele subir el costo total.
+    Todo cambio de ese tipo va como hipotesis a testear, justificando el
+    impacto esperado sobre TODA la campana.
+
+guardia_diaria:
+  # La guardia corre todos los dias a las 8:00 ART y CALLA si no hay nada.
+  # Definida por Joana el 2026-09-15, cuando se saco la corrida del jueves.
+  # Detalle de cada regla: .claude/skills/boxer-meta-ads/referencias/guardia-diaria.md
+  ventana_dias: 14              # 3 de tramo + 7 de base para G3, y margen
+  gasto_minimo_diario_ars: 1000 # abajo de esto, el dia no opina: es ruido
+
+  sin_resultados:               # G2
+    dias_seguidos: 2            # desde el 2do dia avisa aunque sea barato
+    gasto_dia_1_ars: 6000       # el dia 1 avisa solo si quemo esto (2x el CPL objetivo)
+    nota: >
+      Joana pidio el 2026-09-25 que avise desde el PRIMER dia (antes eran 4).
+      El problema de avisar el dia 1 a secas es que con ~7 leads diarios
+      repartidos en ~10 anuncios, casi cualquier anuncio tiene cero resultados
+      casi cualquier dia: eso no es una falla, es aritmetica. Medido sobre 14
+      dias, el dia 1 sin filtro daba 1,21 mensajes POR DIA.
+      Lo que separa la senal del ruido no son los dias, es la plata: si un
+      anuncio quemo lo que deberian haber costado dos leads (6.000 ARS) y no
+      vino ninguno, eso es noticia el mismo dia. Con ese corte: 0,07/dia.
+      Desde el 2do dia ya no es un dia flojo sino una racha, y avisa con el
+      piso normal. `valor` es la racha, asi que cada dia que sigue sin traer
+      nada la alerta escala y vuelve a sonar.
+      Cuenta solo los dias en que el anuncio REALMENTE gasto. Un anuncio
+      pausado no esta fallando, no esta corriendo. Y 'Not available' en
+      `results` es ausencia de dato, no un cero: el aviso dice "Meta no
+      atribuyo resultados", no "no trajo leads". El veredicto es del lunes,
+      que cruza con el CRM.
+
+  ctr:                          # G3, a nivel ANUNCIO
+    caida_pct: 25               # sirve para los dos disparos
+    impresiones_minimas_por_dia: 1500   # los dos dias que se comparan
+    dias_seguidos: 3            # disparo lento: cayo y se quedo abajo
+    impresiones_minimas_base: 3000
+    nota: >
+      DOS DISPAROS desde el 2026-09-25, y hacen falta los dos:
+        - RAPIDO: cae 25% de un dia para el otro. Es lo que pidio Joana, para
+          no esperar tres dias.
+        - SOSTENIDO: 3 dias seguidos 25% abajo de la base de 7 dias. Una
+          metrica que se cae y SE QUEDA abajo no empeora dia contra dia, asi
+          que el rapido no la ve — y ese es justo el caso de fatiga de
+          creativo, el mas comun. Sacarlo habria cambiado un punto ciego por
+          otro.
+      `impresiones_minimas_por_dia` subio de 500 a 1.500 al pasar a dia contra
+      dia: con 500 impresiones un CTR diario se mueve 25% por azar. Medido
+      sobre 14 dias, sin ese piso daba 1,00 mensajes/dia; con el, 0,21.
+      El CTR se mide por anuncio porque un anuncio junta miles de impresiones
+      por dia: su CTR diario significa algo.
+
+  cpl:                          # G3, a nivel CAMPANA
+    suba_pct: 30                # sirve para los dos disparos
+    resultados_minimos_dia_base: 3   # disparo rapido: volumen en el dia comparado
+    dias_seguidos: 3            # disparo lento: subio y se quedo arriba
+    resultados_minimos_base: 5
+    nota: >
+      DOS DISPAROS desde el 2026-09-25, igual que el CTR: el salto de un dia
+      para el otro (pedido de Joana) y el sostenido contra la base de 7 dias,
+      que agarra el costo que subio y se quedo arriba.
+      `resultados_minimos_dia_base` es el filtro que hace usable el rapido.
+      Esta cuenta hace entre 3 y 10 leads POR DIA en total: una campana que
+      pasa de 3 leads a 2 muestra el costo por resultado "subiendo" 50% sin
+      que haya pasado nada. Es aritmetica de enteros, no deterioro. Medido
+      sobre 14 dias: sin piso 0,57 mensajes/dia, con piso de 3 leads 0,36.
+      Cuando el disparo es el rapido, el aviso dice CUANTO se movio y en
+      cuantos dias, no solo que se movio (pedido de Joana).
+
+      El costo por resultado se mide por CAMPANA, nunca por anuncio: un anuncio
+      junta 0, 1 o 2 leads por dia y su CPL diario es ruido puro que solo sirve
+      para apagar cosas que andaban bien. Solo se evalua en campanas que
+      optimizan por lead: el costo por visita al perfil de una de awareness no
+      se compara contra el objetivo de 3.000 ARS.
+      Y este es el costo que reporta META, no el CPL real: ese sale el lunes.
+
+  dia_sin_leads:                # G6 — pedido de Joana, 2026-09-30
+    gasto_minimo_ars: 5000          # gasto de captacion del dia para que un cero cuente
+    nota: >
+      Alarma si ayer no entro NINGUN lead de Meta al CRM (origenes Meta Ads
+      Formulario y Meta Ads) habiendo gastado en conversion/remarketing. Sobre
+      el Q3 habria disparado 5 dias de 91. Si G5a ya disparo (tuberia cortada)
+      G6 se calla. El piso de 5 leads/dia NO es alarma: es el objetivo
+      (objetivos.leads_crm_por_dia), porque sonaria 64 de 91 dias.
+  conciliacion_crm:             # G5 — pedido de Joana, 2026-09-25
+    minimo_leads_meta: 4            # G5a: cuantos leads tiene que haber atribuido
+                                    #      Meta para que un CRM en cero signifique algo
+    ventana_conciliacion_dias: 7    # G5b
+    piso_conciliacion_pct: 25       # G5b: abajo de esto, no es el hueco de siempre
+    minimo_leads_meta_ventana: 10   # G5b: sin esto, una semana flaca dispara sola
+    nota: >
+      La primera regla de la guardia que mira fuera de la plataforma. Es tambien
+      la que mas facil se rompe, porque EL HUECO ES CRONICO: medido sobre 82 dias
+      (jul-sep 2026) la conciliacion diaria da 69%, no 100%. Hay re-ingresos que
+      no generan prospecto y esta bien (EXP-002), y leads que Meta cobra y el CRM
+      nunca ve. Una regla "Meta > CRM" habria disparado 39 de 51 dias: ruido puro.
+      Lo que se busca NO es el hueco, es la tuberia cortada.
+      Calibracion, contada sobre esos mismos 82 dias:
+        - G5a con minimo_leads_meta=4 -> habria disparado 1 vez (1,2% de los dias)
+        - G5a con minimo 5            -> 0 veces
+        - G5b con piso 25%            -> 0 veces (el minimo historico fue 30%)
+        - G5b con piso 50%            -> 18% de las ventanas. Demasiado.
+      Los conteos del CRM de esa calibracion salen de los snapshots semanales, que
+      pueden quedar cortos en los dias del borde. Eso hace que la conciliacion real
+      sea IGUAL O MEJOR que la medida, o sea que los umbrales quedan del lado
+      conservador. Si alguna vez se recalibran, hacerlo contra Bitrix en vivo.
+      Las dos alertas hablan de resultados que META ATRIBUYE, no de leads reales:
+      dicen "faltan prospectos donde deberia haberlos", nunca "este anuncio no sirve".
+
+  gasto_innecesario:            # G4 — pedido de Joana, 2026-09-15
+    evento_vencido_dias_gracia: 1
+    frecuencia_maxima_ventana: 5.0
+    gasto_sin_resultado_pct: 10
+    gasto_sin_resultado_minimo_ars: 20000
+    nota: >
+      Tres cosas distintas, y ninguna es "esta caro": lo que busca es gasto que
+      NO PUEDE producir nada.
+      (a) Evento vencido: una campana de webinar que sigue gastando despues del
+      webinar. Sale de `fecha_evento` en config/campanas.json, que carga Joana
+      al dar de alta la campana. Sin ese campo la guardia no opina de esa
+      campana: NO adivina la fecha del nombre, porque apagar plata por una
+      corazonada es peor que no avisar.
+      (b) Publico quemado: frecuencia de la VENTANA por encima del techo. El 5,0
+      sale de proporcionar el umbral propio del canal (creativos ->
+      frecuencia_maxima_7_dias: 2,5) a los 14 dias de la ventana. La frecuencia
+      se lee del total pedido SIN time_increment: sumando filas diarias cuenta
+      dos veces a quien vio el anuncio dos dias y sale mal.
+      (c) Gasto sin resultado: cuanta plata de la ventana se fue a anuncios que
+      no trajeron nada. Pide las DOS condiciones (>=20.000 ARS Y >=10% de la
+      ventana) para que un numero chico no dispare. Y 'sin atribuir' no es 'sin
+      lead': el numero firme sale del cruce del lunes.
+      Ninguna de las tres pausa nada: se avisa la plata identificada y decide
+      Joana.
+
+  repeticion:
+    recordar_cada_dias: 7       # una alerta abierta se recuerda una vez por semana
+    escalada_dias: 3            # si el problema crece esto, vuelve a avisar antes
+    nota: >
+      Una alerta que llega todos los dias deja de leerse. El estado vive en
+      memoria/guardia.jsonl.
+
+  control_totales_tolerancia_pct: 1
+    # Arriba de esta diferencia entre el detalle diario y el total de la
+    # misma ventana, la guardia avisa QUE anuncios faltan (no el porcentaje).
+    # Se saco el 2026-09-25 y volvio el mismo dia: sin este aviso, una corrida
+    # evaluo 14 de 18 anuncios sin saberlo, y los 4 que faltaban eran los
+    # creativos nuevos. Ver referencias/guardia-diaria.md.
+  # Trampa 6 de referencias/meta-mcp.md: la llamada diaria de una ventana larga
+  # puede perder entidades enteras SIN cursor que lo avise. Si el detalle diario
+  # no suma lo mismo que el total de la misma ventana, la guardia lo dice: con
+  # datos incompletos no puede afirmar que esta todo bien.
+
+  saldo_de_la_cuenta: no_se_puede
+  # Joana lo pidio el 2026-09-15 y se SACO del alcance el mismo dia. No es una
+  # omision: el MCP no tiene el dato. Probado ese dia contra
+  # ads_get_field_context: `balance`, `account_status` y `funding_source`
+  # vuelven como unknown_fields, y `spend_cap`/`budget_remaining` son de campana
+  # o conjunto, no de la cuenta. Lo mas cerca que se puede estar es G0: si la
+  # cuenta deja de gastar de golpe, la guardia avisa. Para reponerlo hace falta
+  # otra fuente de datos, no otra regla.
+
+costo_por_seguidor:
+  # NUEVO el 2026-09-21, a pedido de Joana. Gobierna la campana de awareness de
+  # Boxer Taller, igual que el CPL gobierna las campanas de captacion.
+  aplica_a: "JY | Awareness Boxer Taller (AGENTE META)"
+  sin_umbral: true
+  estado: "primer dato, sin base para fijar umbral"
+  formula: "gasto de la campana en la ventana / seguidores netos ganados en la misma ventana"
+  fuentes:
+    gasto: "MCP de Meta, nivel campana"
+    seguidores: "Metricool, brandId 6516272 (@boxertaller), metrica IGEV01 diaria"
+  medido_2026_09_21:
+    ventana: "2026-09-17 a 2026-09-20"
+    gasto_ars: 9145.24
+    visitas_al_perfil: 245
+    costo_por_visita_ars: 37.33
+    seguidores_inicio: 69          # 2026-09-16
+    seguidores_fin: 76             # 2026-09-20
+    seguidores_netos: 7
+    costo_por_seguidor_ars: 1306
+    conversion_visita_a_seguidor_pct: 2.9
+  nota: >
+    NO hay atribucion de seguidores. Los +7 incluyen los que llegaron por el
+    organico: el 18/09 subio 5 el mismo dia que se publico el testimonio en el
+    feed. Entonces la pauta trajo 7 seguidores O MENOS, y el costo por seguidor
+    de la pauta es 1.306 ARS O MAS. 1.306 es el PISO, el mejor caso; el 2,9% es
+    el TECHO. Reportarlo siempre asi, nunca como si todos los seguidores fueran
+    de los anuncios.
+  por_que_importa: >
+    Es la trampa 5 aplicada a otra campana: la visita al perfil sale 37 ARS
+    —barata, dentro de cualquier expectativa— y el seguidor sale ~1.300. Optimizar
+    el numero que reporta Meta sin mirar este lleva a escalar una campana que
+    compra visitas que no se quedan.
+
+objetivos:
+  leads_crm_por_dia:
+    valor: 5
+    definido_por: "Joana, 2026-09-30"
+    que_cuenta: "prospectos creados en Bitrix con origen Meta Ads Formulario o Meta Ads (sin eventos)"
+    como_se_lee: >
+      Objetivo de volumen del canal, no alarma diaria. Se mide en el panel y en
+      el informe del lunes como promedio de la semana (35 leads/semana). Q3 al
+      29/09: 3,5/dia; solo 27 de 91 dias llegaron a 5. Siempre junto con la
+      derivacion: un objetivo de volumen solo empuja a comprar leads baratos
+      que no convierten (trampa 5).
+

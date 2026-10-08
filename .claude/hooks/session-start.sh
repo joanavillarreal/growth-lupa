@@ -18,7 +18,16 @@ python3 -c "import yaml, requests" 2>/dev/null && echo "python: ok" || echo "ERR
 
 # Variables de entorno (solo si existen; nunca su valor)
 [ -n "${BITRIX_WEBHOOK_URL:-}" ] && echo "BITRIX_WEBHOOK_URL: definida" \
-  || echo "ERROR: falta BITRIX_WEBHOOK_URL (el funnel no puede leer Bitrix)"
+  || echo "ERROR: falta BITRIX_WEBHOOK_URL (funnel, meta e inversion no pueden leer Bitrix)"
+for v in GOOGLE_ADS_CLIENT_ID GOOGLE_ADS_CLIENT_SECRET GOOGLE_ADS_REFRESH_TOKEN GOOGLE_ADS_CUSTOMER_ID GOOGLE_ADS_LOGIN_CUSTOMER_ID; do
+  [ -n "${!v:-}" ] || echo "ERROR: falta $v (inversion no puede leer Google Ads)"
+done
+
+# Fuentes: repos de otros agentes que se leen (nunca se escriben)
+for r in agente-meta-ads; do
+  [ -d "/home/user/$r/.git" ] && echo "fuente $r: ok ($(git -C /home/user/$r log -1 --format='%h %cs'))" \
+    || echo "ERROR: falta la fuente /home/user/$r (meta usa sus cambios, alertas y experimentos)"
+done
 
 # 2. Repo en main y al día (solo en la nube y con el árbol limpio)
 if [ "${CLAUDE_CODE_REMOTE:-}" = "true" ]; then
