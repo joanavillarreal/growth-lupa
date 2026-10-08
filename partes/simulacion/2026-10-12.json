@@ -1,0 +1,46 @@
+{
+  "fecha": "2026-10-12",
+  "modo": "ensayo",
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "15:24",
+      "resumen": "Monitor generado (no publicado: ensayo). Alarma: Google Ads sin prospectos 2 días.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "no publicado (ensayo): dashboard/index.html",
+      "datos": {
+        "snapshot": "2026-10-08: 1641 prospectos, 1169 negociaciones, 380 registros de gasto",
+        "alarma": [
+          "Google Ads sin prospectos 2 días seguidos (06/10 y 07/10)"
+        ],
+        "comparacion": {
+          "monitor_de_ayer_vs_oficial": "coincide",
+          "alarma_vs_rutina_vieja": "idéntica a la enviada a las 9:05 en #adqui-notificaciones-canales"
+        },
+        "publicado": false
+      },
+      "para": []
+    }
+  },
+  "preparacion": {
+    "gasto_meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "15:23",
+      "resumen": "Gasto de Meta al día hasta el 07/10",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP_Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "meta_spend_hasta": "2026-10-07",
+        "meta_adsets_hasta": "2026-10-07",
+        "nota": "nada que traer: los dos archivos ya llegaban a ayer (07/10 real)"
+      },
+      "para": []
+    }
+  }
+}
