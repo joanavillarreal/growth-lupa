@@ -15,7 +15,8 @@ que el funnel y Meta. Solo medición.
    | `fb_evolucion` | `FBEV17, FBEV33, FBEV34, FBEV49, FBEV21, FBEV22` (+ `"_fecha"`) |
    | `li_evolucion` | `LIEV01, LIEV27, LIEV22, LIEV28, LIEV21, LIEV23, LIEV20, LIEV24` (+ `"_fecha"`), solo Gestión |
 
-   Guardar tal cual en `redes/general/raw/<hoy>/<marca>.json`
+   Guardar tal cual en `redes/general/raw/<hoy>/<marca>.json`, salvo las filas de `ig_por_tipo`
+   con tipo vacío (agregados que `analizar.py` ignora; con una `"nota"` que lo diga)
    (`{"marca","desde","hasta","bloques":{...}}`, mismo formato que el crudo semanal).
 2. `python3 redes/scripts/general.py` → `redes/general/<hoy>.json`: últimos 7 días contra los 7
    anteriores y la serie diaria de 30 días. Usa las funciones de `analizar.py`: los números dan

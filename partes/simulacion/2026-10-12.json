@@ -65,6 +65,81 @@
         "nota_simulacion": "datos de Meta del día tomados de la guardia vieja de las 8:00 (mismos parámetros), más una llamada real de control"
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "15:26",
+      "resumen": "SPA al día hasta el 07/10 (Meta y Google); nada que cargar. Ensayo: prueba sin escribir.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP_Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "al_dia": true,
+        "cargado_hasta": {
+          "meta": "2026-10-07",
+          "google": "2026-10-07"
+        },
+        "dry_run": "## Carga de inversión\n\nNada para cargar: los dos canales ya están cargados hasta 2026-10-07.\n\n",
+        "comparacion": "nada que comparar: el SPA ya estaba completo"
+      },
+      "para": []
+    },
+    "redes_semana": {
+      "estado": "fallido",
+      "intentos": 1,
+      "hora": "15:26",
+      "resumen": "",
+      "error": "La semana a medir es la 2026-W41 (05/10 al 11/10) y en la realidad todavía no cerró (hoy es 08/10): no se mide una semana abierta. Solo pasa en la simulación; un lunes real la mide.",
+      "herramientas": [
+        "mcp__MCP_Metricool__getBrandSettings",
+        "mcp__MCP_Metricool__getAnalyticsDataByMetrics",
+        "mcp__MCP_Meta__ads_get_ad_entities"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {},
+      "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "15:29",
+      "resumen": "Gestión 5.981 seguidores (−3 en 7 días), Taller 121 (+11); leads de redes Q4: 2. Panel republicado.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP_Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "datos_hasta": "2026-10-07",
+        "marcas": {
+          "Boxer Gestión": {
+            "seguidores": 5981,
+            "seguidores_delta": -3,
+            "alcance_total": 25334,
+            "alcance_organico": 986,
+            "alcance_pago": 24348,
+            "engagement_pct": 6.3,
+            "engagement_no_confiable": true
+          },
+          "Boxer Taller": {
+            "seguidores": 121,
+            "seguidores_delta": 11,
+            "alcance_total": 12965,
+            "alcance_organico": 848,
+            "alcance_pago": 12117,
+            "engagement_pct": 23.3,
+            "engagement_no_confiable": true
+          }
+        },
+        "leads_q": {
+          "Q4 2026": 2,
+          "mismo_tramo_Q3": 4
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
