@@ -51,7 +51,8 @@ creativo). Lunes. Marcas: Boxer Gestión (brandId 4938672, IG + FB + LinkedIn) y
    está confirmado o descartado.
 6. **Memoria:** `redes/memoria/conclusiones.md`. Parte 2 (log de la semana, aprendizajes, no
    números) siempre; Parte 1 solo si la semana confirma o tira abajo algo.
-7. **Panel:** `python3 redes/scripts/panel_redes.py`. El bloque de conclusiones pasa a ser la
+7. **Panel:** `python3 redes/scripts/panel_redes.py --semana` (el `--semana` rearma el bloque
+   `datos-redes` para Conti: ver CLAUDE.md, "Panel de redes"). El bloque de conclusiones pasa a ser la
    semana nueva (reemplaza a la anterior: el panel muestra solo la última semana cerrada). Leer el
    link de `paneles.yaml` → `panel_redes.link` y republicar `redes/panel/index.html` ahí. Si ese
    día `redes_general` ya publicó, igual se republica: el panel junta los dos.

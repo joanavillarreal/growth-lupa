@@ -204,6 +204,14 @@ Un solo panel, un solo link (`paneles.yaml`), que se republica leyéndolo antes 
   del Q desde el snapshot del funnel.
 - **Las conclusiones de la última semana cerrada** (`redes_semana`, los lunes): el contenido más
   exitoso, qué funcionó, qué no y alertas. Cada lunes ese bloque se reemplaza por la semana nueva.
+- **Un bloque para agentes** (`<script type="application/json" id="datos-redes">`, copia en
+  `redes/panel/datos-redes.json`), para que Conti lea el panel sin entrar a mi repo: la última
+  semana cerrada (números por marca y red, mejores y peores piezas con formato y tema, qué
+  funcionó, qué no, alertas, prospectos de la semana), los leads de redes del trimestre y, de
+  `redes/memoria/conclusiones.md`, "Descartado" y "En prueba" de cada marca (Joana, 08/10/2026).
+  Se rearma **solo los lunes** con `redes_semana` (`panel_redes.py --semana`); los otros días el
+  panel se reconstruye con el bloque guardado. El "tema" es la primera línea del caption:
+  Metricool no clasifica temas. Si cambia la forma del bloque, se sube `formato`.
 - **El histórico semanal no se muestra en el panel:** queda en el repo (`redes/data/<semana>/`,
   las lecturas y `redes/memoria/conclusiones.md`), medido una sola vez el lunes, para comparar y
   aprender.

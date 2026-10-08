@@ -10,6 +10,13 @@ El panel tiene tres partes:
   3. La última semana cerrada     <- redes/data/<semana>/ (analizar.py, cruce_crm.py, lectura.json)
      Solo la última: cada lunes se reemplaza. El histórico semanal queda en el repo, no en el panel.
 
+Además deja un bloque legible por máquina para Conti (y cualquier agente que lea el panel sin
+entrar al repo): <script type="application/json" id="datos-redes">, también en
+redes/panel/datos-redes.json. Se arma SOLO con --semana (lo corre redes · semana, los lunes):
+la última semana cerrada, los leads de redes del trimestre a esa fecha y, de
+redes/memoria/conclusiones.md, "Descartado" y "En prueba" de cada marca. Los demás días el panel
+se reconstruye con el bloque guardado, sin tocarlo.
+
 No recalcula lo que ya calcularon analizar.py o general.py. Lo único nuevo son las alertas
 automáticas de la semana (reglas fijas, cada una con su número) y los leads por trimestre.
 Donde un número no existe va null ("sin dato"), nunca cero.
@@ -197,7 +204,83 @@ def ultima_semana():
     return None
 
 
-def construir():
+FORMATO_BLOQUE = 1   # subir si cambia la forma del bloque datos-redes
+
+
+def memoria_conti():
+    """De la Parte 1 de conclusiones.md: Descartado (tabla) y En prueba (preguntas) por marca."""
+    texto = (REDES / "memoria" / "conclusiones.md").read_text(encoding="utf-8")
+    parte1 = texto.split("# Parte 2")[0]
+    out = {}
+    for clave, nombre in MARCAS:
+        m = re.search(rf"^## {re.escape(nombre)}\n(.*?)(?=^## |\Z)", parte1, re.S | re.M)
+        if not m:
+            out[clave] = {"descartado": None, "en_prueba": None}
+            continue
+        secciones = dict(re.findall(r"^### (.+?)\n(.*?)(?=^### |\Z)", m.group(1), re.S | re.M))
+        desc = next((v for k, v in secciones.items() if k.startswith("Descartado")), "")
+        prueba = next((v for k, v in secciones.items() if k.startswith("En prueba")), "")
+        filas = []
+        for linea in desc.splitlines():
+            celdas = [c.strip() for c in linea.strip().strip("|").split("|")]
+            if linea.startswith("|") and len(celdas) == 2 and not set(celdas[0]) <= set("-: ") \
+                    and celdas[0] != "Mecanismo":
+                filas.append({"mecanismo": celdas[0].replace("**", ""), "evidencia": celdas[1]})
+        items = []
+        bloques = re.split(r"\n(?=\*\*¿)", prueba.strip().split("\n---")[0])
+        for b in bloques:
+            q = re.match(r"\*\*(¿.+?\?)\*\*\s*(.*)", b.strip(), re.S)
+            if q:
+                items.append({"pregunta": q.group(1), "estado_y_evidencia": " ".join(q.group(2).split())})
+        out[clave] = {"descartado": filas, "en_prueba": items}
+    return out
+
+
+def piezas_conti(ig):
+    """Mejores y peores piezas de Instagram por engagement orgánico, con formato y tema."""
+    def ficha(p):
+        return {"formato": TIPO.get(p.get("tipo"), p.get("tipo")), "fecha": p.get("fecha"),
+                "url": p.get("url"),
+                # Metricool no clasifica el tema: va la primera línea del caption, tal cual.
+                "tema": (p.get("texto") or "").split("\n")[0][:200] or None,
+                "alcance": p.get("alcance"), "interacciones": p.get("interacciones"),
+                "engagement_pct": p.get("engagement_pct"), "guardados": p.get("guardados"),
+                "compartidos": p.get("compartidos"), "follows": p.get("follows"),
+                "views": p.get("views"), "view_rate_pct": p.get("view_rate_pct")}
+    con_dato = [p for p in (ig.get("piezas") or []) if p.get("engagement_pct") is not None]
+    orden = sorted(con_dato, key=lambda p: p["engagement_pct"], reverse=True)
+    n = min(3, len(orden) // 2)          # con menos de 2 piezas no hay "mejor" contra "peor"
+    return ([ficha(p) for p in orden[:max(n, 1)]] if orden else [],
+            [ficha(p) for p in orden[::-1][:n]])
+
+
+def bloque_conti(semana, fila, leads):
+    marcas = {}
+    for clave, nombre in MARCAS:
+        d = leer(semana, clave)
+        r = resumen_marca(d)
+        mejores, peores = piezas_conti(d.get("instagram") or {})
+        ig = {k: v for k, v in r["ig"].items() if k != "formatos"}
+        ig["formatos"] = r["ig"]["formatos"]
+        marcas[clave] = {"nombre": nombre, "instagram": ig, "facebook": r["fb"], "linkedin": r["li"],
+                         "mejores_piezas": mejores, "peores_piezas": peores}
+    lectura = fila.get("lectura") or {}
+    return {
+        "formato": FORMATO_BLOQUE,
+        "generado": datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).isoformat(timespec="minutes"),
+        "fuente": "Lupa (growth-lupa), análisis redes · semana. Orgánico y pago van separados; "
+                  "null = sin dato, nunca cero.",
+        "semana": {"semana": semana, "desde": fila.get("desde"), "hasta": fila.get("hasta"),
+                   "marcas": marcas,
+                   "titular": lectura.get("titular"), "funciono": lectura.get("funciono") or [],
+                   "no_funciono": lectura.get("no_funciono") or [], "alertas": fila.get("alertas") or [],
+                   "prospectos_redes_semana": fila.get("crm")},
+        "leads_trimestre": leads,
+        "memoria": memoria_conti(),
+    }
+
+
+def construir(semanal=False):
     tz = ZoneInfo("America/Argentina/Buenos_Aires")
     ahora = datetime.now(tz)
     hoy = ahora.date()
@@ -223,6 +306,12 @@ def construir():
                 fila["alertas"].append("Las redes no trajeron ningún prospecto al CRM esta semana.")
         datos["semana"] = fila
 
+    ruta_bloque = REDES / "panel" / "datos-redes.json"
+    if semanal and s:
+        conti = bloque_conti(s, fila, datos["leads"])
+        ruta_bloque.write_text(json.dumps(conti, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    conti = json.loads(ruta_bloque.read_text(encoding="utf-8")) if ruta_bloque.exists() else None
+
     destino = REDES / "panel"
     destino.mkdir(exist_ok=True)
     (destino / "datos.json").write_text(json.dumps(datos, ensure_ascii=False, indent=1) + "\n",
@@ -231,14 +320,23 @@ def construir():
     bloque = json.dumps(datos, ensure_ascii=False).replace("</", "<\\/")
     html = re.sub(r'(<script type="application/json" id="datos">).*?(</script>)',
                   lambda m: m.group(1) + bloque + m.group(2), plantilla, count=1, flags=re.S)
+    bloque_c = json.dumps(conti, ensure_ascii=False).replace("</", "<\\/")
+    html = re.sub(r'(<script type="application/json" id="datos-redes">).*?(</script>)',
+                  lambda m: m.group(1) + bloque_c + m.group(2), html, count=1, flags=re.S)
     (destino / "index.html").write_text(html, encoding="utf-8")
     g = datos["general"]
     print(f"Panel de redes: cuentas al {g['datos_hasta'] if g else 'SIN DATO'}"
           f"{'' if not g or g['al_dia'] else ' (ATRASADO: no es de hoy)'} · "
           f"leads {datos['leads']['trimestres'][0]['etiqueta']}: {datos['leads']['trimestres'][0]['total']} · "
-          f"semana {s or 'ninguna'}")
+          f"semana {s or 'ninguna'} · bloque datos-redes: "
+          f"{(conti or {}).get('semana', {}).get('semana', 'NO HAY') if conti else 'NO HAY'}"
+          f"{' (rearmado)' if semanal else ' (el guardado del lunes)'}")
     print(f"  -> {destino / 'index.html'}")
 
 
 if __name__ == "__main__":
-    construir()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--semana", action="store_true",
+                    help="rearmar el bloque datos-redes (solo redes · semana, los lunes)")
+    construir(ap.parse_args().semana)

@@ -1,0 +1,458 @@
+{
+ "formato": 1,
+ "generado": "2026-10-08T17:13-03:00",
+ "fuente": "Lupa (growth-lupa), análisis redes · semana. Orgánico y pago van separados; null = sin dato, nunca cero.",
+ "semana": {
+  "semana": "2026-W40",
+  "desde": "2026-09-28",
+  "hasta": "2026-10-04",
+  "marcas": {
+   "boxer-gestion": {
+    "nombre": "Boxer Gestión",
+    "instagram": {
+     "seguidores": 5987,
+     "seguidores_delta": 7,
+     "alcance_organico": 1365,
+     "alcance_pago": 23527,
+     "alcance_total": 24892,
+     "views_organicas": 3918,
+     "views_pago": 26991,
+     "pct_views_pauta": 87.3,
+     "engagement_pct": 7.6,
+     "interacciones": 104,
+     "publicaciones": 7,
+     "stories": 2,
+     "guardados": 5,
+     "compartidos": 6,
+     "muestra_chica": false,
+     "var_alcance_organico": 58.5,
+     "var_engagement": 81.0,
+     "formatos": [
+      {
+       "formato": "Post",
+       "views": 22,
+       "alcance": 10,
+       "interacciones": 49,
+       "engagement_pct": 490.0,
+       "sin_datos_interaccion": false
+      },
+      {
+       "formato": "Reel",
+       "views": 1130,
+       "alcance": 374,
+       "interacciones": 52,
+       "engagement_pct": 13.9,
+       "sin_datos_interaccion": false
+      },
+      {
+       "formato": "Story",
+       "views": 383,
+       "alcance": 241,
+       "interacciones": 3,
+       "engagement_pct": 1.2,
+       "sin_datos_interaccion": false
+      },
+      {
+       "formato": "Carrusel",
+       "views": 2383,
+       "alcance": 740,
+       "interacciones": null,
+       "engagement_pct": null,
+       "sin_datos_interaccion": true
+      }
+     ]
+    },
+    "facebook": {
+     "seguidores": 975,
+     "seguidores_delta": 0,
+     "views": 23862,
+     "publicaciones": 3
+    },
+    "linkedin": {
+     "seguidores": 105,
+     "seguidores_delta": 1,
+     "impresiones": 35,
+     "publicaciones": 1,
+     "engagement_pct": 2.9
+    },
+    "mejores_piezas": [
+     {
+      "formato": "Reel",
+      "fecha": "20260930",
+      "url": "https://www.instagram.com/reel/Dd7aXLdDLIx/",
+      "tema": "Ahora con la IA podes concretar ventas más rápido 🚀🤖 En nuestras 3 clases grabadas podes acceder a casos practicos como estos sin costo 🤗 Comentá CLAUDE y te lo enviamos 🦾",
+      "alcance": 193,
+      "interacciones": 18,
+      "engagement_pct": 9.3,
+      "guardados": 1,
+      "compartidos": 2,
+      "follows": null,
+      "views": 324,
+      "view_rate_pct": 32.199997
+     },
+     {
+      "formato": "Reel",
+      "fecha": "20260929",
+      "url": "https://www.instagram.com/reel/Dd4kpx_khvD/",
+      "tema": "Incorporá Claude (o Claudio🤖) en tu Casa de Repuestos. Accedé a nuestras 3 clases grabadas sin costo 🚀 Comentá CLAUDE y te las enviamos 🫱🏼‍🫲🏽",
+      "alcance": 143,
+      "interacciones": 8,
+      "engagement_pct": 5.6,
+      "guardados": 1,
+      "compartidos": 1,
+      "follows": null,
+      "views": 241,
+      "view_rate_pct": 36.2
+     }
+    ],
+    "peores_piezas": [
+     {
+      "formato": "Carrusel",
+      "fecha": "20260929",
+      "url": "https://www.instagram.com/p/Dd2bOHoDu3V/",
+      "tema": "\"Dejame que me fijo.\" 👀🫠Lo decís diez veces por día. Y cada vez, el cliente se queda del otro lado del mostrador esperando que vuelvas del depósito.",
+      "alcance": 179,
+      "interacciones": 4,
+      "engagement_pct": 2.2,
+      "guardados": 0,
+      "compartidos": 2,
+      "follows": 0,
+      "views": 457,
+      "view_rate_pct": null
+     },
+     {
+      "formato": "Carrusel",
+      "fecha": "20261002",
+      "url": "https://www.instagram.com/p/DeAgq5aHWfm/",
+      "tema": "Arranca octubre y hay que reponer. 👀 Si la compra sale de memoria, pasan dos cosas: Te falta lo que te piden seguido y te sobra lo que no sale. Pedile a Claude que analice los dato",
+      "alcance": 196,
+      "interacciones": 5,
+      "engagement_pct": 2.6,
+      "guardados": 1,
+      "compartidos": 0,
+      "follows": 0,
+      "views": 573,
+      "view_rate_pct": null
+     }
+    ]
+   },
+   "boxer-taller": {
+    "nombre": "Boxer Taller",
+    "instagram": {
+     "seguidores": 121,
+     "seguidores_delta": 41,
+     "alcance_organico": 1106,
+     "alcance_pago": 9438,
+     "alcance_total": 10544,
+     "views_organicas": 3842,
+     "views_pago": 10085,
+     "pct_views_pauta": 72.4,
+     "engagement_pct": 21.2,
+     "interacciones": 234,
+     "publicaciones": 11,
+     "stories": 6,
+     "guardados": 0,
+     "compartidos": 6,
+     "muestra_chica": false,
+     "var_alcance_organico": 259.1,
+     "var_engagement": 562.5,
+     "formatos": [
+      {
+       "formato": "Post",
+       "views": 1793,
+       "alcance": 58,
+       "interacciones": 178,
+       "engagement_pct": 306.9,
+       "sin_datos_interaccion": false
+      },
+      {
+       "formato": "Reel",
+       "views": 1258,
+       "alcance": 773,
+       "interacciones": 49,
+       "engagement_pct": 6.3,
+       "sin_datos_interaccion": false
+      },
+      {
+       "formato": "Story",
+       "views": 357,
+       "alcance": 154,
+       "interacciones": 7,
+       "engagement_pct": 4.5,
+       "sin_datos_interaccion": false
+      },
+      {
+       "formato": "Carrusel",
+       "views": 434,
+       "alcance": 121,
+       "interacciones": null,
+       "engagement_pct": null,
+       "sin_datos_interaccion": true
+      }
+     ]
+    },
+    "facebook": {
+     "seguidores": 2,
+     "seguidores_delta": 0,
+     "views": 8732,
+     "publicaciones": 6
+    },
+    "linkedin": null,
+    "mejores_piezas": [
+     {
+      "formato": "Post",
+      "fecha": "20260928",
+      "url": "https://www.instagram.com/p/Dd1UbcqCa17/",
+      "tema": "Estaremos presentes en @expo.mecanico 🚀 el evento que reunirá a talleristas que busquen conectar con el rubro 🫱🏼‍🫲🏽",
+      "alcance": 55,
+      "interacciones": 7,
+      "engagement_pct": 12.7,
+      "guardados": 0,
+      "compartidos": 0,
+      "follows": 0,
+      "views": 126,
+      "view_rate_pct": null
+     },
+     {
+      "formato": "Reel",
+      "fecha": "20260928",
+      "url": "https://www.instagram.com/reel/Dd1vBzKDFhC/",
+      "tema": "SORTEO FINALIZADO ⚠️",
+      "alcance": 253,
+      "interacciones": 18,
+      "engagement_pct": 7.1,
+      "guardados": 0,
+      "compartidos": 4,
+      "follows": null,
+      "views": 447,
+      "view_rate_pct": 30.199997
+     }
+    ],
+    "peores_piezas": [
+     {
+      "formato": "Carrusel",
+      "fecha": "20261001",
+      "url": "https://www.instagram.com/p/Dd7kzwXjJem/",
+      "tema": "¿Dónde queda anotado lo que se le hizo a cada auto? 🔧",
+      "alcance": 34,
+      "interacciones": 1,
+      "engagement_pct": 2.9,
+      "guardados": 0,
+      "compartidos": 0,
+      "follows": 0,
+      "views": 117,
+      "view_rate_pct": null
+     },
+     {
+      "formato": "Reel",
+      "fecha": "20261001",
+      "url": "https://www.instagram.com/reel/Dd9ky4pBt27/",
+      "tema": "Estaremos en @expo.mecanico 🔧🚗 Después de años acompañando a Casas de Repuestos, comenzamos a acompañar con tecnología a Talleres Mecánicos 💻🫱🏼‍🫲🏽",
+      "alcance": 560,
+      "interacciones": 23,
+      "engagement_pct": 4.1,
+      "guardados": 0,
+      "compartidos": 2,
+      "follows": null,
+      "views": 910,
+      "view_rate_pct": 43.6
+     }
+    ]
+   }
+  },
+  "titular": "Taller tuvo su mejor semana de altas (80 a 121, +41) con el sorteo de entradas para Expomecánico y el reel del evento. En Gestión los dos reels con «Comentá CLAUDE» encabezaron el ranking, pero nombrar a Claude sin ese pedido no levantó nada: lo que hace conversar es la palabra clave, no la herramienta.",
+  "funciono": [
+   "Boxer Gestión: los dos reels con «Comentá CLAUDE» encabezaron el ranking de engagement (9,3% el del 30/9 y 5,6% el del 29/9).",
+   "Boxer Gestión: el alcance orgánico subió 58,5%, a 1.365 personas, y volvieron los compartidos (6 en la semana).",
+   "Boxer Taller: semana récord de altas, de 80 a 121 seguidores (+41), coincidiendo con el sorteo de entradas para Expomecánico.",
+   "Boxer Taller: el reel del evento del 1/10 fue la pieza de mayor alcance (560 personas, view rate 43,6%) y el del sorteo, la más compartida (4)."
+  ],
+  "no_funciono": [
+   "Boxer Gestión: los tres carruseles cerraron con 0 follows, y los dos que nombran a Claude sin pedir comentario quedaron en 5,2% y 2,6%, a la par del de mostrador (2,2%).",
+   "Boxer Gestión: Facebook bajó 19,3% en views (23.862) y no sumó seguidores.",
+   "Boxer Taller: los dos carruseles de pilar quedaron en 32 y 34 de alcance, con 0 guardados y 0 compartidos."
+  ],
+  "alertas": [
+   "Boxer Gestión: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.",
+   "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).",
+   "Boxer Taller: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.",
+   "Boxer Taller: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero)."
+  ],
+  "prospectos_redes_semana": {
+   "prospectos_redes": 3,
+   "inversion_redes_ars": 34735.14,
+   "costo_por_prospecto_ars": 11578.38,
+   "var_pct": 50.0
+  }
+ },
+ "leads_trimestre": {
+  "corte_snapshot": "2026-10-08",
+  "trimestres": [
+   {
+    "etiqueta": "Q4 2026",
+    "desde": "2026-10-01",
+    "hasta": "2026-10-08",
+    "en_curso": true,
+    "total": 2,
+    "por_semana": [
+     {
+      "semana": "2026-W40",
+      "leads": 2
+     },
+     {
+      "semana": "2026-W41",
+      "leads": 0
+     }
+    ],
+    "derivados": 2,
+    "no_utiles": 0,
+    "inactivos": 0,
+    "en_gestion": 0
+   },
+   {
+    "etiqueta": "Q3 2026",
+    "desde": "2026-07-01",
+    "hasta": "2026-09-30",
+    "en_curso": false,
+    "total": 27,
+    "por_semana": [
+     {
+      "semana": "2026-W27",
+      "leads": 3
+     },
+     {
+      "semana": "2026-W28",
+      "leads": 1
+     },
+     {
+      "semana": "2026-W29",
+      "leads": 3
+     },
+     {
+      "semana": "2026-W30",
+      "leads": 3
+     },
+     {
+      "semana": "2026-W31",
+      "leads": 2
+     },
+     {
+      "semana": "2026-W32",
+      "leads": 1
+     },
+     {
+      "semana": "2026-W33",
+      "leads": 2
+     },
+     {
+      "semana": "2026-W34",
+      "leads": 2
+     },
+     {
+      "semana": "2026-W35",
+      "leads": 3
+     },
+     {
+      "semana": "2026-W36",
+      "leads": 2
+     },
+     {
+      "semana": "2026-W37",
+      "leads": 2
+     },
+     {
+      "semana": "2026-W38",
+      "leads": 0
+     },
+     {
+      "semana": "2026-W39",
+      "leads": 2
+     },
+     {
+      "semana": "2026-W40",
+      "leads": 1
+     }
+    ],
+    "derivados": 19,
+    "no_utiles": 2,
+    "inactivos": 5,
+    "en_gestion": 1,
+    "mismo_tramo": {
+     "hasta": "2026-07-08",
+     "total": 4
+    }
+   }
+  ],
+  "fuente": "Bitrix24, prospectos con origen del canal Redes Sociales (config/definitions.yaml), snapshot diario del funnel"
+ },
+ "memoria": {
+  "boxer-gestion": {
+   "descartado": [
+    {
+     "mecanismo": "Enumerar funciones del sistema",
+     "evidencia": "28/7/2026: 0,4% de engagement, 1 like, 0 comentarios. Una funcionalidad por pieza, entrada por la situación"
+    },
+    {
+     "mecanismo": "Temas virales ajenos al rubro",
+     "evidencia": "Alcance alto con engagement de 1,18%. Trae views, no trae repuesteros. Se repitió el 31/8/2026: el meme fue el de mayor alcance orgánico de la semana (756) con 1,7%, cero guardados, cero compartidos y cero altas"
+    },
+    {
+     "mecanismo": "Publicar piezas de Boxer Taller en la cuenta de Gestión",
+     "evidencia": "3/9/2026: el carrusel de talleres fue la pieza más floja de la semana (1,5% sobre 195 de alcance). Son dos audiencias distintas — la pieza de Taller va en la cuenta de Taller"
+    },
+    {
+     "mecanismo": "Explicar el rendimiento del CTA de palabra clave por si hay o no un entregable concreto detrás",
+     "evidencia": "Los cuatro clips del webinar (18 al 20/9) pedían comentar MOSTRADOR a cambio de la grabación completa: un entregable real, del mismo orden que las tres clases del curso de IA. Sacaron 4, 4, 3 y 3 interacciones sobre alcances de 93 a 152, y cero guardados y cero compartidos. **El entregable no era la variable.** Lo que separa al post del curso (3/8) de los clips es que el tema le interesaba a alguien: el CTA no rescata una pieza que no enganchó, y agregarle algo concreto para mandar tampoco"
+    },
+    {
+     "mecanismo": "Nombrar la herramienta (Claude) como lo que hace conversar a la cuenta",
+     "evidencia": "Abierta en la W39 por la guía de Claude (11,1%) y caída en la W40. La W40 nombró a Claude en cuatro de cinco piezas: los dos carruseles que lo nombran sin pedir comentario (30/9, \"5 preguntas\", y 2/10, \"Arranca octubre y hay que reponer\") sacaron 5,2% y 2,6%, a la par del de mostrador sin Claude (2,2%) y del de PROMPT de la W39 (3,3%). Arriba quedaron solo las piezas con \"Comentá CLAUDE\": el reel del 29/9, la prueba que se había pedido, quedó segundo con 5,6% (8 interacciones sobre 143), por debajo del otro reel con la misma palabra clave (9,3%) y de la guía. Lo que mueve es el CTA de palabra clave, que ya estaba confirmado; nombrar la herramienta no suma por sí solo. Claude sigue siendo un tema válido, pero no es la palanca"
+    },
+    {
+     "mecanismo": "Explicar la conversación de la cuenta por la cadencia de stories",
+     "evidencia": "W37: se publicaron 3 stories, menos todavía que las 4 de la W36, y las interacciones subieron 52,2%. De las 70 interacciones de la semana las stories aportaron 5 y el reel 23. Las stories se siguen publicando, pero no son la palanca de la conversación ni la explicación de una caída: esa es el reel"
+    }
+   ],
+   "en_prueba": [
+    {
+     "pregunta": "¿El guardado se puede forzar con formato de checklist?",
+     "estado_y_evidencia": "Avanzó, no cerró. El Tip de IA del 7/9/2026 salió por fin en formato de preguntas concretas (\"3 preguntas para arrancar la semana\") y sacó **1 guardado sobre 149 de alcance**; la cuenta pasó de 1 guardado en la W36 a 3 en la W37. El formato accionable mueve algo, pero para el pilar donde el guardado es la métrica reina uno sigue siendo poco. Falta la versión checklist pura para cerrarla."
+    },
+    {
+     "pregunta": "¿El colaborativo con un negocio real es la palanca de captación que le falta a Gestión?",
+     "estado_y_evidencia": "Abierta por la W38. La única pieza de todo el sistema que circuló esa semana fue el colaborativo de Rojas —15 compartidos y 3 altas directas en la cuenta de Taller—, mientras Gestión cerraba en cero compartidos, cero guardados y cero altas netas con cinco piezas publicadas. Es el mismo mecanismo de personas que ya está confirmado, pero con la distribución de un tercero encima en vez del algoritmo. Para confirmarla hace falta un colaborativo publicado **del lado de Gestión**, con una casa de la red. El de Rojas no sirve como prueba: el negocio es taller y casa de repuestos a la vez, y el arrastre se repartió entre las tres cuentas. Si un colaborativo de Gestión sola trae altas y compartidos, la grilla deja de girar alrededor del calendario de pilares y pasa a girar alrededor de a quién se puede coordinar cada mes."
+    },
+    {
+     "pregunta": "¿Los hashtags suman alcance?",
+     "estado_y_evidencia": "Abierta el 23/9/2026 (consulta C1). Con lo que se puede medir, no se ve efecto en ninguna dirección: en las 18 piezas de la W35 a la W38 (9 con hashtags en el texto, 9 sin), los posts tienen la misma mediana de alcance orgánico con y sin hashtags (174,5 contra 169) y la correlación entre cantidad de hashtags y alcance es nula (rho −0,13). Ninguna de las dos mitades trajo seguidores. La diferencia en reels (138 contra 517) la explica la gente en la pieza, no el hashtag: los reels sin hashtags son CERAC y soporte, los con hashtags son los clips del webinar. **El dato que decidiría no existe**: Metricool no da alcance por origen (hashtags / explorar) ni alcance en no seguidores por pieza. Se cierra con una prueba A/B dentro de la misma semana y el mismo pilar, o mirando \"De hashtags\" en las estadísticas nativas de Instagram de cada pieza. Detalle en `data/hashtags/analisis.json`."
+    }
+   ]
+  },
+  "boxer-taller": {
+   "descartado": [
+    {
+     "mecanismo": "Humor del rubro en placa, sin pilar",
+     "evidencia": "26/8/2026: 0 interacciones sobre 26 de alcance. Pedía un comentario sin haber dado antes una razón para comentar. El humor puede ir, pero colgado de un pilar — y no en placa (ver la hipótesis del reel, abajo)"
+    }
+   ],
+   "en_prueba": [
+    {
+     "pregunta": "¿La red de repuesteras mueve la aguja?",
+     "estado_y_evidencia": "**Confirmado en la W38.** El colaborativo de Rojas, primera ejecución del pilar 4 después de cuatro semanas propuesto, dejó **9 altas en la semana (67 → 76)**, 15 compartidos y 1.560 de alcance: el mejor registro de la cuenta. El mecanismo funciona y la palanca es la red. > **Corrección del 21/9/2026 (Joana): los 1.000 seguidores no son un objetivo de crecimiento.** Son > una meta interna y aspiracional para antes de fin de año. **Se deja de dividir 1.000 por las altas > de la semana** — la cuenta de \"faltan 103 semanas, harían falta 72 por semana\" describe una meta > que no existe y convierte la mejor semana de la historia de la cuenta en un fracaso aritmético. > Ver `contexto/boxer-taller.md`. Lo que queda abierto no es si sirve, sino **cuántos colaborativos se pueden coordinar por mes** — pregunta de agenda, no de contenido. Sin la vara de los 1.000, la forma correcta de medirlo es comparar una semana con colaborativo contra una sin, no contra un número."
+    },
+    {
+     "pregunta": "¿El reel es lo que mueve el alcance de esta cuenta?",
+     "estado_y_evidencia": "Perdió fuerza en la W38: la mejor semana de alcance orgánico de la historia de la cuenta —1.575 personas, +285,1%— llegó **sin publicar un solo reel**, con un carrusel. La evidencia a favor sigue siendo solo la W36 (220 de los 367 de alcance orgánico, y el de humor del 31/8 con view rate de 48,8%), y no quedó desmentida porque no se probó; pero ya no es la mejor explicación disponible. Lo que movió el alcance esta vez fue **quién distribuyó la pieza**, no en qué formato estaba. Antes de seguir invirtiendo en reel por el alcance, conviene separar las dos cosas: un reel sin colaborativo y un colaborativo sin reel. **W40, primera mitad de la prueba:** el reel del Expomecánico del 1/10, sin colaborativo, fue la pieza de mayor alcance de la semana (560, view rate 43,6%) y el bloque reel se llevó 773 de los 1.106 de alcance orgánico, mientras los dos carruseles de pilar quedaron en 32 y 34. Suma a favor, pero el reel hablaba de un evento con sorteo encima: falta un reel de pilar, sin evento ni colaborativo."
+    },
+    {
+     "pregunta": "¿El sorteo con condición de seguir trae altas que se quedan?",
+     "estado_y_evidencia": "Abierta por la W40. Con el sorteo de entradas para el Expomecánico (\"Comentá EXPO y seguinos\", cierre el 1/10) la cuenta pasó de 80 a 121 (+41), la mejor semana de su historia, y el salto fue de 84 el 30/9 a 110 el 1/10. No se puede atribuir a la pieza (los reels no traen follows), pero la coincidencia es fuerte. Lo que hay que ver es **si se quedan**: si la W41 y la W42 no devuelven las altas, el sorteo trajo talleristas; si caen, trajo cazadores de sorteos. Hasta que no se vea, no se repite como palanca de crecimiento."
+    },
+    {
+     "pregunta": "¿Los hashtags suman alcance?",
+     "estado_y_evidencia": "Abierta el 23/9/2026 (consulta C1), sin lectura posible todavía: son 10 piezas (4 con hashtags, 6 sin) y la cuenta está en modo lanzamiento. La mediana con hashtags (117 contra 35) la arrastra el colaborativo de Rojas (1.560), cuyo alcance lo trajo quien lo distribuyó; en posts la mediana queda en 38 contra 26 de alcance: ruido. Mismo faltante que en Gestión: no hay alcance por origen en Metricool. Detalle en `data/hashtags/analisis.json`."
+    }
+   ]
+  }
+ }
+}
