@@ -87,11 +87,14 @@ analisis:
     disparar_despues: []
 
   redes:
-    descripcion: Semana cerrada en redes (Metricool) + leads de redes en Bitrix
+    descripcion: Semana cerrada en redes (Metricool) + leads de redes en Bitrix + Panel de redes
     dias: [lunes]
     artefacto: panel_redes
-    herramientas:             # se ajusta en el paso 4
+    procedimiento: procedimientos/redes.md
+    entorno: [BITRIX_WEBHOOK_URL]
+    herramientas:
       - getBrandSettings
       - getAnalyticsDataByMetrics
+      - ads_get_ad_entities         # gasto de awareness de la semana
     slack: "D0BRVS7A4A3"
     disparar_despues: []      # futuro: [conti]

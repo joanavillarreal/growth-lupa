@@ -1,0 +1,34 @@
+{
+  "semana": "2026-W38",
+  "desde": "2026-09-14",
+  "hasta": "2026-09-20",
+  "origenes_redes": [
+    "UC_GJPS17"
+  ],
+  "leads": [],
+  "inversion": [
+    {
+      "id": 448,
+      "ufCrm10_1777551017": 1416,
+      "ufCrm10_1777551275": "2026-09-14T03:00:00+03:00",
+      "ufCrm10_1777551329": "21.69|USD"
+    },
+    {
+      "id": 530,
+      "ufCrm10_1777551017": 1418,
+      "ufCrm10_1777551275": "2026-09-14T03:00:00+03:00",
+      "ufCrm10_1777551329": "13.43|USD"
+    }
+  ],
+  "nombres_canal": {
+    "1416": "Inversión Meta Ads",
+    "1418": "Inversión Google Ads",
+    "1420": "Inversión Redes Sociales",
+    "1422": "Inversión IVR",
+    "1424": "Sueldos",
+    "1426": "Comisiones",
+    "1428": "Herramientas",
+    "1430": "Otros",
+    "1432": "Inversión Newsletter"
+  }
+}

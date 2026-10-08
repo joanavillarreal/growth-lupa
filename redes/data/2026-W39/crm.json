@@ -1,0 +1,36 @@
+{
+  "semana": "2026-W39",
+  "prospectos_redes": 2,
+  "por_dia": {
+    "2026-09-21": 1,
+    "2026-09-23": 1
+  },
+  "por_estado": {
+    "CONVERTED": 2
+  },
+  "inversion_usd": 173.39,
+  "inversion_por_canal": {
+    "Inversión Meta Ads": 125.43,
+    "Inversión Google Ads": 47.96
+  },
+  "dias_con_inversion_cargada": 7,
+  "inversion_redes": 30572.96,
+  "moneda_inversion_redes": "ARS",
+  "campanas_awareness": [
+    {
+      "campana": "JY | Awareness Boxer Taller (AGENTE META)",
+      "monto": 13722.91
+    },
+    {
+      "campana": "JY | Awareness",
+      "monto": 16850.05
+    }
+  ],
+  "costo_por_prospecto": 15286.48,
+  "nota": null,
+  "monedas_no_usd_excluidas": null,
+  "comparativa": {
+    "semana_previa": "2026-W38",
+    "prospectos_redes_var_pct": null
+  }
+}

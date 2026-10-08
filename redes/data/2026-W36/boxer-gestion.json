@@ -1,0 +1,238 @@
+{
+  "semana": "2026-W36",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-08-31",
+  "hasta": "2026-09-06",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 1398,
+        "alcance": 712,
+        "interacciones": 28,
+        "engagement_pct": 3.9,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 757,
+        "alcance": 419,
+        "interacciones": 8,
+        "engagement_pct": 1.9,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 1445,
+        "alcance": 739,
+        "interacciones": 10,
+        "engagement_pct": 1.4,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 1546,
+        "alcance": 555,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 5146,
+      "alcance": 2425,
+      "interacciones": 46,
+      "engagement_pct": 1.9
+    },
+    "pauta": {
+      "views": 28238,
+      "alcance": 29229
+    },
+    "pct_views_de_pauta": 84.6,
+    "alcance_total_cuenta": 31654,
+    "audiencia": {
+      "views_seguidores": 5181,
+      "views_no_seguidores": 27964,
+      "pct_seguidores": 15.5,
+      "pct_no_seguidores": 83.8,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 5940,
+      "fin": 5963,
+      "delta": 23,
+      "delta_pct": 0.4
+    },
+    "publicaciones": 8,
+    "stories_publicadas": 4,
+    "piezas": [
+      {
+        "tipo": "Reel",
+        "fecha": "20260831",
+        "url": "https://www.instagram.com/reel/DcuHP3GAaq4/",
+        "texto": "Santi ya está viajando a Neuquén. 🛩️ Va a estar visitando casas de repuestos de la zona, sin costo y sin compromiso: Se sienta, escucha cómo trabajás hoy y te muestra cómo funciona",
+        "views": 376,
+        "alcance": 237,
+        "interacciones": 10,
+        "guardados": 1,
+        "compartidos": 1,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 38.7,
+        "engagement_pct": 4.2
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260902",
+        "url": "https://www.instagram.com/p/Dcyg94GDOo9/",
+        "texto": "El proveedor que más te subió los precios no siempre es el que creés. 🤔 Lo tenés anotado: Cada compra cargada en Boxer tiene su fecha y su costo. Con los últimos dos meses alcanza ",
+        "views": 319,
+        "alcance": 120,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.5
+      },
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20260831",
+        "url": "https://www.instagram.com/p/Dct6MSVTL13/",
+        "texto": "Llevá un control de tu Casa de Repuestos con Boxer 😉  Ventas, stock, precios actualizados automáticamente, cuentas, etc. 💻🚀\n\n#cuentas #tinistoessel #meme #boxergestion",
+        "views": 1371,
+        "alcance": 756,
+        "interacciones": 13,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 1.7
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260903",
+        "url": "https://www.instagram.com/p/Dc1kP1Ejs1n/",
+        "texto": "Le pasaste el presupuesto del arreglo y no volvió más. 🫠 No siempre es que lo hizo en otro lado. A veces puede que perdiera el papel o que no le dieras seguimiento. 🚗🔧\n\nMirá como p",
+        "views": 511,
+        "alcance": 195,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 1.5
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "Reel",
+        "fecha": "20260831",
+        "url": "https://www.instagram.com/reel/DcuHP3GAaq4/",
+        "texto": "Santi ya está viajando a Neuquén. 🛩️ Va a estar visitando casas de repuestos de la zona, sin costo y sin compromiso: Se sienta, escucha cómo trabajás hoy y te muestra cómo funciona",
+        "views": 376,
+        "alcance": 237,
+        "interacciones": 10,
+        "guardados": 1,
+        "compartidos": 1,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 38.7,
+        "engagement_pct": 4.2
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260902",
+        "url": "https://www.instagram.com/p/Dcyg94GDOo9/",
+        "texto": "El proveedor que más te subió los precios no siempre es el que creés. 🤔 Lo tenés anotado: Cada compra cargada en Boxer tiene su fecha y su costo. Con los últimos dos meses alcanza ",
+        "views": 319,
+        "alcance": 120,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.5
+      },
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20260831",
+        "url": "https://www.instagram.com/p/Dct6MSVTL13/",
+        "texto": "Llevá un control de tu Casa de Repuestos con Boxer 😉  Ventas, stock, precios actualizados automáticamente, cuentas, etc. 💻🚀\n\n#cuentas #tinistoessel #meme #boxergestion",
+        "views": 1371,
+        "alcance": 756,
+        "interacciones": 13,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 1.7
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260903",
+        "url": "https://www.instagram.com/p/Dc1kP1Ejs1n/",
+        "texto": "Le pasaste el presupuesto del arreglo y no volvió más. 🫠 No siempre es que lo hizo en otro lado. A veces puede que perdiera el papel o que no le dieras seguimiento. 🚗🔧\n\nMirá como p",
+        "views": 511,
+        "alcance": 195,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 1.5
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 1,
+    "compartidos_totales": 1,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 21777,
+    "publicaciones": 4,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 959,
+      "fin": 968,
+      "delta": 9
+    }
+  },
+  "linkedin": {
+    "impresiones": 6,
+    "publicaciones": 1,
+    "interacciones": 0,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 0,
+    "engagement_pct_sobre_impresiones": 0.0,
+    "seguidores": {
+      "inicio": 103,
+      "fin": 103,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W35",
+    "instagram": {
+      "views_organicas": -38.2,
+      "alcance_organico": -15.5,
+      "interacciones": -62.3,
+      "engagement_pct": -54.8,
+      "seguidores": 0.5,
+      "publicaciones": -55.6,
+      "guardados": -83.3
+    },
+    "facebook": {
+      "views_contenido": -18.7,
+      "interacciones": -100.0,
+      "seguidores": 0.8
+    },
+    "linkedin": {
+      "impresiones": null,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

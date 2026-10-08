@@ -1,0 +1,73 @@
+{
+  "semana": "2026-W34",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-08-17",
+  "hasta": "2026-08-23",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Story",
+        "views": 119,
+        "alcance": 58,
+        "interacciones": 6,
+        "engagement_pct": 10.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 81,
+        "alcance": 20,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Post",
+        "views": 54,
+        "alcance": 27,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 254,
+      "alcance": 105,
+      "interacciones": 6,
+      "engagement_pct": 5.7
+    },
+    "pauta": {
+      "views": 226,
+      "alcance": 269
+    },
+    "pct_views_de_pauta": 47.1,
+    "alcance_total_cuenta": 374,
+    "audiencia": {
+      "views_seguidores": 0,
+      "views_no_seguidores": 0,
+      "pct_seguidores": null,
+      "pct_no_seguidores": null,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 34,
+      "fin": 37,
+      "delta": 3,
+      "delta_pct": 8.8
+    },
+    "publicaciones": 2,
+    "stories_publicadas": 1,
+    "piezas": [],
+    "top_por_engagement": [],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": true
+  },
+  "comparativa": {
+    "hay_semana_previa": false
+  }
+}

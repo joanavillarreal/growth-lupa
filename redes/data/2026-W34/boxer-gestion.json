@@ -1,0 +1,81 @@
+{
+  "semana": "2026-W34",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-08-17",
+  "hasta": "2026-08-23",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 930,
+        "alcance": 397,
+        "interacciones": 45,
+        "engagement_pct": 11.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 551,
+        "alcance": 163,
+        "interacciones": 7,
+        "engagement_pct": 4.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 1450,
+        "alcance": 709,
+        "interacciones": 17,
+        "engagement_pct": 2.4,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 1109,
+        "alcance": 365,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 4040,
+      "alcance": 1634,
+      "interacciones": 69,
+      "engagement_pct": 4.2
+    },
+    "pauta": {
+      "views": 35787,
+      "alcance": 34810
+    },
+    "pct_views_de_pauta": 89.9,
+    "alcance_total_cuenta": 36444,
+    "audiencia": {
+      "views_seguidores": 0,
+      "views_no_seguidores": 0,
+      "pct_seguidores": null,
+      "pct_no_seguidores": null,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 5889,
+      "fin": 5901,
+      "delta": 12,
+      "delta_pct": 0.2
+    },
+    "publicaciones": 10,
+    "stories_publicadas": 7,
+    "piezas": [],
+    "top_por_engagement": [],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "comparativa": {
+    "hay_semana_previa": false
+  }
+}

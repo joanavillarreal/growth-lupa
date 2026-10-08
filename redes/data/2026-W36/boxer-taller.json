@@ -1,0 +1,222 @@
+{
+  "semana": "2026-W36",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-08-31",
+  "hasta": "2026-09-06",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 66,
+        "alcance": 19,
+        "interacciones": 7,
+        "engagement_pct": 36.8,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 295,
+        "alcance": 220,
+        "interacciones": 8,
+        "engagement_pct": 3.6,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 97,
+        "alcance": 35,
+        "interacciones": 1,
+        "engagement_pct": 2.9,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 628,
+        "alcance": 93,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 1086,
+      "alcance": 367,
+      "interacciones": 16,
+      "engagement_pct": 4.4
+    },
+    "pauta": {
+      "views": 18355,
+      "alcance": 10203
+    },
+    "pct_views_de_pauta": 94.4,
+    "alcance_total_cuenta": 10570,
+    "audiencia": {
+      "views_seguidores": 320,
+      "views_no_seguidores": 19120,
+      "pct_seguidores": 1.6,
+      "pct_no_seguidores": 98.3,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 45,
+      "fin": 54,
+      "delta": 9,
+      "delta_pct": 20.0
+    },
+    "publicaciones": 7,
+    "stories_publicadas": 3,
+    "piezas": [
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20260906",
+        "url": "https://www.instagram.com/p/Dc8tKmcDEgn/",
+        "texto": "Aprendiste a arreglar autos. Después aprendiste a manejar un negocio. 🫱🏼‍🫲🏽🚀 Y en algún momento tuviste que aprender algo que nadie te enseñó: A que las cosas salgan bien cuando no",
+        "views": 62,
+        "alcance": 28,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 7.1
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260905",
+        "url": "https://www.instagram.com/reel/Dc6PSboArcU/",
+        "texto": "",
+        "views": 79,
+        "alcance": 47,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 39.0,
+        "engagement_pct": 4.3
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260904",
+        "url": "https://www.instagram.com/p/Dc34W7fjDAC/",
+        "texto": "La mayoría de los problemas al momento de cobrar no arrancan cuando cobrás. Arrancan el día que entró el auto. 👀 3 preguntas que hacen la diferencia, y que casi nadie hace.\n\nGuardá",
+        "views": 106,
+        "alcance": 38,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.6
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260831",
+        "url": "https://www.instagram.com/reel/Dctz3Q5BZDo/",
+        "texto": "Esos compañeros que molestan cuando uno está concentrado 🤣\n\n#tallermecánico #boxertaller #mecanica #meme #risa",
+        "views": 248,
+        "alcance": 196,
+        "interacciones": 5,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 48.8,
+        "engagement_pct": 2.6
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20260906",
+        "url": "https://www.instagram.com/p/Dc8tKmcDEgn/",
+        "texto": "Aprendiste a arreglar autos. Después aprendiste a manejar un negocio. 🫱🏼‍🫲🏽🚀 Y en algún momento tuviste que aprender algo que nadie te enseñó: A que las cosas salgan bien cuando no",
+        "views": 62,
+        "alcance": 28,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 7.1
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260905",
+        "url": "https://www.instagram.com/reel/Dc6PSboArcU/",
+        "texto": "",
+        "views": 79,
+        "alcance": 47,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 39.0,
+        "engagement_pct": 4.3
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260904",
+        "url": "https://www.instagram.com/p/Dc34W7fjDAC/",
+        "texto": "La mayoría de los problemas al momento de cobrar no arrancan cuando cobrás. Arrancan el día que entró el auto. 👀 3 preguntas que hacen la diferencia, y que casi nadie hace.\n\nGuardá",
+        "views": 106,
+        "alcance": 38,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.6
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260831",
+        "url": "https://www.instagram.com/reel/Dctz3Q5BZDo/",
+        "texto": "Esos compañeros que molestan cuando uno está concentrado 🤣\n\n#tallermecánico #boxertaller #mecanica #meme #risa",
+        "views": 248,
+        "alcance": 196,
+        "interacciones": 5,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 48.8,
+        "engagement_pct": 2.6
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 811,
+    "publicaciones": 4,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 2,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W35",
+    "instagram": {
+      "views_organicas": 16.3,
+      "alcance_organico": 5.8,
+      "interacciones": -36.0,
+      "engagement_pct": -38.9,
+      "seguidores": 22.7,
+      "publicaciones": 133.3,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": -68.4,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

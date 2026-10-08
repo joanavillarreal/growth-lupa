@@ -1,0 +1,228 @@
+{
+  "semana": "2026-W35",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-08-24",
+  "hasta": "2026-08-30",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 445,
+        "alcance": 97,
+        "interacciones": 44,
+        "engagement_pct": 45.4,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 1677,
+        "alcance": 902,
+        "interacciones": 46,
+        "engagement_pct": 5.1,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 3857,
+        "alcance": 1297,
+        "interacciones": 32,
+        "engagement_pct": 2.5,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 2345,
+        "alcance": 575,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 8324,
+      "alcance": 2871,
+      "interacciones": 122,
+      "engagement_pct": 4.2
+    },
+    "pauta": {
+      "views": 33326,
+      "alcance": 30300
+    },
+    "pct_views_de_pauta": 80.0,
+    "alcance_total_cuenta": 33171,
+    "audiencia": {
+      "views_seguidores": 6958,
+      "views_no_seguidores": 34477,
+      "pct_seguidores": 16.8,
+      "pct_no_seguidores": 83.2,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 5903,
+      "fin": 5935,
+      "delta": 32,
+      "delta_pct": 0.5
+    },
+    "publicaciones": 18,
+    "stories_publicadas": 14,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260828",
+        "url": "https://www.instagram.com/p/DcmSE4FDpOl/",
+        "texto": "¿Cuántos clientes dejaron de comprarte este último tiempo sin que te dieras cuenta? Conectando tu Boxer a Claude, podes ver que clientes te dejaron de comprar. Comentá IA",
+        "views": 605,
+        "alcance": 230,
+        "interacciones": 9,
+        "guardados": 2,
+        "compartidos": 1,
+        "follows": 0,
+        "engagement_pct": 3.9
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260825",
+        "url": "https://www.instagram.com/p/DcejmdeFe2Q/",
+        "texto": "Las nuevas generaciones en la gestión del negocio. Bruno y Dani, de Campana Repuestos. Lunes 1/9 Córdoba presencial. Comentá ENTREVISTA",
+        "views": 738,
+        "alcance": 295,
+        "interacciones": 11,
+        "guardados": 3,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 3.7
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260829",
+        "url": "https://www.instagram.com/reel/Dcn38EguQQA/",
+        "texto": "¡Felices 80 años @cerac.cba! Sabemos lo importante que son estos espacios para la comunidad",
+        "views": 1013,
+        "alcance": 649,
+        "interacciones": 23,
+        "guardados": 0,
+        "compartidos": 2,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 30.099998,
+        "engagement_pct": 3.5
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260826",
+        "url": "https://www.instagram.com/p/DcgfZuQleTz/",
+        "texto": "El cliente espera mientras vos buscás. El stock en un lado. El precio en otro. Lo que te debe, en el cuaderno. En Boxer abrís la ficha del cliente y está todo. Comentá BOXER",
+        "views": 489,
+        "alcance": 169,
+        "interacciones": 4,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.4
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260828",
+        "url": "https://www.instagram.com/p/DcmSE4FDpOl/",
+        "texto": "¿Cuántos clientes dejaron de comprarte este último tiempo sin que te dieras cuenta? Conectando tu Boxer a Claude, podes ver que clientes te dejaron de comprar. Comentá IA",
+        "views": 605,
+        "alcance": 230,
+        "interacciones": 9,
+        "guardados": 2,
+        "compartidos": 1,
+        "follows": 0,
+        "engagement_pct": 3.9
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260825",
+        "url": "https://www.instagram.com/p/DcejmdeFe2Q/",
+        "texto": "Las nuevas generaciones en la gestión del negocio. Bruno y Dani, de Campana Repuestos. Lunes 1/9 Córdoba presencial. Comentá ENTREVISTA",
+        "views": 738,
+        "alcance": 295,
+        "interacciones": 11,
+        "guardados": 3,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 3.7
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260829",
+        "url": "https://www.instagram.com/reel/Dcn38EguQQA/",
+        "texto": "¡Felices 80 años @cerac.cba! Sabemos lo importante que son estos espacios para la comunidad",
+        "views": 1013,
+        "alcance": 649,
+        "interacciones": 23,
+        "guardados": 0,
+        "compartidos": 2,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 30.099998,
+        "engagement_pct": 3.5
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260826",
+        "url": "https://www.instagram.com/p/DcgfZuQleTz/",
+        "texto": "El cliente espera mientras vos buscás. El stock en un lado. El precio en otro. Lo que te debe, en el cuaderno. En Boxer abrís la ficha del cliente y está todo. Comentá BOXER",
+        "views": 489,
+        "alcance": 169,
+        "interacciones": 4,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.4
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 6,
+    "compartidos_totales": 3,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 26770,
+    "publicaciones": 12,
+    "interacciones": 1,
+    "reels_publicados": 1,
+    "views_reels": 101,
+    "seguidores": {
+      "inicio": 955,
+      "fin": 960,
+      "delta": 5
+    }
+  },
+  "linkedin": {
+    "impresiones": 0,
+    "publicaciones": 0,
+    "interacciones": 0,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 0,
+    "engagement_pct_sobre_impresiones": null,
+    "seguidores": {
+      "inicio": 103,
+      "fin": 103,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W34",
+    "instagram": {
+      "views_organicas": 106.0,
+      "alcance_organico": 75.7,
+      "interacciones": 76.8,
+      "engagement_pct": 0.0,
+      "seguidores": 0.6,
+      "publicaciones": 80.0,
+      "guardados": null
+    }
+  }
+}

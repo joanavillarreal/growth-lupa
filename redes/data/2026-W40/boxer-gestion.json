@@ -1,0 +1,268 @@
+{
+  "semana": "2026-W40",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-09-28",
+  "hasta": "2026-10-04",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 22,
+        "alcance": 10,
+        "interacciones": 49,
+        "engagement_pct": 490.0,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 1130,
+        "alcance": 374,
+        "interacciones": 52,
+        "engagement_pct": 13.9,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 383,
+        "alcance": 241,
+        "interacciones": 3,
+        "engagement_pct": 1.2,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 2383,
+        "alcance": 740,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 3918,
+      "alcance": 1365,
+      "interacciones": 104,
+      "engagement_pct": 7.6
+    },
+    "pauta": {
+      "views": 26991,
+      "alcance": 23527
+    },
+    "pct_views_de_pauta": 87.3,
+    "alcance_total_cuenta": 24892,
+    "audiencia": {
+      "views_seguidores": 4912,
+      "views_no_seguidores": 25992,
+      "pct_seguidores": 15.9,
+      "pct_no_seguidores": 84.1,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 5980,
+      "fin": 5987,
+      "delta": 7,
+      "delta_pct": 0.1
+    },
+    "publicaciones": 7,
+    "stories_publicadas": 2,
+    "piezas": [
+      {
+        "tipo": "Reel",
+        "fecha": "20260930",
+        "url": "https://www.instagram.com/reel/Dd7aXLdDLIx/",
+        "texto": "Ahora con la IA podes concretar ventas más rápido 🚀🤖 En nuestras 3 clases grabadas podes acceder a casos practicos como estos sin costo 🤗 Comentá CLAUDE y te lo enviamos 🦾\n\n#claude",
+        "views": 324,
+        "alcance": 193,
+        "interacciones": 18,
+        "guardados": 1,
+        "compartidos": 2,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 32.199997,
+        "engagement_pct": 9.3
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260929",
+        "url": "https://www.instagram.com/reel/Dd4kpx_khvD/",
+        "texto": "Incorporá Claude (o Claudio🤖) en tu Casa de Repuestos. Accedé a nuestras 3 clases grabadas sin costo 🚀 Comentá CLAUDE y te las enviamos 🫱🏼‍🫲🏽\n\n#claude #inteligenciaartifical #casad",
+        "views": 241,
+        "alcance": 143,
+        "interacciones": 8,
+        "guardados": 1,
+        "compartidos": 1,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 36.2,
+        "engagement_pct": 5.6
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260930",
+        "url": "https://www.instagram.com/p/Dd5AFu0j4aE/",
+        "texto": "5 preguntas. Si alguna no la podés contestar con un número, ahí tenés la tarea de octubre. 👀💻\n\nCon tu sistema conectado a Claude se contestan en un solo tablero, y el mes que viene",
+        "views": 554,
+        "alcance": 193,
+        "interacciones": 10,
+        "guardados": 2,
+        "compartidos": 1,
+        "follows": 0,
+        "engagement_pct": 5.2
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261002",
+        "url": "https://www.instagram.com/p/DeAgq5aHWfm/",
+        "texto": "Arranca octubre y hay que reponer. 👀 Si la compra sale de memoria, pasan dos cosas: Te falta lo que te piden seguido y te sobra lo que no sale. Pedile a Claude que analice los dato",
+        "views": 573,
+        "alcance": 196,
+        "interacciones": 5,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.6
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260929",
+        "url": "https://www.instagram.com/p/Dd2bOHoDu3V/",
+        "texto": "\"Dejame que me fijo.\" 👀🫠Lo decís diez veces por día. Y cada vez, el cliente se queda del otro lado del mostrador esperando que vuelvas del depósito.\n\nCon Boxer, el precio, el stock",
+        "views": 457,
+        "alcance": 179,
+        "interacciones": 4,
+        "guardados": 0,
+        "compartidos": 2,
+        "follows": 0,
+        "engagement_pct": 2.2
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "Reel",
+        "fecha": "20260930",
+        "url": "https://www.instagram.com/reel/Dd7aXLdDLIx/",
+        "texto": "Ahora con la IA podes concretar ventas más rápido 🚀🤖 En nuestras 3 clases grabadas podes acceder a casos practicos como estos sin costo 🤗 Comentá CLAUDE y te lo enviamos 🦾\n\n#claude",
+        "views": 324,
+        "alcance": 193,
+        "interacciones": 18,
+        "guardados": 1,
+        "compartidos": 2,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 32.199997,
+        "engagement_pct": 9.3
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260929",
+        "url": "https://www.instagram.com/reel/Dd4kpx_khvD/",
+        "texto": "Incorporá Claude (o Claudio🤖) en tu Casa de Repuestos. Accedé a nuestras 3 clases grabadas sin costo 🚀 Comentá CLAUDE y te las enviamos 🫱🏼‍🫲🏽\n\n#claude #inteligenciaartifical #casad",
+        "views": 241,
+        "alcance": 143,
+        "interacciones": 8,
+        "guardados": 1,
+        "compartidos": 1,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 36.2,
+        "engagement_pct": 5.6
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260930",
+        "url": "https://www.instagram.com/p/Dd5AFu0j4aE/",
+        "texto": "5 preguntas. Si alguna no la podés contestar con un número, ahí tenés la tarea de octubre. 👀💻\n\nCon tu sistema conectado a Claude se contestan en un solo tablero, y el mes que viene",
+        "views": 554,
+        "alcance": 193,
+        "interacciones": 10,
+        "guardados": 2,
+        "compartidos": 1,
+        "follows": 0,
+        "engagement_pct": 5.2
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261002",
+        "url": "https://www.instagram.com/p/DeAgq5aHWfm/",
+        "texto": "Arranca octubre y hay que reponer. 👀 Si la compra sale de memoria, pasan dos cosas: Te falta lo que te piden seguido y te sobra lo que no sale. Pedile a Claude que analice los dato",
+        "views": 573,
+        "alcance": 196,
+        "interacciones": 5,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.6
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260929",
+        "url": "https://www.instagram.com/p/Dd2bOHoDu3V/",
+        "texto": "\"Dejame que me fijo.\" 👀🫠Lo decís diez veces por día. Y cada vez, el cliente se queda del otro lado del mostrador esperando que vuelvas del depósito.\n\nCon Boxer, el precio, el stock",
+        "views": 457,
+        "alcance": 179,
+        "interacciones": 4,
+        "guardados": 0,
+        "compartidos": 2,
+        "follows": 0,
+        "engagement_pct": 2.2
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 5,
+    "compartidos_totales": 6,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 23862,
+    "publicaciones": 3,
+    "interacciones": 1,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 975,
+      "fin": 975,
+      "delta": 0
+    }
+  },
+  "linkedin": {
+    "impresiones": 35,
+    "publicaciones": 1,
+    "interacciones": 1,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 0,
+    "engagement_pct_sobre_impresiones": 2.9,
+    "seguidores": {
+      "inicio": 104,
+      "fin": 105,
+      "delta": 1
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W39",
+    "instagram": {
+      "views_organicas": 33.5,
+      "alcance_organico": 58.5,
+      "interacciones": 188.9,
+      "engagement_pct": 81.0,
+      "seguidores": 0.1,
+      "publicaciones": 75.0,
+      "guardados": 0.0
+    },
+    "facebook": {
+      "views_contenido": -19.3,
+      "interacciones": 0.0,
+      "seguidores": 0.1
+    },
+    "linkedin": {
+      "impresiones": 3400.0,
+      "interacciones": null,
+      "seguidores": 1.0
+    }
+  }
+}

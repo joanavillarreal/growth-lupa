@@ -1,0 +1,108 @@
+{
+  "semana": "2026-W39",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-09-21",
+  "hasta": "2026-09-27",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 27,
+        "alcance": 13,
+        "interacciones": 10,
+        "engagement_pct": 76.9,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 692,
+        "alcance": 286,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Reel",
+        "views": 13,
+        "alcance": 7,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Story",
+        "views": 5,
+        "alcance": 2,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 737,
+      "alcance": 308,
+      "interacciones": 10,
+      "engagement_pct": 3.2
+    },
+    "pauta": {
+      "views": 13810,
+      "alcance": 10195
+    },
+    "pct_views_de_pauta": 94.9,
+    "alcance_total_cuenta": 10503,
+    "audiencia": {
+      "views_seguidores": 51,
+      "views_no_seguidores": 14495,
+      "pct_seguidores": 0.4,
+      "pct_no_seguidores": 99.6,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 77,
+      "fin": 78,
+      "delta": 1,
+      "delta_pct": 1.3
+    },
+    "publicaciones": 0,
+    "stories_publicadas": 0,
+    "piezas": [],
+    "top_por_engagement": [],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 2927,
+    "publicaciones": 0,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 2,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W38",
+    "instagram": {
+      "views_organicas": -80.7,
+      "alcance_organico": -80.4,
+      "interacciones": -90.3,
+      "engagement_pct": -50.8,
+      "seguidores": 2.6,
+      "publicaciones": -100.0,
+      "guardados": -100.0
+    },
+    "facebook": {
+      "views_contenido": -36.9,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

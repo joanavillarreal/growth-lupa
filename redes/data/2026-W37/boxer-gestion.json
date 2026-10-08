@@ -1,0 +1,264 @@
+{
+  "semana": "2026-W37",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-09-07",
+  "hasta": "2026-09-13",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 202,
+        "alcance": 100,
+        "interacciones": 32,
+        "engagement_pct": 32.0,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 833,
+        "alcance": 435,
+        "interacciones": 33,
+        "engagement_pct": 7.6,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 554,
+        "alcance": 310,
+        "interacciones": 5,
+        "engagement_pct": 1.6,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 2050,
+        "alcance": 702,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 3639,
+      "alcance": 1547,
+      "interacciones": 70,
+      "engagement_pct": 4.5
+    },
+    "pauta": {
+      "views": 32258,
+      "alcance": 27815
+    },
+    "pct_views_de_pauta": 89.9,
+    "alcance_total_cuenta": 29362,
+    "audiencia": {
+      "views_seguidores": 5981,
+      "views_no_seguidores": 29806,
+      "pct_seguidores": 16.7,
+      "pct_no_seguidores": 83.0,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 5965,
+      "fin": 5973,
+      "delta": 8,
+      "delta_pct": 0.1
+    },
+    "publicaciones": 8,
+    "stories_publicadas": 3,
+    "piezas": [
+      {
+        "tipo": "Reel",
+        "fecha": "20260910",
+        "url": "https://www.instagram.com/reel/DdHPgDljvId/",
+        "texto": "Pensabas que Ale era una sola persona? Te presentamos a quienes estan detras del dia a dia respondiendo tus consultas. Hoy te traemos 3 tips si ya sos cliente Boxer para que puedas",
+        "views": 641,
+        "alcance": 385,
+        "interacciones": 23,
+        "guardados": 2,
+        "compartidos": 1,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 36.8,
+        "engagement_pct": 6.0
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260907",
+        "url": "https://www.instagram.com/p/DdACAi8kSD4/",
+        "texto": "El lunes a la manana se decide o se apagan incendios? Mira como con Boxer + Claude (o Claudio) puede cambiar eso. 3 preguntas clave para arrancar la semana, para poder analizar los",
+        "views": 429,
+        "alcance": 149,
+        "interacciones": 6,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 4.0
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260910",
+        "url": "https://www.instagram.com/p/DdG1GiXCu3a/",
+        "texto": "Nos llego este mensaje hoy y no podiamos creerlo. Que susto nos dimos pero que felicidad saber que continuamos ayudando a todas las Casas de Repuestos que se suman con tecnologia.",
+        "views": 806,
+        "alcance": 354,
+        "interacciones": 12,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 3.4
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260909",
+        "url": "https://www.instagram.com/p/DdEilMiDPU3/",
+        "texto": "El cliente que se va no te avisa. Simplemente deja de venir. Y como el mostrador sigue moviendose, la ausencia no se nota hasta que pasaron seis meses. Un registro de ventas es lo ",
+        "views": 348,
+        "alcance": 116,
+        "interacciones": 4,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 3.4
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260911",
+        "url": "https://www.instagram.com/p/DdKfXOICjnF/",
+        "texto": "Prometiste una pieza que en la planilla figuraba y en la estanteria no estaba. Nadie tiene el stock perfecto. Ordenarlo lleva tiempo y es el trabajo menos agradecido del negocio. P",
+        "views": 321,
+        "alcance": 104,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 1.0
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "Reel",
+        "fecha": "20260910",
+        "url": "https://www.instagram.com/reel/DdHPgDljvId/",
+        "texto": "Pensabas que Ale era una sola persona? Te presentamos a quienes estan detras del dia a dia respondiendo tus consultas. Hoy te traemos 3 tips si ya sos cliente Boxer para que puedas",
+        "views": 641,
+        "alcance": 385,
+        "interacciones": 23,
+        "guardados": 2,
+        "compartidos": 1,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 36.8,
+        "engagement_pct": 6.0
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260907",
+        "url": "https://www.instagram.com/p/DdACAi8kSD4/",
+        "texto": "El lunes a la manana se decide o se apagan incendios? Mira como con Boxer + Claude (o Claudio) puede cambiar eso. 3 preguntas clave para arrancar la semana, para poder analizar los",
+        "views": 429,
+        "alcance": 149,
+        "interacciones": 6,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 4.0
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260910",
+        "url": "https://www.instagram.com/p/DdG1GiXCu3a/",
+        "texto": "Nos llego este mensaje hoy y no podiamos creerlo. Que susto nos dimos pero que felicidad saber que continuamos ayudando a todas las Casas de Repuestos que se suman con tecnologia.",
+        "views": 806,
+        "alcance": 354,
+        "interacciones": 12,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 3.4
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260909",
+        "url": "https://www.instagram.com/p/DdEilMiDPU3/",
+        "texto": "El cliente que se va no te avisa. Simplemente deja de venir. Y como el mostrador sigue moviendose, la ausencia no se nota hasta que pasaron seis meses. Un registro de ventas es lo ",
+        "views": 348,
+        "alcance": 116,
+        "interacciones": 4,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 3.4
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260911",
+        "url": "https://www.instagram.com/p/DdKfXOICjnF/",
+        "texto": "Prometiste una pieza que en la planilla figuraba y en la estanteria no estaba. Nadie tiene el stock perfecto. Ordenarlo lleva tiempo y es el trabajo menos agradecido del negocio. P",
+        "views": 321,
+        "alcance": 104,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 1.0
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 3,
+    "compartidos_totales": 1,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 22093,
+    "publicaciones": 6,
+    "interacciones": 1,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 968,
+      "fin": 968,
+      "delta": 0
+    }
+  },
+  "linkedin": {
+    "impresiones": 33,
+    "publicaciones": 1,
+    "interacciones": 0,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 0,
+    "engagement_pct_sobre_impresiones": 0.0,
+    "seguidores": {
+      "inicio": 103,
+      "fin": 104,
+      "delta": 1
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W36",
+    "instagram": {
+      "views_organicas": -29.3,
+      "alcance_organico": -36.2,
+      "interacciones": 52.2,
+      "engagement_pct": 136.8,
+      "seguidores": 0.2,
+      "publicaciones": 0.0,
+      "guardados": 200.0
+    },
+    "facebook": {
+      "views_contenido": 1.5,
+      "interacciones": null,
+      "seguidores": 0.0
+    },
+    "linkedin": {
+      "impresiones": 450.0,
+      "interacciones": null,
+      "seguidores": 1.0
+    }
+  }
+}

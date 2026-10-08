@@ -1,0 +1,35 @@
+{
+  "semana": "2026-W36",
+  "prospectos_redes": 2,
+  "por_dia": {
+    "2026-09-02": 2
+  },
+  "por_estado": {
+    "CONVERTED": 2
+  },
+  "inversion_usd": 147.53,
+  "inversion_por_canal": {
+    "Inversión Meta Ads": 115.4,
+    "Inversión Google Ads": 32.13
+  },
+  "dias_con_inversion_cargada": 7,
+  "inversion_redes": 31575.67,
+  "moneda_inversion_redes": "ARS",
+  "campanas_awareness": [
+    {
+      "campana": "JY | Awareness",
+      "monto": 17160.52
+    },
+    {
+      "campana": "JY | Awareness Boxer Taller",
+      "monto": 14415.15
+    }
+  ],
+  "costo_por_prospecto": 15787.83,
+  "nota": null,
+  "monedas_no_usd_excluidas": null,
+  "comparativa": {
+    "semana_previa": "2026-W35",
+    "prospectos_redes_var_pct": -33.3
+  }
+}

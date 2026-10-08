@@ -1,0 +1,37 @@
+{
+  "_comentario": "Fuente de verdad de marcas y metricas. Lo leen tanto el skill como scripts/analizar.py. Los brandId se obtienen con la herramienta getBrandSettings de Metricool.",
+  "zona_horaria": "America/Argentina/Buenos_Aires",
+  "marcas": {
+    "boxer-gestion": {
+      "brandId": "4938672",
+      "nombre": "Boxer Gestion",
+      "redes": [
+        "instagram",
+        "facebook",
+        "linkedin"
+      ],
+      "tiene_pauta": true,
+      "modo_lectura": "optimizacion",
+      "contexto": "contexto/boxer-gestion.md"
+    },
+    "boxer-taller": {
+      "brandId": "6516272",
+      "nombre": "Boxer Taller",
+      "redes": [
+        "instagram",
+        "facebook"
+      ],
+      "tiene_pauta": true,
+      "modo_lectura": "lanzamiento",
+      "_sin_objetivo_trimestre": "Sacado el 21/9/2026 por decision de Joana: los 1.000 seguidores son una meta interna y aspiracional para antes de fin de ano, no un objetivo de crecimiento. Mientras estuvo aca, analizar.py calculaba el ritmo necesario y el informe convertia la mejor semana de la historia de la cuenta en un fracaso aritmetico. No volver a agregarlo sin que Joana lo pida. La cuenta se mide por modo_lectura lanzamiento: alcance en no seguidores, seguidores ganados y consistencia. Ver contexto/boxer-taller.md.",
+      "contexto": "contexto/boxer-taller.md"
+    }
+  },
+  "umbral_muestra_chica": 200,
+  "_umbral_nota": "Si el alcance organico semanal de una red esta por debajo de este numero, los porcentajes de engagement son ruido estadistico y el informe debe decirlo en vez de sacar conclusiones.",
+  "slack": {
+    "destino": "D0BRVS7A4A3",
+    "tipo": "dm",
+    "_nota": "Mensaje directo con Joana. El informe se publica como artefacto y a Slack va el link mas un resumen de 3 o 4 lineas: el titular de la semana, el dato mas importante y la recomendacion principal."
+  }
+}

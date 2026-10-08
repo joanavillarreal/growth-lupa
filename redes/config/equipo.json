@@ -1,0 +1,120 @@
+{
+  "_comentario": "Configuración del team creativo. La leen boxer-orquestador y los scripts de revisión, cruce con el CRM y tableros. Los links de artefactos se completan la primera vez que se publican y después no cambian.",
+  "revision_plan": {
+    "titulo_max_palabras": 4,
+    "slide_texto_max_palabras": 30,
+    "caption_ig_palabras": [
+      40,
+      80
+    ],
+    "caption_fb_palabras": [
+      60,
+      100
+    ],
+    "linkedin_palabras": [
+      80,
+      130
+    ],
+    "hashtags": [
+      3,
+      8
+    ],
+    "_nota_hashtags": "23/9/2026, consulta C1 de la W40: Joana autorizó hasta 8 hashtags. Según el análisis de Lupa, para el alcance da igual: se recomiendan de 3 a 5, del rubro y del tema de la pieza.",
+    "hook_reel_max_palabras": 6,
+    "piezas_por_marca": {
+      "boxer-gestion": {
+        "ig_fb": [
+          4,
+          4
+        ],
+        "linkedin": [
+          1,
+          1
+        ]
+      },
+      "boxer-taller": {
+        "ig_fb": [
+          1,
+          2
+        ],
+        "linkedin": [
+          0,
+          0
+        ]
+      }
+    },
+    "min_piezas_con_reenvio": 2,
+    "dias_sin_repetir_palabra_clave": 30,
+    "max_vueltas_revision": 3
+  },
+  "aprobacion": {
+    "joana_aprueba_diseno": true,
+    "_nota_diseno": "Mientras sea true, los diseños pasan por Joana antes de publicarse. Cuando Batuta tenga el contexto suficiente, Joana lo pasa a false y la revisión 2 de Batuta queda como la última.",
+    "recordatorio_horas": 24
+  },
+  "publicacion": {
+    "revisores": "joanavillarreal@aitsolutions.com.ar",
+    "sistema_aprobacion": "any",
+    "_nota": "Turbo programa los posts en Metricool para revisión. Si el plan de Metricool no tiene gestión de equipos, los deja como borrador y avisa por Slack igual.",
+    "carpeta_drive": "Redes - Agente de diseño",
+    "_nota_drive": "C5 de la W40 (24/9/2026): Joana sube las imágenes a 'Redes - Agente de diseño' → 'Diseños Boxer Gestión' y 'Diseños Boxer Taller'. El conector de Drive no deja a Turbo subir archivos de ese peso."
+  },
+  "bitrix": {
+    "variables_webhook": [
+      "BITRIX_WEBHOOK_URL",
+      "bitrix-webhook-url"
+    ],
+    "origen_redes": {
+      "_nota": "Origen «Redes» del CRM (UC_GJPS17), confirmado con --explorar el 23/9/2026. Se toman solo los prospectos (leads) con este origen.",
+      "ids": [
+        "UC_GJPS17"
+      ],
+      "nombres": [
+        "Redes"
+      ]
+    },
+    "spa_inversion": {
+      "entity_type_id": 1052,
+      "_nota": "Campos confirmados con --explorar el 23/9/2026: Fecha, Monto (money, viene como 'monto|MONEDA') y Tipo de Gasto.",
+      "campo_fecha": "ufCrm10_1777551275",
+      "campo_monto_usd": "ufCrm10_1777551329",
+      "campo_canal": "ufCrm10_1777551017"
+    }
+  },
+  "artefactos": {
+    "tablero_redes": "https://claude.ai/artifact/6hPtWuFWQHnPvpuHoWQGBv",
+    "tablero_agentes": "https://claude.ai/artifact/Xj5nP8usGd5TS8Ns7X6r4r"
+  },
+  "alcance": {
+    "_comentario": "Dónde puede escribir cada agente. Lo aplica scripts/control_alcance.py como hook antes de cada Write o Edit, y Batuta lo revisa después de cada llamada. Cambiar esto es cambiar las reglas del equipo: lo decide Joana.",
+    "batuta": [
+      "contenido/**",
+      "historial/**",
+      "config/equipo.json",
+      ".claude/agent-memory/batuta/**",
+      ".claude/skills/boxer-revision-plan/criterios.md"
+    ],
+    "lupa": [
+      "data/**",
+      "historial/conclusiones.md",
+      "historial/tablero-redes/**"
+    ],
+    "chispa": [
+      "contenido/*/plan.json",
+      "contenido/*/pdf/*.md"
+    ],
+    "pixel": [
+      "contenido/*/pdf/*.html",
+      "contenido/*/pdf/*.pdf",
+      "contenido/*/diseno/**"
+    ],
+    "turbo": [
+      "contenido/*/publicacion/**"
+    ]
+  },
+  "inversion_redes": {
+    "_nota": "Decisión de Joana (23/9/2026): el gasto de redes sociales son solo las campañas de awareness de Meta Ads. En Meta esas campañas tienen objetivo TRAFFIC, así que se reconocen por el nombre, no por el objetivo. Lupa las trae con el conector de Meta y las guarda en data/raw/<semana>/meta-awareness.json.",
+    "ad_account_id": "725901852075382",
+    "filtro_nombre": "Awareness"
+  }
+}

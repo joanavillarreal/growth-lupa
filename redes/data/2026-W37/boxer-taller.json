@@ -1,0 +1,197 @@
+{
+  "semana": "2026-W37",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-09-07",
+  "hasta": "2026-09-13",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 174,
+        "alcance": 81,
+        "interacciones": 24,
+        "engagement_pct": 29.6,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 153,
+        "alcance": 126,
+        "interacciones": 2,
+        "engagement_pct": 1.6,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 1148,
+        "alcance": 112,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Story",
+        "views": 125,
+        "alcance": 90,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 1600,
+      "alcance": 409,
+      "interacciones": 26,
+      "engagement_pct": 6.4
+    },
+    "pauta": {
+      "views": 29905,
+      "alcance": 14344
+    },
+    "pct_views_de_pauta": 94.9,
+    "alcance_total_cuenta": 14753,
+    "audiencia": {
+      "views_seguidores": 671,
+      "views_no_seguidores": 30827,
+      "pct_seguidores": 2.1,
+      "pct_no_seguidores": 97.8,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 63,
+      "fin": 67,
+      "delta": 4,
+      "delta_pct": 6.3
+    },
+    "publicaciones": 5,
+    "stories_publicadas": 2,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260910",
+        "url": "https://www.instagram.com/p/DdHOa4wioqR/",
+        "texto": "Al medico nadie le pregunta si se acuerda. Se asume que el historial esta. Con el auto pasa lo mismo: el cliente da por hecho que sabes que le hiciste hace ocho meses y con cuantos",
+        "views": 83,
+        "alcance": 20,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 15.0
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260908",
+        "url": "https://www.instagram.com/p/DdCEuHVDvHH/",
+        "texto": "Nadie tiene una semana libre para cambiar como trabaja su taller. Por eso la primera semana con nosotros lo unico que cambia es que cada auto que entra tiene su orden de trabajo. C",
+        "views": 80,
+        "alcance": 23,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 8.7
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260907",
+        "url": "https://www.instagram.com/p/Dc_maY5FPoe/",
+        "texto": "Decir que si a todo para no perder al cliente es la forma mas rapida de perderlo. 3 maneras de decir que no sin que se vaya para otro lado con una mala experiencia. Te cuesta decir",
+        "views": 106,
+        "alcance": 44,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 4.5
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260910",
+        "url": "https://www.instagram.com/p/DdHOa4wioqR/",
+        "texto": "Al medico nadie le pregunta si se acuerda. Se asume que el historial esta. Con el auto pasa lo mismo: el cliente da por hecho que sabes que le hiciste hace ocho meses y con cuantos",
+        "views": 83,
+        "alcance": 20,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 15.0
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260908",
+        "url": "https://www.instagram.com/p/DdCEuHVDvHH/",
+        "texto": "Nadie tiene una semana libre para cambiar como trabaja su taller. Por eso la primera semana con nosotros lo unico que cambia es que cada auto que entra tiene su orden de trabajo. C",
+        "views": 80,
+        "alcance": 23,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 8.7
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260907",
+        "url": "https://www.instagram.com/p/Dc_maY5FPoe/",
+        "texto": "Decir que si a todo para no perder al cliente es la forma mas rapida de perderlo. 3 maneras de decir que no sin que se vaya para otro lado con una mala experiencia. Te cuesta decir",
+        "views": 106,
+        "alcance": 44,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 4.5
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 1020,
+    "publicaciones": 5,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 2,
+      "delta": 0
+    }
+  },
+  "objetivo_trimestre": {
+    "meta": 1000,
+    "actual": 67,
+    "faltan": 933,
+    "avance_pct": 6.7,
+    "ritmo_semanal": 4,
+    "semanas_a_este_ritmo": 234,
+    "ritmo_necesario_13_semanas": 72
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W36",
+    "instagram": {
+      "views_organicas": 47.3,
+      "alcance_organico": 11.4,
+      "interacciones": 62.5,
+      "engagement_pct": 45.5,
+      "seguidores": 24.1,
+      "publicaciones": -28.6,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": 25.8,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

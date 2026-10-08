@@ -1,0 +1,163 @@
+{
+  "semana": "2026-W35",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-08-24",
+  "hasta": "2026-08-30",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 125,
+        "alcance": 50,
+        "interacciones": 22,
+        "engagement_pct": 44.0,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 61,
+        "alcance": 31,
+        "interacciones": 3,
+        "engagement_pct": 9.7,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 748,
+        "alcance": 266,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 934,
+      "alcance": 347,
+      "interacciones": 25,
+      "engagement_pct": 7.2
+    },
+    "pauta": {
+      "views": 3442,
+      "alcance": 2810
+    },
+    "pct_views_de_pauta": 78.7,
+    "alcance_total_cuenta": 3157,
+    "audiencia": {
+      "views_seguidores": 223,
+      "views_no_seguidores": 4153,
+      "pct_seguidores": 5.1,
+      "pct_no_seguidores": 94.9,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 39,
+      "fin": 44,
+      "delta": 5,
+      "delta_pct": 12.8
+    },
+    "publicaciones": 3,
+    "stories_publicadas": 1,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260824",
+        "url": "https://www.instagram.com/p/DcbMOfQFRZx/",
+        "texto": "Empezamos con las casas de repuestos, y en ese camino escuchamos mucho. Boxer Taller nació de ahí. Vos sos el experto en los fierros, nosotros aportamos del lado de la tecnología",
+        "views": 799,
+        "alcance": 272,
+        "interacciones": 15,
+        "guardados": 0,
+        "compartidos": 4,
+        "follows": 3,
+        "engagement_pct": 5.5
+      },
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20260826",
+        "url": "https://www.instagram.com/p/DchE0PgFaQk/",
+        "texto": "Nadie te enseña esto en ningún lado. Pero es la mitad del trabajo: traducir 'hacía un ruidito tipo piiii' a algo concreto. ¿Cuál es la mejor que te dijeron?",
+        "views": 69,
+        "alcance": 26,
+        "interacciones": 0,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 0.0
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260824",
+        "url": "https://www.instagram.com/p/DcbMOfQFRZx/",
+        "texto": "Empezamos con las casas de repuestos, y en ese camino escuchamos mucho. Boxer Taller nació de ahí. Vos sos el experto en los fierros, nosotros aportamos del lado de la tecnología",
+        "views": 799,
+        "alcance": 272,
+        "interacciones": 15,
+        "guardados": 0,
+        "compartidos": 4,
+        "follows": 3,
+        "engagement_pct": 5.5
+      },
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20260826",
+        "url": "https://www.instagram.com/p/DchE0PgFaQk/",
+        "texto": "Nadie te enseña esto en ningún lado. Pero es la mitad del trabajo: traducir 'hacía un ruidito tipo piiii' a algo concreto. ¿Cuál es la mejor que te dijeron?",
+        "views": 69,
+        "alcance": 26,
+        "interacciones": 0,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 0.0
+      }
+    ],
+    "top_por_seguidores_ganados": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260824",
+        "url": "https://www.instagram.com/p/DcbMOfQFRZx/",
+        "texto": "Empezamos con las casas de repuestos, y en ese camino escuchamos mucho. Boxer Taller nació de ahí. Vos sos el experto en los fierros, nosotros aportamos del lado de la tecnología",
+        "views": 799,
+        "alcance": 272,
+        "interacciones": 15,
+        "guardados": 0,
+        "compartidos": 4,
+        "follows": 3,
+        "engagement_pct": 5.5
+      }
+    ],
+    "guardados_totales": 0,
+    "compartidos_totales": 4,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 2568,
+    "publicaciones": 3,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 2,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W34",
+    "instagram": {
+      "views_organicas": 267.7,
+      "alcance_organico": 230.5,
+      "interacciones": 316.7,
+      "engagement_pct": 26.3,
+      "seguidores": 18.9,
+      "publicaciones": 50.0,
+      "guardados": null
+    }
+  }
+}

@@ -26,6 +26,6 @@ paneles:
     en_ensayo: comparar        # hoy lo publica la rutina de agente-meta-ads
   panel_redes:
     nombre: Panel de redes
-    link: null                 # se crea una sola vez en el paso 4 y queda como oficial
-    archivo: null              # se define en el paso 4
+    link: https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9   # creado el 08/10/2026, es el oficial
+    archivo: redes/panel/index.html
     en_ensayo: publicar

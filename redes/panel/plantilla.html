@@ -1,0 +1,326 @@
+<title>Panel de redes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: una columna de lectura de arriba hacia abajo. Cuentas (Gestión | Taller lado a lado),
+   leads de redes del trimestre, y la semana elegida. Números en condensada, texto en sans. */
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --soft:#eef1f5; --line:#dfe3ea;
+  --ink:#141a23; --ink-2:#4f5967; --ink-3:#7c8594;
+  --org:#2a78d6; --org-soft:#e3eefb; --pago:#a7aeba;
+  --good:#1a7f4b; --good-bg:#e4f4ea; --bad:#b93a2c; --bad-bg:#fbe9e6; --warn:#9a5a00; --warn-bg:#fdf0dc;
+  --f-num:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-txt:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:12px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0f1319; --surface:#171c24; --soft:#1e242e; --line:#2a313d;
+  --ink:#edf1f6; --ink-2:#aab3c0; --ink-3:#7d8796;
+  --org:#3987e5; --org-soft:#1a2a40; --pago:#5d6673;
+  --good:#4cc38a; --good-bg:#15281f; --bad:#f07466; --bad-bg:#33191a; --warn:#f0a43a; --warn-bg:#30240f;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0f1319; --surface:#171c24; --soft:#1e242e; --line:#2a313d;
+  --ink:#edf1f6; --ink-2:#aab3c0; --ink-3:#7d8796;
+  --org:#3987e5; --org-soft:#1a2a40; --pago:#5d6673;
+  --good:#4cc38a; --good-bg:#15281f; --bad:#f07466; --bad-bg:#33191a; --warn:#f0a43a; --warn-bg:#30240f;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-txt);-webkit-font-smoothing:antialiased}
+.page{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:20px 56px;display:flex;flex-direction:column;gap:28px}
+@media (min-width:760px){ .page{padding-inline:28px} }
+h1,h2,h3{margin:0;font-family:var(--f-num);font-weight:700;letter-spacing:.005em;text-wrap:balance}
+h1{font-size:30px;line-height:1.1}
+h2{font-size:22px}
+h3{font-size:17px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.muted{color:var(--ink-3)} .sub{color:var(--ink-2);font-size:13.5px}
+a{color:var(--org)}
+a:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--org);outline-offset:2px}
+
+/* encabezado */
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 20px;justify-content:space-between}
+.top .t{display:flex;flex-direction:column;gap:4px;min-width:0}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.selector{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-2)}
+select{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+
+/* secciones */
+section{display:flex;flex-direction:column;gap:14px;min-width:0}
+.sec-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.sec-h .sub{margin-left:auto}
+.grid2{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.stack{display:flex;flex-direction:column;gap:16px;min-width:0}
+@media (min-width:900px){ .grid2{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.brand-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--ink-2)}
+
+/* KPIs */
+.kpis{display:grid;gap:10px;grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:520px){ .kpis{grid-template-columns:minmax(0,1fr)} }
+.kpi{background:var(--soft);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi .k{font-size:12.5px;color:var(--ink-2);font-weight:500}
+.kpi .v{font-size:28px;font-weight:700;line-height:1.1}
+.kpi .d{font-size:12.5px;color:var(--ink-3)}
+.up{color:var(--good)} .down{color:var(--bad)}
+.flag{display:inline-block;margin-top:4px;font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:999px;background:var(--warn-bg);color:var(--warn)}
+
+/* gráficos */
+.charts{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:700px){ .charts{grid-template-columns:repeat(3,minmax(0,1fr))} }
+.ch{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ch .ct{font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.ch svg{width:100%;height:auto;max-height:240px;display:block;overflow:visible}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.otras{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:10px}
+.otras b{color:var(--ink);font-weight:600}
+svg .ax{fill:var(--ink-3);font:11px var(--f-txt)}
+svg .val{fill:var(--ink-2);font:600 11px var(--f-num)}
+svg .grid{stroke:var(--line);stroke-width:1}
+
+/* leads */
+.leads{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){ .leads{grid-template-columns:minmax(0,1fr) minmax(0,2fr)} }
+.big{font-size:56px;font-weight:700;line-height:1}
+.estados{display:flex;flex-wrap:wrap;gap:6px}
+.nota{font-size:12.5px;color:var(--ink-3);max-width:70ch}
+
+/* semana */
+.titular{font-size:17px;line-height:1.5;max-width:75ch;margin:0}
+.listas{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:760px){ .listas{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.lista h3{display:flex;align-items:center;gap:8px}
+.lista ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.alertas{background:var(--warn-bg);border-radius:10px;padding:12px 14px}
+.alertas h3{color:var(--warn)}
+.alertas ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);font-weight:600;text-align:right;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td{padding:8px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td:first-child{white-space:normal;min-width:180px;max-width:420px}
+td .pz{display:flex;flex-direction:column;gap:2px}
+td .pz small{color:var(--ink-3)}
+.crm{display:flex;flex-wrap:wrap;gap:8px 28px}
+.crm div{display:flex;flex-direction:column}
+.crm .v{font-size:24px;font-weight:700}
+.crm .k{font-size:12.5px;color:var(--ink-2)}
+.pie{font-size:12px;color:var(--ink-3)}
+
+#tip{position:fixed;pointer-events:none;z-index:10;background:var(--ink);color:var(--surface);font-size:12.5px;line-height:1.4;padding:6px 9px;border-radius:7px;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){ .bar{transition:opacity .15s} }
+.bar.dim{opacity:.35}
+</style>
+
+<script type="application/json" id="datos">null</script>
+
+<div class="page">
+  <header class="top">
+    <div class="t">
+      <span class="eyebrow">Boxer Gestión · Boxer Taller · Instagram, Facebook y LinkedIn</span>
+      <h1>Panel de redes</h1>
+      <span class="sub" id="sub"></span>
+    </div>
+    <label class="selector" for="semana">Semana
+      <select id="semana"></select>
+    </label>
+  </header>
+
+  <section aria-labelledby="h-cuentas">
+    <div class="sec-h"><h2 id="h-cuentas">Las cuentas</h2><span class="sub" id="cuentas-sub"></span></div>
+    <div class="stack" id="cuentas"></div>
+  </section>
+
+  <section aria-labelledby="h-leads">
+    <div class="sec-h"><h2 id="h-leads">Leads de redes en el CRM</h2><span class="sub">canal Redes Sociales de Bitrix, por trimestre</span></div>
+    <div class="card"><div class="leads" id="leads"></div></div>
+  </section>
+
+  <section aria-labelledby="h-semana">
+    <div class="sec-h"><h2 id="h-semana">La semana</h2><span class="sub" id="semana-sub"></span></div>
+    <div class="card" id="semana-c"></div>
+  </section>
+
+  <p class="pie" id="pie"></p>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const D = JSON.parse(document.getElementById("datos").textContent);
+const $ = id => document.getElementById(id);
+const fmt = (v, d = 0) => v == null ? "sin dato" : Number(v).toLocaleString("es-AR", {minimumFractionDigits: d, maximumFractionDigits: d});
+const pct = v => v == null ? "sin dato" : fmt(v, 1) + "%";
+const sd = v => v == null ? '<span class="muted">sin dato</span>' : v;
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const corta = s => s.replace(/^\d{4}-/, "");
+const dm = iso => iso ? `${iso.slice(8,10)}/${iso.slice(5,7)}` : "";
+const fechaPz = f => f ? `${f.slice(6,8)}/${f.slice(4,6)}` : "";
+const SEMANAS = D.semanas.map(s => s.semana);
+let sel = SEMANAS.length - 1;
+try { const g = localStorage.getItem("panel-redes-semana"); if (g && SEMANAS.includes(g)) sel = SEMANAS.indexOf(g); } catch (e) {}
+
+/* ---------- gráficos SVG (una escala por gráfico, marcas finas, tooltip) ---------- */
+let W = 300; const H = 130, PL = 34, PR = 8, PT = 12, PB = 22;
+function escala(max){ const m = max <= 0 ? 1 : max; const p = Math.pow(10, Math.floor(Math.log10(m))); const n = Math.ceil(m / p * 2) / 2 * p; return n; }
+function ejes(max, n){
+  const top = escala(max), y = v => PT + (H - PT - PB) * (1 - v / top);
+  let g = "";
+  [0, top / 2, top].forEach(v => { g += `<line class="grid" x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${PL - 5}" y="${y(v) + 4}" text-anchor="end">${fmt(v, v < 10 && v % 1 ? 1 : 0)}</text>`; });
+  return {g, y, top};
+}
+function xs(n){ const w = W - PL - PR; return i => PL + (n === 1 ? w / 2 : w * (i + .5) / n); }
+function etiquetasX(labels, x){ return labels.map((l, i) => (labels.length <= 8 || i % 2 === 0 || i === labels.length - 1) ? `<text class="ax" x="${x(i)}" y="${H - 6}" text-anchor="middle">${esc(l)}</text>` : "").join(""); }
+
+function linea(labels, vals, color, opts = {}){
+  const ok = vals.filter(v => v != null), mn = opts.desdeCero ? 0 : Math.min(...ok), mx = Math.max(...ok);
+  const pad = opts.desdeCero ? 0 : Math.max((mx - mn) * .25, 1), lo = Math.max(0, mn - pad), hi = mx + pad;
+  const y = v => PT + (H - PT - PB) * (1 - (v - lo) / (hi - lo || 1)), x = xs(labels.length);
+  let g = "";
+  [lo, (lo + hi) / 2, hi].forEach(v => { g += `<line class="grid" x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${PL - 5}" y="${y(v) + 4}" text-anchor="end">${fmt(v, opts.dec ?? 0)}</text>`; });
+  const pts = vals.map((v, i) => v == null ? null : [x(i), y(v)]);
+  let d = "", abierto = false;
+  pts.forEach(p => { if (!p) { abierto = false; return; } d += (abierto ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); abierto = true; });
+  const marcas = pts.map((p, i) => p ? `<circle cx="${p[0]}" cy="${p[1]}" r="${i === opts.marca ? 4.5 : 3}" fill="${i === opts.marca ? color : "var(--surface)"}" stroke="${color}" stroke-width="2" data-tip="${esc(labels[i] + " · " + (opts.tip ? opts.tip(vals[i], i) : fmt(vals[i], opts.dec ?? 0)))}"/>` : "").join("");
+  const fin = pts.map((p, i) => [p, i]).filter(a => a[0]).pop();
+  const lab = fin ? `<text class="val" x="${Math.min(fin[0][0], W - PR)}" y="${fin[0][1] - 8}" text-anchor="end">${fmt(vals[fin[1]], opts.dec ?? 0)}${opts.suf || ""}</text>` : "";
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "")}">${g}<path d="${d}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round"/>${marcas}${lab}${etiquetasX(labels, x)}</svg>`;
+}
+
+function apiladas(labels, a, b, opts = {}){
+  const tot = labels.map((_, i) => (a[i] || 0) + (b[i] || 0)), {g, y} = ejes(Math.max(...tot), labels.length), x = xs(labels.length);
+  const bw = Math.min(26, (W - PL - PR) / labels.length * .6);
+  let barras = "";
+  labels.forEach((l, i) => {
+    if (a[i] == null && b[i] == null) return;
+    const ya = y(a[i] || 0), yb = y((a[i] || 0) + (b[i] || 0)), y0 = y(0);
+    const tip = esc(`${l} · orgánico ${fmt(a[i])} · pauta ${fmt(b[i])}`);
+    const dim = opts.marca != null && i !== opts.marca ? " dim" : "";
+    barras += `<g class="bar${dim}" data-tip="${tip}"><rect x="${x(i) - bw / 2}" y="${ya}" width="${bw}" height="${Math.max(y0 - ya, 0)}" fill="var(--org)" rx="2"/>`
+      + `<rect x="${x(i) - bw / 2}" y="${yb}" width="${bw}" height="${Math.max(ya - yb - 2, 0)}" fill="var(--pago)" rx="2"/>`
+      + `<rect x="${x(i) - bw / 2 - 3}" y="${PT}" width="${bw + 6}" height="${y0 - PT}" fill="transparent"/></g>`;
+  });
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "")}">${g}${barras}${etiquetasX(labels, x)}</svg>`;
+}
+
+function barras(labels, vals, opts = {}){
+  const {g, y} = ejes(Math.max(...vals, 1), labels.length), x = xs(labels.length);
+  const bw = Math.min(22, (W - PL - PR) / labels.length * .65);
+  const b = labels.map((l, i) => {
+    const color = opts.color ? opts.color(i) : "var(--org)";
+    const lab = vals[i] > 0 ? `<text class="val" x="${x(i)}" y="${y(vals[i]) - 4}" text-anchor="middle">${vals[i]}</text>` : "";
+    return `<g class="bar" data-tip="${esc(opts.tip ? opts.tip(i) : l + " · " + vals[i])}"><rect x="${x(i) - bw / 2}" y="${y(vals[i])}" width="${bw}" height="${Math.max(y(0) - y(vals[i]), vals[i] ? 1 : 0)}" fill="${color}" rx="2"/>${lab}<rect x="${x(i) - bw / 2 - 3}" y="${PT}" width="${bw + 6}" height="${y(0) - PT}" fill="transparent"/></g>`;
+  }).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "")}">${g}${b}${etiquetasX(labels, x)}</svg>`;
+}
+
+/* ---------- secciones ---------- */
+function delta(v, suf = ""){ if (v == null) return '<span class="muted">sin dato</span>'; const c = v > 0 ? "up" : v < 0 ? "down" : ""; return `<span class="${c}">${v > 0 ? "+" : ""}${fmt(v)}${suf}</span>`; }
+
+function cuentas(){
+  const s = SEMANAS[sel], labels = SEMANAS.map(corta);
+  const fila = D.semanas[sel];
+  $("cuentas-sub").textContent = `semana ${s}, del ${dm(fila.desde)} al ${dm(fila.hasta)} · evolución desde ${SEMANAS[0]}`;
+  $("cuentas").innerHTML = Object.entries(D.marcas).map(([clave, m]) => {
+    const r = m.por_semana[s];
+    if (!r) return `<div class="card"><h3>${m.nombre}</h3><p class="muted">Sin datos para ${s}.</p></div>`;
+    const serie = k => SEMANAS.map(w => m.por_semana[w]?.ig[k] ?? null);
+    const engRaro = (r.ig.formatos || []).some(f => (f.engagement_pct || 0) > 100) || r.ig.muestra_chica;
+    const otras = [`<span>Facebook <b>${sd(fmt(r.fb.seguidores))}</b> seguidores (${delta(r.fb.seguidores_delta)}) · <b>${fmt(r.fb.views)}</b> views</span>`];
+    if (r.li) otras.push(`<span>LinkedIn <b>${fmt(r.li.seguidores)}</b> seguidores (${delta(r.li.seguidores_delta)}) · <b>${fmt(r.li.impresiones)}</b> impresiones</span>`);
+    return `<div class="card">
+      <div class="brand-h"><h3>${m.nombre}</h3><span class="chip">${r.modo_lectura === "lanzamiento" ? "cuenta en lanzamiento" : "cuenta en optimización"}</span></div>
+      <div class="kpis">
+        <div class="kpi"><span class="k">Seguidores en Instagram</span><span class="v num">${fmt(r.ig.seguidores)}</span><span class="d">${delta(r.ig.seguidores_delta)} en la semana</span></div>
+        <div class="kpi"><span class="k">Alcance de la semana</span><span class="v num">${fmt(r.ig.alcance_total)}</span><span class="d">orgánico ${fmt(r.ig.alcance_organico)} · pauta ${fmt(r.ig.alcance_pago)}</span></div>
+        <div class="kpi"><span class="k">Engagement orgánico</span><span class="v num">${pct(r.ig.engagement_pct)}</span><span class="d">${fmt(r.ig.interacciones)} interacciones / alcance orgánico</span>${engRaro ? '<span class="flag">no confiable esta semana</span>' : ""}</div>
+      </div>
+      <div class="charts">
+        <div class="ch"><span class="ct">Seguidores en Instagram</span>${linea(labels, serie("seguidores"), "var(--org)", {marca: sel, aria: "Seguidores por semana"})}</div>
+        <div class="ch"><span class="ct">Alcance por semana</span>${apiladas(labels, serie("alcance_organico"), serie("alcance_pago"), {marca: sel, aria: "Alcance orgánico y pago por semana"})}
+          <div class="legend"><span><i style="background:var(--org)"></i>orgánico</span><span><i style="background:var(--pago)"></i>pauta</span></div></div>
+        <div class="ch"><span class="ct">Engagement orgánico (%)</span>${linea(labels, serie("engagement_pct"), "var(--org)", {marca: sel, dec: 1, suf: "%", desdeCero: true, aria: "Engagement orgánico por semana", tip: v => pct(v)})}</div>
+      </div>
+      <div class="otras">${otras.join("")}</div>
+    </div>`;
+  }).join("");
+}
+
+function leads(){
+  const L = D.leads, [act, prev] = L.trimestres;
+  const delTramo = prev.mismo_tramo, var_ = delTramo.total ? Math.round((act.total - delTramo.total) / delTramo.total * 1000) / 10 : null;
+  const semanas = [...prev.por_semana.map(w => ({...w, q: prev.etiqueta})), ...act.por_semana.map(w => ({...w, q: act.etiqueta}))];
+  // una semana partida entre dos Q aparece una vez por Q: se suman para el gráfico
+  const unidas = []; semanas.forEach(w => { const u = unidas.find(x => x.semana === w.semana); u ? (u.leads += w.leads, u.q += " / " + w.q) : unidas.push({...w}); });
+  $("leads").innerHTML = `
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span class="eyebrow">${act.etiqueta}${act.en_curso ? " · en curso" : ""}</span>
+      <span class="big num">${act.total}</span>
+      <span class="sub">leads del ${dm(act.desde)} al ${dm(act.hasta)} · contra ${delTramo.total} en el mismo tramo del ${prev.etiqueta}${var_ != null ? ` (${var_ > 0 ? "+" : ""}${fmt(var_, 1)}%)` : ""}</span>
+      <div class="estados">
+        <span class="chip">derivados ${act.derivados}</span><span class="chip">en gestión ${act.en_gestion}</span>
+        <span class="chip">no útiles ${act.no_utiles}</span><span class="chip">inactivos ${act.inactivos}</span>
+      </div>
+      <span class="sub">${prev.etiqueta} completo: <b class="num">${prev.total}</b> leads · ${prev.derivados} derivados</span>
+      <p class="nota">${esc(L.fuente)}. Datos al ${dm(L.corte_snapshot)}. Son leads del canal: no se atribuyen a ninguna publicación.</p>
+    </div>
+    <div class="ch"><span class="ct">Leads de redes por semana</span>
+      ${(() => { W = 620; const svg = barras(unidas.map(w => corta(w.semana)), unidas.map(w => w.leads), {aria: "Leads de redes por semana", color: i => unidas[i].q.includes(act.etiqueta) ? "var(--org)" : "var(--pago)", tip: i => `${unidas[i].semana} (${unidas[i].q}) · ${unidas[i].leads} leads`}); W = 300; return svg; })()}
+      <div class="legend"><span><i style="background:var(--pago)"></i>${prev.etiqueta}</span><span><i style="background:var(--org)"></i>${act.etiqueta}</span></div>
+    </div>`;
+}
+
+function piezas(r){
+  if (!r || !r.top_engagement.length) return '<p class="muted">Sin piezas publicadas.</p>';
+  return `<div class="tw"><table><thead><tr><th>Pieza</th><th>Alcance</th><th>Interacciones</th><th>Engagement</th><th>Follows</th></tr></thead><tbody>${
+    r.top_engagement.map(p => `<tr><td><div class="pz"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.tipo)} del ${fechaPz(p.fecha)}</a><small>${esc(p.texto)}</small></div></td><td>${fmt(p.alcance)}</td><td>${fmt(p.interacciones)}</td><td>${pct(p.engagement_pct)}</td><td>${p.follows == null ? '<span class="muted">sin dato</span>' : fmt(p.follows)}</td></tr>`).join("")
+  }</tbody></table></div>`;
+}
+
+function semana(){
+  const f = D.semanas[sel], lec = f.lectura || {};
+  $("semana-sub").textContent = `${f.semana}, del ${dm(f.desde)} al ${dm(f.hasta)}`;
+  const lista = (t, items, color) => items && items.length ? `<div class="lista"><h3><span class="dot" style="background:${color}"></span>${t}</h3><ul>${items.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
+  const cuerpo = lec.funciono || lec.no_funciono
+    ? `<div class="listas">${lista("Qué funcionó", lec.funciono, "var(--good)")}${lista("Qué no funcionó", lec.no_funciono, "var(--bad)")}</div>`
+    : (lec.puntos ? `<div class="lista"><h3>Lectura de la semana</h3><ul>${lec.puntos.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "");
+  const crm = f.crm ? `<div class="crm">
+      <div><span class="v num">${sd(f.crm.prospectos_redes)}</span><span class="k">prospectos de redes${f.crm.var_pct != null ? ` (${f.crm.var_pct > 0 ? "+" : ""}${fmt(f.crm.var_pct, 1)}%)` : ""}</span></div>
+      <div><span class="v num">${f.crm.inversion_redes_ars == null ? "sin dato" : "$ " + fmt(f.crm.inversion_redes_ars)}</span><span class="k">gasto en awareness de Meta (ARS)</span></div>
+      <div><span class="v num">${f.crm.costo_por_prospecto_ars == null ? "sin dato" : "$ " + fmt(f.crm.costo_por_prospecto_ars)}</span><span class="k">costo por prospecto (ARS)</span></div>
+    </div>` : '<p class="muted">Sin cruce con el CRM para esta semana.</p>';
+  const al = f.alertas.length ? `<div class="alertas"><h3>Alertas</h3><ul>${f.alertas.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
+  $("semana-c").innerHTML = `
+    ${lec.titular ? `<p class="titular">${esc(lec.titular)}</p>` : '<p class="muted">Sin lectura escrita para esta semana.</p>'}
+    ${cuerpo}${al}
+    <div class="stack">${Object.values(D.marcas).map(m => `<div style="display:flex;flex-direction:column;gap:8px;min-width:0"><h3>${m.nombre}: lo más exitoso</h3>${piezas(m.por_semana[f.semana])}</div>`).join("")}</div>
+    ${crm}`;
+}
+
+function pintar(){
+  const ult = D.semanas[D.semanas.length - 1];
+  $("sub").textContent = `${D.semanas.length} semanas medidas, de ${SEMANAS[0]} a ${ult.semana} (cerrada el ${dm(ult.hasta)})`;
+  cuentas(); semana();
+}
+$("semana").innerHTML = SEMANAS.map((s, i) => `<option value="${i}">${s} · ${dm(D.semanas[i].desde)} al ${dm(D.semanas[i].hasta)}</option>`).reverse().join("");
+$("semana").value = sel;
+$("semana").addEventListener("change", e => { sel = +e.target.value; try { localStorage.setItem("panel-redes-semana", SEMANAS[sel]); } catch (er) {} pintar(); });
+leads(); pintar();
+$("pie").textContent = `Métricas de Metricool (cada semana se mide una vez, el lunes después del cierre) y prospectos de Bitrix. Orgánico y pauta van separados: lo que se dice del contenido sale del orgánico. Actualizado ${D.generado.slice(0, 10).split("-").reverse().join("/")}.`;
+
+/* tooltip */
+const tip = $("tip");
+document.addEventListener("pointermove", e => {
+  const t = e.target.closest && e.target.closest("[data-tip]");
+  if (!t) { tip.hidden = true; return; }
+  tip.textContent = t.getAttribute("data-tip"); tip.hidden = false;
+  const w = tip.offsetWidth, x = Math.min(Math.max(8, e.clientX - w / 2), innerWidth - w - 8);
+  tip.style.left = x + "px"; tip.style.top = (e.clientY - tip.offsetHeight - 12) + "px";
+});
+</script>

@@ -1,0 +1,208 @@
+{
+  "semana": "2026-W39",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-09-21",
+  "hasta": "2026-09-27",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 106,
+        "alcance": 20,
+        "interacciones": 21,
+        "engagement_pct": 105.0,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 741,
+        "alcance": 317,
+        "interacciones": 14,
+        "engagement_pct": 4.4,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 214,
+        "alcance": 110,
+        "interacciones": 1,
+        "engagement_pct": 0.9,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 1874,
+        "alcance": 414,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 2935,
+      "alcance": 861,
+      "interacciones": 36,
+      "engagement_pct": 4.2
+    },
+    "pauta": {
+      "views": 49422,
+      "alcance": 29353
+    },
+    "pct_views_de_pauta": 94.4,
+    "alcance_total_cuenta": 30214,
+    "audiencia": {
+      "views_seguidores": 3829,
+      "views_no_seguidores": 48521,
+      "pct_seguidores": 7.3,
+      "pct_no_seguidores": 92.7,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 5974,
+      "fin": 5981,
+      "delta": 7,
+      "delta_pct": 0.1
+    },
+    "publicaciones": 4,
+    "stories_publicadas": 1,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260927",
+        "url": "https://www.instagram.com/p/Ddy_komiZpo/",
+        "texto": "Abriste Claude una vez, le preguntaste algo, te contestó, y ahí quedó. 👀 Así empiezan todas las casas de repuestos, sin aprovechar las 3 funciones principales de Claude 🤔💻\n\nArmamos",
+        "views": 619,
+        "alcance": 217,
+        "interacciones": 24,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 11.1
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260925",
+        "url": "https://www.instagram.com/p/DduibbKjoTp/",
+        "texto": "Los presupuestos los tenés. Lo que no tenés es cómo abordarlos.🤔 Con tus datos + IA podés organizar ese proceso y evitar que se pasen por alto 🚀\n\nComentá PROMPT y te lo pasamos par",
+        "views": 477,
+        "alcance": 153,
+        "interacciones": 5,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 3.3
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260921",
+        "url": "https://www.instagram.com/p/DdjcNttjiAu/",
+        "texto": "\"A MELI lo miro cuando puedo.\" 👀 Lo dice todo el mundo y es razonable: Mantener precios a mano es una tarea interminable. \n\nPero mirá el número que no se mira nunca: ¿Cuántos artíc",
+        "views": 683,
+        "alcance": 253,
+        "interacciones": 7,
+        "guardados": 3,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.8
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260927",
+        "url": "https://www.instagram.com/p/Ddy_komiZpo/",
+        "texto": "Abriste Claude una vez, le preguntaste algo, te contestó, y ahí quedó. 👀 Así empiezan todas las casas de repuestos, sin aprovechar las 3 funciones principales de Claude 🤔💻\n\nArmamos",
+        "views": 619,
+        "alcance": 217,
+        "interacciones": 24,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 11.1
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260925",
+        "url": "https://www.instagram.com/p/DduibbKjoTp/",
+        "texto": "Los presupuestos los tenés. Lo que no tenés es cómo abordarlos.🤔 Con tus datos + IA podés organizar ese proceso y evitar que se pasen por alto 🚀\n\nComentá PROMPT y te lo pasamos par",
+        "views": 477,
+        "alcance": 153,
+        "interacciones": 5,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 3.3
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260921",
+        "url": "https://www.instagram.com/p/DdjcNttjiAu/",
+        "texto": "\"A MELI lo miro cuando puedo.\" 👀 Lo dice todo el mundo y es razonable: Mantener precios a mano es una tarea interminable. \n\nPero mirá el número que no se mira nunca: ¿Cuántos artíc",
+        "views": 683,
+        "alcance": 253,
+        "interacciones": 7,
+        "guardados": 3,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.8
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 5,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 29561,
+    "publicaciones": 4,
+    "interacciones": 1,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 971,
+      "fin": 974,
+      "delta": 3
+    }
+  },
+  "linkedin": {
+    "impresiones": 1,
+    "publicaciones": 0,
+    "interacciones": 0,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 0,
+    "engagement_pct_sobre_impresiones": 0.0,
+    "seguidores": {
+      "inicio": 104,
+      "fin": 104,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W38",
+    "instagram": {
+      "views_organicas": -36.2,
+      "alcance_organico": 0.2,
+      "interacciones": -69.5,
+      "engagement_pct": -69.3,
+      "seguidores": 0.2,
+      "publicaciones": -33.3,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": 12.3,
+      "interacciones": null,
+      "seguidores": 0.3
+    },
+    "linkedin": {
+      "impresiones": -50.0,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

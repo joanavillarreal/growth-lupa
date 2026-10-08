@@ -34,7 +34,7 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 - `parte.py` — registra el resultado de un análisis o una preparación en `partes/AAAA-MM-DD.json`.
 - `partes/` — un parte por día. Es lo que leen los agentes que vienen después.
 - `procedimientos/` — los pasos de cada análisis y preparación (`gasto_meta.md`, `meta.md`,
-  `inversion.md`; el funnel está más abajo en este archivo).
+  `inversion.md`, `redes.md`; el funnel está más abajo en este archivo).
 - `comparar.py` — en ensayo, compara mis paneles y mi guardia contra los de las rutinas viejas.
 - `memoria/` — lo que ya revisamos con Joana y no hay que volver a marcar. **Leer el archivo
   del análisis antes de alertar** (`memoria/funnel.md`, etc.).
@@ -43,6 +43,9 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
   `data/`, `dashboard/`, `experiments/` y las skills `growth` y `nuevo-experimento`.
   Detalle en `growth/README.md` y en la skill `growth`. La carga de inversión está en
   `growth/inversion.py` y `growth/google_ads.py` (`run.py inversion`).
+- Redes (copiado de `agente-redes`): todo en `redes/` (scripts de medición y del panel, datos
+  por semana desde la W34, memoria de aprendizajes en `redes/memoria/conclusiones.md`). Ver
+  `procedimientos/redes.md`.
 - Meta (copiado de `agente-meta-ads`): todo en `meta/` (scripts de guardia y panel, datos
   crudos del MCP, CRM, config, referencias). Ver `meta/README.md`.
 

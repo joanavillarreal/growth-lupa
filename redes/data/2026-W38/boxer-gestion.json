@@ -1,0 +1,276 @@
+{
+  "semana": "2026-W38",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-09-14",
+  "hasta": "2026-09-20",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 70,
+        "alcance": 13,
+        "interacciones": 99,
+        "engagement_pct": 761.5,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 732,
+        "alcance": 346,
+        "interacciones": 13,
+        "engagement_pct": 3.8,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 463,
+        "alcance": 190,
+        "interacciones": 6,
+        "engagement_pct": 3.2,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 3334,
+        "alcance": 310,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 4599,
+      "alcance": 859,
+      "interacciones": 118,
+      "engagement_pct": 13.7
+    },
+    "pauta": {
+      "views": 43655,
+      "alcance": 28005
+    },
+    "pct_views_de_pauta": 90.5,
+    "alcance_total_cuenta": 28864,
+    "audiencia": {
+      "views_seguidores": 6982,
+      "views_no_seguidores": 41265,
+      "pct_seguidores": 14.5,
+      "pct_no_seguidores": 85.5,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 5972,
+      "fin": 5972,
+      "delta": 0,
+      "delta_pct": 0.0
+    },
+    "publicaciones": 6,
+    "stories_publicadas": 1,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260914",
+        "url": "https://www.instagram.com/p/DdSDmM9Cncj/",
+        "texto": "Venderle en cuenta corriente a un cliente de toda la vida no es el problema. 👀 El problema es venderle a ciegas. Despachar sin tener a mano cuánto te debe en total y desde cuándo. ",
+        "views": 420,
+        "alcance": 154,
+        "interacciones": 7,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 4.5
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260920",
+        "url": "https://www.instagram.com/reel/Ddg3I7CjwtI/",
+        "texto": "Cinco personas esperando y ninguna sabe a quién le toca. 👀🫠 El turnero no es para vos: Es para el que está parado esperando. Saber que hay un orden y que le va a llegar el turno ca",
+        "views": 163,
+        "alcance": 93,
+        "interacciones": 4,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 20.400002,
+        "engagement_pct": 4.3
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260920",
+        "url": "https://www.instagram.com/reel/DdhgOSMArl0/",
+        "texto": "A tu casa de repuestos la buscan en Google antes de ir. 👀 Un QR pegado en el mostrador que lleve a tu ficha es la forma más barata que hay de juntar reseñas. 🦾 Y son esas reseñas l",
+        "views": 179,
+        "alcance": 125,
+        "interacciones": 4,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 23.0,
+        "engagement_pct": 3.2
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260918",
+        "url": "https://www.instagram.com/reel/DdcdkgwlPWV/",
+        "texto": "El que entra a tu mostrador ya no es siempre un mecánico. 👀 Cada vez llega más gente que compra para su propio auto y que muchas veces no sabe ni cómo se llama la pieza que vino a ",
+        "views": 276,
+        "alcance": 138,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 20.0,
+        "engagement_pct": 2.2
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260919",
+        "url": "https://www.instagram.com/reel/DdfJKlyjgOw/",
+        "texto": "\"¿Y cuál me conviene?\" 👀 El mecánico entra sabiendo. El que viene a comprar para su auto, no tiene idea de que el mismo artículo lo venden cinco proveedores distintos, ni qué difer",
+        "views": 268,
+        "alcance": 152,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 19.900002,
+        "engagement_pct": 2.0
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260914",
+        "url": "https://www.instagram.com/p/DdSDmM9Cncj/",
+        "texto": "Venderle en cuenta corriente a un cliente de toda la vida no es el problema. 👀 El problema es venderle a ciegas. Despachar sin tener a mano cuánto te debe en total y desde cuándo. ",
+        "views": 420,
+        "alcance": 154,
+        "interacciones": 7,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 4.5
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260920",
+        "url": "https://www.instagram.com/reel/Ddg3I7CjwtI/",
+        "texto": "Cinco personas esperando y ninguna sabe a quién le toca. 👀🫠 El turnero no es para vos: Es para el que está parado esperando. Saber que hay un orden y que le va a llegar el turno ca",
+        "views": 163,
+        "alcance": 93,
+        "interacciones": 4,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 20.400002,
+        "engagement_pct": 4.3
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260920",
+        "url": "https://www.instagram.com/reel/DdhgOSMArl0/",
+        "texto": "A tu casa de repuestos la buscan en Google antes de ir. 👀 Un QR pegado en el mostrador que lleve a tu ficha es la forma más barata que hay de juntar reseñas. 🦾 Y son esas reseñas l",
+        "views": 179,
+        "alcance": 125,
+        "interacciones": 4,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 23.0,
+        "engagement_pct": 3.2
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260918",
+        "url": "https://www.instagram.com/reel/DdcdkgwlPWV/",
+        "texto": "El que entra a tu mostrador ya no es siempre un mecánico. 👀 Cada vez llega más gente que compra para su propio auto y que muchas veces no sabe ni cómo se llama la pieza que vino a ",
+        "views": 276,
+        "alcance": 138,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 20.0,
+        "engagement_pct": 2.2
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260919",
+        "url": "https://www.instagram.com/reel/DdfJKlyjgOw/",
+        "texto": "\"¿Y cuál me conviene?\" 👀 El mecánico entra sabiendo. El que viene a comprar para su auto, no tiene idea de que el mismo artículo lo venden cinco proveedores distintos, ni qué difer",
+        "views": 268,
+        "alcance": 152,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 19.900002,
+        "engagement_pct": 2.0
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 26321,
+    "publicaciones": 2,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 968,
+      "fin": 971,
+      "delta": 3
+    }
+  },
+  "linkedin": {
+    "impresiones": 2,
+    "publicaciones": 0,
+    "interacciones": 0,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 0,
+    "engagement_pct_sobre_impresiones": 0.0,
+    "seguidores": {
+      "inicio": 104,
+      "fin": 104,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W37",
+    "instagram": {
+      "views_organicas": 26.4,
+      "alcance_organico": -44.5,
+      "interacciones": 68.6,
+      "engagement_pct": 204.4,
+      "seguidores": -0.0,
+      "publicaciones": -25.0,
+      "guardados": -100.0
+    },
+    "facebook": {
+      "views_contenido": 19.1,
+      "interacciones": -100.0,
+      "seguidores": 0.3
+    },
+    "linkedin": {
+      "impresiones": -93.9,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

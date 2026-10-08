@@ -1,0 +1,326 @@
+<title>Panel de redes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: una columna de lectura de arriba hacia abajo. Cuentas (Gestión | Taller lado a lado),
+   leads de redes del trimestre, y la semana elegida. Números en condensada, texto en sans. */
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --soft:#eef1f5; --line:#dfe3ea;
+  --ink:#141a23; --ink-2:#4f5967; --ink-3:#7c8594;
+  --org:#2a78d6; --org-soft:#e3eefb; --pago:#a7aeba;
+  --good:#1a7f4b; --good-bg:#e4f4ea; --bad:#b93a2c; --bad-bg:#fbe9e6; --warn:#9a5a00; --warn-bg:#fdf0dc;
+  --f-num:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-txt:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:12px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0f1319; --surface:#171c24; --soft:#1e242e; --line:#2a313d;
+  --ink:#edf1f6; --ink-2:#aab3c0; --ink-3:#7d8796;
+  --org:#3987e5; --org-soft:#1a2a40; --pago:#5d6673;
+  --good:#4cc38a; --good-bg:#15281f; --bad:#f07466; --bad-bg:#33191a; --warn:#f0a43a; --warn-bg:#30240f;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0f1319; --surface:#171c24; --soft:#1e242e; --line:#2a313d;
+  --ink:#edf1f6; --ink-2:#aab3c0; --ink-3:#7d8796;
+  --org:#3987e5; --org-soft:#1a2a40; --pago:#5d6673;
+  --good:#4cc38a; --good-bg:#15281f; --bad:#f07466; --bad-bg:#33191a; --warn:#f0a43a; --warn-bg:#30240f;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-txt);-webkit-font-smoothing:antialiased}
+.page{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:20px 56px;display:flex;flex-direction:column;gap:28px}
+@media (min-width:760px){ .page{padding-inline:28px} }
+h1,h2,h3{margin:0;font-family:var(--f-num);font-weight:700;letter-spacing:.005em;text-wrap:balance}
+h1{font-size:30px;line-height:1.1}
+h2{font-size:22px}
+h3{font-size:17px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.muted{color:var(--ink-3)} .sub{color:var(--ink-2);font-size:13.5px}
+a{color:var(--org)}
+a:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--org);outline-offset:2px}
+
+/* encabezado */
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 20px;justify-content:space-between}
+.top .t{display:flex;flex-direction:column;gap:4px;min-width:0}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.selector{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-2)}
+select{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+
+/* secciones */
+section{display:flex;flex-direction:column;gap:14px;min-width:0}
+.sec-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.sec-h .sub{margin-left:auto}
+.grid2{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.stack{display:flex;flex-direction:column;gap:16px;min-width:0}
+@media (min-width:900px){ .grid2{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.brand-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--ink-2)}
+
+/* KPIs */
+.kpis{display:grid;gap:10px;grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:520px){ .kpis{grid-template-columns:minmax(0,1fr)} }
+.kpi{background:var(--soft);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi .k{font-size:12.5px;color:var(--ink-2);font-weight:500}
+.kpi .v{font-size:28px;font-weight:700;line-height:1.1}
+.kpi .d{font-size:12.5px;color:var(--ink-3)}
+.up{color:var(--good)} .down{color:var(--bad)}
+.flag{display:inline-block;margin-top:4px;font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:999px;background:var(--warn-bg);color:var(--warn)}
+
+/* gráficos */
+.charts{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:700px){ .charts{grid-template-columns:repeat(3,minmax(0,1fr))} }
+.ch{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ch .ct{font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.ch svg{width:100%;height:auto;max-height:240px;display:block;overflow:visible}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.otras{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:10px}
+.otras b{color:var(--ink);font-weight:600}
+svg .ax{fill:var(--ink-3);font:11px var(--f-txt)}
+svg .val{fill:var(--ink-2);font:600 11px var(--f-num)}
+svg .grid{stroke:var(--line);stroke-width:1}
+
+/* leads */
+.leads{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){ .leads{grid-template-columns:minmax(0,1fr) minmax(0,2fr)} }
+.big{font-size:56px;font-weight:700;line-height:1}
+.estados{display:flex;flex-wrap:wrap;gap:6px}
+.nota{font-size:12.5px;color:var(--ink-3);max-width:70ch}
+
+/* semana */
+.titular{font-size:17px;line-height:1.5;max-width:75ch;margin:0}
+.listas{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:760px){ .listas{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.lista h3{display:flex;align-items:center;gap:8px}
+.lista ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.alertas{background:var(--warn-bg);border-radius:10px;padding:12px 14px}
+.alertas h3{color:var(--warn)}
+.alertas ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);font-weight:600;text-align:right;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td{padding:8px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td:first-child{white-space:normal;min-width:180px;max-width:420px}
+td .pz{display:flex;flex-direction:column;gap:2px}
+td .pz small{color:var(--ink-3)}
+.crm{display:flex;flex-wrap:wrap;gap:8px 28px}
+.crm div{display:flex;flex-direction:column}
+.crm .v{font-size:24px;font-weight:700}
+.crm .k{font-size:12.5px;color:var(--ink-2)}
+.pie{font-size:12px;color:var(--ink-3)}
+
+#tip{position:fixed;pointer-events:none;z-index:10;background:var(--ink);color:var(--surface);font-size:12.5px;line-height:1.4;padding:6px 9px;border-radius:7px;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){ .bar{transition:opacity .15s} }
+.bar.dim{opacity:.35}
+</style>
+
+<script type="application/json" id="datos">{"generado": "2026-10-08T15:05-03:00", "semanas": [{"semana": "2026-W34", "alertas": ["Boxer Gestión: ninguna pieza de la semana trajo seguidores (0 follows por pieza).", "Boxer Taller: alcance orgánico de 105 personas. Con tan poco alcance los % de engagement son ruido: no se sacan conclusiones de ellos.", "Boxer Taller: ninguna pieza de la semana trajo seguidores (0 follows por pieza)."], "crm": {"prospectos_redes": 2, "inversion_redes_ars": 28326.96, "costo_por_prospecto_ars": 14163.48, "var_pct": null}, "lectura": null, "desde": "2026-08-17", "hasta": "2026-08-23"}, {"semana": "2026-W35", "alertas": ["Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero)."], "crm": {"prospectos_redes": 3, "inversion_redes_ars": 33263.46, "costo_por_prospecto_ars": 11087.82, "var_pct": 50.0}, "lectura": null, "desde": "2026-08-24", "hasta": "2026-08-30"}, {"semana": "2026-W36", "alertas": ["Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).", "Boxer Taller: el 94,4% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.", "Boxer Taller: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero)."], "crm": {"prospectos_redes": 2, "inversion_redes_ars": 31575.67, "costo_por_prospecto_ars": 15787.83, "var_pct": -33.3}, "lectura": null, "desde": "2026-08-31", "hasta": "2026-09-06"}, {"semana": "2026-W37", "alertas": ["Boxer Gestión: el alcance orgánico cayó -36,2% contra la semana anterior.", "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).", "Boxer Taller: el 94,9% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.", "Boxer Taller: ninguna pieza de la semana trajo seguidores (0 follows por pieza)."], "crm": {"prospectos_redes": 2, "inversion_redes_ars": 31984.2, "costo_por_prospecto_ars": 15992.1, "var_pct": 0.0}, "lectura": null, "desde": "2026-09-07", "hasta": "2026-09-13"}, {"semana": "2026-W38", "alertas": ["Boxer Gestión: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.", "Boxer Gestión: el alcance orgánico cayó -44,5% contra la semana anterior.", "Boxer Gestión: el 90,5% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.", "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).", "Boxer Taller: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.", "Las redes no trajeron ningún prospecto al CRM esta semana."], "crm": {"prospectos_redes": 0, "inversion_redes_ars": 31296.71, "costo_por_prospecto_ars": null, "var_pct": -100.0}, "lectura": {"titular": "La única pieza que circuló fue el colaborativo de Rojas en Taller; Gestión pasó a reels y cerró sin altas, sin guardados y sin compartidos.", "puntos": ["Boxer Taller: el colaborativo con Pablo y Néstor Méndez alcanzó 1.560 personas, dejó 15 compartidos, 2 guardados y 3 altas directas, y la cuenta pasó de 67 a 76 seguidores (+9). El alcance orgánico creció 285,1%, sin publicar un solo reel.", "Boxer Gestión: seguidores clavados en 5.972 y cero guardados y cero compartidos en las cinco piezas. Los cuatro clips del webinar en reel dieron un view rate de 19,9% a 23,0%, contra el 36,8% del reel del equipo de soporte de la W37: el formato reel sin personas adentro no activa el mecanismo.", "La mejor pieza de Gestión fue un carrusel: el de cuenta corriente del 14/9, con 4,5% de engagement sobre 154 de alcance. El 13,7% de engagement orgánico de la cuenta no es confiable esta semana: el bloque Post trae 99 interacciones sobre 13 de alcance, arrastradas del colaborativo.", "LinkedIn de Gestión no publicó en toda la semana: 2 impresiones y 104 seguidores sin cambio. La pauta fue el 90,5% de las views de Instagram de Gestión y el 84,1% de las de Taller.", "Prospectos de origen redes: 0 en la semana, contra 2 en la W37 (−100%). El gasto en awareness de Meta fue de 31.296,71 ARS, así que no hay costo por prospecto. La inversión del SPA está incompleta: 1 de 7 días cargados (35,12 USD)."]}, "desde": "2026-09-14", "hasta": "2026-09-20"}, {"semana": "2026-W39", "alertas": ["Boxer Gestión: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.", "Boxer Gestión: el 94,4% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.", "Boxer Gestión: ninguna pieza de la semana trajo seguidores (0 follows por pieza).", "Boxer Taller no publicó nada en Instagram esta semana.", "Boxer Taller: el alcance orgánico cayó -80,4% contra la semana anterior.", "Boxer Taller: el 94,9% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico."], "crm": {"prospectos_redes": 2, "inversion_redes_ars": 30572.96, "costo_por_prospecto_ars": 15286.48, "var_pct": null}, "lectura": {"titular": "Gestión jugó la semana entera a carrusel y ninguna de las tres piezas trajo un seguidor; el de la guía de Claude fue la pieza más conversada (11,1%). Taller no publicó nada y la cuenta sumó 1 alta con 10.195 de alcance pago.", "puntos": ["Boxer Gestión: los tres carruseles cerraron con 0 follows cada uno, la apuesta explícita de la semana. La cuenta pasó de 5.974 a 5.981 (+7), pero ninguna alta salió de una pieza. Volvieron los guardados: 5 en la semana contra 0 en la W38, 3 de ellos en el carrusel de MercadoLibre (253 de alcance). Compartidos, 0.", "La mejor pieza de Gestión fue el carrusel de la guía de Claude del 27/9: 24 interacciones sobre 217 de alcance, 11,1% de engagement, contra 3,3% del de PROMPT y 2,8% del de MELI. El 4,2% de engagement orgánico de la cuenta no es confiable: el bloque Post trae 21 interacciones sobre 20 de alcance (105,0%), arrastre y no piezas de la semana. Vale el ranking pieza por pieza.", "Boxer Taller no publicó ninguna pieza (0 publicaciones en Instagram y en Facebook). El alcance orgánico cayó 80,4%, a 308, todo arrastre de carruseles anteriores, y la cuenta pasó de 77 a 78 seguidores (+1). La pauta llegó a 10.195 personas, el 94,9% de las views: sin piezas propias, la pauta sola dejó 1 alta.", "La pauta subió en las dos cuentas: 94,4% de las views de Instagram en Gestión y 94,9% en Taller. LinkedIn de Gestión, segunda semana sin publicar: 1 impresión y 104 seguidores sin cambio. Facebook de Gestión: 29.561 views (+12,3%), +3 seguidores y 1 interacción medida, porque el campo viene nulo.", "Prospectos de origen redes: 2 en la semana, contra 0 en la W38 (la variación no se calcula sobre cero). El gasto en awareness de Meta fue de 30.572,96 ARS, así que el costo por prospecto fue de 15.286,48 ARS. La inversión del SPA está completa (7 de 7 días): 173,39 USD. Los prospectos son del canal y no se atribuyen a ninguna pieza."]}, "desde": "2026-09-21", "hasta": "2026-09-27"}, {"semana": "2026-W40", "alertas": ["Boxer Gestión: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.", "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).", "Boxer Taller: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.", "Boxer Taller: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero)."], "crm": {"prospectos_redes": 3, "inversion_redes_ars": 34735.14, "costo_por_prospecto_ars": 11578.38, "var_pct": 50.0}, "lectura": {"titular": "Taller tuvo su mejor semana de altas (80 a 121, +41) con el sorteo de entradas para Expomecánico y el reel del evento. En Gestión los dos reels con «Comentá CLAUDE» encabezaron el ranking, pero nombrar a Claude sin ese pedido no levantó nada: lo que hace conversar es la palabra clave, no la herramienta.", "puntos": ["Boxer Gestión, la prueba de Claude: los dos reels con «Comentá CLAUDE» quedaron primero y segundo en engagement (el del 30/9 con 9,3%, 18 interacciones sobre 193 de alcance; el del 29/9 con 5,6%, 8 sobre 143). Los dos carruseles que nombran a Claude sin pedir comentario quedaron en 5,2% y 2,6%, casi igual que el de mostrador sin Claude (2,2%). La herramienta nombrada no explica el rendimiento: lo explica la palabra clave, que ya estaba confirmada.", "Boxer Gestión, captación: la cuenta pasó de 5.980 a 5.987 (+7), y los tres carruseles volvieron a cerrar con 0 follows. Los reels no informan follows: sin dato, no cero. El alcance orgánico subió 58,5%, a 1.365. Volvieron los compartidos (6 en la semana) y los guardados se mantuvieron en 5. El 7,6% de engagement orgánico de la cuenta no sirve: el bloque Post trae 49 interacciones sobre 10 de alcance (490,0%), que es arrastre.", "Boxer Taller: el reel del Expomecánico del 1/10 fue la pieza de mayor alcance (560, 910 views, view rate 43,6%) y el del sorteo del 28/9, que pedía comentar EXPO y seguir la cuenta, el más compartido (4). El alcance orgánico subió 259,1%, a 1.106. Los dos carruseles de pilar quedaron en 32 y 34 de alcance, con 0 compartidos y 0 guardados. Las altas no se pueden atribuir a una pieza (los reels no traen follows), pero coinciden con el sorteo: el salto fue de 84 el 30/9 a 110 el 1/10, el día del cierre.", "La pauta bajó su peso en las dos cuentas: 87,3% de las views de Instagram en Gestión (94,4% la semana anterior) y 72,4% en Taller (94,9%). LinkedIn de Gestión volvió a publicar: 1 pieza, 35 impresiones y +1 seguidor (104 a 105). Facebook de Gestión: 23.862 views (−19,3%) sin cambio en seguidores; Facebook de Taller: 8.732 views (+198,3%), la página sigue en 2.", "Prospectos de origen redes: 3 en la semana, +50,0% contra los 2 de la W39. El gasto en awareness de Meta fue de 34.735,14 ARS y el costo por prospecto, 11.578,38 ARS. La inversión del SPA está completa (7 de 7 días): 195,27 USD. Los prospectos son del canal y no se atribuyen al sorteo ni a ninguna pieza."], "funciono": ["Boxer Gestión: los dos reels con «Comentá CLAUDE» encabezaron el ranking de engagement (9,3% el del 30/9 y 5,6% el del 29/9).", "Boxer Gestión: el alcance orgánico subió 58,5%, a 1.365 personas, y volvieron los compartidos (6 en la semana).", "Boxer Taller: semana récord de altas, de 80 a 121 seguidores (+41), coincidiendo con el sorteo de entradas para Expomecánico.", "Boxer Taller: el reel del evento del 1/10 fue la pieza de mayor alcance (560 personas, view rate 43,6%) y el del sorteo, la más compartida (4)."], "no_funciono": ["Boxer Gestión: los tres carruseles cerraron con 0 follows, y los dos que nombran a Claude sin pedir comentario quedaron en 5,2% y 2,6%, a la par del de mostrador (2,2%).", "Boxer Gestión: Facebook bajó 19,3% en views (23.862) y no sumó seguidores.", "Boxer Taller: los dos carruseles de pilar quedaron en 32 y 34 de alcance, con 0 guardados y 0 compartidos."], "fuente_lectura": "titular y puntos: Lupa de agente-redes (05/10); funcionó / no funcionó: Lupa de growth-lupa (08/10), sobre los mismos números"}, "desde": "2026-09-28", "hasta": "2026-10-04"}], "marcas": {"boxer-gestion": {"nombre": "Boxer Gestión", "por_semana": {"2026-W34": {"desde": "2026-08-17", "hasta": "2026-08-23", "modo_lectura": "optimizacion", "ig": {"seguidores": 5901, "seguidores_delta": 12, "alcance_organico": 1634, "alcance_pago": 34810, "alcance_total": 36444, "views_organicas": 4040, "views_pago": 35787, "pct_views_pauta": 89.9, "engagement_pct": 4.2, "interacciones": 69, "publicaciones": 10, "stories": 7, "guardados": 0, "compartidos": 0, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 930, "alcance": 397, "interacciones": 45, "engagement_pct": 11.3, "sin_datos_interaccion": false}, {"formato": "Reel", "views": 551, "alcance": 163, "interacciones": 7, "engagement_pct": 4.3, "sin_datos_interaccion": false}, {"formato": "Story", "views": 1450, "alcance": 709, "interacciones": 17, "engagement_pct": 2.4, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 1109, "alcance": 365, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": null, "var_engagement": null}, "fb": {"seguidores": null, "seguidores_delta": null, "views": null, "publicaciones": null}, "li": null, "top_engagement": [], "top_seguidores": []}, "2026-W35": {"desde": "2026-08-24", "hasta": "2026-08-30", "modo_lectura": "optimizacion", "ig": {"seguidores": 5935, "seguidores_delta": 32, "alcance_organico": 2871, "alcance_pago": 30300, "alcance_total": 33171, "views_organicas": 8324, "views_pago": 33326, "pct_views_pauta": 80.0, "engagement_pct": 4.2, "interacciones": 122, "publicaciones": 18, "stories": 14, "guardados": 6, "compartidos": 3, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 445, "alcance": 97, "interacciones": 44, "engagement_pct": 45.4, "sin_datos_interaccion": false}, {"formato": "Reel", "views": 1677, "alcance": 902, "interacciones": 46, "engagement_pct": 5.1, "sin_datos_interaccion": false}, {"formato": "Story", "views": 3857, "alcance": 1297, "interacciones": 32, "engagement_pct": 2.5, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 2345, "alcance": 575, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": 75.7, "var_engagement": 0.0}, "fb": {"seguidores": 960, "seguidores_delta": 5, "views": 26770, "publicaciones": 12}, "li": {"seguidores": 103, "seguidores_delta": 0, "impresiones": 0, "publicaciones": 0, "engagement_pct": null}, "top_engagement": [{"tipo": "Carrusel", "fecha": "20260828", "url": "https://www.instagram.com/p/DcmSE4FDpOl/", "texto": "¿Cuántos clientes dejaron de comprarte este último tiempo sin que te dieras cuenta? Conectando tu Boxer a Claude, podes ver que clientes te dejaron de comprar. ", "alcance": 230, "interacciones": 9, "engagement_pct": 3.9, "guardados": 2, "compartidos": 1, "follows": 0, "view_rate_pct": null}, {"tipo": "Carrusel", "fecha": "20260825", "url": "https://www.instagram.com/p/DcejmdeFe2Q/", "texto": "Las nuevas generaciones en la gestión del negocio. Bruno y Dani, de Campana Repuestos. Lunes 1/9 Córdoba presencial. Comentá ENTREVISTA", "alcance": 295, "interacciones": 11, "engagement_pct": 3.7, "guardados": 3, "compartidos": 0, "follows": 0, "view_rate_pct": null}, {"tipo": "Reel", "fecha": "20260829", "url": "https://www.instagram.com/reel/Dcn38EguQQA/", "texto": "¡Felices 80 años @cerac.cba! Sabemos lo importante que son estos espacios para la comunidad", "alcance": 649, "interacciones": 23, "engagement_pct": 3.5, "guardados": 0, "compartidos": 2, "follows": null, "view_rate_pct": 30.099998}], "top_seguidores": []}, "2026-W36": {"desde": "2026-08-31", "hasta": "2026-09-06", "modo_lectura": "optimizacion", "ig": {"seguidores": 5963, "seguidores_delta": 23, "alcance_organico": 2425, "alcance_pago": 29229, "alcance_total": 31654, "views_organicas": 5146, "views_pago": 28238, "pct_views_pauta": 84.6, "engagement_pct": 1.9, "interacciones": 46, "publicaciones": 8, "stories": 4, "guardados": 1, "compartidos": 1, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 1398, "alcance": 712, "interacciones": 28, "engagement_pct": 3.9, "sin_datos_interaccion": false}, {"formato": "Reel", "views": 757, "alcance": 419, "interacciones": 8, "engagement_pct": 1.9, "sin_datos_interaccion": false}, {"formato": "Story", "views": 1445, "alcance": 739, "interacciones": 10, "engagement_pct": 1.4, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 1546, "alcance": 555, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": -15.5, "var_engagement": -54.8}, "fb": {"seguidores": 968, "seguidores_delta": 9, "views": 21777, "publicaciones": 4}, "li": {"seguidores": 103, "seguidores_delta": 0, "impresiones": 6, "publicaciones": 1, "engagement_pct": 0.0}, "top_engagement": [{"tipo": "Reel", "fecha": "20260831", "url": "https://www.instagram.com/reel/DcuHP3GAaq4/", "texto": "Santi ya está viajando a Neuquén. 🛩️ Va a estar visitando casas de repuestos de la zona, sin costo y sin compromiso: Se sienta, escucha cómo trabajás hoy y te m", "alcance": 237, "interacciones": 10, "engagement_pct": 4.2, "guardados": 1, "compartidos": 1, "follows": null, "view_rate_pct": 38.7}, {"tipo": "Carrusel", "fecha": "20260902", "url": "https://www.instagram.com/p/Dcyg94GDOo9/", "texto": "El proveedor que más te subió los precios no siempre es el que creés. 🤔 Lo tenés anotado: Cada compra cargada en Boxer tiene su fecha y su costo. Con los último", "alcance": 120, "interacciones": 3, "engagement_pct": 2.5, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}, {"tipo": "Post", "fecha": "20260831", "url": "https://www.instagram.com/p/Dct6MSVTL13/", "texto": "Llevá un control de tu Casa de Repuestos con Boxer 😉  Ventas, stock, precios actualizados automáticamente, cuentas, etc. 💻🚀", "alcance": 756, "interacciones": 13, "engagement_pct": 1.7, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}], "top_seguidores": []}, "2026-W37": {"desde": "2026-09-07", "hasta": "2026-09-13", "modo_lectura": "optimizacion", "ig": {"seguidores": 5973, "seguidores_delta": 8, "alcance_organico": 1547, "alcance_pago": 27815, "alcance_total": 29362, "views_organicas": 3639, "views_pago": 32258, "pct_views_pauta": 89.9, "engagement_pct": 4.5, "interacciones": 70, "publicaciones": 8, "stories": 3, "guardados": 3, "compartidos": 1, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 202, "alcance": 100, "interacciones": 32, "engagement_pct": 32.0, "sin_datos_interaccion": false}, {"formato": "Reel", "views": 833, "alcance": 435, "interacciones": 33, "engagement_pct": 7.6, "sin_datos_interaccion": false}, {"formato": "Story", "views": 554, "alcance": 310, "interacciones": 5, "engagement_pct": 1.6, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 2050, "alcance": 702, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": -36.2, "var_engagement": 136.8}, "fb": {"seguidores": 968, "seguidores_delta": 0, "views": 22093, "publicaciones": 6}, "li": {"seguidores": 104, "seguidores_delta": 1, "impresiones": 33, "publicaciones": 1, "engagement_pct": 0.0}, "top_engagement": [{"tipo": "Reel", "fecha": "20260910", "url": "https://www.instagram.com/reel/DdHPgDljvId/", "texto": "Pensabas que Ale era una sola persona? Te presentamos a quienes estan detras del dia a dia respondiendo tus consultas. Hoy te traemos 3 tips si ya sos cliente B", "alcance": 385, "interacciones": 23, "engagement_pct": 6.0, "guardados": 2, "compartidos": 1, "follows": null, "view_rate_pct": 36.8}, {"tipo": "Carrusel", "fecha": "20260907", "url": "https://www.instagram.com/p/DdACAi8kSD4/", "texto": "El lunes a la manana se decide o se apagan incendios? Mira como con Boxer + Claude (o Claudio) puede cambiar eso. 3 preguntas clave para arrancar la semana, par", "alcance": 149, "interacciones": 6, "engagement_pct": 4.0, "guardados": 1, "compartidos": 0, "follows": 0, "view_rate_pct": null}, {"tipo": "Carrusel", "fecha": "20260910", "url": "https://www.instagram.com/p/DdG1GiXCu3a/", "texto": "Nos llego este mensaje hoy y no podiamos creerlo. Que susto nos dimos pero que felicidad saber que continuamos ayudando a todas las Casas de Repuestos que se su", "alcance": 354, "interacciones": 12, "engagement_pct": 3.4, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}], "top_seguidores": []}, "2026-W38": {"desde": "2026-09-14", "hasta": "2026-09-20", "modo_lectura": "optimizacion", "ig": {"seguidores": 5972, "seguidores_delta": 0, "alcance_organico": 859, "alcance_pago": 28005, "alcance_total": 28864, "views_organicas": 4599, "views_pago": 43655, "pct_views_pauta": 90.5, "engagement_pct": 13.7, "interacciones": 118, "publicaciones": 6, "stories": 1, "guardados": 0, "compartidos": 0, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 70, "alcance": 13, "interacciones": 99, "engagement_pct": 761.5, "sin_datos_interaccion": false}, {"formato": "Reel", "views": 732, "alcance": 346, "interacciones": 13, "engagement_pct": 3.8, "sin_datos_interaccion": false}, {"formato": "Story", "views": 463, "alcance": 190, "interacciones": 6, "engagement_pct": 3.2, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 3334, "alcance": 310, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": -44.5, "var_engagement": 204.4}, "fb": {"seguidores": 971, "seguidores_delta": 3, "views": 26321, "publicaciones": 2}, "li": {"seguidores": 104, "seguidores_delta": 0, "impresiones": 2, "publicaciones": 0, "engagement_pct": 0.0}, "top_engagement": [{"tipo": "Carrusel", "fecha": "20260914", "url": "https://www.instagram.com/p/DdSDmM9Cncj/", "texto": "Venderle en cuenta corriente a un cliente de toda la vida no es el problema. 👀 El problema es venderle a ciegas. Despachar sin tener a mano cuánto te debe en to", "alcance": 154, "interacciones": 7, "engagement_pct": 4.5, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}, {"tipo": "Reel", "fecha": "20260920", "url": "https://www.instagram.com/reel/Ddg3I7CjwtI/", "texto": "Cinco personas esperando y ninguna sabe a quién le toca. 👀🫠 El turnero no es para vos: Es para el que está parado esperando. Saber que hay un orden y que le va ", "alcance": 93, "interacciones": 4, "engagement_pct": 4.3, "guardados": 0, "compartidos": 0, "follows": null, "view_rate_pct": 20.400002}, {"tipo": "Reel", "fecha": "20260920", "url": "https://www.instagram.com/reel/DdhgOSMArl0/", "texto": "A tu casa de repuestos la buscan en Google antes de ir. 👀 Un QR pegado en el mostrador que lleve a tu ficha es la forma más barata que hay de juntar reseñas. 🦾 ", "alcance": 125, "interacciones": 4, "engagement_pct": 3.2, "guardados": 0, "compartidos": 0, "follows": null, "view_rate_pct": 23.0}], "top_seguidores": []}, "2026-W39": {"desde": "2026-09-21", "hasta": "2026-09-27", "modo_lectura": "optimizacion", "ig": {"seguidores": 5981, "seguidores_delta": 7, "alcance_organico": 861, "alcance_pago": 29353, "alcance_total": 30214, "views_organicas": 2935, "views_pago": 49422, "pct_views_pauta": 94.4, "engagement_pct": 4.2, "interacciones": 36, "publicaciones": 4, "stories": 1, "guardados": 5, "compartidos": 0, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 106, "alcance": 20, "interacciones": 21, "engagement_pct": 105.0, "sin_datos_interaccion": false}, {"formato": "Reel", "views": 741, "alcance": 317, "interacciones": 14, "engagement_pct": 4.4, "sin_datos_interaccion": false}, {"formato": "Story", "views": 214, "alcance": 110, "interacciones": 1, "engagement_pct": 0.9, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 1874, "alcance": 414, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": 0.2, "var_engagement": -69.3}, "fb": {"seguidores": 974, "seguidores_delta": 3, "views": 29561, "publicaciones": 4}, "li": {"seguidores": 104, "seguidores_delta": 0, "impresiones": 1, "publicaciones": 0, "engagement_pct": 0.0}, "top_engagement": [{"tipo": "Carrusel", "fecha": "20260927", "url": "https://www.instagram.com/p/Ddy_komiZpo/", "texto": "Abriste Claude una vez, le preguntaste algo, te contestó, y ahí quedó. 👀 Así empiezan todas las casas de repuestos, sin aprovechar las 3 funciones principales d", "alcance": 217, "interacciones": 24, "engagement_pct": 11.1, "guardados": 1, "compartidos": 0, "follows": 0, "view_rate_pct": null}, {"tipo": "Carrusel", "fecha": "20260925", "url": "https://www.instagram.com/p/DduibbKjoTp/", "texto": "Los presupuestos los tenés. Lo que no tenés es cómo abordarlos.🤔 Con tus datos + IA podés organizar ese proceso y evitar que se pasen por alto 🚀", "alcance": 153, "interacciones": 5, "engagement_pct": 3.3, "guardados": 1, "compartidos": 0, "follows": 0, "view_rate_pct": null}, {"tipo": "Carrusel", "fecha": "20260921", "url": "https://www.instagram.com/p/DdjcNttjiAu/", "texto": "\"A MELI lo miro cuando puedo.\" 👀 Lo dice todo el mundo y es razonable: Mantener precios a mano es una tarea interminable. ", "alcance": 253, "interacciones": 7, "engagement_pct": 2.8, "guardados": 3, "compartidos": 0, "follows": 0, "view_rate_pct": null}], "top_seguidores": []}, "2026-W40": {"desde": "2026-09-28", "hasta": "2026-10-04", "modo_lectura": "optimizacion", "ig": {"seguidores": 5987, "seguidores_delta": 7, "alcance_organico": 1365, "alcance_pago": 23527, "alcance_total": 24892, "views_organicas": 3918, "views_pago": 26991, "pct_views_pauta": 87.3, "engagement_pct": 7.6, "interacciones": 104, "publicaciones": 7, "stories": 2, "guardados": 5, "compartidos": 6, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 22, "alcance": 10, "interacciones": 49, "engagement_pct": 490.0, "sin_datos_interaccion": false}, {"formato": "Reel", "views": 1130, "alcance": 374, "interacciones": 52, "engagement_pct": 13.9, "sin_datos_interaccion": false}, {"formato": "Story", "views": 383, "alcance": 241, "interacciones": 3, "engagement_pct": 1.2, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 2383, "alcance": 740, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": 58.5, "var_engagement": 81.0}, "fb": {"seguidores": 975, "seguidores_delta": 0, "views": 23862, "publicaciones": 3}, "li": {"seguidores": 105, "seguidores_delta": 1, "impresiones": 35, "publicaciones": 1, "engagement_pct": 2.9}, "top_engagement": [{"tipo": "Reel", "fecha": "20260930", "url": "https://www.instagram.com/reel/Dd7aXLdDLIx/", "texto": "Ahora con la IA podes concretar ventas más rápido 🚀🤖 En nuestras 3 clases grabadas podes acceder a casos practicos como estos sin costo 🤗 Comentá CLAUDE y te lo", "alcance": 193, "interacciones": 18, "engagement_pct": 9.3, "guardados": 1, "compartidos": 2, "follows": null, "view_rate_pct": 32.199997}, {"tipo": "Reel", "fecha": "20260929", "url": "https://www.instagram.com/reel/Dd4kpx_khvD/", "texto": "Incorporá Claude (o Claudio🤖) en tu Casa de Repuestos. Accedé a nuestras 3 clases grabadas sin costo 🚀 Comentá CLAUDE y te las enviamos 🫱🏼‍🫲🏽", "alcance": 143, "interacciones": 8, "engagement_pct": 5.6, "guardados": 1, "compartidos": 1, "follows": null, "view_rate_pct": 36.2}, {"tipo": "Carrusel", "fecha": "20260930", "url": "https://www.instagram.com/p/Dd5AFu0j4aE/", "texto": "5 preguntas. Si alguna no la podés contestar con un número, ahí tenés la tarea de octubre. 👀💻", "alcance": 193, "interacciones": 10, "engagement_pct": 5.2, "guardados": 2, "compartidos": 1, "follows": 0, "view_rate_pct": null}], "top_seguidores": []}}}, "boxer-taller": {"nombre": "Boxer Taller", "por_semana": {"2026-W34": {"desde": "2026-08-17", "hasta": "2026-08-23", "modo_lectura": "lanzamiento", "ig": {"seguidores": 37, "seguidores_delta": 3, "alcance_organico": 105, "alcance_pago": 269, "alcance_total": 374, "views_organicas": 254, "views_pago": 226, "pct_views_pauta": 47.1, "engagement_pct": 5.7, "interacciones": 6, "publicaciones": 2, "stories": 1, "guardados": 0, "compartidos": 0, "muestra_chica": true, "formatos": [{"formato": "Story", "views": 119, "alcance": 58, "interacciones": 6, "engagement_pct": 10.3, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 81, "alcance": 20, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}, {"formato": "Post", "views": 54, "alcance": 27, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": null, "var_engagement": null}, "fb": {"seguidores": null, "seguidores_delta": null, "views": null, "publicaciones": null}, "li": null, "top_engagement": [], "top_seguidores": []}, "2026-W35": {"desde": "2026-08-24", "hasta": "2026-08-30", "modo_lectura": "lanzamiento", "ig": {"seguidores": 44, "seguidores_delta": 5, "alcance_organico": 347, "alcance_pago": 2810, "alcance_total": 3157, "views_organicas": 934, "views_pago": 3442, "pct_views_pauta": 78.7, "engagement_pct": 7.2, "interacciones": 25, "publicaciones": 3, "stories": 1, "guardados": 0, "compartidos": 4, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 125, "alcance": 50, "interacciones": 22, "engagement_pct": 44.0, "sin_datos_interaccion": false}, {"formato": "Story", "views": 61, "alcance": 31, "interacciones": 3, "engagement_pct": 9.7, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 748, "alcance": 266, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": 230.5, "var_engagement": 26.3}, "fb": {"seguidores": 2, "seguidores_delta": 0, "views": 2568, "publicaciones": 3}, "li": null, "top_engagement": [{"tipo": "Carrusel", "fecha": "20260824", "url": "https://www.instagram.com/p/DcbMOfQFRZx/", "texto": "Empezamos con las casas de repuestos, y en ese camino escuchamos mucho. Boxer Taller nació de ahí. Vos sos el experto en los fierros, nosotros aportamos del lad", "alcance": 272, "interacciones": 15, "engagement_pct": 5.5, "guardados": 0, "compartidos": 4, "follows": 3, "view_rate_pct": null}, {"tipo": "Post", "fecha": "20260826", "url": "https://www.instagram.com/p/DchE0PgFaQk/", "texto": "Nadie te enseña esto en ningún lado. Pero es la mitad del trabajo: traducir 'hacía un ruidito tipo piiii' a algo concreto. ¿Cuál es la mejor que te dijeron?", "alcance": 26, "interacciones": 0, "engagement_pct": 0.0, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}], "top_seguidores": [{"tipo": "Carrusel", "fecha": "20260824", "url": "https://www.instagram.com/p/DcbMOfQFRZx/", "texto": "Empezamos con las casas de repuestos, y en ese camino escuchamos mucho. Boxer Taller nació de ahí. Vos sos el experto en los fierros, nosotros aportamos del lad", "alcance": 272, "interacciones": 15, "engagement_pct": 5.5, "guardados": 0, "compartidos": 4, "follows": 3, "view_rate_pct": null}]}, "2026-W36": {"desde": "2026-08-31", "hasta": "2026-09-06", "modo_lectura": "lanzamiento", "ig": {"seguidores": 54, "seguidores_delta": 9, "alcance_organico": 367, "alcance_pago": 10203, "alcance_total": 10570, "views_organicas": 1086, "views_pago": 18355, "pct_views_pauta": 94.4, "engagement_pct": 4.4, "interacciones": 16, "publicaciones": 7, "stories": 3, "guardados": 0, "compartidos": 0, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 66, "alcance": 19, "interacciones": 7, "engagement_pct": 36.8, "sin_datos_interaccion": false}, {"formato": "Reel", "views": 295, "alcance": 220, "interacciones": 8, "engagement_pct": 3.6, "sin_datos_interaccion": false}, {"formato": "Story", "views": 97, "alcance": 35, "interacciones": 1, "engagement_pct": 2.9, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 628, "alcance": 93, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": 5.8, "var_engagement": -38.9}, "fb": {"seguidores": 2, "seguidores_delta": 0, "views": 811, "publicaciones": 4}, "li": null, "top_engagement": [{"tipo": "Post", "fecha": "20260906", "url": "https://www.instagram.com/p/Dc8tKmcDEgn/", "texto": "Aprendiste a arreglar autos. Después aprendiste a manejar un negocio. 🫱🏼‍🫲🏽🚀 Y en algún momento tuviste que aprender algo que nadie te enseñó: A que las cosas s", "alcance": 28, "interacciones": 2, "engagement_pct": 7.1, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}, {"tipo": "Reel", "fecha": "20260905", "url": "https://www.instagram.com/reel/Dc6PSboArcU/", "texto": "", "alcance": 47, "interacciones": 2, "engagement_pct": 4.3, "guardados": 0, "compartidos": 0, "follows": null, "view_rate_pct": 39.0}, {"tipo": "Carrusel", "fecha": "20260904", "url": "https://www.instagram.com/p/Dc34W7fjDAC/", "texto": "La mayoría de los problemas al momento de cobrar no arrancan cuando cobrás. Arrancan el día que entró el auto. 👀 3 preguntas que hacen la diferencia, y que casi", "alcance": 38, "interacciones": 1, "engagement_pct": 2.6, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}], "top_seguidores": []}, "2026-W37": {"desde": "2026-09-07", "hasta": "2026-09-13", "modo_lectura": "lanzamiento", "ig": {"seguidores": 67, "seguidores_delta": 4, "alcance_organico": 409, "alcance_pago": 14344, "alcance_total": 14753, "views_organicas": 1600, "views_pago": 29905, "pct_views_pauta": 94.9, "engagement_pct": 6.4, "interacciones": 26, "publicaciones": 5, "stories": 2, "guardados": 0, "compartidos": 0, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 174, "alcance": 81, "interacciones": 24, "engagement_pct": 29.6, "sin_datos_interaccion": false}, {"formato": "Reel", "views": 153, "alcance": 126, "interacciones": 2, "engagement_pct": 1.6, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 1148, "alcance": 112, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}, {"formato": "Story", "views": 125, "alcance": 90, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": 11.4, "var_engagement": 45.5}, "fb": {"seguidores": 2, "seguidores_delta": 0, "views": 1020, "publicaciones": 5}, "li": null, "top_engagement": [{"tipo": "Carrusel", "fecha": "20260910", "url": "https://www.instagram.com/p/DdHOa4wioqR/", "texto": "Al medico nadie le pregunta si se acuerda. Se asume que el historial esta. Con el auto pasa lo mismo: el cliente da por hecho que sabes que le hiciste hace ocho", "alcance": 20, "interacciones": 3, "engagement_pct": 15.0, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}, {"tipo": "Carrusel", "fecha": "20260908", "url": "https://www.instagram.com/p/DdCEuHVDvHH/", "texto": "Nadie tiene una semana libre para cambiar como trabaja su taller. Por eso la primera semana con nosotros lo unico que cambia es que cada auto que entra tiene su", "alcance": 23, "interacciones": 2, "engagement_pct": 8.7, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}, {"tipo": "Carrusel", "fecha": "20260907", "url": "https://www.instagram.com/p/Dc_maY5FPoe/", "texto": "Decir que si a todo para no perder al cliente es la forma mas rapida de perderlo. 3 maneras de decir que no sin que se vaya para otro lado con una mala experien", "alcance": 44, "interacciones": 2, "engagement_pct": 4.5, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}], "top_seguidores": []}, "2026-W38": {"desde": "2026-09-14", "hasta": "2026-09-20", "modo_lectura": "lanzamiento", "ig": {"seguidores": 76, "seguidores_delta": 9, "alcance_organico": 1575, "alcance_pago": 11825, "alcance_total": 13400, "views_organicas": 3818, "views_pago": 20177, "pct_views_pauta": 84.1, "engagement_pct": 6.5, "interacciones": 103, "publicaciones": 2, "stories": 1, "guardados": 2, "compartidos": 15, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 29, "alcance": 7, "interacciones": 99, "engagement_pct": 1414.3, "sin_datos_interaccion": false}, {"formato": "Story", "views": 142, "alcance": 88, "interacciones": 4, "engagement_pct": 4.5, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 3632, "alcance": 1472, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}, {"formato": "Reel", "views": 15, "alcance": 8, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": 285.1, "var_engagement": 1.6}, "fb": {"seguidores": 2, "seguidores_delta": 0, "views": 4637, "publicaciones": 2}, "li": null, "top_engagement": [{"tipo": "Carrusel", "fecha": "20260918", "url": "https://www.instagram.com/p/DdbhX1DCcKm/", "texto": "Cincuenta años, tres generaciones y un mismo negocio en Rojas. 🚀 Pablo fundó el taller y Néstor, su hijo, se sumó y se especializo en electromecánica. 🦾 Y este ", "alcance": 1560, "interacciones": 74, "engagement_pct": 4.7, "guardados": 2, "compartidos": 15, "follows": 3, "view_rate_pct": null}], "top_seguidores": [{"tipo": "Carrusel", "fecha": "20260918", "url": "https://www.instagram.com/p/DdbhX1DCcKm/", "texto": "Cincuenta años, tres generaciones y un mismo negocio en Rojas. 🚀 Pablo fundó el taller y Néstor, su hijo, se sumó y se especializo en electromecánica. 🦾 Y este ", "alcance": 1560, "interacciones": 74, "engagement_pct": 4.7, "guardados": 2, "compartidos": 15, "follows": 3, "view_rate_pct": null}]}, "2026-W39": {"desde": "2026-09-21", "hasta": "2026-09-27", "modo_lectura": "lanzamiento", "ig": {"seguidores": 78, "seguidores_delta": 1, "alcance_organico": 308, "alcance_pago": 10195, "alcance_total": 10503, "views_organicas": 737, "views_pago": 13810, "pct_views_pauta": 94.9, "engagement_pct": 3.2, "interacciones": 10, "publicaciones": 0, "stories": 0, "guardados": 0, "compartidos": 0, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 27, "alcance": 13, "interacciones": 10, "engagement_pct": 76.9, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 692, "alcance": 286, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}, {"formato": "Reel", "views": 13, "alcance": 7, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}, {"formato": "Story", "views": 5, "alcance": 2, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": -80.4, "var_engagement": -50.8}, "fb": {"seguidores": 2, "seguidores_delta": 0, "views": 2927, "publicaciones": 0}, "li": null, "top_engagement": [], "top_seguidores": []}, "2026-W40": {"desde": "2026-09-28", "hasta": "2026-10-04", "modo_lectura": "lanzamiento", "ig": {"seguidores": 121, "seguidores_delta": 41, "alcance_organico": 1106, "alcance_pago": 9438, "alcance_total": 10544, "views_organicas": 3842, "views_pago": 10085, "pct_views_pauta": 72.4, "engagement_pct": 21.2, "interacciones": 234, "publicaciones": 11, "stories": 6, "guardados": 0, "compartidos": 6, "muestra_chica": false, "formatos": [{"formato": "Post", "views": 1793, "alcance": 58, "interacciones": 178, "engagement_pct": 306.9, "sin_datos_interaccion": false}, {"formato": "Reel", "views": 1258, "alcance": 773, "interacciones": 49, "engagement_pct": 6.3, "sin_datos_interaccion": false}, {"formato": "Story", "views": 357, "alcance": 154, "interacciones": 7, "engagement_pct": 4.5, "sin_datos_interaccion": false}, {"formato": "Carrusel", "views": 434, "alcance": 121, "interacciones": null, "engagement_pct": null, "sin_datos_interaccion": true}], "var_alcance_organico": 259.1, "var_engagement": 562.5}, "fb": {"seguidores": 2, "seguidores_delta": 0, "views": 8732, "publicaciones": 6}, "li": null, "top_engagement": [{"tipo": "Post", "fecha": "20260928", "url": "https://www.instagram.com/p/Dd1UbcqCa17/", "texto": "Estaremos presentes en @expo.mecanico 🚀 el evento que reunirá a talleristas que busquen conectar con el rubro 🫱🏼‍🫲🏽", "alcance": 55, "interacciones": 7, "engagement_pct": 12.7, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}, {"tipo": "Reel", "fecha": "20260928", "url": "https://www.instagram.com/reel/Dd1vBzKDFhC/", "texto": "SORTEO FINALIZADO ⚠️", "alcance": 253, "interacciones": 18, "engagement_pct": 7.1, "guardados": 0, "compartidos": 4, "follows": null, "view_rate_pct": 30.199997}, {"tipo": "Carrusel", "fecha": "20260929", "url": "https://www.instagram.com/p/Dd2bNrgCTMb/", "texto": "Si trabajás en la administración de un taller, este lunes ya lo conocés 📋", "alcance": 32, "interacciones": 2, "engagement_pct": 6.2, "guardados": 0, "compartidos": 0, "follows": 0, "view_rate_pct": null}], "top_seguidores": []}}}}, "leads": {"corte_snapshot": "2026-10-08", "trimestres": [{"etiqueta": "Q4 2026", "desde": "2026-10-01", "hasta": "2026-10-08", "en_curso": true, "total": 2, "por_semana": [{"semana": "2026-W40", "leads": 2}, {"semana": "2026-W41", "leads": 0}], "derivados": 2, "no_utiles": 0, "inactivos": 0, "en_gestion": 0}, {"etiqueta": "Q3 2026", "desde": "2026-07-01", "hasta": "2026-09-30", "en_curso": false, "total": 27, "por_semana": [{"semana": "2026-W27", "leads": 3}, {"semana": "2026-W28", "leads": 1}, {"semana": "2026-W29", "leads": 3}, {"semana": "2026-W30", "leads": 3}, {"semana": "2026-W31", "leads": 2}, {"semana": "2026-W32", "leads": 1}, {"semana": "2026-W33", "leads": 2}, {"semana": "2026-W34", "leads": 2}, {"semana": "2026-W35", "leads": 3}, {"semana": "2026-W36", "leads": 2}, {"semana": "2026-W37", "leads": 2}, {"semana": "2026-W38", "leads": 0}, {"semana": "2026-W39", "leads": 2}, {"semana": "2026-W40", "leads": 1}], "derivados": 19, "no_utiles": 2, "inactivos": 5, "en_gestion": 1, "mismo_tramo": {"hasta": "2026-07-08", "total": 4}}], "fuente": "Bitrix24, prospectos con origen del canal Redes Sociales (config/definitions.yaml), snapshot diario del funnel"}}</script>
+
+<div class="page">
+  <header class="top">
+    <div class="t">
+      <span class="eyebrow">Boxer Gestión · Boxer Taller · Instagram, Facebook y LinkedIn</span>
+      <h1>Panel de redes</h1>
+      <span class="sub" id="sub"></span>
+    </div>
+    <label class="selector" for="semana">Semana
+      <select id="semana"></select>
+    </label>
+  </header>
+
+  <section aria-labelledby="h-cuentas">
+    <div class="sec-h"><h2 id="h-cuentas">Las cuentas</h2><span class="sub" id="cuentas-sub"></span></div>
+    <div class="stack" id="cuentas"></div>
+  </section>
+
+  <section aria-labelledby="h-leads">
+    <div class="sec-h"><h2 id="h-leads">Leads de redes en el CRM</h2><span class="sub">canal Redes Sociales de Bitrix, por trimestre</span></div>
+    <div class="card"><div class="leads" id="leads"></div></div>
+  </section>
+
+  <section aria-labelledby="h-semana">
+    <div class="sec-h"><h2 id="h-semana">La semana</h2><span class="sub" id="semana-sub"></span></div>
+    <div class="card" id="semana-c"></div>
+  </section>
+
+  <p class="pie" id="pie"></p>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const D = JSON.parse(document.getElementById("datos").textContent);
+const $ = id => document.getElementById(id);
+const fmt = (v, d = 0) => v == null ? "sin dato" : Number(v).toLocaleString("es-AR", {minimumFractionDigits: d, maximumFractionDigits: d});
+const pct = v => v == null ? "sin dato" : fmt(v, 1) + "%";
+const sd = v => v == null ? '<span class="muted">sin dato</span>' : v;
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const corta = s => s.replace(/^\d{4}-/, "");
+const dm = iso => iso ? `${iso.slice(8,10)}/${iso.slice(5,7)}` : "";
+const fechaPz = f => f ? `${f.slice(6,8)}/${f.slice(4,6)}` : "";
+const SEMANAS = D.semanas.map(s => s.semana);
+let sel = SEMANAS.length - 1;
+try { const g = localStorage.getItem("panel-redes-semana"); if (g && SEMANAS.includes(g)) sel = SEMANAS.indexOf(g); } catch (e) {}
+
+/* ---------- gráficos SVG (una escala por gráfico, marcas finas, tooltip) ---------- */
+let W = 300; const H = 130, PL = 34, PR = 8, PT = 12, PB = 22;
+function escala(max){ const m = max <= 0 ? 1 : max; const p = Math.pow(10, Math.floor(Math.log10(m))); const n = Math.ceil(m / p * 2) / 2 * p; return n; }
+function ejes(max, n){
+  const top = escala(max), y = v => PT + (H - PT - PB) * (1 - v / top);
+  let g = "";
+  [0, top / 2, top].forEach(v => { g += `<line class="grid" x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${PL - 5}" y="${y(v) + 4}" text-anchor="end">${fmt(v, v < 10 && v % 1 ? 1 : 0)}</text>`; });
+  return {g, y, top};
+}
+function xs(n){ const w = W - PL - PR; return i => PL + (n === 1 ? w / 2 : w * (i + .5) / n); }
+function etiquetasX(labels, x){ return labels.map((l, i) => (labels.length <= 8 || i % 2 === 0 || i === labels.length - 1) ? `<text class="ax" x="${x(i)}" y="${H - 6}" text-anchor="middle">${esc(l)}</text>` : "").join(""); }
+
+function linea(labels, vals, color, opts = {}){
+  const ok = vals.filter(v => v != null), mn = opts.desdeCero ? 0 : Math.min(...ok), mx = Math.max(...ok);
+  const pad = opts.desdeCero ? 0 : Math.max((mx - mn) * .25, 1), lo = Math.max(0, mn - pad), hi = mx + pad;
+  const y = v => PT + (H - PT - PB) * (1 - (v - lo) / (hi - lo || 1)), x = xs(labels.length);
+  let g = "";
+  [lo, (lo + hi) / 2, hi].forEach(v => { g += `<line class="grid" x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${PL - 5}" y="${y(v) + 4}" text-anchor="end">${fmt(v, opts.dec ?? 0)}</text>`; });
+  const pts = vals.map((v, i) => v == null ? null : [x(i), y(v)]);
+  let d = "", abierto = false;
+  pts.forEach(p => { if (!p) { abierto = false; return; } d += (abierto ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); abierto = true; });
+  const marcas = pts.map((p, i) => p ? `<circle cx="${p[0]}" cy="${p[1]}" r="${i === opts.marca ? 4.5 : 3}" fill="${i === opts.marca ? color : "var(--surface)"}" stroke="${color}" stroke-width="2" data-tip="${esc(labels[i] + " · " + (opts.tip ? opts.tip(vals[i], i) : fmt(vals[i], opts.dec ?? 0)))}"/>` : "").join("");
+  const fin = pts.map((p, i) => [p, i]).filter(a => a[0]).pop();
+  const lab = fin ? `<text class="val" x="${Math.min(fin[0][0], W - PR)}" y="${fin[0][1] - 8}" text-anchor="end">${fmt(vals[fin[1]], opts.dec ?? 0)}${opts.suf || ""}</text>` : "";
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "")}">${g}<path d="${d}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round"/>${marcas}${lab}${etiquetasX(labels, x)}</svg>`;
+}
+
+function apiladas(labels, a, b, opts = {}){
+  const tot = labels.map((_, i) => (a[i] || 0) + (b[i] || 0)), {g, y} = ejes(Math.max(...tot), labels.length), x = xs(labels.length);
+  const bw = Math.min(26, (W - PL - PR) / labels.length * .6);
+  let barras = "";
+  labels.forEach((l, i) => {
+    if (a[i] == null && b[i] == null) return;
+    const ya = y(a[i] || 0), yb = y((a[i] || 0) + (b[i] || 0)), y0 = y(0);
+    const tip = esc(`${l} · orgánico ${fmt(a[i])} · pauta ${fmt(b[i])}`);
+    const dim = opts.marca != null && i !== opts.marca ? " dim" : "";
+    barras += `<g class="bar${dim}" data-tip="${tip}"><rect x="${x(i) - bw / 2}" y="${ya}" width="${bw}" height="${Math.max(y0 - ya, 0)}" fill="var(--org)" rx="2"/>`
+      + `<rect x="${x(i) - bw / 2}" y="${yb}" width="${bw}" height="${Math.max(ya - yb - 2, 0)}" fill="var(--pago)" rx="2"/>`
+      + `<rect x="${x(i) - bw / 2 - 3}" y="${PT}" width="${bw + 6}" height="${y0 - PT}" fill="transparent"/></g>`;
+  });
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "")}">${g}${barras}${etiquetasX(labels, x)}</svg>`;
+}
+
+function barras(labels, vals, opts = {}){
+  const {g, y} = ejes(Math.max(...vals, 1), labels.length), x = xs(labels.length);
+  const bw = Math.min(22, (W - PL - PR) / labels.length * .65);
+  const b = labels.map((l, i) => {
+    const color = opts.color ? opts.color(i) : "var(--org)";
+    const lab = vals[i] > 0 ? `<text class="val" x="${x(i)}" y="${y(vals[i]) - 4}" text-anchor="middle">${vals[i]}</text>` : "";
+    return `<g class="bar" data-tip="${esc(opts.tip ? opts.tip(i) : l + " · " + vals[i])}"><rect x="${x(i) - bw / 2}" y="${y(vals[i])}" width="${bw}" height="${Math.max(y(0) - y(vals[i]), vals[i] ? 1 : 0)}" fill="${color}" rx="2"/>${lab}<rect x="${x(i) - bw / 2 - 3}" y="${PT}" width="${bw + 6}" height="${y(0) - PT}" fill="transparent"/></g>`;
+  }).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria || "")}">${g}${b}${etiquetasX(labels, x)}</svg>`;
+}
+
+/* ---------- secciones ---------- */
+function delta(v, suf = ""){ if (v == null) return '<span class="muted">sin dato</span>'; const c = v > 0 ? "up" : v < 0 ? "down" : ""; return `<span class="${c}">${v > 0 ? "+" : ""}${fmt(v)}${suf}</span>`; }
+
+function cuentas(){
+  const s = SEMANAS[sel], labels = SEMANAS.map(corta);
+  const fila = D.semanas[sel];
+  $("cuentas-sub").textContent = `semana ${s}, del ${dm(fila.desde)} al ${dm(fila.hasta)} · evolución desde ${SEMANAS[0]}`;
+  $("cuentas").innerHTML = Object.entries(D.marcas).map(([clave, m]) => {
+    const r = m.por_semana[s];
+    if (!r) return `<div class="card"><h3>${m.nombre}</h3><p class="muted">Sin datos para ${s}.</p></div>`;
+    const serie = k => SEMANAS.map(w => m.por_semana[w]?.ig[k] ?? null);
+    const engRaro = (r.ig.formatos || []).some(f => (f.engagement_pct || 0) > 100) || r.ig.muestra_chica;
+    const otras = [`<span>Facebook <b>${sd(fmt(r.fb.seguidores))}</b> seguidores (${delta(r.fb.seguidores_delta)}) · <b>${fmt(r.fb.views)}</b> views</span>`];
+    if (r.li) otras.push(`<span>LinkedIn <b>${fmt(r.li.seguidores)}</b> seguidores (${delta(r.li.seguidores_delta)}) · <b>${fmt(r.li.impresiones)}</b> impresiones</span>`);
+    return `<div class="card">
+      <div class="brand-h"><h3>${m.nombre}</h3><span class="chip">${r.modo_lectura === "lanzamiento" ? "cuenta en lanzamiento" : "cuenta en optimización"}</span></div>
+      <div class="kpis">
+        <div class="kpi"><span class="k">Seguidores en Instagram</span><span class="v num">${fmt(r.ig.seguidores)}</span><span class="d">${delta(r.ig.seguidores_delta)} en la semana</span></div>
+        <div class="kpi"><span class="k">Alcance de la semana</span><span class="v num">${fmt(r.ig.alcance_total)}</span><span class="d">orgánico ${fmt(r.ig.alcance_organico)} · pauta ${fmt(r.ig.alcance_pago)}</span></div>
+        <div class="kpi"><span class="k">Engagement orgánico</span><span class="v num">${pct(r.ig.engagement_pct)}</span><span class="d">${fmt(r.ig.interacciones)} interacciones / alcance orgánico</span>${engRaro ? '<span class="flag">no confiable esta semana</span>' : ""}</div>
+      </div>
+      <div class="charts">
+        <div class="ch"><span class="ct">Seguidores en Instagram</span>${linea(labels, serie("seguidores"), "var(--org)", {marca: sel, aria: "Seguidores por semana"})}</div>
+        <div class="ch"><span class="ct">Alcance por semana</span>${apiladas(labels, serie("alcance_organico"), serie("alcance_pago"), {marca: sel, aria: "Alcance orgánico y pago por semana"})}
+          <div class="legend"><span><i style="background:var(--org)"></i>orgánico</span><span><i style="background:var(--pago)"></i>pauta</span></div></div>
+        <div class="ch"><span class="ct">Engagement orgánico (%)</span>${linea(labels, serie("engagement_pct"), "var(--org)", {marca: sel, dec: 1, suf: "%", desdeCero: true, aria: "Engagement orgánico por semana", tip: v => pct(v)})}</div>
+      </div>
+      <div class="otras">${otras.join("")}</div>
+    </div>`;
+  }).join("");
+}
+
+function leads(){
+  const L = D.leads, [act, prev] = L.trimestres;
+  const delTramo = prev.mismo_tramo, var_ = delTramo.total ? Math.round((act.total - delTramo.total) / delTramo.total * 1000) / 10 : null;
+  const semanas = [...prev.por_semana.map(w => ({...w, q: prev.etiqueta})), ...act.por_semana.map(w => ({...w, q: act.etiqueta}))];
+  // una semana partida entre dos Q aparece una vez por Q: se suman para el gráfico
+  const unidas = []; semanas.forEach(w => { const u = unidas.find(x => x.semana === w.semana); u ? (u.leads += w.leads, u.q += " / " + w.q) : unidas.push({...w}); });
+  $("leads").innerHTML = `
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span class="eyebrow">${act.etiqueta}${act.en_curso ? " · en curso" : ""}</span>
+      <span class="big num">${act.total}</span>
+      <span class="sub">leads del ${dm(act.desde)} al ${dm(act.hasta)} · contra ${delTramo.total} en el mismo tramo del ${prev.etiqueta}${var_ != null ? ` (${var_ > 0 ? "+" : ""}${fmt(var_, 1)}%)` : ""}</span>
+      <div class="estados">
+        <span class="chip">derivados ${act.derivados}</span><span class="chip">en gestión ${act.en_gestion}</span>
+        <span class="chip">no útiles ${act.no_utiles}</span><span class="chip">inactivos ${act.inactivos}</span>
+      </div>
+      <span class="sub">${prev.etiqueta} completo: <b class="num">${prev.total}</b> leads · ${prev.derivados} derivados</span>
+      <p class="nota">${esc(L.fuente)}. Datos al ${dm(L.corte_snapshot)}. Son leads del canal: no se atribuyen a ninguna publicación.</p>
+    </div>
+    <div class="ch"><span class="ct">Leads de redes por semana</span>
+      ${(() => { W = 620; const svg = barras(unidas.map(w => corta(w.semana)), unidas.map(w => w.leads), {aria: "Leads de redes por semana", color: i => unidas[i].q.includes(act.etiqueta) ? "var(--org)" : "var(--pago)", tip: i => `${unidas[i].semana} (${unidas[i].q}) · ${unidas[i].leads} leads`}); W = 300; return svg; })()}
+      <div class="legend"><span><i style="background:var(--pago)"></i>${prev.etiqueta}</span><span><i style="background:var(--org)"></i>${act.etiqueta}</span></div>
+    </div>`;
+}
+
+function piezas(r){
+  if (!r || !r.top_engagement.length) return '<p class="muted">Sin piezas publicadas.</p>';
+  return `<div class="tw"><table><thead><tr><th>Pieza</th><th>Alcance</th><th>Interacciones</th><th>Engagement</th><th>Follows</th></tr></thead><tbody>${
+    r.top_engagement.map(p => `<tr><td><div class="pz"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.tipo)} del ${fechaPz(p.fecha)}</a><small>${esc(p.texto)}</small></div></td><td>${fmt(p.alcance)}</td><td>${fmt(p.interacciones)}</td><td>${pct(p.engagement_pct)}</td><td>${p.follows == null ? '<span class="muted">sin dato</span>' : fmt(p.follows)}</td></tr>`).join("")
+  }</tbody></table></div>`;
+}
+
+function semana(){
+  const f = D.semanas[sel], lec = f.lectura || {};
+  $("semana-sub").textContent = `${f.semana}, del ${dm(f.desde)} al ${dm(f.hasta)}`;
+  const lista = (t, items, color) => items && items.length ? `<div class="lista"><h3><span class="dot" style="background:${color}"></span>${t}</h3><ul>${items.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
+  const cuerpo = lec.funciono || lec.no_funciono
+    ? `<div class="listas">${lista("Qué funcionó", lec.funciono, "var(--good)")}${lista("Qué no funcionó", lec.no_funciono, "var(--bad)")}</div>`
+    : (lec.puntos ? `<div class="lista"><h3>Lectura de la semana</h3><ul>${lec.puntos.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "");
+  const crm = f.crm ? `<div class="crm">
+      <div><span class="v num">${sd(f.crm.prospectos_redes)}</span><span class="k">prospectos de redes${f.crm.var_pct != null ? ` (${f.crm.var_pct > 0 ? "+" : ""}${fmt(f.crm.var_pct, 1)}%)` : ""}</span></div>
+      <div><span class="v num">${f.crm.inversion_redes_ars == null ? "sin dato" : "$ " + fmt(f.crm.inversion_redes_ars)}</span><span class="k">gasto en awareness de Meta (ARS)</span></div>
+      <div><span class="v num">${f.crm.costo_por_prospecto_ars == null ? "sin dato" : "$ " + fmt(f.crm.costo_por_prospecto_ars)}</span><span class="k">costo por prospecto (ARS)</span></div>
+    </div>` : '<p class="muted">Sin cruce con el CRM para esta semana.</p>';
+  const al = f.alertas.length ? `<div class="alertas"><h3>Alertas</h3><ul>${f.alertas.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
+  $("semana-c").innerHTML = `
+    ${lec.titular ? `<p class="titular">${esc(lec.titular)}</p>` : '<p class="muted">Sin lectura escrita para esta semana.</p>'}
+    ${cuerpo}${al}
+    <div class="stack">${Object.values(D.marcas).map(m => `<div style="display:flex;flex-direction:column;gap:8px;min-width:0"><h3>${m.nombre}: lo más exitoso</h3>${piezas(m.por_semana[f.semana])}</div>`).join("")}</div>
+    ${crm}`;
+}
+
+function pintar(){
+  const ult = D.semanas[D.semanas.length - 1];
+  $("sub").textContent = `${D.semanas.length} semanas medidas, de ${SEMANAS[0]} a ${ult.semana} (cerrada el ${dm(ult.hasta)})`;
+  cuentas(); semana();
+}
+$("semana").innerHTML = SEMANAS.map((s, i) => `<option value="${i}">${s} · ${dm(D.semanas[i].desde)} al ${dm(D.semanas[i].hasta)}</option>`).reverse().join("");
+$("semana").value = sel;
+$("semana").addEventListener("change", e => { sel = +e.target.value; try { localStorage.setItem("panel-redes-semana", SEMANAS[sel]); } catch (er) {} pintar(); });
+leads(); pintar();
+$("pie").textContent = `Métricas de Metricool (cada semana se mide una vez, el lunes después del cierre) y prospectos de Bitrix. Orgánico y pauta van separados: lo que se dice del contenido sale del orgánico. Actualizado ${D.generado.slice(0, 10).split("-").reverse().join("/")}.`;
+
+/* tooltip */
+const tip = $("tip");
+document.addEventListener("pointermove", e => {
+  const t = e.target.closest && e.target.closest("[data-tip]");
+  if (!t) { tip.hidden = true; return; }
+  tip.textContent = t.getAttribute("data-tip"); tip.hidden = false;
+  const w = tip.offsetWidth, x = Math.min(Math.max(8, e.clientX - w / 2), innerWidth - w - 8);
+  tip.style.left = x + "px"; tip.style.top = (e.clientY - tip.offsetHeight - 12) + "px";
+});
+</script>

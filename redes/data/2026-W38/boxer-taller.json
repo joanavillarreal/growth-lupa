@@ -1,0 +1,159 @@
+{
+  "semana": "2026-W38",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-09-14",
+  "hasta": "2026-09-20",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 29,
+        "alcance": 7,
+        "interacciones": 99,
+        "engagement_pct": 1414.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 142,
+        "alcance": 88,
+        "interacciones": 4,
+        "engagement_pct": 4.5,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 3632,
+        "alcance": 1472,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Reel",
+        "views": 15,
+        "alcance": 8,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 3818,
+      "alcance": 1575,
+      "interacciones": 103,
+      "engagement_pct": 6.5
+    },
+    "pauta": {
+      "views": 20177,
+      "alcance": 11825
+    },
+    "pct_views_de_pauta": 84.1,
+    "alcance_total_cuenta": 13400,
+    "audiencia": {
+      "views_seguidores": 349,
+      "views_no_seguidores": 23646,
+      "pct_seguidores": 1.5,
+      "pct_no_seguidores": 98.5,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 67,
+      "fin": 76,
+      "delta": 9,
+      "delta_pct": 13.4
+    },
+    "publicaciones": 2,
+    "stories_publicadas": 1,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260918",
+        "url": "https://www.instagram.com/p/DdbhX1DCcKm/",
+        "texto": "Cincuenta años, tres generaciones y un mismo negocio en Rojas. 🚀 Pablo fundó el taller y Néstor, su hijo, se sumó y se especializo en electromecánica. 🦾 Y este año volvió Juli, la ",
+        "views": 3767,
+        "alcance": 1560,
+        "interacciones": 74,
+        "guardados": 2,
+        "compartidos": 15,
+        "follows": 3,
+        "engagement_pct": 4.7
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260918",
+        "url": "https://www.instagram.com/p/DdbhX1DCcKm/",
+        "texto": "Cincuenta años, tres generaciones y un mismo negocio en Rojas. 🚀 Pablo fundó el taller y Néstor, su hijo, se sumó y se especializo en electromecánica. 🦾 Y este año volvió Juli, la ",
+        "views": 3767,
+        "alcance": 1560,
+        "interacciones": 74,
+        "guardados": 2,
+        "compartidos": 15,
+        "follows": 3,
+        "engagement_pct": 4.7
+      }
+    ],
+    "top_por_seguidores_ganados": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260918",
+        "url": "https://www.instagram.com/p/DdbhX1DCcKm/",
+        "texto": "Cincuenta años, tres generaciones y un mismo negocio en Rojas. 🚀 Pablo fundó el taller y Néstor, su hijo, se sumó y se especializo en electromecánica. 🦾 Y este año volvió Juli, la ",
+        "views": 3767,
+        "alcance": 1560,
+        "interacciones": 74,
+        "guardados": 2,
+        "compartidos": 15,
+        "follows": 3,
+        "engagement_pct": 4.7
+      }
+    ],
+    "guardados_totales": 2,
+    "compartidos_totales": 15,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 4637,
+    "publicaciones": 2,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 2,
+      "delta": 0
+    }
+  },
+  "objetivo_trimestre": {
+    "meta": 1000,
+    "actual": 76,
+    "faltan": 924,
+    "avance_pct": 7.6,
+    "ritmo_semanal": 9,
+    "semanas_a_este_ritmo": 103,
+    "ritmo_necesario_13_semanas": 72
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W37",
+    "instagram": {
+      "views_organicas": 138.6,
+      "alcance_organico": 285.1,
+      "interacciones": 296.2,
+      "engagement_pct": 1.6,
+      "seguidores": 13.4,
+      "publicaciones": -60.0,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": 354.6,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

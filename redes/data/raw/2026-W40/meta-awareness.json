@@ -1,0 +1,29 @@
+{
+  "semana": "2026-W40",
+  "fuente": "Meta Ads · ads_get_ad_entities · cuenta 725901852075382 · campañas con 'Awareness' en el nombre",
+  "campanas": [
+    {
+      "id": "120254402425170427",
+      "name": "JY | Awareness Boxer Taller (AGENTE META)",
+      "objective": "OUTCOME_TRAFFIC",
+      "amount_spent": {
+        "value": "16808.18",
+        "unit": "ARS"
+      }
+    },
+    {
+      "id": "120252699394270427",
+      "name": "JY | Awareness",
+      "objective": "OUTCOME_TRAFFIC",
+      "amount_spent": {
+        "value": "17926.96",
+        "unit": "ARS"
+      }
+    },
+    {
+      "id": "120253037138720427",
+      "name": "JY | Awareness Boxer Taller",
+      "objective": "OUTCOME_TRAFFIC"
+    }
+  ]
+}

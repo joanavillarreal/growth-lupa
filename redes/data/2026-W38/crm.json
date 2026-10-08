@@ -1,0 +1,35 @@
+{
+  "semana": "2026-W38",
+  "prospectos_redes": 0,
+  "por_dia": {},
+  "por_estado": {},
+  "inversion_usd": 35.12,
+  "inversion_por_canal": {
+    "Inversión Meta Ads": 21.69,
+    "Inversión Google Ads": 13.43
+  },
+  "dias_con_inversion_cargada": 1,
+  "inversion_redes": 31296.71,
+  "moneda_inversion_redes": "ARS",
+  "campanas_awareness": [
+    {
+      "campana": "JY | Awareness Boxer Taller (AGENTE META)",
+      "monto": 8070.96
+    },
+    {
+      "campana": "JY | Awareness",
+      "monto": 17027.52
+    },
+    {
+      "campana": "JY | Awareness Boxer Taller",
+      "monto": 6198.23
+    }
+  ],
+  "costo_por_prospecto": null,
+  "nota": "La inversión total del SPA está incompleta: tiene cargados 1 de 7 días.",
+  "monedas_no_usd_excluidas": null,
+  "comparativa": {
+    "semana_previa": "2026-W37",
+    "prospectos_redes_var_pct": -100.0
+  }
+}

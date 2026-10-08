@@ -1,0 +1,248 @@
+{
+  "semana": "2026-W40",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-09-28",
+  "hasta": "2026-10-04",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 1793,
+        "alcance": 58,
+        "interacciones": 178,
+        "engagement_pct": 306.9,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 1258,
+        "alcance": 773,
+        "interacciones": 49,
+        "engagement_pct": 6.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 357,
+        "alcance": 154,
+        "interacciones": 7,
+        "engagement_pct": 4.5,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 434,
+        "alcance": 121,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 3842,
+      "alcance": 1106,
+      "interacciones": 234,
+      "engagement_pct": 21.2
+    },
+    "pauta": {
+      "views": 10085,
+      "alcance": 9438
+    },
+    "pct_views_de_pauta": 72.4,
+    "alcance_total_cuenta": 10544,
+    "audiencia": {
+      "views_seguidores": 1267,
+      "views_no_seguidores": 12655,
+      "pct_seguidores": 9.1,
+      "pct_no_seguidores": 90.9,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 80,
+      "fin": 121,
+      "delta": 41,
+      "delta_pct": 51.2
+    },
+    "publicaciones": 11,
+    "stories_publicadas": 6,
+    "piezas": [
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20260928",
+        "url": "https://www.instagram.com/p/Dd1UbcqCa17/",
+        "texto": "Estaremos presentes en @expo.mecanico 🚀 el evento que reunirá a talleristas que busquen conectar con el rubro 🫱🏼‍🫲🏽\n\n¿Te vemos ahí? Estaremos sorteando entradas durante estos días ",
+        "views": 126,
+        "alcance": 55,
+        "interacciones": 7,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 12.7
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260928",
+        "url": "https://www.instagram.com/reel/Dd1vBzKDFhC/",
+        "texto": "SORTEO FINALIZADO ⚠️\n\n¡Llega la primera edición de expomecanico! 🔧🚗 ¿Te gustaría ganar entradas? Comentá EXPO y seguinos. Tenés hasta el 1/10 para participar. Anunciaremos los gana",
+        "views": 447,
+        "alcance": 253,
+        "interacciones": 18,
+        "guardados": 0,
+        "compartidos": 4,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 30.199997,
+        "engagement_pct": 7.1
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260929",
+        "url": "https://www.instagram.com/p/Dd2bNrgCTMb/",
+        "texto": "Si trabajás en la administración de un taller, este lunes ya lo conocés 📋\n\nNo es desorden: Es que todo se escribe dos veces. Una en el galpón y otra en la compu. Y ese tiempo es el",
+        "views": 87,
+        "alcance": 32,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 6.2
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20261001",
+        "url": "https://www.instagram.com/reel/Dd9ky4pBt27/",
+        "texto": "Estaremos en @expo.mecanico 🔧🚗 Después de años acompañando a Casas de Repuestos, comenzamos a acompañar con tecnología a Talleres Mecánicos 💻🫱🏼‍🫲🏽\n\nEl evento será l 17 de octubre d",
+        "views": 910,
+        "alcance": 560,
+        "interacciones": 23,
+        "guardados": 0,
+        "compartidos": 2,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 43.6,
+        "engagement_pct": 4.1
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261001",
+        "url": "https://www.instagram.com/p/Dd7kzwXjJem/",
+        "texto": "¿Dónde queda anotado lo que se le hizo a cada auto? 🔧\n\nDeslizá y mirá una orden de trabajo de punta a punta: Entra el auto, se carga, se trabaja y se entrega. Sin salto al vacío: S",
+        "views": 117,
+        "alcance": 34,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.9
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20260928",
+        "url": "https://www.instagram.com/p/Dd1UbcqCa17/",
+        "texto": "Estaremos presentes en @expo.mecanico 🚀 el evento que reunirá a talleristas que busquen conectar con el rubro 🫱🏼‍🫲🏽\n\n¿Te vemos ahí? Estaremos sorteando entradas durante estos días ",
+        "views": 126,
+        "alcance": 55,
+        "interacciones": 7,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 12.7
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20260928",
+        "url": "https://www.instagram.com/reel/Dd1vBzKDFhC/",
+        "texto": "SORTEO FINALIZADO ⚠️\n\n¡Llega la primera edición de expomecanico! 🔧🚗 ¿Te gustaría ganar entradas? Comentá EXPO y seguinos. Tenés hasta el 1/10 para participar. Anunciaremos los gana",
+        "views": 447,
+        "alcance": 253,
+        "interacciones": 18,
+        "guardados": 0,
+        "compartidos": 4,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 30.199997,
+        "engagement_pct": 7.1
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20260929",
+        "url": "https://www.instagram.com/p/Dd2bNrgCTMb/",
+        "texto": "Si trabajás en la administración de un taller, este lunes ya lo conocés 📋\n\nNo es desorden: Es que todo se escribe dos veces. Una en el galpón y otra en la compu. Y ese tiempo es el",
+        "views": 87,
+        "alcance": 32,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 6.2
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20261001",
+        "url": "https://www.instagram.com/reel/Dd9ky4pBt27/",
+        "texto": "Estaremos en @expo.mecanico 🔧🚗 Después de años acompañando a Casas de Repuestos, comenzamos a acompañar con tecnología a Talleres Mecánicos 💻🫱🏼‍🫲🏽\n\nEl evento será l 17 de octubre d",
+        "views": 910,
+        "alcance": 560,
+        "interacciones": 23,
+        "guardados": 0,
+        "compartidos": 2,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 43.6,
+        "engagement_pct": 4.1
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261001",
+        "url": "https://www.instagram.com/p/Dd7kzwXjJem/",
+        "texto": "¿Dónde queda anotado lo que se le hizo a cada auto? 🔧\n\nDeslizá y mirá una orden de trabajo de punta a punta: Entra el auto, se carga, se trabaja y se entrega. Sin salto al vacío: S",
+        "views": 117,
+        "alcance": 34,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.9
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 6,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 8732,
+    "publicaciones": 6,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 2,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W39",
+    "instagram": {
+      "views_organicas": 421.3,
+      "alcance_organico": 259.1,
+      "interacciones": 2240.0,
+      "engagement_pct": 562.5,
+      "seguidores": 55.1,
+      "publicaciones": null,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": 198.3,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}
