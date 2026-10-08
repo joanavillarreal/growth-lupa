@@ -20,25 +20,43 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 
 ## Archivos
 
-- `agenda.yaml` — qué análisis existen, qué días tocan, qué herramientas necesitan, dónde se
-  avisa y a quién se dispara después (`disparar_despues`, vacío por ahora).
+- `agenda.yaml` — qué análisis existen, qué días tocan, qué preparaciones necesitan, qué
+  herramientas y variables de entorno usan, dónde se avisa y a quién se dispara después
+  (`disparar_despues`, vacío por ahora).
 - `paneles.yaml` — links oficial y de ensayo de cada panel, y el `modo` actual.
-- `que_toca_hoy.py` — devuelve la lista exacta de análisis pendientes para hoy.
-- `parte.py` — registra el resultado de un análisis en `partes/AAAA-MM-DD.json`.
+- `que_toca_hoy.py` — devuelve las preparaciones y los análisis pendientes para hoy.
+- `parte.py` — registra el resultado de un análisis o una preparación en `partes/AAAA-MM-DD.json`.
 - `partes/` — un parte por día. Es lo que leen los agentes que vienen después.
+- `procedimientos/` — cómo se hace cada preparación (hoy: `gasto_meta.md`).
+- `memoria/` — lo que ya revisamos con Joana y no hay que volver a marcar. **Leer el archivo
+  del análisis antes de alertar** (`memoria/funnel.md`, etc.).
 - `.claude/hooks/session-start.sh` — verifica el entorno y deja la sesión en `main` al día.
+- Funnel (copiado de `agente-growth`): `run.py`, `growth/`, `config/definitions.yaml`,
+  `data/`, `dashboard/`, `experiments/` y las skills `growth` y `nuevo-experimento`.
+  Detalle en `growth/README.md` y en la skill `growth`.
 
 ## Cómo es una corrida
 
-1. Correr `python3 que_toca_hoy.py --json`. Si no hay pendientes, ir directo al paso 4.
-2. Para cada análisis pendiente, en orden:
-   1. Verificar herramientas (regla 2).
+1. Correr `python3 que_toca_hoy.py --json`. Si no hay pendientes, ir directo al paso 5.
+2. **Preparaciones** (`preparaciones` del JSON), una sola vez por día aunque las usen varios
+   análisis. Hoy hay una: `gasto_meta` (`procedimientos/gasto_meta.md`). Si falla tras los
+   reintentos se registra como fallida y **los análisis corren igual**: el Monitor muestra solo
+   "Gasto de Meta sin actualizar desde <fecha>", y el mensaje de Slack también lo dice.
+3. Para cada análisis pendiente, en orden:
+   1. Verificar herramientas y variables de entorno (regla 2).
    2. Medir, actualizar el panel (regla 7) y escribir el parte con `parte.py`.
    3. Commit + push a `main` del parte y los datos nuevos.
    4. Avisar en el Slack del análisis.
-3. Si un análisis falla: `parte.py <analisis> fallido --error "<lo que pasó>"`, push, aviso, y
+4. Si un análisis falla: `parte.py <analisis> fallido --error "<lo que pasó>"`, push, aviso, y
    seguir con el siguiente.
-4. Mensaje final a Slack siempre (regla 5).
+5. Mensaje final a Slack siempre (regla 5), incluyendo lo que quedó en `agotados`.
+
+### Funnel
+
+`python3 run.py ingest && python3 run.py dashboard`, leer la copia del Monitor que indique
+`paneles.yaml` y republicar `dashboard/index.html` en ese mismo link, y `python3 run.py alarma`.
+Bitrix entra por la variable `BITRIX_WEBHOOK_URL`: nunca se muestra, ni se escribe en un archivo
+ni en un mensaje. Las definiciones (`config/definitions.yaml`) no se tocan.
 
 ## Reglas (salen de errores reales de la rutina anterior; no son opcionales)
 

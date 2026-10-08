@@ -13,7 +13,12 @@ fi
 python3 -c "import yaml, zoneinfo; zoneinfo.ZoneInfo('America/Argentina/Buenos_Aires')" 2>/dev/null \
   || pip install -q pyyaml tzdata 2>&1 | tail -1
 [ -f requirements.txt ] && pip install -q -r requirements.txt 2>&1 | tail -1
-python3 -c "import yaml" 2>/dev/null && echo "python: ok" || echo "ERROR: no se pudo instalar pyyaml"
+python3 -c "import yaml, requests" 2>/dev/null || pip install -q pyyaml requests 2>&1 | tail -1
+python3 -c "import yaml, requests" 2>/dev/null && echo "python: ok" || echo "ERROR: faltan pyyaml/requests"
+
+# Variables de entorno (solo si existen; nunca su valor)
+[ -n "${BITRIX_WEBHOOK_URL:-}" ] && echo "BITRIX_WEBHOOK_URL: definida" \
+  || echo "ERROR: falta BITRIX_WEBHOOK_URL (el funnel no puede leer Bitrix)"
 
 # 2. Repo en main y al día (solo en la nube y con el árbol limpio)
 if [ "${CLAUDE_CODE_REMOTE:-}" = "true" ]; then

@@ -3,12 +3,9 @@
 Analiza el funnel de adquisición de punta a punta, general y desagregado por
 canal, sobre los datos reales de Bitrix24.
 
-**Dashboard (Monitor de Growth):** https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y
+> Copiado de `agente-growth` (commit 1953e30), sin Viajes Comerciales (que sigue allá).
+> En Lupa el link del Monitor sale de `paneles.yaml` según el `modo` (ensayo u oficial).
 
-**Viajes Comerciales:** https://claude.ai/artifact/Q1gm2Y9fjM2VcJtLyeUeYP — `python3 run.py viajes`.
-Visitas de la planilla en `data/viajes.csv`; destinos en `data/viajes_destinos.json`: estado del viaje, pauta (ARS, pasada a USD con el TC de `config/definitions.yaml`) y gastos del viaje en USD por concepto (pasajes, alojamiento, viáticos).
-La agenda la carga SDR en el artefacto (base compartida, colección `agenda`); para sumar sus IDs al CRM se copia a `data/viajes_agenda.json` y se vuelve a correr.
-Lo hace solo la rutina diaria "Viajes Comerciales · actualización diaria" (8:50, hora de Argentina): trae la agenda, consulta el CRM (`run.py viajes-datos`) y escribe los datos en el documento `sistema/crm` de la base del artefacto. **No republica la página**: el panel lo edita todo el equipo y la página lee los datos de la base al abrir. `run.py viajes` (página completa) se usa solo al cambiar el código de `growth/plantilla_viajes.html`, partiendo siempre de la versión publicada.
 
 ## Uso
 

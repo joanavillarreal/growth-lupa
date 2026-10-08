@@ -618,6 +618,22 @@ def _trimestres_completos(snap: dict) -> list[tuple[str, str, str]]:
     return qs
 
 
+def gasto_meta_atrasado(cfg: Config, hasta: str) -> dict | None:
+    """El gasto de Meta tiene que llegar hasta el día anterior al snapshot.
+
+    Si el refresco no corrió (Meta no conectó), los días que faltan cuentan
+    como inversión cero y el CPL, el CAC y el ROAS salen baratos. En ese caso
+    el Monitor lo dice arriba de todo, en todas las solapas.
+    """
+    fechas = sorted(metrics.cargar_gasto_meta(cfg))
+    esperado = (date.fromisoformat(hasta) - timedelta(days=1)).isoformat()
+    ultimo = fechas[-1] if fechas else None
+    if ultimo and ultimo >= esperado:
+        return None
+    return {"hasta": ultimo, "esperado": esperado,
+            "dias_faltantes": _dias_entre(ultimo, esperado) if ultimo else None}
+
+
 def armar(snap: dict, cfg: Config) -> dict:
     ctx = _Ctx(snap, cfg)
     hasta = snap["ventana"]["hasta"]
@@ -626,6 +642,9 @@ def armar(snap: dict, cfg: Config) -> dict:
     salida = []
     for i, (etiqueta, ini, fin) in enumerate(qs):
         salida.append(calcular_q(ctx, etiqueta, ini, fin, qs[i - 1] if i else None))
+    extra = {}
+    if (atraso := gasto_meta_atrasado(cfg, hasta)):
+        extra["gasto_meta_atrasado"] = atraso
     return {
         "generado_en": snap["generado_en"],
         "actualizado": hasta,
@@ -635,4 +654,5 @@ def armar(snap: dict, cfg: Config) -> dict:
         "experimentos": experiments.para_monitor(snap, cfg),
         # La solapa Experimentos arranca acá: los Q anteriores no tienen registro.
         "experimentos_desde": "2026-Q4",
+        **extra,
     }

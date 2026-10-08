@@ -9,7 +9,7 @@ Un experimento es una prueba sobre la **generación** de un canal de
 adquisición que ya tenemos (Meta Ads, Google Ads, Redes Sociales…). Queda
 registrado en `experiments/EXP-NNN-nombre-corto.md` y aparece como card en la
 solapa **Experimentos** del Monitor de Growth
-(https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y). El resultado en
+(link en `paneles.yaml`, según el modo). El resultado en
 métricas se calcula solo todos los días; esta skill solo tiene que dejar bien
 cargado lo que no se puede calcular.
 
@@ -105,8 +105,9 @@ Responsable). Pedí confirmación explícita.
    python3 -c "import sys;sys.path.insert(0,'.');from growth import experiments,ingest;from growth.config import Config;print([ (e['id'],e['resultado']['estado_lectura']) for e in experiments.para_monitor(ingest.cargar_ultimo(),Config())])"
    ```
 3. `python3 run.py dashboard`.
-4. Republicá `dashboard/index.html` en el mismo link
-   (`https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y`). Si el publish se
+4. Republicá `dashboard/index.html` en el link del Monitor que corresponda al
+   `modo` de `paneles.yaml` (`monitor_growth.ensayo` u `.oficial`), leyéndolo
+   antes. Si el publish se
    rechaza porque la corrida diaria publicó una versión más nueva, leé esa
    versión, confirmá que lo único distinto es el experimento nuevo y volvé a
    publicar.

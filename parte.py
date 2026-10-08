@@ -7,6 +7,7 @@ eso lo hace la rutina después de cada análisis.
 Uso:
   python3 parte.py funnel ok --resumen "..." --datos datos.json
   python3 parte.py meta fallido --error "ads_get_ad_accounts no apareció tras 3 búsquedas"
+  python3 parte.py gasto_meta ok --datos gasto.json      # preparación compartida
 
 --herramientas: nombres completos con los que cargaron (ej. mcp__abc123__getBrandSettings).
 Cada llamada suma un intento del día para ese análisis.
@@ -37,8 +38,10 @@ def main():
 
     agenda = yaml.safe_load((RAIZ / "agenda.yaml").read_text(encoding="utf-8"))
     paneles = yaml.safe_load((RAIZ / "paneles.yaml").read_text(encoding="utf-8"))
-    if args.analisis not in agenda["analisis"]:
+    preparaciones = agenda.get("preparaciones", {})
+    if args.analisis not in agenda["analisis"] and args.analisis not in preparaciones:
         p.error(f"'{args.analisis}' no está en agenda.yaml")
+    es_prep = args.analisis in preparaciones
     if args.estado == "fallido" and not args.error:
         p.error("un análisis fallido necesita --error con lo que realmente pasó")
 
@@ -48,27 +51,35 @@ def main():
     ruta = RAIZ / "partes" / f"{fecha.isoformat()}.json"
     parte = json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {
         "fecha": fecha.isoformat(), "modo": paneles["modo"], "analisis": {}}
+    seccion = parte.setdefault("preparacion" if es_prep else "analisis", {})
 
-    cfg = agenda["analisis"][args.analisis]
-    panel = paneles["paneles"][cfg["artefacto"]]
-    previo = parte["analisis"].get(args.analisis, {})
-    parte["analisis"][args.analisis] = {
+    if es_prep:
+        cfg = preparaciones[args.analisis]
+        artefacto = None
+        # una preparación avisa donde avisan los análisis que la usan
+        cfg = {**cfg, "slack": ", ".join(sorted({a["slack"] for a in agenda["analisis"].values()
+                                              if args.analisis in a.get("necesita", [])}))}
+    else:
+        cfg = agenda["analisis"][args.analisis]
+        artefacto = paneles["paneles"][cfg["artefacto"]][paneles["modo"]]
+    previo = seccion.get(args.analisis, {})
+    seccion[args.analisis] = {
         "estado": args.estado,
         "intentos": previo.get("intentos", 0) + 1,
         "hora": ahora.strftime("%H:%M"),
         "resumen": args.resumen,
         "error": args.error,
         "herramientas": args.herramientas,
-        "artefacto": panel[paneles["modo"]],
+        "artefacto": artefacto,
         "datos": json.loads(args.datos.read_text(encoding="utf-8")) if args.datos else {},
         "para": cfg.get("disparar_despues", []),
     }
     if previo:
-        parte["analisis"][args.analisis]["intentos_previos"] = previo.get("intentos_previos", []) + [
+        seccion[args.analisis]["intentos_previos"] = previo.get("intentos_previos", []) + [
             {k: previo.get(k) for k in ("estado", "hora", "error", "herramientas")}]
     ruta.parent.mkdir(exist_ok=True)
     ruta.write_text(json.dumps(parte, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    r = parte["analisis"][args.analisis]
+    r = seccion[args.analisis]
     print(f"parte actualizado: {ruta.relative_to(RAIZ)} → {args.analisis}: {args.estado} (intento {r['intentos']})")
     if args.estado == "fallido" and r["intentos"] >= agenda.get("max_intentos_por_dia", 3):
         print(f"TOPE ALCANZADO: avisar por Slack ({cfg['slack']}) que {args.analisis} "

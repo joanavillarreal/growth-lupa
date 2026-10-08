@@ -10,8 +10,8 @@ modo: ensayo
 paneles:
   monitor_growth:
     nombre: Monitor de Growth
-    oficial: null   # se completa en el paso 2 (sale de agente-growth)
-    ensayo: null    # copia de prueba, se crea en el paso 2
+    oficial: https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y   # lo publica la rutina de agente-growth
+    ensayo: https://claude.ai/artifact/Cn4BcgRCh8gz7iS1JVNNpM    # copia de Lupa (08/10/2026)
   panel_meta_ads:
     nombre: Panel Meta Ads
     oficial: https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12

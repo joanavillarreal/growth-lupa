@@ -13,6 +13,9 @@
 #   slack:         dónde se avisa el resultado.
 #   disparar_despues: agentes a los que se les pasa el parte al terminar.
 #                  Vacío por ahora: Orbi, Turbo y Conti todavía no existen.
+#   necesita:      preparaciones (abajo) que tienen que correr antes, una sola vez por día
+#                  aunque las usen varios análisis.
+#   entorno:       variables de entorno que tienen que existir (nunca se muestran).
 
 zona_horaria: America/Argentina/Buenos_Aires
 
@@ -20,12 +23,25 @@ zona_horaria: America/Argentina/Buenos_Aires
 # reintenta hasta el día siguiente.
 max_intentos_por_dia: 3
 
+# Pasos compartidos. Corren una vez por día, antes del primer análisis que los
+# necesita, y su resultado queda en el parte bajo "preparacion".
+preparaciones:
+  gasto_meta:
+    descripcion: Refresco del gasto diario de Meta (data/meta_spend.json y data/meta_adsets.json)
+    procedimiento: procedimientos/gasto_meta.md
+    herramientas:
+      - ads_get_ad_entities
+    # Si falla tras los reintentos, los análisis corren igual: el Monitor muestra
+    # solo "Gasto de Meta sin actualizar desde <fecha>".
+
 analisis:
   funnel:
     descripcion: Funnel de adquisición (leads → demos → ventas) desde Bitrix
     dias: todos
     artefacto: monitor_growth
-    herramientas: []          # se completa en el paso 2, según lo que use run.py
+    necesita: [gasto_meta]
+    entorno: [BITRIX_WEBHOOK_URL]   # Bitrix entra por webhook, no por conector
+    herramientas: []
     slack: "#adqui-notificaciones-canales"
     disparar_despues: []      # futuro: [orbi]
 
@@ -33,6 +49,7 @@ analisis:
     descripcion: Lectura de la cuenta de Meta Ads (solo lectura, nada de cambios)
     dias: todos
     artefacto: panel_meta_ads
+    necesita: [gasto_meta]
     herramientas:             # se ajusta en el paso 3
       - ads_get_ad_accounts
       - ads_get_ad_entities

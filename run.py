@@ -6,8 +6,6 @@
   python3 run.py alerts
   python3 run.py dashboard
   python3 run.py daily               # ingest + dashboard + alertas (rutina diaria)
-  python3 run.py viajes              # panel de viajes comerciales -> dashboard/viajes.html
-  python3 run.py viajes-datos        # solo los datos del panel -> data/viajes_datos.json
 """
 from __future__ import annotations
 import argparse
@@ -109,18 +107,6 @@ def cmd_dashboard(args, cfg):
     print(f"Dashboard generado: {salida}")
 
 
-def cmd_viajes(args, cfg):
-    from growth.viajes import construir
-    salida = construir(cfg)
-    print(f"Panel de viajes generado: {salida}")
-
-
-def cmd_viajes_datos(args, cfg):
-    from growth.viajes import exportar_datos
-    salida = exportar_datos(cfg)
-    print(f"Datos de viajes generados: {salida} ({salida.stat().st_size // 1024} KB)")
-
-
 def cmd_daily(args, cfg):
     cmd_ingest(args, cfg)
     cmd_dashboard(args, cfg)
@@ -141,15 +127,12 @@ def main():
     x.add_argument("--canal", required=True, help="clave de canal: meta, google, redes_sociales, general...")
     x.add_argument("--dias", type=int, default=28)
     sub.add_parser("daily")
-    sub.add_parser("viajes")
-    sub.add_parser("viajes-datos")
     args = ap.parse_args()
     cfg = Config()
     {"ingest": cmd_ingest, "report": cmd_report, "alerts": cmd_alerts,
      "dashboard": cmd_dashboard, "daily": cmd_daily,
      "alarma": cmd_alarma, "semanal": cmd_semanal,
-     "contexto-experimento": cmd_contexto_experimento,
-     "viajes": cmd_viajes, "viajes-datos": cmd_viajes_datos}[args.cmd](args, cfg)
+     "contexto-experimento": cmd_contexto_experimento}[args.cmd](args, cfg)
 
 
 if __name__ == "__main__":

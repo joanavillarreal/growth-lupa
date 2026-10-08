@@ -39,8 +39,9 @@ def toca(dias, dia_semana):
 def leer_parte(fecha):
     ruta = RAIZ / "partes" / f"{fecha.isoformat()}.json"
     if not ruta.exists():
-        return {}
-    return json.loads(ruta.read_text(encoding="utf-8")).get("analisis", {})
+        return {}, {}
+    parte = json.loads(ruta.read_text(encoding="utf-8"))
+    return parte.get("analisis", {}), parte.get("preparacion", {})
 
 
 def calcular(fecha=None):
@@ -48,7 +49,7 @@ def calcular(fecha=None):
     if fecha is None:
         fecha = dt.datetime.now(ZoneInfo(agenda["zona_horaria"])).date()
     dia_semana = DIAS[fecha.weekday()]
-    parte = leer_parte(fecha)
+    parte, preparado = leer_parte(fecha)
 
     tope = agenda.get("max_intentos_por_dia", 3)
     pendientes, ya_hechos, agotados, no_tocan = [], [], [], []
@@ -63,8 +64,20 @@ def calcular(fecha=None):
         else:
             pendientes.append(nombre)
 
+    # Preparaciones que piden los análisis pendientes y todavía no salieron bien hoy.
+    preparaciones, prep_agotadas = [], []
+    for nombre in agenda.get("preparaciones", {}):
+        if not any(nombre in agenda["analisis"][a].get("necesita", []) for a in pendientes):
+            continue
+        registro = preparado.get(nombre, {})
+        if registro.get("estado") == "ok":
+            continue
+        (prep_agotadas if registro.get("intentos", 0) >= tope else preparaciones).append(nombre)
+
     return {
         "fecha": fecha.isoformat(),
+        "preparaciones": preparaciones,
+        "preparaciones_agotadas": prep_agotadas,
         "dia": dia_semana,
         "pendientes": pendientes,
         "ya_hechos": ya_hechos,
@@ -87,6 +100,10 @@ def main():
         print()
         return
     print(f"{r['fecha']} ({r['dia']})")
+    if r["preparaciones"]:
+        print("  preparar:  " + ", ".join(r["preparaciones"]))
+    if r["preparaciones_agotadas"]:
+        print("  sin preparar (tope de intentos): " + ", ".join(r["preparaciones_agotadas"]))
     print("  toca hoy:  " + (", ".join(r["pendientes"]) or "nada"))
     if r["ya_hechos"]:
         print("  ya hecho:  " + ", ".join(r["ya_hechos"]))

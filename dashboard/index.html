@@ -256,6 +256,8 @@ tbody tr:hover td{background:var(--soft)}
 /* avisos */
 .aviso{font-size:13px;color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
 .aviso b{color:var(--ink)}
+.atraso-meta{font-size:14px;color:var(--bad);background:var(--bad-bg);border:1.5px solid var(--bad);border-radius:12px;padding:12px 14px;line-height:1.5}
+.atraso-meta b{font-size:15px}
 details.salud{background:var(--warn-bg);border-radius:12px;padding:10px 14px;font-size:13px}
 details.salud.ok{background:var(--good-bg)}
 details.salud summary{cursor:pointer;font-weight:700;color:var(--warn)}
@@ -1002,7 +1004,9 @@ function pintar() {
   document.getElementById("acciones").innerHTML = `<span class="chip">${ico("cal", 16)}${fecha(q.desde)} – ${fecha(q.hasta)}</span><span class="chip azul">${ico("reloj", 16)}Datos al ${fecha(D.actualizado)}</span>`;
   const act = D.trimestres[D.trimestres.length - 1], nr = Object.values(act.comparacion.metricas).filter(m => m.estado === "desmejora").length;
   document.getElementById("promo").innerHTML = `${ico("campana", 22)}<b>Alarma diaria</b><span class="num">${nr}</span><span>${nr === 1 ? "número en desmejora" : "números en desmejora"} en ${qNombre(act.etiqueta)} contra el mismo tramo de ${qNombre(act.comparacion.previo?.etiqueta) || "el Q anterior"}. Avisa por Slack el día en que un número pasa a rojo.</span>`;
-  document.getElementById("panel").innerHTML = PINTAR[tabSel](q);
+  const am = D.gasto_meta_atrasado;
+  const atraso = am ? `<div class="atraso-meta" role="alert"><b>Gasto de Meta sin actualizar desde ${am.hasta ? "el " + fecha(am.hasta) : "siempre"}.</b> Los días siguientes cuentan como inversión cero: el CPL, el CAC y el ROAS de Meta Ads, de Redes Sociales y los generales salen más baratos de lo real. No los leas como si estuvieran al día.</div>` : "";
+  document.getElementById("panel").innerHTML = atraso + PINTAR[tabSel](q);
   document.getElementById("panel").setAttribute("aria-label", nombreTab);
 }
 function elegirTab(t) { tabSel = t; guardar("tab", t); try { history.replaceState(null, "", "#" + t); } catch (e) {} pintar(); }
