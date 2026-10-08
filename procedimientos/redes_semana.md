@@ -47,7 +47,8 @@ creativo). Lunes. Marcas: Boxer Gestión (brandId 4938672, IG + FB + LinkedIn) y
 5. **Lectura** en `redes/data/<semana>/lectura.json`:
    `{"titular": "...", "funciono": [...], "no_funciono": [...]}`. Cada punto con su número, del
    JSON procesado. Es lectura, no recomendación: nada de "conviene publicar X".
-   Antes, leer `redes/memoria/conclusiones.md` (Parte 1) para no tratar como hallazgo lo que ya
+   Antes, mirar `memoria/pendientes.md` (si Conti ya publica su Planificación aprobada, hay que
+   sumar el cruce por pilar y formato) y leer `redes/memoria/conclusiones.md` (Parte 1) para no tratar como hallazgo lo que ya
    está confirmado o descartado.
 6. **Memoria:** `redes/memoria/conclusiones.md`. Parte 2 (log de la semana, aprendizajes, no
    números) siempre; Parte 1 solo si la semana confirma o tira abajo algo.

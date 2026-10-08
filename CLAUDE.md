@@ -40,6 +40,8 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 - `comparar.py` — en ensayo, compara mis paneles y mi guardia contra los de las rutinas viejas.
 - `memoria/` — lo que ya revisamos con Joana y no hay que volver a marcar. **Leer el archivo
   del análisis antes de alertar** (`memoria/funnel.md`, etc.).
+  `memoria/pendientes.md`: lo decidido con Joana que espera a algo que todavía no existe (hoy, el
+  cruce por pilar y formato con la Planificación de Conti). Revisarlo al empezar cada corrida.
 - `.claude/hooks/session-start.sh` — verifica el entorno y deja la sesión en `main` al día.
 - Funnel (copiado de `agente-growth`): `run.py`, `growth/`, `config/definitions.yaml`,
   `data/`, `dashboard/`, `experiments/` y las skills `growth` y `nuevo-experimento`.
