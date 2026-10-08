@@ -1,0 +1,1309 @@
+{
+ "generado_en": "2026-10-08T12:26-03:00",
+ "portal": "aitsolutions.bitrix24.es",
+ "provincias": [
+  "Córdoba",
+  "Rosario",
+  "Mendoza",
+  "San Juan",
+  "Neuquén",
+  "Bariloche"
+ ],
+ "destinos": {
+  "Córdoba": {
+   "estado": "finalizado",
+   "pauta": 61610.46,
+   "pauta_usd": 41.07,
+   "gastos_usd": {
+    "pasajes": 122.5,
+    "viaticos": 80.0
+   },
+   "viaje_usd": 202.5,
+   "inversion_usd": 243.57
+  },
+  "Rosario": {
+   "estado": "finalizado",
+   "pauta": 31673.66,
+   "pauta_usd": 21.12,
+   "gastos_usd": {
+    "pasajes": 122.5,
+    "viaticos": 80.0,
+    "alojamiento": 159.0
+   },
+   "viaje_usd": 361.5,
+   "inversion_usd": 382.62
+  },
+  "Mendoza": {
+   "estado": "finalizado",
+   "pauta": 34623.1,
+   "pauta_usd": 23.08,
+   "gastos_usd": {
+    "pasajes": 152.5,
+    "alojamiento": 209.5
+   },
+   "viaje_usd": 362.0,
+   "inversion_usd": 385.08
+  },
+  "San Juan": {
+   "estado": "finalizado",
+   "pauta": 69310.42,
+   "pauta_usd": 46.21,
+   "gastos_usd": {
+    "pasajes": 152.5,
+    "alojamiento": 209.5
+   },
+   "viaje_usd": 362.0,
+   "inversion_usd": 408.21
+  },
+  "Neuquén": {
+   "estado": "finalizado",
+   "pauta": 32284.07,
+   "pauta_usd": 21.52,
+   "gastos_usd": {
+    "pasajes": 71.0,
+    "alojamiento": 233.0
+   },
+   "viaje_usd": 304.0,
+   "inversion_usd": 325.52
+  },
+  "Bariloche": {
+   "estado": "planificado",
+   "pauta": null,
+   "pauta_usd": null,
+   "gastos_usd": {},
+   "viaje_usd": null,
+   "inversion_usd": null
+  }
+ },
+ "moneda_inversion": "ARS",
+ "conceptos": {
+  "pasajes": "Pasajes",
+  "alojamiento": "Alojamiento",
+  "viaticos": "Viáticos y comida"
+ },
+ "tc": 1500,
+ "planilla": [
+  {
+   "id": "28554",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "27760",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28586",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "25148",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "23052",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "27604",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28176",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "26976",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "10040",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28568",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28484",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "25918",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28606",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28612",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28596",
+   "provincia": "Córdoba",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "15272",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28634",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "27462",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "27282",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "26168",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28478",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "21058",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "27902",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28396",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "11012",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28646",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28644",
+   "provincia": "Rosario",
+   "asesor_viaje": "Santiago Iaquinta"
+  },
+  {
+   "id": "28912",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "29790",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "28792",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "28798",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "27634",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "28818",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "22204",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "11880",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "26606",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "28846",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "28866",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "27566",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "15864",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "12568",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  },
+  {
+   "id": "27876",
+   "provincia": "Mendoza",
+   "asesor_viaje": "Luciana Canteli"
+  }
+ ],
+ "crm": {
+  "4410": {
+   "nombre": "Juan Manuel - Vieja Esquina",
+   "responsable": "Usuario #44",
+   "embudo": "Ventas",
+   "etapa": "A Reciclar con contacto",
+   "grupo": "Otros embudos",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "8704": {
+   "nombre": "Nestor Sanchez - MegaTruck",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "En negociación",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 222.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "vencida",
+    "fecha": "2026-10-08",
+    "dias": 0,
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 1
+   }
+  },
+  "10040": {
+   "nombre": "Darel - Repuestos Megaford",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A Futuro corto plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-20",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "11012": {
+   "nombre": "Nahuel - Repuestos Ariel Frenos Embragues Distribución",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-12-23",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "11880": {
+   "nombre": "Matías Galarsi - Centro Repuestos",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Seguimiento Clientes",
+   "etapa": "Semana 1",
+   "grupo": "Cliente",
+   "cerrado": true,
+   "fecha_cierre": "2026-09-29",
+   "mrr": 200.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "12568": {
+   "nombre": "Claudio Dorrego - Dorrego Repuestos",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-08",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "15272": {
+   "nombre": "Jorge - Tax rem",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A Futuro corto plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "vencida",
+    "fecha": "2026-10-05",
+    "dias": 3,
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 1
+   }
+  },
+  "15864": {
+   "nombre": "Lucas - TODO PARTES - TODO CAMIÓN",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-08",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "20552": {
+   "nombre": "Andres - DAVOLI REPUESTOS MULTIMARCA",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 150.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-12",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "21058": {
+   "nombre": "Yani - Daniel Repuestos",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A Futuro corto plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-29",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "21470": {
+   "nombre": "Fernando Dirrigo - Integral Repuestos",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Seguimiento Clientes",
+   "etapa": "Seguimiento finalizado",
+   "grupo": "Cliente",
+   "cerrado": true,
+   "fecha_cierre": "2026-02-20",
+   "mrr": 244.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "22204": {
+   "nombre": "Seba- MAV-EP VISCIGLIA",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-08",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "22402": {
+   "nombre": "Bea Sanchez - Accesorios Bahia",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 268.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-12",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "23052": {
+   "nombre": "Matias - VLM Herramientas Y Repuesto motor",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A Futuro corto plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-29",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "25148": {
+   "nombre": "Enzo Cejas - Martinez Repuestos",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-11-06",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "25786": {
+   "nombre": "Renzo Ingleses - DR suspension",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 172.5,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-12",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "25918": {
+   "nombre": "Javier Franzot - Prisma Repuestos",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 230.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2027-02-02",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "26168": {
+   "nombre": "Joan Aguirre - Repuestos Avellaneda",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2027-01-05",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "26606": {
+   "nombre": "Leo Furlan - Repuestos Furlan",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-08",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "26976": {
+   "nombre": "Mariano Ruben Gomez - Lugones Repuestos",
+   "responsable": "Luciana Canteli",
+   "embudo": "BBDD 2.0",
+   "etapa": "Reactivar Ventas",
+   "grupo": "Otros embudos",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "27076": {
+   "nombre": "Carlos Morales - Morales Motos",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 227.8,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-09",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "27282": {
+   "nombre": "Damian Alvarez - Mayoral",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "vencida",
+    "fecha": "2026-10-06",
+    "dias": 2,
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 1
+   }
+  },
+  "27462": {
+   "nombre": "Franco o Eduardo- Efrain Autopartes",
+   "responsable": "Diego Abanto",
+   "embudo": "Ventas 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "27566": {
+   "nombre": "Marisa - AUTOBAHN - Automechanika",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-08",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "27604": {
+   "nombre": "German - Sv repuestos  - Automechanika",
+   "responsable": "Luciana Canteli",
+   "embudo": "Seguimiento Clientes",
+   "etapa": "Quincena 2",
+   "grupo": "Cliente",
+   "cerrado": true,
+   "fecha_cierre": "2026-08-10",
+   "mrr": 304.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "27634": {
+   "nombre": "Fabiana - El emporio del volkwagen - Automechanika",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-08",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "27760": {
+   "nombre": "Pablo - Di Tomaso Repuestos - Automechanika",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A Futuro corto plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-11-03",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "27876": {
+   "nombre": "Cristina - Dicebox",
+   "responsable": "Usuario #12",
+   "embudo": "Ventas 2.0",
+   "etapa": "Contactado C/Mensaje",
+   "grupo": "En gestión",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "27902": {
+   "nombre": "Gabriel - Centro del Repuesto",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-13",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28176": {
+   "nombre": "Nico Martiñena - Encendido súper",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A Futuro corto plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "vencida",
+    "fecha": "2026-10-06",
+    "dias": 2,
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 1
+   }
+  },
+  "28396": {
+   "nombre": "Santiago - Ascanio Servicios Repuestos",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2027-03-09",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28478": {
+   "nombre": "Juan Manuel Puccio - Seiton Motors",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-11-10",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28484": {
+   "nombre": "Juan Carrasco - fórmula eléctrica",
+   "responsable": "Luciana Canteli",
+   "embudo": "Seguimiento Clientes",
+   "etapa": "Semana 1",
+   "grupo": "Cliente",
+   "cerrado": true,
+   "fecha_cierre": "2026-07-31",
+   "mrr": 250.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "28554": {
+   "nombre": "Claudio - La rotonda",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Ventas 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-12-17",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28568": {
+   "nombre": "Tomas Garbovetzky - Inyeccion Los Granaderos",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Ventas 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2027-02-16",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28586": {
+   "nombre": "Roberto Ronco - RRMOTOS",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A Futuro corto plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-15",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28596": {
+   "nombre": "Marcos - Giordano repuestos",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-11-10",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28606": {
+   "nombre": "Fabio o Edgar - Centro Capemi",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2027-02-07",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28612": {
+   "nombre": "Martín - Piumetto Embragues",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-11-10",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28634": {
+   "nombre": "Federico o Nahuel - Marcianise Repuestos",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-12-03",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28644": {
+   "nombre": "Lucas - Embrague Freno Total",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A Futuro corto plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-20",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28646": {
+   "nombre": "Lisandro o Ramiro - Suspension Pellegrini",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "BBDD 2.0",
+   "etapa": "Caídos",
+   "grupo": "Otros embudos",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "28654": {
+   "nombre": "Gonzalo - The Crazy Cars",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 250.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-09",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28748": {
+   "nombre": "Jose Luis Miranda - Chevrocar",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2027-01-22",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28792": {
+   "nombre": "Franco - Autopartes San Martín",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "vencida",
+    "fecha": "2026-10-07",
+    "dias": 1,
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 1
+   }
+  },
+  "28798": {
+   "nombre": "Bruno - Maxirepuestos",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-08",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28818": {
+   "nombre": "Hernan - Hm repuestos",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-14",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28822": {
+   "nombre": "Martin - Meo Suspension",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 82.5,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-13",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28840": {
+   "nombre": "Andrea - GARAGE JF",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 172.5,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-12",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28842": {
+   "nombre": "Pedro - Lubrimovil",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 150.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2027-01-13",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28844": {
+   "nombre": "Danilo - PEÑA'SOLUCIONES MECÁNICAS",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 177.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-12",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28846": {
+   "nombre": "Carlos - TODOELECTRICO SC",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-13",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28866": {
+   "nombre": "Leonardo - Moto repuestos sur",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "A futuro largo plazo",
+   "grupo": "A futuro",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 172.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2027-01-13",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28876": {
+   "nombre": "Henrry - polarizados Belbruno",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 90.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-12",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28878": {
+   "nombre": "Mauricio - Todo Trailer y Suspensión",
+   "responsable": "Luciana Canteli",
+   "embudo": "Seguimiento Clientes",
+   "etapa": "Semana 1",
+   "grupo": "Cliente",
+   "cerrado": true,
+   "fecha_cierre": "2026-10-05",
+   "mrr": 172.5,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "28884": {
+   "nombre": "Nicolas - Forwell",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 400.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-12",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28902": {
+   "nombre": "Mario - Efe-eme servicios",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 250.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-12",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28912": {
+   "nombre": "Fer Lloret - Todo Volkswagen",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-08",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28946": {
+   "nombre": "Victoria - Hugo Repuestos Industria & Automotriz",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Ventas 2.0",
+   "etapa": "Derivado",
+   "grupo": "En gestión",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-09",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28948": {
+   "nombre": "Mariana - Lomas IKA",
+   "responsable": "Santiago Iaquinta",
+   "embudo": "Ventas 2.0",
+   "etapa": "Derivado",
+   "grupo": "En gestión",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "al_dia",
+    "fecha": "2026-10-09",
+    "asunto": "Comunicarse con el cliente",
+    "vencidas": 0
+   }
+  },
+  "28950": {
+   "nombre": "Pablo Morales - Morales Todo Moto",
+   "responsable": "Luciana Canteli",
+   "embudo": "Presupuestos 2.0",
+   "etapa": "Presupuesto enviado",
+   "grupo": "Presupuestado",
+   "cerrado": false,
+   "fecha_cierre": "",
+   "mrr": 0.0,
+   "moneda": "USD",
+   "actividad": {
+    "estado": "sin_actividad"
+   }
+  },
+  "29790": null
+ }
+}

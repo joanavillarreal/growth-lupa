@@ -1,0 +1,377 @@
+# =============================================================================
+# Agente de Growth - Definiciones del funnel
+# Todos los IDs fueron resueltos contra el Bitrix24 real (no inventar valores).
+# Cambiar algo acá recalcula todo el histórico: run.py --rebuild
+# =============================================================================
+
+periodo:
+  # Desde cuándo tiene sentido leer. El SPA de gastos arranca el 2026-04-01.
+  inicio_historico: "2026-04-01"
+  # Días que tarda un prospecto en madurar. Antes de esto, los % de un período
+  # todavía se mueven y no hay que leerlos como definitivos.
+  dias_maduracion: 45
+
+moneda:
+  reporte: USD
+  # Hoy el gasto del SPA y el MRR ya vienen en USD, así que no se convierte nada.
+  # Este TC solo se usa si aparece un registro cargado en ARS.
+  ars_por_usd: 1500
+
+# -----------------------------------------------------------------------------
+# CANALES DE ADQUISICIÓN
+# Un canal agrupa varios orígenes (SOURCE_ID de Bitrix).
+# `activo: true` = canal que hoy medimos con inversión y entra en CPL/CAC.
+# El resto se muestra en el funnel general para que los totales cierren.
+# -----------------------------------------------------------------------------
+canales:
+  meta:
+    nombre: "Meta Ads"
+    activo: true
+    origenes: ["UC_HDLOFX", "3"]            # Meta Ads | Meta Ads Formulario
+    tipos_gasto: []                         # la inversión se lee de la API, ver `meta_api`
+
+  google:
+    nombre: "Google Ads"
+    activo: true
+    origenes: ["EMAIL", "UC_WD7A6R", "UC_3Z17VW"]   # Google Ads | GA FORM | GA - Remarketing
+    tipos_gasto: [1418]                     # Inversión Google Ads
+
+  redes_sociales:
+    nombre: "Redes Sociales"
+    activo: true
+    origenes: ["UC_GJPS17"]                 # Redes
+    tipos_gasto: []                         # la inversión se lee de la API, ver `meta_api`
+
+  cursos_webinars:
+    nombre: "Cursos y Webinars"
+    activo: false
+    origenes: ["UC_AZSX3J", "UC_70MJUO", "UC_6VBCJ2", "UC_CQ4N7U", "UC_ZUNX2Y",
+               "UC_AUSBR6", "UC_E4XHI3", "UC_VN0SA1"]
+    tipos_gasto: []
+
+  embajadores_referidos:
+    nombre: "Embajadores y Referidos"
+    activo: false
+    origenes: ["STORE", "RC_GENERATOR", "UC_0UDM57", "UC_OR1VRI", "UC_E1N7GV"]
+    tipos_gasto: []
+
+  vendedores_viajantes:
+    nombre: "Vendedores Viajantes"
+    activo: false
+    origenes: ["WEB", "UC_Q8YEOB", "UC_B9QEB4", "UC_EOUHYW", "UC_AKD6XC",
+               "UC_XSJ4FH", "UC_LV00VK", "UC_QEVAWL", "UC_BNRV5I", "UC_P83Y0E"]
+    tipos_gasto: []
+
+  organico_contenido:
+    nombre: "Orgánico y Contenido"
+    activo: false
+    origenes: ["UC_UNW1H0", "UC_P1UR1M", "UC_CT8131", "UC_W2PRR9",
+               "UC_TFTHFV", "UC_VMFC4D", "UC_8N2HTG", "UC_QJA9X4", "UC_CQXOS3"]
+    tipos_gasto: [1432]                     # Newsletter
+
+  outbound_base_fria:
+    nombre: "Outbound y Base Fría"
+    activo: false
+    origenes: ["UC_2N1H6P", "CALL", "UC_JKNX0A", "UC_N1IR8C", "UC_ZY94NP"]
+    tipos_gasto: [1422]                     # IVR
+
+  reciclado:
+    nombre: "Reciclado"
+    activo: false
+    origenes: ["1", "UC_NX5IB6", "REPEAT_SALE"]
+    tipos_gasto: []
+
+# Orígenes que no queremos atribuir a ningún canal (ruido / sin dato).
+# Aparecen en el panel de salud de datos, no en las métricas por canal.
+origenes_sin_atribuir: ["WEBFORM", "UC_BADL88", "BOOKING", "CALLBACK", "UC_F8G876", "UC_LJ07B1"]
+
+# -----------------------------------------------------------------------------
+# GASTO (SPA 1052 "Inversiones y Gastos")
+# -----------------------------------------------------------------------------
+gasto:
+  entity_type_id: 1052
+  campo_tipo:  "ufCrm10_1777551017"
+  campo_fecha: "ufCrm10_1777551275"
+  campo_monto: "ufCrm10_1777551329"        # formato "123.45|USD"
+  # Gasto que no es de medios: no entra en CPL/CAC por canal,
+  # sí en el CAC full de la compañía.
+  tipos_overhead: [1424, 1426, 1428, 1430] # Sueldos | Comisiones | Herramientas | Otros
+  # La inversión de Meta NO se lee del SPA. El SPA guarda un único monto diario
+  # para toda la cuenta, y ahí adentro no hay forma de saber qué parte fue
+  # awareness y qué parte pauta de performance. Se lee del conector de Meta a
+  # nivel campaña, con lo cual la división entre Meta Ads y Redes Sociales es
+  # exacta y por día. Lo que está cargado en el SPA queda como espejo, para
+  # conciliar que la carga semanal no tenga huecos.
+  meta_api:
+    archivo: "data/meta_spend.json"
+    cotizacion_ars_usd: 1500
+    canales:
+      meta: performance          # todo lo que no es awareness
+      redes_sociales: redes      # las campañas clasificadas como Redes Sociales
+    tipo_gasto_espejo: 1416      # "Inversión Meta Ads" en el SPA, solo para conciliar
+
+  etiquetas:
+    1416: "Inversión Meta Ads"
+    1418: "Inversión Google Ads"
+    1420: "Inversión Redes Sociales"
+    1422: "Inversión IVR"
+    1424: "Sueldos"
+    1426: "Comisiones"
+    1428: "Herramientas"
+    1430: "Otros"
+    1432: "Inversión Newsletter"
+
+# -----------------------------------------------------------------------------
+# ETAPAS DEL FUNNEL
+# -----------------------------------------------------------------------------
+funnel:
+  # 1. PROSPECTO: todos los prospectos creados en el período.
+  prospecto:
+    entidad: lead
+    campo_fecha: DATE_CREATE
+    campo_origen: SOURCE_ID
+    # Prospectos cargados a mano después de su fecha real. Bitrix no deja fijar
+    # la fecha de creación hacia atrás, así que DATE_CREATE queda en el día de la
+    # carga; la ingesta la reemplaza por la de ingreso (hora del servidor, +03:00)
+    # y guarda la original en DATE_CREATE_BITRIX.
+    # 25/09/2026: formularios de Meta que n8n no pasó al CRM entre el 19 y el 23/09.
+    fechas_corregidas:
+      4832: "2026-09-19T06:13:41+03:00"   # Arnaldo Zamer
+      4828: "2026-09-23T13:31:44+03:00"   # Pablo Grismado
+      4830: "2026-09-23T21:37:42+03:00"   # Franco Camacho
+  # 2. DERIVADO: prospecto en etapa Convertido (corte por cohorte de creación),
+  #    y además el corte por actividad vía "Fecha de derivación" de la negociación.
+  derivado:
+    status_convertido: CONVERTED
+    status_descarte: ["JUNK", "UC_LG671J"]     # Prospecto no útil | Prospecto inactivo
+    campo_fecha_deal: UF_CRM_1756146943444     # Fecha de derivación
+    # Para medir cuánto tarda una derivación se usa el propio prospecto:
+    # DATE_CLOSED ("Completado el") está cargado en el 100% de los convertidos,
+    # mientras que solo la mitad de las negociaciones tiene el prospecto
+    # vinculado. Es la misma medición sin depender de un vínculo que falla.
+    campo_fecha_lead: DATE_CLOSED
+  # 3. PRESUPUESTADO: negociaciones con Fecha de Presupuestado en el período.
+  presupuestado:
+    campo_fecha: UF_CRM_1768498700996
+  # 4. CIERRE: negociaciones con Fecha de cierre cargada en el período.
+  #    Ojo: al ganarse se mueven al embudo 16 (Seguimiento Clientes), por eso
+  #    el corte es por campo de fecha y NO por etapa ni por embudo.
+  cierre:
+    campo_fecha: UF_CRM_1770128684517
+  # MRR: el campo OPPORTUNITY se carga con el MRR del contrato.
+  mrr:
+    campo: OPPORTUNITY
+    campo_moneda: CURRENCY_ID
+  # Por qué un prospecto NO se derivó. Se lee del prospecto y no de la
+  # negociación: el campo de la negociación tiene cuatro valores genéricos y
+  # casi no se carga, mientras que este está cargado en el 97% de los
+  # "Prospecto no útil" y el 94% de los "Prospecto inactivo", con el detalle
+  # que realmente usa SDR.
+  no_derivacion:
+    campo: UF_CRM_1772731499441
+    estados:
+      JUNK: "Prospecto no útil"
+      UC_LG671J: "Prospecto inactivo"
+
+# -----------------------------------------------------------------------------
+# MONITOR DE GROWTH (el dashboard). Todo lo que el panel necesita y no es del
+# funnel base: columnas "a futuro", agrupación de etapas, asesores y campos
+# descriptivos. IDs resueltos contra el Bitrix real el 30/09/2026.
+# -----------------------------------------------------------------------------
+monitor:
+  # Columnas "a futuro" de los embudos Ventas 2.0 (10) y Presupuestos 2.0 (12).
+  etapas_a_futuro:
+    "C10:UC_A18M7G": "Ventas 2.0 · A futuro corto plazo"
+    "C10:UC_BF4U05": "Ventas 2.0 · A futuro largo plazo"
+    "C12:UC_VQMA88": "Presupuestos 2.0 · A futuro corto plazo"
+    "C12:UC_0ZLD1F": "Presupuestos 2.0 · A futuro largo plazo"
+  # Cómo se agrupan las etapas para "Total recibido por asesor". Lo que no
+  # está listado cae en "Otros embudos" (BBDD 2.0, A Reciclar, embudos viejos).
+  grupos_etapa:
+    - nombre: "En gestión"
+      etapas: ["C10:NEW", "C10:PREPAYMENT_INVOIC", "C10:UC_T466NS", "C10:UC_3TNJMJ"]
+    - nombre: "A futuro"
+      etapas: ["C10:UC_A18M7G", "C10:UC_BF4U05", "C12:UC_VQMA88", "C12:UC_0ZLD1F"]
+    - nombre: "Presupuestado"
+      etapas: ["C10:WON", "C12:NEW", "C12:PREPARATION", "C12:PREPAYMENT_INVOIC"]
+    - nombre: "Cliente"
+      prefijos: ["C16:"]
+      etapas: ["C12:WON", "WON"]
+    - nombre: "Perdido o no califica"
+      etapas: ["C10:PREPARATION", "C10:UC_IAO1SW", "C10:UC_9NPXXR", "C12:UC_KVRQ79", "C12:UC_V09X2X"]
+    - nombre: "Reactivar / nuevas funciones"
+      etapas: ["C10:LOSE", "C10:UC_LB9ACZ", "C12:LOSE", "C12:APOLOGY"]
+  # Cuándo un número del Monitor está "en desmejora": se compara el Q contra
+  # el MISMO TRAMO del Q anterior (del día 1 al mismo día del trimestre). La
+  # tarjeta se pinta en rojo y la alarma diaria avisa el día en que pasa a rojo.
+  # n_min protege de leer un porcentaje con dos casos: se exige en los dos Q.
+  desmejora:
+    dias_minimos_q: 14          # antes de dos semanas de Q todo es ruido
+    metricas:
+      generados:           {nombre: "Leads generados",        mejor: sube, umbral_pct: 15, n_min: 30}
+      cpl:                 {nombre: "Costo por lead",         mejor: baja, umbral_pct: 20, n_min: 30}
+      pct_no_calificacion: {nombre: "% de no calificación",   mejor: baja, umbral_pp: 5,   n_min: 50}
+      pct_inactivo:        {nombre: "% prospecto inactivo",   mejor: baja, umbral_pp: 8,   n_min: 50}
+      derivados:           {nombre: "Leads derivados",        mejor: sube, umbral_pct: 15, n_min: 20}
+      presupuestados:      {nombre: "Leads presupuestados",   mejor: sube, umbral_pct: 15, n_min: 15}
+      cerrados:            {nombre: "Leads cerrados",         mejor: sube, umbral_pct: 25, n_min: 5}
+      mrr:                 {nombre: "MRR cerrado",            mejor: sube, umbral_pct: 25, n_min: 5}
+      win_rate:            {nombre: "% win rate",             mejor: sube, umbral_pp: 2,   n_min: 5}
+      cac:                 {nombre: "CAC",                    mejor: baja, umbral_pct: 30, n_min: 5}
+      dias_cierre:         {nombre: "Promedio días de cierre", mejor: baja, umbral_pct: 25, n_min: 5}
+  # Objetivos del trimestre (tarjetas de la solapa Funnel general). Cada clave
+  # es el Q desde el que rigen; valen para ese Q y los siguientes hasta que
+  # aparezca otra clave. Fijados por la dirección para el Q4 2026.
+  objetivos:
+    "2026-Q4":
+      cac_max_usd: 800             # costo de adquisición por cliente
+      roas_min: 2                  # MRR cerrado de pauta / inversión en pauta
+      pct_no_calificados_max: 15   # Prospecto no útil sobre generados
+      leads_q: 300                 # leads generados en el trimestre
+      pct_casas_repuestos_min: 70  # sobre los leads con tipo de negocio definido
+      win_rate_min: 5              # cierres del Q / leads generados del Q
+      mrr_q_usd: 7500              # new MRR cerrado en el Q
+      mrr_en_vivo_usd: 1000        # de ese MRR, lo que viene de acciones en vivo
+      pct_mrr_no_pago_min: 15      # de ese MRR, lo que NO viene de Meta ni Google (más de)
+  # Canales de pauta: los que entran en el ROAS.
+  canales_pauta: [meta, google, redes_sociales]
+  # Acciones en vivo: los orígenes de Bitrix cuyo nombre empieza con Curso,
+  # Webinar o Charla (sin importar mayúsculas). Así cada evento nuevo entra solo
+  # si su origen se nombra con ese prefijo. Vendedores Viajantes NO es acción
+  # en vivo: cuenta como canal no pago.
+  prefijos_en_vivo: ["Curso", "Webinar", "Charla"]
+  # Orígenes que cuentan como acción en vivo aunque no tengan el prefijo.
+  origenes_en_vivo: ["Demo masiva en vivo"]
+  # Canales pagos para el objetivo de MRR: todo lo demás cuenta como no pago
+  # (salvo "Sin atribuir", que no se sabe de dónde vino).
+  canales_pagos_mrr: [meta, google]
+  # Tipos de negocio (campo del prospecto) que cuentan como casa de repuestos.
+  # "A definir" y vacío no entran en el denominador.
+  tipos_casa_repuestos:
+    - "Casa de Repuestos de Autos"
+    - "Casa de Repuestos de Motos"
+    - "Casa de Repuestos de Pesados"
+    - "Casa de Repuestos de Agrícolas"
+    - "Combinación con Casa de Repuestos"
+    - "Combinación con Casa de Repuestos de motos"
+  tipos_sin_definir: ["A definir", "Sin cargar"]
+  campos:
+    tipo_negocio_lead: UF_CRM_1772648753515
+    tipo_negocio_deal: UF_CRM_1742999141527
+    plan_deal: UF_CRM_1770386099224          # Tipo de plan
+    paquete_deal: UF_CRM_1770152490080       # Tipo de Paquete (anual, mensual...)
+  # El webhook no tiene permiso de usuarios (user.get): los nombres se cargan
+  # acá. Un ID que no esté aparece como "Usuario #ID".
+  asesores:
+    1: "Santiago Iaquinta"
+    10: "Diego Abanto"
+    14: "Joana Villarreal"
+    22: "Luciana Canteli"
+    38: "Yamila Sampedro"
+    50: "Florencia Lopez"
+    52: "Vanesa Garnica"
+    56: "Enzo Villarreal"
+
+# -----------------------------------------------------------------------------
+# ALERTAS
+# Calibradas al volumen real: ~230 prospectos y ~12 cierres por mes.
+# Con ese n, el CPL y el volumen aguantan lectura semanal; la conversión y el
+# CAC no: se leen a 28 días corridos o no se leen.
+# -----------------------------------------------------------------------------
+alertas:
+  # Dos cadencias con propósitos distintos:
+  #   diaria  -> ALARMA. Solo habla si algo se rompió. El objetivo de diseño es
+  #              que casi siempre no diga nada; si suena todos los días nadie la lee.
+  #   semanal -> INFORME. Llega siempre, con o sin alertas, porque es la lectura
+  #              del estado del funnel y no una emergencia.
+  n_minimo_para_alertar: 15        # prospectos, para las métricas de generación
+  n_minimo_cierres: 3              # cierres, para CAC y % de conversión
+
+  diarias:
+    # Todas son estados binarios o umbrales absolutos, nunca tasas: son las
+    # únicas que se pueden leer con el volumen de un solo día (~7 prospectos).
+    - regla: sin_prospectos
+      descripcion: "Ningún prospecto entró en todo el día"
+      severidad: alta
+    - regla: canal_mudo
+      descripcion: "Meta sin prospectos en todo el día"
+      canal: meta
+      dias: 1
+      severidad: alta
+    - regla: canal_mudo
+      descripcion: "Google Ads sin prospectos dos días seguidos"
+      canal: google
+      dias: 2
+      severidad: alta
+    - regla: spa_sin_cargar
+      descripcion: "La inversión de Meta o de Google tiene más de una semana sin cargar en el SPA"
+      tipos: {meta: 1416, google: 1418}   # tipo de gasto en el SPA 1052
+      dias: 7
+      severidad: alta
+    - regla: prospecto_sin_origen
+      descripcion: "Entraron prospectos sin origen cargado"
+      severidad: media
+    - regla: origen_sin_mapear
+      descripcion: "Apareció un origen que no está asignado a ningún canal"
+      severidad: media
+    # Un número del Monitor de Growth pasó a rojo (ver monitor.desmejora).
+    # Avisa solo el día del cambio, no todos los días que siga en rojo.
+    - regla: monitor_desmejora
+      descripcion: "Un número del Monitor empeoró contra el mismo tramo del Q anterior"
+      severidad: alta
+
+  semanales:
+    # Ventana de 7 días para lo que tiene volumen diario; de 28 para las tasas
+    # que a 7 días son ruido.
+    - metrica: cpl
+      direccion: sube
+      umbral_pct: 25
+      ventana_dias: 7
+      severidad: alta
+    - metrica: prospectos
+      direccion: baja
+      umbral_pct: 30
+      ventana_dias: 7
+      severidad: alta
+    - metrica: pct_derivacion
+      direccion: baja
+      umbral_pp: 10
+      ventana_dias: 28
+      severidad: alta
+    - metrica: costo_por_derivado
+      direccion: sube
+      umbral_pct: 40
+      ventana_dias: 28
+      severidad: media
+    # La mediana histórica del % de no calificación es exactamente 15,0%: como
+    # umbral simple sonaría la mitad de las semanas. Por eso se alerta cuando
+    # se sostiene por encima dos semanas seguidas, o cuando pega un salto.
+    - metrica: pct_no_calificacion
+      direccion: sube
+      umbral_referencia: 15
+      semanas_seguidas: 2
+      umbral_salto: 20
+      severidad: media
+    - metrica: gasto_sin_cargar
+      severidad: alta
+      cadencia_api_dias: 1
+      cadencia_spa_dias: 7
+
+  # El informe semanal compara contra las DOS semanas anteriores, no contra una:
+  # con una sola no se distingue un rebote de una tendencia.
+  informe_semanal:
+    semanas_de_referencia: 2
+    metricas:
+      - prospectos
+      - cpl_usd
+      - pct_derivacion
+      - costo_por_derivado_usd
+      - pct_no_calificacion
+      - presupuestados
+      - cierres
+
+notificaciones:
+  slack_canal: "adqui-notificaciones-canales"
+  slack_canal_id: "C0C2XKTLT9N"
+  hora_local: "09:00"
+  timezone: "America/Argentina/Buenos_Aires"

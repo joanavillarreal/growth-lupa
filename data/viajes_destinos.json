@@ -1,0 +1,16 @@
+{
+  "moneda_pauta": "ARS",
+  "conceptos": {
+    "pasajes": "Pasajes",
+    "alojamiento": "Alojamiento",
+    "viaticos": "Viáticos y comida"
+  },
+  "destinos": {
+    "Córdoba":   {"estado": "finalizado", "pauta": 61610.46, "gastos_usd": {"pasajes": 122.5, "viaticos": 80}},
+    "Rosario":   {"estado": "finalizado", "pauta": 31673.66, "gastos_usd": {"pasajes": 122.5, "viaticos": 80, "alojamiento": 159}},
+    "Mendoza":   {"estado": "finalizado", "pauta": 34623.10, "gastos_usd": {"pasajes": 152.5, "alojamiento": 209.5}},
+    "San Juan":  {"estado": "finalizado", "pauta": 69310.42, "gastos_usd": {"pasajes": 152.5, "alojamiento": 209.5}},
+    "Neuquén":   {"estado": "finalizado", "pauta": 32284.07, "gastos_usd": {"pasajes": 71, "alojamiento": 233}},
+    "Bariloche": {"estado": "planificado", "pauta": null, "gastos_usd": {}}
+  }
+}

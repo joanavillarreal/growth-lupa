@@ -1,0 +1,963 @@
+{
+  "_nota": "Gasto diario de la cuenta publicitaria de Meta, leído del conector MCP y separado por campaña. `redes_ars` es lo que corresponde a las campañas clasificadas como Redes Sociales; `performance_ars` es todo el resto, que es el canal Meta Ads. El dashboard divide estos montos por la cotización para expresarlos en dólares. Se lee de acá y NO del SPA de Bitrix, porque el SPA guarda un único monto diario y ahí adentro no se puede distinguir qué parte fue awareness. Lo actualiza el skill de growth.",
+  "generado_en": "2026-10-08",
+  "cuenta": "725901852075382",
+  "campanas_redes": [
+    {
+      "id": "120252699394270427",
+      "nombre": "JY | Awareness"
+    }
+  ],
+  "dias": {
+    "2026-04-01": {
+      "total_ars": 40782.58,
+      "redes_ars": 0.0,
+      "performance_ars": 40782.58
+    },
+    "2026-04-02": {
+      "total_ars": 39013.38,
+      "redes_ars": 0.0,
+      "performance_ars": 39013.38
+    },
+    "2026-04-03": {
+      "total_ars": 53927.72,
+      "redes_ars": 0.0,
+      "performance_ars": 53927.72
+    },
+    "2026-04-04": {
+      "total_ars": 50412.59,
+      "redes_ars": 0.0,
+      "performance_ars": 50412.59
+    },
+    "2026-04-05": {
+      "total_ars": 50414.67,
+      "redes_ars": 0.0,
+      "performance_ars": 50414.67
+    },
+    "2026-04-06": {
+      "total_ars": 52630.17,
+      "redes_ars": 0.0,
+      "performance_ars": 52630.17
+    },
+    "2026-04-07": {
+      "total_ars": 44418.0,
+      "redes_ars": 0.0,
+      "performance_ars": 44418.0
+    },
+    "2026-04-08": {
+      "total_ars": 44859.73,
+      "redes_ars": 0.0,
+      "performance_ars": 44859.73
+    },
+    "2026-04-09": {
+      "total_ars": 43566.16,
+      "redes_ars": 0.0,
+      "performance_ars": 43566.16
+    },
+    "2026-04-10": {
+      "total_ars": 31630.72,
+      "redes_ars": 0.0,
+      "performance_ars": 31630.72
+    },
+    "2026-04-11": {
+      "total_ars": 35755.98,
+      "redes_ars": 0.0,
+      "performance_ars": 35755.98
+    },
+    "2026-04-12": {
+      "total_ars": 39133.6,
+      "redes_ars": 0.0,
+      "performance_ars": 39133.6
+    },
+    "2026-04-13": {
+      "total_ars": 36499.18,
+      "redes_ars": 0.0,
+      "performance_ars": 36499.18
+    },
+    "2026-04-14": {
+      "total_ars": 35781.26,
+      "redes_ars": 0.0,
+      "performance_ars": 35781.26
+    },
+    "2026-04-15": {
+      "total_ars": 37561.34,
+      "redes_ars": 0.0,
+      "performance_ars": 37561.34
+    },
+    "2026-04-16": {
+      "total_ars": 31567.26,
+      "redes_ars": 0.0,
+      "performance_ars": 31567.26
+    },
+    "2026-04-17": {
+      "total_ars": 29385.33,
+      "redes_ars": 0.0,
+      "performance_ars": 29385.33
+    },
+    "2026-04-18": {
+      "total_ars": 33848.56,
+      "redes_ars": 0.0,
+      "performance_ars": 33848.56
+    },
+    "2026-04-19": {
+      "total_ars": 39412.62,
+      "redes_ars": 0.0,
+      "performance_ars": 39412.62
+    },
+    "2026-04-20": {
+      "total_ars": 37936.16,
+      "redes_ars": 0.0,
+      "performance_ars": 37936.16
+    },
+    "2026-04-21": {
+      "total_ars": 38853.99,
+      "redes_ars": 0.0,
+      "performance_ars": 38853.99
+    },
+    "2026-04-22": {
+      "total_ars": 35089.91,
+      "redes_ars": 0.0,
+      "performance_ars": 35089.91
+    },
+    "2026-04-23": {
+      "total_ars": 26616.79,
+      "redes_ars": 0.0,
+      "performance_ars": 26616.79
+    },
+    "2026-04-24": {
+      "total_ars": 20786.79,
+      "redes_ars": 0.0,
+      "performance_ars": 20786.79
+    },
+    "2026-04-25": {
+      "total_ars": 30550.31,
+      "redes_ars": 0.0,
+      "performance_ars": 30550.31
+    },
+    "2026-04-26": {
+      "total_ars": 32325.86,
+      "redes_ars": 0.0,
+      "performance_ars": 32325.86
+    },
+    "2026-04-27": {
+      "total_ars": 26229.29,
+      "redes_ars": 0.0,
+      "performance_ars": 26229.29
+    },
+    "2026-04-28": {
+      "total_ars": 35580.1,
+      "redes_ars": 0.0,
+      "performance_ars": 35580.1
+    },
+    "2026-04-29": {
+      "total_ars": 48371.66,
+      "redes_ars": 0.0,
+      "performance_ars": 48371.66
+    },
+    "2026-04-30": {
+      "total_ars": 36408.98,
+      "redes_ars": 0.0,
+      "performance_ars": 36408.98
+    },
+    "2026-05-01": {
+      "total_ars": 41399.41,
+      "redes_ars": 0.0,
+      "performance_ars": 41399.41
+    },
+    "2026-05-02": {
+      "total_ars": 40887.7,
+      "redes_ars": 0.0,
+      "performance_ars": 40887.7
+    },
+    "2026-05-03": {
+      "total_ars": 48267.7,
+      "redes_ars": 0.0,
+      "performance_ars": 48267.7
+    },
+    "2026-05-04": {
+      "total_ars": 39558.03,
+      "redes_ars": 0.0,
+      "performance_ars": 39558.03
+    },
+    "2026-05-05": {
+      "total_ars": 44396.33,
+      "redes_ars": 0.0,
+      "performance_ars": 44396.33
+    },
+    "2026-05-06": {
+      "total_ars": 39210.23,
+      "redes_ars": 0.0,
+      "performance_ars": 39210.23
+    },
+    "2026-05-07": {
+      "total_ars": 31852.19,
+      "redes_ars": 0.0,
+      "performance_ars": 31852.19
+    },
+    "2026-05-08": {
+      "total_ars": 42340.99,
+      "redes_ars": 0.0,
+      "performance_ars": 42340.99
+    },
+    "2026-05-09": {
+      "total_ars": 37352.61,
+      "redes_ars": 0.0,
+      "performance_ars": 37352.61
+    },
+    "2026-05-10": {
+      "total_ars": 45343.11,
+      "redes_ars": 0.0,
+      "performance_ars": 45343.11
+    },
+    "2026-05-11": {
+      "total_ars": 38270.51,
+      "redes_ars": 0.0,
+      "performance_ars": 38270.51
+    },
+    "2026-05-12": {
+      "total_ars": 41911.92,
+      "redes_ars": 0.0,
+      "performance_ars": 41911.92
+    },
+    "2026-05-13": {
+      "total_ars": 42851.35,
+      "redes_ars": 0.0,
+      "performance_ars": 42851.35
+    },
+    "2026-05-14": {
+      "total_ars": 40558.79,
+      "redes_ars": 0.0,
+      "performance_ars": 40558.79
+    },
+    "2026-05-15": {
+      "total_ars": 36899.39,
+      "redes_ars": 0.0,
+      "performance_ars": 36899.39
+    },
+    "2026-05-16": {
+      "total_ars": 37280.41,
+      "redes_ars": 0.0,
+      "performance_ars": 37280.41
+    },
+    "2026-05-17": {
+      "total_ars": 47173.47,
+      "redes_ars": 0.0,
+      "performance_ars": 47173.47
+    },
+    "2026-05-18": {
+      "total_ars": 51080.18,
+      "redes_ars": 0.0,
+      "performance_ars": 51080.18
+    },
+    "2026-05-19": {
+      "total_ars": 52728.85,
+      "redes_ars": 0.0,
+      "performance_ars": 52728.85
+    },
+    "2026-05-20": {
+      "total_ars": 44452.24,
+      "redes_ars": 0.0,
+      "performance_ars": 44452.24
+    },
+    "2026-05-21": {
+      "total_ars": 44926.86,
+      "redes_ars": 0.0,
+      "performance_ars": 44926.86
+    },
+    "2026-05-22": {
+      "total_ars": 39172.46,
+      "redes_ars": 0.0,
+      "performance_ars": 39172.46
+    },
+    "2026-05-23": {
+      "total_ars": 43669.16,
+      "redes_ars": 0.0,
+      "performance_ars": 43669.16
+    },
+    "2026-05-24": {
+      "total_ars": 47886.12,
+      "redes_ars": 0.0,
+      "performance_ars": 47886.12
+    },
+    "2026-05-25": {
+      "total_ars": 53999.71,
+      "redes_ars": 0.0,
+      "performance_ars": 53999.71
+    },
+    "2026-05-26": {
+      "total_ars": 52141.57,
+      "redes_ars": 0.0,
+      "performance_ars": 52141.57
+    },
+    "2026-05-27": {
+      "total_ars": 48502.34,
+      "redes_ars": 0.0,
+      "performance_ars": 48502.34
+    },
+    "2026-05-28": {
+      "total_ars": 46129.05,
+      "redes_ars": 0.0,
+      "performance_ars": 46129.05
+    },
+    "2026-05-29": {
+      "total_ars": 41831.39,
+      "redes_ars": 0.0,
+      "performance_ars": 41831.39
+    },
+    "2026-05-30": {
+      "total_ars": 38989.74,
+      "redes_ars": 0.0,
+      "performance_ars": 38989.74
+    },
+    "2026-05-31": {
+      "total_ars": 50343.78,
+      "redes_ars": 0.0,
+      "performance_ars": 50343.78
+    },
+    "2026-06-01": {
+      "total_ars": 45965.15,
+      "redes_ars": 0.0,
+      "performance_ars": 45965.15
+    },
+    "2026-06-02": {
+      "total_ars": 43471.44,
+      "redes_ars": 0.0,
+      "performance_ars": 43471.44
+    },
+    "2026-06-03": {
+      "total_ars": 41720.92,
+      "redes_ars": 0.0,
+      "performance_ars": 41720.92
+    },
+    "2026-06-04": {
+      "total_ars": 40481.02,
+      "redes_ars": 0.0,
+      "performance_ars": 40481.02
+    },
+    "2026-06-05": {
+      "total_ars": 35959.74,
+      "redes_ars": 0.0,
+      "performance_ars": 35959.74
+    },
+    "2026-06-06": {
+      "total_ars": 47819.64,
+      "redes_ars": 0.0,
+      "performance_ars": 47819.64
+    },
+    "2026-06-07": {
+      "total_ars": 52564.52,
+      "redes_ars": 0.0,
+      "performance_ars": 52564.52
+    },
+    "2026-06-08": {
+      "total_ars": 44718.85,
+      "redes_ars": 0.0,
+      "performance_ars": 44718.85
+    },
+    "2026-06-09": {
+      "total_ars": 39224.85,
+      "redes_ars": 0.0,
+      "performance_ars": 39224.85
+    },
+    "2026-06-10": {
+      "total_ars": 39194.36,
+      "redes_ars": 0.0,
+      "performance_ars": 39194.36
+    },
+    "2026-06-11": {
+      "total_ars": 41305.88,
+      "redes_ars": 0.0,
+      "performance_ars": 41305.88
+    },
+    "2026-06-12": {
+      "total_ars": 40443.43,
+      "redes_ars": 0.0,
+      "performance_ars": 40443.43
+    },
+    "2026-06-13": {
+      "total_ars": 34969.58,
+      "redes_ars": 0.0,
+      "performance_ars": 34969.58
+    },
+    "2026-06-14": {
+      "total_ars": 53990.67,
+      "redes_ars": 0.0,
+      "performance_ars": 53990.67
+    },
+    "2026-06-15": {
+      "total_ars": 46119.33,
+      "redes_ars": 0.0,
+      "performance_ars": 46119.33
+    },
+    "2026-06-16": {
+      "total_ars": 29618.65,
+      "redes_ars": 0.0,
+      "performance_ars": 29618.65
+    },
+    "2026-06-17": {
+      "total_ars": 38131.09,
+      "redes_ars": 0.0,
+      "performance_ars": 38131.09
+    },
+    "2026-06-18": {
+      "total_ars": 35632.27,
+      "redes_ars": 0.0,
+      "performance_ars": 35632.27
+    },
+    "2026-06-19": {
+      "total_ars": 27060.52,
+      "redes_ars": 0.0,
+      "performance_ars": 27060.52
+    },
+    "2026-06-20": {
+      "total_ars": 32231.43,
+      "redes_ars": 0.0,
+      "performance_ars": 32231.43
+    },
+    "2026-06-21": {
+      "total_ars": 39012.84,
+      "redes_ars": 0.0,
+      "performance_ars": 39012.84
+    },
+    "2026-06-22": {
+      "total_ars": 36276.37,
+      "redes_ars": 0.0,
+      "performance_ars": 36276.37
+    },
+    "2026-06-23": {
+      "total_ars": 36962.35,
+      "redes_ars": 0.0,
+      "performance_ars": 36962.35
+    },
+    "2026-06-24": {
+      "total_ars": 37596.08,
+      "redes_ars": 0.0,
+      "performance_ars": 37596.08
+    },
+    "2026-06-25": {
+      "total_ars": 30877.96,
+      "redes_ars": 0.0,
+      "performance_ars": 30877.96
+    },
+    "2026-06-26": {
+      "total_ars": 34108.58,
+      "redes_ars": 0.0,
+      "performance_ars": 34108.58
+    },
+    "2026-06-27": {
+      "total_ars": 29711.73,
+      "redes_ars": 0.0,
+      "performance_ars": 29711.73
+    },
+    "2026-06-28": {
+      "total_ars": 42162.4,
+      "redes_ars": 0.0,
+      "performance_ars": 42162.4
+    },
+    "2026-06-29": {
+      "total_ars": 35111.67,
+      "redes_ars": 0.0,
+      "performance_ars": 35111.67
+    },
+    "2026-06-30": {
+      "total_ars": 39132.29,
+      "redes_ars": 0.0,
+      "performance_ars": 39132.29
+    },
+    "2026-07-01": {
+      "total_ars": 39158.46,
+      "redes_ars": 0.0,
+      "performance_ars": 39158.46
+    },
+    "2026-07-02": {
+      "total_ars": 30600.5,
+      "redes_ars": 0.0,
+      "performance_ars": 30600.5
+    },
+    "2026-07-03": {
+      "total_ars": 29419.83,
+      "redes_ars": 0.0,
+      "performance_ars": 29419.83
+    },
+    "2026-07-04": {
+      "total_ars": 29228.25,
+      "redes_ars": 0.0,
+      "performance_ars": 29228.25
+    },
+    "2026-07-05": {
+      "total_ars": 40353.07,
+      "redes_ars": 0.0,
+      "performance_ars": 40353.07
+    },
+    "2026-07-06": {
+      "total_ars": 44018.24,
+      "redes_ars": 0.0,
+      "performance_ars": 44018.24
+    },
+    "2026-07-07": {
+      "total_ars": 44899.9,
+      "redes_ars": 0.0,
+      "performance_ars": 44899.9
+    },
+    "2026-07-08": {
+      "total_ars": 68210.41,
+      "redes_ars": 1556.86,
+      "performance_ars": 66653.55
+    },
+    "2026-07-09": {
+      "total_ars": 51808.53,
+      "redes_ars": 2637.75,
+      "performance_ars": 49170.78
+    },
+    "2026-07-10": {
+      "total_ars": 29942.63,
+      "redes_ars": 2323.88,
+      "performance_ars": 27618.75
+    },
+    "2026-07-11": {
+      "total_ars": 32016.15,
+      "redes_ars": 2237.51,
+      "performance_ars": 29778.64
+    },
+    "2026-07-12": {
+      "total_ars": 43169.52,
+      "redes_ars": 2977.8,
+      "performance_ars": 40191.72
+    },
+    "2026-07-13": {
+      "total_ars": 40540.39,
+      "redes_ars": 2432.26,
+      "performance_ars": 38108.13
+    },
+    "2026-07-14": {
+      "total_ars": 38691.9,
+      "redes_ars": 2355.41,
+      "performance_ars": 36336.49
+    },
+    "2026-07-15": {
+      "total_ars": 38538.54,
+      "redes_ars": 2637.51,
+      "performance_ars": 35901.03
+    },
+    "2026-07-16": {
+      "total_ars": 35584.09,
+      "redes_ars": 2411.35,
+      "performance_ars": 33172.74
+    },
+    "2026-07-17": {
+      "total_ars": 45618.55,
+      "redes_ars": 2285.36,
+      "performance_ars": 43333.19
+    },
+    "2026-07-18": {
+      "total_ars": 39271.3,
+      "redes_ars": 2396.85,
+      "performance_ars": 36874.45
+    },
+    "2026-07-19": {
+      "total_ars": 42429.97,
+      "redes_ars": 3014.67,
+      "performance_ars": 39415.3
+    },
+    "2026-07-20": {
+      "total_ars": 36734.65,
+      "redes_ars": 2680.26,
+      "performance_ars": 34054.39
+    },
+    "2026-07-21": {
+      "total_ars": 34894.73,
+      "redes_ars": 2374.51,
+      "performance_ars": 32520.22
+    },
+    "2026-07-22": {
+      "total_ars": 32899.75,
+      "redes_ars": 2337.84,
+      "performance_ars": 30561.91
+    },
+    "2026-07-23": {
+      "total_ars": 31316.36,
+      "redes_ars": 2368.86,
+      "performance_ars": 28947.5
+    },
+    "2026-07-24": {
+      "total_ars": 28648.91,
+      "redes_ars": 2174.76,
+      "performance_ars": 26474.15
+    },
+    "2026-07-25": {
+      "total_ars": 27542.86,
+      "redes_ars": 2545.33,
+      "performance_ars": 24997.53
+    },
+    "2026-07-26": {
+      "total_ars": 33794.17,
+      "redes_ars": 2940.73,
+      "performance_ars": 30853.44
+    },
+    "2026-07-27": {
+      "total_ars": 38033.64,
+      "redes_ars": 2612.06,
+      "performance_ars": 35421.58
+    },
+    "2026-07-28": {
+      "total_ars": 31170.08,
+      "redes_ars": 2411.08,
+      "performance_ars": 28759.0
+    },
+    "2026-07-29": {
+      "total_ars": 26064.83,
+      "redes_ars": 2121.95,
+      "performance_ars": 23942.88
+    },
+    "2026-07-30": {
+      "total_ars": 32024.69,
+      "redes_ars": 2754.63,
+      "performance_ars": 29270.06
+    },
+    "2026-07-31": {
+      "total_ars": 35051.49,
+      "redes_ars": 2471.28,
+      "performance_ars": 32580.21
+    },
+    "2026-08-01": {
+      "total_ars": 28651.23,
+      "redes_ars": 2187.47,
+      "performance_ars": 26463.76
+    },
+    "2026-08-02": {
+      "total_ars": 37727.86,
+      "redes_ars": 2930.46,
+      "performance_ars": 34797.4
+    },
+    "2026-08-03": {
+      "total_ars": 32797.31,
+      "redes_ars": 2054.16,
+      "performance_ars": 30743.15
+    },
+    "2026-08-04": {
+      "total_ars": 39000.48,
+      "redes_ars": 3027.4,
+      "performance_ars": 35973.08
+    },
+    "2026-08-05": {
+      "total_ars": 33928.01,
+      "redes_ars": 2307.33,
+      "performance_ars": 31620.68
+    },
+    "2026-08-06": {
+      "total_ars": 35652.78,
+      "redes_ars": 2446.33,
+      "performance_ars": 33206.45
+    },
+    "2026-08-07": {
+      "total_ars": 34894.89,
+      "redes_ars": 2101.47,
+      "performance_ars": 32793.42
+    },
+    "2026-08-08": {
+      "total_ars": 35218.22,
+      "redes_ars": 2632.79,
+      "performance_ars": 32585.43
+    },
+    "2026-08-09": {
+      "total_ars": 41736.11,
+      "redes_ars": 3253.07,
+      "performance_ars": 38483.04
+    },
+    "2026-08-10": {
+      "total_ars": 33816.77,
+      "redes_ars": 2935.9,
+      "performance_ars": 30880.87
+    },
+    "2026-08-11": {
+      "total_ars": 33700.71,
+      "redes_ars": 2465.47,
+      "performance_ars": 31235.24
+    },
+    "2026-08-12": {
+      "total_ars": 30299.48,
+      "redes_ars": 2185.96,
+      "performance_ars": 28113.52
+    },
+    "2026-08-13": {
+      "total_ars": 25528.85,
+      "redes_ars": 2168.43,
+      "performance_ars": 23360.42
+    },
+    "2026-08-14": {
+      "total_ars": 24536.73,
+      "redes_ars": 2138.81,
+      "performance_ars": 22397.92
+    },
+    "2026-08-15": {
+      "total_ars": 26796.8,
+      "redes_ars": 2339.77,
+      "performance_ars": 24457.03
+    },
+    "2026-08-16": {
+      "total_ars": 28375.18,
+      "redes_ars": 2924.5,
+      "performance_ars": 25450.68
+    },
+    "2026-08-17": {
+      "total_ars": 31007.3,
+      "redes_ars": 2793.39,
+      "performance_ars": 28213.91
+    },
+    "2026-08-18": {
+      "total_ars": 34912.34,
+      "redes_ars": 2168.39,
+      "performance_ars": 32743.95
+    },
+    "2026-08-19": {
+      "total_ars": 32453.52,
+      "redes_ars": 2182.8,
+      "performance_ars": 30270.72
+    },
+    "2026-08-20": {
+      "total_ars": 30196.43,
+      "redes_ars": 2668.73,
+      "performance_ars": 27527.7
+    },
+    "2026-08-21": {
+      "total_ars": 28697.52,
+      "redes_ars": 2429.94,
+      "performance_ars": 26267.58
+    },
+    "2026-08-22": {
+      "total_ars": 20973.47,
+      "redes_ars": 2331.58,
+      "performance_ars": 18641.89
+    },
+    "2026-08-23": {
+      "total_ars": 28369.52,
+      "redes_ars": 2988.05,
+      "performance_ars": 25381.47
+    },
+    "2026-08-24": {
+      "total_ars": 25685.81,
+      "redes_ars": 2611.29,
+      "performance_ars": 23074.52
+    },
+    "2026-08-25": {
+      "total_ars": 21831.42,
+      "redes_ars": 2197.68,
+      "performance_ars": 19633.74
+    },
+    "2026-08-26": {
+      "total_ars": 21936.33,
+      "redes_ars": 2574.41,
+      "performance_ars": 19361.92
+    },
+    "2026-08-27": {
+      "total_ars": 27344.9,
+      "redes_ars": 2197.49,
+      "performance_ars": 25147.41
+    },
+    "2026-08-28": {
+      "total_ars": 33318.27,
+      "redes_ars": 2548.51,
+      "performance_ars": 30769.76
+    },
+    "2026-08-29": {
+      "total_ars": 32460.89,
+      "redes_ars": 2375.05,
+      "performance_ars": 30085.84
+    },
+    "2026-08-30": {
+      "total_ars": 29237.86,
+      "redes_ars": 3156.58,
+      "performance_ars": 26081.28
+    },
+    "2026-08-31": {
+      "total_ars": 26267.96,
+      "redes_ars": 2536.55,
+      "performance_ars": 23731.41
+    },
+    "2026-09-01": {
+      "total_ars": 22532.12,
+      "redes_ars": 2695.39,
+      "performance_ars": 19836.73
+    },
+    "2026-09-02": {
+      "total_ars": 29797.69,
+      "redes_ars": 2130.89,
+      "performance_ars": 27666.8
+    },
+    "2026-09-03": {
+      "total_ars": 24833.73,
+      "redes_ars": 2334.59,
+      "performance_ars": 22499.14
+    },
+    "2026-09-04": {
+      "total_ars": 21894.39,
+      "redes_ars": 2064.58,
+      "performance_ars": 19829.81
+    },
+    "2026-09-05": {
+      "total_ars": 20308.56,
+      "redes_ars": 2572.65,
+      "performance_ars": 17735.91
+    },
+    "2026-09-06": {
+      "total_ars": 27442.52,
+      "redes_ars": 2825.87,
+      "performance_ars": 24616.65
+    },
+    "2026-09-07": {
+      "total_ars": 24736.29,
+      "redes_ars": 2303.77,
+      "performance_ars": 22432.52
+    },
+    "2026-09-08": {
+      "total_ars": 24788.95,
+      "redes_ars": 2418.05,
+      "performance_ars": 22370.9
+    },
+    "2026-09-09": {
+      "total_ars": 26095.85,
+      "redes_ars": 2010.53,
+      "performance_ars": 24085.32
+    },
+    "2026-09-10": {
+      "total_ars": 28624.02,
+      "redes_ars": 2239.23,
+      "performance_ars": 26384.79
+    },
+    "2026-09-11": {
+      "total_ars": 30541.22,
+      "redes_ars": 2845.85,
+      "performance_ars": 27695.37
+    },
+    "2026-09-12": {
+      "total_ars": 25316.16,
+      "redes_ars": 2853.18,
+      "performance_ars": 22462.98
+    },
+    "2026-09-13": {
+      "total_ars": 37787.59,
+      "redes_ars": 3403.23,
+      "performance_ars": 34384.36
+    },
+    "2026-09-14": {
+      "total_ars": 32533.85,
+      "redes_ars": 2486.84,
+      "performance_ars": 30047.01
+    },
+    "2026-09-15": {
+      "total_ars": 25188.59,
+      "redes_ars": 1890.9,
+      "performance_ars": 23297.69
+    },
+    "2026-09-16": {
+      "total_ars": 27785.58,
+      "redes_ars": 2170.45,
+      "performance_ars": 25615.13
+    },
+    "2026-09-17": {
+      "total_ars": 22279.79,
+      "redes_ars": 2187.41,
+      "performance_ars": 20092.38
+    },
+    "2026-09-18": {
+      "total_ars": 23779.62,
+      "redes_ars": 3008.14,
+      "performance_ars": 20771.48
+    },
+    "2026-09-19": {
+      "total_ars": 18169.42,
+      "redes_ars": 1732.49,
+      "performance_ars": 16436.93
+    },
+    "2026-09-20": {
+      "total_ars": 28656.1,
+      "redes_ars": 2933.03,
+      "performance_ars": 25723.07
+    },
+    "2026-09-21": {
+      "total_ars": 23437.79,
+      "redes_ars": 2746.17,
+      "performance_ars": 20691.62
+    },
+    "2026-09-22": {
+      "total_ars": 24664.82,
+      "redes_ars": 2050.7,
+      "performance_ars": 22614.12
+    },
+    "2026-09-23": {
+      "total_ars": 22915.72,
+      "redes_ars": 2197.93,
+      "performance_ars": 20717.79
+    },
+    "2026-09-24": {
+      "total_ars": 29375.71,
+      "redes_ars": 2694.56,
+      "performance_ars": 26681.15
+    },
+    "2026-09-25": {
+      "total_ars": 28100.16,
+      "redes_ars": 2343.03,
+      "performance_ars": 25757.13
+    },
+    "2026-09-26": {
+      "total_ars": 27727.26,
+      "redes_ars": 2532.37,
+      "performance_ars": 25194.89
+    },
+    "2026-09-27": {
+      "total_ars": 31722.71,
+      "redes_ars": 2284.51,
+      "performance_ars": 29438.2
+    },
+    "2026-09-28": {
+      "total_ars": 30643.56,
+      "redes_ars": 3157.82,
+      "performance_ars": 27485.74
+    },
+    "2026-09-29": {
+      "total_ars": 27906.75,
+      "redes_ars": 2914.89,
+      "performance_ars": 24991.86
+    },
+    "2026-09-30": {
+      "total_ars": 28989.72,
+      "redes_ars": 2591.88,
+      "performance_ars": 26397.84
+    },
+    "2026-10-01": {
+      "total_ars": 27953.57,
+      "redes_ars": 2318.74,
+      "performance_ars": 25634.83
+    },
+    "2026-10-02": {
+      "total_ars": 34031.14,
+      "redes_ars": 2538.16,
+      "performance_ars": 31492.98
+    },
+    "2026-10-03": {
+      "total_ars": 29237.05,
+      "redes_ars": 1690.22,
+      "performance_ars": 27546.83
+    },
+    "2026-10-04": {
+      "total_ars": 35563.37,
+      "redes_ars": 2712.94,
+      "performance_ars": 32850.43
+    },
+    "2026-10-05": {
+      "total_ars": 36638.39,
+      "redes_ars": 2316.54,
+      "performance_ars": 34321.85
+    },
+    "2026-10-06": {
+      "total_ars": 31151.01,
+      "redes_ars": 2430.96,
+      "performance_ars": 28720.05
+    },
+    "2026-10-07": {
+      "total_ars": 31757.99,
+      "redes_ars": 2431.27,
+      "performance_ars": 29326.72
+    }
+  }
+}

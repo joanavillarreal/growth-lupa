@@ -1,0 +1,1067 @@
+<title>Monitor de Growth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: panel de administración. Barra lateral fija a la izquierda con las
+   solapas y los trimestres; arriba del contenido, el rango del Q; tarjetas
+   blancas redondeadas sobre gris azulado. En el teléfono la barra lateral se
+   vuelve una barra de solapas pegada arriba y todo va en una columna. */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --soft:#f7f9fc; --line:#e9edf4; --line-2:#dce2ec;
+  --ink:#0f1729; --ink-2:#5f6b7f; --ink-3:#98a2b3;
+  --blue:#2463eb; --blue-2:#5b8cff; --blue-soft:#eaf0ff; --blue-ink:#ffffff;
+  --good:#16a34a; --good-bg:#e7f7ed; --bad:#dc2626; --bad-bg:#fdecec; --warn:#c2680a; --warn-bg:#fdf1e2;
+  --flat:#64748b; --flat-bg:#eef1f6;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s7:#4a3aa7; --s0:#a3adb6;
+  --gold:#e0a100; --silver:#9aa6b8; --bronze:#c77443;
+  --shade:rgba(15,23,41,.45); --shadow:0 1px 2px rgba(16,24,40,.04),0 4px 14px rgba(16,24,40,.04);
+  --r:16px;
+  --f:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0e131c; --card:#161d29; --soft:#1b2331; --line:#232c3b; --line-2:#2e3950;
+  --ink:#eef2f8; --ink-2:#a1adc0; --ink-3:#6c788d;
+  --blue:#5b8cff; --blue-2:#7fa5ff; --blue-soft:#1b2744; --blue-ink:#0e131c;
+  --good:#4ade80; --good-bg:#15291e; --bad:#f87171; --bad-bg:#301819; --warn:#fbbf24; --warn-bg:#2e2411;
+  --flat:#a1adc0; --flat-bg:#222b3a;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s7:#9085e9; --s0:#5d6873;
+  --gold:#e8b53a; --silver:#8793a6; --bronze:#c9814f;
+  --shade:rgba(0,0,0,.6); --shadow:none;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0e131c; --card:#161d29; --soft:#1b2331; --line:#232c3b; --line-2:#2e3950;
+  --ink:#eef2f8; --ink-2:#a1adc0; --ink-3:#6c788d;
+  --blue:#5b8cff; --blue-2:#7fa5ff; --blue-soft:#1b2744; --blue-ink:#0e131c;
+  --good:#4ade80; --good-bg:#15291e; --bad:#f87171; --bad-bg:#301819; --warn:#fbbf24; --warn-bg:#2e2411;
+  --flat:#a1adc0; --flat-bg:#222b3a;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s7:#9085e9; --s0:#5d6873;
+  --gold:#e8b53a; --silver:#8793a6; --bronze:#c9814f;
+  --shade:rgba(0,0,0,.6); --shadow:none;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:14px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:700;letter-spacing:-.01em}
+button{font-family:inherit}
+svg{display:block}
+
+/* ---------- estructura ---------- */
+.app{display:grid;grid-template-columns:1fr;min-height:100%}
+@media (min-width:1000px){ .app{grid-template-columns:248px minmax(0,1fr)} }
+.side{display:none}
+@media (min-width:1000px){
+  .side{display:flex;flex-direction:column;gap:6px;position:sticky;top:env(safe-area-inset-top,0px);
+    height:100vh;overflow-y:auto;background:var(--card);border-right:1px solid var(--line);padding:20px 16px}
+}
+.logo{display:flex;align-items:center;gap:10px;padding:2px 6px 16px}
+.logo .mk{width:34px;height:34px;border-radius:10px;background:var(--blue);display:grid;place-items:center;flex:0 0 auto}
+.logo b{font-size:16px;font-weight:800;letter-spacing:-.02em;display:block;line-height:1.1}
+.logo small{font-size:11.5px;color:var(--ink-3);font-weight:500}
+.nav-t{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);font-weight:700;padding:12px 10px 4px}
+.nav-i{appearance:none;display:flex;align-items:center;gap:11px;width:100%;border:none;background:none;
+  color:var(--ink-2);font-size:14px;font-weight:600;padding:9px 10px;border-radius:10px;cursor:pointer;text-align:left}
+.nav-i svg{flex:0 0 auto;color:var(--ink-3)}
+.nav-i:hover{background:var(--soft);color:var(--ink)}
+.nav-i[aria-selected="true"],.nav-i[aria-pressed="true"]{background:var(--blue-soft);color:var(--blue)}
+.nav-i[aria-selected="true"] svg,.nav-i[aria-pressed="true"] svg{color:var(--blue)}
+.nav-i .bdg{margin-left:auto;font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px;background:var(--bad-bg);color:var(--bad)}
+.nav-i .bdg.gris{background:var(--flat-bg);color:var(--flat)}
+.promo{margin-top:auto;background:var(--blue);color:var(--blue-ink);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.promo b{font-size:14.5px}
+.promo span{font-size:12.5px;opacity:.9;line-height:1.45}
+.promo .num{font-size:28px;font-weight:800;line-height:1}
+
+.main{min-width:0;padding-inline:16px;padding-block:14px 56px}
+@media (min-width:1000px){ .main{padding-inline:28px;padding-block:22px 64px} }
+.wrap{max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+#panel{display:flex;flex-direction:column;gap:16px;min-width:0}
+@media (max-width:699px){ #panel{gap:12px} }
+
+/* ---------- encabezado ---------- */
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.top .mlogo{display:flex;align-items:center;gap:9px}
+@media (min-width:1000px){ .top .mlogo{display:none} }
+.top h1{font-size:22px;flex:1 1 auto;min-width:0}
+.top h1 small{display:block;font-size:12.5px;font-weight:500;color:var(--ink-3);letter-spacing:0}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:7px 11px;font-size:12.5px;font-weight:600;color:var(--ink-2);white-space:nowrap}
+.chip svg{color:var(--ink-3)}
+.chip.azul{background:var(--blue);border-color:var(--blue);color:var(--blue-ink)}
+.chip.azul svg{color:var(--blue-ink)}
+.acciones{display:flex;flex-wrap:wrap;gap:8px}
+
+/* barra del teléfono */
+.mbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);margin-inline:-16px;padding:8px 16px 10px;
+  display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line)}
+@media (min-width:1000px){ .mbar{display:none} }
+.mtabs,.mqs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.mtabs::-webkit-scrollbar,.mqs::-webkit-scrollbar{display:none}
+.mtab{appearance:none;flex:0 0 auto;display:flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--card);
+  color:var(--ink-2);font-size:13px;font-weight:600;padding:7px 12px;border-radius:10px;cursor:pointer}
+.mtab svg{color:var(--ink-3)}
+.mtab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:var(--blue-ink)}
+.mtab[aria-selected="true"] svg{color:var(--blue-ink)}
+.mq{appearance:none;flex:0 0 auto;border:none;background:none;font-size:12.5px;font-weight:700;color:var(--ink-3);padding:3px 8px;border-radius:7px;cursor:pointer}
+.mq[aria-pressed="true"]{color:var(--ink);background:var(--card)}
+.nav-i:focus-visible,.mtab:focus-visible,.mq:focus-visible,.i:focus-visible,.cerrar:focus-visible,.mas:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* ---------- tarjetas ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;min-width:0;box-shadow:var(--shadow)}
+.ch{display:flex;align-items:center;gap:7px;margin-bottom:12px;min-width:0}
+.ch h2{font-size:15.5px}
+.ch .hint{margin-left:auto;font-size:12px;color:var(--ink-3);font-weight:500;text-align:right}
+.g{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.g.k4{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (min-width:700px){ .g.k4{gap:16px} .g.c2{grid-template-columns:repeat(2,minmax(0,1fr))} .g.c3{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (min-width:1100px){ .g.k4{grid-template-columns:repeat(4,minmax(0,1fr))} .g.main2{grid-template-columns:minmax(0,1.75fr) minmax(0,1fr)} .g.c3{grid-template-columns:repeat(3,minmax(0,1fr))} }
+.col{display:flex;flex-direction:column;gap:16px;min-width:0}
+.sub{font-size:12.5px;color:var(--ink-2)}
+.muted{color:var(--ink-3)}
+
+/* KPI */
+.kpi .kh{display:flex;align-items:center;gap:6px}
+.kpi .kt{font-size:13px;font-weight:600;color:var(--ink-2)}
+.kpi .ico{margin-left:auto;width:34px;height:34px;border-radius:10px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;flex:0 0 auto}
+.kpi .kv{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin-top:8px}
+.kpi .kv b{font-size:27px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.kpi .kc{font-size:12px;color:var(--ink-3);margin-top:6px}
+.pill{display:inline-flex;align-items:center;gap:3px;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.pill.desmejora{background:var(--bad-bg);color:var(--bad)}
+.pill.mejora{background:var(--good-bg);color:var(--good)}
+.pill.estable,.pill.sin_lectura{background:var(--flat-bg);color:var(--flat)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+
+/* info */
+.i{appearance:none;flex:0 0 auto;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line-2);background:transparent;
+  color:var(--ink-3);font:700 11px/1 var(--f);cursor:pointer;display:inline-grid;place-items:center;padding:0;position:relative}
+.i::after{content:"";position:absolute;inset:-11px}
+.i:hover{color:var(--blue);border-color:var(--blue)}
+
+/* funnel */
+.fun{display:flex;flex-direction:column;gap:12px}
+.fr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.fr .l{display:flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;min-width:0}
+.fr .v{font-size:17px;font-weight:800;text-align:right}
+.fr .bar{grid-column:1 / -1;height:10px;border-radius:6px;background:var(--soft);overflow:hidden}
+.fr .bar i{display:block;height:100%;border-radius:6px;background:var(--blue)}
+.fr.lateral .bar i{background:var(--ink-3)}
+.fr .d{grid-column:1 / -1;font-size:12px;color:var(--ink-2)}
+.fr .d b{color:var(--ink)}
+.plata{margin-top:4px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--blue-soft);border-radius:12px;padding:12px 14px}
+.plata .l{display:flex;align-items:center;gap:6px;font-weight:700;color:var(--blue)}
+.plata .v{margin-left:auto;font-size:22px;font-weight:800;color:var(--blue)}
+.plata .d{flex-basis:100%;font-size:12px;color:var(--ink-2)}
+
+/* mini estadísticas debajo del gráfico */
+.minis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.mini .n{font-size:17px;font-weight:800}
+.mini .t{font-size:11.5px;color:var(--ink-3);font-weight:600;overflow-wrap:anywhere}
+.mini .u{height:4px;border-radius:2px;margin-top:6px}
+
+/* gráfico de línea */
+.chart{position:relative}
+.chart svg{width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.tot{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:6px}
+.tot .big{font-size:28px;font-weight:800;letter-spacing:-.02em}
+.tot .vs{font-size:12.5px;color:var(--ink-2)}
+.leyenda{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--ink-2);margin-bottom:6px}
+.leyenda i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.leyenda .ln{width:16px;height:0;border-radius:0;border-top:2.5px solid var(--blue);vertical-align:3px}
+.leyenda .dash{width:16px;height:0;border-radius:0;border-top:2px dashed var(--ink-3);vertical-align:3px}
+.tt{position:absolute;pointer-events:none;background:var(--ink);color:var(--card);font-size:12px;padding:6px 10px;border-radius:8px;
+  white-space:nowrap;transform:translate(-50%,-100%);line-height:1.45;z-index:5}
+
+/* barras verticales */
+.vb{display:flex;align-items:flex-end;gap:8px;height:170px;padding-top:26px}
+.vb .c{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end}
+.vb .b{width:100%;max-width:44px;border-radius:8px 8px 4px 4px;background:var(--blue-soft);position:relative;min-height:4px}
+.vb .c.top .b{background:var(--blue)}
+.vb .b span{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:11.5px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+.vb .c.top .b span{background:var(--ink);color:var(--card);padding:1px 7px;border-radius:6px;top:-24px}
+.vb .x{font-size:11px;color:var(--ink-3);font-weight:600;text-align:center;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+
+/* gauge */
+.gauge{display:flex;flex-direction:column;align-items:center;gap:2px}
+.gauge svg{width:100%;max-width:260px;height:auto}
+.gauge .gv{font-size:30px;font-weight:800;margin-top:-58px;letter-spacing:-.02em}
+.gauge .gs{font-size:12.5px;color:var(--ink-2);text-align:center;margin-top:2px}
+.lista{margin-top:12px;border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.lista .fila{display:flex;gap:10px;justify-content:space-between}
+.lista .fila span:first-child{min-width:0;overflow-wrap:anywhere}
+.lista .fila span:last-child{color:var(--ink-2);font-weight:600;white-space:nowrap}
+.lista .tit{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);font-weight:700}
+
+/* números sueltos */
+.stat .top2{display:flex;align-items:center;gap:6px}
+.stat .k{font-size:13px;font-weight:600;color:var(--ink-2)}
+.stat .top2 .i{margin-left:auto}
+.stat .v{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin-top:6px}
+.stat .v b{font-size:25px;font-weight:800;letter-spacing:-.02em}
+.stat .v small{font-size:13px;color:var(--ink-2);font-weight:600}
+.stat .sub{margin-top:3px}
+
+/* barras horizontales */
+.hb{display:flex;flex-direction:column;gap:10px}
+.hb-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;align-items:baseline}
+.hb-row .l{font-size:13px;font-weight:500;min-width:0;overflow-wrap:anywhere}
+.hb-row .n{font-size:13px;font-weight:700;text-align:right;white-space:nowrap}
+.hb-row .n small{font-weight:500;color:var(--ink-3);margin-left:6px}
+.hb-row .track{grid-column:1 / -1;height:8px;background:var(--soft);border-radius:5px;overflow:hidden}
+.hb-row .fill{height:100%;background:var(--blue);border-radius:5px;min-width:3px}
+.hb-row .x{grid-column:1 / -1;font-size:11.5px;color:var(--ink-3);margin-top:-2px}
+.mas{appearance:none;border:none;background:none;color:var(--blue);font-size:12.5px;font-weight:700;cursor:pointer;padding:4px 0;align-self:flex-start}
+
+/* tablas */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-inline:-4px;padding-inline:4px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:11.5px;color:var(--ink-3);font-weight:600;text-align:right;padding:9px 10px;background:var(--soft);white-space:nowrap}
+th:first-child{border-radius:9px 0 0 9px;text-align:left} th:last-child{border-radius:0 9px 9px 0}
+td{padding:11px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap;font-weight:600}
+td:first-child{text-align:left;white-space:normal;min-width:130px;font-weight:600}
+td .rk{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:7px;background:var(--soft);color:var(--ink-2);font-size:11.5px;font-weight:700;margin-right:9px;vertical-align:middle}
+td.sec{color:var(--ink-2);font-weight:500}
+tfoot td{border-bottom:none;font-weight:800}
+tbody tr:hover td{background:var(--soft)}
+
+/* podio */
+.podio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:end}
+.esc{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;min-width:0}
+.esc .nom{font-weight:700;font-size:13px;line-height:1.25;overflow-wrap:anywhere}
+.esc .pts{font-size:11.5px;color:var(--ink-3);font-weight:600}
+.esc .base{width:100%;border-radius:10px 10px 4px 4px;display:grid;place-items:center;font-weight:800;font-size:22px;color:#fff}
+.esc.p1 .base{height:96px;background:var(--gold)}
+.esc.p2 .base{height:68px;background:var(--silver)}
+.esc.p3 .base{height:48px;background:var(--bronze)}
+.criterios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.crit .t{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);font-weight:700;margin-bottom:4px}
+.crit ol{margin:0;padding-left:18px;font-size:12.5px;display:flex;flex-direction:column;gap:2px}
+.crit ol span{color:var(--ink-3);margin-left:4px;font-weight:600}
+
+/* apiladas */
+.stk{display:flex;flex-direction:column;gap:16px;margin-top:12px}
+.stk-row .cab{display:flex;justify-content:space-between;gap:10px;font-size:13px;font-weight:600;margin-bottom:6px}
+.stk-bar{display:flex;height:12px;gap:2px;border-radius:6px;overflow:hidden;background:var(--soft)}
+.stk-bar span{display:block;height:100%;min-width:3px}
+.stk-row .vals{display:flex;flex-wrap:wrap;gap:3px 12px;margin-top:6px;font-size:11.5px;color:var(--ink-2)}
+.stk-row .vals i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px}
+.stk-row .vals b{color:var(--ink)}
+
+/* destacados */
+.dest .k{font-size:13px;font-weight:600;color:var(--ink-2)}
+.dest .big{font-size:22px;font-weight:800;line-height:1.2;margin-top:6px;overflow-wrap:anywhere}
+
+/* avisos */
+.aviso{font-size:13px;color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.aviso b{color:var(--ink)}
+details.salud{background:var(--warn-bg);border-radius:12px;padding:10px 14px;font-size:13px}
+details.salud.ok{background:var(--good-bg)}
+details.salud summary{cursor:pointer;font-weight:700;color:var(--warn)}
+details.salud.ok summary{color:var(--good)}
+details.salud ul{margin:8px 0 2px;padding-left:18px;color:var(--ink-2);display:flex;flex-direction:column;gap:4px}
+details.salud li b{color:var(--ink)}
+
+/* hoja de info */
+.velo{position:fixed;inset:0;background:var(--shade);z-index:40}
+.hoja{position:fixed;left:0;right:0;bottom:0;z-index:42;background:var(--card);color:var(--ink);border-radius:18px 18px 0 0;
+  padding:18px 18px calc(22px + env(safe-area-inset-bottom,0px));max-height:78vh;overflow-y:auto;box-shadow:0 -8px 30px rgba(0,0,0,.18)}
+@media (min-width:700px){ .hoja{left:50%;right:auto;bottom:auto;top:50%;transform:translate(-50%,-50%);width:min(480px,calc(100vw - 32px));border-radius:16px;padding-bottom:22px} }
+.hoja .cab{display:flex;align-items:flex-start;gap:12px;margin-bottom:8px}
+.hoja h3{font-size:17px;flex:1}
+.cerrar{appearance:none;border:1px solid var(--line-2);background:var(--card);color:var(--ink-2);border-radius:9px;font-size:12.5px;font-weight:700;padding:5px 11px;cursor:pointer}
+.hoja p{margin:0 0 8px;color:var(--ink-2);font-size:13.5px;line-height:1.6}
+.hoja .fuente{font-size:12.5px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:9px;margin-top:10px}
+.hoja .fuente b{color:var(--ink-2)}
+.pie{font-size:12px;color:var(--ink-3);text-align:center;padding-top:8px}
+@media (max-width:699px){ .kpi,.stat{padding:13px} .kpi .ico{display:none} .kpi .kv b,.stat .v b{font-size:21px} .kpi .kt,.stat .k{font-size:12px} .kpi .kc{font-size:11px} }
+
+/* ---------- experimentos ---------- */
+.exps{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:700px){ .exps{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (min-width:1100px){ .exps{grid-template-columns:repeat(3,minmax(0,1fr))} }
+.exp{appearance:none;text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:10px;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--shadow);min-width:0}
+.exp:hover{border-color:var(--blue)}
+.exp:focus-visible,.mcerrar:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.exp.ejemplo{border-style:dashed}
+.exp .fila1{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.exp .eid{font-size:11.5px;font-weight:700;color:var(--ink-3);letter-spacing:.03em}
+.exp h3{font-size:16px;line-height:1.3}
+.exp .desc{font-size:13px;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.exp .pie-exp{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:auto;font-size:12px;color:var(--ink-3)}
+.exp .pie-exp b{color:var(--ink);font-size:13px}
+.canal{display:inline-flex;align-items:center;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--blue-soft);color:var(--blue)}
+.est{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:auto}
+.est::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.est.propuesto{background:var(--flat-bg);color:var(--flat)}
+.est.corriendo{background:var(--blue-soft);color:var(--blue)}
+.est.concluido{background:var(--good-bg);color:var(--good)}
+.est.descartado{background:var(--bad-bg);color:var(--bad)}
+.prog{height:6px;border-radius:4px;background:var(--soft);overflow:hidden}
+.prog i{display:block;height:100%;background:var(--blue);border-radius:4px}
+.vacio{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.vacio p{margin:0;color:var(--ink-2);max-width:64ch}
+.btn{appearance:none;border:1px solid var(--blue);background:var(--blue);color:var(--blue-ink);font:inherit;font-size:13px;font-weight:700;
+  padding:8px 14px;border-radius:10px;cursor:pointer}
+.btn.sec{background:transparent;color:var(--blue)}
+.btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+code{font-size:12.5px;background:var(--soft);padding:1px 6px;border-radius:6px}
+
+.modal{position:fixed;inset:0;z-index:41;background:var(--card);color:var(--ink);overflow-y:auto;
+  padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+@media (min-width:760px){ .modal{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:min(920px,calc(100vw - 48px));
+  max-height:calc(100vh - 48px);border-radius:20px;padding:26px 28px;box-shadow:0 20px 60px rgba(0,0,0,.25)} }
+.modal .mcab{display:flex;align-items:flex-start;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.modal .mcab .t{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.modal .mcab h2{font-size:22px;line-height:1.25}
+.modal .chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.modal .chips .est{margin-left:0}
+.mcerrar{appearance:none;border:1px solid var(--line-2);background:var(--card);color:var(--ink-2);border-radius:10px;font:inherit;
+  font-size:13px;font-weight:700;padding:6px 12px;cursor:pointer;flex:0 0 auto}
+.mgrid{display:grid;gap:18px 26px;grid-template-columns:minmax(0,1fr);padding-top:18px}
+@media (min-width:760px){ .mgrid{grid-template-columns:repeat(2,minmax(0,1fr))} .mgrid .ancho{grid-column:1 / -1} }
+.mblk h4{margin:0 0 6px;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);font-weight:700}
+.mblk p{margin:0;font-size:14px;line-height:1.6;color:var(--ink);max-width:70ch}
+.mblk ul{margin:8px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:13.5px;color:var(--ink-2)}
+.mblk .vacio-campo{color:var(--ink-3);font-style:italic}
+.linea-t{position:relative;margin-top:28px}
+.linea-t .barra{height:8px;border-radius:5px;background:var(--soft);overflow:hidden}
+.linea-t .barra i{display:block;height:100%;background:var(--blue)}
+.linea-t .hitos{display:flex;justify-content:space-between;gap:10px;margin-top:8px;font-size:12.5px;color:var(--ink-2)}
+.linea-t .hitos b{display:block;color:var(--ink);font-size:14px}
+.linea-t .hoy{position:absolute;top:-24px;transform:translateX(-50%);font-size:11px;font-weight:700;color:var(--card);background:var(--ink);padding:1px 7px;border-radius:6px;white-space:nowrap}
+.res td .j{font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px}
+.res td .j.mejora{background:var(--good-bg);color:var(--good)}
+.res td .j.empeora{background:var(--bad-bg);color:var(--bad)}
+.res td .j.igual{background:var(--flat-bg);color:var(--flat)}
+.res tr.prim td{background:var(--blue-soft)}
+.res tr.prim td:first-child::after{content:"métrica primaria";margin-left:8px;font-size:10.5px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.05em}
+.concl{background:var(--soft);border-radius:12px;padding:12px 14px}
+
+/* ---------- objetivos del Q ---------- */
+.objs{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:760px){ .objs{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (min-width:1200px){ .objs{grid-template-columns:repeat(6,minmax(0,1fr))} }
+.obj{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0;box-shadow:var(--shadow)}
+.obj.bien{border-top:3px solid var(--good)} .obj.mal{border-top:3px solid var(--bad)} .obj.nd{border-top:3px solid var(--line-2)}
+.obj .oh{display:flex;align-items:center;gap:6px}
+.obj .on{font-size:13px;font-weight:600;color:var(--ink-2)}
+.obj .oh .i{margin-left:auto}
+.obj .ov{font-size:25px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.obj .om{font-size:12px;color:var(--ink-3);font-weight:600}
+.obj .ob{position:relative;height:8px;border-radius:5px;background:var(--soft)}
+.obj .ob i{position:absolute;left:0;top:0;bottom:0;border-radius:5px}
+.obj.bien .ob i{background:var(--good)} .obj.mal .ob i{background:var(--bad)} .obj.nd .ob i{background:var(--ink-3)}
+.obj .ob b{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink);border-radius:1px}
+.obj .od{font-size:11.5px;color:var(--ink-2);line-height:1.45}
+.est-obj{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;align-self:flex-start}
+.est-obj.bien{background:var(--good-bg);color:var(--good)} .est-obj.mal{background:var(--bad-bg);color:var(--bad)} .est-obj.nd{background:var(--flat-bg);color:var(--flat)}
+@media (max-width:699px){ .obj{padding:12px} .obj .ov{font-size:21px} }
+section.sec{display:flex;flex-direction:column;gap:10px;min-width:0}
+
+.mrr-obj{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){ .mrr-obj{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)} }
+.mrr-obj .big{font-size:38px;font-weight:800;letter-spacing:-.02em;line-height:1.05}
+.mrr-obj .big small{font-size:15px;font-weight:600;color:var(--ink-3);margin-left:6px}
+.mrr-obj .ob{position:relative;height:12px;border-radius:7px;background:var(--soft);margin-top:12px}
+.mrr-obj .ob i{position:absolute;left:0;top:0;bottom:0;border-radius:7px}
+.mrr-obj.bien .ob i{background:var(--good)} .mrr-obj.mal .ob i{background:var(--bad)} .mrr-obj.nd .ob i{background:var(--ink-3)}
+.mrr-obj .ob b{position:absolute;top:-5px;bottom:-5px;width:2px;background:var(--ink);border-radius:1px}
+.mrr-obj .meta-l{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--ink-3);margin-top:6px;font-weight:600}
+.capas{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.capa{background:var(--soft);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.capa .on{font-size:12.5px;font-weight:700;color:var(--ink-2)}
+.capa .ov{font-size:20px;font-weight:800}
+.capa .om{font-size:11.5px;color:var(--ink-3);font-weight:600}
+.capa .cb{position:relative;height:6px;border-radius:4px;background:var(--line)}
+.capa .cb i{position:absolute;left:0;top:0;bottom:0;border-radius:4px}
+.capa.bien .cb i{background:var(--good)} .capa.mal .cb i{background:var(--bad)} .capa.nd .cb i{background:var(--ink-3)}
+.capa .cb b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
+.mix{display:flex;height:14px;gap:2px;border-radius:7px;overflow:hidden;background:var(--soft);margin-top:14px}
+.mix span{display:block;height:100%;min-width:3px}
+
+/* ---------- funnel horizontal ---------- */
+.hfun{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:900px){ .hfun{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);align-items:stretch} }
+.hf-et{display:flex;flex-direction:column;gap:6px;background:var(--soft);border-radius:12px;padding:12px;min-width:0}
+.hf-l{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--ink-2)}
+.hf-v{font-size:28px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.hf-bar{height:70px;display:flex;align-items:flex-end;border-bottom:1px solid var(--line-2)}
+.hf-bar i{display:block;width:100%;background:var(--blue);border-radius:6px 6px 0 0;min-height:3px}
+.hf-s{font-size:12px;color:var(--ink-2);display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.hf-s b{color:var(--ink)}
+.hf-pm{font-size:11.5px;color:var(--ink-3);font-weight:600}
+.hf-paso{display:none}
+@media (min-width:900px){
+  .hf-paso{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--ink-3);font-size:12px;font-weight:700}
+  .hf-pm{display:none}
+}
+
+.cj-kpis{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:760px){ .cj-kpis{grid-template-columns:repeat(4,minmax(0,1fr))} }
+.cj-serie{position:relative;display:flex;align-items:flex-end;gap:4px;height:120px;margin-top:22px;padding-bottom:18px;border-bottom:1px solid var(--line-2)}
+.cj-d{flex:1 1 0;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}
+.cj-b{width:100%;max-width:26px;background:var(--bad);border-radius:4px 4px 0 0;opacity:.85}
+.cj-b.ok{background:var(--good)} .cj-b.nd{background:var(--line-2)}
+.cj-d span{position:absolute;bottom:-17px;font-size:10px;color:var(--ink-3);white-space:nowrap}
+.cj-meta{position:absolute;left:0;right:0;border-top:2px dashed var(--ink-3);margin-bottom:18px;pointer-events:none}
+.cj-meta span{position:absolute;right:0;top:-18px;font-size:10.5px;font-weight:700;color:var(--ink-2)}
+@media (prefers-reduced-motion:no-preference){ .hb-row .fill,.fr .bar i,.vb .b{transition:width .35s ease,height .35s ease} }
+</style>
+
+<div class="app">
+  <aside class="side" aria-label="Navegación">
+    <div class="logo"><span class="mk" data-ico="logo"></span><span><b>Boxer Growth</b><small>Adquisición</small></span></div>
+    <div class="nav-t">Menú</div>
+    <div role="tablist" aria-label="Pasos del funnel" aria-orientation="vertical" id="nav-tabs"></div>
+    <div class="nav-t">Trimestre</div>
+    <div role="group" aria-label="Trimestre" id="nav-qs"></div>
+    <div class="promo" id="promo"></div>
+  </aside>
+
+  <div class="main">
+    <div class="wrap">
+      <header class="top">
+        <span class="mlogo"><span class="mk" data-ico="logo" style="width:30px;height:30px;border-radius:9px;background:var(--blue);display:grid;place-items:center"></span></span>
+        <h1 id="titulo">Monitor de Growth</h1>
+        <div class="acciones" id="acciones"></div>
+      </header>
+      <nav class="mbar" aria-label="Solapas y trimestre">
+        <div class="mtabs" id="m-tabs" role="tablist" aria-label="Pasos del funnel"></div>
+        <div class="mqs" id="m-qs" role="group" aria-label="Trimestre"></div>
+      </nav>
+      <main id="panel" role="tabpanel"></main>
+      <p class="pie" id="pie"></p>
+    </div>
+  </div>
+</div>
+
+<div class="velo" id="velo" hidden></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-t" hidden></div>
+<div class="hoja" id="hoja" role="dialog" aria-modal="true" aria-labelledby="hoja-t" hidden>
+  <div class="cab"><h3 id="hoja-t"></h3><button class="cerrar" id="cerrar" type="button">Cerrar</button></div>
+  <div id="hoja-c"></div>
+</div>
+
+<script>
+const D = {"generado_en": "2026-10-08T12:04:11+00:00", "actualizado": "2026-10-08", "trimestres": [{"etiqueta": "2026-Q2", "desde": "2026-04-01", "hasta": "2026-06-30", "parcial": false, "corte": "2026-06-30", "previo": null, "funnel": {"tabla": {"gasto": 3184.57, "gasto_medios": 3184.57, "gasto_overhead": 0.0, "generados": 1009, "no_calificados": 139, "derivados": 661, "derivados_mismo_q": 253, "presupuestados": 159, "presupuestados_mismo_q": 89, "a_futuro": 96, "a_futuro_ventas": 37, "a_futuro_presupuestos": 59, "cerrados": 55, "cerrados_mismo_q": 19, "mrr": 10459.5}, "inactivo": {"n": 534, "pct": 52.9, "razones": [["No responde mensajes ni llamada", 310], ["(sin razón cargada)", 139], ["No interesado por ahora", 26]], "canales": [["Meta Ads", 236], ["Vendedores Viajantes", 197], ["Google Ads", 63]]}, "no_calificado": {"n": 139, "pct": 13.8, "razones": [["(sin razón cargada)", 46]], "canales": [["Meta Ads", 54], ["Vendedores Viajantes", 33], ["Google Ads", 24]]}, "win_rate": 5.5, "pct_a_futuro": 9.5, "dias_cierre": {"promedio": 46.5, "n": 45, "de": 55}, "cac": {"general": 57.9, "canales": [{"canal": "Meta Ads", "gasto": 2441.56, "cierres": 16, "cac": 152.6, "cobertura": 1.0}, {"canal": "Google Ads", "gasto": 743.01, "cierres": 15, "cac": 49.53, "cobertura": 1.0}]}}, "generacion": {"gasto": 3184.57, "semanal": {"actual": {"valores": [26, 233, 179, 92, 60, 67, 40, 78, 63, 39, 45, 35, 34, 18], "ultima_parcial": false, "rangos": [["2026-04-01", "2026-04-03"], ["2026-04-04", "2026-04-10"], ["2026-04-11", "2026-04-17"], ["2026-04-18", "2026-04-24"], ["2026-04-25", "2026-05-01"], ["2026-05-02", "2026-05-08"], ["2026-05-09", "2026-05-15"], ["2026-05-16", "2026-05-22"], ["2026-05-23", "2026-05-29"], ["2026-05-30", "2026-06-05"], ["2026-06-06", "2026-06-12"], ["2026-06-13", "2026-06-19"], ["2026-06-20", "2026-06-26"], ["2026-06-27", "2026-06-30"]], "primera_parcial": true}, "previo": null, "previo_etiqueta": null}, "generados": 1009, "por_canal": [{"canal": "Meta Ads", "clave": "meta", "generados": 451, "gasto": 2441.56, "cpl": 5.41, "cobertura": 1.0}, {"canal": "Vendedores Viajantes", "clave": "vendedores_viajantes", "generados": 263, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Google Ads", "clave": "google", "generados": 117, "gasto": 743.01, "cpl": 6.35, "cobertura": 1.0}, {"canal": "Redes Sociales", "clave": "redes_sociales", "generados": 64, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Orgánico y Contenido", "clave": "organico_contenido", "generados": 39, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Sin atribuir", "clave": "sin_atribuir", "generados": 36, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Cursos y Webinars", "clave": "cursos_webinars", "generados": 33, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Embajadores y Referidos", "clave": "embajadores_referidos", "generados": 6, "gasto": 0.0, "cpl": null, "cobertura": 0.0}], "podio": {"podio": [{"canal": "Meta Ads", "puntos": 9, "derivados": 200, "cierres": 16, "presupuestados": 80, "pct_no_calificacion": 12.0}, {"canal": "Google Ads", "puntos": 4, "derivados": 32, "cierres": 15, "presupuestados": 23, "pct_no_calificacion": 20.5}, {"canal": "Vendedores Viajantes", "puntos": 4, "derivados": 347, "cierres": 14, "presupuestados": 16, "pct_no_calificacion": 12.5}], "criterios": [{"criterio": "Más derivó", "clave": "derivados", "pct": false, "top": [["Vendedores Viajantes", 347], ["Meta Ads", 200], ["Redes Sociales", 48]]}, {"criterio": "Más cierres", "clave": "cierres", "pct": false, "top": [["Meta Ads", 16], ["Google Ads", 15], ["Vendedores Viajantes", 14]]}, {"criterio": "Más presupuestos", "clave": "presupuestados", "pct": false, "top": [["Meta Ads", 80], ["Google Ads", 23], ["Redes Sociales", 20]]}, {"criterio": "Menos no calificados", "clave": "pct_no_calificacion", "pct": true, "top": [["Orgánico y Contenido", 0.0], ["Cursos y Webinars", 3.0], ["Meta Ads", 12.0]]}], "n_minimo": 15}, "cpl": 3.16, "por_tipo_negocio": [["Casa de Repuestos de Autos", 353], ["Taller mecánico", 231], ["A definir", 122], ["Combinación con Casa de Repuestos", 101], ["Casa de Repuestos de Motos", 52], ["Lubricentro", 46], ["Sin cargar", 36], ["Distribuidora", 32], ["Casa de Repuestos de Pesados", 13], ["Combinación con Casa de Repuestos de motos", 7], ["Combinación sin Casa de Repuestos", 6], ["Autopartes", 3], ["Desarmadero", 2], ["Baterias", 2], ["concesionario", 2], ["Casa de Repuestos de Agrícolas", 1]]}, "derivacion": {"derivados": 661, "derivados_mismo_q": 253, "por_asesor": [["Santiago Iaquinta", 202], ["Luciana Canteli", 198], ["Yamil Di Nocco", 173], ["Diego Abanto", 52], ["Priscilla Cejas", 32], ["Yamila Sampedro", 4]], "por_canal": [["Vendedores Viajantes", 347], ["Meta Ads", 200], ["Redes Sociales", 48], ["Google Ads", 32], ["Embajadores y Referidos", 11], ["Sin atribuir", 10], ["Cursos y Webinars", 5], ["Orgánico y Contenido", 3], ["Outbound y Base Fría", 3], ["Reciclado", 2]], "semanal": {"actual": {"valores": [5, 249, 128, 35, 31, 32, 31, 37, 27, 14, 15, 28, 23, 6], "ultima_parcial": false, "rangos": [["2026-04-01", "2026-04-03"], ["2026-04-04", "2026-04-10"], ["2026-04-11", "2026-04-17"], ["2026-04-18", "2026-04-24"], ["2026-04-25", "2026-05-01"], ["2026-05-02", "2026-05-08"], ["2026-05-09", "2026-05-15"], ["2026-05-16", "2026-05-22"], ["2026-05-23", "2026-05-29"], ["2026-05-30", "2026-06-05"], ["2026-06-06", "2026-06-12"], ["2026-06-13", "2026-06-19"], ["2026-06-20", "2026-06-26"], ["2026-06-27", "2026-06-30"]], "primera_parcial": true}, "previo": null, "previo_etiqueta": null}, "por_tipo_negocio": [["Casa de Repuestos de Autos", 335], ["Combinación con Casa de Repuestos", 108], ["Combinación sin Casa de Repuestos", 72], ["Taller mecánico", 44], ["Casa de Repuestos de Motos", 34], ["A definir", 23], ["Distribuidora", 9], ["Desarmadero", 8], ["Casa de Repuestos de Pesados", 6], ["Sin cargar", 6], ["Combinación con Casa de Repuestos de motos", 5], ["Lubricentro", 3], ["Casa de Repuestos de Agrícolas", 3], ["Autopartes", 3], ["Baterias", 2]], "actividades": {"promedio": 1.0, "n": 262, "sin_actividad": 121}, "dias_derivacion": {"promedio": 6.1, "mediana": 2.0, "n": 191}}, "ventas": {"semanal": {"actual": {"valores": [1, 1, 9, 8, 8, 32, 17, 18, 10, 14, 10, 10, 16, 5], "ultima_parcial": false, "rangos": [["2026-04-01", "2026-04-03"], ["2026-04-04", "2026-04-10"], ["2026-04-11", "2026-04-17"], ["2026-04-18", "2026-04-24"], ["2026-04-25", "2026-05-01"], ["2026-05-02", "2026-05-08"], ["2026-05-09", "2026-05-15"], ["2026-05-16", "2026-05-22"], ["2026-05-23", "2026-05-29"], ["2026-05-30", "2026-06-05"], ["2026-06-06", "2026-06-12"], ["2026-06-13", "2026-06-19"], ["2026-06-20", "2026-06-26"], ["2026-06-27", "2026-06-30"]], "primera_parcial": true}, "previo": null, "previo_etiqueta": null}, "presupuestos": 159, "asesores": [{"asesor": "Santiago Iaquinta", "presupuestos": 53, "mrr_presupuestado": 1278.25, "cierres": 16, "mrr": 2878.5, "dias_cierre": 53.4, "dias_cierre_n": 12, "recibido": {"A futuro": 95, "En gestión": 14, "Otros embudos": 62, "Presupuestado": 11, "Cliente": 10, "Perdido o no califica": 10}, "recibido_total": 202}, {"asesor": "Luciana Canteli", "presupuestos": 79, "mrr_presupuestado": 5676.0, "cierres": 17, "mrr": 3786.0, "dias_cierre": 68.2, "dias_cierre_n": 16, "recibido": {"A futuro": 63, "Otros embudos": 107, "Presupuestado": 12, "Cliente": 14, "En gestión": 1, "Perdido o no califica": 1}, "recibido_total": 198}, {"asesor": "Yamil Di Nocco", "presupuestos": 20, "mrr_presupuestado": 1792.0, "cierres": 16, "mrr": 2623.0, "dias_cierre": 22.7, "dias_cierre_n": 15, "recibido": {"Otros embudos": 89, "A futuro": 43, "Perdido o no califica": 4, "Presupuestado": 8, "En gestión": 13, "Cliente": 16}, "recibido_total": 173}, {"asesor": "Diego Abanto", "presupuestos": 6, "mrr_presupuestado": 660.0, "cierres": 5, "mrr": 1041.0, "dias_cierre": 10.0, "dias_cierre_n": 2, "recibido": {"Otros embudos": 10, "En gestión": 21, "Presupuestado": 7, "A futuro": 11, "Cliente": 3}, "recibido_total": 52}, {"asesor": "Priscilla Cejas", "presupuestos": 0, "mrr_presupuestado": 0.0, "cierres": 0, "mrr": 0.0, "dias_cierre": null, "dias_cierre_n": 0, "recibido": {"Otros embudos": 21, "A futuro": 3, "En gestión": 7, "Presupuestado": 1}, "recibido_total": 32}, {"asesor": "Yamila Sampedro", "presupuestos": 1, "mrr_presupuestado": 131.0, "cierres": 1, "mrr": 131.0, "dias_cierre": null, "dias_cierre_n": 0, "recibido": {"Otros embudos": 4}, "recibido_total": 4}], "grupos": ["En gestión", "A futuro", "Presupuestado", "Cliente", "Perdido o no califica", "Otros embudos"], "clientes": {"n": 55, "planes": [["Sin cargar", 22], ["Modularizado bajo", 8], ["Super", 7], ["Común", 6], ["Modularizado Alto", 5], ["Modularizado Medio", 3], ["Modularizado Medio +", 2], ["Modularizado Bajo +", 2]], "vendedores": [["Luciana Canteli", 17], ["Santiago Iaquinta", 16], ["Yamil Di Nocco", 16], ["Diego Abanto", 5], ["Yamila Sampedro", 1]], "tipos": [["Casa de Repuestos de Autos", 31], ["Combinación con Casa de Repuestos", 7], ["Sin cargar", 7], ["Combinación sin Casa de Repuestos", 3], ["Combinación con Casa de Repuestos de motos", 1], ["Taller mecánico", 1], ["Lubricentro", 1], ["Casa de Repuestos de Pesados", 1], ["A definir", 1], ["Casa de Repuestos de Motos", 1], ["Distribuidora", 1]]}}, "salud": {"periodo": {"desde": "2026-04-01", "hasta": "2026-06-30"}, "total_prospectos": 1009, "hallazgos": [{"check": "Prospectos sin canal atribuido", "estado": "ok", "severidad": "alta", "valor": "36/1009 (3.6%)", "pct": 3.6, "detalle": ""}, {"check": "Contactabilidad: Meta Ads", "estado": "ok", "severidad": "media", "valor": "390/451 sin teléfono ni mail (86.5%)", "detalle": ""}, {"check": "Contactabilidad: Google Ads", "estado": "ok", "severidad": "media", "valor": "108/117 sin teléfono ni mail (92.3%)", "detalle": ""}, {"check": "Contactabilidad: Redes Sociales", "estado": "alerta", "severidad": "media", "valor": "58/64 sin teléfono ni mail (90.6%)", "detalle": "Empeoró +23.9 pp contra el período anterior (66.7%)."}, {"check": "Cierres sin MRR cargado", "estado": "alerta", "severidad": "alta", "valor": "3/55 (5.5%)", "pct": 5.5, "detalle": "Sin MRR no hay ticket promedio, ni payback, ni LTV/CAC."}, {"check": "Cierres sin fecha de presupuestado", "estado": "alerta", "severidad": "baja", "valor": "28/55 (50.9%)", "pct": 50.9, "detalle": "Saltean una etapa del funnel: el % presupuestado→cierre queda sesgado."}, {"check": "Inversión de Meta Ads", "estado": "ok", "severidad": "alta", "valor": "al día hasta 2026-10-07, vía la API de Meta (90 días del período)", "detalle": ""}, {"check": "Inversión de Google Ads", "estado": "ok", "severidad": "alta", "valor": "al día hasta 2026-10-07, vía el SPA (84 días del período)", "detalle": ""}, {"check": "Inversión de Redes Sociales", "estado": "alerta", "severidad": "alta", "valor": "faltan 90 de 90 días: 2026-04-01, 2026-04-02, 2026-04-03, 2026-04-04…", "detalle": "Con días sin dato, el CPL y el CAC del período salen más baratos de lo real."}, {"check": "Bitrix al día con Meta", "estado": "ok", "severidad": "media", "valor": "coinciden hasta 2026-06-30 ($2,442)", "detalle": ""}], "alertas": 4, "confiabilidad": "baja"}, "comparacion": {"tramo": {"desde": "2026-04-01", "hasta": "2026-06-30", "dias": 91}, "previo": null, "metricas": {"generados": {"nombre": "Leads generados", "actual": 1009, "previo": null, "mejor": "sube", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}, "cpl": {"nombre": "Costo por lead", "actual": 3.16, "previo": null, "mejor": "baja", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}, "pct_no_calificacion": {"nombre": "% de no calificación", "actual": 13.8, "previo": null, "mejor": "baja", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}, "pct_inactivo": {"nombre": "% prospecto inactivo", "actual": 52.9, "previo": null, "mejor": "baja", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}, "derivados": {"nombre": "Leads derivados", "actual": 661, "previo": null, "mejor": "sube", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}, "presupuestados": {"nombre": "Leads presupuestados", "actual": 159, "previo": null, "mejor": "sube", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}, "cerrados": {"nombre": "Leads cerrados", "actual": 55, "previo": null, "mejor": "sube", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}, "mrr": {"nombre": "MRR cerrado", "actual": 10459.5, "previo": null, "mejor": "sube", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}, "win_rate": {"nombre": "% win rate", "actual": 5.5, "previo": null, "mejor": "sube", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}, "cac": {"nombre": "CAC", "actual": 57.9, "previo": null, "mejor": "baja", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}, "dias_cierre": {"nombre": "Promedio días de cierre", "actual": 46.5, "previo": null, "mejor": "baja", "delta_pct": null, "delta_pp": null, "estado": "sin_lectura"}}}, "objetivos": null}, {"etiqueta": "2026-Q3", "desde": "2026-07-01", "hasta": "2026-09-30", "parcial": false, "corte": "2026-09-30", "previo": "2026-Q2", "funnel": {"tabla": {"gasto": 2499.29, "gasto_medios": 2499.29, "gasto_overhead": 0.0, "generados": 585, "no_calificados": 86, "derivados": 222, "derivados_mismo_q": 180, "presupuestados": 176, "presupuestados_mismo_q": 94, "a_futuro": 37, "a_futuro_ventas": 9, "a_futuro_presupuestos": 28, "cerrados": 38, "cerrados_mismo_q": 15, "mrr": 9114.8}, "inactivo": {"n": 252, "pct": 43.1, "razones": [["No responde mensajes ni llamada", 150], ["No interesado por ahora", 17], ["Lead enfriado", 17]], "canales": [["Meta Ads", 184], ["Google Ads", 32], ["Cursos y Webinars", 19]]}, "no_calificado": {"n": 86, "pct": 14.7, "razones": [["mensaje sin sentido", 19]], "canales": [["Meta Ads", 40], ["Google Ads", 22], ["Sin atribuir", 16]]}, "win_rate": 6.5, "pct_a_futuro": 6.3, "dias_cierre": {"promedio": 80.3, "n": 36, "de": 38}, "cac": {"general": 65.77, "canales": [{"canal": "Meta Ads", "gasto": 1790.71, "cierres": 7, "cac": 255.82, "cobertura": 1.0}, {"canal": "Google Ads", "gasto": 567.55, "cierres": 10, "cac": 56.75, "cobertura": 1.0}, {"canal": "Redes Sociales", "gasto": 141.03, "cierres": 6, "cac": 23.5, "cobertura": 0.92}]}}, "generacion": {"gasto": 2499.29, "semanal": {"actual": {"valores": [18, 35, 38, 33, 46, 61, 39, 39, 68, 59, 37, 52, 39, 21], "ultima_parcial": false, "rangos": [["2026-07-01", "2026-07-03"], ["2026-07-04", "2026-07-10"], ["2026-07-11", "2026-07-17"], ["2026-07-18", "2026-07-24"], ["2026-07-25", "2026-07-31"], ["2026-08-01", "2026-08-07"], ["2026-08-08", "2026-08-14"], ["2026-08-15", "2026-08-21"], ["2026-08-22", "2026-08-28"], ["2026-08-29", "2026-09-04"], ["2026-09-05", "2026-09-11"], ["2026-09-12", "2026-09-18"], ["2026-09-19", "2026-09-25"], ["2026-09-26", "2026-09-30"]], "primera_parcial": true}, "previo": {"valores": [26, 233, 179, 92, 60, 67, 40, 78, 63, 39, 45, 35, 34, 18], "ultima_parcial": false, "rangos": [["2026-04-01", "2026-04-03"], ["2026-04-04", "2026-04-10"], ["2026-04-11", "2026-04-17"], ["2026-04-18", "2026-04-24"], ["2026-04-25", "2026-05-01"], ["2026-05-02", "2026-05-08"], ["2026-05-09", "2026-05-15"], ["2026-05-16", "2026-05-22"], ["2026-05-23", "2026-05-29"], ["2026-05-30", "2026-06-05"], ["2026-06-06", "2026-06-12"], ["2026-06-13", "2026-06-19"], ["2026-06-20", "2026-06-26"], ["2026-06-27", "2026-06-30"]], "primera_parcial": true}, "previo_etiqueta": "2026-Q2"}, "generados": 585, "por_canal": [{"canal": "Meta Ads", "clave": "meta", "generados": 316, "gasto": 1790.71, "cpl": 5.67, "cobertura": 1.0}, {"canal": "Google Ads", "clave": "google", "generados": 88, "gasto": 567.55, "cpl": 6.45, "cobertura": 1.0}, {"canal": "Cursos y Webinars", "clave": "cursos_webinars", "generados": 76, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Vendedores Viajantes", "clave": "vendedores_viajantes", "generados": 44, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Redes Sociales", "clave": "redes_sociales", "generados": 27, "gasto": 141.03, "cpl": 5.22, "cobertura": 0.92}, {"canal": "Sin atribuir", "clave": "sin_atribuir", "generados": 24, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Embajadores y Referidos", "clave": "embajadores_referidos", "generados": 6, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Orgánico y Contenido", "clave": "organico_contenido", "generados": 2, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Outbound y Base Fría", "clave": "outbound_base_fria", "generados": 2, "gasto": 0.0, "cpl": null, "cobertura": 0.0}], "podio": {"podio": [{"canal": "Meta Ads", "puntos": 9, "derivados": 86, "cierres": 7, "presupuestados": 60, "pct_no_calificacion": 12.7}, {"canal": "Google Ads", "puntos": 5, "derivados": 35, "cierres": 10, "presupuestados": 28, "pct_no_calificacion": 25.0}, {"canal": "Vendedores Viajantes", "puntos": 5, "derivados": 36, "cierres": 7, "presupuestados": 36, "pct_no_calificacion": 13.6}], "criterios": [{"criterio": "Más derivó", "clave": "derivados", "pct": false, "top": [["Meta Ads", 86], ["Vendedores Viajantes", 36], ["Google Ads", 35]]}, {"criterio": "Más cierres", "clave": "cierres", "pct": false, "top": [["Google Ads", 10], ["Meta Ads", 7], ["Vendedores Viajantes", 7]]}, {"criterio": "Más presupuestos", "clave": "presupuestados", "pct": false, "top": [["Meta Ads", 60], ["Vendedores Viajantes", 36], ["Google Ads", 28]]}, {"criterio": "Menos no calificados", "clave": "pct_no_calificacion", "pct": true, "top": [["Cursos y Webinars", 0.0], ["Redes Sociales", 7.4], ["Meta Ads", 12.7]]}], "n_minimo": 15}, "cpl": 4.27, "por_tipo_negocio": [["Casa de Repuestos de Autos", 218], ["A definir", 106], ["Taller mecánico", 91], ["Casa de Repuestos de Motos", 56], ["Combinación con Casa de Repuestos", 29], ["Lubricentro", 28], ["Distribuidora", 26], ["Sin cargar", 17], ["Combinación con Casa de Repuestos de motos", 5], ["Casa de Repuestos de Pesados", 3], ["Casa de Repuestos de Agrícolas", 2], ["Combinación sin Casa de Repuestos", 2], ["Autopartes", 2]]}, "derivacion": {"derivados": 222, "derivados_mismo_q": 180, "por_asesor": [["Santiago Iaquinta", 82], ["Luciana Canteli", 73], ["Yamil Di Nocco", 56], ["Priscilla Cejas", 6], ["Diego Abanto", 4], ["Yamila Sampedro", 1]], "por_canal": [["Meta Ads", 86], ["Vendedores Viajantes", 36], ["Google Ads", 35], ["Cursos y Webinars", 25], ["Redes Sociales", 22], ["Sin atribuir", 6], ["Embajadores y Referidos", 6], ["Orgánico y Contenido", 5], ["Outbound y Base Fría", 1]], "semanal": {"actual": {"valores": [9, 7, 17, 22, 18, 14, 13, 9, 24, 19, 21, 20, 20, 9], "ultima_parcial": false, "rangos": [["2026-07-01", "2026-07-03"], ["2026-07-04", "2026-07-10"], ["2026-07-11", "2026-07-17"], ["2026-07-18", "2026-07-24"], ["2026-07-25", "2026-07-31"], ["2026-08-01", "2026-08-07"], ["2026-08-08", "2026-08-14"], ["2026-08-15", "2026-08-21"], ["2026-08-22", "2026-08-28"], ["2026-08-29", "2026-09-04"], ["2026-09-05", "2026-09-11"], ["2026-09-12", "2026-09-18"], ["2026-09-19", "2026-09-25"], ["2026-09-26", "2026-09-30"]], "primera_parcial": true}, "previo": {"valores": [5, 249, 128, 35, 31, 32, 31, 37, 27, 14, 15, 28, 23, 6], "ultima_parcial": false, "rangos": [["2026-04-01", "2026-04-03"], ["2026-04-04", "2026-04-10"], ["2026-04-11", "2026-04-17"], ["2026-04-18", "2026-04-24"], ["2026-04-25", "2026-05-01"], ["2026-05-02", "2026-05-08"], ["2026-05-09", "2026-05-15"], ["2026-05-16", "2026-05-22"], ["2026-05-23", "2026-05-29"], ["2026-05-30", "2026-06-05"], ["2026-06-06", "2026-06-12"], ["2026-06-13", "2026-06-19"], ["2026-06-20", "2026-06-26"], ["2026-06-27", "2026-06-30"]], "primera_parcial": true}, "previo_etiqueta": "2026-Q2"}, "por_tipo_negocio": [["Casa de Repuestos de Autos", 130], ["Combinación con Casa de Repuestos", 36], ["Casa de Repuestos de Motos", 13], ["Distribuidora", 12], ["Taller mecánico", 10], ["Lubricentro", 6], ["Combinación con Casa de Repuestos de motos", 4], ["Sin cargar", 4], ["Casa de Repuestos de Pesados", 3], ["Combinación sin Casa de Repuestos", 2], ["Casa de Repuestos de Agrícolas", 1], ["Autopartes", 1]], "actividades": {"promedio": 1.0, "n": 193, "sin_actividad": 100}, "dias_derivacion": {"promedio": 12.1, "mediana": 1.0, "n": 127}}, "ventas": {"semanal": {"actual": {"valores": [6, 7, 4, 18, 16, 11, 10, 14, 15, 13, 19, 10, 18, 15], "ultima_parcial": false, "rangos": [["2026-07-01", "2026-07-03"], ["2026-07-04", "2026-07-10"], ["2026-07-11", "2026-07-17"], ["2026-07-18", "2026-07-24"], ["2026-07-25", "2026-07-31"], ["2026-08-01", "2026-08-07"], ["2026-08-08", "2026-08-14"], ["2026-08-15", "2026-08-21"], ["2026-08-22", "2026-08-28"], ["2026-08-29", "2026-09-04"], ["2026-09-05", "2026-09-11"], ["2026-09-12", "2026-09-18"], ["2026-09-19", "2026-09-25"], ["2026-09-26", "2026-09-30"]], "primera_parcial": true}, "previo": {"valores": [1, 1, 9, 8, 8, 32, 17, 18, 10, 14, 10, 10, 16, 5], "ultima_parcial": false, "rangos": [["2026-04-01", "2026-04-03"], ["2026-04-04", "2026-04-10"], ["2026-04-11", "2026-04-17"], ["2026-04-18", "2026-04-24"], ["2026-04-25", "2026-05-01"], ["2026-05-02", "2026-05-08"], ["2026-05-09", "2026-05-15"], ["2026-05-16", "2026-05-22"], ["2026-05-23", "2026-05-29"], ["2026-05-30", "2026-06-05"], ["2026-06-06", "2026-06-12"], ["2026-06-13", "2026-06-19"], ["2026-06-20", "2026-06-26"], ["2026-06-27", "2026-06-30"]], "primera_parcial": true}, "previo_etiqueta": "2026-Q2"}, "presupuestos": 176, "asesores": [{"asesor": "Santiago Iaquinta", "presupuestos": 76, "mrr_presupuestado": 2174.55, "cierres": 14, "mrr": 2847.3, "dias_cierre": 102.0, "dias_cierre_n": 12, "recibido": {"En gestión": 8, "A futuro": 30, "Otros embudos": 18, "Presupuestado": 16, "Perdido o no califica": 5, "Cliente": 5}, "recibido_total": 82}, {"asesor": "Luciana Canteli", "presupuestos": 61, "mrr_presupuestado": 5306.5, "cierres": 14, "mrr": 3374.5, "dias_cierre": 90.7, "dias_cierre_n": 14, "recibido": {"Otros embudos": 16, "Presupuestado": 29, "A futuro": 16, "En gestión": 6, "Cliente": 6}, "recibido_total": 73}, {"asesor": "Yamil Di Nocco", "presupuestos": 38, "mrr_presupuestado": 1050.0, "cierres": 8, "mrr": 1611.0, "dias_cierre": 28.5, "dias_cierre_n": 8, "recibido": {"En gestión": 6, "A futuro": 5, "Otros embudos": 20, "Cliente": 6, "Presupuestado": 19}, "recibido_total": 56}, {"asesor": "Priscilla Cejas", "presupuestos": 0, "mrr_presupuestado": 0.0, "cierres": 0, "mrr": 0.0, "dias_cierre": null, "dias_cierre_n": 0, "recibido": {"En gestión": 6}, "recibido_total": 6}, {"asesor": "Diego Abanto", "presupuestos": 1, "mrr_presupuestado": 1282.0, "cierres": 2, "mrr": 1282.0, "dias_cierre": 84.5, "dias_cierre_n": 2, "recibido": {"En gestión": 3, "Cliente": 1}, "recibido_total": 4}, {"asesor": "Yamila Sampedro", "presupuestos": 0, "mrr_presupuestado": 0.0, "cierres": 0, "mrr": 0.0, "dias_cierre": null, "dias_cierre_n": 0, "recibido": {"Otros embudos": 1}, "recibido_total": 1}], "grupos": ["En gestión", "A futuro", "Presupuestado", "Cliente", "Perdido o no califica", "Otros embudos"], "clientes": {"n": 38, "planes": [["Super", 15], ["Común", 6], ["Modularizado Alto", 5], ["Modularizado bajo", 5], ["Modularizado Alto +", 2], ["Modularizado Medio", 2], ["Premium", 1], ["Modularizado Bajo +", 1], ["Modularizado Medio +", 1]], "vendedores": [["Luciana Canteli", 14], ["Santiago Iaquinta", 14], ["Yamil Di Nocco", 8], ["Diego Abanto", 2]], "tipos": [["Casa de Repuestos de Autos", 24], ["Combinación con Casa de Repuestos", 7], ["Sin cargar", 4], ["Autopartes", 1], ["A definir", 1], ["Casa de Repuestos de Motos", 1]]}}, "salud": {"periodo": {"desde": "2026-07-01", "hasta": "2026-09-30"}, "total_prospectos": 585, "hallazgos": [{"check": "Prospectos sin canal atribuido", "estado": "ok", "severidad": "alta", "valor": "24/585 (4.1%)", "pct": 4.1, "detalle": ""}, {"check": "Contactabilidad: Meta Ads", "estado": "ok", "severidad": "media", "valor": "300/316 sin teléfono ni mail (94.9%)", "detalle": ""}, {"check": "Contactabilidad: Google Ads", "estado": "ok", "severidad": "media", "valor": "88/88 sin teléfono ni mail (100.0%)", "detalle": ""}, {"check": "Contactabilidad: Redes Sociales", "estado": "ok", "severidad": "media", "valor": "26/27 sin teléfono ni mail (96.3%)", "detalle": ""}, {"check": "Cierres sin MRR cargado", "estado": "ok", "severidad": "alta", "valor": "1/38 (2.6%)", "pct": 2.6, "detalle": ""}, {"check": "Cierres sin fecha de presupuestado", "estado": "ok", "severidad": "baja", "valor": "5/38 (13.2%)", "pct": 13.2, "detalle": ""}, {"check": "Inversión de Meta Ads", "estado": "ok", "severidad": "alta", "valor": "al día hasta 2026-10-07, vía la API de Meta (91 días del período)", "detalle": ""}, {"check": "Inversión de Google Ads", "estado": "ok", "severidad": "alta", "valor": "al día hasta 2026-10-07, vía el SPA (85 días del período)", "detalle": ""}, {"check": "Inversión de Redes Sociales", "estado": "alerta", "severidad": "alta", "valor": "faltan 7 de 91 días: 2026-07-01, 2026-07-02, 2026-07-03, 2026-07-04…", "detalle": "Con días sin dato, el CPL y el CAC del período salen más baratos de lo real."}, {"check": "Bitrix al día con Meta", "estado": "ok", "severidad": "media", "valor": "coinciden hasta 2026-09-30 ($1,932)", "detalle": ""}], "alertas": 1, "confiabilidad": "media"}, "comparacion": {"tramo": {"desde": "2026-07-01", "hasta": "2026-09-30", "dias": 92}, "previo": {"etiqueta": "2026-Q2", "desde": "2026-04-01", "hasta": "2026-06-30"}, "metricas": {"generados": {"nombre": "Leads generados", "actual": 585, "previo": 1009, "mejor": "sube", "delta_pct": -42.0, "delta_pp": null, "estado": "desmejora"}, "cpl": {"nombre": "Costo por lead", "actual": 4.27, "previo": 3.16, "mejor": "baja", "delta_pct": 35.1, "delta_pp": null, "estado": "desmejora"}, "pct_no_calificacion": {"nombre": "% de no calificación", "actual": 14.7, "previo": 13.8, "mejor": "baja", "delta_pct": null, "delta_pp": 0.9, "estado": "estable"}, "pct_inactivo": {"nombre": "% prospecto inactivo", "actual": 43.1, "previo": 52.9, "mejor": "baja", "delta_pct": null, "delta_pp": -9.8, "estado": "mejora"}, "derivados": {"nombre": "Leads derivados", "actual": 222, "previo": 661, "mejor": "sube", "delta_pct": -66.4, "delta_pp": null, "estado": "desmejora"}, "presupuestados": {"nombre": "Leads presupuestados", "actual": 176, "previo": 159, "mejor": "sube", "delta_pct": 10.7, "delta_pp": null, "estado": "estable"}, "cerrados": {"nombre": "Leads cerrados", "actual": 38, "previo": 55, "mejor": "sube", "delta_pct": -30.9, "delta_pp": null, "estado": "desmejora"}, "mrr": {"nombre": "MRR cerrado", "actual": 9114.8, "previo": 10459.5, "mejor": "sube", "delta_pct": -12.9, "delta_pp": null, "estado": "estable"}, "win_rate": {"nombre": "% win rate", "actual": 6.5, "previo": 5.5, "mejor": "sube", "delta_pct": null, "delta_pp": 1.0, "estado": "estable"}, "cac": {"nombre": "CAC", "actual": 65.77, "previo": 57.9, "mejor": "baja", "delta_pct": 13.6, "delta_pp": null, "estado": "estable"}, "dias_cierre": {"nombre": "Promedio días de cierre", "actual": 80.3, "previo": 46.5, "mejor": "baja", "delta_pct": 72.7, "delta_pp": null, "estado": "desmejora"}}}, "objetivos": null}, {"etiqueta": "2026-Q4", "desde": "2026-10-01", "hasta": "2026-12-31", "parcial": true, "corte": "2026-10-08", "previo": "2026-Q3", "funnel": {"tabla": {"gasto": 193.88, "gasto_medios": 193.88, "gasto_overhead": 0.0, "generados": 38, "no_calificados": 4, "derivados": 16, "derivados_mismo_q": 9, "presupuestados": 28, "presupuestados_mismo_q": 2, "a_futuro": 0, "a_futuro_ventas": 0, "a_futuro_presupuestos": 0, "cerrados": 2, "cerrados_mismo_q": 0, "mrr": 358.5}, "inactivo": {"n": 4, "pct": 10.5, "razones": [["Le parece caro", 2], ["Fecha de apertura en mas de 1 mes", 2]], "canales": [["Meta Ads", 4]]}, "no_calificado": {"n": 4, "pct": 10.5, "razones": [["Buscaba otra cosa", 2]], "canales": [["Meta Ads", 4]]}, "win_rate": 5.3, "pct_a_futuro": 0.0, "dias_cierre": {"promedio": 25.5, "n": 2, "de": 2}, "cac": {"general": 96.94, "canales": [{"canal": "Meta Ads", "gasto": 139.93, "cierres": 0, "cac": null, "cobertura": 0.88}, {"canal": "Google Ads", "gasto": 42.99, "cierres": 1, "cac": 42.99, "cobertura": 0.88}, {"canal": "Redes Sociales", "gasto": 10.96, "cierres": 0, "cac": null, "cobertura": 0.88}]}}, "generacion": {"gasto": 193.88, "semanal": {"actual": {"valores": [3, 35], "ultima_parcial": true, "rangos": [["2026-10-01", "2026-10-02"], ["2026-10-03", "2026-10-08"]], "primera_parcial": true}, "previo": {"valores": [18, 35, 38, 33, 46, 61, 39, 39, 68, 59, 37, 52, 39, 21], "ultima_parcial": false, "rangos": [["2026-07-01", "2026-07-03"], ["2026-07-04", "2026-07-10"], ["2026-07-11", "2026-07-17"], ["2026-07-18", "2026-07-24"], ["2026-07-25", "2026-07-31"], ["2026-08-01", "2026-08-07"], ["2026-08-08", "2026-08-14"], ["2026-08-15", "2026-08-21"], ["2026-08-22", "2026-08-28"], ["2026-08-29", "2026-09-04"], ["2026-09-05", "2026-09-11"], ["2026-09-12", "2026-09-18"], ["2026-09-19", "2026-09-25"], ["2026-09-26", "2026-09-30"]], "primera_parcial": true}, "previo_etiqueta": "2026-Q3"}, "generados": 38, "por_canal": [{"canal": "Meta Ads", "clave": "meta", "generados": 35, "gasto": 139.93, "cpl": 4.0, "cobertura": 0.88}, {"canal": "Redes Sociales", "clave": "redes_sociales", "generados": 2, "gasto": 10.96, "cpl": 5.48, "cobertura": 0.88}, {"canal": "Sin atribuir", "clave": "sin_atribuir", "generados": 1, "gasto": 0.0, "cpl": null, "cobertura": 0.0}, {"canal": "Google Ads", "clave": "google", "generados": 0, "gasto": 42.99, "cpl": null, "cobertura": 0.88}], "podio": {"podio": [{"canal": "Meta Ads", "puntos": 8, "derivados": 8, "cierres": 0, "presupuestados": 8, "pct_no_calificacion": 11.4}, {"canal": "Vendedores Viajantes", "puntos": 6, "derivados": 1, "cierres": 1, "presupuestados": 12, "pct_no_calificacion": null}, {"canal": "Google Ads", "puntos": 3, "derivados": 0, "cierres": 1, "presupuestados": 1, "pct_no_calificacion": null}], "criterios": [{"criterio": "Más derivó", "clave": "derivados", "pct": false, "top": [["Meta Ads", 8], ["Redes Sociales", 4], ["Vendedores Viajantes", 1]]}, {"criterio": "Más cierres", "clave": "cierres", "pct": false, "top": [["Google Ads", 1], ["Vendedores Viajantes", 1]]}, {"criterio": "Más presupuestos", "clave": "presupuestados", "pct": false, "top": [["Vendedores Viajantes", 12], ["Meta Ads", 8], ["Redes Sociales", 4]]}, {"criterio": "Menos no calificados", "clave": "pct_no_calificacion", "pct": true, "top": [["Meta Ads", 11.4]]}], "n_minimo": 15}, "cpl": 5.1, "por_tipo_negocio": [["Casa de Repuestos de Motos", 12], ["Casa de Repuestos de Autos", 11], ["Taller mecánico", 7], ["Combinación con Casa de Repuestos", 3], ["Lubricentro", 3], ["Sin cargar", 1], ["Distribuidora", 1]]}, "derivacion": {"derivados": 16, "derivados_mismo_q": 9, "por_asesor": [["Santiago Iaquinta", 6], ["Yamil Di Nocco", 5], ["Luciana Canteli", 5]], "por_canal": [["Meta Ads", 8], ["Redes Sociales", 4], ["Sin atribuir", 3], ["Vendedores Viajantes", 1]], "semanal": {"actual": {"valores": [3, 13], "ultima_parcial": true, "rangos": [["2026-10-01", "2026-10-02"], ["2026-10-03", "2026-10-08"]], "primera_parcial": true}, "previo": {"valores": [9, 7, 17, 22, 18, 14, 13, 9, 24, 19, 21, 20, 20, 9], "ultima_parcial": false, "rangos": [["2026-07-01", "2026-07-03"], ["2026-07-04", "2026-07-10"], ["2026-07-11", "2026-07-17"], ["2026-07-18", "2026-07-24"], ["2026-07-25", "2026-07-31"], ["2026-08-01", "2026-08-07"], ["2026-08-08", "2026-08-14"], ["2026-08-15", "2026-08-21"], ["2026-08-22", "2026-08-28"], ["2026-08-29", "2026-09-04"], ["2026-09-05", "2026-09-11"], ["2026-09-12", "2026-09-18"], ["2026-09-19", "2026-09-25"], ["2026-09-26", "2026-09-30"]], "primera_parcial": true}, "previo_etiqueta": "2026-Q3"}, "por_tipo_negocio": [["Combinación con Casa de Repuestos", 4], ["Casa de Repuestos de Autos", 4], ["Casa de Repuestos de Motos", 4], ["Taller mecánico", 2], ["Sin cargar", 1], ["Combinación con Casa de Repuestos de motos", 1]], "actividades": {"promedio": 1.6, "n": 11, "sin_actividad": 6}, "dias_derivacion": {"promedio": 4.1, "mediana": 1.5, "n": 8}}, "ventas": {"semanal": {"actual": {"valores": [11, 17], "ultima_parcial": true, "rangos": [["2026-10-01", "2026-10-02"], ["2026-10-03", "2026-10-08"]], "primera_parcial": true}, "previo": {"valores": [6, 7, 4, 18, 16, 11, 10, 14, 15, 13, 19, 10, 18, 15], "ultima_parcial": false, "rangos": [["2026-07-01", "2026-07-03"], ["2026-07-04", "2026-07-10"], ["2026-07-11", "2026-07-17"], ["2026-07-18", "2026-07-24"], ["2026-07-25", "2026-07-31"], ["2026-08-01", "2026-08-07"], ["2026-08-08", "2026-08-14"], ["2026-08-15", "2026-08-21"], ["2026-08-22", "2026-08-28"], ["2026-08-29", "2026-09-04"], ["2026-09-05", "2026-09-11"], ["2026-09-12", "2026-09-18"], ["2026-09-19", "2026-09-25"], ["2026-09-26", "2026-09-30"]], "primera_parcial": true}, "previo_etiqueta": "2026-Q3"}, "presupuestos": 28, "asesores": [{"asesor": "Santiago Iaquinta", "presupuestos": 7, "mrr_presupuestado": 0.0, "cierres": 0, "mrr": 0.0, "dias_cierre": null, "dias_cierre_n": 0, "recibido": {"En gestión": 6}, "recibido_total": 6}, {"asesor": "Luciana Canteli", "presupuestos": 19, "mrr_presupuestado": 2294.8, "cierres": 1, "mrr": 172.5, "dias_cierre": 14.0, "dias_cierre_n": 1, "recibido": {"Presupuestado": 3, "En gestión": 2}, "recibido_total": 5}, {"asesor": "Yamil Di Nocco", "presupuestos": 2, "mrr_presupuestado": 0.0, "cierres": 1, "mrr": 186.0, "dias_cierre": 37.0, "dias_cierre_n": 1, "recibido": {"Presupuestado": 2, "En gestión": 3}, "recibido_total": 5}], "grupos": ["En gestión", "Presupuestado"], "clientes": {"n": 2, "planes": [["Super", 1], ["Modularizado bajo", 1]], "vendedores": [["Yamil Di Nocco", 1], ["Luciana Canteli", 1]], "tipos": [["Casa de Repuestos de Autos", 2]]}}, "salud": {"periodo": {"desde": "2026-10-01", "hasta": "2026-10-08"}, "total_prospectos": 38, "hallazgos": [{"check": "Prospectos sin canal atribuido", "estado": "ok", "severidad": "alta", "valor": "1/38 (2.6%)", "pct": 2.6, "detalle": ""}, {"check": "Contactabilidad: Meta Ads", "estado": "ok", "severidad": "media", "valor": "35/35 sin teléfono ni mail (100.0%)", "detalle": ""}, {"check": "Contactabilidad: Redes Sociales", "estado": "ok", "severidad": "media", "valor": "2/2 sin teléfono ni mail (100.0%)", "detalle": ""}, {"check": "Origen nuevo sin mapear: Visita Presencial - Bariloche - 2026", "estado": "alerta", "severidad": "media", "valor": 1, "detalle": "Agregar 'UC_287IFD' a un canal en config/definitions.yaml."}, {"check": "Cierres sin MRR cargado", "estado": "ok", "severidad": "alta", "valor": "0/2 (0.0%)", "pct": 0.0, "detalle": ""}, {"check": "Cierres sin fecha de presupuestado", "estado": "ok", "severidad": "baja", "valor": "0/2 (0.0%)", "pct": 0.0, "detalle": ""}, {"check": "Inversión de Meta Ads", "estado": "ok", "severidad": "alta", "valor": "al día hasta 2026-10-07, vía la API de Meta (7 días del período)", "detalle": ""}, {"check": "Inversión de Google Ads", "estado": "ok", "severidad": "alta", "valor": "al día hasta 2026-10-07, vía el SPA (1 días del período)", "detalle": ""}, {"check": "Inversión de Redes Sociales", "estado": "ok", "severidad": "alta", "valor": "al día hasta 2026-10-07, vía la API de Meta (7 días del período)", "detalle": ""}, {"check": "Bitrix al día con Meta", "estado": "ok", "severidad": "media", "valor": "coinciden hasta 2026-10-07 ($151)", "detalle": ""}], "alertas": 1, "confiabilidad": "alta"}, "comparacion": {"tramo": {"desde": "2026-10-01", "hasta": "2026-10-08", "dias": 8}, "previo": {"etiqueta": "2026-Q3", "desde": "2026-07-01", "hasta": "2026-07-08"}, "metricas": {"generados": {"nombre": "Leads generados", "actual": 38, "previo": 47, "mejor": "sube", "delta_pct": -19.1, "delta_pp": null, "estado": "sin_lectura"}, "cpl": {"nombre": "Costo por lead", "actual": 5.1, "previo": 6.06, "mejor": "baja", "delta_pct": -15.8, "delta_pp": null, "estado": "sin_lectura"}, "pct_no_calificacion": {"nombre": "% de no calificación", "actual": 10.5, "previo": 12.8, "mejor": "baja", "delta_pct": null, "delta_pp": -2.3, "estado": "sin_lectura"}, "pct_inactivo": {"nombre": "% prospecto inactivo", "actual": 10.5, "previo": 48.9, "mejor": "baja", "delta_pct": null, "delta_pp": -38.4, "estado": "sin_lectura"}, "derivados": {"nombre": "Leads derivados", "actual": 16, "previo": 16, "mejor": "sube", "delta_pct": 0.0, "delta_pp": null, "estado": "sin_lectura"}, "presupuestados": {"nombre": "Leads presupuestados", "actual": 28, "previo": 12, "mejor": "sube", "delta_pct": 133.3, "delta_pp": null, "estado": "sin_lectura"}, "cerrados": {"nombre": "Leads cerrados", "actual": 2, "previo": 5, "mejor": "sube", "delta_pct": -60.0, "delta_pp": null, "estado": "sin_lectura"}, "mrr": {"nombre": "MRR cerrado", "actual": 358.5, "previo": 1479.0, "mejor": "sube", "delta_pct": -75.8, "delta_pp": null, "estado": "sin_lectura"}, "win_rate": {"nombre": "% win rate", "actual": 5.3, "previo": 10.6, "mejor": "sube", "delta_pct": null, "delta_pp": -5.3, "estado": "sin_lectura"}, "cac": {"nombre": "CAC", "actual": 96.94, "previo": 56.95, "mejor": "baja", "delta_pct": 70.2, "delta_pp": null, "estado": "sin_lectura"}, "dias_cierre": {"nombre": "Promedio días de cierre", "actual": 25.5, "previo": 98.0, "mejor": "baja", "delta_pct": -74.0, "delta_pp": null, "estado": "sin_lectura"}}}, "objetivos": {"metas": [{"clave": "cac", "nombre": "CAC", "valor": 96.94, "meta": 800, "sentido": "max", "formato": "usd", "ok": true, "provisorio": true, "detalle": {"gasto": 193.88, "overhead": 0.0, "cierres": 2}}, {"clave": "roas", "nombre": "ROAS de pauta", "valor": 0.96, "meta": 2, "sentido": "min", "formato": "x", "ok": false, "provisorio": true, "detalle": {"mrr": 186.0, "gasto": 193.88, "cierres": 1, "canales": ["Meta Ads", "Google Ads", "Redes Sociales"]}}, {"clave": "no_calificados", "nombre": "Leads no calificados", "valor": 10.5, "meta": 15, "sentido": "max", "formato": "pct", "ok": true, "provisorio": false, "detalle": {"n": 4, "generados": 38}}, {"clave": "leads", "nombre": "Leads generados", "valor": 38, "meta": 300, "sentido": "acumulado", "formato": "n", "ok": true, "provisorio": true, "detalle": {"proyeccion": 437, "dias": 8, "dias_q": 92, "esperado_hoy": 26}}, {"clave": "casas_repuestos", "nombre": "Casas de repuestos", "valor": 70.3, "meta": 70, "sentido": "min", "formato": "pct", "ok": true, "provisorio": false, "detalle": {"casas": 26, "definidos": 37, "sin_definir": 1}}, {"clave": "win_rate", "nombre": "Win rate", "valor": 5.3, "meta": 5, "sentido": "min", "formato": "pct", "ok": true, "provisorio": true, "detalle": {"cierres": 2, "generados": 38}}], "mrr": {"valor": 358.5, "meta": 7500, "proyeccion": 4123, "esperado_hoy": 652, "dias": 8, "dias_q": 92, "ok": false, "provisorio": true, "cierres": 2, "ticket": 179.25, "en_vivo": {"valor": 0, "meta": 1000, "proyeccion": 0, "esperado_hoy": 87, "ok": false, "prefijos": ["Curso", "Webinar", "Charla"], "extra": ["Demo masiva en vivo"], "origenes": []}, "no_pago": {"valor": 48.1, "mrr": 172.5, "meta": 15, "ok": true}, "grupos": [{"nombre": "Meta Ads + Google Ads", "tipo": "pago", "mrr": 186.0}, {"nombre": "Acciones en vivo", "tipo": "vivo", "mrr": 0}, {"nombre": "Otros no pagos", "tipo": "otro", "mrr": 172.5}, {"nombre": "Sin atribuir", "tipo": "sin", "mrr": 0.0}], "canales": [["Google Ads", 186.0], ["Vendedores Viajantes", 172.5]]}}}], "cartera_a_futuro": {"fecha": "2026-10-08", "asesores": [{"asesor": "Santiago Iaquinta", "total": 244, "sin_actividad": 40, "vencidas": 57, "al_dia": 147, "por_columna": [["Ventas 2.0 · A futuro largo plazo", 103], ["Presupuestos 2.0 · A futuro largo plazo", 93], ["Presupuestos 2.0 · A futuro corto plazo", 36], ["Ventas 2.0 · A futuro corto plazo", 12]]}, {"asesor": "Luciana Canteli", "total": 143, "sin_actividad": 47, "vencidas": 39, "al_dia": 57, "por_columna": [["Presupuestos 2.0 · A futuro largo plazo", 50], ["Ventas 2.0 · A futuro largo plazo", 49], ["Presupuestos 2.0 · A futuro corto plazo", 33], ["Ventas 2.0 · A futuro corto plazo", 11]]}, {"asesor": "Yamil Di Nocco", "total": 53, "sin_actividad": 36, "vencidas": 15, "al_dia": 2, "por_columna": [["Ventas 2.0 · A futuro largo plazo", 29], ["Ventas 2.0 · A futuro corto plazo", 11], ["Presupuestos 2.0 · A futuro largo plazo", 10], ["Presupuestos 2.0 · A futuro corto plazo", 3]]}, {"asesor": "Diego Abanto", "total": 12, "sin_actividad": 6, "vencidas": 4, "al_dia": 2, "por_columna": [["Ventas 2.0 · A futuro largo plazo", 7], ["Presupuestos 2.0 · A futuro largo plazo", 3], ["Ventas 2.0 · A futuro corto plazo", 2]]}, {"asesor": "Felipe Ayerza", "total": 4, "sin_actividad": 4, "vencidas": 0, "al_dia": 0, "por_columna": [["Ventas 2.0 · A futuro largo plazo", 4]]}, {"asesor": "Priscilla Cejas", "total": 3, "sin_actividad": 3, "vencidas": 0, "al_dia": 0, "por_columna": [["Ventas 2.0 · A futuro largo plazo", 3]]}, {"asesor": "Dorelia Battelini", "total": 3, "sin_actividad": 0, "vencidas": 3, "al_dia": 0, "por_columna": [["Ventas 2.0 · A futuro largo plazo", 3]]}, {"asesor": "Reindherz Rios", "total": 2, "sin_actividad": 2, "vencidas": 0, "al_dia": 0, "por_columna": [["Ventas 2.0 · A futuro largo plazo", 2]]}, {"asesor": "Yamila Sampedro", "total": 5, "sin_actividad": 2, "vencidas": 0, "al_dia": 3, "por_columna": [["Ventas 2.0 · A futuro largo plazo", 4], ["Presupuestos 2.0 · A futuro largo plazo", 1]]}, {"asesor": "Iván Ricco", "total": 1, "sin_actividad": 0, "vencidas": 1, "al_dia": 0, "por_columna": [["Ventas 2.0 · A futuro largo plazo", 1]]}], "total": 470, "sin_actividad": 140, "vencidas": 119}, "tiene_actividades": true, "experimentos": [{"id": "EXP-001", "nombre": "Aumentar generación en Meta", "canal": "meta", "canal_nombre": "Meta Ads", "estado": "corriendo", "descripcion": "Sumar en Meta un conjunto con anuncios que funcionaron históricamente, apuntado al público al que apuntaban entonces (similares de quienes vieron videos de Boxer), en paralelo al conjunto actual y sin subir el presupuesto.\n", "problema": "Meta pasó de traer 7,6 leads de formulario por día al CRM en marzo de 2026 a 2,9 en septiembre. En los últimos 28 días entraron 80 leads contra 133 de los 28 anteriores, con el mismo gasto (US$ 473 contra US$ 470), y el costo por lead subió de US$ 3,53 a US$ 5,91.\n", "hipotesis": "Hoy le estamos mostrando los anuncios a públicos distintos de los que generaban. Si volvemos a apuntar a similares de gente que vio videos de Boxer, con anuncios que ya funcionaron, Meta va a traer más leads por el mismo gasto. El público actual de \"Conversión segmentación similar\" (similar 3% cruzado con 5 intereses de mecánica y Advantage+ apagado) es mucho más chico, y los públicos armados con nuestras bases de datos tampoco dieron resultado.\n", "datos": ["Marzo 2026: 237 leads de formulario en el CRM (7,6 por día), 30% de derivación y 13,5% de no calificados. Septiembre: 83 leads (2,9 por día).", "En marzo los leads venían de 4 conjuntos amplios (similares de interacción y de quienes vieron videos, sin intereses y con Advantage+). Hoy vienen de 1 conjunto frío con intereses y Advantage+ apagado, más remarketing.", "El anuncio de Jesi trajo 302 formularios entre diciembre de 2025 y abril de 2026, a unos 3.500 ARS cada uno.", "La calidad de marzo no era peor: 6,6 leads útiles por día contra 2,7 hoy.", "Monitor, últimos 28 días: 80 leads contra 133 de los 28 anteriores, con el costo por lead subiendo de US$ 3,53 a US$ 5,91.", "Fuente del análisis histórico: https://claude.ai/artifact/PtZL3uJ8TDJzFafysUG19A"], "solucion": "Se activa el conjunto \"Conversión - LAL Vieron video 1-3% (AGENTE META)\" (similares 1-3% de quienes vieron videos de Boxer) con los anuncios que funcionaron históricamente. \"Conversión segmentación similar\" sigue corriendo y el presupuesto total de Meta no cambia durante la prueba.\n", "metrica_primaria": "leads_conjunto_dia", "efecto_esperado": "6 leads por día o más del conjunto", "n_minimo": 60, "lanzamiento": "2026-10-05", "fin_analisis": "2026-10-25", "responsable": "Joana Villarreal", "conclusion": "", "decision": "", "notas": "El éxito se mide sobre el conjunto \"Conversión - LAL Vieron video 1-3%\n(AGENTE META)\" (adset 120254694684840427): tiene que traer 6 leads por día o\nmás, según lo que reporta Meta. Los números de todo el canal Meta quedan como\ncontexto, para ver que el resto no empeore.", "resultado": {"estado_lectura": "faltan_datos", "desde": "2026-10-05", "hasta": "2026-10-08", "fin_analisis": "2026-10-25", "dias": 4, "base": {"desde": "2026-10-01", "hasta": "2026-10-04"}, "n_actual": 22, "n_minimo": 60, "gasto": {"antes": 78.35, "durante": 61.58}, "metricas": [{"clave": "generados", "nombre": "Leads generados", "antes": 13, "durante": 22, "cambio": 69.2, "tipo": "pct", "juicio": "mejora", "primaria": false}, {"clave": "cpl", "nombre": "Costo por lead", "antes": 6.03, "durante": 2.8, "cambio": -53.6, "tipo": "pct", "juicio": "mejora", "primaria": false}, {"clave": "pct_derivacion", "nombre": "% de derivación", "antes": 15.4, "durante": 18.2, "cambio": 2.8, "tipo": "pp", "juicio": "mejora", "primaria": false}, {"clave": "costo_por_derivado", "nombre": "Costo por derivado", "antes": 39.17, "durante": 15.39, "cambio": -60.7, "tipo": "pct", "juicio": "mejora", "primaria": false}, {"clave": "pct_no_calificacion", "nombre": "% de no calificación", "antes": 15.4, "durante": 9.1, "cambio": -6.3, "tipo": "pp", "juicio": "mejora", "primaria": false}, {"clave": "presupuestados", "nombre": "Presupuestados de la camada", "antes": 1, "durante": 0, "cambio": -100.0, "tipo": "pct", "juicio": "empeora", "primaria": false}], "conjunto": {"id": "120254694684840427", "nombre": "Conversión - LAL Vieron video 1-3% (AGENTE META)", "dias_con_dato": 3, "dias": 4, "ultimo_dato": "2026-10-07", "leads": 0, "leads_por_dia": 0.0, "meta_por_dia": 6, "gasto_usd": 7.87, "gasto_ars_por_dia": 3930, "cpl_usd": null, "ok": false, "serie": [{"fecha": "2026-10-05", "leads": 0, "gasto_usd": 2.55}, {"fecha": "2026-10-06", "leads": 0, "gasto_usd": 2.58}, {"fecha": "2026-10-07", "leads": 0, "gasto_usd": 2.74}, {"fecha": "2026-10-08", "leads": null, "gasto_usd": null}]}}}], "experimentos_desde": "2026-Q4"};
+
+/* ---------------------------------------------------------------- formato */
+const nf = new Intl.NumberFormat("es-AR");
+const n = v => v == null ? "—" : nf.format(v);
+const usd = v => v == null ? "—" : "US$ " + new Intl.NumberFormat("es-AR", {maximumFractionDigits: v < 100 ? 2 : 0, minimumFractionDigits: v < 100 && v % 1 ? 2 : 0}).format(v);
+const pct = v => v == null ? "—" : new Intl.NumberFormat("es-AR", {maximumFractionDigits: 1}).format(v) + "%";
+const dias = v => v == null ? "—" : new Intl.NumberFormat("es-AR", {maximumFractionDigits: 1}).format(v);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fecha = iso => { const [y, m, d] = iso.slice(0, 10).split("-"); return `${d}/${m}/${y}`; };
+const qNombre = e => e ? `${e.slice(5)} ${e.slice(0, 4)}` : "";
+const info = k => `<button class="i" type="button" data-info="${k}" aria-label="Cómo se calcula">i</button>`;
+const r1 = x => Math.round(x * 10) / 10;
+
+/* ----------------------------------------------------------------- íconos */
+const P = {
+  logo: '<path d="M5 17V11M10 17V7M15 17v-4M20 17V5" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>',
+  funnel: '<path d="M3 5h18l-7 8v5l-4 2v-7L3 5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none"/>',
+  gen: '<path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/>',
+  der: '<path d="M4 12h12m0 0-4-4m4 4-4 4M20 5v14" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>',
+  ven: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" fill="none"/>',
+  cal: '<rect x="3.5" y="5" width="17" height="15" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 3v4M16 3v4M3.5 10h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+  reloj: '<circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>',
+  plata: '<path d="M12 3v18M16.5 7.5c0-1.7-2-3-4.5-3s-4.5 1.2-4.5 3 2 2.6 4.5 3 4.5 1.3 4.5 3.2-2 3-4.5 3-4.5-1.3-4.5-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>',
+  gente: '<circle cx="9" cy="8" r="3.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M2.5 20c.6-3.5 3.2-5.5 6.5-5.5s5.9 2 6.5 5.5M16 4.8a3.3 3.3 0 0 1 0 6.4M18 14.8c1.9.6 3.1 2.4 3.5 5.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>',
+  check: '<circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="m8 12.3 2.7 2.7L16 9.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>',
+  doc: '<path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10A.5.5 0 0 1 7 20V3.5Z M14 3.5V8h4" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none"/>',
+  exp: '<path d="M9 3h6M10 3v6L4.5 18.5A1.6 1.6 0 0 0 5.9 21h12.2a1.6 1.6 0 0 0 1.4-2.5L14 9V3M7.2 15h9.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>',
+  campana: '<path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15L6 16ZM10 20.5a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none"/>',
+};
+const ico = (k, s = 18) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" aria-hidden="true">${P[k]}</svg>`;
+
+/* ------------------------------------------------ cómo se calcula cada cosa */
+const F_META = "Meta Ads y Redes Sociales: conector de Meta, gasto diario por campaña (en pesos, convertido a USD a 1.500). Google Ads y el resto: SPA «Inversiones y Gastos» de Bitrix24.";
+const INFO = {
+  gasto: ["Total gastos", "Toda la inversión en medios con fecha dentro del Q, sumando todos los canales. Si en el SPA hubiera sueldos, comisiones u otros gastos que no son de medios, se suman aparte y se muestran debajo. Lo que la carga semanal deja en el SPA para Meta no se suma: ya viene del conector y se contaría dos veces.", F_META],
+  generados: ["Total leads generados", "Prospectos con fecha de creación dentro del Q, de todos los orígenes. Los que se cargaron a mano días después cuentan en su fecha real.", "Bitrix24 · Prospectos · Fecha de creación."],
+  no_calificados: ["Leads no calificados", "Prospectos generados en el Q que hoy están en la etapa «Prospecto no útil»: el descarte por calidad. No incluye a los «Prospecto inactivo», que se enfriaron o no respondieron.", "Bitrix24 · Prospectos · Etapa."],
+  derivados: ["Leads derivados", "Negociaciones con Fecha de derivación dentro del Q: lo que Ventas recibió en el trimestre, venga del prospecto que venga. Debajo, cuántas son de prospectos creados en el mismo Q (se sigue el vínculo prospecto → negociación).", "Bitrix24 · Negociaciones · campo «Fecha de derivación»."],
+  presupuestados: ["Leads presupuestados", "Negociaciones con Fecha de Presupuestado dentro del Q. Debajo, cuántas vienen de prospectos creados en el mismo Q.", "Bitrix24 · Negociaciones · campo «Fecha de Presupuestado»."],
+  a_futuro: ["Leads a futuro", "Prospectos generados en el Q cuya negociación está hoy en una columna a futuro: «A futuro corto plazo» o «A futuro largo plazo» de Ventas 2.0 o de Presupuestos 2.0. Es una foto de hoy: si alguien los mueve de columna, el número cambia.", "Bitrix24 · Negociaciones · Etapa actual, unidas al prospecto."],
+  cerrados: ["Leads cerrados", "Negociaciones con Fecha de cierre dentro del Q. Debajo, cuántas vienen de prospectos creados en el mismo Q. Se cuenta por la fecha y no por la etapa, porque al ganarse la negociación pasa al embudo Seguimiento Clientes.", "Bitrix24 · Negociaciones · campo «Fecha de cierre»."],
+  mrr: ["MRR", "Suma del MRR de las negociaciones cerradas en el Q. El MRR del contrato se carga en el campo Oportunidad, en dólares.", "Bitrix24 · Negociaciones · campo «Oportunidad»."],
+  inactivo: ["% prospecto inactivo", "Prospectos generados en el Q que hoy están en «Prospecto inactivo», sobre el total generado del Q. Las razones salen del campo «Razón de no derivación» que carga SDR en el prospecto. El canal es el origen del prospecto, agrupado en canales.", "Bitrix24 · Prospectos · Etapa, «Razón de no derivación» y Origen."],
+  no_calificado: ["% de no calificación", "Prospectos generados en el Q que hoy están en «Prospecto no útil», sobre el total generado del Q. Se muestra el canal que más no útiles aporta y la razón de no derivación más cargada entre ellos.", "Bitrix24 · Prospectos · Etapa, «Razón de no derivación» y Origen."],
+  win_rate: ["% win rate", "Cierres del Q (Fecha de cierre dentro del Q) sobre prospectos generados en el Q. El ciclo hasta el cierre ronda los 80 días, así que buena parte de los cierres de un Q vienen de prospectos de trimestres anteriores. En el Q en curso este número todavía sube.", "Bitrix24 · Negociaciones y Prospectos."],
+  pct_futuro: ["% leads a futuro", "Prospectos generados en el Q que hoy están en columnas a futuro de Ventas 2.0 o Presupuestos 2.0, sobre el total generado del Q.", "Bitrix24 · Negociaciones · Etapa actual."],
+  dias_cierre: ["Promedio días de cierre", "Para cada negociación cerrada en el Q, los días entre su Fecha de derivación y su Fecha de cierre. Se promedia. Las que no tienen fecha de derivación quedan afuera y se indica cuántas se midieron.", "Bitrix24 · Negociaciones · «Fecha de derivación» y «Fecha de cierre»."],
+  cac: ["CAC", "Inversión en medios del Q dividida por los cierres del Q. Por canal: la inversión de ese canal dividida por los cierres cuyo origen es ese canal. Solo aparecen los canales con inversión: los orgánicos no tienen CAC. Si a un canal le faltan días de gasto cargados, su CAC sale más barato de lo real y se marca.", F_META + " Cierres: Bitrix24 · Fecha de cierre y Origen."],
+  gasto_gen: ["Gastos totales en generación", "Inversión en medios del Q, por canal. Es la plata que se puso para traer prospectos.", F_META],
+  sem_gen: ["Generación semana a semana", "Prospectos creados en cada semana del Q. Las semanas van de sábado a viernes (lo que entra el sábado lo trabaja SDR la semana siguiente); la primera y la última del Q quedan recortadas por el inicio y el fin del trimestre. La línea punteada es el Q anterior en las mismas semanas, para comparar el mismo tramo. La última semana del Q en curso está incompleta. En el Q2 2026 la semana 2 incluye la carga masiva de abril.", "Bitrix24 · Prospectos · Fecha de creación."],
+  canal_gen: ["Generado por canal", "Prospectos creados en el Q, agrupados por canal según su origen. Un canal junta varios orígenes de Bitrix (por ejemplo Meta Ads y Meta Ads Formulario). «Sin atribuir» son orígenes que no corresponden a ningún canal.", "Bitrix24 · Prospectos · Origen, agrupado en config/definitions.yaml."],
+  podio: ["Podio de canales", "Cada canal suma puntos en cuatro rankings del Q: el que más derivó, el que más cierres tuvo y el que más presupuestos tuvo (por la fecha de cada hito y el origen de la negociación), y el que menos no calificados tuvo (el menor % de «Prospecto no útil» sobre sus prospectos, solo entre canales con 15 prospectos o más para que uno chico no gane por azar). El 1.º de cada ranking suma 3 puntos, el 2.º 2 y el 3.º 1. El podio es la suma. Tres de los cuatro criterios son volumen, así que un canal grande tiende a ganar.", "Bitrix24 · Negociaciones y Prospectos."],
+  cpl: ["Costo por lead", "Inversión del Q dividida por los prospectos generados en el Q. El general usa toda la inversión sobre todos los prospectos, incluidos los de canales orgánicos. Por canal, la inversión del canal sobre sus prospectos. Si al canal le faltan días de gasto, se marca: el CPL sale más barato de lo real.", F_META],
+  tipo_gen: ["Generados por tipo de negocio", "Prospectos creados en el Q según el campo «Tipo de negocio» del prospecto. «Sin cargar» son los que tienen el campo vacío.", "Bitrix24 · Prospectos · «Tipo de negocio»."],
+  der_total: ["Total datos derivados", "Negociaciones con Fecha de derivación dentro del Q. Por asesor, según el Responsable actual de la negociación. Si una negociación se reasignó, cuenta para el responsable de hoy.", "Bitrix24 · Negociaciones · «Fecha de derivación» y Responsable."],
+  der_canal: ["Derivados por canal", "Negociaciones con Fecha de derivación en el Q, agrupadas por canal según el origen de la negociación.", "Bitrix24 · Negociaciones · Origen."],
+  sem_der: ["Derivación semana a semana", "Negociaciones con Fecha de derivación en cada semana del Q (de sábado a viernes), contra las mismas semanas del Q anterior (punteada). En el Q2 2026 la semana 2 incluye la carga masiva de abril.", "Bitrix24 · Negociaciones · «Fecha de derivación»."],
+  tipo_der: ["Derivados por tipo de negocio", "Negociaciones derivadas en el Q según el campo «Tipo de negocio» de la negociación. Si está vacío se usa el del prospecto vinculado.", "Bitrix24 · Negociaciones y Prospectos · «Tipo de negocio»."],
+  actividades: ["Actividades hasta derivar", "Para cada prospecto convertido en el Q (fecha «Completado el» dentro del Q) se cuentan las actividades de su timeline creadas hasta el día en que se convirtió: llamadas, tareas, mensajes y reuniones. Se promedia entre todos. Los comentarios sueltos del timeline no cuentan como actividad.", "Bitrix24 · Actividades del prospecto (crm.activity)."],
+  dias_der: ["Días promedio de derivación", "Días desde que se creó el prospecto hasta que se convirtió («Completado el»), para los convertidos en el Q. Al lado va la mediana: unos pocos prospectos que tardan mucho estiran el promedio.", "Bitrix24 · Prospectos · Fecha de creación y «Completado el»."],
+  sem_presu: ["Presupuestos semana a semana", "Negociaciones con Fecha de Presupuestado en cada semana del Q (de sábado a viernes), contra las mismas semanas del Q anterior (punteada).", "Bitrix24 · Negociaciones · «Fecha de Presupuestado»."],
+  presu_asesor: ["Presupuestos enviados por asesor", "Negociaciones con Fecha de Presupuestado en el Q, según su Responsable actual. Debajo, el MRR presupuestado (campo Oportunidad).", "Bitrix24 · Negociaciones."],
+  cierres_asesor: ["Cierres por asesor", "Negociaciones con Fecha de cierre en el Q y su MRR (campo Oportunidad), según el Responsable actual de la negociación.", "Bitrix24 · Negociaciones."],
+  recibido: ["Total recibido por asesor", "Las negociaciones que cada asesor recibió en el Q (Fecha de derivación en el Q), agrupadas por la etapa en la que están hoy. Si ya tiene Fecha de cierre cuenta como Cliente. «En gestión» son las columnas de contacto de Ventas 2.0; «Presupuestado» incluye el embudo Presupuestos 2.0 antes del cierre; «Otros embudos» incluye BBDD 2.0, A Reciclar y embudos viejos.", "Bitrix24 · Negociaciones · Etapa actual."],
+  cartera: ["A futuro sin agenda", "Foto de hoy, no depende del Q elegido: todas las negociaciones en las columnas a futuro de Ventas 2.0 y Presupuestos 2.0, por Responsable. «Sin actividad» no tiene ninguna actividad pendiente. «Vencidas» tiene al menos una actividad pendiente con fecha límite anterior a hoy. «Al día» tiene algo agendado para hoy o más adelante.", "Bitrix24 · Negociaciones · Etapa, y Actividades pendientes (crm.activity)."],
+  tiempo_asesor: ["Tiempo promedio de cierre por asesor", "Para las negociaciones cerradas en el Q de cada asesor, los días entre la Fecha de derivación y la Fecha de cierre, promediados.", "Bitrix24 · Negociaciones · «Fecha de derivación» y «Fecha de cierre»."],
+  clientes: ["Clientes cerrados", "Sobre las negociaciones con Fecha de cierre en el Q. Plan: campo «Tipo de plan». Vendedor: Responsable actual de la negociación. Tipo de negocio: campo de la negociación, o del prospecto si está vacío.", "Bitrix24 · Negociaciones."],
+};
+
+
+Object.assign(INFO, {
+  objetivos: ["Objetivos del trimestre", "Las metas que fijó la dirección para el trimestre. Verde es que viene bien, rojo que no. Con pocos casos todavía (por ejemplo, menos de 5 cierres para el CAC y el ROAS, o las dos primeras semanas del Q para los leads) la tarjeta dice «provisorio»: el número se va a mover bastante.", "Metas en config/definitions.yaml → monitor.objetivos."],
+  obj_mrr: ["New MRR del trimestre", "Suma del MRR (campo Oportunidad, en dólares) de las negociaciones con Fecha de cierre en el Q. Meta: US$ 7.500 en el trimestre. Como se acumula, se juzga por ritmo: lo cerrado hasta hoy proyectado a los días del Q; la marca negra es cuánto tendría que haber hoy. Tiene dos capas: al menos US$ 1.000 de ese MRR tiene que venir de acciones en vivo (los clientes cuyo origen en Bitrix empieza con «Curso», «Webinar» o «Charla», más el origen «Demo masiva en vivo»), y más del 15% tiene que venir de canales no pagos, es decir, que no sean Meta Ads ni Google Ads. Lo de origen sin atribuir no cuenta como no pago.", "Bitrix24 · Negociaciones · «Oportunidad», «Fecha de cierre» y Origen."],
+  obj_win: ["Win rate", "Clientes nuevos del Q (negociaciones con Fecha de cierre en el Q) sobre los leads generados en el Q. Tiene que ser 5% o más. Muchos cierres de un Q vienen de leads de trimestres anteriores, así que en las primeras semanas el número se mueve mucho.", "Bitrix24 · Negociaciones y Prospectos."],
+  obj_cac: ["CAC", "Costo de adquisición por cliente: toda la inversión del Q (pauta de todos los canales más los otros gastos de adquisición cargados en el SPA, como sueldos, comisiones y herramientas) dividida por los clientes nuevos del Q (negociaciones con Fecha de cierre en el Q). Tiene que ser de US$ 800 o menos. Hoy en el SPA solo hay cargada inversión en pauta: si la meta de 800 incluye sueldos, comisiones u otros costos, hay que cargarlos en el SPA y la tarjeta los suma sola.", "Inversión: conector de Meta y SPA «Inversiones y Gastos» de Bitrix24. Clientes: Bitrix24 · Negociaciones · «Fecha de cierre»."],
+  obj_roas: ["ROAS de pauta", "Retorno de la inversión publicitaria: el MRR de los clientes cerrados en el Q que vinieron de Meta Ads, Google Ads y Redes Sociales, dividido por lo invertido en esos tres canales en el Q. Un ROAS de 2 quiere decir que cada dólar invertido trajo dos dólares de MRR mensual. Tiene que ser 2 o más.", "MRR: Bitrix24 · Negociaciones · «Oportunidad» y Origen. Inversión: conector de Meta y SPA de Bitrix24."],
+  obj_no_calif: ["Leads no calificados", "Prospectos generados en el Q que hoy están en «Prospecto no útil», sobre el total generado en el Q. Tiene que ser 15% o menos. Los prospectos todavía abiertos pueden terminar como no útiles, así que el número puede subir un poco a medida que SDR los resuelve.", "Bitrix24 · Prospectos · Etapa."],
+  obj_leads: ["Leads generados del Q", "Prospectos creados en el Q, contra la meta de 300 en el trimestre. Como es un número que se acumula, se juzga por ritmo: lo generado hasta hoy se proyecta a los días del trimestre. La marca negra en la barra es cuántos tendría que haber hoy para ir en línea con la meta.", "Bitrix24 · Prospectos · Fecha de creación."],
+  obj_casas: ["Casas de repuestos", "Qué parte de los leads generados en el Q son casas de repuestos (de autos, motos, pesados o agrícolas, o combinaciones con casa de repuestos), según el campo «Tipo de negocio» del prospecto. Se calcula sobre los leads que tienen el tipo de negocio definido: los «A definir» y los vacíos quedan afuera y se muestran aparte. Tiene que ser 70% o más.", "Bitrix24 · Prospectos · «Tipo de negocio»."],
+  experimentos: ["Experimentos", "Pruebas sobre la generación para mejorar los canales de adquisición que ya tenemos. Cada una tiene su archivo en experiments/ del repositorio, con nombre, problema, hipótesis, solución a probar y fechas. Se agrupan por el trimestre de su fecha de lanzamiento; el registro arranca en el Q4 2026.", "Repositorio agente-growth · experiments/EXP-*.md."],
+  exp_conjunto: ["Resultado del conjunto", "Cuántos leads trae por día el conjunto de anuncios del experimento, según lo que reporta Meta, contra la meta diaria. Se promedian los días desde el lanzamiento que ya tienen dato (la corrida diaria lo trae del conector de Meta). Cada barra es un día: verde si llegó a la meta, rojo si no, gris si todavía no hay dato. Al CRM llega entre el 70% y el 88% de los leads que reporta Meta. Se lee con al menos una semana de datos.", "Meta Ads · conjunto de anuncios del experimento (data/meta_adsets.json)."],
+  exp_resultado: ["Resultado en métricas", "Se toma el canal del experimento entre la fecha de lanzamiento y la de fin de análisis (o hasta hoy si todavía no terminó) y se compara contra el mismo largo de tiempo inmediatamente antes del lanzamiento. Todas las métricas son de la camada: los prospectos creados en cada tramo y hasta dónde llegaron hoy. Por eso la camada del experimento, que es más nueva, puede mostrar menos derivación y presupuestos solo porque todavía no maduró: el resultado se lee recién cuando pasa la fecha de fin y se junta el mínimo de prospectos. Se recalcula todos los días con la corrida diaria.", "Bitrix24 · Prospectos y Negociaciones; inversión del conector de Meta y del SPA."],
+
+  comparacion: ["Contra el Q anterior", "Cada número se compara contra el mismo tramo del trimestre anterior: si hoy es el día 40 del Q, se compara contra los primeros 40 días del Q anterior. La pastilla se pone roja cuando el número empeoró más que su umbral (por ejemplo, 15% menos de leads generados, 20% más de costo por lead, 5 puntos más de no calificación), verde cuando mejoró más que ese umbral y gris si se movió menos. Las dos primeras semanas del Q, o con muy pocos casos, dice «sin lectura». La alarma diaria avisa por Slack el día en que un número pasa a rojo. El Q2 2026 tiene la carga masiva de abril, así que el Q3 contra el Q2 sale peor de lo que es.", "Umbrales en config/definitions.yaml → monitor.desmejora."],
+  gauge_der: ["Derivados del mismo Q", "De todas las negociaciones derivadas en el Q, qué parte vino de prospectos creados en el mismo trimestre. El resto son prospectos de trimestres anteriores que se derivaron ahora.", "Bitrix24 · Negociaciones · «Fecha de derivación» y vínculo con el prospecto."],
+  gauge_cartera: ["Cartera a futuro al día", "De todas las negociaciones que hoy están en columnas a futuro de Ventas 2.0 y Presupuestos 2.0, qué parte tiene una actividad pendiente con fecha de hoy en adelante. El resto no tiene nada agendado o lo tiene vencido.", "Bitrix24 · Negociaciones · Etapa, y Actividades pendientes."],
+});
+
+/* ------------------------------------------------------------ componentes */
+function card(titulo, k, cuerpo, hint = "") {
+  return `<section class="card"><div class="ch"><h2>${titulo}</h2>${k ? info(k) : ""}${hint ? `<span class="hint">${hint}</span>` : ""}</div>${cuerpo}</section>`;
+}
+function pill(m, invertida = false) {
+  if (!m) return "";
+  if (m.estado === "sin_lectura") return `<span class="pill sin_lectura">sin lectura</span>`;
+  const d = m.delta_pp != null ? m.delta_pp : m.delta_pct;
+  if (d == null) return "";
+  const txt = m.delta_pp != null ? `${d > 0 ? "+" : ""}${new Intl.NumberFormat("es-AR", {maximumFractionDigits: 1}).format(d)} pp` : `${new Intl.NumberFormat("es-AR", {maximumFractionDigits: 1}).format(Math.abs(d))}%`;
+  return `<span class="pill ${m.estado}">${d >= 0 ? "▲" : "▼"} ${txt}</span>`;
+}
+function kpi(q, titulo, valor, icono, clave, fmt, k) {
+  const m = clave ? q.comparacion.metricas[clave] : null;
+  const prev = q.comparacion.previo;
+  let pie = "";
+  if (m && prev && m.previo != null) pie = `vs ${fmt(m.previo)} en ${qNombre(prev.etiqueta)} · mismo tramo`;
+  else if (m && !prev) pie = "sin Q anterior para comparar";
+  return `<div class="card kpi"><div class="kh"><span class="kt">${titulo}</span>${info(k)}<span class="ico">${ico(icono)}</span></div>
+    <div class="kv"><b>${valor}</b>${pill(m)}</div>${pie ? `<div class="kc">${pie} ${m ? info("comparacion") : ""}</div>` : ""}</div>`;
+}
+function stat(k, titulo, valor, sub, extra, m) {
+  return `<div class="card stat"><div class="top2"><span class="k">${titulo}</span>${info(k)}</div>
+    <div class="v"><b>${valor}</b>${pill(m)}</div>${sub ? `<div class="sub">${sub}</div>` : ""}${extra || ""}</div>`;
+}
+function lista(titulo, filas) {
+  if (!filas.length) return "";
+  return `<div class="lista"><div class="tit">${titulo}</div>${filas.map(([a, b]) => `<div class="fila"><span>${esc(a)}</span><span>${b}</span></div>`).join("")}</div>`;
+}
+function hbars(filas, {fmt = n, total = null, limite = 8, extra = null} = {}) {
+  if (!filas.length) return `<p class="sub muted">Sin datos en este trimestre.</p>`;
+  const max = Math.max(...filas.map(f => f[1] || 0)) || 1;
+  const id = "hb" + Math.random().toString(36).slice(2, 8);
+  const html = filas.map((f, i) => `<div class="hb-row"${i >= limite ? ` data-extra="${id}" hidden` : ""}>
+      <span class="l">${esc(f[0])}</span><span class="n">${fmt(f[1])}${total ? `<small>${pct(r1(f[1] / total * 100))}</small>` : ""}</span>
+      <div class="track"><div class="fill" style="width:${(f[1] || 0) / max * 100}%"></div></div>${extra ? `<span class="x">${extra(f)}</span>` : ""}</div>`).join("");
+  return `<div class="hb">${html}${filas.length > limite ? `<button class="mas" type="button" data-mas="${id}">Ver ${filas.length - limite} más</button>` : ""}</div>`;
+}
+function vbars(filas, fmt = n) {
+  if (!filas.length) return `<p class="sub muted">Sin datos en este trimestre.</p>`;
+  const f = filas.slice(0, 6), max = Math.max(...f.map(x => x[1]), 1);
+  return `<div class="vb">${f.map((x, i) => `<div class="c${i === 0 ? " top" : ""}"><div class="b" style="height:${Math.max(x[1] / max * 100, 3)}%"><span>${fmt(x[1])}</span></div><span class="x" title="${esc(x[0])}">${esc(x[0].startsWith("Usuario #") ? x[0].slice(8) : x[0].split(" ")[0])}</span></div>`).join("")}</div>`;
+}
+function gauge(valor, sub) {
+  const v = Math.max(0, Math.min(100, valor || 0));
+  const N = 30, cx = 130, cy = 128, R1 = 92, R2 = 118;
+  let t = "";
+  for (let i = 0; i < N; i++) {
+    const a = Math.PI * (1 - i / (N - 1));
+    const on = i / (N - 1) <= v / 100 + 1e-9 && v > 0;
+    t += `<line x1="${(cx + R1 * Math.cos(a)).toFixed(1)}" y1="${(cy - R1 * Math.sin(a)).toFixed(1)}" x2="${(cx + R2 * Math.cos(a)).toFixed(1)}" y2="${(cy - R2 * Math.sin(a)).toFixed(1)}" stroke="${on ? "var(--blue)" : "var(--line-2)"}" stroke-width="6" stroke-linecap="round"/>`;
+  }
+  return `<div class="gauge"><svg viewBox="0 0 260 140" role="img" aria-label="${pct(valor)}">${t}</svg><div class="gv">${pct(valor)}</div><div class="gs">${sub}</div></div>`;
+}
+function linea(s, etiqueta) {
+  const act = s.actual.valores, prev = s.previo ? s.previo.valores : [];
+  const N = Math.max(act.length, prev.length, 1), max = Math.max(...act, ...prev, 1);
+  const paso = max > 200 ? 100 : max > 80 ? 25 : max > 40 ? 10 : 5, top = Math.ceil(max / paso) * paso;
+  const W = 560, H = 220, L = 34, R = 12, T = 14, B = 26;
+  const x = i => L + (N === 1 ? 0 : i * (W - L - R) / (N - 1)), y = v => T + (H - T - B) * (1 - v / top);
+  const path = arr => arr.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+  let grid = "";
+  for (let v = 0; v <= top; v += paso) grid += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-dasharray="${v ? "3 4" : ""}"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--ink-3)">${v}</text>`;
+  let ticks = "";
+  const rg = (s.actual.rangos || []).concat((s.previo?.rangos || []).slice((s.actual.rangos || []).length));
+  const dm = iso => iso ? `${iso.slice(8)}/${iso.slice(5, 7)}` : "";
+  const etq = i => s.actual.rangos && s.actual.rangos[i] ? dm(s.actual.rangos[i][0]) : `S${i + 1}`;
+  for (let i = 0; i < N; i++) if (i % 2 === 0 || i === N - 1) ticks += `<text x="${x(i)}" y="${H - 6}" text-anchor="middle" font-size="11" fill="var(--ink-3)">${etq(i)}</text>`;
+  const u = act.length - 1, parcial = s.actual.ultima_parcial && act.length > 1, solido = parcial ? act.slice(0, -1) : act;
+  const gid = "g" + Math.random().toString(36).slice(2, 7);
+  const area = solido.length > 1 ? `<path d="${path(solido)}L${x(solido.length - 1)},${y(0)}L${x(0)},${y(0)}Z" fill="url(#${gid})"/>` : "";
+  const lAct = act.length ? `<path d="${path(solido)}" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>` +
+    (parcial ? `<path d="M${x(u - 1)},${y(act[u - 1])}L${x(u)},${y(act[u])}" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-dasharray="2 4" opacity=".7"/>` : "") +
+    `<circle cx="${x(u)}" cy="${y(act[u])}" r="5" fill="${parcial ? "var(--card)" : "var(--blue)"}" stroke="var(--blue)" stroke-width="2.5"/>` : "";
+  const lPrev = prev.length ? `<path d="${path(prev)}" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="5 5" stroke-linejoin="round"/>` : "";
+  const sumA = act.reduce((a, b) => a + b, 0), sumP = prev.slice(0, act.length).reduce((a, b) => a + b, 0);
+  const dif = prev.length && sumP ? r1((sumA - sumP) / sumP * 100) : null;
+  const datos = encodeURIComponent(JSON.stringify({act, prev, N, L, R, W, qa: qNombre(etiqueta), qp: qNombre(s.previo_etiqueta),
+    ra: s.actual.rangos || [], rp: s.previo?.rangos || []}));
+  return `<div class="chart" data-serie="${datos}">
+    <div class="tot"><span class="big">${n(sumA)}</span>${dif != null ? `<span class="pill ${dif >= 0 ? "mejora" : "desmejora"}">${dif >= 0 ? "▲" : "▼"} ${pct(Math.abs(dif))}</span>` : ""}
+      <span class="vs">${prev.length ? `vs ${n(sumP)} en las mismas ${act.length} semanas de ${qNombre(s.previo_etiqueta)}` : "sin Q anterior para comparar"}</span></div>
+    <div class="leyenda"><span><i class="ln"></i>${qNombre(etiqueta)}</span>${prev.length ? `<span><i class="dash"></i>${qNombre(s.previo_etiqueta)}</span>` : ""}${parcial ? `<span class="muted">○ semana en curso</span>` : ""}</div>
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Serie semanal de ${qNombre(etiqueta)}">
+      <defs><linearGradient id="${gid}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="var(--blue)" stop-opacity=".22"/><stop offset="1" stop-color="var(--blue)" stop-opacity="0"/></linearGradient></defs>
+      ${grid}${ticks}${area}${lPrev}${lAct}
+      <line class="cross" x1="0" x2="0" y1="${T}" y2="${H - B}" stroke="var(--ink-3)" opacity="0"/>
+      <rect x="${L}" y="0" width="${W - L - R}" height="${H}" fill="transparent" class="hit"/>
+    </svg><div class="tt" hidden></div></div>`;
+}
+function minis(filas) {
+  const col = ["var(--s1)", "var(--s2)", "var(--s3)"];
+  return `<div class="minis">${filas.slice(0, 3).map((f, i) => `<div class="mini"><div class="n">${f[1]}</div><div class="t">${esc(f[0])}</div><div class="u" style="background:${col[i]}"></div></div>`).join("")}</div>`;
+}
+function tabla(cols, filas, pie) {
+  return `<div class="tw"><table><thead><tr>${cols.map(c => `<th>${c}</th>`).join("")}</tr></thead>
+    <tbody>${filas.join("") || `<tr><td colspan="${cols.length}" class="sec">Sin datos en este trimestre.</td></tr>`}</tbody>${pie ? `<tfoot>${pie}</tfoot>` : ""}</table></div>`;
+}
+const rk = i => `<span class="rk">${i + 1}</span>`;
+function aviso(t) { return `<div class="aviso">${t}</div>`; }
+
+
+/* ------------------------------------------------------------ objetivos */
+const INFO_OBJ = {cac: "obj_cac", roas: "obj_roas", no_calificados: "obj_no_calif", leads: "obj_leads", casas_repuestos: "obj_casas", win_rate: "obj_win"};
+function fmtObj(o, v) {
+  if (v == null) return "—";
+  if (o.formato === "usd") return usd(v);
+  if (o.formato === "pct") return pct(v);
+  if (o.formato === "x") return new Intl.NumberFormat("es-AR", {maximumFractionDigits: 2}).format(v) + "x";
+  return n(v);
+}
+function tarjetaObj(o) {
+  const cls = o.ok == null ? "nd" : o.ok ? "bien" : "mal";
+  const meta = o.sentido === "max" ? `Meta: ${fmtObj(o, o.meta)} o menos` : o.sentido === "min" ? `Meta: ${fmtObj(o, o.meta)} o más` : `Meta: ${fmtObj(o, o.meta)} en el Q`;
+  const estado = o.ok == null ? "Sin datos" : (o.ok ? (o.sentido === "acumulado" ? "En ritmo" : "En objetivo") : (o.sentido === "acumulado" ? "Debajo del ritmo" : "Fuera de objetivo"));
+  // barra: escala hasta el doble de la meta (o la meta, para los acumulados)
+  let barra = "";
+  if (o.valor != null) {
+    const tope = o.sentido === "acumulado" ? o.meta : Math.max(o.meta * 2, o.valor);
+    const w = Math.min(o.valor / tope * 100, 100);
+    const marca = o.sentido === "acumulado" ? o.detalle.esperado_hoy / tope * 100 : o.meta / tope * 100;
+    barra = `<div class="ob"><i style="width:${w}%"></i><b style="left:calc(${Math.min(marca, 100)}% - 1px)" title="${o.sentido === "acumulado" ? "esperado hoy" : "meta"}"></b></div>`;
+  }
+  const d = o.detalle;
+  const det = {
+    cac: `${usd(d.gasto)} ÷ ${n(d.cierres)} ${d.cierres === 1 ? "cliente" : "clientes"}${d.overhead ? ` (incluye ${usd(d.overhead)} de otros gastos)` : " · solo pauta cargada"}`,
+    roas: `${usd(d.mrr)} de MRR ÷ ${usd(d.gasto)} en pauta · ${n(d.cierres)} ${d.cierres === 1 ? "cierre" : "cierres"} de pauta`,
+    no_calificados: `${n(d.n)} de ${n(d.generados)} generados`,
+    leads: `${n(o.valor)} de ${n(o.meta)} · proyección al cierre: <b>${n(d.proyeccion)}</b> · día ${d.dias} de ${d.dias_q}`,
+    casas_repuestos: `${n(d.casas)} de ${n(d.definidos)} con tipo definido · ${n(d.sin_definir)} sin definir`,
+    win_rate: `${n(d.cierres)} ${d.cierres === 1 ? "cierre" : "cierres"} sobre ${n(d.generados)} generados`,
+  }[o.clave] || "";
+  return `<div class="obj ${cls}"><div class="oh"><span class="on">${esc(o.nombre)}</span>${info(INFO_OBJ[o.clave])}</div>
+    <div class="ov">${fmtObj(o, o.valor)}</div><div class="om">${meta}</div>${barra}
+    <span class="est-obj ${cls}">${o.ok == null ? "" : o.ok ? "✓ " : "✕ "}${estado}${o.provisorio && o.ok != null ? " · provisorio" : ""}</span>
+    <div class="od">${det}</div></div>`;
+}
+const COLOR_MIX = {pago: "var(--s1)", vivo: "var(--s3)", otro: "var(--s4)", sin: "var(--s0)"};
+function estadoTxt(ok, acum) { return ok == null ? "Sin datos" : ok ? (acum ? "En ritmo" : "En objetivo") : (acum ? "Debajo del ritmo" : "Fuera de objetivo"); }
+function capa(titulo, valor, meta, ok, w, marca, det) {
+  const cls = ok == null ? "nd" : ok ? "bien" : "mal";
+  return `<div class="capa ${cls}"><span class="on">${titulo}</span><span class="ov">${valor}</span><span class="om">${meta}</span>
+    <div class="cb"><i style="width:${Math.min(w, 100)}%"></i><b style="left:calc(${Math.min(marca, 100)}% - 1px)"></b></div>
+    <span class="est-obj ${cls}">${ok == null ? "" : ok ? "✓ " : "✕ "}${det}</span></div>`;
+}
+function tarjetaMRR(m) {
+  const cls = m.ok == null ? "nd" : m.ok ? "bien" : "mal";
+  const tot = Math.max(m.valor, 1);
+  const mix = m.grupos.filter(g => g.mrr > 0);
+  const vivo = m.en_vivo, np = m.no_pago;
+  const topeNp = Math.max(np.meta * 2, np.valor || 0);
+  return `<section class="card mrr-obj ${cls}" aria-label="New MRR del trimestre">
+    <div>
+      <div class="ch" style="margin-bottom:6px"><h2>New MRR del Q</h2>${info("obj_mrr")}<span class="est-obj ${cls}" style="margin-left:auto">${m.ok == null ? "" : m.ok ? "✓ " : "✕ "}${estadoTxt(m.ok, true)}${m.provisorio && m.ok != null ? " · provisorio" : ""}</span></div>
+      <div class="big">${usd(m.valor)}<small>de ${usd(m.meta)}</small></div>
+      <div class="ob"><i style="width:${Math.min(m.valor / m.meta * 100, 100)}%"></i><b style="left:calc(${Math.min(m.esperado_hoy / m.meta * 100, 100)}% - 1px)" title="esperado hoy"></b></div>
+      <div class="meta-l"><span>Esperado hoy: ${usd(m.esperado_hoy)}</span><span>Proyección al cierre: ${usd(m.proyeccion)}</span></div>
+      ${mix.length ? `<div class="mix" aria-label="MRR por origen">${mix.map(g => `<span title="${esc(g.nombre)}: ${usd(g.mrr)}" style="width:${g.mrr / tot * 100}%;background:${COLOR_MIX[g.tipo]}"></span>`).join("")}</div>
+      <div class="leyenda" style="margin-top:8px">${m.grupos.map(g => `<span><i style="background:${COLOR_MIX[g.tipo]}"></i>${esc(g.nombre)} <b>${usd(g.mrr)}</b></span>`).join("")}</div>` : ""}
+      <div class="sub" style="margin-top:6px">${n(m.cierres)} ${m.cierres === 1 ? "cliente nuevo" : "clientes nuevos"} · ticket promedio ${usd(m.ticket)} · día ${m.dias} de ${m.dias_q}</div>
+    </div>
+    <div class="capas">
+      ${capa("Acciones en vivo", usd(vivo.valor), `Meta: ${usd(vivo.meta)} en el Q`, vivo.ok, vivo.valor / vivo.meta * 100, vivo.esperado_hoy / vivo.meta * 100,
+        `${estadoTxt(vivo.ok, true)} · proyección ${usd(vivo.proyeccion)}`)}
+      ${capa("Canales no pagos", pct(np.valor), `Meta: más de ${pct(np.meta)} del MRR`, np.ok, (np.valor || 0) / topeNp * 100, np.meta / topeNp * 100,
+        `${estadoTxt(np.ok, false)} · ${usd(np.mrr)} sin Meta ni Google`)}
+    </div></section>`;
+}
+function bloqueObjetivos(q) {
+  if (!q.objetivos) return "";
+  const ms = q.objetivos.metas, mrr = q.objetivos.mrr;
+  const todos = ms.map(o => o.ok).concat(mrr ? [mrr.ok, mrr.en_vivo.ok, mrr.no_pago.ok] : []);
+  return `<section class="sec" aria-label="Objetivos del trimestre"><div class="ch" style="margin:0"><h2>Objetivos del ${qNombre(q.etiqueta)}</h2>${info("objetivos")}<span class="hint">${todos.filter(Boolean).length} de ${todos.length} en objetivo</span></div>
+    <div class="objs">${ms.map(tarjetaObj).join("")}</div>
+    ${mrr ? tarjetaMRR(mrr) : ""}</section>`;
+}
+/* ------------------------------------------------------------ solapa 1 */
+function embudoH(q) {
+  const f = q.funnel, t = f.tabla;
+  const etapas = [
+    {k: "generados", l: "Generados", v: t.generados, sub: `<b>${n(t.no_calificados)}</b> no calificados · ${pct(f.no_calificado.pct)}`, ik: "no_calificados"},
+    {k: "derivados", l: "Derivados", v: t.derivados, sub: `<b>${n(t.derivados_mismo_q)}</b> del mismo Q`},
+    {k: "presupuestados", l: "Presupuestados", v: t.presupuestados, sub: `<b>${n(t.presupuestados_mismo_q)}</b> del mismo Q · <b>${n(t.a_futuro)}</b> a futuro`, ik: "a_futuro"},
+    {k: "cerrados", l: "Cerrados", v: t.cerrados, sub: `<b>${n(t.cerrados_mismo_q)}</b> del mismo Q`},
+  ];
+  const max = Math.max(...etapas.map(e => e.v), 1);
+  const paso = (a, b) => a ? pct(r1(b / a * 100)) : "—";
+  return `<div class="hfun">${etapas.map((e, i) => `
+    ${i ? `<div class="hf-paso" aria-hidden="true"><span>${paso(etapas[i - 1].v, e.v)}</span><svg width="22" height="14" viewBox="0 0 22 14"><path d="M1 7h18m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>` : ""}
+    <div class="hf-et"><div class="hf-l">${e.l}${info(e.k)}</div><div class="hf-v">${n(e.v)}</div>
+      <div class="hf-bar"><i style="height:${Math.max(e.v / max * 100, 3)}%"></i></div>
+      <div class="hf-s">${e.sub}${e.ik ? " " + info(e.ik) : ""}</div>
+      ${i ? `<div class="hf-pm">${paso(etapas[i - 1].v, e.v)} del paso anterior</div>` : ""}</div>`).join("")}</div>`;
+}
+function pintarFunnel(q) {
+  const f = q.funnel, t = f.tabla, M = q.comparacion.metricas;
+  const alertas = q.salud.hallazgos.filter(h => h.estado === "alerta");
+  const salud = alertas.length
+    ? `<details class="salud"><summary>Dato a revisar: ${alertas.length} ${alertas.length === 1 ? "alerta" : "alertas"} de carga en el Q</summary><ul>${alertas.map(h => `<li><b>${esc(h.check)}</b>: ${esc(h.valor)}${h.detalle ? ` ${esc(h.detalle)}` : ""}</li>`).join("")}</ul></details>`
+    : `<details class="salud ok"><summary>Dato completo: sin alertas de carga en el Q</summary><ul>${q.salud.hallazgos.map(h => `<li><b>${esc(h.check)}</b>: ${esc(h.valor)}</li>`).join("")}</ul></details>`;
+  const O = !!q.objetivos, nc = f.no_calificado;
+  const cac = f.cac.canales.map((c, i) => `<tr><td>${rk(i)}${esc(c.canal)}${c.cobertura != null && c.cobertura < 0.95 ? ` <span class="pill warn">gasto ${Math.round(c.cobertura * 100)}%</span>` : ""}</td><td class="sec">${usd(c.gasto)}</td><td class="sec">${n(c.cierres)}</td><td>${usd(c.cac)}</td></tr>`);
+  return `${q.parcial ? aviso(`<b>${qNombre(q.etiqueta)} está en curso</b>: datos del ${fecha(q.desde)} al ${fecha(q.corte)}. Los números se siguen moviendo hasta que cierre el trimestre.`) : ""}
+    ${salud}
+    ${bloqueObjetivos(q)}
+    ${O ? "" : `<div class="g k4">
+      ${kpi(q, "Total gastos", usd(t.gasto), "plata", null, usd, "gasto")}
+      ${kpi(q, "Leads generados", n(t.generados), "gente", "generados", n, "generados")}
+      ${kpi(q, "Leads cerrados", n(t.cerrados), "check", "cerrados", n, "cerrados")}
+      ${kpi(q, "MRR cerrado", usd(t.mrr), "ven", "mrr", usd, "mrr")}
+    </div>`}
+    ${card("Funnel del trimestre", null, embudoH(q), `${fecha(q.desde)} – ${fecha(q.corte)} · gasto ${usd(t.gasto)} ${info("gasto")}`)}
+    ${O ? "" : `<div class="g c2">
+      ${stat("no_calificado", "% de no calificación", pct(nc.pct), `${n(nc.n)} de ${n(t.generados)} generados`,
+        lista("Canal principal", nc.canales.slice(0, 1).map(([r, c]) => [r, `${n(c)} · ${pct(r1(c / nc.n * 100))}`])) + lista("Razón principal", nc.razones.map(([r, c]) => [r, n(c)])), M.pct_no_calificacion)}
+      ${stat("win_rate", "% win rate", pct(f.win_rate), `${n(t.cerrados)} cierres sobre ${n(t.generados)} generados`, "", M.win_rate)}
+    </div>`}
+    ${card(O ? "CAC por canal" : `CAC <span class="pill ${M.cac.estado}" style="margin-left:4px">${usd(f.cac.general)} general</span>`, "cac", tabla(["Canal", "Gasto", "Cierres", "CAC"], cac,
+      `<tr><td>General</td><td>${usd(t.gasto_medios)}</td><td>${n(t.cerrados)}</td><td>${usd(f.cac.general)}</td></tr>`), `vs ${usd(M.cac.previo)} en ${qNombre(q.comparacion.previo?.etiqueta) || "—"}`)}`;
+}
+
+/* ------------------------------------------------------------ solapa 2 */
+function pintarGeneracion(q) {
+  const g = q.generacion, M = q.comparacion.metricas;
+  const pagos = g.por_canal.filter(c => c.gasto > 0);
+  const podio = g.podio.podio, orden = [podio[1], podio[0], podio[2]];
+  const escalones = orden.map((p, i) => p ? `<div class="esc p${[2, 1, 3][i]}"><span class="nom">${esc(p.canal)}</span><span class="pts">${p.puntos} pts</span><div class="base">${[2, 1, 3][i]}</div></div>` : "<div></div>").join("");
+  const criterios = g.podio.criterios.map(c => `<div class="crit"><div class="t">${c.criterio}</div><ol>${c.top.map(([nom, v]) => `<li>${esc(nom)}<span>${c.pct ? pct(v) : n(v)}</span></li>`).join("") || "<li class='muted'>Sin datos</li>"}</ol></div>`).join("");
+  const canales = g.por_canal.filter(c => c.generados).map((c, i) => `<tr><td>${rk(i)}${esc(c.canal)}${c.cobertura != null && c.gasto > 0 && c.cobertura < 0.95 ? ` <span class="pill warn">gasto ${Math.round(c.cobertura * 100)}%</span>` : ""}</td><td>${n(c.generados)}</td><td class="sec">${pct(r1(c.generados / g.generados * 100))}</td><td class="sec">${c.gasto ? usd(c.gasto) : "—"}</td><td>${c.cpl ? usd(c.cpl) : "—"}</td></tr>`);
+  return `<div class="g k4">
+      ${kpi(q, "Gasto en generación", usd(g.gasto), "plata", null, usd, "gasto_gen")}
+      ${kpi(q, "Total generado", n(g.generados), "gente", "generados", n, "generados")}
+      ${kpi(q, "Costo por lead", usd(g.cpl), "doc", "cpl", usd, "cpl")}
+      ${kpi(q, "% no calificación", pct(q.funnel.no_calificado.pct), "funnel", "pct_no_calificacion", pct, "no_calificado")}
+    </div>
+    <div class="g main2">
+      ${card("Generación semana a semana", "sem_gen", linea(g.semanal, q.etiqueta) + minis(g.por_canal.filter(c => c.generados && c.clave !== "sin_atribuir").map(c => [c.canal, n(c.generados)])))}
+      ${card("Podio de canales", "podio", `<div class="podio">${escalones}</div><div class="criterios">${criterios}</div>`)}
+    </div>
+    ${card("Generado y costo por lead, por canal", "canal_gen", tabla(["Canal", "Leads", "% del total", "Gasto", "CPL"], canales,
+      `<tr><td>General</td><td>${n(g.generados)}</td><td>100%</td><td>${usd(g.gasto)}</td><td>${usd(g.cpl)}</td></tr>`) +
+      `<p class="sub muted" style="margin:10px 0 0">El CPL general divide por todos los prospectos, incluidos los orgánicos; por eso es menor que el de cada canal pago. ${info("cpl")}</p>`)}
+    ${card("Generados por tipo de negocio", "tipo_gen", hbars(g.por_tipo_negocio, {total: g.generados}))}`;
+}
+
+/* ------------------------------------------------------------ solapa 3 */
+function pintarDerivacion(q) {
+  const d = q.derivacion, M = q.comparacion.metricas, ina = q.funnel.inactivo;
+  const canales = d.por_canal.map(([c, v], i) => `<tr><td>${rk(i)}${esc(c)}</td><td>${n(v)}</td><td class="sec">${pct(r1(v / d.derivados * 100))}</td></tr>`);
+  return `<div class="g k4">
+      ${kpi(q, "Total derivados", n(d.derivados), "der", "derivados", n, "der_total")}
+      ${kpi(q, "Del mismo Q", n(d.derivados_mismo_q), "cal", null, n, "derivados")}
+      ${kpi(q, "Actividades hasta derivar", dias(d.actividades.promedio), "doc", null, n, "actividades")}
+      ${kpi(q, "Días promedio de derivación", dias(d.dias_derivacion.promedio), "reloj", null, n, "dias_der")}
+    </div>
+    <div class="aviso">Actividades: promedio sobre <b>${n(d.actividades.n)}</b> prospectos convertidos en el Q; <b>${n(d.actividades.sin_actividad)}</b> se derivaron sin ninguna actividad cargada. Días de derivación: la mediana es <b>${dias(d.dias_derivacion.mediana)}</b> días; unos pocos casos lentos estiran el promedio.</div>
+    <div class="g main2">
+      ${card("Derivación semana a semana", "sem_der", linea(d.semanal, q.etiqueta) + minis(d.por_canal.map(([c, v]) => [c, n(v)])))}
+      <div class="col">
+        ${card("Derivados por asesor", "der_total", vbars(d.por_asesor) + lista("Detalle", d.por_asesor.map(([a, v]) => [a, `${n(v)} · ${pct(r1(v / d.derivados * 100))}`])))}
+        ${card("Del mismo Q", "gauge_der", gauge(d.derivados ? r1(d.derivados_mismo_q / d.derivados * 100) : null, `${n(d.derivados_mismo_q)} de ${n(d.derivados)} derivados`))}
+      </div>
+    </div>
+    <div class="g c2">
+      ${card("Derivados por canal", "der_canal", tabla(["Canal", "Derivados", "%"], canales))}
+      ${card("% prospecto inactivo", "inactivo", gauge(ina.pct, `${n(ina.n)} de ${n(q.funnel.tabla.generados)} generados ${pill(M.pct_inactivo)}`) +
+        lista("Razones principales", ina.razones.map(([r, c]) => [r, n(c)])) + lista("Canal que más aporta", ina.canales.slice(0, 1).map(([r, c]) => [r, `${n(c)} · ${pct(r1(c / ina.n * 100))}`])))}
+    </div>
+    ${card("Derivados por tipo de negocio", "tipo_der", hbars(d.por_tipo_negocio, {total: d.derivados}))}`;
+}
+
+/* ------------------------------------------------------------ solapa 4 */
+const COLOR_GRUPO = {"En gestión": "var(--s1)", "A futuro": "var(--s4)", "Presupuestado": "var(--s2)", "Cliente": "var(--s3)",
+  "Perdido o no califica": "var(--s5)", "Reactivar / nuevas funciones": "var(--s7)", "Otros embudos": "var(--s0)"};
+function apiladas(filas, grupos, colores, {etiqueta = f => f.asesor, total = f => f.recibido_total, valor = (f, g) => f.recibido[g] || 0} = {}) {
+  const max = Math.max(...filas.map(total), 1);
+  const ley = `<div class="leyenda">${grupos.map(g => `<span><i style="background:${colores[g]}"></i>${esc(g)}</span>`).join("")}</div>`;
+  const rows = filas.filter(f => total(f)).map(f => `<div class="stk-row"><div class="cab"><span>${esc(etiqueta(f))}</span><b>${n(total(f))}</b></div>
+      <div class="stk-bar" style="width:${Math.max(total(f) / max * 100, 8)}%">${grupos.map(g => valor(f, g) ? `<span title="${esc(g)}: ${valor(f, g)}" style="width:${valor(f, g) / total(f) * 100}%;background:${colores[g]}"></span>` : "").join("")}</div>
+      <div class="vals">${grupos.filter(g => valor(f, g)).map(g => `<span><i style="background:${colores[g]}"></i>${esc(g)} <b>${n(valor(f, g))}</b></span>`).join("")}</div></div>`).join("");
+  return `${ley}<div class="stk">${rows || `<p class="sub muted">Sin datos en este trimestre.</p>`}</div>`;
+}
+function pintarVentas(q) {
+  const v = q.ventas, cli = v.clientes, cart = D.cartera_a_futuro, M = q.comparacion.metricas, f = q.funnel;
+  const filas = v.asesores.filter(a => a.recibido_total || a.presupuestos || a.cierres).sort((a, b) => b.mrr - a.mrr || b.cierres - a.cierres)
+    .map((a, i) => `<tr><td>${rk(i)}${esc(a.asesor)}</td><td class="sec">${n(a.recibido_total)}</td><td>${n(a.presupuestos)}</td><td class="sec">${usd(a.mrr_presupuestado)}</td><td>${n(a.cierres)}</td><td>${usd(a.mrr)}</td><td class="sec">${a.dias_cierre != null ? dias(a.dias_cierre) + " d" : "—"}</td></tr>`);
+  const tot = v.asesores.reduce((s, a) => ({r: s.r + a.recibido_total, p: s.p + a.presupuestos, mp: s.mp + a.mrr_presupuestado, c: s.c + a.cierres, m: s.m + a.mrr}), {r: 0, p: 0, mp: 0, c: 0, m: 0});
+  const COL_CART = {"Sin actividad": "var(--bad)", "Vencidas": "var(--warn)", "Al día": "var(--good)"};
+  const clave = {"Sin actividad": "sin_actividad", "Vencidas": "vencidas", "Al día": "al_dia"};
+  const plan = cli.planes[0], vend = cli.vendedores[0];
+  const alDia = cart.total ? r1((cart.total - cart.sin_actividad - cart.vencidas) / cart.total * 100) : null;
+  const tiempos = v.asesores.filter(a => a.dias_cierre != null).sort((a, b) => a.dias_cierre - b.dias_cierre);
+  return `<div class="g k4">
+      ${kpi(q, "Presupuestos enviados", n(v.presupuestos), "doc", "presupuestados", n, "presu_asesor")}
+      ${kpi(q, "Cierres", n(f.tabla.cerrados), "check", "cerrados", n, "cierres_asesor")}
+      ${kpi(q, "MRR cerrado", usd(f.tabla.mrr), "plata", "mrr", usd, "mrr")}
+      ${kpi(q, "Promedio días de cierre", dias(f.dias_cierre.promedio), "reloj", "dias_cierre", x => `${dias(x)} días`, "dias_cierre")}
+    </div>
+    <div class="g main2">
+      ${card("Presupuestos enviados por semana", "sem_presu", linea(v.semanal, q.etiqueta))}
+      <div class="col">
+      ${card("Cartera a futuro al día", "gauge_cartera", gauge(alDia, `${n(cart.total - cart.sin_actividad - cart.vencidas)} de ${n(cart.total)} tienen algo agendado · foto al ${fecha(cart.fecha)}`) +
+          lista("Sin agenda", [["Sin actividad", n(cart.sin_actividad)], ["Con actividades vencidas", n(cart.vencidas)]]))}
+        ${stat("pct_futuro", "% leads a futuro", pct(f.pct_a_futuro), `${n(f.tabla.a_futuro)} de ${n(f.tabla.generados)} generados en el Q están hoy en columnas a futuro`)}
+      </div>
+    </div>
+    ${card("Asesores", "cierres_asesor", tabla(["Asesor", "Recibidos", "Presup.", "MRR presup.", "Cierres", "MRR", "Días a cierre"], filas,
+      `<tr><td>Total</td><td>${n(tot.r)}</td><td>${n(tot.p)}</td><td>${usd(tot.mp)}</td><td>${n(tot.c)}</td><td>${usd(tot.m)}</td><td>${dias(f.dias_cierre.promedio)} d</td></tr>`),
+      `ordenado por MRR ${info("presu_asesor")} ${info("tiempo_asesor")}`)}
+    <div class="g c2">
+      ${card("Total recibido por asesor, por etapa actual", "recibido", apiladas(v.asesores, v.grupos, COLOR_GRUPO))}
+      ${card("Leads a futuro sin agenda", "cartera", `<div class="sub"><b>${n(cart.sin_actividad + cart.vencidas)}</b> de ${n(cart.total)} negociaciones a futuro no tienen nada agendado o lo tienen vencido.</div>` +
+        apiladas(cart.asesores, ["Sin actividad", "Vencidas", "Al día"], COL_CART, {total: x => x.total, valor: (x, g) => x[clave[g]]}), `foto al ${fecha(cart.fecha)}`)}
+    </div>
+    <div class="g c2">
+      ${card("Tiempo promedio de cierre por asesor", "tiempo_asesor", hbars(tiempos.map(a => [a.asesor, a.dias_cierre, a.dias_cierre_n]), {fmt: x => `${dias(x)} días`, extra: r => `${n(r[2])} ${r[2] === 1 ? "cierre medido" : "cierres medidos"}`}))}
+      ${card("Clientes cerrados", "clientes", `<div class="g c2" style="gap:12px">
+        <div class="dest"><div class="k">Plan predominante</div><div class="big">${plan ? esc(plan[0]) : "—"}</div><div class="sub">${plan ? `${n(plan[1])} de ${n(cli.n)} clientes` : ""}</div></div>
+        <div class="dest"><div class="k">Vendedor con más cierres</div><div class="big">${vend ? esc(vend[0]) : "—"}</div><div class="sub">${vend ? `${n(vend[1])} cierres` : ""}</div></div></div>` +
+        lista("Tipos de negocio más cerrados", cli.tipos.slice(0, 3).map(([a, b], i) => [`${i + 1}. ${a}`, `${n(b)} · ${pct(r1(b / cli.n * 100))}`])) +
+        lista("Resto de los planes", cli.planes.slice(1, 5).map(([a, b]) => [a, n(b)])), `${n(cli.n)} en el Q`)}
+    </div>`;
+}
+
+
+/* ------------------------------------------------------------ solapa 5 */
+const EST_NOMBRE = {propuesto: "Propuesto", corriendo: "Corriendo", concluido: "Concluido", descartado: "Descartado"};
+const LECTURA = {sin_fechas: "Sin fechas cargadas", por_lanzar: "Todavía no se lanzó", faltan_datos: "Faltan prospectos para leerlo",
+  en_curso: "En curso, con volumen suficiente", lista: "Listo para leer"};
+const EJEMPLO = {id: "EXP-000", ejemplo: true, nombre: "Así se va a ver un experimento", canal_nombre: "Canal", estado: "propuesto",
+  descripcion: "Una o dos oraciones sobre qué se prueba.", problema: "Qué está fallando hoy en el canal y cuánto cuesta, con un número.",
+  hipotesis: "Si hacemos X, esperamos que Y mejore, porque Z.", datos: ["Los números del Monitor que respaldan la hipótesis van acá, uno por línea."],
+  solucion: "Qué se cambia exactamente, contra qué se compara y qué no se toca durante la prueba.", metrica_primaria: "", efecto_esperado: "",
+  n_minimo: 0, lanzamiento: "", fin_analisis: "", responsable: "", conclusion: "", decision: "", notas: "", resultado: {estado_lectura: "sin_fechas"}};
+let EXPS = [];
+
+function expDelQ(q) {
+  return D.experimentos.filter(e => {
+    if (e.lanzamiento) return e.lanzamiento >= q.desde && e.lanzamiento <= q.hasta;
+    return !q.parcial ? false : true;   // propuestos sin fecha: en el Q en curso
+  });
+}
+function progreso(e) {
+  if (!e.lanzamiento || !e.fin_analisis) return null;
+  const a = Date.parse(e.lanzamiento), b = Date.parse(e.fin_analisis), h = Date.parse(D.actualizado);
+  return Math.max(0, Math.min(100, (h - a) / Math.max(b - a, 1) * 100));
+}
+function cambioTxt(m) {
+  if (m.cambio == null) return "—";
+  const v = new Intl.NumberFormat("es-AR", {maximumFractionDigits: 1}).format(Math.abs(m.cambio));
+  return `${m.cambio > 0 ? "▲" : m.cambio < 0 ? "▼" : ""} ${m.tipo === "pp" ? (m.cambio > 0 ? "+" : m.cambio < 0 ? "−" : "") + v + " pp" : v + "%"}`;
+}
+function fmtMet(clave, v) {
+  if (v == null) return "—";
+  if (clave === "cpl" || clave === "costo_por_derivado") return usd(v);
+  if (clave.startsWith("pct")) return pct(v);
+  return n(v);
+}
+function primaria(e) { return (e.resultado.metricas || []).find(m => m.primaria); }
+function cardExp(e, i) {
+  const p = progreso(e), m = primaria(e), cj = e.resultado.conjunto;
+  return `<button class="exp${e.ejemplo ? " ejemplo" : ""}" type="button" data-exp="${i}">
+    <div class="fila1"><span class="eid">${esc(e.id)}${e.ejemplo ? " · ejemplo" : ""}</span><span class="canal">${esc(e.canal_nombre)}</span><span class="est ${e.estado}">${EST_NOMBRE[e.estado] || esc(e.estado)}</span></div>
+    <h3>${esc(e.nombre)}</h3><div class="desc">${esc(e.descripcion)}</div>
+    ${p != null ? `<div class="prog" aria-label="Avance ${Math.round(p)}%"><i style="width:${p}%"></i></div>` : ""}
+    <div class="pie-exp">${e.lanzamiento ? `<span>${fecha(e.lanzamiento)} → ${e.fin_analisis ? fecha(e.fin_analisis) : "sin fin"}</span>` : "<span>Sin fechas</span>"}
+      ${cj && cj.leads_por_dia != null ? `<span style="margin-left:auto">Leads por día del conjunto <b>${dias(cj.leads_por_dia)}</b> <span class="j pill ${cj.ok ? "mejora" : "desmejora"}">meta ${n(cj.meta_por_dia)}</span></span>`
+        : m && m.cambio != null ? `<span style="margin-left:auto">${esc(m.nombre)} <b>${fmtMet(m.clave, m.durante)}</b> <span class="j pill ${m.juicio === "mejora" ? "mejora" : m.juicio === "empeora" ? "desmejora" : "estable"}">${cambioTxt(m)}</span></span>` : ""}</div>
+  </button>`;
+}
+function pintarExperimentos(q) {
+  if (q.etiqueta < D.experimentos_desde) {
+    EXPS = [];
+    return card("Experimentos", "experimentos", `<div class="vacio"><p>El registro de experimentos arranca en el <b>${qNombre(D.experimentos_desde)}</b>. Elegí ese trimestre o uno posterior para ver las pruebas.</p></div>`);
+  }
+  const lista = expDelQ(q);
+  const cuenta = k => lista.filter(e => e.estado === k).length;
+  const kpis = `<div class="g k4">
+    ${kpi(q, "Experimentos del Q", n(lista.length), "exp", null, n, "experimentos")}
+    ${kpi(q, "Corriendo", n(cuenta("corriendo")), "reloj", null, n, "experimentos")}
+    ${kpi(q, "Concluidos", n(cuenta("concluido")), "check", null, n, "experimentos")}
+    ${kpi(q, "Propuestos", n(cuenta("propuesto")), "doc", null, n, "experimentos")}</div>`;
+  if (!lista.length) {
+    EXPS = [EJEMPLO];
+    return kpis + card("Todavía no hay experimentos en este trimestre", "experimentos", `<div class="vacio">
+      <p>Cada experimento es una prueba sobre la generación de un canal que ya tenemos. Para cargar uno, pedíselo al agente de growth con el nombre, el problema, la hipótesis y las fechas, o copiá <code>experiments/TEMPLATE.md</code> en el repositorio. El resultado en métricas se calcula solo.</p>
+      <button class="btn sec" type="button" data-exp="0">Ver cómo se ve un experimento</button></div>`);
+  }
+  EXPS = lista;
+  const orden = {corriendo: 0, propuesto: 1, concluido: 2, descartado: 3};
+  const idx = lista.map((e, i) => [e, i]).sort((a, b) => (orden[a[0].estado] ?? 9) - (orden[b[0].estado] ?? 9));
+  return kpis + `<section class="exps" aria-label="Experimentos">${idx.map(([e, i]) => cardExp(e, i)).join("")}</section>`;
+}
+function bloque(titulo, texto, ancho) {
+  return `<div class="mblk${ancho ? " ancho" : ""}"><h4>${titulo}</h4>${texto ? `<p>${esc(texto)}</p>` : `<p class="vacio-campo">Sin cargar</p>`}</div>`;
+}
+function abrirExp(i, boton) {
+  const e = EXPS[i]; if (!e) return;
+  const r = e.resultado, p = progreso(e);
+  const tabla = (r.metricas || []).map(m => `<tr class="${m.primaria ? "prim" : ""}"><td>${esc(m.nombre)}</td><td class="sec">${fmtMet(m.clave, m.antes)}</td><td>${fmtMet(m.clave, m.durante)}</td><td>${m.juicio ? `<span class="j ${m.juicio}">${cambioTxt(m)}</span>` : "—"}</td></tr>`).join("");
+  const fechas = `<div class="mblk ancho"><h4>Fechas</h4>${e.lanzamiento ? `<div class="linea-t">
+      ${p != null && p > 0 && p < 100 ? `<span class="hoy" style="left:${p}%">hoy</span>` : ""}
+      <div class="barra"><i style="width:${p ?? 0}%"></i></div>
+      <div class="hitos"><span>Lanzamiento<b>${fecha(e.lanzamiento)}</b></span><span style="text-align:right">Fin de análisis<b>${e.fin_analisis ? fecha(e.fin_analisis) : "—"}</b></span></div></div>` : `<p class="vacio-campo">Sin fechas cargadas</p>`}</div>`;
+  const cj = r.conjunto;
+  const bloqueConjunto = cj ? (() => {
+    const mx = Math.max(cj.meta_por_dia || 0, ...cj.serie.map(x => x.leads || 0), 1);
+    const barras = cj.serie.map(x => `<div class="cj-d" title="${fecha(x.fecha)}: ${x.leads == null ? "sin dato" : x.leads + " leads"}">
+        <div class="cj-b${x.leads == null ? " nd" : x.leads >= cj.meta_por_dia ? " ok" : ""}" style="height:${x.leads == null ? 4 : Math.max(x.leads / mx * 100, 3)}%"></div>
+        <span>${x.fecha.slice(8)}/${x.fecha.slice(5, 7)}</span></div>`).join("");
+    return `<div class="mblk ancho"><h4 style="display:flex;align-items:center;gap:6px">Resultado del conjunto ${info("exp_conjunto")}</h4>
+      <p class="sub" style="margin-bottom:10px">${esc(cj.nombre)} · lo que reporta Meta${cj.ultimo_dato ? ` · datos hasta el ${fecha(cj.ultimo_dato)}` : ""}</p>
+      <div class="cj-kpis">
+        <div class="capa ${cj.ok == null ? "nd" : cj.ok ? "bien" : "mal"}"><span class="on">Leads por día</span><span class="ov">${dias(cj.leads_por_dia)}</span><span class="om">Meta: ${n(cj.meta_por_dia)} o más por día</span></div>
+        <div class="capa"><span class="on">Leads en total</span><span class="ov">${n(cj.leads)}</span><span class="om">en ${n(cj.dias_con_dato)} ${cj.dias_con_dato === 1 ? "día" : "días"} con dato</span></div>
+        <div class="capa"><span class="on">Gasto por día</span><span class="ov">ARS ${n(cj.gasto_ars_por_dia)}</span><span class="om">${usd(cj.gasto_usd)} en total</span></div>
+        <div class="capa"><span class="on">Costo por lead</span><span class="ov">${cj.cpl_usd ? usd(cj.cpl_usd) : "—"}</span><span class="om">${cj.leads ? "gasto ÷ leads" : "todavía sin leads"}</span></div>
+      </div>
+      <div class="cj-serie" aria-label="Leads por día del conjunto"><div class="cj-meta" style="bottom:${(cj.meta_por_dia || 0) / mx * 100}%"><span>meta ${n(cj.meta_por_dia)}</span></div>${barras}</div></div>`;
+  })() : "";
+  const resultado = `${bloqueConjunto}<div class="mblk ancho"><h4 style="display:flex;align-items:center;gap:6px">${cj ? "Contexto: todo el canal" : "Resultado en métricas"} ${info("exp_resultado")}</h4>
+    ${r.metricas ? `<p class="sub" style="margin-bottom:8px">${esc(LECTURA[r.estado_lectura] || "")} · ${n(r.n_actual)} de ${n(r.n_minimo)} prospectos mínimos · ${fecha(r.desde)} – ${fecha(r.hasta)} contra ${fecha(r.base.desde)} – ${fecha(r.base.hasta)}${e.efecto_esperado ? ` · efecto esperado en la primaria: <b>${esc(e.efecto_esperado)}</b>` : ""}</p>
+      <div class="tw res"><table><thead><tr><th>Métrica</th><th>Antes</th><th>Durante</th><th>Cambio</th></tr></thead><tbody>${tabla}</tbody></table></div>`
+      : `<p class="vacio-campo">${esc(LECTURA[r.estado_lectura] || "Sin datos")}: el resultado aparece solo a partir del lanzamiento.</p>`}
+    ${e.conclusion || e.decision ? `<div class="concl" style="margin-top:12px"><b>Conclusión${e.decision ? ` · ${esc(e.decision)}` : ""}:</b> ${esc(e.conclusion)}</div>` : ""}</div>`;
+  document.getElementById("modal").innerHTML = `<div class="mcab"><div class="t"><div class="chips"><span class="eid" style="font-size:12px;font-weight:700;color:var(--ink-3)">${esc(e.id)}${e.ejemplo ? " · ejemplo" : ""}</span><span class="canal">${esc(e.canal_nombre)}</span><span class="est ${e.estado}">${EST_NOMBRE[e.estado] || esc(e.estado)}</span>${e.responsable ? `<span class="sub">Responsable: ${esc(e.responsable)}</span>` : ""}</div>
+      <h2 id="modal-t">${esc(e.nombre)}</h2></div><button class="mcerrar" id="mcerrar" type="button">Cerrar</button></div>
+    <div class="mgrid">
+      ${bloque("Descripción", e.descripcion, true)}
+      ${bloque("Problema", e.problema)}
+      <div class="mblk"><h4>Hipótesis</h4>${e.hipotesis ? `<p>${esc(e.hipotesis)}</p>` : `<p class="vacio-campo">Sin cargar</p>`}
+        ${e.datos.length ? `<h4 style="margin-top:12px">Datos que la respaldan</h4><ul>${e.datos.map(d => `<li>${esc(d)}</li>`).join("")}</ul>` : ""}</div>
+      ${bloque("Solución a probar", e.solucion, true)}
+      ${fechas}${resultado}
+      ${e.notas ? bloque("Notas", e.notas, true) : ""}
+    </div>`;
+  document.getElementById("velo").hidden = false; document.getElementById("modal").hidden = false;
+  document.getElementById("modal").scrollTop = 0;
+  origenModal = boton; document.getElementById("mcerrar").focus();
+}
+let origenModal = null;
+function cerrarExp() { document.getElementById("modal").hidden = true; if (document.getElementById("hoja").hidden) document.getElementById("velo").hidden = true; if (origenModal) origenModal.focus(); }
+
+/* ------------------------------------------------------------ navegación */
+const TABS = [["funnel", "Funnel general", "funnel"], ["generacion", "Generación", "gen"], ["derivacion", "Derivación", "der"], ["ventas", "Ventas", "ven"], ["experimentos", "Experimentos", "exp"]];
+const CLAVES_TAB = {funnel: ["generados", "cerrados", "mrr", "pct_inactivo", "pct_no_calificacion", "win_rate", "dias_cierre", "cac"],
+  generacion: ["generados", "cpl", "pct_no_calificacion"], derivacion: ["derivados"], ventas: ["presupuestados", "cerrados", "mrr", "dias_cierre"]};
+const PINTAR = {funnel: pintarFunnel, generacion: pintarGeneracion, derivacion: pintarDerivacion, ventas: pintarVentas, experimentos: pintarExperimentos};
+const guardar = (k, v) => { try { localStorage.setItem("mg-" + k, v); } catch (e) {} };
+const leer = k => { try { return localStorage.getItem("mg-" + k); } catch (e) { return null; } };
+let qSel = D.trimestres.length - 1, tabSel = "funnel";
+
+function rojos(q, tab) { return (CLAVES_TAB[tab] || []).filter(k => q.comparacion.metricas[k]?.estado === "desmejora").length; }
+function pintar() {
+  const q = D.trimestres[qSel];
+  const nombreTab = TABS.find(t => t[0] === tabSel)[1];
+  document.getElementById("nav-tabs").innerHTML = TABS.map(([k, l, i]) => {
+    const r = rojos(q, k);
+    return `<button class="nav-i" role="tab" type="button" data-tab="${k}" aria-selected="${k === tabSel}">${ico(i)}${l}${r ? `<span class="bdg" title="números en desmejora">${r}</span>` : ""}</button>`;
+  }).join("");
+  document.getElementById("m-tabs").innerHTML = TABS.map(([k, l, i]) => `<button class="mtab" role="tab" type="button" data-tab="${k}" aria-selected="${k === tabSel}">${ico(i, 16)}${l}</button>`).join("");
+  document.getElementById("nav-qs").innerHTML = D.trimestres.map((x, i) => `<button class="nav-i" type="button" data-q="${i}" aria-pressed="${i === qSel}">${ico("cal")}${qNombre(x.etiqueta)}${x.parcial ? `<span class="bdg gris">en curso</span>` : ""}</button>`).join("");
+  document.getElementById("m-qs").innerHTML = D.trimestres.map((x, i) => `<button class="mq" type="button" data-q="${i}" aria-pressed="${i === qSel}">${qNombre(x.etiqueta)}${x.parcial ? " · en curso" : ""}</button>`).join("");
+  document.getElementById("titulo").innerHTML = `${nombreTab}<small>Monitor de Growth · ${qNombre(q.etiqueta)}</small>`;
+  document.getElementById("acciones").innerHTML = `<span class="chip">${ico("cal", 16)}${fecha(q.desde)} – ${fecha(q.hasta)}</span><span class="chip azul">${ico("reloj", 16)}Datos al ${fecha(D.actualizado)}</span>`;
+  const act = D.trimestres[D.trimestres.length - 1], nr = Object.values(act.comparacion.metricas).filter(m => m.estado === "desmejora").length;
+  document.getElementById("promo").innerHTML = `${ico("campana", 22)}<b>Alarma diaria</b><span class="num">${nr}</span><span>${nr === 1 ? "número en desmejora" : "números en desmejora"} en ${qNombre(act.etiqueta)} contra el mismo tramo de ${qNombre(act.comparacion.previo?.etiqueta) || "el Q anterior"}. Avisa por Slack el día en que un número pasa a rojo.</span>`;
+  document.getElementById("panel").innerHTML = PINTAR[tabSel](q);
+  document.getElementById("panel").setAttribute("aria-label", nombreTab);
+}
+function elegirTab(t) { tabSel = t; guardar("tab", t); try { history.replaceState(null, "", "#" + t); } catch (e) {} pintar(); }
+
+document.querySelectorAll("[data-ico]").forEach(e => e.innerHTML = ico(e.dataset.ico, 20));
+document.getElementById("pie").textContent = `Snapshot diario de Bitrix24 y Meta del ${fecha(D.generado_en)}. Cada ⓘ explica cómo se calcula el número y de dónde sale.`;
+
+document.addEventListener("click", ev => {
+  const q = ev.target.closest("[data-q]"); if (q) { qSel = +q.dataset.q; guardar("q", D.trimestres[qSel].etiqueta); pintar(); return; }
+  const t = ev.target.closest("[data-tab]"); if (t) { elegirTab(t.dataset.tab); return; }
+  const i = ev.target.closest("[data-info]"); if (i) { abrirInfo(i.dataset.info, i); return; }
+  const x = ev.target.closest("[data-exp]"); if (x) { abrirExp(+x.dataset.exp, x); return; }
+  if (ev.target.closest("#mcerrar")) { cerrarExp(); return; }
+  const m = ev.target.closest("[data-mas]");
+  if (m) { document.querySelectorAll(`[data-extra="${m.dataset.mas}"]`).forEach(e => e.hidden = false); m.remove(); }
+});
+document.addEventListener("keydown", ev => {
+  const t = ev.target.closest && ev.target.closest("[data-tab]");
+  if (!t || !["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"].includes(ev.key)) return;
+  const ks = TABS.map(x => x[0]), i = ks.indexOf(tabSel) + (["ArrowRight", "ArrowDown"].includes(ev.key) ? 1 : -1);
+  const nuevo = ks[(i + ks.length) % ks.length], dentro = t.parentElement.id;
+  elegirTab(nuevo); document.querySelector(`#${dentro} [data-tab="${nuevo}"]`)?.focus(); ev.preventDefault();
+});
+
+let origenInfo = null;
+function abrirInfo(k, boton) {
+  const [t, d, fuente] = INFO[k] || [k, "", ""];
+  document.getElementById("hoja-t").textContent = t;
+  document.getElementById("hoja-c").innerHTML = `<p>${esc(d)}</p><div class="fuente"><b>De dónde sale:</b> ${esc(fuente)}</div>`;
+  document.getElementById("velo").hidden = false; document.getElementById("hoja").hidden = false;
+  origenInfo = boton; document.getElementById("cerrar").focus();
+}
+function cerrarInfo() { if (document.getElementById("modal").hidden) document.getElementById("velo").hidden = true; document.getElementById("hoja").hidden = true; if (origenInfo) origenInfo.focus(); }
+document.getElementById("cerrar").addEventListener("click", cerrarInfo);
+document.getElementById("velo").addEventListener("click", () => { if (!document.getElementById("hoja").hidden) cerrarInfo(); else cerrarExp(); });
+document.addEventListener("keydown", ev => {
+  if (ev.key !== "Escape") return;
+  if (!document.getElementById("hoja").hidden) cerrarInfo(); else if (!document.getElementById("modal").hidden) cerrarExp();
+});
+
+document.addEventListener("pointermove", mover); document.addEventListener("pointerdown", mover);
+function mover(ev) {
+  document.querySelectorAll(".chart .tt").forEach(tt => { if (!tt.parentElement.contains(ev.target)) { tt.hidden = true; tt.parentElement.querySelector(".cross").setAttribute("opacity", "0"); } });
+  const hit = ev.target.closest && ev.target.closest(".hit"); if (!hit) return;
+  const c = hit.closest(".chart"), svg = c.querySelector("svg"), s = JSON.parse(decodeURIComponent(c.dataset.serie));
+  const r = svg.getBoundingClientRect(), k = r.width / s.W, px = (ev.clientX - r.left) / k;
+  const i = Math.max(0, Math.min(s.N - 1, Math.round((px - s.L) / ((s.W - s.L - s.R) / Math.max(s.N - 1, 1)))));
+  const cx = s.L + (s.N === 1 ? 0 : i * (s.W - s.L - s.R) / (s.N - 1));
+  const cross = c.querySelector(".cross"); cross.setAttribute("x1", cx); cross.setAttribute("x2", cx); cross.setAttribute("opacity", ".6");
+  const tt = c.querySelector(".tt");
+  const f2 = r => r ? `${r[0].slice(8)}/${r[0].slice(5, 7)}–${r[1].slice(8)}/${r[1].slice(5, 7)}` : "";
+  tt.innerHTML = `Semana ${i + 1}<br>${s.qa}${s.ra[i] ? ` (${f2(s.ra[i])})` : ""}: <b>${s.act[i] ?? "—"}</b>${s.qp ? `<br>${s.qp}${s.rp[i] ? ` (${f2(s.rp[i])})` : ""}: <b>${s.prev[i] ?? "—"}</b>` : ""}`;
+  const cr = c.getBoundingClientRect();
+  tt.style.left = Math.max(60, Math.min(cr.width - 60, r.left - cr.left + cx * k)) + "px";
+  tt.style.top = (r.top - cr.top + 10) + "px"; tt.hidden = false;
+}
+
+const hash = location.hash.slice(1), ks = TABS.map(x => x[0]);
+tabSel = ks.includes(hash) ? hash : (ks.includes(leer("tab")) ? leer("tab") : "funnel");
+const qG = D.trimestres.findIndex(q => q.etiqueta === leer("q")); if (qG >= 0) qSel = qG;
+pintar();
+</script>

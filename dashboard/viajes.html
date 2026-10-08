@@ -1,0 +1,1160 @@
+<title>Viajes Comerciales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: misma familia visual que el Monitor de Growth. Menú lateral a la
+   izquierda (General + una entrada por provincia) y el contenido a la derecha:
+   indicadores arriba, tablas debajo. En el celular el menú pasa arriba. */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --soft:#f7f9fc; --line:#e9edf4; --line-2:#dce2ec;
+  --ink:#0f1729; --ink-2:#5f6b7f; --ink-3:#98a2b3;
+  --blue:#2463eb; --blue-soft:#eaf0ff; --blue-ink:#ffffff;
+  --good:#16a34a; --good-bg:#e7f7ed; --bad:#dc2626; --bad-bg:#fdecec; --warn:#c2680a; --warn-bg:#fdf1e2;
+  --flat:#64748b; --flat-bg:#eef1f6; --violet:#7c3aed; --violet-bg:#f1ebfe;
+  --shadow:0 1px 2px rgba(16,24,40,.04),0 4px 14px rgba(16,24,40,.04);
+  --r:16px;
+  --f:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e131c; --card:#161d29; --soft:#1b2331; --line:#232c3b; --line-2:#2e3950;
+  --ink:#eef2f8; --ink-2:#a1adc0; --ink-3:#6c788d;
+  --blue:#5b8cff; --blue-soft:#1b2744; --blue-ink:#0e131c;
+  --good:#4ade80; --good-bg:#15291e; --bad:#f87171; --bad-bg:#301819; --warn:#fbbf24; --warn-bg:#2e2411;
+  --flat:#a1adc0; --flat-bg:#222b3a; --violet:#b69cff; --violet-bg:#261d3d;
+  --shadow:none; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0e131c; --card:#161d29; --soft:#1b2331; --line:#232c3b; --line-2:#2e3950;
+  --ink:#eef2f8; --ink-2:#a1adc0; --ink-3:#6c788d;
+  --blue:#5b8cff; --blue-soft:#1b2744; --blue-ink:#0e131c;
+  --good:#4ade80; --good-bg:#15291e; --bad:#f87171; --bad-bg:#301819; --warn:#fbbf24; --warn-bg:#2e2411;
+  --flat:#a1adc0; --flat-bg:#222b3a; --violet:#b69cff; --violet-bg:#261d3d;
+  --shadow:none; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:14px;line-height:1.5}
+.shell{max-width:1320px;margin:0 auto;padding-inline:20px;padding-block:28px 48px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px;align-items:start}
+aside{position:sticky;top:calc(env(safe-area-inset-top, 0px) + 20px);display:flex;flex-direction:column;gap:18px}
+.brand h1{font-size:20px;font-weight:800;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.brand p{color:var(--ink-3);font-size:12px;margin:4px 0 0}
+.menu{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px}
+.menu .sec{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:10px 12px 4px}
+.tab{font:inherit;font-weight:600;font-size:13.5px;border:0;background:transparent;color:var(--ink-2);padding:9px 12px;border-radius:9px;cursor:pointer;white-space:nowrap;display:flex;justify-content:space-between;gap:10px;align-items:center;text-align:left}
+.tab:hover{color:var(--ink);background:var(--soft)}
+.tab[aria-selected="true"]{background:var(--blue);color:var(--blue-ink)}
+.tab .n{font-size:11.5px;font-weight:700;opacity:.75;font-variant-numeric:tabular-nums}
+.tab:focus-visible,a:focus-visible,.chip:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+main{display:flex;flex-direction:column;gap:22px;min-width:0}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px 16px}
+.head h2{font-size:24px;font-weight:800;letter-spacing:-.02em;margin:0}
+.head p{color:var(--ink-2);margin:2px 0 0}
+.stamp{color:var(--ink-3);font-size:12.5px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:6px;min-width:0}
+.kpi .lab{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.kpi .val{font-size:28px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+.kpi .val.muted{color:var(--ink-3);font-size:22px}
+.kpi .det{font-size:12.5px;color:var(--ink-2)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px 22px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.panel h3{font-size:15px;font-weight:700;margin:0}
+.panel .hint{color:var(--ink-2);font-size:12.5px;margin:2px 0 0}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:8px 12px;border-bottom:1px solid var(--line-2);white-space:nowrap}
+td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right}
+td.nw{white-space:nowrap}
+table.compact th{white-space:normal;vertical-align:bottom}
+table.compact td,table.compact th{padding-inline:8px}
+tfoot td{font-weight:700;border-top:1px solid var(--line-2)}
+a.deal{color:var(--ink);text-decoration:none;font-weight:600}
+a.deal:hover{color:var(--blue);text-decoration:underline}
+.id{color:var(--ink-3);font-size:12px}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.g-cliente{color:var(--good);background:var(--good-bg)}
+.g-presupuestado{color:var(--blue);background:var(--blue-soft)}
+.g-futuro{color:var(--warn);background:var(--warn-bg)}
+.g-gestion{color:var(--violet);background:var(--violet-bg)}
+.g-perdido{color:var(--bad);background:var(--bad-bg)}
+.g-otros{color:var(--flat);background:var(--flat-bg)}
+.a-al_dia{color:var(--good);background:var(--good-bg)}
+.a-vencida{color:var(--bad);background:var(--bad-bg)}
+.a-sin_actividad{color:var(--flat);background:var(--flat-bg)}
+.sub2{display:block;color:var(--ink-3);font-size:11.5px;margin-top:3px;white-space:nowrap}
+.mrr-si{font-weight:700;white-space:nowrap}
+.mrr-no{color:var(--ink-3)}
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:grid;grid-template-columns:84px minmax(0,1fr) 34px;gap:10px;align-items:center}
+.bar-row .nm{font-weight:600;font-size:13px}
+.bar-row .tt{color:var(--ink-3);font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+.stack{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--soft);gap:2px}
+.stack span{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12px;color:var(--ink-2)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.c-cliente{background:var(--good)} .c-presupuestado{background:var(--blue)} .c-futuro{background:var(--warn)}
+.c-gestion{background:var(--violet)} .c-perdido{background:var(--bad)} .c-otros{background:var(--flat)}
+.c-al_dia{background:var(--good)} .c-vencida{background:var(--bad)} .c-sin_actividad{background:var(--flat)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.note{font-size:12.5px;color:var(--warn);background:var(--warn-bg);border-radius:10px;padding:10px 14px;margin:0}
+.filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.filters .fl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-right:4px}
+.chip{font:inherit;font-size:12.5px;font-weight:600;border:1px solid var(--line-2);background:var(--card);color:var(--ink-2);border-radius:999px;padding:4px 12px;cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)}
+.panel-head{display:flex;flex-direction:column;gap:12px}
+.info{position:relative;display:inline-flex;vertical-align:1px;margin-left:4px;text-transform:none;letter-spacing:0}
+.info-btn{font:inherit;font-size:10px;font-weight:800;width:16px;height:16px;border-radius:50%;border:1px solid var(--line-2);background:var(--soft);color:var(--ink-2);cursor:help;display:inline-flex;align-items:center;justify-content:center;padding:0;font-style:italic}
+.info-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.tip{position:absolute;top:calc(100% + 8px);left:-10px;z-index:5;width:250px;max-width:70vw;background:var(--card);border:1px solid var(--line-2);border-radius:12px;box-shadow:0 8px 28px rgba(16,24,40,.14);padding:12px 14px;display:none;flex-direction:column;gap:8px;color:var(--ink);font-weight:400}
+.info:hover .tip,.info:focus-within .tip{display:flex}
+.kpi:last-child .tip{left:auto;right:-10px}
+.tip-t{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.tip ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.tip-row{display:flex;justify-content:space-between;gap:10px;font-size:13px;font-variant-numeric:tabular-nums}
+.tip-row span{color:var(--ink-2);white-space:nowrap}
+.tip-deals{font-size:12px;color:var(--ink-3);margin-top:2px;line-height:1.45}
+.empty{color:var(--ink-3);text-align:center;padding:24px}
+@media (max-width:1100px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.grid2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){
+  .shell{grid-template-columns:minmax(0,1fr);gap:18px}
+  aside{position:static}
+  .menu{flex-direction:row;overflow-x:auto}
+  .menu .sec{display:none}
+}
+@media (max-width:560px){.shell{padding-inline:16px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi .val{font-size:23px}.head h2{font-size:21px}}
+@media (prefers-reduced-motion:no-preference){.tab,.chip{transition:background .15s,color .15s}}
+/* Menú: estado del viaje debajo del nombre */
+.tab .tx{display:flex;flex-direction:column;gap:1px;min-width:0}
+.tab .st{font-size:11px;font-weight:600;color:var(--ink-3)}
+.tab .st.plan{color:var(--blue)}
+.tab[aria-selected="true"] .st{color:var(--blue-ink);opacity:.8}
+/* Solapas Métricas / Agenda */
+.subtabs{display:flex;gap:2px;border-bottom:1px solid var(--line-2);overflow-x:auto;scrollbar-width:none}
+.subtab{font:inherit;font-size:14px;font-weight:600;color:var(--ink-2);background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:8px 14px;cursor:pointer;display:flex;gap:8px;align-items:center;white-space:nowrap}
+.subtab:hover{color:var(--ink)}
+.subtab[aria-selected="true"]{color:var(--blue);border-bottom-color:var(--blue)}
+.subtab .n{font-size:11.5px;font-weight:700;background:var(--soft);border-radius:999px;padding:1px 7px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.subtab:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.estado{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;vertical-align:4px;margin-left:8px}
+.estado.fin{color:var(--good);background:var(--good-bg)}
+.estado.plan{color:var(--blue);background:var(--blue-soft)}
+.p-pend{color:var(--warn);background:var(--warn-bg)}
+.agendado{display:block;color:var(--blue);font-size:11.5px;margin-top:3px;font-weight:600}
+.info-note{font-size:12.5px;color:var(--ink-2);background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:0}
+/* Agenda */
+.agenda{display:grid;grid-template-columns:340px minmax(0,1fr);gap:16px;align-items:start}
+form.panel{gap:12px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:12px;font-weight:700;color:var(--ink-2)}
+.field label .opt{font-weight:500;color:var(--ink-3)}
+.field input,.field textarea{font:inherit;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line-2);border-radius:10px;padding:9px 11px;width:100%}
+.field textarea{resize:vertical;min-height:64px}
+.field input:focus,.field textarea:focus{outline:2px solid var(--blue);outline-offset:0;border-color:transparent}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.crm-hint{font-size:12px;color:var(--ink-3);min-height:18px}
+.crm-hint.ok{color:var(--good)} .crm-hint.bad{color:var(--warn)}
+.btn{font:inherit;font-size:13.5px;font-weight:700;border-radius:10px;padding:10px 14px;cursor:pointer;border:1px solid transparent}
+.btn.pri{background:var(--blue);color:var(--blue-ink)}
+.btn.pri:disabled{opacity:.6;cursor:progress}
+.btn.sec{background:var(--card);color:var(--ink-2);border-color:var(--line-2)}
+.btn.link{background:none;border:0;padding:4px 6px;color:var(--ink-2);font-size:12.5px;font-weight:600}
+.btn.link:hover{color:var(--blue)}
+.btn.link.danger{color:var(--bad)}
+.btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.msg{font-size:12.5px;min-height:18px;margin:0}
+.msg.err{color:var(--bad)} .msg.ok{color:var(--good)}
+.dia{display:flex;flex-direction:column;gap:8px}
+.dia h4{margin:0;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);display:flex;gap:8px;align-items:center}
+.dia h4 .hoy{color:var(--blue)}
+.cita{display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.cita.pasada{opacity:.72}
+.cita .hr{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums;padding-top:1px}
+.cita .hr.sin{color:var(--ink-3);font-size:12px;font-weight:600}
+.cita .cuerpo{display:flex;flex-direction:column;gap:3px;min-width:0}
+.cita .dir{color:var(--ink-2);font-size:13px}
+.cita .dir a{color:inherit}
+.cita .nota{color:var(--ink-2);font-size:12.5px;white-space:pre-wrap;overflow-wrap:anywhere}
+.cita .meta{color:var(--ink-3);font-size:11.5px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.cita .ops{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.vacio{border:1px dashed var(--line-2);border-radius:12px;padding:28px 20px;text-align:center;color:var(--ink-2)}
+.vacio b{display:block;color:var(--ink);margin-bottom:4px}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--ink-2);cursor:pointer}
+.check input{margin-top:3px;accent-color:var(--blue)}
+.field select{font:inherit;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line-2);border-radius:10px;padding:9px 11px;width:100%}
+.cal.ok a,.cal.ok{color:var(--good);font-weight:600}
+a.ficha{display:inline-flex;align-items:center;font-size:11.5px;font-weight:700;color:var(--blue);background:var(--blue-soft);border-radius:999px;padding:2px 9px;margin-left:4px;text-decoration:none;white-space:nowrap;vertical-align:1px}
+a.ficha:hover{text-decoration:underline}
+a.ficha:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+/* Base del CRM */
+.gest{display:flex;gap:4px;flex-wrap:wrap;min-width:180px;max-width:240px}
+.gb{font:inherit;font-size:11.5px;font-weight:700;border:1px solid var(--line-2);background:var(--card);color:var(--ink-2);border-radius:999px;padding:3px 9px;cursor:pointer;white-space:nowrap}
+.gb:hover{border-color:var(--ink-3);color:var(--ink)}
+.gb:disabled{cursor:default;opacity:.55}
+.gb:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.gb[aria-pressed="true"].no_respondio{color:var(--warn);background:var(--warn-bg);border-color:var(--warn)}
+.gb[aria-pressed="true"].contactado{color:var(--blue);background:var(--blue-soft);border-color:var(--blue)}
+.gb[aria-pressed="true"].derivado{color:var(--good);background:var(--good-bg);border-color:var(--good)}
+.c-no_respondio{background:var(--warn)} .c-contactado{background:var(--blue)} .c-derivado{background:var(--good)} .c-sin{background:var(--line-2)}
+.avance{display:flex;flex-direction:column;gap:12px}
+.avance .stack{height:18px;border-radius:9px}
+.gk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.gk div{display:flex;flex-direction:column;gap:2px}
+.gk b{font-size:20px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.gk span{font-size:12px;color:var(--ink-2)}
+@media (max-width:560px){.gk{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mini{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pref{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pref code{font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:4px 7px;color:var(--ink-2)}
+.pref code.ex{color:var(--bad);text-decoration:line-through}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.buscar{font:inherit;font-size:13.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line-2);border-radius:10px;padding:8px 11px;min-width:220px;flex:1;max-width:340px}
+.buscar:focus{outline:2px solid var(--blue);outline-offset:0;border-color:transparent}
+.tel{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tipo{font-size:11px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em}
+.mas{display:flex;justify-content:center}
+.menu .nuevo{font:inherit;font-weight:700;font-size:13px;border:1px dashed var(--line-2);background:transparent;color:var(--blue);padding:9px 12px;border-radius:9px;cursor:pointer;text-align:left;margin-top:4px;white-space:nowrap}
+.menu .nuevo:hover,.menu .nuevo[aria-selected="true"]{background:var(--blue-soft);border-style:solid;border-color:var(--blue)}
+.menu .nuevo:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.sug{display:flex;flex-wrap:wrap;gap:6px}
+.plan-grid{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:1050px){.plan-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.mini{grid-template-columns:repeat(2,minmax(0,1fr))}.menu .nuevo{margin-top:0}}
+@media (max-width:1050px){.agenda{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.cita{grid-template-columns:52px minmax(0,1fr)}.cita .ops{grid-column:1 / -1;flex-direction:row;justify-content:flex-end}}
+</style>
+
+<div class="shell">
+  <aside>
+    <div class="brand"><h1>Viajes Comerciales</h1><p id="stamp"></p></div>
+    <nav class="menu" id="tabs" role="tablist" aria-label="Vistas" aria-orientation="vertical"></nav>
+  </aside>
+  <main id="vista"></main>
+</div>
+
+<script>
+const D = {"generado_en": "2026-10-08T12:26-03:00", "portal": "aitsolutions.bitrix24.es", "provincias": ["Córdoba", "Rosario", "Mendoza", "San Juan", "Neuquén", "Bariloche"], "destinos": {"Córdoba": {"estado": "finalizado", "pauta": 61610.46, "pauta_usd": 41.07, "gastos_usd": {"pasajes": 122.5, "viaticos": 80.0}, "viaje_usd": 202.5, "inversion_usd": 243.57}, "Rosario": {"estado": "finalizado", "pauta": 31673.66, "pauta_usd": 21.12, "gastos_usd": {"pasajes": 122.5, "viaticos": 80.0, "alojamiento": 159.0}, "viaje_usd": 361.5, "inversion_usd": 382.62}, "Mendoza": {"estado": "finalizado", "pauta": 34623.1, "pauta_usd": 23.08, "gastos_usd": {"pasajes": 152.5, "alojamiento": 209.5}, "viaje_usd": 362.0, "inversion_usd": 385.08}, "San Juan": {"estado": "finalizado", "pauta": 69310.42, "pauta_usd": 46.21, "gastos_usd": {"pasajes": 152.5, "alojamiento": 209.5}, "viaje_usd": 362.0, "inversion_usd": 408.21}, "Neuquén": {"estado": "finalizado", "pauta": 32284.07, "pauta_usd": 21.52, "gastos_usd": {"pasajes": 71.0, "alojamiento": 233.0}, "viaje_usd": 304.0, "inversion_usd": 325.52}, "Bariloche": {"estado": "planificado", "pauta": null, "pauta_usd": null, "gastos_usd": {}, "viaje_usd": null, "inversion_usd": null}}, "moneda_inversion": "ARS", "conceptos": {"pasajes": "Pasajes", "alojamiento": "Alojamiento", "viaticos": "Viáticos y comida"}, "tc": 1500, "planilla": [{"id": "28554", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "27760", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28586", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "25148", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "23052", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "27604", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28176", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "26976", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "10040", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28568", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28484", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "25918", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28606", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28612", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28596", "provincia": "Córdoba", "asesor_viaje": "Santiago Iaquinta"}, {"id": "15272", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28634", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "27462", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "27282", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "26168", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28478", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "21058", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "27902", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28396", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "11012", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28646", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28644", "provincia": "Rosario", "asesor_viaje": "Santiago Iaquinta"}, {"id": "28912", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "29790", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "28792", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "28798", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "27634", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "28818", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "22204", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "11880", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "26606", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "28846", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "28866", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "27566", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "15864", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "12568", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}, {"id": "27876", "provincia": "Mendoza", "asesor_viaje": "Luciana Canteli"}], "agenda": [{"_id": "1nc45s5rtktf7sretse4", "asesor_id": "1", "creado_en": "2026-10-06T15:39:20.937Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://maps.app.goo.gl/himjcJ5W5MTwe24e8", "editado_en": "2026-10-06T18:18:10.210Z", "evento_id": "ds6e53p4d6sfakb7r0kic4rcm4", "evento_link": "https://www.google.com/calendar/event?eid=ZHM2ZTUzcDRkNnNmYWtiN3Iwa2ljNHJjbTQgeWFtaWxhc2FtcGVkcm9AYWl0c29sdXRpb25zLmNvbS5hcg", "evento_por": "u_pcAq309HAXwP003WCPRLNA", "fecha": "2026-10-09", "hora": "14:00", "id_negociacion": "28948", "nombre": "Mariana - Lomas IKA", "notas": "", "provincia": "Bariloche"}, {"_id": "m4h0y87vakqp8ucrrmxh", "asesor_id": "1", "creado_en": "2026-10-06T15:51:30.165Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/SrNIHqYDsPungmkIs", "editado_en": "2026-10-06T17:46:26.350Z", "evento_id": "74ck15jpivcaab5v1k32pf5qhs", "evento_link": "https://www.google.com/calendar/event?eid=NzRjazE1anBpdmNhYWI1djFrMzJwZjVxaHMgeWFtaWxhc2FtcGVkcm9AYWl0c29sdXRpb25zLmNvbS5hcg", "evento_por": "u_pcAq309HAXwP003WCPRLNA", "fecha": "2026-10-09", "hora": "17:00", "id_negociacion": "28946", "nombre": "Victoria - Hugo Repuestos Industria & Automotriz", "notas": "", "provincia": "Bariloche"}, {"_id": "zeee5yi9r8mqma4l1fui", "creado_en": "2026-10-06T15:26:43.633Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/AmHxVF8238dRN7fXR", "fecha": "2026-09-02", "hora": "09:00", "id_negociacion": "28748", "nombre": "Jose Luis Miranda - Chevrocar", "notas": "", "provincia": "Neuquén"}, {"_id": "vvxyyb4tz5d1ki5s4prn", "creado_en": "2026-10-06T15:28:06.271Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/YGmABh8bemmMH8x74", "fecha": "2026-09-02", "hora": "12:00", "id_negociacion": "4410", "nombre": "Andre Gonzalez - Encendido Patagonia - Visita Neuquén", "notas": "", "provincia": "Neuquén"}, {"_id": "yhwf9njl0mot0up7sinw", "creado_en": "2026-10-06T15:30:06.430Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "Ubicación de tienda  Gral. Fernández Oro 838  Cipolletti, Río Negro", "fecha": "2026-09-03", "hora": "09:30", "id_negociacion": "21470", "nombre": "Fernando Dirrigo - Integral Repuestos", "notas": "", "provincia": "Neuquén"}, {"_id": "tkvij00umxzkkp118vyp", "creado_en": "2026-10-06T15:02:54.965Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "remedios escalada san martin 218 oeste", "editado_en": "2026-10-06T15:03:30.003Z", "fecha": "2026-09-29", "hora": "08:15", "id_negociacion": "28844", "nombre": "Danilo - PEÑA'SOLUCIONES MECÁNICAS", "notas": "", "provincia": "San Juan"}, {"_id": "swszaqpokc5m0845k9mx", "creado_en": "2026-10-06T15:04:17.331Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/I2uJpiMiGkGmsX8se", "fecha": "2026-09-29", "hora": "09:50", "id_negociacion": "28842", "nombre": "Pedro - Lubrimovil", "notas": "", "provincia": "San Juan"}, {"_id": "074oyg9i8rq5qrs9z03a", "creado_en": "2026-10-06T15:04:52.203Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/L1BprOoEvpUXsaNTO", "fecha": "2026-09-29", "hora": "11:30", "id_negociacion": "25786", "nombre": "Renzo Ingleses - DR suspension", "notas": "", "provincia": "San Juan"}, {"_id": "qhmxi6zd1i75xazsav2g", "creado_en": "2026-10-06T15:06:15.330Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://maps.app.goo.gl/DZTNvkQSSrRMhzdw5", "fecha": "2026-09-29", "hora": "13:00", "id_negociacion": "22402", "nombre": "Bea Sanchez - Accesorios Bahia", "notas": "", "provincia": "San Juan"}, {"_id": "ik182l62hb2x7agjzh4b", "creado_en": "2026-10-06T15:06:43.580Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "Gdor. Rojas Sur 61 sur, J5425 Rawson, San Juan", "fecha": "2026-09-29", "hora": "14:40", "id_negociacion": "28876", "nombre": "Henrry - polarizados Belbruno", "notas": "", "provincia": "San Juan"}, {"_id": "8f1ja14e3s02g1agsi9s", "creado_en": "2026-10-06T15:07:14.116Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "Mendoza 902(s) esquina Belgrano", "fecha": "2026-09-30", "hora": "09:00", "id_negociacion": "27076", "nombre": "Carlos Morales - Morales Motos", "notas": "", "provincia": "San Juan"}, {"_id": "bepglcl8k239fapgefc0", "creado_en": "2026-10-06T15:08:13.725Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/gULW3BeM7bmNowro7", "fecha": "2026-09-30", "hora": "10:40", "id_negociacion": "28884", "nombre": "Nicolás - Forwell", "notas": "", "provincia": "San Juan"}, {"_id": "thj4w42ivmeh63i5gpd6", "creado_en": "2026-10-06T15:09:20.951Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/CLpVoJKawASd5j5jB", "fecha": "2026-09-30", "hora": "12:20", "id_negociacion": "20552", "nombre": "Andres - DAVOLI REPUESTOS MULTIMARCA", "notas": "", "provincia": "San Juan"}, {"_id": "4skiyud0i8z18kdnkzxl", "creado_en": "2026-10-06T15:09:52.869Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/mCJ8xRnlz6kbnv7e5", "fecha": "2026-09-30", "hora": "13:55", "id_negociacion": "8704", "nombre": "Nestor Sanchez - MegaTruck", "notas": "", "provincia": "San Juan"}, {"_id": "5v0uy2o8f6143t4rtn6h", "creado_en": "2026-10-06T15:10:29.820Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "San Lorenzo Este 1302, J5400 Santa Lucía, San Juan", "fecha": "2026-10-01", "hora": "09:15", "id_negociacion": "28902", "nombre": "Mario - Efe-eme servicios", "notas": "", "provincia": "San Juan"}, {"_id": "9gqkn84f8c64yy4kyll4", "creado_en": "2026-10-06T15:11:10.664Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/QISbc6ioc7oJLNBaE", "fecha": "2026-10-01", "hora": "10:50", "id_negociacion": "28878", "nombre": "Mauricio - Todo Trailer y Suspensión", "notas": "", "provincia": "San Juan"}, {"_id": "avtbwzg4zdyzezuxmmvv", "creado_en": "2026-10-06T15:11:57.417Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "Las Heras 1481, J5400 San Juan", "fecha": "2026-10-01", "hora": "12:25", "id_negociacion": "28822", "nombre": "Martin - Meo Suspension", "notas": "", "provincia": "San Juan"}, {"_id": "r1glp5dxhdpjp9np3hmx", "creado_en": "2026-10-06T15:13:29.028Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/Xx1ZfiGks0YpqWCXM", "fecha": "2026-10-01", "hora": "14:05", "id_negociacion": "28840", "nombre": "Andrea - GARAGE JF", "notas": "", "provincia": "San Juan"}, {"_id": "arksp2g9wp92exa9tkyq", "creado_en": "2026-10-06T15:24:08.227Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/WlPHloPsXdGvazTgg", "fecha": "2026-10-01", "hora": "15:30", "id_negociacion": "28950", "nombre": "Pablo Morales - Morales Todo Moto", "notas": "", "provincia": "San Juan"}, {"_id": "469u1i7x6ww2bpjzl0p8", "creado_en": "2026-10-06T15:24:50.980Z", "creado_por": "u_pcAq309HAXwP003WCPRLNA", "direccion": "https://share.google/S7KQUJMvSt4s1WLUA", "fecha": "2026-10-02", "hora": "10:00", "id_negociacion": "28654", "nombre": "Gonzalo - The Crazy Cars", "notas": "", "provincia": "San Juan"}], "crm": {"4410": {"nombre": "Juan Manuel - Vieja Esquina", "responsable": "Usuario #44", "embudo": "Ventas", "etapa": "A Reciclar con contacto", "grupo": "Otros embudos", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "8704": {"nombre": "Nestor Sanchez - MegaTruck", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "En negociación", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 222.0, "moneda": "USD", "actividad": {"estado": "vencida", "fecha": "2026-10-08", "dias": 0, "asunto": "Comunicarse con el cliente", "vencidas": 1}}, "10040": {"nombre": "Darel - Repuestos Megaford", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A Futuro corto plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-20", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "11012": {"nombre": "Nahuel - Repuestos Ariel Frenos Embragues Distribución", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-12-23", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "11880": {"nombre": "Matías Galarsi - Centro Repuestos", "responsable": "Santiago Iaquinta", "embudo": "Seguimiento Clientes", "etapa": "Semana 1", "grupo": "Cliente", "cerrado": true, "fecha_cierre": "2026-09-29", "mrr": 200.0, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "12568": {"nombre": "Claudio Dorrego - Dorrego Repuestos", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-08", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "15272": {"nombre": "Jorge - Tax rem", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A Futuro corto plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "vencida", "fecha": "2026-10-05", "dias": 3, "asunto": "Comunicarse con el cliente", "vencidas": 1}}, "15864": {"nombre": "Lucas - TODO PARTES - TODO CAMIÓN", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-08", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "20552": {"nombre": "Andres - DAVOLI REPUESTOS MULTIMARCA", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 150.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-12", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "21058": {"nombre": "Yani - Daniel Repuestos", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A Futuro corto plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-29", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "21470": {"nombre": "Fernando Dirrigo - Integral Repuestos", "responsable": "Santiago Iaquinta", "embudo": "Seguimiento Clientes", "etapa": "Seguimiento finalizado", "grupo": "Cliente", "cerrado": true, "fecha_cierre": "2026-02-20", "mrr": 244.0, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "22204": {"nombre": "Seba- MAV-EP VISCIGLIA", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-08", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "22402": {"nombre": "Bea Sanchez - Accesorios Bahia", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 268.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-12", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "23052": {"nombre": "Matias - VLM Herramientas Y Repuesto motor", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A Futuro corto plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-29", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "25148": {"nombre": "Enzo Cejas - Martinez Repuestos", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-11-06", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "25786": {"nombre": "Renzo Ingleses - DR suspension", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 172.5, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-12", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "25918": {"nombre": "Javier Franzot - Prisma Repuestos", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 230.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2027-02-02", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "26168": {"nombre": "Joan Aguirre - Repuestos Avellaneda", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2027-01-05", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "26606": {"nombre": "Leo Furlan - Repuestos Furlan", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-08", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "26976": {"nombre": "Mariano Ruben Gomez - Lugones Repuestos", "responsable": "Luciana Canteli", "embudo": "BBDD 2.0", "etapa": "Reactivar Ventas", "grupo": "Otros embudos", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "27076": {"nombre": "Carlos Morales - Morales Motos", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 227.8, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-09", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "27282": {"nombre": "Damian Alvarez - Mayoral", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "vencida", "fecha": "2026-10-06", "dias": 2, "asunto": "Comunicarse con el cliente", "vencidas": 1}}, "27462": {"nombre": "Franco o Eduardo- Efrain Autopartes", "responsable": "Diego Abanto", "embudo": "Ventas 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "27566": {"nombre": "Marisa - AUTOBAHN - Automechanika", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-08", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "27604": {"nombre": "German - Sv repuestos  - Automechanika", "responsable": "Luciana Canteli", "embudo": "Seguimiento Clientes", "etapa": "Quincena 2", "grupo": "Cliente", "cerrado": true, "fecha_cierre": "2026-08-10", "mrr": 304.0, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "27634": {"nombre": "Fabiana - El emporio del volkwagen - Automechanika", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-08", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "27760": {"nombre": "Pablo - Di Tomaso Repuestos - Automechanika", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A Futuro corto plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-11-03", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "27876": {"nombre": "Cristina - Dicebox", "responsable": "Usuario #12", "embudo": "Ventas 2.0", "etapa": "Contactado C/Mensaje", "grupo": "En gestión", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "27902": {"nombre": "Gabriel - Centro del Repuesto", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-13", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28176": {"nombre": "Nico Martiñena - Encendido súper", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A Futuro corto plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "vencida", "fecha": "2026-10-06", "dias": 2, "asunto": "Comunicarse con el cliente", "vencidas": 1}}, "28396": {"nombre": "Santiago - Ascanio Servicios Repuestos", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2027-03-09", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28478": {"nombre": "Juan Manuel Puccio - Seiton Motors", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-11-10", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28484": {"nombre": "Juan Carrasco - fórmula eléctrica", "responsable": "Luciana Canteli", "embudo": "Seguimiento Clientes", "etapa": "Semana 1", "grupo": "Cliente", "cerrado": true, "fecha_cierre": "2026-07-31", "mrr": 250.0, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "28554": {"nombre": "Claudio - La rotonda", "responsable": "Santiago Iaquinta", "embudo": "Ventas 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-12-17", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28568": {"nombre": "Tomas Garbovetzky - Inyeccion Los Granaderos", "responsable": "Santiago Iaquinta", "embudo": "Ventas 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2027-02-16", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28586": {"nombre": "Roberto Ronco - RRMOTOS", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A Futuro corto plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-15", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28596": {"nombre": "Marcos - Giordano repuestos", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-11-10", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28606": {"nombre": "Fabio o Edgar - Centro Capemi", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2027-02-07", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28612": {"nombre": "Martín - Piumetto Embragues", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-11-10", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28634": {"nombre": "Federico o Nahuel - Marcianise Repuestos", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-12-03", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28644": {"nombre": "Lucas - Embrague Freno Total", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A Futuro corto plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-20", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28646": {"nombre": "Lisandro o Ramiro - Suspension Pellegrini", "responsable": "Santiago Iaquinta", "embudo": "BBDD 2.0", "etapa": "Caídos", "grupo": "Otros embudos", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "28654": {"nombre": "Gonzalo - The Crazy Cars", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 250.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-09", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28748": {"nombre": "Jose Luis Miranda - Chevrocar", "responsable": "Santiago Iaquinta", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2027-01-22", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28792": {"nombre": "Franco - Autopartes San Martín", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "vencida", "fecha": "2026-10-07", "dias": 1, "asunto": "Comunicarse con el cliente", "vencidas": 1}}, "28798": {"nombre": "Bruno - Maxirepuestos", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-08", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28818": {"nombre": "Hernan - Hm repuestos", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-14", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28822": {"nombre": "Martin - Meo Suspension", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 82.5, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-13", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28840": {"nombre": "Andrea - GARAGE JF", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 172.5, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-12", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28842": {"nombre": "Pedro - Lubrimovil", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 150.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2027-01-13", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28844": {"nombre": "Danilo - PEÑA'SOLUCIONES MECÁNICAS", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 177.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-12", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28846": {"nombre": "Carlos - TODOELECTRICO SC", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-13", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28866": {"nombre": "Leonardo - Moto repuestos sur", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "A futuro largo plazo", "grupo": "A futuro", "cerrado": false, "fecha_cierre": "", "mrr": 172.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2027-01-13", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28876": {"nombre": "Henrry - polarizados Belbruno", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 90.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-12", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28878": {"nombre": "Mauricio - Todo Trailer y Suspensión", "responsable": "Luciana Canteli", "embudo": "Seguimiento Clientes", "etapa": "Semana 1", "grupo": "Cliente", "cerrado": true, "fecha_cierre": "2026-10-05", "mrr": 172.5, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "28884": {"nombre": "Nicolas - Forwell", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 400.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-12", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28902": {"nombre": "Mario - Efe-eme servicios", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 250.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-12", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28912": {"nombre": "Fer Lloret - Todo Volkswagen", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-08", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28946": {"nombre": "Victoria - Hugo Repuestos Industria & Automotriz", "responsable": "Santiago Iaquinta", "embudo": "Ventas 2.0", "etapa": "Derivado", "grupo": "En gestión", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-09", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28948": {"nombre": "Mariana - Lomas IKA", "responsable": "Santiago Iaquinta", "embudo": "Ventas 2.0", "etapa": "Derivado", "grupo": "En gestión", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "al_dia", "fecha": "2026-10-09", "asunto": "Comunicarse con el cliente", "vencidas": 0}}, "28950": {"nombre": "Pablo Morales - Morales Todo Moto", "responsable": "Luciana Canteli", "embudo": "Presupuestos 2.0", "etapa": "Presupuesto enviado", "grupo": "Presupuestado", "cerrado": false, "fecha_cierre": "", "mrr": 0.0, "moneda": "USD", "actividad": {"estado": "sin_actividad"}}, "29790": null}};
+
+/* ---------- datos ---------- */
+const GRUPOS = [
+  ["Cliente","cliente"],["Presupuestado","presupuestado"],["En gestión","gestion"],
+  ["A futuro","futuro"],["Reactivar / nuevas funciones","otros"],["Perdido o no califica","perdido"],["Otros embudos","otros"]
+];
+const ORDEN_ACT = {vencida: 0, sin_actividad: 1, al_dia: 2};
+const claseGrupo = g => (GRUPOS.find(x => x[0] === g) || [0,"otros"])[1];
+const ORDEN_GRUPO = Object.fromEntries(GRUPOS.map((g,i) => [g[0], i]));
+const usd = n => "USD " + Math.round(n).toLocaleString("es-AR");
+const pct = n => n.toLocaleString("es-AR", {maximumFractionDigits: 1}) + "%";
+const slug = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fecha = iso => new Date(iso + "T12:00:00").toLocaleDateString("es-AR", {day: "numeric", month: "short"});
+const fechaLarga = iso => new Date(iso + "T12:00:00").toLocaleDateString("es-AR", {weekday: "long", day: "numeric", month: "long"});
+const ars = n => "ARS " + n.toLocaleString("es-AR", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const montoOriginal = n => D.moneda_inversion === "ARS" ? ars(n) : usd(n);
+const linkCRM = id => `https://${esc(D.portal)}/crm/deal/details/${esc(id)}/`;
+/* Destinos cargados desde el tablero (colección "destinos") y bases del CRM por prefijo (colección "bases"). */
+let DESTINOS_DB = {}, BASES = {};
+const docId = s => slug(s).replace(/^-+|-+$/g, "");
+const provs = () => [...D.provincias, ...Object.keys(DESTINOS_DB).filter(n => !D.provincias.includes(n)).sort((a,b) => a.localeCompare(b))];
+const destino = p => D.destinos[p] || {estado: DESTINOS_DB[p] ? "planificado" : "finalizado", pauta: null, pauta_usd: null, gastos_usd: {}, viaje_usd: null, inversion_usd: null};
+const planificado = p => destino(p).estado === "planificado";
+const hoyISO = () => { const d = new Date(); return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); };
+
+let AGENDA = Array.isArray(D.agenda) ? D.agenda : [];
+let VISITAS = [];
+
+function fila(id, provincia, asesor_viaje, agenda){
+  const base = {id: String(id), provincia, asesor_viaje, agenda};
+  if (!Object.prototype.hasOwnProperty.call(D.crm, base.id))
+    return {...base, existe: false, pendiente: true, nombre: agenda?.nombre || "Negociación #" + id};
+  const c = D.crm[base.id];
+  if (c === null) return {...base, existe: false, pendiente: false, nombre: agenda?.nombre || ""};
+  return {...base, ...c, existe: true, pendiente: false};
+}
+function construirVisitas(){
+  const out = [], vistos = new Set();
+  const deAgenda = (p, id) => AGENDA.find(a => a.provincia === p && String(a.id_negociacion) === String(id));
+  D.planilla.forEach(s => { out.push(fila(s.id, s.provincia, s.asesor_viaje, deAgenda(s.provincia, s.id))); vistos.add(s.provincia + "|" + s.id); });
+  AGENDA.forEach(a => {
+    const k = a.provincia + "|" + a.id_negociacion;
+    if (vistos.has(k) || !provs().includes(a.provincia)) return;
+    vistos.add(k); out.push(fila(a.id_negociacion, a.provincia, "", a));
+  });
+  VISITAS = out;
+}
+construirVisitas();
+
+/* ---------- métricas ---------- */
+function resumen(filas, provincias){
+  const ok = filas.filter(f => f.existe);
+  const cerr = ok.filter(f => f.cerrado);
+  const conMrr = ok.filter(f => !f.cerrado && f.mrr > 0);
+  const inv = provincias.map(p => destino(p).inversion_usd);
+  const cargadas = inv.filter(v => typeof v === "number");
+  const act = {al_dia: 0, vencida: 0, sin_actividad: 0};
+  const abiertas = ok.filter(f => !f.cerrado);
+  abiertas.forEach(f => act[f.actividad.estado]++);
+  const porAsesor = {};
+  cerr.forEach(f => { const a = porAsesor[f.responsable] ||= {n: 0, mrr: 0, deals: []}; a.n++; a.mrr += f.mrr; a.deals.push(f.nombre); });
+  return {
+    visitados: ok.length, pendientes: filas.filter(f => f.pendiente).length,
+    cerrados: cerr.length,
+    win: ok.length ? cerr.length / ok.length * 100 : 0,
+    mrrCerrado: cerr.reduce((a,f) => a + f.mrr, 0),
+    mrrProy: conMrr.reduce((a,f) => a + f.mrr, 0), nProy: conMrr.length,
+    proyectadas: [...conMrr].sort((a,b) => b.mrr - a.mrr),
+    inversion: cargadas.reduce((a,v) => a + v, 0),
+    pautaArs: provincias.map(p => destino(p).pauta).filter(v => typeof v === "number").reduce((a,v) => a + v, 0),
+    pautaUsd: provincias.reduce((a,p) => a + (destino(p).pauta_usd || 0), 0),
+    viajeUsd: provincias.reduce((a,p) => a + (destino(p).viaje_usd || 0), 0),
+    porConcepto: provincias.reduce((acc,p) => { Object.entries(destino(p).gastos_usd || {}).forEach(([k,v]) => acc[k] = (acc[k] || 0) + v); return acc; }, {}),
+    invAlguna: cargadas.length > 0,
+    invPendientes: provincias.filter(p => typeof destino(p).inversion_usd !== "number" && (provincias.length === 1 || !planificado(p))),
+    act, abiertas: abiertas.length, porAsesor,
+  };
+}
+
+function kpis(r, provincias, etiquetaLeads){
+  r.invCompleta = !r.invPendientes.length;
+  const inv = r.invAlguna
+? `<div class="val">${usd(r.inversion)}</div><div class="det">Pauta ${usd(r.pautaUsd)} · Viaje ${usd(r.viajeUsd)}${r.invCompleta ? "" : " · falta cargar " + r.invPendientes.join(", ")}</div>`
+    : `<div class="val muted">Pendiente</div><div class="det">falta cargar la inversión del viaje</div>`;
+  const costo = r.invCompleta && r.cerrados ? ` · ${usd(r.inversion / r.cerrados)} por cierre` : "";
+  const detLeads = r.visitados ? `${r.act.al_dia} de ${r.abiertas} abiertos con seguimiento al día`
+    : r.pendientes ? `${r.pendientes} agendado${r.pendientes > 1 ? "s" : ""} por sumar` : "todavía sin leads";
+  return `<section class="kpis">
+    <div class="kpi"><div class="lab">Total invertido ${r.invAlguna ? infoInversion(r) : ""}</div>${inv}</div>
+    <div class="kpi"><div class="lab">${etiquetaLeads}</div><div class="val">${r.visitados}</div><div class="det">${detLeads}</div></div>
+    <div class="kpi"><div class="lab">Leads cerrados ${infoCerrados(r)}</div><div class="val">${r.cerrados}</div>
+      <div class="det">pasaron a Seguimiento Clientes${costo}</div></div>
+    <div class="kpi"><div class="lab">% win rate</div><div class="val${r.visitados ? "" : " muted"}">${r.visitados ? pct(r.win) : "—"}</div>
+      <div class="det">${r.visitados ? r.cerrados + " de " + r.visitados + " leads" : "todavía sin leads"}</div></div>
+    <div class="kpi"><div class="lab">MRR cerrado</div><div class="val">${usd(r.mrrCerrado)}</div>
+      <div class="det">${r.cerrados} cliente${r.cerrados === 1 ? "" : "s"} cerrado${r.cerrados === 1 ? "" : "s"}</div></div>
+    <div class="kpi"><div class="lab">MRR proyectado ${infoProyectado(r)}</div><div class="val${r.nProy ? "" : " muted"}">${usd(r.mrrProy)}</div>
+      <div class="det">${r.nProy ? `en ${r.nProy} negociaci${r.nProy === 1 ? "ón abierta" : "ones abiertas"} · total ${usd(r.mrrCerrado + r.mrrProy)}` : "ninguna abierta tiene MRR cargado"}</div></div>
+  </section>`;
+}
+
+function infoProyectado(r){
+  const cuerpo = r.proyectadas.length
+    ? r.proyectadas.map(f => `<li><div class="tip-row"><b>${esc(f.nombre)}</b><span>${usd(f.mrr)}</span></div>
+        <div class="tip-deals">${esc(f.etapa)} · ${esc(f.responsable)}</div></li>`).join("")
+    : `<li class="tip-deals">Ninguna negociación abierta tiene MRR cargado en el CRM.</li>`;
+  return `<span class="info"><button type="button" class="info-btn" aria-label="Ver negociaciones con MRR proyectado">i</button>
+    <span class="tip" role="tooltip"><span class="tip-t">MRR proyectado por negociación</span><ul>${cuerpo}</ul></span></span>`;
+}
+
+function infoInversion(r){
+  const filas = [[`Pauta`, r.pautaUsd, r.pautaArs ? montoOriginal(r.pautaArs) + (D.moneda_inversion === "ARS" ? " · TC " + D.tc.toLocaleString("es-AR") : "") : ""],
+    ...Object.entries(D.conceptos).filter(([k]) => r.porConcepto[k]).map(([k,n]) => [n, r.porConcepto[k], ""])];
+  return `<span class="info"><button type="button" class="info-btn" aria-label="Ver el detalle de la inversión">i</button>
+    <span class="tip" role="tooltip"><span class="tip-t">Detalle de la inversión</span><ul>${filas.map(([n,v,sub]) =>
+      `<li><div class="tip-row"><b>${esc(n)}</b><span>${usd(v)}</span></div>${sub ? `<div class="tip-deals">${esc(sub)}</div>` : ""}</li>`).join("")}
+      <li><div class="tip-row"><b>Total</b><span><b>${usd(r.inversion)}</b></span></div></li></ul></span></span>`;
+}
+
+function infoCerrados(r){
+  const filas = Object.entries(r.porAsesor).sort((a,b) => b[1].n - a[1].n || b[1].mrr - a[1].mrr);
+  const cuerpo = filas.length
+    ? filas.map(([nombre, a]) => `<li><div class="tip-row"><b>${esc(nombre)}</b><span>${a.n} · ${usd(a.mrr)}</span></div>
+        <div class="tip-deals">${a.deals.map(esc).join("<br>")}</div></li>`).join("")
+    : `<li class="tip-deals">Todavía no hay ventas cerradas.</li>`;
+  return `<span class="info"><button type="button" class="info-btn" aria-label="Ver ventas cerradas por asesor">i</button>
+    <span class="tip" role="tooltip"><span class="tip-t">Cerradas por asesor</span><ul>${cuerpo}</ul></span></span>`;
+}
+
+function avisos(filas){
+  const f = filas.filter(x => !x.existe && !x.pendiente);
+  const p = filas.filter(x => x.pendiente);
+  let html = "";
+  if (f.length) html += `<p class="note">${f.length === 1 ? "La negociación" : "Las negociaciones"} ${f.map(x => "#" + esc(x.id) + " (" + esc(x.provincia) + ")").join(", ")}
+    ${f.length === 1 ? "no existe" : "no existen"} en el CRM. Revisá el ID; por ahora no ${f.length === 1 ? "cuenta" : "cuentan"} en los totales.</p>`;
+  if (p.length) html += `<p class="info-note">${p.length} lead${p.length > 1 ? "s" : ""} agendado${p.length > 1 ? "s" : ""} todavía no ${p.length > 1 ? "están" : "está"} en las métricas: se suma${p.length > 1 ? "n" : ""} con su etapa y actividad en la próxima actualización del CRM.</p>`;
+  return html;
+}
+
+function celdaActividad(a){
+  if (a.estado === "al_dia")
+    return `<span class="pill a-al_dia">Al día</span><span class="sub2">${a.fecha ? "próxima " + fecha(a.fecha) : "sin fecha de vencimiento"}${a.vencidas ? " · " + a.vencidas + " vencida" + (a.vencidas > 1 ? "s" : "") : ""}</span>`;
+  if (a.estado === "vencida")
+    return `<span class="pill a-vencida">Vencida</span><span class="sub2">${a.dias === 0 ? "venció hoy" : "hace " + a.dias + " día" + (a.dias === 1 ? "" : "s")} · ${fecha(a.fecha)}</span>`;
+  return `<span class="pill a-sin_actividad">Sin actividad</span><span class="sub2">nada agendado</span>`;
+}
+const lineaAgenda = a => a ? `<span class="agendado">Agendado ${a.fecha ? fecha(a.fecha) : ""}${a.hora ? " · " + esc(a.hora) : ""}</span>` : "";
+
+function stackRows(provincias, keys, claseDe){
+  return provincias.map(p => {
+    const ok = VISITAS.filter(f => f.provincia === p && f.existe);
+    const cuenta = Object.fromEntries(keys.map(k => [k[0], 0]));
+    let total = 0;
+    ok.forEach(f => { const k = claseDe(f); if (k) { cuenta[k]++; total++; } });
+    const seg = keys.filter(k => cuenta[k[0]]).map(k =>
+      `<span class="c-${k[0]}" style="flex:${cuenta[k[0]]}" title="${k[1]}: ${cuenta[k[0]]}"></span>`).join("");
+    return `<div class="bar-row"><span class="nm">${esc(p)}</span><div class="stack">${seg}</div><span class="tt">${total}</span></div>`;
+  }).join("");
+}
+function leyenda(keys, claseDe){
+  const usados = keys.filter(k => VISITAS.some(f => f.existe && claseDe(f) === k[0]));
+  return `<div class="legend">${usados.map(k => `<span><i class="c-${k[0]}"></i>${k[1]}</span>`).join("")}</div>`;
+}
+const K_ETAPA = [["cliente","Cliente"],["presupuestado","Presupuestado"],["gestion","En gestión"],["futuro","A futuro"],["perdido","Perdido / no califica"],["otros","Reactivar y otros"]];
+const K_ACT = [["al_dia","Al día"],["vencida","Vencida"],["sin_actividad","Sin actividad"]];
+const porEtapa = f => claseGrupo(f.grupo), porAct = f => f.cerrado ? null : f.actividad.estado;
+
+function vistaGeneral(){
+  const P = provs();
+  const r = resumen(VISITAS, P);
+  const filas = P.map(p => {
+    const fs = VISITAS.filter(f => f.provincia === p);
+    const x = resumen(fs, [p]);
+    const asesor = [...new Set(fs.map(f => f.asesor_viaje).filter(Boolean))].join(", ");
+    const d = destino(p);
+    const inv = typeof d.inversion_usd === "number" ? `${usd(d.inversion_usd)}<span class="sub2">pauta ${usd(d.pauta_usd || 0)}</span><span class="sub2" style="margin-top:0">viaje ${usd(d.viaje_usd || 0)}</span>` : '<span class="mrr-no">Pendiente</span>';
+    return `<tr><td><b>${esc(p)}</b><span class="sub2">${planificado(p) ? "Planificado" : "Finalizado"}</span></td><td class="nw">${esc(asesor) || '<span class="mrr-no">—</span>'}</td>
+      <td class="num">${x.visitados}</td><td class="num">${x.cerrados}</td>
+      <td class="num">${x.visitados ? pct(x.win) : "—"}</td><td class="num nw">${usd(x.mrrCerrado)}</td><td class="num nw">${usd(x.mrrProy)}</td>
+      <td class="num">${x.act.al_dia}</td><td class="num">${x.act.vencida + x.act.sin_actividad}</td><td class="num nw">${inv}</td></tr>`;
+  }).join("");
+  const invTot = r.invAlguna ? `${usd(r.inversion)}<span class="sub2">pauta ${usd(r.pautaUsd)}</span><span class="sub2" style="margin-top:0">viaje ${usd(r.viajeUsd)}</span>` : '<span class="mrr-no">Pendiente</span>';
+  const sinSeg = VISITAS.filter(f => f.existe && !f.cerrado && f.actividad.estado !== "al_dia")
+    .sort((a,b) => ORDEN_ACT[a.actividad.estado] - ORDEN_ACT[b.actividad.estado] || (b.actividad.dias || 0) - (a.actividad.dias || 0) || a.provincia.localeCompare(b.provincia));
+  const filasSin = sinSeg.map(f => `<tr>
+      <td><a class="deal" href="${linkCRM(f.id)}" target="_blank" rel="noopener">${esc(f.nombre)}</a> <span class="id">#${esc(f.id)}</span></td>
+      <td class="nw">${esc(f.provincia)}</td><td class="nw">${esc(f.responsable)}</td>
+      <td><span class="pill g-${claseGrupo(f.grupo)}">${esc(f.etapa)}</span></td>
+      <td>${celdaActividad(f.actividad)}</td></tr>`).join("");
+  return `<div class="head"><div><h2>General</h2><p>Todos los leads de los viajes y cómo siguen hoy en el CRM.</p></div></div>
+  ${kpis(r, P, "Leads visitados")}
+  ${avisos(VISITAS)}
+  <section class="panel"><h3>Por destino</h3>
+    <div class="tbl"><table class="compact">
+      <thead><tr><th>Destino</th><th>Asesor del viaje</th><th class="num">Leads</th><th class="num">Cerrados</th>
+        <th class="num">Win rate</th><th class="num">MRR cerrado</th><th class="num">MRR proyectado</th>
+        <th class="num">Al día</th><th class="num">Sin seguimiento</th><th class="num">Inversión</th></tr></thead>
+      <tbody>${filas}</tbody>
+      <tfoot><tr><td>Total</td><td></td><td class="num">${r.visitados}</td><td class="num">${r.cerrados}</td><td class="num">${pct(r.win)}</td>
+        <td class="num nw">${usd(r.mrrCerrado)}</td><td class="num nw">${usd(r.mrrProy)}</td>
+        <td class="num">${r.act.al_dia}</td><td class="num">${r.act.vencida + r.act.sin_actividad}</td><td class="num nw">${invTot}</td></tr></tfoot>
+    </table></div>
+  </section>
+  <div class="grid2">
+    <section class="panel"><div><h3>Dónde están hoy</h3><p class="hint">Etapa actual en el CRM de cada lead.</p></div>
+      <div class="bars">${stackRows(P, K_ETAPA, porEtapa)}</div>${leyenda(K_ETAPA, porEtapa)}</section>
+    <section class="panel"><div><h3>Seguimiento</h3><p class="hint">Actividades pendientes de los leads que siguen abiertos. Los clientes cerrados no se miden.</p></div>
+      <div class="bars">${stackRows(P, K_ACT, porAct)}</div>${leyenda(K_ACT, porAct)}</section>
+  </div>
+  <section class="panel">
+    <div><h3>Leads sin seguimiento · ${sinSeg.length}</h3>
+      <p class="hint">Negociaciones abiertas sin ninguna actividad agendada o con todas sus actividades vencidas. Primero las vencidas hace más tiempo.</p></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Negociación</th><th>Destino</th><th>Asesor responsable</th><th>Etapa en el CRM</th><th>Actividad</th></tr></thead>
+      <tbody>${filasSin || '<tr><td colspan="5" class="empty">Todos los leads abiertos tienen una actividad al día.</td></tr>'}</tbody>
+    </table></div>
+  </section>`;
+}
+
+let filtro = "Todas", filtroAct = "todas", sub = "metricas";
+function vistaMetricas(p){
+  const fs = VISITAS.filter(f => f.provincia === p);
+  const ok = fs.filter(f => f.existe).sort((a,b) =>
+    (ORDEN_GRUPO[a.grupo] - ORDEN_GRUPO[b.grupo]) || (b.mrr - a.mrr) || a.nombre.localeCompare(b.nombre));
+  const pend = fs.filter(f => f.pendiente);
+  const grupos = [...new Set(ok.map(f => f.grupo))];
+  if (filtro !== "Todas" && !grupos.includes(filtro)) filtro = "Todas";
+  const vis = ok.filter(f => (filtro === "Todas" || f.grupo === filtro) && (filtroAct === "todas" || porAct(f) === filtroAct));
+  const filas = vis.map(f => {
+    const mrr = f.cerrado
+      ? `<span class="mrr-si">Cerrado · ${usd(f.mrr)}</span>`
+      : f.mrr > 0 ? `<span class="mrr-si">Sí · ${usd(f.mrr)}</span>` : `<span class="mrr-no">No</span>`;
+    return `<tr>
+      <td><a class="deal" href="${linkCRM(f.id)}" target="_blank" rel="noopener">${esc(f.nombre)}</a> <span class="id">#${esc(f.id)}</span>${lineaAgenda(f.agenda)}</td>
+      <td class="nw">${esc(f.responsable)}</td>
+      <td>${mrr}</td>
+      <td><span class="pill g-${claseGrupo(f.grupo)}">${esc(f.etapa)}</span><span class="sub2">${esc(f.embudo)}</span></td>
+      <td>${f.cerrado ? '<span class="mrr-no">—</span>' : celdaActividad(f.actividad)}</td>
+    </tr>`;
+  }).join("") + (filtro === "Todas" && filtroAct === "todas" ? pend.map(f => `<tr>
+      <td><a class="deal" href="${linkCRM(f.id)}" target="_blank" rel="noopener">${esc(f.nombre)}</a> <span class="id">#${esc(f.id)}</span>${lineaAgenda(f.agenda)}</td>
+      <td class="mrr-no">—</td><td class="mrr-no">—</td>
+      <td><span class="pill p-pend">Por sincronizar</span><span class="sub2">se completa con el CRM</span></td>
+      <td class="mrr-no">—</td></tr>`).join("") : "");
+  const chipsEtapa = ["Todas", ...grupos].map(g =>
+    `<button class="chip" type="button" data-filtro="${esc(g)}" aria-pressed="${g === filtro}">${esc(g)}${g === "Todas" ? "" : " · " + ok.filter(f => f.grupo === g).length}</button>`).join("");
+  const chipsAct = [["todas","Todas"], ...K_ACT].map(([k,n]) => {
+    const c = k === "todas" ? "" : " · " + ok.filter(f => porAct(f) === k).length;
+    return `<button class="chip" type="button" data-act="${k}" aria-pressed="${k === filtroAct}">${n}${c}</button>`;
+  }).join("");
+  const vacio = ok.length || pend.length ? "Ningún lead coincide con los filtros."
+    : `Todavía no hay leads en ${esc(p)}. Agendalos en la solapa Agenda.`;
+  return `${kpis(resumen(fs, [p]), [p], planificado(p) ? "Leads agendados" : "Leads visitados")}
+  ${avisos(fs)}
+  <section class="panel">
+    <div class="panel-head"><h3>Leads de ${esc(p)}</h3>
+      ${ok.length ? `<div class="filters"><span class="fl">Etapa</span>${chipsEtapa}</div>
+      <div class="filters"><span class="fl">Actividad</span>${chipsAct}</div>` : ""}
+    </div>
+    <div class="tbl"><table>
+      <thead><tr><th>Negociación</th><th>Asesor responsable</th><th>MRR proyectado</th><th>Etapa en el CRM</th><th>Actividad</th></tr></thead>
+      <tbody>${filas || `<tr><td colspan="5" class="empty">${vacio}</td></tr>`}</tbody>
+    </table></div>
+  </section>`;
+}
+
+/* ---------- agenda ---------- */
+let DB = null, USER = null, puedeEscribir = null, dbListo = false, editando = null, borrando = null;
+const agendaDe = p => AGENDA.filter(a => a.provincia === p)
+  .sort((a,b) => (a.fecha || "9").localeCompare(b.fecha || "9") || (a.hora || "99").localeCompare(b.hora || "99"));
+
+function vistaAgenda(p){
+  const soloLectura = !DB || puedeEscribir === false;
+  const motivo = !DB
+    ? (dbListo ? "La agenda se edita desde claude.ai con la sesión iniciada." : "Conectando con la agenda…")
+    : "Tenés acceso de lectura. Para cargar visitas pedí acceso de colaborador al artefacto.";
+  const form = soloLectura ? `<section class="panel"><h3>Agendar visita</h3><p class="info-note">${motivo}</p></section>` : `
+  <form class="panel" id="f-agenda" novalidate>
+    <div><h3 id="f-titulo">${editando ? "Editar visita" : "Agendar visita"}</h3>
+      <p class="hint">La negociación ya tiene que estar creada en el CRM.</p></div>
+    <div class="field"><label for="ag-id">ID de la negociación</label>
+      <input id="ag-id" name="id" inputmode="numeric" autocomplete="off" placeholder="Ej. 28554" required>
+      <span class="crm-hint" id="ag-crm"></span></div>
+    <div class="field"><label for="ag-nombre">Nombre</label>
+      <input id="ag-nombre" name="nombre" autocomplete="off" placeholder="Contacto – Negocio" required></div>
+    <div class="row2">
+      <div class="field"><label for="ag-fecha">Fecha</label><input id="ag-fecha" name="fecha" type="date" required></div>
+      <div class="field"><label for="ag-hora">Horario</label><input id="ag-hora" name="hora" type="time"></div>
+    </div>
+    <div class="field"><label for="ag-dir">Dirección</label>
+      <input id="ag-dir" name="direccion" autocomplete="off" placeholder="Calle, número y localidad"></div>
+    <div class="field"><label for="ag-asesor">Asesor de la visita</label>
+      <select id="ag-asesor" name="asesor">${ASESORES.map(a => `<option value="${a.id}">${esc(a.nombre)}</option>`).join("")}<option value="">Sin asesor</option></select></div>
+    ${MCP ? `<label class="check"><input type="checkbox" id="ag-cal" checked> ${editando && AGENDA.find(a => a._id === editando)?.evento_id ? "Actualizar el evento de Google Calendar" : "Crear evento en mi Google Calendar e invitar al asesor"}</label>` : ""}
+    <div class="field"><label for="ag-notas">Notas <span class="opt">(opcional)</span></label>
+      <textarea id="ag-notas" name="notas" placeholder="Con quién hablar, qué llevar…"></textarea></div>
+    <div class="acts"><button class="btn pri" type="submit" id="ag-guardar">${editando ? "Guardar cambios" : "Agendar visita"}</button>
+      ${editando ? '<button class="btn sec" type="button" id="ag-cancelar">Cancelar</button>' : ""}</div>
+    <p class="msg" id="ag-msg" role="status"></p>
+  </form>`;
+  return `<div class="agenda">${form}
+    <section class="panel"><div class="panel-head"><div><h3>Visitas agendadas</h3>
+      <p class="hint">Ordenadas por fecha y horario. Cada una se suma a Métricas con su etapa y actividad del CRM.</p></div></div>
+      <div id="ag-lista">${listaAgenda(p)}</div></section></div>`;
+}
+
+function listaAgenda(p){
+  const items = agendaDe(p);
+  if (!items.length) return `<div class="vacio"><b>Todavía no hay visitas agendadas en ${esc(p)}.</b>
+    ${DB && puedeEscribir !== false ? "Cargá la primera con el formulario: ID de la negociación, nombre, fecha, horario y dirección." : "Cuando SDR cargue visitas, aparecen acá."}</div>`;
+  const hoy = hoyISO();
+  const porDia = {};
+  items.forEach(a => (porDia[a.fecha || ""] ||= []).push(a));
+  return `<div class="bars" style="gap:18px">${Object.entries(porDia).map(([dia, lista]) => `
+    <div class="dia"><h4>${dia ? esc(fechaLarga(dia)) : "Sin fecha"}${dia === hoy ? '<span class="hoy">· hoy</span>' : ""}</h4>
+    ${lista.map(a => {
+      const c = D.crm[String(a.id_negociacion)];
+      const etapa = c ? `<span class="pill g-${claseGrupo(c.grupo)}">${esc(c.etapa)}</span>`
+        : c === null ? '<span class="pill g-perdido">No existe en el CRM</span>' : '<span class="pill p-pend">Por sincronizar</span>';
+      const mapa = a.direccion ? `<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.direccion)}" target="_blank" rel="noopener">${esc(a.direccion)}</a>` : "Sin dirección";
+      const ops = DB && puedeEscribir !== false && a._id ? (borrando === a._id
+        ? `<span class="meta">${a.evento_id ? "¿Borrar la visita y su evento?" : "¿Borrar?"}</span><button class="btn link danger" type="button" data-borrar-ok="${esc(a._id)}">Sí, borrar</button><button class="btn link" type="button" data-borrar-no>No</button>`
+        : `<button class="btn link" type="button" data-editar="${esc(a._id)}">Editar</button><button class="btn link danger" type="button" data-borrar="${esc(a._id)}">Borrar</button>`) : "";
+      return `<article class="cita${dia && dia < hoy ? " pasada" : ""}">
+        <div class="hr${a.hora ? "" : " sin"}">${a.hora ? esc(a.hora) : "Sin hora"}</div>
+        <div class="cuerpo">
+          <div><a class="deal" href="${linkCRM(a.id_negociacion)}" target="_blank" rel="noopener">${esc(a.nombre || (c && c.nombre) || "Negociación")}</a> <span class="id">#${esc(a.id_negociacion)}</span></div>
+          <div class="dir">${mapa}</div>
+          ${a.notas ? `<div class="nota">${esc(a.notas)}</div>` : ""}
+          <div class="meta">${etapa}${a.creado_por ? `<span>Cargó <span data-uid="${esc(a.creado_por)}">…</span></span>` : ""}${a.asesor_id ? `<span>Asesor: ${esc((ASESORES.find(x => x.id === String(a.asesor_id)) || {}).nombre || "")}</span>` : ""}
+            ${a.evento_id ? `<span class="cal ok">${a.evento_link ? `<a href="${esc(a.evento_link)}" target="_blank" rel="noopener">En Google Calendar</a>` : "En Google Calendar"}</span>`
+              : MCP && DB && puedeEscribir !== false ? `<button class="btn link" type="button" data-cal="${esc(a._id)}">Crear evento en Calendar</button>` : '<span class="cal">Sin evento en Calendar</span>'}</div>
+        </div>
+        <div class="ops">${ops}</div>
+      </article>`;
+    }).join("")}</div>`).join("")}</div>`;
+}
+
+async function pintarNombres(){
+  if (!USER) { document.querySelectorAll("[data-uid]").forEach(el => el.textContent = "SDR"); return; }
+  const ids = [...new Set([...document.querySelectorAll("[data-uid]")].map(el => el.dataset.uid))];
+  if (!ids.length) return;
+  const ps = await USER.profiles(ids);
+  document.querySelectorAll("[data-uid]").forEach(el => { el.textContent = ps[el.dataset.uid]?.name || "alguien del equipo"; });
+}
+
+function pistaCRM(){
+  const inp = document.getElementById("ag-id"), out = document.getElementById("ag-crm");
+  if (!inp || !out) return;
+  const id = inp.value.trim();
+  out.className = "crm-hint";
+  if (!id) { out.textContent = ""; return; }
+  if (!/^\d+$/.test(id)) { out.textContent = "El ID son solo números."; out.classList.add("bad"); return; }
+  const c = D.crm[id];
+  if (c) {
+    out.textContent = `En el CRM: ${c.nombre} · ${c.etapa}`; out.classList.add("ok");
+    const nom = document.getElementById("ag-nombre");
+    if (nom && !nom.value) nom.value = c.nombre;
+  } else if (c === null) { out.textContent = "Este ID no existe en el CRM. Revisalo antes de agendar."; out.classList.add("bad"); }
+  else out.textContent = "Se valida contra el CRM en la próxima actualización.";
+}
+
+function cargarFormulario(a){
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.value = v || ""; };
+  set("ag-id", a?.id_negociacion); set("ag-nombre", a?.nombre); set("ag-fecha", a?.fecha);
+  set("ag-hora", a?.hora); set("ag-dir", a?.direccion); set("ag-notas", a?.notas);
+  const sel = document.getElementById("ag-asesor");
+  if (sel) sel.value = a?.asesor_id !== undefined && a?.asesor_id !== null ? String(a.asesor_id) : asesorDefault(provinciaActual());
+  pistaCRM();
+}
+
+/* ---------- Google Calendar (conector del que carga la visita) ---------- */
+const ASESORES = [
+  {id: "1", nombre: "Santiago Iaquinta", email: "santiagoiaquinta@aitsolutions.com.ar"},
+  {id: "22", nombre: "Luciana Canteli", email: "lucianacanteli@aitsolutions.com.ar"},
+  {id: "12", nombre: "Yamil Di Nocco", email: "yamildinocco@aitsolutions.com.ar"},
+  {id: "10", nombre: "Diego Abanto", email: "diegoabanto@aitsolutions.com.ar"}];
+const CAL = "Google Calendar", TZ = "America/Argentina/Buenos_Aires", DURACION_MIN = 60;
+let MCP = null;
+function asesorDefault(p){
+  const ult = AGENDA.filter(a => a.provincia === p && a.asesor_id).sort((a,b) => (b.creado_en || "").localeCompare(a.creado_en || ""))[0];
+  if (ult) return String(ult.asesor_id);
+  const nom = (D.planilla.find(s => s.provincia === p) || {}).asesor_viaje;
+  return (ASESORES.find(a => a.nombre === nom) || ASESORES[0]).id;
+}
+function tituloEvento(nombre){
+  const partes = String(nombre || "").split(/\s+[-–]\s+/).map(x => x.trim()).filter(Boolean);
+  if (partes.length < 2) return "Presentación Boxer - " + (partes[0] || "Visita");
+  return `Presentación Boxer - ${partes.slice(1).join(" - ")} - ${partes[0]}`;
+}
+const masMin = (f, h, min) => { const d = new Date(`${f}T${h}:00-03:00`); d.setMinutes(d.getMinutes() + min);
+  return new Date(d.getTime() - 3 * 3600000).toISOString().slice(0, 19) + "-03:00"; };
+function datosEvento(v, p){
+  const as = ASESORES.find(a => a.id === String(v.asesor_id));
+  return {
+    summary: tituloEvento(v.nombre),
+    startTime: `${v.fecha}T${v.hora}:00-03:00`, endTime: masMin(v.fecha, v.hora, DURACION_MIN), timeZone: TZ,
+    location: v.direccion || "",
+    description: `Visita presencial · Viaje a ${p}${as ? " · Asesor: " + as.nombre : ""}\nNegociación en Bitrix: https://${D.portal}/crm/deal/details/${v.id_negociacion}/${v.notas ? "\n\n" + v.notas : ""}`,
+    attendees: as ? [{email: as.email, displayName: as.nombre}] : []
+  };
+}
+const errCal = err => ({needs_reauth: "Volvé a conectar Google Calendar en claude.ai.", server_not_connected: "Conectá Google Calendar en claude.ai para crear el evento.",
+  not_in_manifest: "No diste permiso a Google Calendar para esta página.", blocked_by_policy: "Tu organización no permite usar Google Calendar desde acá.",
+  cancelled: "Se canceló la creación del evento."}[err?.code] || "No se pudo crear el evento en Google Calendar" + (err?.message ? ": " + err.message : "."));
+
+async function sincronizarEvento(docId_, v, p, prev){
+  const yo = USER ? await USER.id() : null;
+  const ev = datosEvento(v, p);
+  if (prev?.evento_id) {
+    if (prev.evento_por && yo && prev.evento_por !== yo) return {aviso: "El evento está en el calendario de quien lo creó: los cambios hacelos ahí."};
+    const prevAs = ASESORES.find(a => a.id === String(prev.asesor_id)), nuevoAs = ASESORES.find(a => a.id === String(v.asesor_id));
+    const input = {eventId: prev.evento_id, summary: ev.summary, startTime: ev.startTime, endTime: ev.endTime, timeZone: TZ, location: ev.location, description: ev.description};
+    if (prevAs?.email !== nuevoAs?.email) { if (nuevoAs) input.addedAttendees = [{email: nuevoAs.email, displayName: nuevoAs.nombre}]; if (prevAs) input.removedAttendeeEmails = [prevAs.email]; }
+    await MCP.callTool(CAL, "update_event", input);
+    return {};
+  }
+  const r = await MCP.callTool(CAL, "create_event", ev);
+  const x = r?.payload || {}, e = x.event || x;
+  await DB.collection("agenda").doc(docId_).update({evento_id: e.id || e.eventId || null, evento_link: e.htmlLink || e.html_link || null, evento_por: yo});
+  return {};
+}
+
+async function guardar(e, p){
+  e.preventDefault();
+  const v = id => (document.getElementById(id)?.value || "").trim();
+  const msg = document.getElementById("ag-msg"), btn = document.getElementById("ag-guardar");
+  const datos = {id_negociacion: v("ag-id"), nombre: v("ag-nombre"), fecha: v("ag-fecha"), hora: v("ag-hora"),
+                 direccion: v("ag-dir"), notas: v("ag-notas"), provincia: p, asesor_id: v("ag-asesor") || null};
+  const conCal = !!(MCP && document.getElementById("ag-cal")?.checked);
+  msg.className = "msg err";
+  if (!/^\d+$/.test(datos.id_negociacion)) { msg.textContent = "Cargá el ID de la negociación (solo números)."; document.getElementById("ag-id").focus(); return; }
+  if (!datos.nombre) { msg.textContent = "Falta el nombre."; document.getElementById("ag-nombre").focus(); return; }
+  if (!datos.fecha) { msg.textContent = "Falta la fecha de la visita."; document.getElementById("ag-fecha").focus(); return; }
+  if (conCal && !datos.hora) { msg.textContent = "Para el evento de Calendar falta el horario (o destildá la opción)."; document.getElementById("ag-hora").focus(); return; }
+  const repetida = AGENDA.find(a => a.provincia === p && String(a.id_negociacion) === datos.id_negociacion && a._id !== editando);
+  if (repetida) { msg.textContent = `La negociación #${datos.id_negociacion} ya está agendada en ${p}${repetida.fecha ? " el " + fecha(repetida.fecha) : ""}. Editá esa visita.`; return; }
+  btn.disabled = true; msg.className = "msg"; msg.textContent = "Guardando…";
+  let docId_, prev = null;
+  try {
+    if (editando) {
+      prev = AGENDA.find(a => a._id === editando) || {};
+      docId_ = editando;
+      await DB.collection("agenda").doc(editando).set({...datos, creado_por: prev.creado_por || null, creado_en: prev.creado_en || new Date().toISOString(), editado_en: new Date().toISOString(),
+        evento_id: prev.evento_id || null, evento_link: prev.evento_link || null, evento_por: prev.evento_por || null});
+    } else {
+      const ref = await DB.collection("agenda").add({...datos, creado_por: USER ? await USER.id() : null, creado_en: new Date().toISOString()});
+      docId_ = ref.id;
+    }
+  } catch (err) {
+    btn.disabled = false; msg.className = "msg err";
+    if (err?.code === "invalid_argument") { puedeEscribir = false; msg.textContent = "No tenés permiso para cargar visitas. Pedí acceso de colaborador al artefacto."; }
+    else if (err?.code === "quota_exceeded") msg.textContent = "La agenda llegó a su límite de registros. Borrá visitas viejas para cargar nuevas.";
+    else msg.textContent = "No se pudo guardar. Probá de nuevo en unos segundos.";
+    return;
+  }
+  const eraEdicion = !!editando;
+  let final = ["ok", eraEdicion ? "Cambios guardados." : "Visita agendada."];
+  if (conCal) {
+    msg.textContent = eraEdicion && prev?.evento_id ? "Actualizando el evento en Google Calendar…" : "Creando el evento en Google Calendar…";
+    try {
+      const r = await sincronizarEvento(docId_, datos, p, prev);
+      final = r.aviso ? ["ok", final[1] + " " + r.aviso] : ["ok", final[1] + (eraEdicion && prev?.evento_id ? " Evento actualizado." : " Evento creado y asesor invitado.")];
+    } catch (err) { final = ["err", final[1] + " " + errCal(err)]; }
+  }
+  editando = null;
+  delete borrador[p];
+  render(actual);
+  const m = document.getElementById("ag-msg");
+  if (m) { m.className = "msg " + final[0]; m.textContent = final[1]; }
+}
+
+async function crearEventoDe(id, btn){
+  const a = AGENDA.find(x => x._id === id); if (!a || !MCP) return;
+  if (!a.hora) { btn.textContent = "Falta el horario"; return; }
+  btn.disabled = true; btn.textContent = "Creando…";
+  try { await sincronizarEvento(id, a, a.provincia, null); }
+  catch (err) { btn.disabled = false; btn.textContent = "Reintentar evento"; btn.title = errCal(err); const m = document.getElementById("ag-msg"); if (m) { m.className = "msg err"; m.textContent = errCal(err); } }
+}
+
+/* ---------- vistas y navegación ---------- */
+function vistaDestino(p){
+  const d = destino(p);
+  const fs = VISITAS.filter(f => f.provincia === p);
+  const asesor = [...new Set(fs.map(f => f.asesor_viaje).filter(Boolean))].join(", ");
+  const nAg = agendaDe(p).length;
+  const sublinea = planificado(p) ? `${nAg} visita${nAg === 1 ? "" : "s"} agendada${nAg === 1 ? "" : "s"}`
+    : asesor ? `Viaje de ${esc(asesor)} · ${fs.filter(f => f.existe).length} leads visitados` : "Sin leads cargados todavía";
+  return `<div class="head"><div><h2>${esc(p)}<span class="estado ${planificado(p) ? "plan" : "fin"}">${planificado(p) ? "Planificado" : "Viaje finalizado"}</span></h2><p>${sublinea}</p></div></div>
+  <div class="subtabs" role="tablist" aria-label="Secciones de ${esc(p)}">
+    <button class="subtab" role="tab" type="button" data-sub="metricas" aria-selected="${sub === "metricas"}">Métricas</button>
+    <button class="subtab" role="tab" type="button" data-sub="agenda" aria-selected="${sub === "agenda"}">Agenda <span class="n">${nAg}</span></button>
+    <button class="subtab" role="tab" type="button" data-sub="base" aria-selected="${sub === "base"}">Base del CRM <span class="n">${baseDe(p)?.filas.length ?? "—"}</span></button>
+  </div>
+  ${sub === "agenda" ? vistaAgenda(p) : sub === "base" ? vistaBase(p) : vistaMetricas(p)}`;
+}
+
+/* ---------- base del CRM por prefijo ---------- */
+// Fila: [id, tipo, nombre, telefono, origen, etapa, estado, responsable, modificado, n_negociaciones]
+let fBase = {origen: "Todos", estado: "abiertas", gest: "todas", q: "", n: 150}, editPref = false;
+/* Gestión de la base: colección "gestiones", un doc por registro y destino. */
+let GESTIONES = {};
+const GEST = [["no_respondio","No respondió"],["contactado","Contactado"],["derivado","Derivado"]];
+const GEST_N = Object.fromEntries(GEST);
+const gKey = (p, f) => docId(p) + "__" + f[1] + "-" + f[0];
+const gestDe = (p, f) => GESTIONES[gKey(p, f)]?.estado || "";
+function baseDe(p){
+  const id = docId(p), meta = BASES[id + "__meta"];
+  if (!meta) return null;
+  const filas = [];
+  for (let i = 0; i < (meta.partes || 1); i++) { const d = BASES[id + "__" + i]; if (d && Array.isArray(d.filas)) filas.push(...d.filas); }
+  return {meta, filas};
+}
+const prefijosDe = p => DESTINOS_DB[p]?.prefijos || [];
+const linkFila = f => f[1] === "lead" ? `https://${esc(D.portal)}/crm/lead/details/${esc(f[0])}/` : linkCRM(f[0]);
+const fechaHora = iso => { const g = new Date(iso); return isNaN(g) ? "" : g.toLocaleDateString("es-AR", {day: "numeric", month: "long"}) + ", " + g.toLocaleTimeString("es-AR", {hour: "2-digit", minute: "2-digit"}); };
+const mismaLista = (a, b) => [...a].map(String).sort().join(",") === [...b].map(String).sort().join(",");
+const sinTildes = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+function filtrarBase(filas){
+  const q = sinTildes(fBase.q).trim(), qd = q.replace(/\D/g, "");
+  const p = provinciaActual();
+  return filas.filter(f => (fBase.origen === "Todos" || f[4] === fBase.origen)
+    && (fBase.gest === "todas" || (fBase.gest === "sin" ? !gestDe(p, f) : gestDe(p, f) === fBase.gest))
+    && (fBase.estado === "todas" || (fBase.estado === "abiertas" ? f[6] === "abierta" : f[6] === "perdida"))
+    && (!q || sinTildes(f[2]).includes(q) || sinTildes(f[5]).includes(q) || sinTildes(f[7]).includes(q) || (qd.length >= 3 && f[3].replace(/\D/g, "").includes(qd))));
+}
+
+function tablaBase(p){
+  const b = baseDe(p);
+  if (!b) return "";
+  const vis = filtrarBase(b.filas);
+  const filas = vis.slice(0, fBase.n).map(f => `<tr>
+      <td><a class="deal" href="${linkFila(f)}" target="_blank" rel="noopener">${esc(f[2])}</a> <span class="id">#${esc(f[0])}</span>
+        <a class="ficha" href="${linkFila(f)}" target="_blank" rel="noopener" aria-label="Abrir la ficha de ${esc(f[2])} en Bitrix">Abrir en Bitrix ↗</a>
+        <span class="sub2">${f[1] === "lead" ? "Prospecto" : "Negociación"}${f[9] > 1 ? " · " + f[9] + " negociaciones" : ""}${f[8] ? " · mod. " + fecha(f[8]) + " " + f[8].slice(2, 4) : ""}</span></td>
+      <td class="tel">${esc(f[3])}</td>
+      <td><span class="pill ${f[6] === "perdida" ? "g-perdido" : "g-otros"}">${esc(f[5])}</span><span class="sub2">${esc(f[4])}</span></td>
+      <td>${esc(f[7])}</td>
+      <td>${botonesGest(p, f)}</td></tr>`).join("");
+  const mas = vis.length > fBase.n ? `<div class="mas"><button class="btn sec" type="button" data-base-mas>Ver ${Math.min(300, vis.length - fBase.n)} más · quedan ${vis.length - fBase.n}</button></div>` : "";
+  return `<p class="hint" style="margin:0">${vis.length} de ${b.filas.length} registros</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Negocio</th><th>Teléfono</th><th>Etapa y origen</th><th>Responsable</th><th>Gestión</th></tr></thead>
+      <tbody>${filas || '<tr><td colspan="5" class="empty">Ningún registro coincide con los filtros.</td></tr>'}</tbody>
+    </table></div>${mas}`;
+}
+
+function botonesGest(p, f){
+  const g = GESTIONES[gKey(p, f)], act = g?.estado || "", puede = DB && puedeEscribir !== false;
+  const quien = g?.por ? `<span class="sub2">por <span data-uid="${esc(g.por)}">…</span>${g.en ? " · " + fecha(g.en.slice(0, 10)) : ""}</span>` : "";
+  return `<div class="gest" role="group" aria-label="Gestión de ${esc(f[2])}">${GEST.map(([k,n]) =>
+    `<button class="gb ${k}" type="button" data-gest="${k}" data-fila="${esc(f[1] + "-" + f[0])}" aria-pressed="${act === k}"${puede ? "" : " disabled"}>${n}</button>`).join("")}</div>${quien}`;
+}
+
+function avanceBase(p, b){
+  const c = {no_respondio: 0, contactado: 0, derivado: 0};
+  b.filas.forEach(f => { const g = gestDe(p, f); if (c[g] !== undefined) c[g]++; });
+  const gest = c.no_respondio + c.contactado + c.derivado, sin = b.filas.length - gest;
+  const resp = c.contactado + c.derivado;
+  const pc = (a, t) => t ? pct(a / t * 100) : "—";
+  const seg = [["derivado", c.derivado], ["contactado", c.contactado], ["no_respondio", c.no_respondio], ["sin", sin]].filter(x => x[1])
+    .map(([k,v]) => `<span class="c-${k}" style="flex:${v}" title="${k === "sin" ? "Sin gestionar" : GEST_N[k]}: ${v}"></span>`).join("");
+  return `<section class="panel avance"><div><h3>Avance de la base</h3>
+      <p class="hint">Se marca a mano en cada registro. Cuenta sobre los ${b.filas.length.toLocaleString("es-AR")} de la base, sin filtros.</p></div>
+    <div class="gk">
+      <div><b>${gest.toLocaleString("es-AR")}</b><span>gestionados · ${pc(gest, b.filas.length)} de la base</span></div>
+      <div><b>${pc(resp, gest)}</b><span>respondieron (${resp} de ${gest})</span></div>
+      <div><b>${c.derivado.toLocaleString("es-AR")}</b><span>derivados · ${pc(c.derivado, resp)} de los que respondieron</span></div>
+      <div><b>${c.no_respondio.toLocaleString("es-AR")}</b><span>no respondieron</span></div>
+    </div>
+    <div class="stack">${seg}</div>
+    <div class="legend"><span><i class="c-derivado"></i>Derivado · ${c.derivado}</span><span><i class="c-contactado"></i>Contactado · ${c.contactado}</span>
+      <span><i class="c-no_respondio"></i>No respondió · ${c.no_respondio}</span><span><i class="c-sin"></i>Sin gestionar · ${sin}</span></div>
+  </section>`;
+}
+
+async function marcarGest(p, fila, estado, btn){
+  const [tipo, id] = [fila.slice(0, fila.indexOf("-")), fila.slice(fila.indexOf("-") + 1)];
+  const key = docId(p) + "__" + fila, prev = GESTIONES[key];
+  const nuevo = prev?.estado === estado ? "" : estado;
+  btn.closest(".gest").querySelectorAll(".gb").forEach(b => { b.disabled = true; b.setAttribute("aria-pressed", String(b.dataset.gest === nuevo)); });
+  try {
+    if (!nuevo) await DB.collection("gestiones").doc(key).delete();
+    else await DB.collection("gestiones").doc(key).set({destino: p, tipo, id, estado: nuevo, por: USER ? await USER.id() : null, en: new Date().toISOString()});
+  } catch (err) {
+    btn.closest(".gest").querySelectorAll(".gb").forEach(b => { b.disabled = false; b.setAttribute("aria-pressed", String(b.dataset.gest === (prev?.estado || ""))); });
+    alert(err?.code === "invalid_argument" ? "No tenés permiso para marcar gestiones. Pedí acceso de colaborador." : "No se pudo guardar la gestión. Probá de nuevo.");
+  }
+}
+
+function vistaBase(p){
+  const pref = prefijosDe(p), b = baseDe(p);
+  const puede = DB && puedeEscribir !== false;
+  const chipsPref = pref.length ? pref.map(x => String(x).startsWith("-") ? `<code class="ex" title="Excluido">${esc(String(x).slice(1))}</code>` : `<code>${esc(x)}</code>`).join("")
+    : '<span class="mrr-no">Sin prefijos cargados</span>';
+  const editor = editPref ? `<form class="field" id="f-pref" style="gap:8px" novalidate>
+      <label for="pref-in">Prefijos (separados por coma, sin 0 ni 15)</label>
+      <input id="pref-in" value="${esc(pref.join(", "))}" autocomplete="off" placeholder="Ej. 343, 345, 3442">
+      <span class="crm-hint">Un guión adelante excluye: <b>-2942</b> saca Zapala de 294.</span>
+      <div class="acts"><button class="btn pri" type="submit">Guardar prefijos</button><button class="btn sec" type="button" data-pref-cancel>Cancelar</button>
+        ${!D.provincias.includes(p) ? '<button class="btn link danger" type="button" data-quitar-destino>Quitar destino</button>' : ""}</div>
+      <p class="msg" id="pref-msg" role="status"></p></form>` : "";
+  const panelPref = `<section class="panel"><div class="toolbar"><div><h3>Prefijos de ${esc(p)}</h3>
+      <p class="hint">Entran todos los registros del CRM cuyo teléfono empieza con alguno de estos códigos de área.</p></div>
+      ${puede && !editPref ? '<button class="btn sec" type="button" data-pref-edit>Editar prefijos</button>' : ""}</div>
+    <div class="pref">${chipsPref}</div>${editor}</section>`;
+  if (!b) return `${panelPref}<section class="panel"><div class="vacio"><b>${pref.length ? "La base se está preparando." : "Cargá los prefijos para armar la base."}</b>
+    ${pref.length ? "Se arma sola en la próxima actualización del CRM (días hábiles a la mañana) y aparece acá." : "Con los prefijos guardados, la base se arma en la próxima actualización del CRM."}</div></section>`;
+  const m = b.meta, abiertas = b.filas.filter(f => f[6] === "abierta").length;
+  const leads = b.filas.filter(f => f[1] === "lead").length;
+  const desfasada = !mismaLista(m.prefijos || [], pref);
+  const origenes = Object.entries(b.filas.reduce((a,f) => (a[f[4]] = (a[f[4]] || 0) + 1, a), {})).sort((a,b) => b[1] - a[1]);
+  if (fBase.origen !== "Todos" && !origenes.some(o => o[0] === fBase.origen)) fBase.origen = "Todos";
+  const cnt = k => b.filas.filter(f => (fBase.origen === "Todos" || f[4] === fBase.origen) && (k === "todas" || (k === "abiertas" ? f[6] === "abierta" : f[6] === "perdida"))).length;
+  return `<section class="mini">
+      <div class="kpi"><div class="lab">En la base</div><div class="val">${b.filas.length.toLocaleString("es-AR")}</div><div class="det">sin clientes, uno por contacto</div></div>
+      <div class="kpi"><div class="lab">Abiertas</div><div class="val">${abiertas.toLocaleString("es-AR")}</div><div class="det">sin cerrar en el CRM</div></div>
+      <div class="kpi"><div class="lab">Perdidas</div><div class="val">${(b.filas.length - abiertas).toLocaleString("es-AR")}</div><div class="det">para reactivar en el viaje</div></div>
+      <div class="kpi"><div class="lab">Prospectos</div><div class="val">${leads.toLocaleString("es-AR")}</div><div class="det">leads sin convertir</div></div>
+    </section>
+    ${avanceBase(p, b)}
+    ${desfasada ? '<p class="info-note">Cambiaron los prefijos: la base se rearma con los nuevos en la próxima actualización del CRM.</p>' : ""}
+    ${panelPref}
+    <section class="panel">
+      <div class="panel-head">
+        <div class="toolbar"><div><h3>Base de ${esc(p)}</h3><p class="hint">Actualizada al ${esc(fechaHora(m.generado_en))}</p></div>
+          <button class="btn sec" type="button" data-base-csv>Descargar CSV</button></div>
+        <input class="buscar" id="base-q" type="search" placeholder="Buscar negocio, teléfono, etapa o responsable" value="${esc(fBase.q)}" aria-label="Buscar en la base">
+        <div class="filters"><span class="fl">Estado</span>${[["abiertas","Abiertas"],["perdidas","Perdidas"],["todas","Todas"]].map(([k,n]) =>
+          `<button class="chip" type="button" data-base-estado="${k}" aria-pressed="${fBase.estado === k}">${n} · ${cnt(k)}</button>`).join("")}</div>
+        <div class="filters"><span class="fl">Gestión</span>${[["todas","Todas"],["sin","Sin gestionar"], ...GEST].map(([k,n]) =>
+          `<button class="chip" type="button" data-base-gest="${k}" aria-pressed="${fBase.gest === k}">${n} · ${b.filas.filter(f => k === "todas" || (k === "sin" ? !gestDe(p, f) : gestDe(p, f) === k)).length}</button>`).join("")}</div>
+        <div class="filters"><span class="fl">Origen</span>${[["Todos", b.filas.length], ...origenes].map(([o,n]) =>
+          `<button class="chip" type="button" data-base-origen="${esc(o)}" aria-pressed="${fBase.origen === o}">${esc(o)} · ${n}</button>`).join("")}</div>
+      </div>
+      <div id="base-tabla" style="display:flex;flex-direction:column;gap:12px">${tablaBase(p)}</div>
+    </section>`;
+}
+
+async function descargarBase(p, btn){
+  const b = baseDe(p); if (!b) return;
+  const filas = filtrarBase(b.filas);
+  const c = v => { const s = String(v ?? ""); return /[;"\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+  const csv = "sep=;\n" + [["Negocio","Teléfono","Origen","Etapa","Estado","Responsable","Última modificación","Gestión","ID","Tipo","Link"],
+    ...filas.map(f => [f[2], f[3], f[4], f[5], f[6], f[7], f[8], GEST_N[gestDe(p, f)] || "Sin gestionar", f[0], f[1] === "lead" ? "Prospecto" : "Negociación",
+      f[1] === "lead" ? `https://${D.portal}/crm/lead/details/${f[0]}/` : `https://${D.portal}/crm/deal/details/${f[0]}/`])].map(r => r.map(c).join(";")).join("\n");
+  const nombre = `base-${docId(p)}-${hoyISO()}.csv`, data = "﻿" + csv;
+  const dl = window.claude?.use ? await claude.use("downloads") : null;
+  if (dl) { try { await dl.save({filename: nombre, data}); } catch(e) { if (btn) btn.textContent = "No se pudo descargar"; } return; }
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([data], {type: "text/csv;charset=utf-8"})); a.download = nombre; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+
+const leerPrefijos = s => [...new Set(String(s || "").split(/[,;\s]+/).map(x => x.trim()).filter(Boolean)
+  .map(x => (x.startsWith("-") ? "-" : "") + x.replace(/\D/g, "").replace(/^0+/, "")).filter(x => x.replace("-", "").length >= 2))];
+
+async function guardarPrefijos(e, p){
+  e.preventDefault();
+  const msg = document.getElementById("pref-msg"), pref = leerPrefijos(document.getElementById("pref-in").value);
+  msg.className = "msg err";
+  if (!pref.some(x => !x.startsWith("-"))) { msg.textContent = "Cargá al menos un prefijo (ej. 343)."; return; }
+  const d = DESTINOS_DB[p];
+  msg.className = "msg"; msg.textContent = "Guardando…";
+  try {
+    await DB.collection("destinos").doc(d?._id || docId(p)).set({nombre: p, prefijos: pref, creado_por: d?.creado_por || (USER ? await USER.id() : null),
+      creado_en: d?.creado_en || new Date().toISOString(), editado_en: new Date().toISOString()});
+    editPref = false; render(actual);
+  } catch (err) { msg.className = "msg err"; msg.textContent = err?.code === "invalid_argument" ? "No tenés permiso para editar. Pedí acceso de colaborador." : "No se pudo guardar. Probá de nuevo."; }
+}
+
+/* ---------- planificar destino ---------- */
+const SUGERIDOS = {
+  "Entre Ríos": "343, 345, 3442, 3444, 3445, 3446, 3447, 3435, 3436, 3437, 3438",
+  "Santa Fe": "342, 341, 3400, 3401, 3402, 3404, 3405, 3406, 3408, 3409, 3460, 3462, 3464, 3465, 3466, 3469, 3471, 3476, 3482, 3483, 3491, 3492, 3493, 3496, 3497, 3498",
+  "Santa Fe capital": "342", "Rosario": "341", "Bariloche": "294, -2940, -2942, -2945, -2946, -2948",
+  "Córdoba": "351, 353, 358, 3521, 3522, 3524, 3525, 3532, 3533, 3537, 3541, 3542, 3543, 3544, 3546, 3547, 3548, 3549, 3562, 3563, 3564, 3571, 3572, 3573, 3574, 3575, 3576, 3582, 3583, 3584, 3585, 3463, 3467, 3468, 3472",
+  "Mendoza": "261, 260, 263, 2622, 2623, 2624, 2625, 2626", "San Juan": "264, 2646, 2647, 2648",
+  "San Luis": "266, 2655, 2656, 2657, 2658", "Neuquén": "299, 2942, 2948, 2972",
+  "Río Negro": "2920, 298, 294, 2931, 2934, 2940, 2946", "Chubut": "280, 297, 2945",
+  "Santa Cruz": "2966, 2962, 2963, 2902", "Tierra del Fuego": "2901, 2964",
+  "La Pampa": "2954, 2302, 2331, 2333, 2334, 2335, 2336, 2337, 2338, 2952, 2953",
+  "Tucumán": "381, 3863, 3865, 3867, 3869, 3891, 3892, 3894", "Salta": "387, 3868, 3873, 3876, 3877, 3878",
+  "Jujuy": "388, 3885, 3886, 3887, 3888", "Santiago del Estero": "385, 3841, 3843, 3844, 3845, 3846, 3854, 3855, 3856, 3857, 3858",
+  "Catamarca": "383, 3832, 3835, 3837, 3838", "La Rioja": "380, 3821, 3825, 3826, 3827",
+  "Corrientes": "379, 3756, 3772, 3773, 3774, 3775, 3777, 3781, 3782, 3786", "Misiones": "376, 3741, 3743, 3751, 3754, 3755, 3757, 3758",
+  "Chaco": "362, 364, 3725, 3731, 3732, 3734, 3735", "Formosa": "370, 3711, 3715, 3716, 3718",
+  "Mar del Plata": "223", "Bahía Blanca": "291", "La Plata": "221", "AMBA": "11"
+};
+function vistaNuevo(){
+  const puede = DB && puedeEscribir !== false;
+  const form = puede ? `<form class="panel" id="f-dest" novalidate>
+      <div><h3>Planificar destino</h3><p class="hint">Queda en el menú como Planificado y la base del CRM se arma sola.</p></div>
+      <div class="field"><label for="d-nombre">Destino</label>
+        <input id="d-nombre" list="d-sug" autocomplete="off" placeholder="Ej. Entre Ríos" required>
+        <datalist id="d-sug">${Object.keys(SUGERIDOS).map(n => `<option value="${esc(n)}">`).join("")}</datalist></div>
+      <div class="field"><label for="d-pref">Prefijos</label>
+        <textarea id="d-pref" placeholder="Ej. 343, 345, 3442"></textarea>
+        <span class="crm-hint" id="d-hint">Si elegís un destino de la lista te sugiero los prefijos. Revisalos antes de guardar.</span></div>
+      <div class="acts"><button class="btn pri" type="submit" id="d-guardar">Guardar destino</button></div>
+      <p class="msg" id="d-msg" role="status"></p>
+    </form>` : `<section class="panel"><h3>Planificar destino</h3><p class="info-note">${DB ? "Para planificar destinos pedí acceso de colaborador al artefacto." : "Los destinos se cargan desde claude.ai con la sesión iniciada."}</p></section>`;
+  return `<div class="head"><div><h2>Nuevo destino</h2><p>Cargá el próximo viaje y la base sale del CRM sin buscarla a mano.</p></div></div>
+  <div class="plan-grid">${form}
+    <section class="panel"><h3>Cómo funciona</h3>
+      <p class="hint" style="margin:0">1. Guardás el destino con los códigos de área de la zona.</p>
+      <p class="hint" style="margin:0">2. Cada día hábil a la mañana se cruza todo el CRM (todos los embudos y los prospectos) contra esos prefijos.</p>
+      <p class="hint" style="margin:0">3. En el destino, la solapa Base del CRM muestra quiénes son, en qué etapa están y quién los tiene. Los clientes no entran.</p>
+      <p class="hint" style="margin:0">Los prefijos van sin el 0 ni el 15. Un guión adelante excluye un código (ej. <b>-2942</b>).</p>
+    </section></div>`;
+}
+async function guardarDestino(e){
+  e.preventDefault();
+  const nombre = document.getElementById("d-nombre").value.trim().replace(/\s+/g, " ");
+  const pref = leerPrefijos(document.getElementById("d-pref").value);
+  const msg = document.getElementById("d-msg"), btn = document.getElementById("d-guardar");
+  msg.className = "msg err";
+  if (!nombre) { msg.textContent = "Falta el nombre del destino."; return; }
+  if (provs().some(p => docId(p) === docId(nombre))) { msg.textContent = `${nombre} ya está en el menú. Editá sus prefijos desde su solapa Base del CRM.`; return; }
+  if (!pref.some(x => !x.startsWith("-"))) { msg.textContent = "Cargá al menos un prefijo (ej. 343)."; return; }
+  btn.disabled = true; msg.className = "msg"; msg.textContent = "Guardando…";
+  try {
+    await DB.collection("destinos").doc(docId(nombre)).set({nombre, prefijos: pref, creado_por: USER ? await USER.id() : null, creado_en: new Date().toISOString()});
+    DESTINOS_DB[nombre] = {_id: docId(nombre), nombre, prefijos: pref};
+    sub = "base"; render(slug(nombre));
+  } catch (err) {
+    btn.disabled = false; msg.className = "msg err";
+    msg.textContent = err?.code === "invalid_argument" ? "No tenés permiso para cargar destinos. Pedí acceso de colaborador." : "No se pudo guardar. Probá de nuevo.";
+  }
+}
+
+let TABS = [];
+const armarTabs = () => { TABS = [["general","General", null], ...provs().map(p => [slug(p), p, p])]; };
+let actual;
+function pintarMenu(sel){
+  armarTabs();
+  const puede = DB && puedeEscribir !== false;
+  document.getElementById("tabs").innerHTML = TABS.map(([k,nombre,p], i) => {
+    const n = p ? VISITAS.filter(f => f.provincia === p && (f.existe || f.pendiente)).length : VISITAS.filter(f => f.existe || f.pendiente).length;
+    const st = p ? `<span class="st${planificado(p) ? " plan" : ""}">${planificado(p) ? "Planificado" : "Viaje finalizado"}</span>` : "";
+    return `${i === 1 ? '<span class="sec">Destinos</span>' : ""}<button class="tab" role="tab" type="button" id="tab-${k}" data-tab="${k}" aria-selected="${k === sel}"><span class="tx">${esc(nombre)}${st}</span><span class="n">${n}</span></button>`;
+  }).join("") + (puede ? `<button class="nuevo" type="button" data-tab="nuevo" aria-selected="${sel === "nuevo"}">+ Planificar destino</button>` : "");
+}
+function render(id){
+  armarTabs();
+  if (id === "nuevo" && DB && puedeEscribir !== false) {
+    pintarMenu("nuevo"); actual = "nuevo";
+    document.getElementById("vista").innerHTML = vistaNuevo();
+    const f = document.getElementById("f-dest");
+    if (f) {
+      f.addEventListener("submit", guardarDestino);
+      document.getElementById("d-nombre").addEventListener("input", e => {
+        const k = Object.keys(SUGERIDOS).find(n => sinTildes(n) === sinTildes(e.target.value.trim()));
+        const ta = document.getElementById("d-pref"), h = document.getElementById("d-hint");
+        if (k && !ta.dataset.tocado) { ta.value = SUGERIDOS[k]; h.textContent = "Prefijos sugeridos para " + k + ". Revisalos antes de guardar."; }
+      });
+      document.getElementById("d-pref").addEventListener("input", e => { e.target.dataset.tocado = e.target.value ? "1" : ""; });
+    }
+    return;
+  }
+  const t = TABS.find(x => x[0] === id) || TABS[0];
+  pintarMenu(t[0]);
+  document.getElementById("vista").innerHTML = t[2] ? vistaDestino(t[2]) : vistaGeneral();
+  try { localStorage.setItem("viajes-tab", t[0]); localStorage.setItem("viajes-sub", sub); } catch(e) {}
+  actual = t[0];
+  if (t[2] && sub === "base") {
+    const q = document.getElementById("base-q");
+    if (q) q.addEventListener("input", () => { fBase.q = q.value; fBase.n = 150; document.getElementById("base-tabla").innerHTML = tablaBase(t[2]); pintarNombres(); });
+    const fp = document.getElementById("f-pref");
+    if (fp) { fp.addEventListener("submit", e => guardarPrefijos(e, t[2])); document.getElementById("pref-in").focus(); }
+    pintarNombres();
+  }
+  if (t[2] && sub === "agenda") {
+    const f = document.getElementById("f-agenda");
+    if (f) {
+      f.addEventListener("submit", e => guardar(e, t[2]));
+      document.getElementById("ag-id").addEventListener("input", pistaCRM);
+      cargarFormulario(editando ? AGENDA.find(a => a._id === editando) : borrador[t[2]]);
+      f.addEventListener("input", () => { if (!editando) borrador[t[2]] = leerFormulario(); });
+    }
+    pintarNombres();
+  }
+}
+const borrador = {};
+function leerFormulario(){
+  const v = id => document.getElementById(id)?.value || "";
+  return {id_negociacion: v("ag-id"), nombre: v("ag-nombre"), fecha: v("ag-fecha"), hora: v("ag-hora"), direccion: v("ag-dir"), notas: v("ag-notas"), asesor_id: v("ag-asesor")};
+}
+const provinciaActual = () => (TABS.find(x => x[0] === actual) || [])[2];
+
+document.getElementById("tabs").addEventListener("click", e => {
+  const b = e.target.closest("[data-tab]"); if (!b) return;
+  filtro = "Todas"; filtroAct = "todas"; editando = null; borrando = null; editPref = false;
+  fBase = {origen: "Todos", estado: "abiertas", gest: "todas", q: "", n: 150};
+  render(b.dataset.tab);
+});
+document.getElementById("vista").addEventListener("click", async e => {
+  const b = e.target.closest("[data-filtro],[data-act],[data-sub],[data-editar],[data-borrar],[data-borrar-ok],[data-borrar-no],#ag-cancelar,[data-cal],[data-gest],[data-base-gest],[data-base-estado],[data-base-origen],[data-base-mas],[data-base-csv],[data-pref-edit],[data-pref-cancel],[data-quitar-destino]");
+  if (!b) return;
+  const p = provinciaActual();
+  if (b.dataset.cal) { crearEventoDe(b.dataset.cal, b); return; }
+  if (b.dataset.gest) { marcarGest(p, b.dataset.fila, b.dataset.gest, b); return; }
+  if (b.dataset.baseGest) { fBase.gest = b.dataset.baseGest; fBase.n = 150; render(actual); return; }
+  if (b.dataset.baseEstado) { fBase.estado = b.dataset.baseEstado; fBase.n = 150; render(actual); return; }
+  if (b.dataset.baseOrigen) { fBase.origen = b.dataset.baseOrigen; fBase.n = 150; render(actual); return; }
+  if (b.hasAttribute("data-base-mas")) { fBase.n += 300; document.getElementById("base-tabla").innerHTML = tablaBase(p); pintarNombres(); return; }
+  if (b.hasAttribute("data-base-csv")) { descargarBase(p, b); return; }
+  if (b.hasAttribute("data-pref-edit")) { editPref = true; render(actual); return; }
+  if (b.hasAttribute("data-pref-cancel")) { editPref = false; render(actual); return; }
+  if (b.hasAttribute("data-quitar-destino")) {
+    if (b.dataset.ok !== "1") { b.dataset.ok = "1"; b.textContent = `¿Quitar ${p}? Tocá de nuevo`; return; }
+    try { await DB.collection("destinos").doc(DESTINOS_DB[p]?._id || docId(p)).delete(); delete DESTINOS_DB[p]; editPref = false; render("general"); }
+    catch (err) { const m = document.getElementById("pref-msg"); if (m) { m.className = "msg err"; m.textContent = "No se pudo quitar el destino."; } }
+    return;
+  }
+  if (b.dataset.sub) { sub = b.dataset.sub; editando = null; borrando = null; editPref = false; render(actual); return; }
+  if (b.dataset.filtro) { filtro = b.dataset.filtro; render(actual); return; }
+  if (b.dataset.act) { filtroAct = b.dataset.act; render(actual); return; }
+  if (b.id === "ag-cancelar") { editando = null; render(actual); return; }
+  if (b.dataset.editar) { editando = b.dataset.editar; borrando = null; render(actual); document.getElementById("ag-nombre")?.focus(); return; }
+  if (b.dataset.borrar) { borrando = b.dataset.borrar; refrescarLista(); return; }
+  if (b.hasAttribute("data-borrar-no")) { borrando = null; refrescarLista(); return; }
+  if (b.dataset.borrarOk) {
+    const id = b.dataset.borrarOk;
+    b.disabled = true;
+    const ag = AGENDA.find(x => x._id === id);
+    try {
+      if (ag?.evento_id && MCP && (!ag.evento_por || ag.evento_por === (USER ? await USER.id() : null))) {
+        try { await MCP.callTool(CAL, "delete_event", {eventId: ag.evento_id}); } catch (e2) {}
+      }
+      await DB.collection("agenda").doc(id).delete(); if (editando === id) editando = null; borrando = null;
+    }
+    catch (err) { borrando = null; refrescarLista(); const m = document.getElementById("ag-msg"); if (m) { m.className = "msg err"; m.textContent = "No se pudo borrar la visita. Probá de nuevo."; } }
+  }
+});
+
+/* Al llegar datos nuevos no se toca el formulario: solo la lista, el menú y los contadores. */
+function refrescarLista(){
+  const p = provinciaActual();
+  const lista = document.getElementById("ag-lista");
+  if (p && sub === "agenda" && lista) {
+    lista.innerHTML = listaAgenda(p);
+    const n = document.querySelector('[data-sub="agenda"] .n'); if (n) n.textContent = agendaDe(p).length;
+    pintarNombres();
+  } else if (actual === "nuevo") pintarMenu("nuevo"); else render(actual);
+}
+
+function pintarSello(){
+  const g = new Date(D.generado_en);
+  document.getElementById("stamp").textContent = "Datos del CRM al " +
+    g.toLocaleDateString("es-AR", {day:"numeric", month:"long"}) + ", " +
+    g.toLocaleTimeString("es-AR", {hour:"2-digit", minute:"2-digit"});
+}
+pintarSello();
+let inicial = (location.hash || "").slice(1);
+try { if (!inicial) inicial = localStorage.getItem("viajes-tab") || ""; const s = localStorage.getItem("viajes-sub"); sub = ["agenda","base"].includes(s) ? s : "metricas"; } catch(e) {}
+render(inicial);
+
+/* Al llegar destinos o bases nuevas: si hay un formulario abierto solo se actualiza el menú. */
+function refrescarTodo(){
+  const formAbierto = actual === "nuevo" || (sub === "base" && editPref) || (sub === "agenda" && provinciaActual());
+  if (formAbierto) { pintarMenu(actual); if (sub === "agenda" && provinciaActual()) refrescarLista(); return; }
+  const q = document.activeElement?.id === "base-q";
+  render(TABS.some(x => x[0] === actual) || actual === "nuevo" ? actual : inicial);
+  if (q) { const el = document.getElementById("base-q"); if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }
+}
+
+/* La agenda vive en la base compartida del artefacto (colección "agenda"). */
+(async () => {
+  const claude = window.claude;
+  if (!claude?.use) { dbListo = true; refrescarLista(); return; }
+  const [db, user, mcp] = await Promise.all([claude.use("db"), claude.use("user"), claude.use("mcp")]);
+  MCP = mcp;
+  USER = user; dbListo = true;
+  if (user) { try { puedeEscribir = await user.can("data.write"); } catch(e) { puedeEscribir = null; } }
+  if (!db) { refrescarLista(); return; }
+  DB = db;
+  render(actual === "general" && inicial === "nuevo" ? "nuevo" : actual);
+  /* Los datos del CRM los escribe la rutina diaria en sistema/crm. Así el
+     código de la página se puede editar sin que la rutina lo pise: la rutina
+     solo toca este documento. Si no está o es más viejo, quedan los datos
+     embebidos en la página. */
+  db.doc("sistema/crm").onSnapshot(snap => {
+    const x = snap.exists ? snap.data() : null;
+    if (!x || !x.generado_en || (D.generado_en && x.generado_en <= D.generado_en)) return;
+    const {agenda, ...datos} = x;
+    Object.assign(D, datos);
+    pintarSello(); construirVisitas(); refrescarTodo();
+  }, () => {});
+  db.collection("destinos").onSnapshot(snap => {
+    DESTINOS_DB = {};
+    snap.docs.forEach(d => { const x = d.data(); if (x && x.nombre) DESTINOS_DB[x.nombre] = {_id: d.id, ...x}; });
+    construirVisitas(); refrescarTodo();
+  }, () => {});
+  db.collection("gestiones").onSnapshot(snap => {
+    GESTIONES = {};
+    snap.docs.forEach(d => { GESTIONES[d.id] = d.data(); });
+    if (sub === "base" && provinciaActual()) refrescarTodo();
+  }, () => {});
+  db.collection("bases").onSnapshot(snap => {
+    BASES = {};
+    snap.docs.forEach(d => { BASES[d.id] = d.data(); });
+    refrescarTodo();
+  }, () => {});
+  db.collection("agenda").onSnapshot(snap => {
+    AGENDA = snap.docs.map(d => ({_id: d.id, ...d.data()}));
+    construirVisitas();
+    const p = provinciaActual();
+    if (p && sub === "agenda") {
+      refrescarLista();
+      document.querySelectorAll("#tabs [data-tab]").forEach(b => {
+        const pp = (TABS.find(x => x[0] === b.dataset.tab) || [])[2];
+        const n = pp ? VISITAS.filter(f => f.provincia === pp && (f.existe || f.pendiente)).length : VISITAS.filter(f => f.existe || f.pendiente).length;
+        const el = b.querySelector(".n"); if (el) el.textContent = n;
+      });
+    } else if (actual === "nuevo") pintarMenu("nuevo"); else render(actual);
+  }, () => { DB = null; refrescarLista(); });
+})();
+</script>
+
