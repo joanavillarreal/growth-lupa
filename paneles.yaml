@@ -1,0 +1,22 @@
+# Links de los paneles que actualiza Lupa.
+#
+# modo: ensayo  → se publica SOLO en las copias de prueba (`ensayo`).
+# modo: oficial → se publica en los links oficiales. Lo cambia Joana, no Lupa.
+#
+# Mientras estemos en ensayo, las rutinas viejas siguen publicando en los oficiales.
+
+modo: ensayo
+
+paneles:
+  monitor_growth:
+    nombre: Monitor de Growth
+    oficial: null   # se completa en el paso 2 (sale de agente-growth)
+    ensayo: null    # copia de prueba, se crea en el paso 2
+  panel_meta_ads:
+    nombre: Panel Meta Ads
+    oficial: https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12
+    ensayo: null    # copia de prueba, se crea en el paso 3
+  panel_redes:
+    nombre: Panel de redes
+    oficial: null   # panel nuevo; se define cuando salgamos de ensayo
+    ensayo: null    # se crea en el paso 4
