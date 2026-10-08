@@ -2,7 +2,9 @@
 """Decide qué análisis le tocan hoy a Lupa.
 
 Lee agenda.yaml y la fecha en hora de Argentina, y descuenta lo que ya salió
-bien hoy según partes/AAAA-MM-DD.json (un análisis fallido se puede reintentar).
+bien hoy según partes/AAAA-MM-DD.json. Un análisis fallido se reintenta hasta
+max_intentos_por_dia; al llegar al tope pasa a `agotados` (se avisa por Slack y
+no se reintenta hasta mañana).
 
 Uso:
   python3 que_toca_hoy.py                    # hoy
@@ -48,12 +50,16 @@ def calcular(fecha=None):
     dia_semana = DIAS[fecha.weekday()]
     parte = leer_parte(fecha)
 
-    pendientes, ya_hechos, no_tocan = [], [], []
+    tope = agenda.get("max_intentos_por_dia", 3)
+    pendientes, ya_hechos, agotados, no_tocan = [], [], [], []
     for nombre, cfg in agenda["analisis"].items():
+        registro = parte.get(nombre, {})
         if not toca(cfg["dias"], dia_semana):
             no_tocan.append(nombre)
-        elif parte.get(nombre, {}).get("estado") == "ok":
+        elif registro.get("estado") == "ok":
             ya_hechos.append(nombre)
+        elif registro.get("intentos", 0) >= tope:
+            agotados.append(nombre)
         else:
             pendientes.append(nombre)
 
@@ -62,7 +68,9 @@ def calcular(fecha=None):
         "dia": dia_semana,
         "pendientes": pendientes,
         "ya_hechos": ya_hechos,
+        "agotados": agotados,
         "no_tocan": no_tocan,
+        "intentos": {n: parte.get(n, {}).get("intentos", 0) for n in pendientes + agotados},
         "detalle": {n: agenda["analisis"][n] for n in pendientes},
     }
 
@@ -82,6 +90,8 @@ def main():
     print("  toca hoy:  " + (", ".join(r["pendientes"]) or "nada"))
     if r["ya_hechos"]:
         print("  ya hecho:  " + ", ".join(r["ya_hechos"]))
+    if r["agotados"]:
+        print("  agotados:  " + ", ".join(r["agotados"]) + " (tope de intentos; avisar y no reintentar)")
     if r["no_tocan"]:
         print("  no toca:   " + ", ".join(r["no_tocan"]))
 

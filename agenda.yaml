@@ -6,13 +6,19 @@
 # Campos de cada análisis:
 #   dias:          "todos" o lista de días en castellano (lunes, martes, ...).
 #   artefacto:     clave del panel en paneles.yaml (ahí están los links oficial y de ensayo).
-#   herramientas:  nombres EXACTOS que hay que encontrar con ToolSearch antes de medir.
-#                  Si falta alguno después de 3 intentos, el análisis se marca fallido.
+#   herramientas:  última parte del nombre de cada herramienta (sin el prefijo del conector,
+#                  que en la rutina puede venir como un código). Se buscan con ToolSearch y
+#                  cuentan si aparece una herramienta cuyo nombre termina en `__<sufijo>`.
+#                  Si falta alguna después de 3 búsquedas, el análisis se marca fallido.
 #   slack:         dónde se avisa el resultado.
 #   disparar_despues: agentes a los que se les pasa el parte al terminar.
 #                  Vacío por ahora: Orbi, Turbo y Conti todavía no existen.
 
 zona_horaria: America/Argentina/Buenos_Aires
+
+# Intentos por análisis por día. Al llegar al tope: aviso por Slack y no se
+# reintenta hasta el día siguiente.
+max_intentos_por_dia: 3
 
 analisis:
   funnel:
@@ -28,8 +34,8 @@ analisis:
     dias: todos
     artefacto: panel_meta_ads
     herramientas:             # se ajusta en el paso 3
-      - mcp__MCP_Meta__ads_get_ad_accounts
-      - mcp__MCP_Meta__ads_get_ad_entities
+      - ads_get_ad_accounts
+      - ads_get_ad_entities
     slack: "#adqui-notificaciones-canales"
     disparar_despues: []      # futuro: [turbo]
 
@@ -38,7 +44,7 @@ analisis:
     dias: [lunes]
     artefacto: panel_redes
     herramientas:             # se ajusta en el paso 4
-      - mcp__MCP_Metricool__getBrandSettings
-      - mcp__MCP_Metricool__getAnalyticsDataByMetrics
+      - getBrandSettings
+      - getAnalyticsDataByMetrics
     slack: "D0BRVS7A4A3"
     disparar_despues: []      # futuro: [conti]

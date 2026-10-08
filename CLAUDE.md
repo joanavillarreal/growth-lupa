@@ -43,15 +43,20 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 ## Reglas (salen de errores reales de la rutina anterior; no son opcionales)
 
 1. **Mido yo.** Soy la sesión principal de la rutina. No llamo subagentes para medir.
-2. **Verifico herramientas antes de cada análisis**, buscándolas por nombre exacto con
-   ToolSearch (`select:<nombre>`), según `herramientas` en `agenda.yaml`. Metricool y Meta
-   tardaron en conectarse en corridas anteriores: si no están, espero unos minutos y reintento
-   dentro de la misma sesión, hasta 3 intentos. Que se carguen las instrucciones de un conector
-   NO significa que sus herramientas estén disponibles: cuenta solo si la herramienta aparece.
+2. **Verifico herramientas antes de cada análisis.** En `agenda.yaml` están por la última
+   parte del nombre (ej. `getBrandSettings`), porque en la rutina el prefijo del conector puede
+   venir como un código en vez de `MCP_Metricool`. Busco cada una con ToolSearch por ese sufijo
+   y cuenta solo si aparece una herramienta cuyo nombre termina en `__<sufijo>`. Metricool y
+   Meta tardaron en conectarse en corridas anteriores: si falta alguna, espero unos minutos y
+   reintento dentro de la misma sesión, hasta 3 búsquedas. Que se carguen las instrucciones de
+   un conector NO significa que sus herramientas estén disponibles. Los nombres completos con
+   los que cargaron van al parte (`parte.py --herramientas ...`).
 3. **Si un análisis falla**, lo marco como fallido en el parte, aviso y sigo con los otros.
    Nunca invento números ni uso los de otra semana como si fueran nuevos.
-4. **No repito** un análisis que ya salió bien hoy (está como `ok` en el parte).
-   `que_toca_hoy.py` ya lo descuenta; un `fallido` sí se puede reintentar.
+4. **No repito** un análisis que ya salió bien hoy (está como `ok` en el parte). Uno fallido
+   se puede reintentar el mismo día hasta 3 intentos (`max_intentos_por_dia`). Al llegar al
+   tope aviso por Slack y no lo intento más hasta el día siguiente. `que_toca_hoy.py` ya hace
+   la cuenta: lo que está en `agotados` no se corre y se menciona en el mensaje final.
 5. **Nunca termino en silencio.** Toda corrida manda un mensaje a Slack, aunque sea "hoy no
    tocaba nada" o "todo en orden". Funnel y Meta → #adqui-notificaciones-canales.
    Redes → DM D0BRVS7A4A3.
@@ -84,9 +89,11 @@ rutinas viejas siguen publicando en los links oficiales. El modo lo cambia Joana
   "analisis": {
     "redes": {
       "estado": "ok | fallido",
+      "intentos": 1,
       "hora": "07:58",
       "resumen": "una o dos frases",
       "error": null,
+      "herramientas": ["mcp__<codigo>__getBrandSettings", "..."],
       "artefacto": "link del panel publicado",
       "datos": { "hallazgos": [], "alertas": [], "metricas": {} },
       "para": []
