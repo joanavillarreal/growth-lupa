@@ -51,6 +51,20 @@ EXISTENTE*`, por día en hora argentina:
 `{"desde": "AAAA-MM-DD", "hasta": "AAAA-MM-DD", "por_dia": {"AAAA-MM-DD": 1}}`.
 Si no se puede leer, seguir: G5 corre con dos patas y lo dice.
 
+## 2b. Campañas nuevas → `config/campanas.json`
+
+```bash
+python3 scripts/campanas_nuevas.py datos/meta-ads/guardia/<hoy>/ --json datos/meta-ads/guardia/<hoy>/campanas.json
+```
+
+El mapa campaña → origen del CRM lo mantengo yo (Joana, 08/10/2026). Cada campaña que está en
+Meta (roster o gasto de 14 días) y no en el mapa se suma con `a_confirmar: true`,
+`origenes_crm: "PENDIENTE"` y el bloque sugerido por el nombre. **No invento el producto ni el
+origen**: las que siguen `a_confirmar` van al mensaje del día ("Campañas a confirmar: …"), todos
+los días, hasta que Joana conteste. Cuando contesta, cargo `origenes_crm`, `producto`,
+`destino` (y `fecha_evento` si es un evento) y borro `a_confirmar`. Cuando exista Turbo, las
+campañas nuevas me llegan por su parte, ya con su origen.
+
 ## 3. Guardia
 
 ```bash
@@ -79,5 +93,5 @@ Reinyecta los datos en `informes/panel-trimestral.html` y avisa si falta algo.
 ## 6. Parte y commit
 
 `parte.py meta ok` con `--datos` = alertas que se mandaron, silenciadas, gasto de ayer,
-conciliación Meta/CRM/Slack y el resultado de la comparación. Commit de la carpeta del día,
-`informes/guardia/<hoy>.json`, `memoria/guardia.jsonl`, el CSV del CRM, el panel y su JSON.
+conciliación Meta/CRM/Slack, `campanas_a_confirmar` y el resultado de la comparación. Commit de la carpeta del día,
+`informes/guardia/<hoy>.json`, `memoria/guardia.jsonl`, `config/campanas.json`, el CSV del CRM, el panel y su JSON.

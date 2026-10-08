@@ -11,8 +11,10 @@
     "tienen ese prefijo son campanas viejas y desordenadas (Joana, 2026-09-09): se",
     "usan para el historico, NO para decidir. El script las marca 'historica'.",
     "",
-    "Lo edita Joana. Cuando aparece una campana nueva que no esta aca, cruzar.py la",
-    "lista y pide clasificarla; hasta entonces queda fuera de todos los KPI.",
+    "Lo mantiene Lupa (Joana, 2026-10-08): scripts/campanas_nuevas.py suma cada dia las",
+    "campanas que estan en Meta y no aca, con a_confirmar: true y origenes_crm \"PENDIENTE\",",
+    "y Lupa las lista en el mensaje del dia hasta que Joana confirme producto y origen.",
+    "Al confirmar: cargar origenes_crm/producto/destino y borrar a_confirmar.",
     "",
     "origenes_crm: [\"X\"]      -> se cruza contra ese origen del CRM",
     "origenes_crm: []          -> no se cruza. El campo 'motivo' dice por que.",
@@ -247,6 +249,17 @@
         "Meta Ads Formulario"
       ],
       "activa": false
+    },
+    {
+      "nombre": "JY | Webinar Orden Stock (AGENTE META)",
+      "id_meta": "120254717004450427",
+      "grupo": "eventual",
+      "bloque": "evento",
+      "destino": "PENDIENTE",
+      "origenes_crm": "PENDIENTE",
+      "activa": true,
+      "a_confirmar": true,
+      "nota": "Agregada por Lupa el 2026-10-08: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento)."
     }
   ],
   "conjuntos_excepcion": [

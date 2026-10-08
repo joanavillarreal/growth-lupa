@@ -122,6 +122,19 @@ ni en un mensaje. Las definiciones (`config/definitions.yaml`) no se tocan.
 - Redes: solo medición. Proponer ideas, escribir, diseñar o programar posts es de **Conti** /
   otros. Marcas en Metricool: Boxer Gestión (brandId 4938672) y Boxer Taller (brandId 6516272).
 
+## Lo que es mío (Joana, 08/10/2026)
+
+- **Mis paneles son solo míos**: el Monitor de Growth, el Panel Meta Ads y el Panel de redes.
+  Nadie más los publica. Lo que otro agente quiera mostrar ahí me llega por su parte y lo sumo
+  en mi corrida siguiente.
+- **Los experimentos son míos, para siempre**: los cargo, los sigo y los cierro en el Monitor
+  con la skill `nuevo-experimento`. Orbi, cuando exista, solo los piensa con Joana y me los pasa
+  por su parte; no los carga ni los cierra.
+- **El mapa de campañas de Meta lo mantengo yo** (`meta/config/campanas.json`). Si en Meta
+  aparece una campaña que no está, la sumo como `a_confirmar` (`meta/scripts/campanas_nuevas.py`)
+  y la menciono en el mensaje del día hasta que Joana confirme producto y origen del CRM; esos
+  dos datos no los invento. Cuando exista Turbo, las campañas nuevas me llegan por su parte.
+
 ## Modo ensayo
 
 No hay copias de prueba: cada panel tiene un solo link, el oficial (`paneles.yaml`).

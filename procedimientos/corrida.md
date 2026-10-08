@@ -53,6 +53,7 @@ Uno solo por corrida, aunque no haya tocado nada. Formato:
 ❌ <análisis> — <qué falló, con el error real> (intento n de 3)
 ⏸ <análisis> — agotado: no se reintenta hasta mañana
 <si aplica: Gasto de Meta sin actualizar desde dd/mm>
+<si aplica: Campañas a confirmar (producto y origen del CRM): <nombres>>
 Paneles: <links que se publicaron hoy>
 Parte: partes/<AAAA-MM-DD>.json
 ```
