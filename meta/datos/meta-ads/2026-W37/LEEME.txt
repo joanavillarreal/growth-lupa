@@ -1,0 +1,19 @@
+Exports subidos por Joana el 2026-09-10.
+Ventana: 11/08/2026 al 09/09/2026 (30 dias), una fila por dia y entidad.
+
+- campanas_2026-08-11_2026-09-09.csv   (271 filas)
+- anuncios_2026-08-11_2026-09-09.csv   (661 filas, 22 anuncios x 30 dias)
+
+FALTAN para la corrida completa del lunes 14/09:
+- Conjuntos de anuncios
+- Desglose por plataforma y ubicacion
+- y los cuatro con la ventana que corresponda (2026-W37 = 08/09 al 14/09, mas 28 dias)
+
+El export de Anuncios sigue SIN la columna "Nombre de la campana" (trae
+"Nombre del conjunto de anuncios"). La jerarquia campana -> conjunto se
+reconstruye a mano cruzando gasto contra el export de Campanas.
+
+TRAMPA DE LECTURA VERIFICADA ACA: la columna "Entrega" NO es historica, es el
+estado ACTUAL repetido en las 30 filas. Prueba: `Oferta | Img | Remarketing |
+v1 | 2026-09`, creada el 09/09, figura "active" el 11/08. Para saber cuando
+algo se prendio o se apago hay que mirar el GASTO DIARIO, no esta columna.

@@ -1,0 +1,10 @@
+Inicio del informe,Fin del informe,Nombre de la campaña,Entrega de la campaña,Resultados,Indicador de resultado,Costo por resultados,Importe gastado (ARS),Impresiones,Alcance,Frecuencia,CPM (costo por mil impresiones),CTR (porcentaje de clics en el enlace),Clics en el enlace,Objetivo,Identificador de la campaña
+,,7. Clientes potenciales - formulario - Copia,PAUSED,,actions:lead,,1100.15,245,204,1.20098,4490.41,0.408163,1,OUTCOME_LEADS,120236440701180427
+,,JY | Awareness,ACTIVE,1710,profile_visit_view,40.42,69111.93,88321,65418,1.350102,782.51,2.009715,1775,OUTCOME_TRAFFIC,120252699394270427
+,,JY | Awareness Boxer Taller,PAUSED,949,profile_visit_view,36.38,34523.74,41728,26601,1.568663,827.35,2.329371,972,OUTCOME_TRAFFIC,120253037138720427
+,,JY | Awareness Boxer Taller (AGENTE META),ACTIVE,465,profile_visit_view,46.87,21793.87,18035,14832,1.215952,1208.42,2.633768,475,OUTCOME_TRAFFIC,120254402425170427
+,,JY | Conversiones,ACTIVE,70,actions:lead,3965.03,277551.97,60546,25042,2.417778,4584.15,0.92822,562,OUTCOME_LEADS,120252699641360427
+,,JY | Conversiones - Copia - Boton a WhatsApp,PAUSED,12,actions:onsite_conversion.messaging_conversation_started_7d,1288.55,15462.62,18303,1526,11.994102,844.81,0.693875,127,OUTCOME_LEADS,120252850500290427
+,,JY | Remarketing,ACTIVE,32,actions:lead,4620.94,147870.15,32626,10776,3.027654,4532.28,0.775455,253,OUTCOME_LEADS,120252700778930427
+,,JY | Viajes Presenciales Luciana,ACTIVE,38,actions:lead,3224.63,122536.06,22920,8315,2.756464,5346.25,0.968586,222,OUTCOME_LEADS,120254099466780427
+,,JY | Webinar Mostrador - 17 SEPT 2026,PAUSED,14,actions:lead,3778.33,52896.6,12266,4494,2.729417,4312.46,0.692972,85,OUTCOME_LEADS,120254108819070427

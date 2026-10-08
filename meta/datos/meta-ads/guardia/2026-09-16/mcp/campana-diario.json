@@ -1,0 +1,2627 @@
+[
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$2.130,89 ARS",
+  "impressions": "2591",
+  "reach": "2459",
+  "frequency": "1.05368",
+  "website_ctr": "2.161328",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "54"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$39,46 ARS (Instagram profile visits)"
+  },
+  "cpm": "$822,42 ARS",
+  "link_click": "56",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$8.125,74 ARS",
+  "impressions": "1625",
+  "reach": "1478",
+  "frequency": "1.099459",
+  "website_ctr": "1.538462",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.031,44 ARS (Leads)"
+  },
+  "cpm": "$5.000,46 ARS",
+  "link_click": "25",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$5.898,69 ARS",
+  "impressions": "1881",
+  "reach": "1595",
+  "frequency": "1.17931",
+  "website_ctr": "0.744285",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$5.898,69 ARS (Leads)"
+  },
+  "cpm": "$3.135,93 ARS",
+  "link_click": "14",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$3.523,56 ARS",
+  "impressions": "5554",
+  "reach": "344",
+  "frequency": "16.145349",
+  "website_ctr": "0.702197",
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "6"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$587,26 ARS (Messaging conversations started)"
+  },
+  "cpm": "$634,42 ARS",
+  "link_click": "39",
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$1.964,43 ARS",
+  "impressions": "1860",
+  "reach": "1659",
+  "frequency": "1.121157",
+  "website_ctr": "2.096774",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "35"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$56,13 ARS (Instagram profile visits)"
+  },
+  "cpm": "$1.056,15 ARS",
+  "link_click": "39",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$7.056,74 ARS",
+  "impressions": "964",
+  "reach": "819",
+  "frequency": "1.177045",
+  "website_ctr": "1.141079",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.352,25 ARS (Leads)"
+  },
+  "cpm": "$7.320,27 ARS",
+  "link_click": "11",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$1.097,64 ARS",
+  "impressions": "234",
+  "reach": "208",
+  "frequency": "1.125",
+  "website_ctr": "1.709402",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.690,77 ARS",
+  "link_click": "4",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$2.334,59 ARS",
+  "impressions": "2836",
+  "reach": "2751",
+  "frequency": "1.030898",
+  "website_ctr": "2.750353",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "72"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$32,42 ARS (Instagram profile visits)"
+  },
+  "cpm": "$823,20 ARS",
+  "link_click": "78",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$6.561,29 ARS",
+  "impressions": "1130",
+  "reach": "1019",
+  "frequency": "1.10893",
+  "website_ctr": "1.681416",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.640,32 ARS (Leads)"
+  },
+  "cpm": "$5.806,45 ARS",
+  "link_click": "19",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$5.122,46 ARS",
+  "impressions": "1626",
+  "reach": "1376",
+  "frequency": "1.181686",
+  "website_ctr": "0.922509",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$5.122,46 ARS (Leads)"
+  },
+  "cpm": "$3.150,34 ARS",
+  "link_click": "15",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$1.253,31 ARS",
+  "impressions": "1219",
+  "reach": "1114",
+  "frequency": "1.094255",
+  "website_ctr": "2.461034",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "31"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$40,43 ARS (Instagram profile visits)"
+  },
+  "cpm": "$1.028,15 ARS",
+  "link_click": "30",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$8.114,85 ARS",
+  "impressions": "1129",
+  "reach": "915",
+  "frequency": "1.23388",
+  "website_ctr": "0.974314",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.704,95 ARS (Leads)"
+  },
+  "cpm": "$7.187,64 ARS",
+  "link_click": "11",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$1.447,23 ARS",
+  "impressions": "403",
+  "reach": "309",
+  "frequency": "1.304207",
+  "website_ctr": "0.248139",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.591,14 ARS",
+  "link_click": "1",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$2.064,58 ARS",
+  "impressions": "2409",
+  "reach": "2367",
+  "frequency": "1.017744",
+  "website_ctr": "1.951017",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "46"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$44,88 ARS (Instagram profile visits)"
+  },
+  "cpm": "$857,03 ARS",
+  "link_click": "47",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$7.136,38 ARS",
+  "impressions": "1335",
+  "reach": "1177",
+  "frequency": "1.13424",
+  "website_ctr": "1.348315",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.568,19 ARS (Leads)"
+  },
+  "cpm": "$5.345,60 ARS",
+  "link_click": "18",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$4.829,34 ARS",
+  "impressions": "1279",
+  "reach": "1076",
+  "frequency": "1.188662",
+  "website_ctr": "0.547303",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.775,87 ARS",
+  "link_click": "7",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$1.630,68 ARS",
+  "impressions": "1551",
+  "reach": "1364",
+  "frequency": "1.137097",
+  "website_ctr": "2.578981",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "38"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$42,91 ARS (Instagram profile visits)"
+  },
+  "cpm": "$1.051,37 ARS",
+  "link_click": "40",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$4.341,55 ARS",
+  "impressions": "869",
+  "reach": "713",
+  "frequency": "1.218794",
+  "website_ctr": "1.841197",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "6"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$723,59 ARS (Leads)"
+  },
+  "cpm": "$4.996,03 ARS",
+  "link_click": "16",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$1.891,86 ARS",
+  "impressions": "365",
+  "reach": "285",
+  "frequency": "1.280702",
+  "website_ctr": "0.273973",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.183,18 ARS",
+  "link_click": "1",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$2.572,65 ARS",
+  "impressions": "3049",
+  "reach": "2943",
+  "frequency": "1.036018",
+  "website_ctr": "2.591013",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "74"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$34,77 ARS (Instagram profile visits)"
+  },
+  "cpm": "$843,77 ARS",
+  "link_click": "79",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$5.562,96 ARS",
+  "impressions": "1328",
+  "reach": "1182",
+  "frequency": "1.123519",
+  "website_ctr": "0.677711",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.188,98 ARS",
+  "link_click": "9",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$5.466,88 ARS",
+  "impressions": "1381",
+  "reach": "1166",
+  "frequency": "1.184391",
+  "website_ctr": "1.086169",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.822,29 ARS (Leads)"
+  },
+  "cpm": "$3.958,64 ARS",
+  "link_click": "15",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$2.876,42 ARS",
+  "impressions": "3077",
+  "reach": "2632",
+  "frequency": "1.169073",
+  "website_ctr": "2.79493",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "86"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$33,45 ARS (Instagram profile visits)"
+  },
+  "cpm": "$934,81 ARS",
+  "link_click": "86",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$1.712,01 ARS",
+  "impressions": "441",
+  "reach": "379",
+  "frequency": "1.163588",
+  "website_ctr": "0.453515",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.882,11 ARS",
+  "link_click": "2",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$2.117,64 ARS",
+  "impressions": "470",
+  "reach": "375",
+  "frequency": "1.253333",
+  "website_ctr": "0.851064",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.505,62 ARS",
+  "link_click": "4",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$2.825,87 ARS",
+  "impressions": "3588",
+  "reach": "3404",
+  "frequency": "1.054054",
+  "website_ctr": "2.285396",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "76"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$37,18 ARS (Instagram profile visits)"
+  },
+  "cpm": "$787,59 ARS",
+  "link_click": "82",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$7.546,78 ARS",
+  "impressions": "1392",
+  "reach": "1301",
+  "frequency": "1.069946",
+  "website_ctr": "1.293103",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.773,39 ARS (Leads)"
+  },
+  "cpm": "$5.421,54 ARS",
+  "link_click": "18",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$6.710,04 ARS",
+  "impressions": "1687",
+  "reach": "1392",
+  "frequency": "1.211925",
+  "website_ctr": "0.829876",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.977,50 ARS",
+  "link_click": "14",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$2.376,65 ARS",
+  "impressions": "3041",
+  "reach": "2700",
+  "frequency": "1.126296",
+  "website_ctr": "2.170339",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "65"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$36,56 ARS (Instagram profile visits)"
+  },
+  "cpm": "$781,54 ARS",
+  "link_click": "66",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$5.420,86 ARS",
+  "impressions": "1104",
+  "reach": "910",
+  "frequency": "1.213187",
+  "website_ctr": "0.634058",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.910,20 ARS",
+  "link_click": "7",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$2.562,32 ARS",
+  "impressions": "574",
+  "reach": "463",
+  "frequency": "1.239741",
+  "website_ctr": "0.522648",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.463,97 ARS",
+  "link_click": "3",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$2.303,77 ARS",
+  "impressions": "3008",
+  "reach": "3008",
+  "frequency": "1",
+  "website_ctr": "2.360372",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "69"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$33,39 ARS (Instagram profile visits)"
+  },
+  "cpm": "$765,88 ARS",
+  "link_click": "71",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$6.256,37 ARS",
+  "impressions": "1400",
+  "reach": "1292",
+  "frequency": "1.083591",
+  "website_ctr": "1.071429",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$6.256,37 ARS (Leads)"
+  },
+  "cpm": "$4.468,84 ARS",
+  "link_click": "15",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$5.535,07 ARS",
+  "impressions": "1496",
+  "reach": "1218",
+  "frequency": "1.228243",
+  "website_ctr": "1.002674",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.699,91 ARS",
+  "link_click": "15",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$1.630,59 ARS",
+  "impressions": "2123",
+  "reach": "1860",
+  "frequency": "1.141398",
+  "website_ctr": "1.884126",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "40"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$40,76 ARS (Instagram profile visits)"
+  },
+  "cpm": "$768,06 ARS",
+  "link_click": "40",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$7.148,31 ARS",
+  "impressions": "1291",
+  "reach": "1048",
+  "frequency": "1.23187",
+  "website_ctr": "1.239349",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.787,08 ARS (Leads)"
+  },
+  "cpm": "$5.537,03 ARS",
+  "link_click": "16",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$1.862,18 ARS",
+  "impressions": "392",
+  "reach": "324",
+  "frequency": "1.209877",
+  "website_ctr": "0.510204",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.862,18 ARS (Leads)"
+  },
+  "cpm": "$4.750,46 ARS",
+  "link_click": "2",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$2.418,05 ARS",
+  "impressions": "2807",
+  "reach": "2730",
+  "frequency": "1.028205",
+  "website_ctr": "2.422515",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "64"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$37,78 ARS (Instagram profile visits)"
+  },
+  "cpm": "$861,44 ARS",
+  "link_click": "68",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$6.622,70 ARS",
+  "impressions": "1174",
+  "reach": "1066",
+  "frequency": "1.101313",
+  "website_ctr": "1.618399",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$6.622,70 ARS (Leads)"
+  },
+  "cpm": "$5.641,14 ARS",
+  "link_click": "19",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$5.407,54 ARS",
+  "impressions": "1530",
+  "reach": "1223",
+  "frequency": "1.251022",
+  "website_ctr": "0.588235",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.703,77 ARS (Leads)"
+  },
+  "cpm": "$3.534,34 ARS",
+  "link_click": "9",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$2.214,02 ARS",
+  "impressions": "2642",
+  "reach": "2410",
+  "frequency": "1.096266",
+  "website_ctr": "2.043906",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "54"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$41,00 ARS (Instagram profile visits)"
+  },
+  "cpm": "$838,01 ARS",
+  "link_click": "54",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$6.141,33 ARS",
+  "impressions": "1352",
+  "reach": "1145",
+  "frequency": "1.180786",
+  "website_ctr": "0.739645",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$6.141,33 ARS (Leads)"
+  },
+  "cpm": "$4.542,40 ARS",
+  "link_click": "10",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$1.985,31 ARS",
+  "impressions": "440",
+  "reach": "374",
+  "frequency": "1.176471",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.512,07 ARS",
+  "link_click": null,
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$2.010,53 ARS",
+  "impressions": "2455",
+  "reach": "2413",
+  "frequency": "1.017406",
+  "website_ctr": "2.077393",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "48"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$41,89 ARS (Instagram profile visits)"
+  },
+  "cpm": "$818,95 ARS",
+  "link_click": "51",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$7.538,00 ARS",
+  "impressions": "1339",
+  "reach": "1216",
+  "frequency": "1.101151",
+  "website_ctr": "1.7177",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$7.538,00 ARS (Leads)"
+  },
+  "cpm": "$5.629,57 ARS",
+  "link_click": "23",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$7.056,70 ARS",
+  "impressions": "1258",
+  "reach": "980",
+  "frequency": "1.283673",
+  "website_ctr": "0.63593",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.528,35 ARS (Leads)"
+  },
+  "cpm": "$5.609,46 ARS",
+  "link_click": "8",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$2.106,57 ARS",
+  "impressions": "2940",
+  "reach": "2635",
+  "frequency": "1.11575",
+  "website_ctr": "2.44898",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "72"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$29,26 ARS (Instagram profile visits)"
+  },
+  "cpm": "$716,52 ARS",
+  "link_click": "72",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$6.088,15 ARS",
+  "impressions": "1124",
+  "reach": "928",
+  "frequency": "1.211207",
+  "website_ctr": "0.88968",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.044,08 ARS (Leads)"
+  },
+  "cpm": "$5.416,50 ARS",
+  "link_click": "10",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$1.295,90 ARS",
+  "impressions": "297",
+  "reach": "247",
+  "frequency": "1.202429",
+  "website_ctr": "0.673401",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.363,30 ARS",
+  "link_click": "2",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$2.239,23 ARS",
+  "impressions": "2817",
+  "reach": "2711",
+  "frequency": "1.0391",
+  "website_ctr": "1.70394",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "46"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$48,68 ARS (Instagram profile visits)"
+  },
+  "cpm": "$794,90 ARS",
+  "link_click": "48",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$7.162,79 ARS",
+  "impressions": "1391",
+  "reach": "1269",
+  "frequency": "1.096139",
+  "website_ctr": "1.150252",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$7.162,79 ARS (Leads)"
+  },
+  "cpm": "$5.149,38 ARS",
+  "link_click": "16",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$5.203,14 ARS",
+  "impressions": "946",
+  "reach": "604",
+  "frequency": "1.566225",
+  "website_ctr": "0.951374",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.601,57 ARS (Leads)"
+  },
+  "cpm": "$5.500,15 ARS",
+  "link_click": "9",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$1.764,76 ARS",
+  "impressions": "2355",
+  "reach": "2206",
+  "frequency": "1.067543",
+  "website_ctr": "2.250531",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "51"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$34,60 ARS (Instagram profile visits)"
+  },
+  "cpm": "$749,37 ARS",
+  "link_click": "53",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$6.011,66 ARS",
+  "impressions": "1139",
+  "reach": "1011",
+  "frequency": "1.126607",
+  "website_ctr": "0.965759",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$6.011,66 ARS (Leads)"
+  },
+  "cpm": "$5.278,02 ARS",
+  "link_click": "11",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$6.242,44 ARS",
+  "impressions": "1252",
+  "reach": "900",
+  "frequency": "1.391111",
+  "website_ctr": "0.878594",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.121,22 ARS (Leads)"
+  },
+  "cpm": "$4.985,97 ARS",
+  "link_click": "11",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$2.845,85 ARS",
+  "impressions": "3874",
+  "reach": "3707",
+  "frequency": "1.04505",
+  "website_ctr": "1.522974",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "61"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$46,65 ARS (Instagram profile visits)"
+  },
+  "cpm": "$734,60 ARS",
+  "link_click": "59",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$8.298,63 ARS",
+  "impressions": "1528",
+  "reach": "1386",
+  "frequency": "1.102453",
+  "website_ctr": "1.832461",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.766,21 ARS (Leads)"
+  },
+  "cpm": "$5.431,04 ARS",
+  "link_click": "28",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$5.037,88 ARS",
+  "impressions": "1062",
+  "reach": "772",
+  "frequency": "1.375648",
+  "website_ctr": "0.47081",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.743,77 ARS",
+  "link_click": "5",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$2.088,10 ARS",
+  "impressions": "2878",
+  "reach": "2684",
+  "frequency": "1.07228",
+  "website_ctr": "2.293259",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "61"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$34,23 ARS (Instagram profile visits)"
+  },
+  "cpm": "$725,54 ARS",
+  "link_click": "66",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$5.801,39 ARS",
+  "impressions": "1114",
+  "reach": "953",
+  "frequency": "1.16894",
+  "website_ctr": "0.987433",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.900,70 ARS (Leads)"
+  },
+  "cpm": "$5.207,71 ARS",
+  "link_click": "11",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$6.469,37 ARS",
+  "impressions": "1375",
+  "reach": "985",
+  "frequency": "1.395939",
+  "website_ctr": "1.090909",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.156,46 ARS (Leads)"
+  },
+  "cpm": "$4.705,00 ARS",
+  "link_click": "15",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$2.853,18 ARS",
+  "impressions": "3771",
+  "reach": "3576",
+  "frequency": "1.05453",
+  "website_ctr": "1.935826",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "71"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$40,19 ARS (Instagram profile visits)"
+  },
+  "cpm": "$756,61 ARS",
+  "link_click": "73",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$8.576,49 ARS",
+  "impressions": "1414",
+  "reach": "1294",
+  "frequency": "1.092736",
+  "website_ctr": "1.980198",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.144,12 ARS (Leads)"
+  },
+  "cpm": "$6.065,41 ARS",
+  "link_click": "28",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$3.142,53 ARS",
+  "impressions": "793",
+  "reach": "612",
+  "frequency": "1.295752",
+  "website_ctr": "0.75662",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.962,84 ARS",
+  "link_click": "6",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$1.802,13 ARS",
+  "impressions": "2728",
+  "reach": "2598",
+  "frequency": "1.050038",
+  "website_ctr": "2.272727",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "62"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$29,07 ARS (Instagram profile visits)"
+  },
+  "cpm": "$660,60 ARS",
+  "link_click": "62",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$5.360,52 ARS",
+  "impressions": "1091",
+  "reach": "987",
+  "frequency": "1.10537",
+  "website_ctr": "1.558203",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.680,26 ARS (Leads)"
+  },
+  "cpm": "$4.913,40 ARS",
+  "link_click": "17",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$3.581,31 ARS",
+  "impressions": "902",
+  "reach": "686",
+  "frequency": "1.314869",
+  "website_ctr": "0.776053",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.970,41 ARS",
+  "link_click": "7",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$3.403,23 ARS",
+  "impressions": "4469",
+  "reach": "4304",
+  "frequency": "1.038336",
+  "website_ctr": "1.387335",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "60"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$56,72 ARS (Instagram profile visits)"
+  },
+  "cpm": "$761,52 ARS",
+  "link_click": "62",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$12.275,18 ARS",
+  "impressions": "2244",
+  "reach": "2067",
+  "frequency": "1.085631",
+  "website_ctr": "0.935829",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$4.091,73 ARS (Leads)"
+  },
+  "cpm": "$5.470,22 ARS",
+  "link_click": "21",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$5.163,81 ARS",
+  "impressions": "1086",
+  "reach": "820",
+  "frequency": "1.32439",
+  "website_ctr": "0.828729",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.581,91 ARS (Leads)"
+  },
+  "cpm": "$4.754,89 ARS",
+  "link_click": "9",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$2.304,19 ARS",
+  "impressions": "3266",
+  "reach": "2826",
+  "frequency": "1.155697",
+  "website_ctr": "2.327006",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "72"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$32,00 ARS (Instagram profile visits)"
+  },
+  "cpm": "$705,51 ARS",
+  "link_click": "76",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$7.688,33 ARS",
+  "impressions": "1495",
+  "reach": "1240",
+  "frequency": "1.205645",
+  "website_ctr": "0.735786",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.844,17 ARS (Leads)"
+  },
+  "cpm": "$5.142,70 ARS",
+  "link_click": "11",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$6.952,85 ARS",
+  "impressions": "1597",
+  "reach": "1121",
+  "frequency": "1.424621",
+  "website_ctr": "0.876644",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.476,43 ARS (Leads)"
+  },
+  "cpm": "$4.353,69 ARS",
+  "link_click": "14",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$2.486,84 ARS",
+  "impressions": "3046",
+  "reach": "2922",
+  "frequency": "1.042437",
+  "website_ctr": "2.002626",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "58"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$42,88 ARS (Instagram profile visits)"
+  },
+  "cpm": "$816,43 ARS",
+  "link_click": "61",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$10.999,35 ARS",
+  "impressions": "2540",
+  "reach": "2033",
+  "frequency": "1.249385",
+  "website_ctr": "1.141732",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.666,45 ARS (Leads)"
+  },
+  "cpm": "$4.330,45 ARS",
+  "link_click": "29",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$6.143,09 ARS",
+  "impressions": "1008",
+  "reach": "714",
+  "frequency": "1.411765",
+  "website_ctr": "1.190476",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.071,55 ARS (Leads)"
+  },
+  "cpm": "$6.094,34 ARS",
+  "link_click": "12",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$1.977,42 ARS",
+  "impressions": "2698",
+  "reach": "2539",
+  "frequency": "1.062623",
+  "website_ctr": "2.779837",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "72"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$27,46 ARS (Instagram profile visits)"
+  },
+  "cpm": "$732,92 ARS",
+  "link_click": "75",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$5.063,24 ARS",
+  "impressions": "1138",
+  "reach": "982",
+  "frequency": "1.158859",
+  "website_ctr": "0.527241",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.449,24 ARS",
+  "link_click": "6",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$5.868,88 ARS",
+  "impressions": "1696",
+  "reach": "1207",
+  "frequency": "1.405137",
+  "website_ctr": "0.471698",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$5.868,88 ARS (Leads)"
+  },
+  "cpm": "$3.460,42 ARS",
+  "link_click": "8",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$2.508,50 ARS",
+  "impressions": "3041",
+  "reach": "2925",
+  "frequency": "1.039658",
+  "website_ctr": "1.874383",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "55"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$45,61 ARS (Instagram profile visits)"
+  },
+  "cpm": "$824,89 ARS",
+  "link_click": "57",
+  "name": "JY | Awareness",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120252699394270427"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$8.736,39 ARS",
+  "impressions": "2356",
+  "reach": "1936",
+  "frequency": "1.216942",
+  "website_ctr": "0.764007",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.912,13 ARS (Leads)"
+  },
+  "cpm": "$3.708,15 ARS",
+  "link_click": "18",
+  "name": "JY | Conversiones",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252699641360427"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$4.795,14 ARS",
+  "impressions": "923",
+  "reach": "720",
+  "frequency": "1.281944",
+  "website_ctr": "0.541712",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.195,17 ARS",
+  "link_click": "5",
+  "name": "JY | Remarketing",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252700778930427"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "effective_status": "PAUSED",
+  "objective": "OUTCOME_LEADS",
+  "id": "120252850500290427"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$1.736,42 ARS",
+  "impressions": "2357",
+  "reach": "2219",
+  "frequency": "1.06219",
+  "website_ctr": "2.206194",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "51"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$34,05 ARS (Instagram profile visits)"
+  },
+  "cpm": "$736,71 ARS",
+  "link_click": "52",
+  "name": "JY | Awareness Boxer Taller",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_TRAFFIC",
+  "id": "120253037138720427"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$5.661,10 ARS",
+  "impressions": "1032",
+  "reach": "892",
+  "frequency": "1.156951",
+  "website_ctr": "1.25969",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.887,03 ARS (Leads)"
+  },
+  "cpm": "$5.485,56 ARS",
+  "link_click": "13",
+  "name": "JY | Viajes Presenciales Luciana",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254099466780427"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$6.746,75 ARS",
+  "impressions": "1634",
+  "reach": "1258",
+  "frequency": "1.298887",
+  "website_ctr": "0.673195",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.686,69 ARS (Leads)"
+  },
+  "cpm": "$4.128,98 ARS",
+  "link_click": "11",
+  "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "effective_status": "ACTIVE",
+  "objective": "OUTCOME_LEADS",
+  "id": "120254108819070427"
+ }
+]

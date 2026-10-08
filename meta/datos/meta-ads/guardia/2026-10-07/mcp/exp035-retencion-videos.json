@@ -1,0 +1,84 @@
+{
+ "fuente": "ads_get_ad_entities level ad, campana JY | Conversiones, 14/09 al 07/10 (07/10 parcial) + ads_get_ad_videos (largo)",
+ "traido": "2026-10-07",
+ "filas": {
+  "DemoLu (experimento)": {
+   "gasto": 6923,
+   "reproducciones": 1152,
+   "pct_25": 2.7,
+   "pct_50": 1.0,
+   "pct_75": 0.6,
+   "pct_100": 0.3,
+   "pct_thruplay": 2.5,
+   "seg_promedio": 2,
+   "largo_seg": 50.7,
+   "seg_en_25": 12.7,
+   "leads_meta": 0
+  },
+  "DemoIA (experimento)": {
+   "gasto": 1006,
+   "reproducciones": 68,
+   "pct_25": 7.4,
+   "pct_50": 4.4,
+   "pct_75": 2.9,
+   "pct_100": 1.5,
+   "pct_thruplay": 5.9,
+   "seg_promedio": 3,
+   "largo_seg": 41.3,
+   "seg_en_25": 10.3,
+   "leads_meta": 0
+  },
+  "TestimonioJesi (experimento)": {
+   "gasto": 1474,
+   "reproducciones": 166,
+   "pct_25": 11.4,
+   "pct_50": 7.2,
+   "pct_75": 4.2,
+   "pct_100": 2.4,
+   "pct_thruplay": 7.2,
+   "seg_promedio": 3,
+   "largo_seg": 36.5,
+   "seg_en_25": 9.1,
+   "leads_meta": 0
+  },
+  "DemoIA (LAL Envio formulario, pausado)": {
+   "gasto": 35124,
+   "reproducciones": 4213,
+   "pct_25": 8.3,
+   "pct_50": 5.0,
+   "pct_75": 3.4,
+   "pct_100": 2.0,
+   "pct_thruplay": 7.3,
+   "seg_promedio": 3,
+   "largo_seg": 41.3,
+   "seg_en_25": 10.3,
+   "leads_meta": 5
+  },
+  "TestimonioJesi (segmentacion similar)": {
+   "gasto": 43140,
+   "reproducciones": 6704,
+   "pct_25": 7.2,
+   "pct_50": 4.1,
+   "pct_75": 2.2,
+   "pct_100": 1.6,
+   "pct_thruplay": 4.7,
+   "seg_promedio": 3,
+   "largo_seg": 36.5,
+   "seg_en_25": 9.1,
+   "leads_meta": 6
+  },
+  "Boxer + lectora (segmentacion similar)": {
+   "gasto": 194718,
+   "reproducciones": 41028,
+   "pct_25": 9.6,
+   "pct_50": 5.6,
+   "pct_75": 3.5,
+   "pct_100": 2.4,
+   "pct_thruplay": 4.8,
+   "seg_promedio": 3,
+   "largo_seg": 25.2,
+   "seg_en_25": 6.3,
+   "leads_meta": 51
+  }
+ }
+}

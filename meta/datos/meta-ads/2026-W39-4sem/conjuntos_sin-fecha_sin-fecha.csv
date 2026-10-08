@@ -1,0 +1,14 @@
+Inicio del informe,Fin del informe,Nombre del conjunto de anuncios,Nombre de la campaña,Entrega del conjunto de anuncios,Resultados,Indicador de resultado,Costo por resultados,Presupuesto del conjunto de anuncios,Tipo de presupuesto,Importe gastado (ARS),Impresiones,Alcance,Frecuencia,CPM (costo por mil impresiones),CTR (porcentaje de clics en el enlace),Clics en el enlace,Identificador del conjunto de anuncios
+,,Entrevista en vivo - Campana Repuestos,7. Clientes potenciales - formulario - Copia,PAUSED,,actions:lead,,2000.0,Diario,1100.15,245,204,1.20098,4490.41,0.408163,1,120253810672200427
+,,Redirección al perfil de Instagram - Segmentación manual,JY | Awareness,ACTIVE,1710,profile_visit_view,40.42,2500.0,Diario,69111.93,88321,65418,1.350102,782.51,2.009715,1775,120252699394260427
+,,Nuevo conjunto de anuncios de Tráfico,JY | Awareness Boxer Taller,CAMPAIGN_PAUSED,949,profile_visit_view,36.38,2000.0,Diario,34523.74,41728,26601,1.568663,827.35,2.329371,972,120253037138730427
+,,Mecanicos-Intereses + LAL Seguidores IG,JY | Awareness Boxer Taller (AGENTE META),ACTIVE,465,profile_visit_view,46.87,2000.0,Diario,21793.87,18035,14832,1.215952,1208.42,2.633768,475,120254402437330427
+,,Conversión - LAL Presupuestados 2% (AGENTE META),JY | Conversiones,ACTIVE,2,actions:lead,6540.76,4500.0,Diario,13081.51,1586,1053,1.506173,8248.11,0.630517,10,120254486200060427
+,,Conversión segmentación similar,JY | Conversiones,ACTIVE,68,actions:lead,3889.27,13000.0,Diario,264470.46,58960,24764,2.380875,4485.59,0.936228,552,120252699641350427
+,,Conversión segmentación similar - Copia,JY | Conversiones - Copia - Boton a WhatsApp,PAUSED,12,actions:onsite_conversion.messaging_conversation_started_7d,1288.55,5000.0,Diario,15462.62,18303,1526,11.994102,844.81,0.693875,127,120253156317990427
+,,Remarketing,JY | Remarketing,ACTIVE,32,actions:lead,4620.94,5000.0,Diario,147870.15,32626,10776,3.027654,4532.28,0.775455,253,120252700778940427
+,,San Juan- RMK - Placas,JY | Viajes Presenciales Luciana,ACTIVE,,actions:lead,,1505.0,Diario,10162.76,1397,884,1.580317,7274.7,0.429492,6,120254101460370427
+,,San Juan- Frio - LAL CRM - Video,JY | Viajes Presenciales Luciana,PAUSED,23,actions:lead,2915.51,3000.0,Diario,67056.63,13194,4633,2.847831,5082.36,1.068668,141,120254102057320427
+,,Mendoza - Frio - LAL CRM - Video,JY | Viajes Presenciales Luciana,PAUSED,15,actions:lead,3021.11,3000.0,Diario,45316.67,8329,3526,2.362167,5440.83,0.900468,75,120254099466790427
+,,Conjunto 2 - Publico Probado,JY | Webinar Mostrador - 17 SEPT 2026,PAUSED,11,actions:lead,2278.12,4000.0,Diario,25059.35,6307,2325,2.712688,3973.26,0.808625,51,120254275276570427
+,,Conjunto 1 - Frio nacional,JY | Webinar Mostrador - 17 SEPT 2026,PAUSED,3,actions:lead,9279.08,2000.0,Diario,27837.25,5959,2579,2.310586,4671.46,0.570566,34,120254108819080427

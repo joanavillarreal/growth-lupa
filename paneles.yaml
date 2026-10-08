@@ -22,7 +22,7 @@ paneles:
   panel_meta_ads:
     nombre: Panel Meta Ads
     link: https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12
-    archivo: null              # se define en el paso 3
+    archivo: meta/informes/panel-trimestral.html
     en_ensayo: comparar        # hoy lo publica la rutina de agente-meta-ads
   panel_redes:
     nombre: Panel de redes

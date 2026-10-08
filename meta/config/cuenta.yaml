@@ -1,0 +1,375 @@
+# Inventario de lo que el agente mira. Actualizar cuando cambie algo.
+# Los campos en PENDIENTE los completa Joana (ver informes/setup-pendiente.md).
+
+producto_activo: boxer_gestion
+
+productos:
+  boxer_gestion:
+    nombre: "Boxer Gestion"
+    activo: true
+    que_es: "Software de gestion para casas de repuestos de autos y motos."
+    icp: >
+      Casas de repuestos de autos y motos, distribuidoras, desarmaderos,
+      autopartes y combinaciones. Talleres mecanicos y lubricentros son rubro
+      ADYACENTE: derivan 5,5% contra 43,0% del ICP (mar-sep 2026). Se tratan
+      como segmento aparte, nunca como ICP central.
+  # Regla de mensaje del canal, actualizada por Joana el 2026-09-09.
+  # Antes era absoluta ("no se habla de precio en el anuncio"). Ahora:
+  #   - EN FRIO: no se habla de precio ni de bonificaciones. El creativo vende
+  #     la conversacion, no el producto.
+  #   - EN REMARKETING: si se puede incentivar (hardware bonificado, etc.),
+  #     porque el publico ya conoce el producto. Ver EXP-011.
+  # Condicion obligatoria: si el incentivo no aplica a todos los planes, eso va
+  # escrito EN el anuncio, no solo en la cotizacion del vendedor.
+  reglas_de_mensaje:
+    precio_en_frio: "no"
+    incentivo_en_remarketing: "si, con la condicion visible en el anuncio"
+    decidido_por: "Joana, 2026-09-09"
+
+  boxer_taller:
+    nombre: "Boxer Taller"
+    activo: true                # confirmado por Joana, 2026-09-08
+    icp: "Talleres mecanicos y lubricentros."
+    nota: >
+      Cambia la lectura del canal de Gestion: los 220 leads adyacentes
+      (talleres y lubricentros) que derivaban al 5,5% dejan de ser desperdicio
+      y pasan a ser el publico de este producto. NO excluirlos: derivarlos.
+      Pendiente de Joana: campana de awareness para sumar seguidores.
+
+meta_ads:
+  # Confirmado por el MCP el 2026-09-11 (ads_get_ad_accounts).
+  nombre_cuenta: "Cuenta Publicitaria Oficial - Boxer Gestión"
+  id_cuenta_publicitaria: "725901852075382"   # numerico, SIN prefijo act_
+  business_manager_id: "191532801987846"      # AIT
+  pagina_facebook: PENDIENTE
+  cuenta_instagram: PENDIENTE
+  moneda_reporte: ARS                    # confirmado: el export sale en "Importe gastado (ARS)"
+
+  # Medido con el export historico 01/03 a 07/09/2026.
+  gasto_medido:
+    total_ars: 7207499
+    periodo: "2026-03-01 a 2026-09-07 (191 dias)"
+    promedio_mensual_ars: 1150000        # entre 947.000 y 1.351.000, muy plano
+    reparto:
+      formulario_lead_ad_ars: 6375497    # 88,5%
+      mensaje_whatsapp_ars: 320785       # 4,5%
+      awareness_trafico_interaccion_ars: 511216  # 7,1%
+
+  campanas_conocidas:
+    # Del export de Campanas, 01/03-07/09/2026. Gasto en ARS del periodo.
+    - nombre: "7. Clientes potenciales - formulario - Copia"
+      objetivo: lead
+      gasto_ars: 3057742
+      resultados: 828
+      costo_por_resultado_ars: 3693
+      periodo: "01/03 a 31/08"
+      nota: "El motor del canal. DEJO DE GASTAR el 31/08: confirmar si fue deliberado."
+    - nombre: "Yamil | Campana de Formularios - CENTRO Argentina"
+      objetivo: lead
+      gasto_ars: 2022831
+      resultados: 280
+      costo_por_resultado_ars: 7224
+      periodo: "01/03 a 20/07"
+    - nombre: "JY | Conversiones"
+      objetivo: lead
+      gasto_ars: 447096
+      resultados: 94
+      costo_por_resultado_ars: 4756
+      periodo: "08/07 a 07/09 (activa)"
+    - nombre: "JY | Remarketing"
+      objetivo: lead
+      gasto_ars: 367170
+      resultados: 73
+      costo_por_resultado_ars: 5030
+      periodo: "08/07 a 07/09 (activa)"
+    - nombre: "JY | Conversiones - Copia - Boton a WhatsApp"
+      objetivo: mensaje
+      gasto_ars: 256579
+      resultados: 98
+      costo_por_resultado_ars: 2618
+      periodo: "13/07 a 02/09"
+      nota: >
+        La prueba de clic a WhatsApp. Joana (2026-09-08): "lo activamos para
+        probar pero no le encontramos la vuelta". Usa el MISMO video de Lu que
+        el formulario. Costo por resultado bajo (2.618) y leads flojos:
+        75% sin tipificar en ago-sep.
+    - nombre: "JY | Awareness"
+      objetivo: awareness
+      gasto_ars: 153146
+      resultados: 4108
+      costo_por_resultado_ars: 37
+      periodo: "08/07 a 07/09 (activa)"
+    - nombre: "JY | Awareness Boxer Taller"
+      objetivo: awareness
+      gasto_ars: 86153
+      resultados: 1347
+      costo_por_resultado_ars: 64
+      periodo: "21/07 a 07/09 (activa)"
+    - nombre: "5. Campana de Seguidores"
+      objetivo: seguidores
+      gasto_ars: 226651
+      periodo: "01/03 a 16/06"
+      nota: "El export de Campanas no trae su indicador; a nivel conjunto si (3.875 visitas al perfil)."
+    # Resto (menores a 200.000 ARS) en informes/2026-W37/meta-linea-base.json
+
+  estructura_medida:
+    conjuntos_en_el_periodo: 32
+    conjuntos_con_menos_de_3_anuncios: 28
+    conjuntos_con_un_solo_anuncio: 19
+    anuncios_distintos: 49
+    anuncios_con_diagnostico_de_relevancia: 8
+    nota: >
+      El problema no es solo "pocos creativos": son 32 conjuntos para ~37
+      leads/semana. Ninguno junta los ~50 eventos que necesita para salir del
+      aprendizaje. La direccion correcta es la inversa: menos conjuntos, mas
+      anuncios adentro de cada uno.
+
+  creativo_dominante:
+    nombre: "Video Jesi - Todo Movil (4 versiones)"
+    gasto_ars: 2930288
+    pct_de_la_cuenta: 41
+    costo_por_resultado_ars: [3816, 5870, 11711, 12898]
+    nota: "Mismo video, 3,4x de diferencia segun el conjunto donde corrio."
+
+  presupuesto:
+    diario_ars: PENDIENTE
+    mensual_ars: PENDIENTE
+    nota: "Gasto real ~1,15 M ARS/mes. Falta saber si es el presupuesto que Joana quiere sostener."
+  mcp:
+    disponible: true
+    habilitado_el: "2026-09-11"
+    id_cuenta: "725901852075382"
+    verificado: >
+      Cruzado contra el export manual del 2026-09-08 para la ventana
+      10/08-06/09: el gasto total coincide salvo ~7 ARS sobre 774.550 (0,001%),
+      por reajuste retroactivo normal de Meta. La via es confiable.
+    # OJO: hay otras 5 cuentas en el mismo business y ninguna es esta.
+    # "Boxer Gestion de AIT (Read-Only)" (987208277687912) tiene nombre parecido,
+    # esta habilitada y reporta en USD: consultarla por error da KPIs mal sin
+    # que nada falle. Usar SIEMPRE el id, nunca buscar la cuenta por nombre.
+    cuentas_a_no_confundir:
+      - id: "987208277687912"
+        nombre: "Boxer Gestion de AIT (Read-Only)"
+        moneda: USD
+      - id: "2071098796788922"
+        nombre: "Duck Gestión (Read-Only)"
+        moneda: USD
+    lectura:
+      nivel: completo
+      nota: >
+        Campanas, conjuntos y anuncios con metricas, mas desgloses
+        (publisher_platform, platform_position, age, gender, region, device) y
+        learning_stage_info a nivel conjunto. Ver referencias/meta-mcp.md.
+    herramientas_de_diagnostico:
+      # Corregido el 2026-09-11: los tres diagnosticos de relevancia SI estan en
+      # el MCP, pero NO como campos de ads_get_ad_entities (ahi dan
+      # unknown_fields). Salen de ads_insights_auction_ranking_benchmarks.
+      - ads_insights_auction_ranking_benchmarks   # relevancia + solapamiento de subasta
+      - ads_get_opportunity_score                 # 71/100 al 2026-09-11; trae delivery_error
+      - ads_insights_industry_benchmark           # probada: sin datos para esta cuenta
+    no_disponible_por_mcp:
+      - "CSV de leads del formulario nativo (nombres y telefonos). Descarga manual, no se versiona crudo."
+    exports_manuales: no_hacen_falta
+    escritura:
+      nivel: ninguno               # ninguno | reversible | creacion | presupuesto
+      decidido_por: "vigente por defecto al habilitarse el MCP, 2026-09-11"
+      nota: >
+        El MCP TRAE las herramientas de escritura y la cuenta las acepta. Que el
+        agente no las use es una DECISION, no una limitacion tecnica: sigue
+        siendo "el agente propone, Joana ejecuta".
+        Mientras esto diga `ninguno`, el agente no llama a ninguna herramienta
+        del MCP que modifique, cree, active, pause o borre.
+        Para cambiarlo hace falta una decision explicita de Joana escrita aca,
+        con fecha y limites. Un "dale, hacelo" en un chat autoriza ESA accion,
+        no cambia la politica. Los niveles y sus condiciones estan en el SKILL,
+        seccion "Actuar sobre la cuenta".
+  api:
+    disponible: parcial
+    nota: >
+      Hay una app propia en Meta for Developers que recibe los leads del
+      formulario y los manda a n8n (Joana, 2026-09-07). Esa app es el punto
+      donde se resuelve la atribucion: el webhook de leadgen ya trae
+      campaign_name / adset_name / ad_name. Los reportes de gasto ya NO
+      dependen de ella: entran por el MCP desde el 2026-09-11.
+
+  integracion_leads:
+    ruta: "Formulario de Meta -> app propia en Meta for Developers -> n8n -> Bitrix24"
+    confirmado_por: "Joana, 2026-09-07"
+    estado_atribucion: "n8n NO mapea campaign/adset/ad a los campos UTM de Bitrix"
+    nota: >
+      Es la ruta correcta para arreglarlo y es un cambio de mapeo dentro de n8n,
+      no un desarrollo. Ver referencias/atribucion.md, A1. Ademas hay que
+      auditar por que solo el 65% de los leads que Meta factura aparece en el
+      CRM (409 sin ubicar).
+
+crm:
+  sistema: bitrix24
+  entidad: prospectos            # NUNCA negociaciones/deals
+  metodo_rest: crm.lead.list
+  webhook_env_var: BITRIX_WEBHOOK_URL
+  webhook_estado: funcionando    # verificado 2026-09-07
+  zona_horaria_api: "+03:00"     # OJO: la API NO devuelve hora argentina
+  zona_horaria_negocio: "America/Argentina/Buenos_Aires"
+
+  origenes_del_canal:
+    - source_id: "3"
+      nombre_visible: "Meta Ads Formulario"
+      etiqueta: "Formulario nativo (lead ad)"
+      es_pago: true
+      guarda_utm: false          # 0 de 830 al 2026-09-07
+    - source_id: UC_HDLOFX
+      nombre_visible: "Meta Ads"
+      etiqueta: "Clic a WhatsApp"
+      es_pago: true
+      guarda_utm: false          # 0 de 149 al 2026-09-07
+    - source_id: UC_GJPS17
+      nombre_visible: "Redes"
+      etiqueta: "Redes organico"
+      es_pago: false             # CONTRASTE. Nunca se suma a los KPI del canal.
+      guarda_utm: false
+
+  etapas:
+    inicial_formulario: NEW          # "Formularios Meta"
+    inicial_whatsapp:   UC_MHV115    # "Meta Ads"
+    inicial_organico:   IN_PROCESS   # "Redes Sociales"
+    inactivo:  UC_LG671J
+    convertido: CONVERTED
+    no_util:    JUNK
+
+  campos:
+    tipo_negocio:        UF_CRM_1772648753515
+    razon_no_derivacion: UF_CRM_1772731499441
+    interes_producto:    UF_CRM_1773070614344
+    prioridad:           UF_CRM_1772649355387
+    contacto_efectivo:   UF_CRM_1782833237269   # 100% vacio en Meta al 2026-09-07
+
+  opciones_borradas:
+    # IDs guardados en prospectos cuya opcion ya no existe. La etiqueta es
+    # irrecuperable por API. El script las marca explicito.
+    - campo: razon_no_derivacion
+      ids: [1162, 1164, 1434]
+
+entrega:
+  artefacto:
+    titulo: "Boxer Meta Ads"
+    file_path: "informes/artefacto-semanal.html"
+    url: "https://claude.ai/code/artifact/b306e530-03e3-42a5-86f3-3e47409ff9b9"
+    publicado: "2026-10-05 (2026-W40)"
+    formato: cerrado_2026-09-14
+    nota: >
+      Publicar SIEMPRE desde el mismo file_path para que conserve la URL entre
+      corridas. Cambiar de archivo crea un artefacto nuevo con otro link.
+      El FORMATO lo cerro Joana el 2026-09-14 y no se rediseña cada semana: se
+      parte del archivo publicado y se le cambian los datos. La regla que
+      gobierna todo es que cada numero va contra la semana anterior, con fechas
+      a la vista. Especificacion y checklist:
+      .claude/skills/boxer-meta-ads/referencias/artefacto.md
+  panel_trimestral:
+    titulo: "Meta Ads por trimestre"
+    file_path: "informes/panel-trimestral.html"
+    url: "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
+    publicado: "2026-10-05 (Q4 recien arrancado; ultima republicacion diaria con datos hasta el 04/10)"
+    actualizacion: diaria, despues de la guardia (Joana, 2026-09-27)
+    q_calendario: true              # Q3 = julio a septiembre (Joana, 2026-09-21)
+    datos: "informes/panel/datos.json, lo arma scripts/panel_meta.py"
+    nota: >
+      Es el SEGUNDO artefacto del canal y no reemplaza al semanal: el semanal
+      contesta "como fue la semana", este contesta "como se viene moviendo el
+      trimestre y que le hicimos". Se republica desde el mismo file_path para
+      conservar la URL, igual que el otro.
+      Los datos de plataforma y CRM salen de los CSV versionados y arrancan el
+      01/07. Las marcas de CAMBIOS arrancan el 22/09 (decision de Joana: no se
+      migro la historia en prosa de bitacora-cambios.md).
+
+  slack:
+    # CAMBIADO el 2026-09-15 por Joana: antes iba a su DM. Ahora los dos
+    # entregables (el artefacto del lunes y las alertas de la guardia) van al
+    # canal del equipo.
+    canal_id: "C0C2XKTLT9N"
+    canal_nombre: "#adqui-notificaciones-canales"
+    descripcion: "Canal del equipo. Lo leen Joana y Yamil, no es un DM."
+    verificado: "2026-09-15"     # leido por MCP: el ID resuelve y estan los dos
+    consecuencia_del_cambio: >
+      Lo que se manda ahora lo lee mas de una persona. No cambia QUE se dice
+      —los numeros y las salvedades son los mismos— pero si el cuidado: nada de
+      taquigrafia interna que solo se entienda desde la corrida, y cada numero
+      con su unidad y su periodo. Si alguna vez hace falta decirle algo solo a
+      Joana, va a su DM (U0BS7B1ALHK), no aca.
+    dm_de_joana: "U0BS7B1ALHK"   # queda anotado; ya NO es el destino por defecto
+    nota: >
+      Si la sesion no tiene herramientas de Slack, NO simular el envio. Dejar el
+      mensaje escrito al principio del informe bajo "AVISO PARA SLACK (no se
+      pudo enviar)". El conector de Slack SI se puede adjuntar a una rutina:
+      verificado el 2026-09-07 en el agente de Google Ads.
+    que_se_manda:
+      lunes: >
+        LOS DOS LINKS —el artefacto de la semana arriba y el panel trimestral
+        ultimo y separado— mas un mensaje corto con las dos caras: lo bueno y lo
+        que hay que mirar, con el numero crudo al lado de cada una, y cuantas
+        acciones se proponen. Maximo 9 lineas. El molde exacto esta en el SKILL,
+        paso 7. Pedido de Joana, 2026-09-15; el link del panel se sumo el
+        2026-09-22.
+        El cuerpo del mensaje habla SOLO de la semana: el panel es otra ventana
+        y se nombra con su Q al lado para que no se mezclen. Si el panel no se
+        pudo republicar, el link NO va — mandar el de la semana pasada es peor
+        que no mandarlo.
+      guardia: >
+        SOLO si algo disparo. El bloque que imprime guardia_diaria.py se manda
+        tal cual, sin reescribirlo. Si no hay nada, no se manda nada: el
+        silencio es el estado normal y es lo que hace que el aviso se lea.
+
+  rutinas:
+    # Cambiaron el 2026-09-15: antes era una sola, lunes y jueves.
+    convencion_de_nombre: >
+      Toda rutina de este agente empieza con "Agente Meta - " (Joana,
+      2026-09-15). Formato: "Agente Meta - <que hace> (<cuando> ART)".
+      En la lista de Routines de claude.ai conviven las rutinas de todos los
+      agentes y todas son de Boxer: el prefijo dice de QUE agente es, que es lo
+      unico que ahi no se ve. Si se crea una rutina nueva, se nombra asi.
+    analisis_semanal:
+      nombre: "Agente Meta - Análisis semanal (lunes 9:00 ART)"
+      trigger_id: "trig_015V5mC6g6gxT372Q2MFhu7g"
+      cron_utc: "0 12 * * 1"        # lunes 09:00 ART (Argentina es UTC-3 todo el ano)
+      hora_real: "12:06 UTC"        # el servidor ancla el minuto al de creacion
+      modo: sesion_nueva_por_disparo
+      rama_de_salida: main
+      notificacion_push: true
+      nota: >
+        Era "0 12 * * 1,4". El jueves se saco: lo reemplaza la guardia diaria.
+    guardia_diaria:
+      nombre: "Agente Meta - Guardia diaria (todos los días 8:00 ART)"
+      trigger_id: "trig_0122tJ3eH91B5NWnhgzyoQ3s"   # creada 2026-09-15
+      cron_utc: "0 11 * * *"        # todos los dias 08:00 ART
+      modo: sesion_nueva_por_disparo
+      rama_de_salida: main
+      notificacion_push: true
+      nota: >
+        Corre ANTES que Joana empiece el dia, a proposito: la idea es que no
+        tenga que entrar a la plataforma a buscar si algo se rompio. Los lunes
+        corre igual, una hora antes del analisis: son cosas distintas y la
+        guardia puede encontrar algo que el informe del lunes no mira.
+    repo_y_conectores: >
+      Las TRES rutinas tienen el repo y los conectores MCP-Meta y Slack.
+      Verificado el 2026-09-15 leyendo las rutinas por API, despues de que
+      Joana los adjuntara a mano en claude.ai (la API no deja pasarlos al
+      crearlas).
+    novedades_semanales:
+      nombre: "Agente Meta - Novedades de la plataforma (domingos 10:00 ART)"
+      trigger_id: "trig_01TuTLmB25GvVP6FJFWPbZ2h"   # creada 2026-09-15
+      cron_utc: "0 13 * * 0"        # domingos 10:00 ART
+      modo: sesion_nueva_por_disparo
+      rama_de_salida: main
+      notificacion_push: true
+      nota: >
+        Corre el domingo para que lo que Joana apruebe llegue a tiempo a la
+        corrida del lunes, que es la que lee el hilo de Slack y lo escribe en
+        aprendizajes.md.
+    rama_de_salida_de_las_rutinas: >
+      El campo "rama de salida" de las rutinas dice claude/<algo>, no `main`, y
+      Joana verifico el 2026-09-15 que la UI no la deja cambiarlo.
+      NO ES UN PROBLEMA: el prompt de cada rutina hace `git push origin main`
+      explicito y eso funciona — la corrida del 2026-09-14 dejo sus commits en
+      `main` con la rama de salida ya apuntando a otro lado. Ese campo es de
+      donde la sesion propone cambios, no de donde el agente commitea.
+      La regla sigue siendo la del CLAUDE.md: todo va a `main`, y si una corrida
+      termina commiteando en otra rama, eso se reporta.

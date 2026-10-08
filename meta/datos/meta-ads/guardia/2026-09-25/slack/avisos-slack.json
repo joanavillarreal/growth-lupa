@@ -1,0 +1,16 @@
+{
+  "desde": "2026-09-18",
+  "hasta": "2026-09-24",
+  "canal": "#adqui-automatizaciones (C0BRW04QSUF)",
+  "cuenta": "mensajes del bot Botrix que arrancan con RE-INGRESO DE LEAD EXISTENTE o RECONTACTO DE LEAD EXISTENTE, agrupados por dia en hora argentina",
+  "por_dia": {
+    "2026-09-18": 1,
+    "2026-09-19": 1,
+    "2026-09-20": 3,
+    "2026-09-21": 2,
+    "2026-09-22": 3,
+    "2026-09-23": 1,
+    "2026-09-24": 1
+  },
+  "nota": "NO se cuenta 'Contacto existente interesado en VISITA PRESENCIAL' (otro workflow): esos leads son de una campana eventual, que tiene su propio origen del CRM y queda fuera del lado Meta de G5. Contarlos aca perdonaria de mas."
+}

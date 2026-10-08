@@ -1,0 +1,3298 @@
+[
+  {
+    "date_start": "2026-09-10",
+    "date_stop": "2026-09-10",
+    "amount_spent": {
+      "value": "2239.23",
+      "unit": "ARS"
+    },
+    "impressions": "2817",
+    "reach": "2711",
+    "frequency": "1.0391",
+    "website_ctr": "1.70394",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "46"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "48.68",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "794.9",
+      "unit": "ARS"
+    },
+    "link_click": "48",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-10",
+    "date_stop": "2026-09-10",
+    "amount_spent": {
+      "value": "7162.79",
+      "unit": "ARS"
+    },
+    "impressions": "1391",
+    "reach": "1269",
+    "frequency": "1.096139",
+    "website_ctr": "1.150252",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "7162.79",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "5149.38",
+      "unit": "ARS"
+    },
+    "link_click": "16",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-10",
+    "date_stop": "2026-09-10",
+    "amount_spent": {
+      "value": "5203.14",
+      "unit": "ARS"
+    },
+    "impressions": "946",
+    "reach": "604",
+    "frequency": "1.566225",
+    "website_ctr": "0.951374",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2601.57",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "5500.15",
+      "unit": "ARS"
+    },
+    "link_click": "9",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-10",
+    "date_stop": "2026-09-10",
+    "amount_spent": {
+      "value": "1764.76",
+      "unit": "ARS"
+    },
+    "impressions": "2355",
+    "reach": "2206",
+    "frequency": "1.067543",
+    "website_ctr": "2.250531",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "51"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "34.6",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "749.37",
+      "unit": "ARS"
+    },
+    "link_click": "53",
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-10",
+    "date_stop": "2026-09-10",
+    "amount_spent": {
+      "value": "6011.66",
+      "unit": "ARS"
+    },
+    "impressions": "1139",
+    "reach": "1011",
+    "frequency": "1.126607",
+    "website_ctr": "0.965759",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "6011.66",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "5278.02",
+      "unit": "ARS"
+    },
+    "link_click": "11",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-10",
+    "date_stop": "2026-09-10",
+    "amount_spent": {
+      "value": "6242.44",
+      "unit": "ARS"
+    },
+    "impressions": "1252",
+    "reach": "900",
+    "frequency": "1.391111",
+    "website_ctr": "0.878594",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "3121.22",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4985.97",
+      "unit": "ARS"
+    },
+    "link_click": "11",
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-10",
+    "date_stop": "2026-09-10",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-11",
+    "date_stop": "2026-09-11",
+    "amount_spent": {
+      "value": "2845.85",
+      "unit": "ARS"
+    },
+    "impressions": "3874",
+    "reach": "3707",
+    "frequency": "1.04505",
+    "website_ctr": "1.522974",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "61"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "46.65",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "734.6",
+      "unit": "ARS"
+    },
+    "link_click": "59",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-11",
+    "date_stop": "2026-09-11",
+    "amount_spent": {
+      "value": "8298.63",
+      "unit": "ARS"
+    },
+    "impressions": "1528",
+    "reach": "1386",
+    "frequency": "1.102453",
+    "website_ctr": "1.832461",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "3"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2766.21",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "5431.04",
+      "unit": "ARS"
+    },
+    "link_click": "28",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-11",
+    "date_stop": "2026-09-11",
+    "amount_spent": {
+      "value": "5037.88",
+      "unit": "ARS"
+    },
+    "impressions": "1062",
+    "reach": "772",
+    "frequency": "1.375648",
+    "website_ctr": "0.47081",
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": {
+      "value": "4743.77",
+      "unit": "ARS"
+    },
+    "link_click": "5",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-11",
+    "date_stop": "2026-09-11",
+    "amount_spent": {
+      "value": "2088.1",
+      "unit": "ARS"
+    },
+    "impressions": "2878",
+    "reach": "2684",
+    "frequency": "1.07228",
+    "website_ctr": "2.293259",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "61"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "34.23",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "725.54",
+      "unit": "ARS"
+    },
+    "link_click": "66",
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-11",
+    "date_stop": "2026-09-11",
+    "amount_spent": {
+      "value": "5801.39",
+      "unit": "ARS"
+    },
+    "impressions": "1114",
+    "reach": "953",
+    "frequency": "1.16894",
+    "website_ctr": "0.987433",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2900.7",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "5207.71",
+      "unit": "ARS"
+    },
+    "link_click": "11",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-11",
+    "date_stop": "2026-09-11",
+    "amount_spent": {
+      "value": "6469.37",
+      "unit": "ARS"
+    },
+    "impressions": "1375",
+    "reach": "985",
+    "frequency": "1.395939",
+    "website_ctr": "1.090909",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "3"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2156.46",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4705",
+      "unit": "ARS"
+    },
+    "link_click": "15",
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-11",
+    "date_stop": "2026-09-11",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-12",
+    "date_stop": "2026-09-12",
+    "amount_spent": {
+      "value": "2853.18",
+      "unit": "ARS"
+    },
+    "impressions": "3771",
+    "reach": "3576",
+    "frequency": "1.05453",
+    "website_ctr": "1.935826",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "71"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "40.19",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "756.61",
+      "unit": "ARS"
+    },
+    "link_click": "73",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-12",
+    "date_stop": "2026-09-12",
+    "amount_spent": {
+      "value": "8576.49",
+      "unit": "ARS"
+    },
+    "impressions": "1414",
+    "reach": "1294",
+    "frequency": "1.092736",
+    "website_ctr": "1.980198",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "4"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2144.12",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "6065.41",
+      "unit": "ARS"
+    },
+    "link_click": "28",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-12",
+    "date_stop": "2026-09-12",
+    "amount_spent": {
+      "value": "3142.53",
+      "unit": "ARS"
+    },
+    "impressions": "793",
+    "reach": "612",
+    "frequency": "1.295752",
+    "website_ctr": "0.75662",
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": {
+      "value": "3962.84",
+      "unit": "ARS"
+    },
+    "link_click": "6",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-12",
+    "date_stop": "2026-09-12",
+    "amount_spent": {
+      "value": "1802.13",
+      "unit": "ARS"
+    },
+    "impressions": "2728",
+    "reach": "2598",
+    "frequency": "1.050038",
+    "website_ctr": "2.272727",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "62"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "29.07",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "660.6",
+      "unit": "ARS"
+    },
+    "link_click": "62",
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-12",
+    "date_stop": "2026-09-12",
+    "amount_spent": {
+      "value": "5360.52",
+      "unit": "ARS"
+    },
+    "impressions": "1091",
+    "reach": "987",
+    "frequency": "1.10537",
+    "website_ctr": "1.558203",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2680.26",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4913.4",
+      "unit": "ARS"
+    },
+    "link_click": "17",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-12",
+    "date_stop": "2026-09-12",
+    "amount_spent": {
+      "value": "3581.31",
+      "unit": "ARS"
+    },
+    "impressions": "902",
+    "reach": "686",
+    "frequency": "1.314869",
+    "website_ctr": "0.776053",
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": {
+      "value": "3970.41",
+      "unit": "ARS"
+    },
+    "link_click": "7",
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-12",
+    "date_stop": "2026-09-12",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-13",
+    "date_stop": "2026-09-13",
+    "amount_spent": {
+      "value": "3403.23",
+      "unit": "ARS"
+    },
+    "impressions": "4469",
+    "reach": "4304",
+    "frequency": "1.038336",
+    "website_ctr": "1.387335",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "60"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "56.72",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "761.52",
+      "unit": "ARS"
+    },
+    "link_click": "62",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-13",
+    "date_stop": "2026-09-13",
+    "amount_spent": {
+      "value": "12275.18",
+      "unit": "ARS"
+    },
+    "impressions": "2244",
+    "reach": "2067",
+    "frequency": "1.085631",
+    "website_ctr": "0.935829",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "3"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "4091.73",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "5470.22",
+      "unit": "ARS"
+    },
+    "link_click": "21",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-13",
+    "date_stop": "2026-09-13",
+    "amount_spent": {
+      "value": "5163.81",
+      "unit": "ARS"
+    },
+    "impressions": "1086",
+    "reach": "820",
+    "frequency": "1.32439",
+    "website_ctr": "0.828729",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2581.91",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4754.89",
+      "unit": "ARS"
+    },
+    "link_click": "9",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-13",
+    "date_stop": "2026-09-13",
+    "amount_spent": {
+      "value": "2304.19",
+      "unit": "ARS"
+    },
+    "impressions": "3266",
+    "reach": "2826",
+    "frequency": "1.155697",
+    "website_ctr": "2.327006",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "72"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "32",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "705.51",
+      "unit": "ARS"
+    },
+    "link_click": "76",
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-13",
+    "date_stop": "2026-09-13",
+    "amount_spent": {
+      "value": "7688.33",
+      "unit": "ARS"
+    },
+    "impressions": "1495",
+    "reach": "1240",
+    "frequency": "1.205645",
+    "website_ctr": "0.735786",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "3844.17",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "5142.7",
+      "unit": "ARS"
+    },
+    "link_click": "11",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-13",
+    "date_stop": "2026-09-13",
+    "amount_spent": {
+      "value": "6952.85",
+      "unit": "ARS"
+    },
+    "impressions": "1597",
+    "reach": "1121",
+    "frequency": "1.424621",
+    "website_ctr": "0.876644",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "3476.43",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4353.69",
+      "unit": "ARS"
+    },
+    "link_click": "14",
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-13",
+    "date_stop": "2026-09-13",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-14",
+    "date_stop": "2026-09-14",
+    "amount_spent": {
+      "value": "2486.84",
+      "unit": "ARS"
+    },
+    "impressions": "3046",
+    "reach": "2922",
+    "frequency": "1.042437",
+    "website_ctr": "2.002626",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "58"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "42.88",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "816.43",
+      "unit": "ARS"
+    },
+    "link_click": "61",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-14",
+    "date_stop": "2026-09-14",
+    "amount_spent": {
+      "value": "10999.35",
+      "unit": "ARS"
+    },
+    "impressions": "2540",
+    "reach": "2033",
+    "frequency": "1.249385",
+    "website_ctr": "1.141732",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "3"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "3666.45",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4330.45",
+      "unit": "ARS"
+    },
+    "link_click": "29",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-14",
+    "date_stop": "2026-09-14",
+    "amount_spent": {
+      "value": "6143.09",
+      "unit": "ARS"
+    },
+    "impressions": "1009",
+    "reach": "716",
+    "frequency": "1.409218",
+    "website_ctr": "1.189296",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "3071.55",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "6088.3",
+      "unit": "ARS"
+    },
+    "link_click": "12",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-14",
+    "date_stop": "2026-09-14",
+    "amount_spent": {
+      "value": "1977.42",
+      "unit": "ARS"
+    },
+    "impressions": "2698",
+    "reach": "2539",
+    "frequency": "1.062623",
+    "website_ctr": "2.779837",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "72"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "27.46",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "732.92",
+      "unit": "ARS"
+    },
+    "link_click": "75",
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-14",
+    "date_stop": "2026-09-14",
+    "amount_spent": {
+      "value": "5063.24",
+      "unit": "ARS"
+    },
+    "impressions": "1138",
+    "reach": "982",
+    "frequency": "1.158859",
+    "website_ctr": "0.527241",
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": {
+      "value": "4449.24",
+      "unit": "ARS"
+    },
+    "link_click": "6",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-14",
+    "date_stop": "2026-09-14",
+    "amount_spent": {
+      "value": "5868.88",
+      "unit": "ARS"
+    },
+    "impressions": "1696",
+    "reach": "1207",
+    "frequency": "1.405137",
+    "website_ctr": "0.471698",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "5868.88",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "3460.42",
+      "unit": "ARS"
+    },
+    "link_click": "8",
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-14",
+    "date_stop": "2026-09-14",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-15",
+    "date_stop": "2026-09-15",
+    "amount_spent": {
+      "value": "2508.5",
+      "unit": "ARS"
+    },
+    "impressions": "3041",
+    "reach": "2925",
+    "frequency": "1.039658",
+    "website_ctr": "1.874383",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "55"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "45.61",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "824.89",
+      "unit": "ARS"
+    },
+    "link_click": "57",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-15",
+    "date_stop": "2026-09-15",
+    "amount_spent": {
+      "value": "8782.41",
+      "unit": "ARS"
+    },
+    "impressions": "2365",
+    "reach": "1939",
+    "frequency": "1.219701",
+    "website_ctr": "0.761099",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "3"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2927.47",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "3713.49",
+      "unit": "ARS"
+    },
+    "link_click": "18",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-15",
+    "date_stop": "2026-09-15",
+    "amount_spent": {
+      "value": "4811.24",
+      "unit": "ARS"
+    },
+    "impressions": "926",
+    "reach": "720",
+    "frequency": "1.286111",
+    "website_ctr": "0.539957",
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": {
+      "value": "5195.72",
+      "unit": "ARS"
+    },
+    "link_click": "5",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-15",
+    "date_stop": "2026-09-15",
+    "amount_spent": {
+      "value": "1736.81",
+      "unit": "ARS"
+    },
+    "impressions": "2358",
+    "reach": "2221",
+    "frequency": "1.061684",
+    "website_ctr": "2.205259",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "51"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "34.06",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "736.56",
+      "unit": "ARS"
+    },
+    "link_click": "52",
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-15",
+    "date_stop": "2026-09-15",
+    "amount_spent": {
+      "value": "5701.85",
+      "unit": "ARS"
+    },
+    "impressions": "1041",
+    "reach": "903",
+    "frequency": "1.152824",
+    "website_ctr": "1.248799",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "3"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "1900.62",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "5477.28",
+      "unit": "ARS"
+    },
+    "link_click": "13",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-15",
+    "date_stop": "2026-09-15",
+    "amount_spent": {
+      "value": "6799.55",
+      "unit": "ARS"
+    },
+    "impressions": "1638",
+    "reach": "1258",
+    "frequency": "1.302067",
+    "website_ctr": "0.671551",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "4"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "1699.89",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4151.13",
+      "unit": "ARS"
+    },
+    "link_click": "11",
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-15",
+    "date_stop": "2026-09-15",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-16",
+    "date_stop": "2026-09-16",
+    "amount_spent": {
+      "value": "2170.45",
+      "unit": "ARS"
+    },
+    "impressions": "2669",
+    "reach": "2552",
+    "frequency": "1.045846",
+    "website_ctr": "1.835894",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "45"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "48.23",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "813.21",
+      "unit": "ARS"
+    },
+    "link_click": "49",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-16",
+    "date_stop": "2026-09-16",
+    "amount_spent": {
+      "value": "9921",
+      "unit": "ARS"
+    },
+    "impressions": "2163",
+    "reach": "1803",
+    "frequency": "1.199667",
+    "website_ctr": "0.416089",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "9921",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4586.69",
+      "unit": "ARS"
+    },
+    "link_click": "9",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-16",
+    "date_stop": "2026-09-16",
+    "amount_spent": {
+      "value": "4985.12",
+      "unit": "ARS"
+    },
+    "impressions": "672",
+    "reach": "546",
+    "frequency": "1.230769",
+    "website_ctr": "0.446429",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "4985.12",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "7418.33",
+      "unit": "ARS"
+    },
+    "link_click": "3",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-16",
+    "date_stop": "2026-09-16",
+    "amount_spent": {
+      "value": "1909.94",
+      "unit": "ARS"
+    },
+    "impressions": "2395",
+    "reach": "2264",
+    "frequency": "1.057862",
+    "website_ctr": "2.546973",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "58"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "32.93",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "797.47",
+      "unit": "ARS"
+    },
+    "link_click": "61",
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-16",
+    "date_stop": "2026-09-16",
+    "amount_spent": {
+      "value": "6162.39",
+      "unit": "ARS"
+    },
+    "impressions": "1147",
+    "reach": "969",
+    "frequency": "1.183695",
+    "website_ctr": "0.959024",
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": {
+      "value": "5372.62",
+      "unit": "ARS"
+    },
+    "link_click": "11",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-16",
+    "date_stop": "2026-09-16",
+    "amount_spent": {
+      "value": "2722.12",
+      "unit": "ARS"
+    },
+    "impressions": "631",
+    "reach": "518",
+    "frequency": "1.218147",
+    "website_ctr": "0.316957",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2722.12",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4313.98",
+      "unit": "ARS"
+    },
+    "link_click": "2",
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-16",
+    "date_stop": "2026-09-16",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-17",
+    "date_stop": "2026-09-17",
+    "amount_spent": {
+      "value": "2187.41",
+      "unit": "ARS"
+    },
+    "impressions": "2377",
+    "reach": "2364",
+    "frequency": "1.005499",
+    "website_ctr": "2.397981",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "53"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "41.27",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "920.24",
+      "unit": "ARS"
+    },
+    "link_click": "57",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-17",
+    "date_stop": "2026-09-17",
+    "amount_spent": {
+      "value": "8752.45",
+      "unit": "ARS"
+    },
+    "impressions": "2025",
+    "reach": "1691",
+    "frequency": "1.197516",
+    "website_ctr": "0.888889",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "5"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "1750.49",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4322.2",
+      "unit": "ARS"
+    },
+    "link_click": "18",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-17",
+    "date_stop": "2026-09-17",
+    "amount_spent": {
+      "value": "4925.71",
+      "unit": "ARS"
+    },
+    "impressions": "653",
+    "reach": "508",
+    "frequency": "1.285433",
+    "website_ctr": "1.378254",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "3"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "1641.9",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "7543.2",
+      "unit": "ARS"
+    },
+    "link_click": "9",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-17",
+    "date_stop": "2026-09-17",
+    "amount_spent": {
+      "value": "574.06",
+      "unit": "ARS"
+    },
+    "impressions": "667",
+    "reach": "667",
+    "frequency": "1",
+    "website_ctr": "2.998501",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "20"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "28.7",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "860.66",
+      "unit": "ARS"
+    },
+    "link_click": "20",
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-17",
+    "date_stop": "2026-09-17",
+    "amount_spent": {
+      "value": "4706.78",
+      "unit": "ARS"
+    },
+    "impressions": "763",
+    "reach": "713",
+    "frequency": "1.070126",
+    "website_ctr": "1.703801",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2353.39",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "6168.78",
+      "unit": "ARS"
+    },
+    "link_click": "13",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-17",
+    "date_stop": "2026-09-17",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-17",
+    "date_stop": "2026-09-17",
+    "amount_spent": {
+      "value": "1282.87",
+      "unit": "ARS"
+    },
+    "impressions": "987",
+    "reach": "955",
+    "frequency": "1.033508",
+    "website_ctr": "3.343465",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "31"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "41.38",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "1299.77",
+      "unit": "ARS"
+    },
+    "link_click": "33",
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-18",
+    "date_stop": "2026-09-18",
+    "amount_spent": {
+      "value": "3008.8",
+      "unit": "ARS"
+    },
+    "impressions": "3811",
+    "reach": "3518",
+    "frequency": "1.083286",
+    "website_ctr": "1.784309",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "67"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "44.91",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "789.5",
+      "unit": "ARS"
+    },
+    "link_click": "68",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-18",
+    "date_stop": "2026-09-18",
+    "amount_spent": {
+      "value": "10606.11",
+      "unit": "ARS"
+    },
+    "impressions": "2771",
+    "reach": "2366",
+    "frequency": "1.171175",
+    "website_ctr": "0.649585",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "6"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "1767.69",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "3827.54",
+      "unit": "ARS"
+    },
+    "link_click": "18",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-18",
+    "date_stop": "2026-09-18",
+    "amount_spent": {
+      "value": "5230.48",
+      "unit": "ARS"
+    },
+    "impressions": "702",
+    "reach": "544",
+    "frequency": "1.290441",
+    "website_ctr": "0.569801",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2615.24",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "7450.83",
+      "unit": "ARS"
+    },
+    "link_click": "4",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-18",
+    "date_stop": "2026-09-18",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-18",
+    "date_stop": "2026-09-18",
+    "amount_spent": {
+      "value": "3159.04",
+      "unit": "ARS"
+    },
+    "impressions": "691",
+    "reach": "595",
+    "frequency": "1.161345",
+    "website_ctr": "1.157742",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "3159.04",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4571.69",
+      "unit": "ARS"
+    },
+    "link_click": "8",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-18",
+    "date_stop": "2026-09-18",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-18",
+    "date_stop": "2026-09-18",
+    "amount_spent": {
+      "value": "1786.88",
+      "unit": "ARS"
+    },
+    "impressions": "1044",
+    "reach": "995",
+    "frequency": "1.049246",
+    "website_ctr": "4.310345",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "45"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "39.71",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "1711.57",
+      "unit": "ARS"
+    },
+    "link_click": "45",
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-19",
+    "date_stop": "2026-09-19",
+    "amount_spent": {
+      "value": "1732.49",
+      "unit": "ARS"
+    },
+    "impressions": "1986",
+    "reach": "1902",
+    "frequency": "1.044164",
+    "website_ctr": "1.863041",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "37"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "46.82",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "872.35",
+      "unit": "ARS"
+    },
+    "link_click": "37",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-19",
+    "date_stop": "2026-09-19",
+    "amount_spent": {
+      "value": "8543.29",
+      "unit": "ARS"
+    },
+    "impressions": "2306",
+    "reach": "2030",
+    "frequency": "1.135961",
+    "website_ctr": "0.650477",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "5"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "1708.66",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "3704.81",
+      "unit": "ARS"
+    },
+    "link_click": "15",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-19",
+    "date_stop": "2026-09-19",
+    "amount_spent": {
+      "value": "3668.74",
+      "unit": "ARS"
+    },
+    "impressions": "762",
+    "reach": "595",
+    "frequency": "1.280672",
+    "website_ctr": "0.262467",
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": {
+      "value": "4814.62",
+      "unit": "ARS"
+    },
+    "link_click": "2",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-19",
+    "date_stop": "2026-09-19",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-19",
+    "date_stop": "2026-09-19",
+    "amount_spent": {
+      "value": "2143.95",
+      "unit": "ARS"
+    },
+    "impressions": "493",
+    "reach": "424",
+    "frequency": "1.162736",
+    "website_ctr": "1.014199",
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": {
+      "value": "4348.78",
+      "unit": "ARS"
+    },
+    "link_click": "5",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-19",
+    "date_stop": "2026-09-19",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-19",
+    "date_stop": "2026-09-19",
+    "amount_spent": {
+      "value": "2080.95",
+      "unit": "ARS"
+    },
+    "impressions": "1343",
+    "reach": "1260",
+    "frequency": "1.065873",
+    "website_ctr": "4.169769",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "55"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "37.84",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "1549.48",
+      "unit": "ARS"
+    },
+    "link_click": "56",
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-20",
+    "date_stop": "2026-09-20",
+    "amount_spent": {
+      "value": "2933.03",
+      "unit": "ARS"
+    },
+    "impressions": "3548",
+    "reach": "3467",
+    "frequency": "1.023363",
+    "website_ctr": "2.113867",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "72"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "40.74",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "826.67",
+      "unit": "ARS"
+    },
+    "link_click": "75",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-20",
+    "date_stop": "2026-09-20",
+    "amount_spent": {
+      "value": "12718.5",
+      "unit": "ARS"
+    },
+    "impressions": "3724",
+    "reach": "3265",
+    "frequency": "1.140582",
+    "website_ctr": "0.644468",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "5"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2543.7",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "3415.28",
+      "unit": "ARS"
+    },
+    "link_click": "24",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-20",
+    "date_stop": "2026-09-20",
+    "amount_spent": {
+      "value": "5627.09",
+      "unit": "ARS"
+    },
+    "impressions": "980",
+    "reach": "727",
+    "frequency": "1.348006",
+    "website_ctr": "0.714286",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "5627.09",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "5741.93",
+      "unit": "ARS"
+    },
+    "link_click": "7",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-20",
+    "date_stop": "2026-09-20",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-20",
+    "date_stop": "2026-09-20",
+    "amount_spent": {
+      "value": "4460.81",
+      "unit": "ARS"
+    },
+    "impressions": "835",
+    "reach": "678",
+    "frequency": "1.231563",
+    "website_ctr": "1.317365",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2230.41",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "5342.29",
+      "unit": "ARS"
+    },
+    "link_click": "11",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-20",
+    "date_stop": "2026-09-20",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-20",
+    "date_stop": "2026-09-20",
+    "amount_spent": {
+      "value": "2920.26",
+      "unit": "ARS"
+    },
+    "impressions": "1998",
+    "reach": "1900",
+    "frequency": "1.051579",
+    "website_ctr": "4.254254",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "84"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "34.77",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "1461.59",
+      "unit": "ARS"
+    },
+    "link_click": "85",
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-21",
+    "date_stop": "2026-09-21",
+    "amount_spent": {
+      "value": "2746.95",
+      "unit": "ARS"
+    },
+    "impressions": "4212",
+    "reach": "4003",
+    "frequency": "1.052211",
+    "website_ctr": "1.899335",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "78"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "35.22",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "652.17",
+      "unit": "ARS"
+    },
+    "link_click": "80",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-21",
+    "date_stop": "2026-09-21",
+    "amount_spent": {
+      "value": "11193.75",
+      "unit": "ARS"
+    },
+    "impressions": "3488",
+    "reach": "2950",
+    "frequency": "1.182373",
+    "website_ctr": "0.659404",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "3"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "3731.25",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "3209.22",
+      "unit": "ARS"
+    },
+    "link_click": "23",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-21",
+    "date_stop": "2026-09-21",
+    "amount_spent": {
+      "value": "4611.62",
+      "unit": "ARS"
+    },
+    "impressions": "712",
+    "reach": "567",
+    "frequency": "1.255732",
+    "website_ctr": "1.123596",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "2305.81",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "6476.99",
+      "unit": "ARS"
+    },
+    "link_click": "8",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-21",
+    "date_stop": "2026-09-21",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-21",
+    "date_stop": "2026-09-21",
+    "amount_spent": {
+      "value": "3477.84",
+      "unit": "ARS"
+    },
+    "impressions": "803",
+    "reach": "661",
+    "frequency": "1.214826",
+    "website_ctr": "0.996264",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "1738.92",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4331.06",
+      "unit": "ARS"
+    },
+    "link_click": "8",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-21",
+    "date_stop": "2026-09-21",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-21",
+    "date_stop": "2026-09-21",
+    "amount_spent": {
+      "value": "1412.56",
+      "unit": "ARS"
+    },
+    "impressions": "990",
+    "reach": "931",
+    "frequency": "1.063373",
+    "website_ctr": "4.242424",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "40"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "35.31",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "1426.83",
+      "unit": "ARS"
+    },
+    "link_click": "42",
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-22",
+    "date_stop": "2026-09-22",
+    "amount_spent": {
+      "value": "2050.7",
+      "unit": "ARS"
+    },
+    "impressions": "3074",
+    "reach": "2891",
+    "frequency": "1.0633",
+    "website_ctr": "2.114509",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "64"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "32.04",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "667.11",
+      "unit": "ARS"
+    },
+    "link_click": "65",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-22",
+    "date_stop": "2026-09-22",
+    "amount_spent": {
+      "value": "12450.57",
+      "unit": "ARS"
+    },
+    "impressions": "3262",
+    "reach": "2736",
+    "frequency": "1.192251",
+    "website_ctr": "0.643777",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "12450.57",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "3816.85",
+      "unit": "ARS"
+    },
+    "link_click": "21",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-22",
+    "date_stop": "2026-09-22",
+    "amount_spent": {
+      "value": "5453.2",
+      "unit": "ARS"
+    },
+    "impressions": "941",
+    "reach": "720",
+    "frequency": "1.306944",
+    "website_ctr": "0.53135",
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": {
+      "value": "5795.11",
+      "unit": "ARS"
+    },
+    "link_click": "5",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-22",
+    "date_stop": "2026-09-22",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-22",
+    "date_stop": "2026-09-22",
+    "amount_spent": {
+      "value": "3027.38",
+      "unit": "ARS"
+    },
+    "impressions": "705",
+    "reach": "601",
+    "frequency": "1.173045",
+    "website_ctr": "0.851064",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "1513.69",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4294.16",
+      "unit": "ARS"
+    },
+    "link_click": "6",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-22",
+    "date_stop": "2026-09-22",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-22",
+    "date_stop": "2026-09-22",
+    "amount_spent": {
+      "value": "1728.18",
+      "unit": "ARS"
+    },
+    "impressions": "1423",
+    "reach": "1345",
+    "frequency": "1.057993",
+    "website_ctr": "1.827126",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "25"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "69.13",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "1214.46",
+      "unit": "ARS"
+    },
+    "link_click": "26",
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  },
+  {
+    "date_start": "2026-09-23",
+    "date_stop": "2026-09-23",
+    "amount_spent": {
+      "value": "2197.93",
+      "unit": "ARS"
+    },
+    "impressions": "3391",
+    "reach": "3207",
+    "frequency": "1.057374",
+    "website_ctr": "1.71041",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "57"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "38.56",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "648.17",
+      "unit": "ARS"
+    },
+    "link_click": "58",
+    "name": "JY | Awareness",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120252699394270427"
+  },
+  {
+    "date_start": "2026-09-23",
+    "date_stop": "2026-09-23",
+    "amount_spent": {
+      "value": "11286.77",
+      "unit": "ARS"
+    },
+    "impressions": "2815",
+    "reach": "2378",
+    "frequency": "1.183768",
+    "website_ctr": "0.426288",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "2"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "5643.39",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4009.51",
+      "unit": "ARS"
+    },
+    "link_click": "12",
+    "name": "JY | Conversiones",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252699641360427"
+  },
+  {
+    "date_start": "2026-09-23",
+    "date_stop": "2026-09-23",
+    "amount_spent": {
+      "value": "4842.58",
+      "unit": "ARS"
+    },
+    "impressions": "1077",
+    "reach": "823",
+    "frequency": "1.308627",
+    "website_ctr": "0.649954",
+    "results": {
+      "indicator": "actions:lead",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "4842.58",
+      "unit": "ARS",
+      "conversion_type": "Leads"
+    },
+    "cpm": {
+      "value": "4496.36",
+      "unit": "ARS"
+    },
+    "link_click": "7",
+    "name": "JY | Remarketing",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120252700778930427"
+  },
+  {
+    "date_start": "2026-09-23",
+    "date_stop": "2026-09-23",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "profile_visit_view",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Instagram profile visits)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Awareness Boxer Taller",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120253037138720427"
+  },
+  {
+    "date_start": "2026-09-23",
+    "date_stop": "2026-09-23",
+    "amount_spent": {
+      "value": "2525.89",
+      "unit": "ARS"
+    },
+    "impressions": "592",
+    "reach": "503",
+    "frequency": "1.176938",
+    "website_ctr": "0.337838",
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": {
+      "value": "4266.71",
+      "unit": "ARS"
+    },
+    "link_click": "2",
+    "name": "JY | Viajes Presenciales Luciana",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254099466780427"
+  },
+  {
+    "date_start": "2026-09-23",
+    "date_stop": "2026-09-23",
+    "amount_spent": {
+      "value": "0",
+      "unit": "ARS"
+    },
+    "impressions": "0",
+    "reach": "0",
+    "frequency": "0",
+    "website_ctr": null,
+    "results": {
+      "indicator": "actions:lead",
+      "value": "Not available"
+    },
+    "cost_per_result": {
+      "value": "Not available (Leads)"
+    },
+    "cpm": null,
+    "link_click": null,
+    "name": "JY | Webinar Mostrador - 17 SEPT 2026",
+    "effective_status": "PAUSED",
+    "objective": "OUTCOME_LEADS",
+    "id": "120254108819070427"
+  },
+  {
+    "date_start": "2026-09-23",
+    "date_stop": "2026-09-23",
+    "amount_spent": {
+      "value": "2022.6",
+      "unit": "ARS"
+    },
+    "impressions": "1921",
+    "reach": "1828",
+    "frequency": "1.050875",
+    "website_ctr": "1.717855",
+    "results": {
+      "indicator": "profile_visit_view",
+      "values": [
+        {
+          "attribution_windows": [
+            "default"
+          ],
+          "value": "33"
+        }
+      ]
+    },
+    "cost_per_result": {
+      "value": "61.29",
+      "unit": "ARS",
+      "conversion_type": "Instagram profile visits"
+    },
+    "cpm": {
+      "value": "1052.89",
+      "unit": "ARS"
+    },
+    "link_click": "33",
+    "name": "JY | Awareness Boxer Taller (AGENTE META)",
+    "effective_status": "ACTIVE",
+    "objective": "OUTCOME_TRAFFIC",
+    "id": "120254402425170427"
+  }
+]

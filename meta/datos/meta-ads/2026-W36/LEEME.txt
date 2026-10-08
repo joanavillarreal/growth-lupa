@@ -1,0 +1,5 @@
+Estos tres CSV son un RECORTE del export historico de 01/03-07/09 que subio Joana
+el 2026-09-08, filtrado a 10/08-06/09. Las filas son las mismas que traeria una
+descarga fresca del Administrador de anuncios para ese rango: se recortaron para
+poder correr la prueba de la corrida del lunes sin pedir un export nuevo.
+Falta el 4to reporte (Desglose por plataforma y ubicacion): nunca se exporto.

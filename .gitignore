@@ -1,2 +1,12 @@
 __pycache__/
 *.pyc
+
+# Meta (copiado de agente-meta-ads): exports de leads y crudos del CRM traen datos personales.
+meta/datos/meta-ads/**/*lead*
+meta/datos/meta-ads/**/*Lead*
+meta/datos/meta-ads/**/*contacto*
+meta/datos/crm/**/*crudo*
+meta/datos/crm/**/LEAD_*.csv
+meta/datos/crm/**/*-raw.csv
+.env
+*secretos.env

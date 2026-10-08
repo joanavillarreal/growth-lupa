@@ -1,0 +1,93 @@
+# Como se clasifica un prospecto de Meta. Mapea las etapas reales de Bitrix24.
+# Verificado contra 1.096 prospectos traidos el 2026-09-07.
+
+etapas:
+  resueltas:
+    convertido:
+      valores: ["Convertido"]
+      significado: "Derivable a ventas. Numerador de la tasa de derivacion."
+    no_util:
+      valores: ["Prospecto no util", "Prospecto no útil"]
+      significado: "No calificado. Numerador del umbral de no calificados."
+    inactivo:
+      valores: ["Prospecto inactivo"]
+      significado: >
+        Ni convertido ni descartado explicitamente. Cuenta en el denominador
+        pero NO es no-calificado: es un lead que se perdio en el seguimiento.
+        En Meta es el 57,1% del canal. Si crece, el problema es comercial.
+    otra:
+      significado: >
+        El lead se reasigno a la etapa de otro canal. Cuenta como resuelto:
+        salio del embudo de Meta, pero Meta lo trajo.
+  abiertas:
+    # Etapas iniciales: el prospecto todavia no se trabajo.
+    # Se EXCLUYEN del denominador de los ratios.
+    valores: ["Formularios Meta", "Meta Ads", "Redes Sociales"]
+
+razones_no_derivacion:
+  # Agrupadas por a quien le corresponde el problema.
+  culpa_del_canal:
+    # Se arregla EN META: segmentacion, copy, formato, preguntas del formulario.
+    - "No tiene negocio, negocio de otro rubro"
+    - "Buscaba compras productos"      # creen que Boxer VENDE repuestos
+    - "Apreto por error"
+    - "Buscaba otra cosa"
+    - "Datos incorrectos o contacto inexistente"
+    - "mensaje sin sentido"
+    - "Buscaba solo conocer mas de nosotros"
+    - "Buscaba que tengamos desarrollo IA"
+  culpa_del_seguimiento:
+    # El lead servia y se perdio despues. NO se arregla en Meta.
+    - "No responde mensajes ni llamada"
+    - "Lead enfriado"
+    - "atiende y corta"
+    - "Con poco tiempo para ver la info"
+  producto_o_precio:
+    # Ni canal ni seguimiento: es la oferta.
+    - "Le parece caro"
+    - "No quiere una suscripcion mensual"
+    - "Ya contrato otro sistema"
+  timing:
+    # Lead valido fuera de momento -> nutrir, no descartar.
+    - "Indican que lo evaluaran mas adelante"
+    - "No interesado por ahora"
+    - "Prefieren retomar el contacto en otro momento"
+    - "Frenado el negocio por ventas"
+    - "Sin fecha de apertura, recien comienza"
+    - "Tiene que pasar la info a sus superiores"
+    - "Temas personales"
+
+tipo_negocio:
+  # El predictor mas fuerte del canal. Ver memoria/baseline.md, Hallazgo 2.
+  icp_central:
+    - "Casa de Repuestos de Autos"
+    - "Casa de Repuestos de Motos"
+    - "Casa de Repuestos de Pesados"
+    - "Casa de Repuestos de Agricolas"
+    - "Combinacion con Casa de Repuestos"
+    - "Combinacion con Casa de Repuestos de motos"
+    - "Distribuidora"
+    - "Autopartes"
+    - "Baterias"
+    - "Desarmadero"
+  adyacente:
+    - "Taller mecanico"
+    - "Lubricentro"
+    - "Combinacion sin Casa de Repuestos"
+    - "concesionario"
+  sin_tipificar:
+    - "A definir"
+    - ""
+  nota: >
+    "A definir" no es una categoria: es sintoma de que no se pudo tipificar al
+    prospecto. El clic a WhatsApp concentra el problema (75,5% sin tipificar,
+    17/08-13/09) porque es una conversacion sin formulario: no hay campo
+    estructurado que lo capture, depende de que el SDR lo pregunte y lo cargue.
+    CORREGIDO 2026-09-14 (Joana): el formulario nativo YA TIENE la pregunta de
+    tipo de negocio y funciona — 88 de 89 leads de "Meta Ads Formulario"
+    llegaron tipificados en la misma ventana (99% cobertura). La recomendacion
+    vieja de "agregar la pregunta al formulario" ya no aplica: quedo resuelta
+    en algun momento sin registrarse en bitacora-cambios.md. El gap real y
+    vigente es del lado de WhatsApp, y ahi la solucion no es un campo de
+    formulario (no existe) sino el proceso del SDR o una pregunta guiada del
+    lado del chat.

@@ -1,0 +1,19 @@
+Mapa conjunto -> campana para el trimestre Q3 (julio-agosto 2026).
+
+POR QUE EXISTE ESTA CARPETA
+Los export reales del Administrador de anuncios NO traen la columna "Nombre de
+la campaña" a nivel conjunto; los que genera el MCP si. Sin ese dato no se puede
+saber de que campana cuelga un conjunto de evento, y el descuento del gasto
+cruzable se aplica mal (bug corregido el 2026-09-21 en analizar_meta.py y el
+2026-09-22 en panel_meta.py).
+
+Esta es la respuesta cruda de una llamada al MCP a nivel conjunto para
+01/07-31/08, pedida el 2026-09-22 solo para reconstruir ese mapa. No trae
+metricas a proposito: solo name + campaign_name.
+
+Lo que resolvio: los conjuntos de evento de julio y agosto (Demo Masiva,
+Presencialidad, Clases de IA, Entrevista en vivo, Demo en VIVO Presencial)
+cuelgan de "7. Clientes potenciales - formulario - Copia", que es una campana
+de CONVERSION. O sea que SI se descuentan del gasto cruzable.
+En cambio "Guia | Boxer Taller" cuelga de "JY | Interaccion Boxer Taller", que
+es eventual: ese NO se descuenta.

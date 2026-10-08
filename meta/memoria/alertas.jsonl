@@ -1,0 +1,17 @@
+# Alertas estructuradas. Una linea JSON por alerta, la ultima gana.
+# Arranca el 2026-09-22. La serie A1..A33 anterior vive en alertas-abiertas.md
+# y NO se migra (decision de Joana): una alerta vieja entra aca recien cuando
+# una corrida la toca y la actualiza.
+#
+# {"id":"A34","abierta":"AAAA-MM-DD","cerrada":null,"severidad":"alta|media|baja",
+#  "titulo":"...","metrica":"derivacion_pct","valor":29.4,"umbral":50,
+#  "entidad":"canal|nombre de campana","estado":"abierta|cerrada|matiz",
+#  "exp":"EXP-0NN o null","cerrada_por":""}
+#
+# `matiz` es un estado real y hay que usarlo: el canal esta 1,9x sobre el
+# objetivo de CPL Y es rentable. Eso se reporta como decision, no como alarma.
+{"id": "E-CPL", "abierta": "2026-09-08", "cerrada": null, "severidad": "media", "titulo": "El CPL real está 1,9x sobre el objetivo, y el canal es rentable igual", "metrica": "cpl_real_ars", "valor": 5807, "umbral": 3000, "entidad": "canal", "estado": "matiz", "exp": null, "nota": "Caso 2 de calculos.md: fuera de objetivo operativo, dentro del techo de negocio (13,2 USD por Convertido contra 200). Se reporta como decisión de Joana, no como alarma."}
+{"id": "E-DERIV", "abierta": "2026-09-07", "cerrada": null, "severidad": "alta", "titulo": "Derivación muy por debajo del piso", "metrica": "derivacion_pct", "valor": 29.4, "umbral": 50, "entidad": "canal", "estado": "abierta", "exp": null, "nota": "El piso de 50% está HEREDADO del canal de Google Ads y pendiente de confirmar para Meta. Un canal de descubrimiento deriva peor que la búsqueda sin estar roto."}
+{"id": "E-ICP", "abierta": "2026-09-07", "cerrada": null, "severidad": "alta", "titulo": "Mezcla de público: más de un tercio de los leads no son ICP", "metrica": "no_icp_pct", "valor": 36.3, "umbral": 25, "entidad": "canal", "estado": "abierta", "exp": null, "nota": "Es el hallazgo más accionable del canal y se trabaja EN Meta. Desde que salió Boxer Taller los talleres no son desperdicio: se derivan, no se excluyen."}
+{"id": "E-CREATIVOS", "abierta": "2026-09-07", "cerrada": null, "severidad": "alta", "titulo": "Casi todos los conjuntos corren con menos de 3 anuncios", "metrica": "conjuntos_con_menos_de_3", "valor": 28, "umbral": 0, "entidad": "canal", "estado": "abierta", "exp": "EXP-004", "nota": "28 de 32. Sin variedad Meta no tiene nada que optimizar."}
+{"id": "E-EVENTOS", "abierta": "2026-09-08", "cerrada": null, "severidad": "alta", "titulo": "Los resultados de los conjuntos de evento no aparecen en el CRM", "metrica": "conciliacion_eventos_pct", "valor": 34, "umbral": 85, "entidad": "conjuntos de evento", "estado": "abierta", "exp": "EXP-008", "nota": "129 de 379. ~950.000 ARS sin trazar. Cada evento tiene su propio workflow en n8n: no es de este canal, pero se reporta igual."}

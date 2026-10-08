@@ -1,0 +1,4762 @@
+[
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$2.130,89 ARS",
+  "impressions": "2591",
+  "reach": "2459",
+  "frequency": "1.05368",
+  "website_ctr": "2.161328",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "54"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$39,46 ARS (Instagram profile visits)"
+  },
+  "cpm": "$822,42 ARS",
+  "link_click": "56",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$8.125,74 ARS",
+  "impressions": "1625",
+  "reach": "1478",
+  "frequency": "1.099459",
+  "website_ctr": "1.538462",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.031,44 ARS (Leads)"
+  },
+  "cpm": "$5.000,46 ARS",
+  "link_click": "25",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$5.898,69 ARS",
+  "impressions": "1881",
+  "reach": "1595",
+  "frequency": "1.17931",
+  "website_ctr": "0.744285",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$5.898,69 ARS (Leads)"
+  },
+  "cpm": "$3.135,93 ARS",
+  "link_click": "14",
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$1.964,43 ARS",
+  "impressions": "1860",
+  "reach": "1659",
+  "frequency": "1.121157",
+  "website_ctr": "2.096774",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "35"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$56,13 ARS (Instagram profile visits)"
+  },
+  "cpm": "$1.056,15 ARS",
+  "link_click": "39",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$3.523,56 ARS",
+  "impressions": "5554",
+  "reach": "344",
+  "frequency": "16.145349",
+  "website_ctr": "0.702197",
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "6"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$587,26 ARS (Messaging conversations started)"
+  },
+  "cpm": "$634,42 ARS",
+  "link_click": "39",
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$3.627,54 ARS",
+  "impressions": "523",
+  "reach": "465",
+  "frequency": "1.124731",
+  "website_ctr": "1.147228",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.813,77 ARS (Leads)"
+  },
+  "cpm": "$6.936,02 ARS",
+  "link_click": "6",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$3.429,20 ARS",
+  "impressions": "441",
+  "reach": "373",
+  "frequency": "1.182306",
+  "website_ctr": "1.133787",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.429,20 ARS (Leads)"
+  },
+  "cpm": "$7.775,96 ARS",
+  "link_click": "5",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$1.097,64 ARS",
+  "impressions": "234",
+  "reach": "208",
+  "frequency": "1.125",
+  "website_ctr": "1.709402",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.690,77 ARS",
+  "link_click": "4",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-02",
+  "date_stop": "2026-09-02",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$2.334,59 ARS",
+  "impressions": "2836",
+  "reach": "2751",
+  "frequency": "1.030898",
+  "website_ctr": "2.750353",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "72"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$32,42 ARS (Instagram profile visits)"
+  },
+  "cpm": "$823,20 ARS",
+  "link_click": "78",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$6.561,29 ARS",
+  "impressions": "1130",
+  "reach": "1019",
+  "frequency": "1.10893",
+  "website_ctr": "1.681416",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.640,32 ARS (Leads)"
+  },
+  "cpm": "$5.806,45 ARS",
+  "link_click": "19",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$5.122,46 ARS",
+  "impressions": "1626",
+  "reach": "1376",
+  "frequency": "1.181686",
+  "website_ctr": "0.922509",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$5.122,46 ARS (Leads)"
+  },
+  "cpm": "$3.150,34 ARS",
+  "link_click": "15",
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$1.253,31 ARS",
+  "impressions": "1219",
+  "reach": "1114",
+  "frequency": "1.094255",
+  "website_ctr": "2.461034",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "31"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$40,43 ARS (Instagram profile visits)"
+  },
+  "cpm": "$1.028,15 ARS",
+  "link_click": "30",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$3.837,44 ARS",
+  "impressions": "589",
+  "reach": "489",
+  "frequency": "1.204499",
+  "website_ctr": "0.679117",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.918,72 ARS (Leads)"
+  },
+  "cpm": "$6.515,18 ARS",
+  "link_click": "4",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$4.277,41 ARS",
+  "impressions": "540",
+  "reach": "438",
+  "frequency": "1.232877",
+  "website_ctr": "1.296296",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$4.277,41 ARS (Leads)"
+  },
+  "cpm": "$7.921,13 ARS",
+  "link_click": "7",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$1.447,23 ARS",
+  "impressions": "403",
+  "reach": "309",
+  "frequency": "1.304207",
+  "website_ctr": "0.248139",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.591,14 ARS",
+  "link_click": "1",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-03",
+  "date_stop": "2026-09-03",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$2.064,58 ARS",
+  "impressions": "2409",
+  "reach": "2367",
+  "frequency": "1.017744",
+  "website_ctr": "1.951017",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "46"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$44,88 ARS (Instagram profile visits)"
+  },
+  "cpm": "$857,03 ARS",
+  "link_click": "47",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$7.136,38 ARS",
+  "impressions": "1335",
+  "reach": "1177",
+  "frequency": "1.13424",
+  "website_ctr": "1.348315",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.568,19 ARS (Leads)"
+  },
+  "cpm": "$5.345,60 ARS",
+  "link_click": "18",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$4.829,34 ARS",
+  "impressions": "1279",
+  "reach": "1076",
+  "frequency": "1.188662",
+  "website_ctr": "0.547303",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.775,87 ARS",
+  "link_click": "7",
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$1.630,68 ARS",
+  "impressions": "1551",
+  "reach": "1364",
+  "frequency": "1.137097",
+  "website_ctr": "2.578981",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "38"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$42,91 ARS (Instagram profile visits)"
+  },
+  "cpm": "$1.051,37 ARS",
+  "link_click": "40",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$2.078,63 ARS",
+  "impressions": "468",
+  "reach": "379",
+  "frequency": "1.234829",
+  "website_ctr": "1.282051",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.039,32 ARS (Leads)"
+  },
+  "cpm": "$4.441,52 ARS",
+  "link_click": "6",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$2.262,92 ARS",
+  "impressions": "401",
+  "reach": "334",
+  "frequency": "1.200599",
+  "website_ctr": "2.493766",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$565,73 ARS (Leads)"
+  },
+  "cpm": "$5.643,19 ARS",
+  "link_click": "10",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$1.891,86 ARS",
+  "impressions": "365",
+  "reach": "285",
+  "frequency": "1.280702",
+  "website_ctr": "0.273973",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.183,18 ARS",
+  "link_click": "1",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-04",
+  "date_stop": "2026-09-04",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$2.572,65 ARS",
+  "impressions": "3049",
+  "reach": "2943",
+  "frequency": "1.036018",
+  "website_ctr": "2.591013",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "74"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$34,77 ARS (Instagram profile visits)"
+  },
+  "cpm": "$843,77 ARS",
+  "link_click": "79",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$5.562,96 ARS",
+  "impressions": "1328",
+  "reach": "1182",
+  "frequency": "1.123519",
+  "website_ctr": "0.677711",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.188,98 ARS",
+  "link_click": "9",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$5.466,88 ARS",
+  "impressions": "1381",
+  "reach": "1166",
+  "frequency": "1.184391",
+  "website_ctr": "1.086169",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.822,29 ARS (Leads)"
+  },
+  "cpm": "$3.958,64 ARS",
+  "link_click": "15",
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$2.876,42 ARS",
+  "impressions": "3077",
+  "reach": "2632",
+  "frequency": "1.169073",
+  "website_ctr": "2.79493",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "86"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$33,45 ARS (Instagram profile visits)"
+  },
+  "cpm": "$934,81 ARS",
+  "link_click": "86",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$1.149,96 ARS",
+  "impressions": "274",
+  "reach": "229",
+  "frequency": "1.196507",
+  "website_ctr": "0.729927",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.196,93 ARS",
+  "link_click": "2",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$562,05 ARS",
+  "impressions": "167",
+  "reach": "146",
+  "frequency": "1.143836",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.365,57 ARS",
+  "link_click": null,
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$2.117,64 ARS",
+  "impressions": "470",
+  "reach": "375",
+  "frequency": "1.253333",
+  "website_ctr": "0.851064",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.505,62 ARS",
+  "link_click": "4",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-05",
+  "date_stop": "2026-09-05",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$2.825,87 ARS",
+  "impressions": "3588",
+  "reach": "3404",
+  "frequency": "1.054054",
+  "website_ctr": "2.285396",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "76"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$37,18 ARS (Instagram profile visits)"
+  },
+  "cpm": "$787,59 ARS",
+  "link_click": "82",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$7.546,78 ARS",
+  "impressions": "1392",
+  "reach": "1301",
+  "frequency": "1.069946",
+  "website_ctr": "1.293103",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.773,39 ARS (Leads)"
+  },
+  "cpm": "$5.421,54 ARS",
+  "link_click": "18",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$6.710,04 ARS",
+  "impressions": "1687",
+  "reach": "1392",
+  "frequency": "1.211925",
+  "website_ctr": "0.829876",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.977,50 ARS",
+  "link_click": "14",
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$2.376,65 ARS",
+  "impressions": "3041",
+  "reach": "2700",
+  "frequency": "1.126296",
+  "website_ctr": "2.170339",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "65"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$36,56 ARS (Instagram profile visits)"
+  },
+  "cpm": "$781,54 ARS",
+  "link_click": "66",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$2.656,59 ARS",
+  "impressions": "483",
+  "reach": "414",
+  "frequency": "1.166667",
+  "website_ctr": "1.035197",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.500,19 ARS",
+  "link_click": "5",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$2.764,27 ARS",
+  "impressions": "621",
+  "reach": "502",
+  "frequency": "1.237052",
+  "website_ctr": "0.322061",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.451,32 ARS",
+  "link_click": "2",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$2.562,32 ARS",
+  "impressions": "574",
+  "reach": "463",
+  "frequency": "1.239741",
+  "website_ctr": "0.522648",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.463,97 ARS",
+  "link_click": "3",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-06",
+  "date_stop": "2026-09-06",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$2.303,77 ARS",
+  "impressions": "3008",
+  "reach": "3008",
+  "frequency": "1",
+  "website_ctr": "2.360372",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "69"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$33,39 ARS (Instagram profile visits)"
+  },
+  "cpm": "$765,88 ARS",
+  "link_click": "71",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$6.256,37 ARS",
+  "impressions": "1400",
+  "reach": "1292",
+  "frequency": "1.083591",
+  "website_ctr": "1.071429",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$6.256,37 ARS (Leads)"
+  },
+  "cpm": "$4.468,84 ARS",
+  "link_click": "15",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$5.535,07 ARS",
+  "impressions": "1496",
+  "reach": "1218",
+  "frequency": "1.228243",
+  "website_ctr": "1.002674",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.699,91 ARS",
+  "link_click": "15",
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$1.630,59 ARS",
+  "impressions": "2123",
+  "reach": "1860",
+  "frequency": "1.141398",
+  "website_ctr": "1.884126",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "40"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$40,76 ARS (Instagram profile visits)"
+  },
+  "cpm": "$768,06 ARS",
+  "link_click": "40",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$3.547,67 ARS",
+  "impressions": "702",
+  "reach": "552",
+  "frequency": "1.271739",
+  "website_ctr": "1.139601",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.182,56 ARS (Leads)"
+  },
+  "cpm": "$5.053,66 ARS",
+  "link_click": "8",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$3.600,64 ARS",
+  "impressions": "589",
+  "reach": "503",
+  "frequency": "1.170974",
+  "website_ctr": "1.358234",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.600,64 ARS (Leads)"
+  },
+  "cpm": "$6.113,14 ARS",
+  "link_click": "8",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$1.862,18 ARS",
+  "impressions": "392",
+  "reach": "324",
+  "frequency": "1.209877",
+  "website_ctr": "0.510204",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.862,18 ARS (Leads)"
+  },
+  "cpm": "$4.750,46 ARS",
+  "link_click": "2",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-07",
+  "date_stop": "2026-09-07",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$2.418,05 ARS",
+  "impressions": "2807",
+  "reach": "2730",
+  "frequency": "1.028205",
+  "website_ctr": "2.422515",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "64"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$37,78 ARS (Instagram profile visits)"
+  },
+  "cpm": "$861,44 ARS",
+  "link_click": "68",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$6.622,70 ARS",
+  "impressions": "1174",
+  "reach": "1066",
+  "frequency": "1.101313",
+  "website_ctr": "1.618399",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$6.622,70 ARS (Leads)"
+  },
+  "cpm": "$5.641,14 ARS",
+  "link_click": "19",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$5.407,54 ARS",
+  "impressions": "1530",
+  "reach": "1223",
+  "frequency": "1.251022",
+  "website_ctr": "0.588235",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.703,77 ARS (Leads)"
+  },
+  "cpm": "$3.534,34 ARS",
+  "link_click": "9",
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$2.214,02 ARS",
+  "impressions": "2642",
+  "reach": "2410",
+  "frequency": "1.096266",
+  "website_ctr": "2.043906",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "54"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$41,00 ARS (Instagram profile visits)"
+  },
+  "cpm": "$838,01 ARS",
+  "link_click": "54",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$3.381,03 ARS",
+  "impressions": "764",
+  "reach": "654",
+  "frequency": "1.168196",
+  "website_ctr": "0.52356",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.425,43 ARS",
+  "link_click": "4",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$2.760,30 ARS",
+  "impressions": "588",
+  "reach": "493",
+  "frequency": "1.192698",
+  "website_ctr": "1.020408",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.760,30 ARS (Leads)"
+  },
+  "cpm": "$4.694,39 ARS",
+  "link_click": "6",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$1.985,31 ARS",
+  "impressions": "440",
+  "reach": "374",
+  "frequency": "1.176471",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.512,07 ARS",
+  "link_click": null,
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-08",
+  "date_stop": "2026-09-08",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$809,45 ARS",
+  "impressions": "910",
+  "reach": "893",
+  "frequency": "1.019037",
+  "website_ctr": "2.857143",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "23"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$35,19 ARS (Instagram profile visits)"
+  },
+  "cpm": "$889,51 ARS",
+  "link_click": "26",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$7.538,00 ARS",
+  "impressions": "1339",
+  "reach": "1216",
+  "frequency": "1.101151",
+  "website_ctr": "1.7177",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$7.538,00 ARS (Leads)"
+  },
+  "cpm": "$5.629,57 ARS",
+  "link_click": "23",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$4.527,87 ARS",
+  "impressions": "879",
+  "reach": "741",
+  "frequency": "1.186235",
+  "website_ctr": "0.568828",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$4.527,87 ARS (Leads)"
+  },
+  "cpm": "$5.151,16 ARS",
+  "link_click": "5",
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$0,37 ARS",
+  "impressions": "1",
+  "reach": "1",
+  "frequency": "1",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": "$370,00 ARS",
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$2.106,57 ARS",
+  "impressions": "2940",
+  "reach": "2635",
+  "frequency": "1.11575",
+  "website_ctr": "2.44898",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "72"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$29,26 ARS (Instagram profile visits)"
+  },
+  "cpm": "$716,52 ARS",
+  "link_click": "72",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$2.803,61 ARS",
+  "impressions": "519",
+  "reach": "440",
+  "frequency": "1.179545",
+  "website_ctr": "0.578035",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.401,95 ARS",
+  "link_click": "3",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$3.284,54 ARS",
+  "impressions": "605",
+  "reach": "508",
+  "frequency": "1.190945",
+  "website_ctr": "1.157025",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.642,27 ARS (Leads)"
+  },
+  "cpm": "$5.428,99 ARS",
+  "link_click": "7",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$1.295,90 ARS",
+  "impressions": "297",
+  "reach": "247",
+  "frequency": "1.202429",
+  "website_ctr": "0.673401",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.363,30 ARS",
+  "link_click": "2",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$2.528,83 ARS",
+  "impressions": "379",
+  "reach": "293",
+  "frequency": "1.293515",
+  "website_ctr": "0.791557",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.528,83 ARS (Leads)"
+  },
+  "cpm": "$6.672,37 ARS",
+  "link_click": "3",
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$913,02 ARS",
+  "impressions": "1146",
+  "reach": "1145",
+  "frequency": "1.000873",
+  "website_ctr": "1.570681",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "18"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$50,72 ARS (Instagram profile visits)"
+  },
+  "cpm": "$796,70 ARS",
+  "link_click": "18",
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-09",
+  "date_stop": "2026-09-09",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$7.162,79 ARS",
+  "impressions": "1391",
+  "reach": "1269",
+  "frequency": "1.096139",
+  "website_ctr": "1.150252",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$7.162,79 ARS (Leads)"
+  },
+  "cpm": "$5.149,38 ARS",
+  "link_click": "16",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$42,13 ARS",
+  "impressions": "9",
+  "reach": "9",
+  "frequency": "1",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.681,11 ARS",
+  "link_click": null,
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$1.764,76 ARS",
+  "impressions": "2355",
+  "reach": "2206",
+  "frequency": "1.067543",
+  "website_ctr": "2.250531",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "51"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$34,60 ARS (Instagram profile visits)"
+  },
+  "cpm": "$749,37 ARS",
+  "link_click": "53",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$2.881,20 ARS",
+  "impressions": "514",
+  "reach": "465",
+  "frequency": "1.105376",
+  "website_ctr": "0.972763",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.881,20 ARS (Leads)"
+  },
+  "cpm": "$5.605,45 ARS",
+  "link_click": "5",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$3.130,46 ARS",
+  "impressions": "625",
+  "reach": "516",
+  "frequency": "1.21124",
+  "website_ctr": "0.96",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.008,74 ARS",
+  "link_click": "6",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$2.292,20 ARS",
+  "impressions": "546",
+  "reach": "470",
+  "frequency": "1.161702",
+  "website_ctr": "0.549451",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.198,17 ARS",
+  "link_click": "3",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$5.161,01 ARS",
+  "impressions": "937",
+  "reach": "603",
+  "frequency": "1.553897",
+  "website_ctr": "0.960512",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.580,51 ARS (Leads)"
+  },
+  "cpm": "$5.508,01 ARS",
+  "link_click": "9",
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$2.239,23 ARS",
+  "impressions": "2817",
+  "reach": "2711",
+  "frequency": "1.0391",
+  "website_ctr": "1.70394",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "46"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$48,68 ARS (Instagram profile visits)"
+  },
+  "cpm": "$794,90 ARS",
+  "link_click": "48",
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$3.950,24 ARS",
+  "impressions": "706",
+  "reach": "454",
+  "frequency": "1.555066",
+  "website_ctr": "1.133144",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.975,12 ARS (Leads)"
+  },
+  "cpm": "$5.595,24 ARS",
+  "link_click": "8",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-10",
+  "date_stop": "2026-09-10",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$8.298,63 ARS",
+  "impressions": "1528",
+  "reach": "1386",
+  "frequency": "1.102453",
+  "website_ctr": "1.832461",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.766,21 ARS (Leads)"
+  },
+  "cpm": "$5.431,04 ARS",
+  "link_click": "28",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$1,95 ARS",
+  "impressions": "1",
+  "reach": "1",
+  "frequency": "1",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$1.950,00 ARS",
+  "link_click": null,
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$0,29 ARS",
+  "impressions": "1",
+  "reach": "1",
+  "frequency": "1",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": "$290,00 ARS",
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$2.088,10 ARS",
+  "impressions": "2878",
+  "reach": "2684",
+  "frequency": "1.07228",
+  "website_ctr": "2.293259",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "61"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$34,23 ARS (Instagram profile visits)"
+  },
+  "cpm": "$725,54 ARS",
+  "link_click": "66",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$3.150,53 ARS",
+  "impressions": "595",
+  "reach": "520",
+  "frequency": "1.144231",
+  "website_ctr": "1.176471",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.150,53 ARS (Leads)"
+  },
+  "cpm": "$5.295,01 ARS",
+  "link_click": "7",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$2.650,86 ARS",
+  "impressions": "519",
+  "reach": "459",
+  "frequency": "1.130719",
+  "website_ctr": "0.770713",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.650,86 ARS (Leads)"
+  },
+  "cpm": "$5.107,63 ARS",
+  "link_click": "4",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$2.284,28 ARS",
+  "impressions": "442",
+  "reach": "374",
+  "frequency": "1.181818",
+  "website_ctr": "0.678733",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.284,28 ARS (Leads)"
+  },
+  "cpm": "$5.168,05 ARS",
+  "link_click": "3",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$5.035,93 ARS",
+  "impressions": "1061",
+  "reach": "772",
+  "frequency": "1.374352",
+  "website_ctr": "0.471254",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.746,40 ARS",
+  "link_click": "5",
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$2.845,56 ARS",
+  "impressions": "3873",
+  "reach": "3707",
+  "frequency": "1.04478",
+  "website_ctr": "1.523367",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "61"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$46,65 ARS (Instagram profile visits)"
+  },
+  "cpm": "$734,72 ARS",
+  "link_click": "59",
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$4.185,09 ARS",
+  "impressions": "933",
+  "reach": "642",
+  "frequency": "1.453271",
+  "website_ctr": "1.286174",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.092,55 ARS (Leads)"
+  },
+  "cpm": "$4.485,63 ARS",
+  "link_click": "12",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-11",
+  "date_stop": "2026-09-11",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$29,92 ARS",
+  "impressions": "34",
+  "reach": "33",
+  "frequency": "1.030303",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": "$880,00 ARS",
+  "link_click": null,
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$8.576,49 ARS",
+  "impressions": "1414",
+  "reach": "1294",
+  "frequency": "1.092736",
+  "website_ctr": "1.980198",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.144,12 ARS (Leads)"
+  },
+  "cpm": "$6.065,41 ARS",
+  "link_click": "28",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$5,32 ARS",
+  "impressions": "3",
+  "reach": "3",
+  "frequency": "1",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$1.773,33 ARS",
+  "link_click": null,
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$85,56 ARS",
+  "impressions": "151",
+  "reach": "149",
+  "frequency": "1.013423",
+  "website_ctr": "1.986755",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$28,52 ARS (Instagram profile visits)"
+  },
+  "cpm": "$566,62 ARS",
+  "link_click": "3",
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$1.802,13 ARS",
+  "impressions": "2728",
+  "reach": "2598",
+  "frequency": "1.050038",
+  "website_ctr": "2.272727",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "62"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$29,07 ARS (Instagram profile visits)"
+  },
+  "cpm": "$660,60 ARS",
+  "link_click": "62",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$2.556,07 ARS",
+  "impressions": "507",
+  "reach": "459",
+  "frequency": "1.104575",
+  "website_ctr": "0.986193",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.041,56 ARS",
+  "link_click": "5",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$2.804,45 ARS",
+  "impressions": "584",
+  "reach": "504",
+  "frequency": "1.15873",
+  "website_ctr": "2.054795",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.402,23 ARS (Leads)"
+  },
+  "cpm": "$4.802,14 ARS",
+  "link_click": "12",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$1.586,05 ARS",
+  "impressions": "321",
+  "reach": "280",
+  "frequency": "1.146429",
+  "website_ctr": "0.623053",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.940,97 ARS",
+  "link_click": "2",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$3.137,21 ARS",
+  "impressions": "790",
+  "reach": "611",
+  "frequency": "1.292962",
+  "website_ctr": "0.759494",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.971,15 ARS",
+  "link_click": "6",
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$2.737,70 ARS",
+  "impressions": "3586",
+  "reach": "3409",
+  "frequency": "1.051921",
+  "website_ctr": "1.952036",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "68"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$40,26 ARS (Instagram profile visits)"
+  },
+  "cpm": "$763,44 ARS",
+  "link_click": "70",
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$1.995,26 ARS",
+  "impressions": "581",
+  "reach": "404",
+  "frequency": "1.438119",
+  "website_ctr": "0.860585",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.434,18 ARS",
+  "link_click": "5",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-12",
+  "date_stop": "2026-09-12",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$507,73 ARS",
+  "impressions": "569",
+  "reach": "564",
+  "frequency": "1.008865",
+  "website_ctr": "0.702988",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$126,93 ARS (Instagram profile visits)"
+  },
+  "cpm": "$892,32 ARS",
+  "link_click": "4",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$12.275,18 ARS",
+  "impressions": "2244",
+  "reach": "2067",
+  "frequency": "1.085631",
+  "website_ctr": "0.935829",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$4.091,73 ARS (Leads)"
+  },
+  "cpm": "$5.470,22 ARS",
+  "link_click": "21",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$51,53 ARS",
+  "impressions": "14",
+  "reach": "13",
+  "frequency": "1.076923",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.680,71 ARS",
+  "link_click": null,
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$2.304,19 ARS",
+  "impressions": "3266",
+  "reach": "2826",
+  "frequency": "1.155697",
+  "website_ctr": "2.327006",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "72"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$32,00 ARS (Instagram profile visits)"
+  },
+  "cpm": "$705,51 ARS",
+  "link_click": "76",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$3.946,36 ARS",
+  "impressions": "679",
+  "reach": "553",
+  "frequency": "1.227848",
+  "website_ctr": "0.883652",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.946,36 ARS (Leads)"
+  },
+  "cpm": "$5.812,02 ARS",
+  "link_click": "6",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$3.741,97 ARS",
+  "impressions": "816",
+  "reach": "695",
+  "frequency": "1.174101",
+  "website_ctr": "0.612745",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.741,97 ARS (Leads)"
+  },
+  "cpm": "$4.585,75 ARS",
+  "link_click": "5",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$2.403,15 ARS",
+  "impressions": "491",
+  "reach": "430",
+  "frequency": "1.14186",
+  "website_ctr": "0.610998",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.894,40 ARS",
+  "link_click": "3",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$5.112,28 ARS",
+  "impressions": "1072",
+  "reach": "813",
+  "frequency": "1.318573",
+  "website_ctr": "0.839552",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.556,14 ARS (Leads)"
+  },
+  "cpm": "$4.768,92 ARS",
+  "link_click": "9",
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$2.895,50 ARS",
+  "impressions": "3900",
+  "reach": "3697",
+  "frequency": "1.054909",
+  "website_ctr": "1.487179",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "56"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$51,71 ARS (Instagram profile visits)"
+  },
+  "cpm": "$742,44 ARS",
+  "link_click": "58",
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$4.549,70 ARS",
+  "impressions": "1106",
+  "reach": "716",
+  "frequency": "1.544693",
+  "website_ctr": "0.994575",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.274,85 ARS (Leads)"
+  },
+  "cpm": "$4.113,65 ARS",
+  "link_click": "11",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-13",
+  "date_stop": "2026-09-13",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$694,61 ARS",
+  "impressions": "745",
+  "reach": "720",
+  "frequency": "1.034722",
+  "website_ctr": "2.95302",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "19"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$36,56 ARS (Instagram profile visits)"
+  },
+  "cpm": "$932,36 ARS",
+  "link_click": "22",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$6.429,46 ARS",
+  "impressions": "1203",
+  "reach": "1088",
+  "frequency": "1.105699",
+  "website_ctr": "1.496259",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$6.429,46 ARS (Leads)"
+  },
+  "cpm": "$5.344,52 ARS",
+  "link_click": "18",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$1,06 ARS",
+  "impressions": "2",
+  "reach": "2",
+  "frequency": "1",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": "$530,00 ARS",
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$1.977,42 ARS",
+  "impressions": "2698",
+  "reach": "2539",
+  "frequency": "1.062623",
+  "website_ctr": "2.779837",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "72"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$27,46 ARS (Instagram profile visits)"
+  },
+  "cpm": "$732,92 ARS",
+  "link_click": "75",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$2.375,66 ARS",
+  "impressions": "434",
+  "reach": "398",
+  "frequency": "1.090452",
+  "website_ctr": "0.691244",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.473,87 ARS",
+  "link_click": "3",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$2.687,58 ARS",
+  "impressions": "704",
+  "reach": "592",
+  "frequency": "1.189189",
+  "website_ctr": "0.426136",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.817,59 ARS",
+  "link_click": "3",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$1.890,30 ARS",
+  "impressions": "424",
+  "reach": "371",
+  "frequency": "1.142857",
+  "website_ctr": "0.471698",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.890,30 ARS (Leads)"
+  },
+  "cpm": "$4.458,25 ARS",
+  "link_click": "2",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$6.143,09 ARS",
+  "impressions": "1008",
+  "reach": "714",
+  "frequency": "1.411765",
+  "website_ctr": "1.190476",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.071,55 ARS (Leads)"
+  },
+  "cpm": "$6.094,34 ARS",
+  "link_click": "12",
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$1.791,17 ARS",
+  "impressions": "2299",
+  "reach": "2218",
+  "frequency": "1.036519",
+  "website_ctr": "1.69639",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "39"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$45,93 ARS (Instagram profile visits)"
+  },
+  "cpm": "$779,11 ARS",
+  "link_click": "39",
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$3.978,58 ARS",
+  "impressions": "1272",
+  "reach": "847",
+  "frequency": "1.501771",
+  "website_ctr": "0.471698",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$3.127,81 ARS",
+  "link_click": "6",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-14",
+  "date_stop": "2026-09-14",
+  "amount_spent": "$4.569,89 ARS",
+  "impressions": "1337",
+  "reach": "1090",
+  "frequency": "1.226606",
+  "website_ctr": "0.822737",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.284,95 ARS (Leads)"
+  },
+  "cpm": "$3.418,02 ARS",
+  "link_click": "11",
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$637,23 ARS",
+  "impressions": "632",
+  "reach": "615",
+  "frequency": "1.027642",
+  "website_ctr": "2.689873",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "16"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$39,83 ARS (Instagram profile visits)"
+  },
+  "cpm": "$1.008,28 ARS",
+  "link_click": "17",
+  "name": "Conocimiento - Estado del rubro",
+  "effective_status": "ACTIVE",
+  "id": "120252699394250427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$384,38 ARS",
+  "impressions": "75",
+  "reach": "72",
+  "frequency": "1.041667",
+  "website_ctr": "1.333333",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.125,07 ARS",
+  "link_click": "1",
+  "name": "Video Lu - Actualización de precios y stock",
+  "effective_status": "ACTIVE",
+  "id": "120252699641370427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$17,91 ARS",
+  "impressions": "4",
+  "reach": "4",
+  "frequency": "1",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$4.477,50 ARS",
+  "link_click": null,
+  "name": "Remarketing - Casos de éxito - JUL26",
+  "effective_status": "ACTIVE",
+  "id": "120252701921370427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "profile_visit_view",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Instagram profile visits)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Conocimiento - Funcionalidad - Precios y proveedores",
+  "effective_status": "ACTIVE",
+  "id": "120252704384180427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$1.736,42 ARS",
+  "impressions": "2357",
+  "reach": "2219",
+  "frequency": "1.06219",
+  "website_ctr": "2.206194",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "51"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$34,05 ARS (Instagram profile visits)"
+  },
+  "cpm": "$736,71 ARS",
+  "link_click": "52",
+  "name": "Carrousel de Tips",
+  "effective_status": "ACTIVE",
+  "id": "120253037138710427",
+  "campaign_name": "JY | Awareness Boxer Taller",
+  "adset_name": "Nuevo conjunto de anuncios de Tráfico"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$0,00 ARS",
+  "impressions": "0",
+  "reach": "0",
+  "frequency": "0",
+  "website_ctr": null,
+  "results": {
+   "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Messaging conversations started)"
+  },
+  "cpm": null,
+  "link_click": null,
+  "name": "Video Lu - Actualización de precios y stock - Copia",
+  "effective_status": "PAUSED",
+  "id": "120253156318090427",
+  "campaign_name": "JY | Conversiones - Copia - Boton a WhatsApp",
+  "adset_name": "Conversión segmentación similar - Copia"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$2.398,34 ARS",
+  "impressions": "491",
+  "reach": "436",
+  "frequency": "1.126147",
+  "website_ctr": "0.814664",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "2"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.199,17 ARS (Leads)"
+  },
+  "cpm": "$4.884,60 ARS",
+  "link_click": "4",
+  "name": "Video Lu - Mendoza",
+  "effective_status": "ACTIVE",
+  "id": "120254099466800427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "Mendoza - Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$3.262,76 ARS",
+  "impressions": "541",
+  "reach": "476",
+  "frequency": "1.136555",
+  "website_ctr": "1.663586",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "1"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$3.262,76 ARS (Leads)"
+  },
+  "cpm": "$6.030,98 ARS",
+  "link_click": "9",
+  "name": "Video Lu - San Juan",
+  "effective_status": "ACTIVE",
+  "id": "120254102057310427",
+  "campaign_name": "JY | Viajes Presenciales Luciana",
+  "adset_name": "San Juan- Frio - LAL CRM - Video"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$2.316,33 ARS",
+  "impressions": "420",
+  "reach": "373",
+  "frequency": "1.126005",
+  "website_ctr": "0.714286",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.515,07 ARS",
+  "link_click": "3",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254108819050427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 1 - Frio nacional"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$4.777,23 ARS",
+  "impressions": "919",
+  "reach": "717",
+  "frequency": "1.281729",
+  "website_ctr": "0.54407",
+  "results": {
+   "indicator": "actions:lead",
+   "value": "Not available"
+  },
+  "cost_per_result": {
+   "value": "Not available (Leads)"
+  },
+  "cpm": "$5.198,29 ARS",
+  "link_click": "5",
+  "name": "Oferta | Img | Remarketing | v1 | 2026-09",
+  "effective_status": "ACTIVE",
+  "id": "120254261331160427",
+  "campaign_name": "JY | Remarketing",
+  "adset_name": "Remarketing"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$1.871,27 ARS",
+  "impressions": "2409",
+  "reach": "2282",
+  "frequency": "1.055653",
+  "website_ctr": "1.66044",
+  "results": {
+   "indicator": "profile_visit_view",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "39"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$47,98 ARS (Instagram profile visits)"
+  },
+  "cpm": "$776,78 ARS",
+  "link_click": "40",
+  "name": "Como tener 2 novias",
+  "effective_status": "ACTIVE",
+  "id": "120254261490500427",
+  "campaign_name": "JY | Awareness",
+  "adset_name": "Redirección al perfil de Instagram - Segmentación manual"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$4.430,42 ARS",
+  "impressions": "1214",
+  "reach": "898",
+  "frequency": "1.351893",
+  "website_ctr": "0.658979",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "4"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$1.107,61 ARS (Leads)"
+  },
+  "cpm": "$3.649,44 ARS",
+  "link_click": "8",
+  "name": "Placa fija",
+  "effective_status": "ACTIVE",
+  "id": "120254275276580427",
+  "campaign_name": "JY | Webinar Mostrador - 17 SEPT 2026",
+  "adset_name": "Conjunto 2 - Publico Probado"
+ },
+ {
+  "date_start": "2026-09-15",
+  "date_stop": "2026-09-15",
+  "amount_spent": "$8.352,01 ARS",
+  "impressions": "2281",
+  "reach": "1865",
+  "frequency": "1.223056",
+  "website_ctr": "0.745287",
+  "results": {
+   "indicator": "actions:lead",
+   "values": [
+    {
+     "attribution_windows": [
+      "default"
+     ],
+     "value": "3"
+    }
+   ]
+  },
+  "cost_per_result": {
+   "value": "$2.784,00 ARS (Leads)"
+  },
+  "cpm": "$3.661,56 ARS",
+  "link_click": "17",
+  "name": "Boxer + lectora y impresora de etiquetas",
+  "effective_status": "ACTIVE",
+  "id": "120254281335700427",
+  "campaign_name": "JY | Conversiones",
+  "adset_name": "Conversión segmentación similar"
+ }
+]

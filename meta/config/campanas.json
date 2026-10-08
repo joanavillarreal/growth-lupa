@@ -1,0 +1,371 @@
+{
+  "_comentario": [
+    "Mapa campana / conjunto -> origen del CRM. Es el corazon del cruce mientras no",
+    "haya atribucion por anuncio: dice contra que origen de Bitrix se mide cada cosa.",
+    "",
+    "Decision de Joana (2026-09-09): el analisis va EN GRUESO — formularios que",
+    "llegaron, mensajes por boton, y campanas con su performance. Por anuncio,",
+    "cuando el CRM tenga el dato (EXP-001).",
+    "",
+    "LA CONVENCION QUE MANDA: las campanas vigentes empiezan con 'JY | '. Las que no",
+    "tienen ese prefijo son campanas viejas y desordenadas (Joana, 2026-09-09): se",
+    "usan para el historico, NO para decidir. El script las marca 'historica'.",
+    "",
+    "Lo edita Joana. Cuando aparece una campana nueva que no esta aca, cruzar.py la",
+    "lista y pide clasificarla; hasta entonces queda fuera de todos los KPI.",
+    "",
+    "origenes_crm: [\"X\"]      -> se cruza contra ese origen del CRM",
+    "origenes_crm: []          -> no se cruza. El campo 'motivo' dice por que.",
+    "origenes_crm: \"PENDIENTE\" -> falta que Joana lo confirme.",
+    "",
+    "fecha_evento: AAAA-MM-DD — SOLO en campanas de evento (grupo 'eventual').",
+    "Es el dia del webinar / curso / visita. La guardia diaria avisa si la campana",
+    "sigue gastando despues de esa fecha: nadie se puede anotar a algo que ya paso.",
+    "Sin este campo la guardia NO opina de esa campana — no adivina la fecha del",
+    "nombre, porque apagar plata por una corazonada es peor que no avisar.",
+    "Cargarlo al dar de alta la campana del evento. Agregado 2026-09-15."
+  ],
+  "origenes": {
+    "Meta Ads Formulario": "3",
+    "Meta Ads": "UC_HDLOFX",
+    "Redes": "UC_GJPS17",
+    "Visita Presencial - Córdoba - 2026": "UC_B9QEB4",
+    "Visita Presencial - Rosario - 2026": "UC_EOUHYW",
+    "Visita Presencial - Mendoza - 2026": "UC_AKD6XC",
+    "Visita Presencial - San Juan - 2026": "UC_XSJ4FH",
+    "Visita Presencial - Neuquén - 2026": "UC_LV00VK",
+    "Webinar Mostrador 2026": "UC_CQ4N7U",
+    "Curso en vivo IA": "UC_AZSX3J",
+    "Webinar Mkt con IA": "UC_6VBCJ2",
+    "Demo masiva en vivo": "UC_ZUNX2Y",
+    "Lead Magnet": "UC_CT8131",
+    "Automechanika 2026": "UC_BNRV5I",
+    "Web Boxer": "UC_UNW1H0",
+    "Form tienda nube": "UC_8N2HTG",
+    "Entrevista Campana Repuestos": "UC_QJA9X4"
+  },
+  "contraste_organico": [
+    "Redes"
+  ],
+  "campanas": [
+    {
+      "nombre": "JY | Awareness",
+      "grupo": "nucleo",
+      "bloque": "awareness",
+      "destino": "perfil",
+      "origenes_crm": [],
+      "activa": true
+    },
+    {
+      "nombre": "JY | Awareness Boxer Taller",
+      "grupo": "nucleo",
+      "bloque": "awareness",
+      "destino": "perfil",
+      "origenes_crm": [],
+      "activa": true,
+      "producto": "boxer_taller",
+      "nota": "PAUSADA 2026-09-17 (pedido de Joana): la reemplaza 'JY | Awareness Boxer Taller (AGENTE META)'. No se borra, se archiva historico."
+    },
+    {
+      "nombre": "JY | Awareness Boxer Taller (AGENTE META)",
+      "grupo": "nucleo",
+      "bloque": "awareness",
+      "destino": "perfil",
+      "origenes_crm": [],
+      "activa": true,
+      "producto": "boxer_taller",
+      "nota": "Creada 2026-09-17 (agente, pedido de Joana) para reemplazar 'JY | Awareness Boxer Taller' tras el error 'Pages Don't Match' del anuncio Meme IA - Reel feed (A18/G1). Ver informes/2026-W38/campana-boxer-taller-agente-meta.md. Mismo patron que la campana vieja: awareness, no genera leads, no cruza contra el CRM."
+    },
+    {
+      "nombre": "JY | Conversiones",
+      "grupo": "nucleo",
+      "bloque": "conversion",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Meta Ads Formulario"
+      ],
+      "activa": true,
+      "formulario": "Formulario anuncios 1"
+    },
+    {
+      "nombre": "JY | Conversiones - Copia - Boton a WhatsApp",
+      "grupo": "nucleo",
+      "bloque": "conversion",
+      "destino": "whatsapp",
+      "origenes_crm": [
+        "Meta Ads"
+      ],
+      "activa": true
+    },
+    {
+      "nombre": "JY | Interaccion Boxer Taller",
+      "grupo": "eventual",
+      "bloque": "awareness",
+      "destino": "perfil",
+      "origenes_crm": [],
+      "activa": false,
+      "producto": "boxer_taller",
+      "motivo": "No genera leads: es redireccion al perfil."
+    },
+    {
+      "nombre": "JY | Cursos y Webinars (AGENTE META)",
+      "grupo": "eventual",
+      "bloque": "evento",
+      "destino": "formulario",
+      "origenes_crm": [],
+      "activa": true,
+      "nota": "Creada por Joana 2026-09-29 (receta del agente, informes/2026-W40/receta-campana-cursos-webinars.md). Lead magnet de grabaciones: una charla por vez, arranca IA (2.000 ARS/dia aprobados por Yamil). Origen Curso en vivo IA: los leads de la grabacion comparten origen con los inscriptos del vivo de jul-ago y se separan por utm_term. Cuando entre Mostrador, su conjunto va a 'Webinar Mostrador 2026' (conjuntos_excepcion). SIN fecha_evento a proposito.",
+      "motivo": "Joana 2026-10-05: los leads del formulario de webinars grabados NO se suben al CRM por ahora, y esta bien que sea asi. No se cruzan ni cuentan en la conciliacion Meta -> CRM. Antes figuraba 'Curso en vivo IA'; cuando se empiecen a subir, volver a cargar el origen aca."
+    },
+    {
+      "nombre": "JY | Lead Magnet",
+      "grupo": "eventual",
+      "bloque": "evento",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Lead Magnet"
+      ],
+      "activa": false,
+      "nota": "Todavia no existe en Meta (Joana, 2026-09-09). Queda pre-cargada: cuando se prenda, el cruce funciona desde el primer dia."
+    },
+    {
+      "nombre": "JY | Remarketing",
+      "grupo": "nucleo",
+      "bloque": "remarketing",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Meta Ads Formulario"
+      ],
+      "activa": true,
+      "formulario": "Formulario anuncios 1"
+    },
+    {
+      "nombre": "JY | Viajes Presenciales Luciana",
+      "grupo": "eventual",
+      "bloque": "evento",
+      "destino": "formulario",
+      "origenes_crm": [],
+      "activa": true,
+      "nota": "Joana: confirmar si son los origenes 'Visita Presencial - <ciudad> - 2026'.",
+      "motivo": "Se cruza A NIVEL CONJUNTO, no de campana: cada conjunto apunta a la provincia que dice su nombre ('Visita Presencial - <provincia> - 2026'). Ver conjuntos_excepcion."
+    },
+    {
+      "nombre": "JY | Viajes Presenciales Santiago",
+      "grupo": "eventual",
+      "bloque": "evento",
+      "destino": "formulario",
+      "origenes_crm": "PENDIENTE",
+      "activa": true,
+      "nota": "Creada por Joana 2026-09-30 (Bariloche, 1 conjunto 'Bariloche - Frio - LAL CRM - Placa', 1.561 ARS/dia). Pre-cargada por el agente el 2026-10-05 con origen PENDIENTE: Joana tiene que decir a que origen del CRM manda el formulario de Bariloche (no hay 'Visita Presencial - Bariloche' en la lista de origenes). SIN fecha_evento: Joana tiene que cargar el dia del viaje; sin eso la guardia no puede avisar si la campana sigue gastando despues."
+    },
+    {
+      "nombre": "JY | Webinar Mostrador - 17 SEPT 2026",
+      "grupo": "eventual",
+      "bloque": "evento",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Webinar Mostrador 2026"
+      ],
+      "activa": true,
+      "nota": "El webinar todavia no se hizo (17/09/2026): los leads son inscriptos.",
+      "fecha_evento": "2026-09-17"
+    },
+    {
+      "nombre": "2. Campaña de Conversiones - Copia",
+      "grupo": "nucleo",
+      "bloque": "conversion",
+      "destino": "whatsapp",
+      "origenes_crm": [
+        "Meta Ads"
+      ],
+      "activa": false
+    },
+    {
+      "nombre": "5. Campaña de Seguidores",
+      "grupo": "nucleo",
+      "bloque": "awareness",
+      "destino": "perfil",
+      "origenes_crm": [],
+      "activa": false
+    },
+    {
+      "nombre": "7. Clientes potenciales - formulario - Copia",
+      "grupo": "nucleo",
+      "bloque": "conversion",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Meta Ads Formulario"
+      ],
+      "activa": false,
+      "nota": "Dejo de gastar el 31/08/2026. Era el motor del canal."
+    },
+    {
+      "nombre": "Clientes Potenciales - Alta Intencion GEM",
+      "grupo": "nucleo",
+      "bloque": "conversion",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Meta Ads Formulario"
+      ],
+      "activa": false
+    },
+    {
+      "nombre": "Interacción Contenido - Feed",
+      "grupo": "eventual",
+      "bloque": "interaccion",
+      "destino": "perfil",
+      "origenes_crm": [],
+      "activa": false
+    },
+    {
+      "nombre": "Trafico Boxer web",
+      "grupo": "eventual",
+      "bloque": "trafico",
+      "destino": "perfil",
+      "origenes_crm": [],
+      "activa": false,
+      "nota": "Joana: confirmar si cae en 'Web Boxer' o en el formulario de la landing.",
+      "historica": true,
+      "motivo": "No genera leads: es redireccion al perfil."
+    },
+    {
+      "nombre": "Yamil | Campaña de Formularios - CENTRO Argentina",
+      "grupo": "nucleo",
+      "bloque": "conversion",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Meta Ads Formulario"
+      ],
+      "activa": false
+    },
+    {
+      "nombre": "Yamil | Campaña de Formularios - NO Argentina",
+      "grupo": "nucleo",
+      "bloque": "conversion",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Meta Ads Formulario"
+      ],
+      "activa": false
+    }
+  ],
+  "conjuntos_excepcion": [
+    {
+      "_comentario": "Conjuntos de EVENTO corriendo adentro de campanas de conversion. Su gasto y sus resultados se descuentan del cruce del canal: sus leads caen en el origen del evento, no en el de Meta."
+    },
+    {
+      "nombre": "Lead Magnet",
+      "origenes_crm": [
+        "Lead Magnet"
+      ],
+      "nota": "Joana 2026-09-09: el lead magnet tiene su propio origen. OJO con el historico: este conjunto gasto 293.182 ARS y Meta cobro 151 resultados, y el origen 'Lead Magnet' del CRM tiene 2 leads en todo el periodo. Eso NO es un error de mapeo: es un agujero real de ~290.000 ARS. Ver EXP-008."
+    },
+    {
+      "nombre": "Clases de IA en vivo - Joa y Pri",
+      "origenes_crm": [
+        "Curso en vivo IA"
+      ]
+    },
+    {
+      "nombre": "Campaña Webinar Marketing",
+      "origenes_crm": [
+        "Webinar Mkt con IA"
+      ]
+    },
+    {
+      "nombre": "Campaña Demo Masiva - Luciana - 30JUL",
+      "origenes_crm": [
+        "Demo masiva en vivo"
+      ]
+    },
+    {
+      "nombre": "Campaña Demo Masiva - Santiago - 13 AGO",
+      "origenes_crm": [
+        "Demo masiva en vivo"
+      ]
+    },
+    {
+      "nombre": "Campaña Demo Masiva - Santiago",
+      "origenes_crm": [
+        "Demo masiva en vivo"
+      ]
+    },
+    {
+      "nombre": "Demo en VIVO Presencial",
+      "origenes_crm": [
+        "Demo masiva en vivo"
+      ],
+      "nota": "INFERIDO del nombre, no confirmado por Joana. 23.053 ARS, 2 resultados."
+    },
+    {
+      "nombre": "After Automechanika",
+      "origenes_crm": [],
+      "nota": "El origen 'Automechanika 2026' del CRM son 262 leads con el 88% cargados en 3 dias (09-11/04): es la feria, no el anuncio. El anuncio corrio 31/03-10/04 con 23 resultados. Joana: confirmar a donde caen.",
+      "motivo": "Joana 2026-09-09: Automechanika fue una movida puntual sin campana asociada. No se cruza. El origen 'Automechanika 2026' del CRM (262 leads, 88% cargados en 3 dias) son los de la feria, no los del anuncio."
+    },
+    {
+      "nombre": "Campaña Presencialidad Cordoba",
+      "origenes_crm": [
+        "Visita Presencial - Córdoba - 2026"
+      ]
+    },
+    {
+      "nombre": "Campaña Presencialidad Rosario",
+      "origenes_crm": [
+        "Visita Presencial - Rosario - 2026"
+      ]
+    },
+    {
+      "nombre": "Campaña Presencialidad Neuquen",
+      "origenes_crm": [
+        "Visita Presencial - Neuquén - 2026"
+      ]
+    },
+    {
+      "nombre": "Campaña Presencialidad Adquisicion",
+      "origenes_crm": [],
+      "motivo": "Joana 2026-09-09: no hace falta cruzarlo. Gasto 10.684 ARS con 0 resultados."
+    },
+    {
+      "nombre": "Mendoza - Frio - LAL CRM - Video",
+      "origenes_crm": [
+        "Visita Presencial - Mendoza - 2026"
+      ]
+    },
+    {
+      "nombre": "San Juan- Frio - LAL CRM - Video",
+      "origenes_crm": [
+        "Visita Presencial - San Juan - 2026"
+      ]
+    },
+    {
+      "nombre": "Conjunto 1 - Frio nacional",
+      "origenes_crm": [
+        "Webinar Mostrador 2026"
+      ]
+    },
+    {
+      "nombre": "Entrevista en vivo - Campana Repuestos",
+      "origenes_crm": [
+        "Entrevista Campana Repuestos"
+      ],
+      "nota": "Joana 2026-09-09."
+    },
+    {
+      "nombre": "Guia | Boxer Taller",
+      "origenes_crm": [],
+      "motivo": "Joana 2026-09-09: no hace falta cruzarlo."
+    },
+    {
+      "nombre": "Tienda Nube",
+      "origenes_crm": [
+        "Form tienda nube"
+      ]
+    }
+  ],
+  "convencion_vigente": {
+    "prefijo": "JY | ",
+    "nota": "Toda campana que se cree de ahora en mas arranca con 'JY | '. Las que no lo tienen son de antes del orden y solo sirven de historico."
+  },
+  "_formulario": "formulario: nombre del formulario de Meta al que apuntan los anuncios de la campana. Lo muestra el panel en 'Anuncios activos' cuando el anuncio todavia no trajo leads con UTM (con leads, el panel lo confirma solo por utm_campaign). El MCP no expone el formulario del creativo. 'Formulario anuncios 1' (id 1686376169448567) es el unico que escucha el workflow de n8n del canal; confirmado el 2026-10-05 por 478 lecturas de leads con UTM. Agregado 2026-10-05."
+}

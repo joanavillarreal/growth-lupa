@@ -1,0 +1,35 @@
+Corrida de SIMULACION del 2026-09-25, pedida por Joana en chat para ver que
+diria la guardia hoy con las reglas nuevas. NO se mando nada a Slack.
+
+Los seis JSON del MCP son respuestas reales de la cuenta 725901852075382,
+traidas el 25/09 para la ventana 11/09-24/09.
+
+UNA SALVEDAD SOBRE roster.json: el nivel anuncio devolvio 70 filas y aca estan
+las 13 vivas mas 5 de muestra de campanas apagadas. El resultado es identico
+porque construir_roster filtra en cadena por campana viva, y ninguna de las
+campanas con error esta viva (se verifico id por id). Una corrida de verdad
+guarda las 70.
+
+RESULTADO DE LA SIMULACION: 4 alertas (3 de G2, 1 de G3 sostenido).
+
+HALLAZGO QUE VALE MAS QUE LA SIMULACION: el control de totales, que Joana saco
+de las alertas el 2026-09-25, NO CUADRA en estos mismos datos. El detalle
+diario a nivel anuncio suma 361.312 ARS y el total de la ventana da 377.906:
+faltan 16.594 ARS en 4 de 18 anuncios, y no son cualquiera —
+
+    8.904 ARS  Meme reel - IA                       [Awareness Boxer Taller (AGENTE META)]
+    5.869 ARS  Testimonio - Mendez                  [Awareness Boxer Taller (AGENTE META)]
+    1.090 ARS  DemoIA | Video35 | Frio-Repuesteras  [Conversiones]
+      731 ARS  AgilidadMostrador | Video35          [Conversiones]
+
+son los CUATRO CREATIVOS NUEVOS. La llamada diaria del MCP no los devolvio
+(trampa 6 de referencias/meta-mcp.md: pierde entidades sin avisar con cursor).
+
+O sea que esta corrida evaluo G2 y G3 sobre 14 de 18 anuncios, sin saberlo, y
+los que faltaban son justo los que hay que vigilar. Con la alerta puesta, la
+guardia lo habria dicho. A nivel campana SI cuadra (377.906 = 377.906), asi que
+el gasto reportado esta bien; lo que falta es el detalle por anuncio.
+
+ACTUALIZACION (mismo 25/09): Joana repuso la alerta despues de ver este
+hallazgo. Corrida de nuevo con la alerta puesta, esta simulacion da 5 alertas
+en vez de 4, y la primera es la que nombra los cuatro anuncios que faltan.

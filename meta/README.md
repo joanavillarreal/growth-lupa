@@ -1,0 +1,16 @@
+# Meta · Panel Meta Ads
+
+Copiado de `agente-meta-ads` (commit f36b3b7, 08/10/2026). **Solo la lectura y el panel**:
+lo que propone o ejecuta cambios en la cuenta es de Turbo y no está acá.
+
+- `scripts/panel_meta.py` arma `informes/panel/datos.json` y lo reinyecta en
+  `informes/panel-trimestral.html` (link oficial en `paneles.yaml`). Importa sus definiciones
+  de `analizar_crm.py`, `analizar_meta.py` y `meta_desde_mcp.py`: no se reimplementan.
+- `scripts/traer_prospectos.py` trae el CRM del trimestre con `BITRIX_WEBHOOK_URL`.
+- `datos/meta-ads/` son las respuestas crudas del MCP de Meta (guardia diaria y CSV históricos);
+  `datos/crm/` los prospectos. Las dos carpetas son el histórico: no se borran.
+- `memoria/*.jsonl` son entradas del panel (cambios, alertas, guardia, experimentos) que hoy
+  escribe `agente-meta-ads`.
+- `config/` campañas, taxonomía de leads y cuenta.
+
+Detalle del panel: `.claude/skills/boxer-meta-ads/referencias/panel.md` en `agente-meta-ads`.
