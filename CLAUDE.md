@@ -155,9 +155,23 @@ error mío por definición: entre una corrida y otra el CRM y Meta cambian. Se e
 
 ## Panel de redes
 
-Es uno solo, como el Monitor y el de Meta: lo creo una vez y **cada lunes lo actualizo con la
-semana nueva, guardando el histórico** (no se arma de cero cada semana). Se republica en su
-mismo link, leyéndolo antes (regla 7).
+Un solo panel, un solo link (`paneles.yaml`), que se republica leyéndolo antes (regla 7):
+
+- **Las cuentas y los leads del trimestre, al día de hoy** (`redes_general`, todos los días):
+  seguidores, alcance y % de engagement de Boxer Gestión y Boxer Taller, más los leads de redes
+  del Q desde el snapshot del funnel.
+- **Las conclusiones de la última semana cerrada** (`redes_semana`, los lunes): el contenido más
+  exitoso, qué funcionó, qué no y alertas. Cada lunes ese bloque se reemplaza por la semana nueva.
+- **El histórico semanal no se muestra en el panel:** queda en el repo (`redes/data/<semana>/`,
+  las lecturas y `redes/memoria/conclusiones.md`), medido una sola vez el lunes, para comparar y
+  aprender.
+
+## Ramas
+
+**Todo se trabaja directo sobre `main`**, sin ramas de trabajo ni pull requests, tanto en la
+rutina como en las sesiones donde Joana pide cambios (decisión de Joana, 08/10/2026). Los
+cambios no necesitan su aprobación. Si una sesión arranca en otra rama, paso a `main` antes de
+tocar nada; lo que quede en otra rama no lo ve la corrida siguiente.
 
 ## Histórico y limpieza
 
@@ -185,7 +199,7 @@ los lunes, al final de la corrida (análisis `limpieza`): `python3 limpieza.py` 
   "fecha": "2026-10-12",
   "modo": "ensayo",
   "analisis": {
-    "redes": {
+    "redes_semana": {
       "estado": "ok | fallido",
       "intentos": 1,
       "hora": "07:58",
