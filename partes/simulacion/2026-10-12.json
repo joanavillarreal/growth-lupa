@@ -140,6 +140,17 @@
         }
       },
       "para": []
+    },
+    "limpieza": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "15:29",
+      "resumen": "Nada para borrar todavía (el histórico más viejo es del 17/08).",
+      "error": null,
+      "herramientas": [],
+      "artefacto": null,
+      "datos": {},
+      "para": []
     }
   },
   "preparacion": {
