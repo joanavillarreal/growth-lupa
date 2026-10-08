@@ -54,6 +54,7 @@ Uno solo por corrida, aunque no haya tocado nada. Formato:
 ⏸ <análisis> — agotado: no se reintenta hasta mañana
 <si aplica: Gasto de Meta sin actualizar desde dd/mm>
 <si aplica: Campañas a confirmar (producto y origen del CRM): <nombres>>
+<si aplica: Orígenes nuevos sin canal (decidís vos): <nombre (id)>; y los que sumé solos a Viajes Comerciales>
 Paneles: <links que se publicaron hoy>
 Parte: partes/<AAAA-MM-DD>.json
 ```

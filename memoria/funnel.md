@@ -18,3 +18,14 @@ derivados al Q4 2026 (de 16 a 18):
 (confirmado por Joana). Una negociación vieja, sin prospecto, que entra al embudo con fecha de
 derivación en el Q actual no es un error de carga: no marcarla como anomalía ni como dato a
 revisar.
+
+## 08/10/2026 — canal Viajes Comerciales y orígenes nuevos (decisión de Joana)
+
+- Las visitas presenciales (UC_Q8YEOB, UC_B9QEB4, UC_EOUHYW, UC_AKD6XC, UC_XSJ4FH, UC_LV00VK y
+  UC_287IFD Bariloche) salieron de Vendedores Viajantes a **Viajes Comerciales**. Vendedores
+  Viajantes se queda con WEB, UC_QEVAWL, UC_BNRV5I y UC_P83Y0E.
+- UC_V7TMQ9 (Webinar Ordenar Stock) y UC_T93XNH (Webinar - Decisiones usando IA) → Cursos y Webinars.
+- UC_7VU31W (Form Black Friday) → orígenes sin atribuir: es viejo, no avisarlo como nuevo.
+- **En ensayo, el Monitor oficial (rutina vieja) sigue con las definiciones viejas**: desde el
+  09/10 la comparación va a dar diferencias en Vendedores Viajantes, Viajes Comerciales, Cursos y
+  Webinars y Sin atribuir. Son esperadas y no son un error; el total general no cambia.

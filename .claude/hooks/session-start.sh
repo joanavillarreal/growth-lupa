@@ -6,15 +6,17 @@ cd "${CLAUDE_PROJECT_DIR:-$(dirname "$0")/../..}" || exit 0
 
 echo "== Arranque de Lupa =="
 
-# 1. Python y dependencias
+# 1. Python y dependencias: todas desde requirements.txt, acá y no en medio de la corrida
 if ! command -v python3 >/dev/null; then
   echo "ERROR: falta python3"; exit 0
 fi
-python3 -c "import yaml, zoneinfo; zoneinfo.ZoneInfo('America/Argentina/Buenos_Aires')" 2>/dev/null \
-  || pip install -q pyyaml tzdata 2>&1 | tail -1
-[ -f requirements.txt ] && pip install -q -r requirements.txt 2>&1 | tail -1
-python3 -c "import yaml, requests" 2>/dev/null || pip install -q pyyaml requests 2>&1 | tail -1
-python3 -c "import yaml, requests" 2>/dev/null && echo "python: ok" || echo "ERROR: faltan pyyaml/requests"
+for i in 1 2 3; do
+  pip install -q -r requirements.txt >/tmp/lupa-pip.log 2>&1 && break
+  sleep $((2 ** i))
+done
+python3 -c "import yaml, requests, zoneinfo; zoneinfo.ZoneInfo('America/Argentina/Buenos_Aires')" 2>/dev/null \
+  && echo "python: ok (requirements.txt instalado)" \
+  || { echo "ERROR: no se pudo instalar requirements.txt:"; tail -3 /tmp/lupa-pip.log; }
 
 # Variables de entorno (solo si existen; nunca su valor)
 [ -n "${BITRIX_WEBHOOK_URL:-}" ] && echo "BITRIX_WEBHOOK_URL: definida" \

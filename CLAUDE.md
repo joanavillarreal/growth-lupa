@@ -74,11 +74,18 @@ verifica en todas las corridas (`herramientas_siempre`).
 
 ### Funnel
 
-`python3 run.py ingest && python3 run.py dashboard` y `python3 run.py alarma`. Después, según el
+`python3 run.py ingest`, `python3 run.py origenes --aplicar`, `python3 run.py dashboard` y
+`python3 run.py alarma`. Después, según el
 modo (ver "Modo ensayo"): en ensayo, leer el Monitor oficial y comparar; en oficial, leerlo y
 republicar `dashboard/index.html` en ese mismo link.
 Bitrix entra por la variable `BITRIX_WEBHOOK_URL`: nunca se muestra, ni se escribe en un archivo
-ni en un mensaje. Las definiciones (`config/definitions.yaml`) no se tocan.
+ni en un mensaje.
+
+**Las definiciones (`config/definitions.yaml`) las cambia solo Joana**, con una excepción que
+ella fijó el 08/10/2026: un origen nuevo cuyo nombre empieza con "Visita Presencial" va solo a
+`viajes_comerciales` (`run.py origenes --aplicar`, regla `prefijos_automaticos`). Cualquier otro
+origen de Bitrix que no esté en ningún canal se lista en el mensaje del día para que ella decida;
+no lo asigno yo.
 
 ## Reglas (salen de errores reales de la rutina anterior; no son opcionales)
 
@@ -105,6 +112,11 @@ ni en un mensaje. Las definiciones (`config/definitions.yaml`) no se tocan.
 7. **Antes de republicar un artefacto, lo leo** (`Artifact` con `action: read`) y parto de
    esa versión.
 8. **Todo lo que perdura va al repo y se pushea.** La sesión se borra al terminar.
+9. **Nunca transcribo a mano una respuesta de un conector.** Guardo siempre la respuesta exacta:
+   si es grande, copio el archivo de resultado que deja el entorno; si es chica, escribo el texto
+   tal cual vino, sin reformatear. Antes de seguir, un script valida que el JSON abre y que los
+   totales cuadran (Meta: `meta/scripts/validar_mcp.py`); si no cuadra, se vuelve a pedir y, si
+   sigue, el análisis es fallido. Ver `procedimientos/meta.md`.
 
 ## Límites
 
@@ -115,7 +127,8 @@ ni en un mensaje. Las definiciones (`config/definitions.yaml`) no se tocan.
   La rutina tiene un solo repo: `growth-lupa`.
 - Los repos de origen (`agente-growth`, `agente-meta-ads`, `agente-redes`) se usaron una vez para
   copiar: **nunca se modifican**, no se pushea a ellos y no se tocan sus rutinas.
-- Las definiciones del funnel (`config/definitions.yaml`) no se tocan.
+- Las definiciones del funnel (`config/definitions.yaml`) las cambia Joana; yo solo aplico la
+  regla de "Visita Presencial" (ver Funnel).
 - Meta: solo lectura, guardia y panel. Proponer o ejecutar cambios en la cuenta es de **Turbo**.
   La guardia avisa; no decide ni pausa nada.
 - Bitrix: solo lectura, salvo la carga de inversión al SPA 1052 (ver arriba).

@@ -46,7 +46,8 @@ canales:
     nombre: "Cursos y Webinars"
     activo: false
     origenes: ["UC_AZSX3J", "UC_70MJUO", "UC_6VBCJ2", "UC_CQ4N7U", "UC_ZUNX2Y",
-               "UC_AUSBR6", "UC_E4XHI3", "UC_VN0SA1"]
+               "UC_AUSBR6", "UC_E4XHI3", "UC_VN0SA1",
+               "UC_V7TMQ9", "UC_T93XNH"]           # Webinar Ordenar Stock | Webinar - Decisiones usando IA (Joana, 08/10/2026)
     tipos_gasto: []
 
   embajadores_referidos:
@@ -58,8 +59,19 @@ canales:
   vendedores_viajantes:
     nombre: "Vendedores Viajantes"
     activo: false
-    origenes: ["WEB", "UC_Q8YEOB", "UC_B9QEB4", "UC_EOUHYW", "UC_AKD6XC",
-               "UC_XSJ4FH", "UC_LV00VK", "UC_QEVAWL", "UC_BNRV5I", "UC_P83Y0E"]
+    # Lead de Vendedor - Referido | Automechanika 2024 | Automechanika 2026 | QR Warnes
+    origenes: ["WEB", "UC_QEVAWL", "UC_BNRV5I", "UC_P83Y0E"]
+    tipos_gasto: []
+
+  # Las visitas presenciales salieron de vendedores_viajantes (Joana, 08/10/2026).
+  # Regla: todo origen nuevo cuyo nombre empiece con "Visita Presencial" entra acá
+  # solo, sin preguntar (growth/origenes_nuevos.py). Sin inversión en el SPA por ahora.
+  viajes_comerciales:
+    nombre: "Viajes Comerciales"
+    activo: false
+    prefijos_automaticos: ["Visita Presencial"]
+    origenes: ["UC_Q8YEOB", "UC_B9QEB4", "UC_EOUHYW", "UC_AKD6XC", "UC_XSJ4FH",
+               "UC_LV00VK", "UC_287IFD"]
     tipos_gasto: []
 
   organico_contenido:
@@ -83,7 +95,8 @@ canales:
 
 # Orígenes que no queremos atribuir a ningún canal (ruido / sin dato).
 # Aparecen en el panel de salud de datos, no en las métricas por canal.
-origenes_sin_atribuir: ["WEBFORM", "UC_BADL88", "BOOKING", "CALLBACK", "UC_F8G876", "UC_LJ07B1"]
+origenes_sin_atribuir: ["WEBFORM", "UC_BADL88", "BOOKING", "CALLBACK", "UC_F8G876", "UC_LJ07B1",
+                        "UC_7VU31W"]            # Form Black Friday: viejo (Joana, 08/10/2026)
 
 # -----------------------------------------------------------------------------
 # GASTO (SPA 1052 "Inversiones y Gastos")

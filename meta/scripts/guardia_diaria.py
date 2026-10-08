@@ -1140,6 +1140,16 @@ def main():
     if not a.carpeta:
         ap.error("falta la carpeta de la corrida (o --autotest)")
 
+    # Freno: las respuestas guardadas tienen que abrir y cuadrar (scripts/validar_mcp.py).
+    # Una respuesta cortada o mal copiada daria alertas falsas o un silencio falso.
+    from validar_mcp import validar
+    malos, _ = validar(a.carpeta)
+    if malos:
+        print("NO CUADRA — la guardia no corre con estas respuestas:")
+        for m in malos:
+            print(f"  - {m}")
+        return 1
+
     u = cargar_umbrales(a.umbrales)
     hoy = datetime.date.fromisoformat(a.hoy) if a.hoy else datetime.date.today()
     ayer = hoy - datetime.timedelta(days=1)

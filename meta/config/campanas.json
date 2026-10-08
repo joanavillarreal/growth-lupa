@@ -44,7 +44,8 @@
     "Automechanika 2026": "UC_BNRV5I",
     "Web Boxer": "UC_UNW1H0",
     "Form tienda nube": "UC_8N2HTG",
-    "Entrevista Campana Repuestos": "UC_QJA9X4"
+    "Entrevista Campana Repuestos": "UC_QJA9X4",
+    "Webinar Ordenar Stock": "UC_V7TMQ9"
   },
   "contraste_organico": [
     "Redes"
@@ -255,11 +256,12 @@
       "id_meta": "120254717004450427",
       "grupo": "eventual",
       "bloque": "evento",
-      "destino": "PENDIENTE",
-      "origenes_crm": "PENDIENTE",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Webinar Ordenar Stock"
+      ],
       "activa": true,
-      "a_confirmar": true,
-      "nota": "Agregada por Lupa el 2026-10-08: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento)."
+      "nota": "Agregada por Lupa el 2026-10-08. Joana confirmo el 08/10: producto Boxer Gestion, origen Webinar Ordenar Stock (UC_V7TMQ9). Destino formulario como las otras campanas de webinar (no verificado en Meta: el objetivo no vino en las respuestas del 08/10). Falta fecha_evento: sin ella la guardia no avisa si gasta despues del webinar."
     }
   ],
   "conjuntos_excepcion": [

@@ -28,7 +28,27 @@ que se trajeron y el parte lo dice ("cambios en la cuenta sin actualizar desde <
 ## 1. Datos de Meta → `datos/meta-ads/guardia/<hoy>/mcp/`
 
 Las llamadas exactas (campos, filtros, ventanas) están en `meta/referencias/guardia-diaria.md`,
-tabla de llamadas #1 a #11. No improvisar parámetros. Cada respuesta se guarda **tal cual**.
+tabla de llamadas #1 a #11. No improvisar parámetros.
+
+**Cada respuesta se guarda exacta, nunca transcrita a mano** (Joana, 08/10/2026):
+- Si es grande, el entorno la deja en un archivo de resultado (`.../tool-results/...`): se copia
+  ese archivo con `cp`, sin abrirlo ni retocarlo.
+- Si es chica y vino en el texto de la respuesta, se escribe el texto **tal cual vino**: sin
+  reformatear, sin resumir, sin sacar campos ni filas.
+- Si una respuesta trae justo el `limit` de filas (p. ej. 200), está cortada: se vuelve a pedir
+  con un `limit` mayor.
+
+Después de guardar todo, antes de seguir:
+
+```bash
+python3 scripts/validar_mcp.py datos/meta-ads/guardia/<hoy>/
+```
+
+Comprueba que cada archivo abre como JSON y que los totales cuadran (gasto de cada campaña y de
+cada anuncio = suma de sus días). Si dice `NO CUADRA`, se vuelve a pedir lo que falla y se valida
+de nuevo; si sigue sin cuadrar, el análisis es **fallido** con ese mensaje. La guardia corre la
+misma validación al arrancar y no corre si no cuadra. (Así se vio que el 25, 27 y 28/09
+`anuncio-diario` vino cortado en 200 filas.)
 
 | # | Archivo | Para |
 |---|---|---|

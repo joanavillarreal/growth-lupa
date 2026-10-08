@@ -1,0 +1,5 @@
+# Dependencias de Lupa. Las instala el hook de arranque (.claude/hooks/session-start.sh)
+# antes de la corrida, nunca en medio.
+pyyaml>=6.0
+requests>=2.31
+tzdata

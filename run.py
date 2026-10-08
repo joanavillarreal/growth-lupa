@@ -6,6 +6,7 @@
   python3 run.py alerts
   python3 run.py dashboard
   python3 run.py daily               # ingest + dashboard + alertas (rutina diaria)
+  python3 run.py origenes [--aplicar] # orígenes sin canal (Visita Presencial entra sola)
   python3 run.py inversion rango     # qué días faltan cargar en el SPA de inversión
   python3 run.py inversion cargar --meta meta.json [--dry-run]
 """
@@ -109,6 +110,22 @@ def cmd_dashboard(args, cfg):
     print(f"Dashboard generado: {salida}")
 
 
+def cmd_origenes(args, cfg):
+    """Orígenes sin canal: los de prefijo automático se suman solos; el resto, a Joana."""
+    from growth import origenes_nuevos
+    r = origenes_nuevos.detectar(ingest.cargar_ultimo(), cfg)
+    for a in r["automaticos"]:
+        print(f"AUTOMATICO: {a['nombre']} ({a['id']}) -> {a['canal']}"
+              + ("" if args.aplicar else " [sin --aplicar: no se escribió]"))
+    if r["automaticos"] and args.aplicar:
+        origenes_nuevos.aplicar(r["automaticos"])
+    for a in r["a_decidir"]:
+        print(f"A DECIDIR: {a['nombre']} ({a['id']}), {a['prospectos']} prospectos")
+    if not (r["automaticos"] or r["a_decidir"]):
+        print("Todos los orígenes de Bitrix tienen canal.")
+    print(json.dumps(r, ensure_ascii=False))
+
+
 def cmd_inversion(args, cfg):
     """Carga del gasto de Meta y Google al SPA 1052 (rutina de lunes y jueves)."""
     from growth import inversion
@@ -138,6 +155,7 @@ def main():
     x.add_argument("--canal", required=True, help="clave de canal: meta, google, redes_sociales, general...")
     x.add_argument("--dias", type=int, default=28)
     sub.add_parser("daily")
+    o = sub.add_parser("origenes"); o.add_argument("--aplicar", action="store_true")
     i = sub.add_parser("inversion"); i.add_argument("accion", choices=["rango", "cargar"])
     i.add_argument("--meta", help="JSON con la respuesta de ads_get_ad_entities")
     i.add_argument("--desde"); i.add_argument("--hasta"); i.add_argument("--dry-run", action="store_true")
@@ -147,7 +165,7 @@ def main():
      "dashboard": cmd_dashboard, "daily": cmd_daily,
      "alarma": cmd_alarma, "semanal": cmd_semanal,
      "contexto-experimento": cmd_contexto_experimento,
-     "inversion": cmd_inversion}[args.cmd](args, cfg)
+     "inversion": cmd_inversion, "origenes": cmd_origenes}[args.cmd](args, cfg)
 
 
 if __name__ == "__main__":
