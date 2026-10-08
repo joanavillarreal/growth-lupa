@@ -662,10 +662,14 @@ def leer_memoria(desde, hasta):
     m = os.path.join(RAIZ, "memoria")
     en_rango = lambda d: bool(d) and desde.isoformat() <= d[:10] <= hasta.isoformat()
 
-    cambios = [c for c in leer_jsonl(os.path.join(m, "cambios.jsonl"))
+    # Lupa (08/10/2026): los cambios salen del registro de actividad de Meta
+    # (scripts/cambios_desde_actividad.py), las alertas solo de la guardia propia, y los
+    # experimentos de la solapa Experimentos del Monitor (scripts/experimentos_desde_monitor.py).
+    # Lo que escribía agente-meta-ads quedó en memoria/archivo/ y ya no se lee.
+    cambios = [c for c in leer_jsonl(os.path.join(m, "cambios-actividad.jsonl"))
                if en_rango(c.get("fecha"))]
 
-    alertas = leer_jsonl(os.path.join(m, "alertas.jsonl"))
+    alertas = []   # las del análisis semanal son de Turbo: llegarán por su parte
     # Las de la guardia diaria entran como alertas tambien: son del mismo canal
     # y Joana las quiere ver en el mismo lugar.
     for g in leer_jsonl(os.path.join(m, "guardia.jsonl")):
@@ -681,7 +685,7 @@ def leer_memoria(desde, hasta):
              if (a.get("abierta") or "") <= hasta.isoformat()
              and (not a.get("cerrada") or a["cerrada"] >= desde.isoformat())]
 
-    exps = [e for e in leer_jsonl(os.path.join(m, "experimentos.jsonl"))
+    exps = [e for e in leer_jsonl(os.path.join(m, "experimentos-monitor.jsonl"))
             if (e.get("abierto") or "") <= hasta.isoformat()]
     return cambios, vivas, exps
 
@@ -743,8 +747,8 @@ def construir(q, hoy=None):
                 "NO se puede saber que anuncio trajo un lead, y el panel no lo "
                 "muestra. Inventarlo esta prohibido."),
             "nota_cambios": (
-                "Las marcas de cambios arrancan el 2026-09-21. Lo anterior vive "
-                "como prosa en memoria/bitacora-cambios.md y no se migro."),
+                "Las marcas de cambios salen del registro de actividad de Meta, desde el "
+                "2026-09-21: dicen qué cambió, quién y cuándo, no el porqué."),
             "nota_cohorte": (
                 f"Los leads de las ultimas {SEMANAS_INMADURAS} semanas todavia "
                 f"pueden convertir: su derivacion es PROVISIONAL."),
@@ -895,13 +899,14 @@ def autotest():
         global RAIZ
         real = RAIZ
         os.makedirs(os.path.join(tmp, "memoria"))
-        with open(os.path.join(tmp, "memoria", "alertas.jsonl"), "w", encoding="utf-8") as f:
-            f.write(json.dumps({"id": "VIEJA", "abierta": "2026-05-01", "cerrada": None,
+        # Las alertas salen solo de la guardia de Lupa (memoria/guardia.jsonl).
+        with open(os.path.join(tmp, "memoria", "guardia.jsonl"), "w", encoding="utf-8") as f:
+            f.write(json.dumps({"clave": "VIEJA", "primer_aviso": "2026-05-01", "resuelta_el": None,
                                 "estado": "abierta", "titulo": "x"}) + "\n")
-            f.write(json.dumps({"id": "CERRADA-ANTES", "abierta": "2026-04-01",
-                                "cerrada": "2026-05-02", "estado": "cerrada",
+            f.write(json.dumps({"clave": "CERRADA-ANTES", "primer_aviso": "2026-04-01",
+                                "resuelta_el": "2026-05-02", "estado": "resuelta",
                                 "titulo": "y"}) + "\n")
-            f.write(json.dumps({"id": "FUTURA", "abierta": "2026-11-01", "cerrada": None,
+            f.write(json.dumps({"clave": "FUTURA", "primer_aviso": "2026-11-01", "resuelta_el": None,
                                 "estado": "abierta", "titulo": "z"}) + "\n")
         RAIZ = tmp
         try:

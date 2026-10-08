@@ -12,7 +12,10 @@ rutinas viejas publicaron ayer, que es lo que hay hoy en el link oficial.
 Uso:
   python3 comparar.py monitor_growth <html_oficial_leido> --propio <html_de_lupa_de_ayer>
   python3 comparar.py panel_meta_ads <html_oficial_leido> --propio ... --json salida.json
-  python3 comparar.py guardia <AAAA-MM-DD>   # la guardia de Lupa contra la de agente-meta-ads
+  python3 comparar.py guardia <AAAA-MM-DD> <mensaje.txt>
+      # la guardia de Lupa contra el mensaje que la guardia vieja mandó a
+      # #adqui-notificaciones-canales ese día (leído de Slack y guardado en un .txt;
+      # vacío si no mandó nada). No se lee el repo de ningún otro agente.
 
 Sale con código 0 si los datos coinciden y 1 si hay diferencias (las lista).
 """
@@ -25,6 +28,11 @@ from pathlib import Path
 import yaml
 
 RAIZ = Path(__file__).resolve().parent
+
+# Partes del panel que Lupa arma distinto a propósito y no se comparan (08/10/2026): en el Panel
+# Meta Ads, los cambios salen del registro de actividad de Meta, las alertas solo de la guardia
+# propia y los experimentos del Monitor; la rutina vieja los tomaba de agente-meta-ads.
+IGNORAR = {"panel_meta_ads": ("cambios", "alertas", "experimentos", "limites.nota_cambios")}
 
 # Cómo encontrar los datos dentro del HTML de cada panel.
 EXTRACTORES = {
@@ -62,22 +70,32 @@ def main():
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("panel", choices=[*EXTRACTORES, "guardia"])
     p.add_argument("oficial", help="HTML leído del link oficial (o la fecha, para guardia)")
+    p.add_argument("mensaje", nargs="?", type=Path, help="guardia: el mensaje de Slack de la guardia vieja")
     p.add_argument("--propio", type=Path, help="versión de Lupa a comparar (por defecto, la del repo)")
     p.add_argument("--json", type=Path, help="guarda el resultado para el parte")
     args = p.parse_args()
 
     if args.panel == "guardia":
-        # Lo que cada guardia decidió mandar a Slack ese día (y lo que silenció).
-        claves = ("alertas_que_disparan", "se_mandan", "silenciadas", "datos_hasta")
-        leer = lambda r: {k: json.loads(r.read_text(encoding="utf-8")).get(k) for k in claves}
-        propio = leer(RAIZ / "meta" / "informes" / "guardia" / f"{args.oficial}.json")
-        oficial = leer(Path("/home/user/agente-meta-ads/informes/guardia") / f"{args.oficial}.json")
+        # Lo que mi guardia decidió mandar ese día, contra lo que la vieja mandó a Slack.
+        mia = json.loads((RAIZ / "meta" / "informes" / "guardia" / f"{args.oficial}.json")
+                         .read_text(encoding="utf-8"))
+        texto = args.mensaje.read_text(encoding="utf-8") if args.mensaje else ""
+        titulos = [a.get("titulo", "") for a in mia.get("se_mandan") or []]
+        propio = {"manda": bool(titulos), "titulos": sorted(titulos)}
+        oficial = {"manda": bool(texto.strip()),
+                   "titulos": sorted(t for t in titulos if t and t in texto)}
         panel = {"nombre": f"Guardia del {args.oficial}"}
     else:
         panel = yaml.safe_load((RAIZ / "paneles.yaml").read_text(encoding="utf-8"))["paneles"][args.panel]
         ruta = args.propio or RAIZ / panel["archivo"]
         propio = datos(ruta.read_text(encoding="utf-8"), EXTRACTORES[args.panel])
         oficial = datos(Path(args.oficial).read_text(encoding="utf-8"), EXTRACTORES[args.panel])
+        for k in IGNORAR.get(args.panel, ()):
+            *padres, hoja = k.split(".")
+            for d in (propio, oficial):
+                for x in padres:
+                    d = d.get(x) or {}
+                d.pop(hoja, None)
 
     difs = [{"ruta": r, "lupa": a, "oficial": b} for r, a, b in diferencias(propio, oficial)]
     resultado = {"panel": args.panel, "coincide": not difs, "n_diferencias": len(difs),

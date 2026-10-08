@@ -16,8 +16,7 @@
 #   necesita:      preparaciones (abajo) que tienen que correr antes, una sola vez por día
 #                  aunque las usen varios análisis.
 #   entorno:       variables de entorno que tienen que existir (nunca se muestran).
-#   fuentes:       repos de otros agentes que se leen (nunca se escriben). Tienen que estar
-#                  en /home/user/<repo>: la rutina los trae como fuente.
+#   Lupa no lee el repo de ningún otro agente: lo que viene de otro agente llega por su parte.
 #   procedimiento: los pasos del análisis.
 
 zona_horaria: America/Argentina/Buenos_Aires
@@ -64,12 +63,12 @@ analisis:
     procedimiento: procedimientos/meta.md
     necesita: [gasto_meta]
     entorno: [BITRIX_WEBHOOK_URL]
-    fuentes: [agente-meta-ads]      # cambios, alertas y experimentos (hasta que exista Turbo)
     herramientas:
       - ads_get_ad_entities
       - ads_get_errors
       - ads_get_creatives
       - ads_get_ad_accounts
+      - ads_account_get_activity_logs   # cambios en la cuenta
       - slack_read_channel          # re-ingresos de #adqui-automatizaciones
     slack: "#adqui-notificaciones-canales"
     disparar_despues: []      # futuro: [turbo]

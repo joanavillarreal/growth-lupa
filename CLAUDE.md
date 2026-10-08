@@ -48,7 +48,7 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 - Redes (copiado de `agente-redes`): todo en `redes/` (scripts de medición y del panel, datos
   por semana desde la W34, memoria de aprendizajes en `redes/memoria/conclusiones.md`). Ver
   `procedimientos/redes_semana.md` y `procedimientos/redes_general.md`.
-- Meta (copiado de `agente-meta-ads`): todo en `meta/` (scripts de guardia y panel, datos
+- Meta (copiado de `agente-meta-ads` el 08/10/2026, que ya no se lee): todo en `meta/` (scripts de guardia y panel, datos
   crudos del MCP, CRM, config, referencias). Ver `meta/README.md`.
 
 ## Cómo es una corrida
@@ -59,8 +59,7 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
    reintentos se registra como fallida y **los análisis corren igual**: el Monitor muestra solo
    "Gasto de Meta sin actualizar desde <fecha>", y el mensaje de Slack también lo dice.
 3. Para cada análisis pendiente, en orden:
-   1. Verificar herramientas, variables de entorno y fuentes (regla 2). Las fuentes son repos
-      de otros agentes en `/home/user/<repo>`: se leen, nunca se escriben ni se pushean.
+   1. Verificar herramientas y variables de entorno (regla 2).
    2. Medir, actualizar el panel (regla 7) y escribir el parte con `parte.py`.
    3. Commit + push a `main` del parte y los datos nuevos.
    4. Avisar en el Slack del análisis.
@@ -109,8 +108,13 @@ ni en un mensaje. Las definiciones (`config/definitions.yaml`) no se tocan.
 
 ## Límites
 
-- Los repos de origen (`agente-growth`, `agente-meta-ads`, `agente-redes`) se leen y se copian,
-  **nunca se modifican**, no se pushea a ellos y no se tocan sus rutinas.
+- **No leo el repo de ningún otro agente.** Los agentes no se leen los repos entre sí: se pasan
+  el trabajo por artefactos y partes. Lo que hoy viene de otro agente (las alertas del análisis
+  semanal de Meta, el porqué de los cambios en la cuenta) llega por el parte de Turbo cuando
+  exista; mientras tanto, lo que no se pueda medir directo queda "sin actualizar desde <fecha>".
+  La rutina tiene un solo repo: `growth-lupa`.
+- Los repos de origen (`agente-growth`, `agente-meta-ads`, `agente-redes`) se usaron una vez para
+  copiar: **nunca se modifican**, no se pushea a ellos y no se tocan sus rutinas.
 - Las definiciones del funnel (`config/definitions.yaml`) no se tocan.
 - Meta: solo lectura, guardia y panel. Proponer o ejecutar cambios en la cuenta es de **Turbo**.
   La guardia avisa; no decide ni pausa nada.
@@ -144,8 +148,11 @@ contra **lo que las rutinas viejas hicieron ayer**, antes de generar la de hoy:
 - Monitor y Panel Meta Ads: `git show HEAD:<archivo>` a un archivo del scratchpad, leer el link
   oficial (`Artifact` read, `path: index.html`) y
   `python3 comparar.py <panel> <oficial> --propio <mío de ayer> --json <scratchpad>/cmp.json`.
-- Guardia: `python3 comparar.py guardia <ayer>` (mi `meta/informes/guardia/` contra el de
-  `agente-meta-ads`).
+- Guardia: leer en #adqui-notificaciones-canales el mensaje de "Guardia de Meta Ads" de ayer
+  (vacío si no hubo), guardarlo en un .txt del scratchpad y
+  `python3 comparar.py guardia <ayer> <mensaje.txt>` (qué mandé yo contra qué mandó la vieja).
+- En el Panel Meta Ads no se comparan los cambios, las alertas ni los experimentos: los armo
+  distinto a propósito (registro de actividad de Meta, mi guardia y el Monitor).
 - Inversión: corro `cargar --dry-run`. Al día siguiente verifico que lo que la rutina vieja
   cargó en el SPA para esos días coincida con mi dry-run.
 

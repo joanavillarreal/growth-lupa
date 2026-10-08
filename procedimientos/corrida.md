@@ -5,7 +5,7 @@ Esto es lo que hace la rutina diaria (7:50, hora de Argentina). La rutina solo d
 
 ## 0. Arranque
 
-- El hook de arranque ya verificó Python, las variables de entorno y las fuentes, y dejó el repo
+- El hook de arranque ya verificó Python y las variables de entorno, y dejó el repo
   en `main` al día. Leer lo que imprimió: si dice ERROR, eso va al mensaje final.
 - Si no existe `/home/user/growth-lupa/que_toca_hoy.py`, la rutina no tiene el repo como fuente:
   mandar una sola línea al DM D0BRVS7A4A3 diciéndolo y terminar. No intentar clonarlo.

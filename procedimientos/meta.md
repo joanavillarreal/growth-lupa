@@ -1,22 +1,29 @@
 # Análisis `meta` — guardia diaria y Panel Meta Ads
 
 Copiado de la rutina "Agente Meta - Guardia diaria" de `agente-meta-ads` (pasos 1 a 6) y de
-`meta/referencias/panel.md`. Todo se corre desde `meta/` (`cd meta`). **Solo lectura**: no se
+`meta/referencias/panel.md`. Desde el 08/10/2026 no lee nada de ese repo. Todo se corre desde `meta/` (`cd meta`). **Solo lectura**: no se
 escribe en Meta ni en Bitrix; lo que propone o ejecuta cambios es de Turbo.
 
 Cuenta **`725901852075382`** (ARS; hay otra casi igual en USD: usar siempre el ID). Un
 `client_conversation_id` nuevo, el mismo en todas las llamadas. `<hoy>` es la fecha de Argentina.
 
-## 0. Entradas que escribe otro agente (solo lectura)
+## 0. Cambios en la cuenta y experimentos (todo propio: no se lee el repo de ningún agente)
 
-Copiar desde `/home/user/agente-meta-ads/memoria/` a `meta/memoria/`: `cambios.jsonl`,
-`alertas.jsonl` y `experimentos.jsonl`. **Nunca escribir ni pushear en `agente-meta-ads`.**
-Si el repo no está en el contenedor, seguir con la última copia y decirlo en el parte (el panel
-puede no mostrar cambios recientes). Cuando exista Turbo, se leen de su repo.
+- **Cambios:** `ads_account_get_activity_logs`, cuenta `725901852075382`, desde el día anterior
+  al último cambio de `meta/memoria/cambios-actividad.jsonl` (o 3 días atrás) hasta ahora,
+  `limit: 1000`. La respuesta suele ser grande: el entorno la guarda en un archivo; copiarla tal
+  cual a `datos/meta-ads/actividad/<hoy>.json` y correr
+  `python3 scripts/cambios_desde_actividad.py datos/meta-ads/actividad/<hoy>.json`. Acumula sin
+  duplicar. Dice qué cambió, quién y cuándo; el porqué es de Turbo.
+- **Experimentos:** `python3 scripts/experimentos_desde_monitor.py` (desde la raíz del repo; lee
+  `experiments/EXP-*.md`, los de la solapa Experimentos del Monitor).
+- **Alertas:** las de la guardia propia (`memoria/guardia.jsonl`). Las del análisis semanal son
+  de Turbo: cuando exista, llegan por su parte.
+- Antes de reportar una entrega rota, mirar en `memoria/cambios-actividad.jsonl` si el objeto se
+  creó o se pausó hace poco: un conjunto recién creado y sin activar da la misma señal que uno roto.
 
-`memoria/guardia.jsonl` es de Lupa (lo escribe la guardia de acá): no se copia.
-Antes de reportar una entrega rota, leer `/home/user/agente-meta-ads/memoria/bitacora-cambios.md`:
-un conjunto recién creado y sin activar da la misma señal que uno roto.
+Si el registro de actividad no se puede leer, el panel muestra los cambios hasta el último día
+que se trajeron y el parte lo dice ("cambios en la cuenta sin actualizar desde <fecha>").
 
 ## 1. Datos de Meta → `datos/meta-ads/guardia/<hoy>/mcp/`
 
