@@ -1,0 +1,104 @@
+{
+  "fecha": "2026-10-13",
+  "modo": "ensayo",
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "15:31",
+      "resumen": "Monitor generado (no publicado). Alarma Google Ads sin prospectos. Comparación: diferencias del CRM entre las 9:00 y las 15:20.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "no publicado (ensayo): dashboard/index.html",
+      "datos": {
+        "alarma": [
+          "Google Ads sin prospectos 2 días seguidos (06/10 y 07/10): igual a la del lunes, mismo día real"
+        ],
+        "comparacion": {
+          "monitor_de_ayer_vs_oficial": "Q4: generados 38→40, no calificados 4→5, derivados 16→19 (leads nuevos y reactivados entre las 9:00 y las 15:20, ver memoria/funnel.md); Q3: generados 585→584 (prospecto borrado)"
+        }
+      },
+      "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "15:31",
+      "resumen": "Guardia sin novedades. Panel generado (no publicado).",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP_Meta__ads_get_ad_entities",
+        "mcp__MCP_Meta__ads_get_errors",
+        "mcp__MCP_Meta__ads_get_creatives",
+        "mcp__MCP_Meta__ads_get_ad_accounts",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "no publicado (ensayo): meta/informes/panel-trimestral.html",
+      "datos": {
+        "guardia": "SIN NOVEDADES (4 ya avisadas)",
+        "comparacion": {
+          "panel_de_ayer_vs_oficial": "15 diferencias: leads del CRM que cambiaron de etapa después de las 8:00"
+        }
+      },
+      "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "15:31",
+      "resumen": "Gestión 5.981 (−3 en 7 días), Taller 121 (+11); leads Q4: 2. Panel republicado.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP_Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "datos_hasta": "2026-10-07",
+        "marcas": {
+          "Boxer Gestión": {
+            "seguidores": 5981,
+            "seguidores_delta": -3,
+            "alcance_total": 25334,
+            "alcance_organico": 986,
+            "alcance_pago": 24348,
+            "engagement_pct": 6.3,
+            "engagement_no_confiable": true
+          },
+          "Boxer Taller": {
+            "seguidores": 121,
+            "seguidores_delta": 11,
+            "alcance_total": 12965,
+            "alcance_organico": 848,
+            "alcance_pago": 12117,
+            "engagement_pct": 23.3,
+            "engagement_no_confiable": true
+          }
+        },
+        "leads_q": {
+          "Q4 2026": 2,
+          "mismo_tramo_Q3": 4
+        }
+      },
+      "para": []
+    }
+  },
+  "preparacion": {
+    "gasto_meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "15:29",
+      "resumen": "Gasto de Meta al día hasta el 07/10",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP_Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "meta_spend_hasta": "2026-10-07",
+        "meta_adsets_hasta": "2026-10-07",
+        "nota": "nada que traer: los dos archivos ya llegaban a ayer (07/10 real)"
+      },
+      "para": []
+    }
+  }
+}
