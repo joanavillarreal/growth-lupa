@@ -11,8 +11,13 @@ Es **solo lectura**: no se toca nada de la cuenta.
 ## 1. Qué pedir
 
 `python3 run.py gasto-meta rango` → `desde`, `hasta` (siempre ayer, nunca el día en curso), los ids
-de redes (y de cursos, si el archivo los tiene) y los conjuntos de experimentos con su rango. Si
-`al_dia` es `true` y no hay conjuntos, no hay nada que pedir: registrar ok y seguir.
+de redes (y de cursos, si el archivo los tiene) y los conjuntos de experimentos con su rango.
+
+El rango incluye siempre **los últimos 3 días hasta ayer**, aunque ya estén cargados: Meta sigue
+corrigiendo el gasto de los días recientes, así que se vuelven a pedir y se reemplazan para que
+el Monitor use el gasto corregido (Joana, 08/10/2026). Solo en `meta_spend.json` y
+`meta_adsets.json`: **lo cargado en el SPA 1052 no se reescribe** (la diferencia es de centavos
+de dólar). El resultado de `cargar` dice cuánto cambió cada día vuelto a pedir.
 
 Si a `data/meta_spend.json` le falta un día, el Monitor lo cuenta como inversión cero y el CPL
 sale más barato de lo real: por eso se pide todo lo que falte hasta ayer.

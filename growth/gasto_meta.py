@@ -32,6 +32,10 @@ from .config import RAIZ
 SPEND = RAIZ / "data" / "meta_spend.json"
 ADSETS = RAIZ / "data" / "meta_adsets.json"
 TOLERANCIA_ARS = 1.0
+# Meta sigue corrigiendo el gasto de los días recientes: cada mañana se vuelven a pedir los
+# últimos DIAS_A_CORREGIR días (hasta ayer) y se reemplazan (Joana, 08/10/2026). Solo en estos
+# archivos, que usa el Monitor; lo ya cargado en el SPA 1052 no se reescribe.
+DIAS_A_CORREGIR = 3
 
 
 class NoCuadra(Exception):
@@ -79,12 +83,15 @@ def _por_dia(filas, nombre, desde: str, hasta: str, una_por_dia=True) -> dict[st
 
 
 def rango(hoy: date | None = None) -> dict:
-    """Qué hay que pedirle a Meta: desde el día siguiente al último cargado hasta ayer."""
+    """Qué hay que pedirle a Meta: lo que falta hasta ayer y, además, los últimos
+    DIAS_A_CORREGIR días, que se vuelven a pedir para reemplazarlos con el gasto corregido."""
     hoy = hoy or _hoy()
     ayer = (hoy - timedelta(days=1)).isoformat()
+    corregir = (hoy - timedelta(days=DIAS_A_CORREGIR)).isoformat()
     doc = json.loads(SPEND.read_text(encoding="utf-8"))
     ultimo = max(doc["dias"]) if doc.get("dias") else None
-    desde = (date.fromisoformat(ultimo) + timedelta(days=1)).isoformat() if ultimo else ayer
+    desde = (date.fromisoformat(ultimo) + timedelta(days=1)).isoformat() if ultimo else corregir
+    desde = min(desde, corregir)
     out = {"cuenta": doc["cuenta"], "desde": desde, "hasta": ayer, "al_dia": desde > ayer,
            "redes": [c["id"] for c in doc.get("campanas_redes", [])],
            "cursos_campanas": [c["id"] if isinstance(c, dict) else c for c in doc.get("campanas_cursos", [])],
@@ -99,6 +106,7 @@ def rango(hoy: date | None = None) -> dict:
         dias = (ads.get("conjuntos", {}).get(i) or {}).get("dias") or {}
         u = max(dias) if dias else None
         d = (date.fromisoformat(u) + timedelta(days=1)).isoformat() if u else desde
+        d = min(d, corregir)
         if d <= ayer:
             out["conjuntos"][i] = {"desde": d, "hasta": ayer}
     return out
@@ -162,6 +170,8 @@ def calcular(carpeta: Path, hoy: date | None = None) -> tuple[dict, dict]:
 def cargar(carpeta: Path, hoy: date | None = None) -> str:
     spend, ads = calcular(carpeta, hoy)       # NoCuadra -> no se escribe nada
     doc = json.loads(SPEND.read_text(encoding="utf-8"))
+    corregidos = {k: round(v["total_ars"] - doc["dias"][k].get("total_ars", 0), 2)
+                  for k, v in spend.items() if k in doc["dias"]}
     doc["dias"].update(spend)
     doc["dias"] = dict(sorted(doc["dias"].items()))
     if spend:
@@ -174,5 +184,8 @@ def cargar(carpeta: Path, hoy: date | None = None) -> str:
         c["dias"] = dict(sorted(c["dias"].items()))
     ADSETS.write_text(json.dumps(a, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     ult = max(doc["dias"]) if doc["dias"] else "—"
-    return (f"OK: meta_spend.json +{len(spend)} días (hasta {ult}); "
-            f"meta_adsets.json: " + (", ".join(f"{i} +{len(x['dias'])} días" for i, x in ads.items()) or "nada nuevo"))
+    nuevos = len(spend) - len(corregidos)
+    cambio = ", ".join(f"{k} {d:+,.2f} ARS" for k, d in sorted(corregidos.items()) if d) or "sin cambios"
+    return (f"OK: meta_spend.json {nuevos} días nuevos y {len(corregidos)} vueltos a pedir "
+            f"({cambio}), hasta {ult}; "
+            f"meta_adsets.json: " + (", ".join(f"{i} {len(x['dias'])} días pedidos" for i, x in ads.items()) or "nada nuevo"))
