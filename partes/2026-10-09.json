@@ -99,6 +99,42 @@
         }
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Gestión 5.985 seguidores (+1 en 7d), alcance 26.485, engagement orgánico 5,8%; Taller 121 (+6), alcance 13.817, 23,7%; leads de redes Q4: 2. Panel publicado.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "boxer-gestion": {
+            "seguidores": 5985,
+            "seguidores_delta_7d": 1,
+            "alcance_7d": 26485,
+            "alcance_organico_7d": 918,
+            "alcance_pago_7d": 25567,
+            "engagement_organico_pct": 5.8
+          },
+          "boxer-taller": {
+            "seguidores": 121,
+            "seguidores_delta_7d": 6,
+            "alcance_7d": 13817,
+            "alcance_organico_7d": 836,
+            "alcance_pago_7d": 12981,
+            "engagement_organico_pct": 23.7
+          },
+          "leads_redes_q4": 2
+        },
+        "datos_hasta": "2026-10-08",
+        "alertas": [],
+        "hallazgos": []
+      },
+      "para": []
     }
   },
   "preparacion": {
