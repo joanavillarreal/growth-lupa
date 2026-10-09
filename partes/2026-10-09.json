@@ -1,7 +1,30 @@
 {
   "fecha": "2026-10-09",
   "modo": "ensayo",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Funnel actualizado: 1645 prospectos, 1175 negociaciones, gasto Meta hasta 08/10. Alarma: sin novedades. No se publicó (modo ensayo); comparado contra el oficial.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "no publicado (ensayo): dashboard/index.html",
+      "datos": {
+        "alertas": [],
+        "origenes_sin_canal": [],
+        "snapshot": "data/snapshots/2026-10-09.json",
+        "comparacion": {
+          "panel": "monitor_growth",
+          "propio": "mi versión de ayer (generada 08/10 12:04 UTC)",
+          "oficial": "publicado 08/10 19:10 UTC",
+          "n_diferencias": 250,
+          "explicacion": "Hechos: el oficial se generó ~7 h después que mi versión de ayer, con el CRM ya cambiado (p. ej. cartera a futuro 471→470, generados Q 262→263, sin actividad 108→121) y el gasto del experimento corregido por Meta (7,90→7,87 USD). No se comparó contra la versión de hoy: no se publicó (modo ensayo)."
+        }
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
