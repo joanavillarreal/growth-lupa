@@ -1,6 +1,6 @@
 # Paneles que actualiza Lupa. Un solo link por panel: el oficial. No hay copias.
 #
-# modo: oficial
+# modo: ensayo
 #   - Paneles con `en_ensayo: comparar`: se generan en el repo (`archivo`) y se comparan
 #     contra el oficial, SIN publicar. Las rutinas viejas siguen publicando ahí.
 #   - Paneles con `en_ensayo: publicar`: son nuevos y Lupa es su única dueña; se publican
@@ -12,7 +12,7 @@
 #
 # NUNCA publicar en un link `comparar` mientras modo sea ensayo.
 
-modo: ensayo
+modo: oficial
 
 paneles:
   monitor_growth:

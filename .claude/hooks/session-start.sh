@@ -37,6 +37,10 @@ if [ "${CLAUDE_CODE_REMOTE:-}" = "true" ]; then
 fi
 echo "rama: $(git branch --show-current) @ $(git log -1 --format='%h %s')"
 
+# Modo leído de paneles.yaml (la clave real, no los comentarios): decide si se publica y a dónde va Slack
+python3 -c "import yaml; print('modo:', yaml.safe_load(open('paneles.yaml'))['modo'])" 2>/dev/null \
+  || echo "ERROR: no se pudo leer el modo de paneles.yaml"
+
 # 3. Qué toca hoy
 python3 que_toca_hoy.py || echo "ERROR: que_toca_hoy.py falló"
 exit 0
