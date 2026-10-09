@@ -23,6 +23,82 @@
         }
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:00",
+      "resumen": "Guardia: 1 alerta (TestimonioJesi, 4.884 ARS en 2 días sin resultado); gasto de ayer 31.609 ARS; Meta 3 / CRM 4 leads, faltan 0. Panel generado, no publicado (ensayo).",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "no publicado (ensayo): meta/informes/panel-trimestral.html",
+      "datos": {
+        "alertas_enviadas": [
+          "G2 TestimonioJesi | Video | Frio-Repuesteras | v2 | 2026-09: 4.884 ARS en 2 dias sin resultado (JY | Conversiones, conjunto LAL Vieron video 1-3%)"
+        ],
+        "silenciadas": [],
+        "se_resolvieron": [
+          "Placa Santi - Bariloche G2",
+          "DemoLu G2",
+          "JY | Conversiones G3 costo",
+          "Boxer + lectora G3 CTR"
+        ],
+        "gasto_ayer_ars": 31609,
+        "conciliacion": {
+          "leads_meta_ayer": 3,
+          "leads_crm_ayer": 4,
+          "avisados_slack": 2,
+          "faltan": 0
+        },
+        "errores_mcp": {
+          "total": 50,
+          "sobre_entidades_vivas": 0
+        },
+        "campanas_a_confirmar": [],
+        "cambios_actividad": "9 cambios en la respuesta, 0 nuevos (33 en total)",
+        "panel": {
+          "campanas_activas": 6,
+          "anuncios_activos": 14,
+          "anuncios_tendencias": 21,
+          "alertas_vivas_q": 11,
+          "cpl_real_q_ars": 4634,
+          "derivacion_q": "41.2% (7 de 17 resueltos)"
+        },
+        "re_ingresos_slack": {
+          "desde": "2026-10-02",
+          "hasta": "2026-10-08",
+          "por_dia": {
+            "2026-10-02": 0,
+            "2026-10-03": 2,
+            "2026-10-04": 2,
+            "2026-10-05": 0,
+            "2026-10-06": 2,
+            "2026-10-07": 1,
+            "2026-10-08": 2
+          }
+        },
+        "comparacion": {
+          "panel": {
+            "panel": "panel_meta_ads",
+            "n_diferencias": 75,
+            "explicacion": "Mi versión de ayer contra el oficial publicado después (versión 1791457668-7e4e). Las diferencias que se ven son de gasto/impresiones de días recientes (p. ej. conjunto 08/10 4142,09 → 4105,1 ARS): Meta corrige el gasto de los últimos días entre una lectura y otra. No se publicó (modo ensayo)."
+          },
+          "guardia": {
+            "ayer": "2026-10-08",
+            "lupa_mando": false,
+            "vieja_mando": true,
+            "explicacion": "La rutina vieja mandó 2 alertas el 08/10 (CPL de JY | Conversiones y CTR de Boxer + lectora, datos al 07/10). Mi guardia las calló como 'ya avisada': memoria/guardia.jsonl las tenía registradas por corridas mías anteriores (hay una simulación del 12/10 en el historial). Ese estado es mío y no se sincroniza con el de la rutina vieja."
+          }
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
