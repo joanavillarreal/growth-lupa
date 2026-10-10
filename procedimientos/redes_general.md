@@ -10,7 +10,7 @@ que el funnel y Meta. Solo medición.
 
    | Bloque | Campos |
    |---|---|
-   | `ig_evolucion` | `IGEV01, IGEV37, IGEV16, IGEV05, IGEV06, IGEV11` (+ `"_fecha"` al final de `fields`) |
+   | `ig_evolucion` | `IGEV01, IGEV37, IGEV16, IGEV05, IGEV06, IGEV11` (el 10/10/2026 Metricool rechazó `_fecha` como campo: se pide sin él, el tool agrega la fecha como última columna; en el crudo guardado `fields` lleva `"_fecha"` al final igual) |
    | `ig_por_tipo` | `IGAC01, IGAC02, IGAC05, IGAC06, IGAC11` |
    | `fb_evolucion` | `FBEV17, FBEV33, FBEV34, FBEV49, FBEV21, FBEV22` (+ `"_fecha"`) |
    | `li_evolucion` | `LIEV01, LIEV27, LIEV22, LIEV28, LIEV21, LIEV23, LIEV20, LIEV24` (+ `"_fecha"`), solo Gestión |
