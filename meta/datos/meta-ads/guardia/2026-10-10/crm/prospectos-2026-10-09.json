@@ -1,0 +1,219 @@
+{
+  "desde": "2026-10-03",
+  "hasta": "2026-10-09",
+  "origenes": [
+    "Meta Ads Formulario",
+    "Meta Ads"
+  ],
+  "por_dia": {
+    "2026-10-03": 4,
+    "2026-10-04": 6,
+    "2026-10-05": 6,
+    "2026-10-06": 8,
+    "2026-10-07": 7,
+    "2026-10-08": 3,
+    "2026-10-09": 6
+  },
+  "prospectos": [
+    {
+      "id": "4904",
+      "dia_art": "2026-10-03",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4908",
+      "dia_art": "2026-10-03",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4910",
+      "dia_art": "2026-10-03",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4912",
+      "dia_art": "2026-10-03",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4914",
+      "dia_art": "2026-10-04",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4918",
+      "dia_art": "2026-10-04",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4922",
+      "dia_art": "2026-10-04",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4924",
+      "dia_art": "2026-10-04",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4926",
+      "dia_art": "2026-10-04",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4928",
+      "dia_art": "2026-10-04",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4930",
+      "dia_art": "2026-10-05",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4934",
+      "dia_art": "2026-10-05",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4936",
+      "dia_art": "2026-10-05",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4938",
+      "dia_art": "2026-10-05",
+      "origen": "Meta Ads"
+    },
+    {
+      "id": "4940",
+      "dia_art": "2026-10-05",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4942",
+      "dia_art": "2026-10-05",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4944",
+      "dia_art": "2026-10-06",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4946",
+      "dia_art": "2026-10-06",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4948",
+      "dia_art": "2026-10-06",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4952",
+      "dia_art": "2026-10-06",
+      "origen": "Meta Ads"
+    },
+    {
+      "id": "4954",
+      "dia_art": "2026-10-06",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4960",
+      "dia_art": "2026-10-06",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4962",
+      "dia_art": "2026-10-06",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4964",
+      "dia_art": "2026-10-06",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4966",
+      "dia_art": "2026-10-07",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4968",
+      "dia_art": "2026-10-07",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4970",
+      "dia_art": "2026-10-07",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4974",
+      "dia_art": "2026-10-07",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4976",
+      "dia_art": "2026-10-07",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4978",
+      "dia_art": "2026-10-07",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4980",
+      "dia_art": "2026-10-07",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4982",
+      "dia_art": "2026-10-08",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4986",
+      "dia_art": "2026-10-08",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4992",
+      "dia_art": "2026-10-08",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "4996",
+      "dia_art": "2026-10-09",
+      "origen": "Meta Ads"
+    },
+    {
+      "id": "5000",
+      "dia_art": "2026-10-09",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "5006",
+      "dia_art": "2026-10-09",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "5008",
+      "dia_art": "2026-10-09",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "5010",
+      "dia_art": "2026-10-09",
+      "origen": "Meta Ads Formulario"
+    },
+    {
+      "id": "5012",
+      "dia_art": "2026-10-09",
+      "origen": "Meta Ads Formulario"
+    }
+  ]
+}

@@ -18,6 +18,52 @@
         "nota": "python3 del sistema es 3.11 y rompe origenes_nuevos.py (f-string anidado); se corrio con /usr/bin/python3 (3.13)"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:58",
+      "resumen": "Guardia: 2 alertas (Remarketing sin resultados 2 días), gasto ayer 32.931 ARS, Meta 5 / CRM 6 leads; Panel Meta republicado",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+        "alertas_enviadas": [
+          "Remarketing - Casos de éxito - JUL26: 2.088 ARS en 2 días sin resultado",
+          "Oferta | Img | Remarketing | v1 | 2026-09: 7.043 ARS en 2 días sin resultado"
+        ],
+        "silenciadas": 0,
+        "resuelta": "TestimonioJesi | Video | Frio-Repuesteras | v2 | 2026-09",
+        "gasto_ayer_ars": 32931,
+        "conciliacion": {
+          "leads_meta": 5,
+          "leads_crm": 6,
+          "avisados_slack": 0,
+          "faltan": 0,
+          "reingresos_slack_7d": {
+            "2026-10-03": 2,
+            "2026-10-04": 2,
+            "2026-10-05": 0,
+            "2026-10-06": 2,
+            "2026-10-07": 1,
+            "2026-10-08": 2,
+            "2026-10-09": 0
+          }
+        },
+        "errores_mcp": "50 (0 sobre entidades vivas)",
+        "campanas_a_confirmar": [],
+        "cambios_actividad": "9 en la respuesta, 0 nuevos",
+        "nota": "python3 del sistema (3.11) no corre scripts con f-strings anidados; se usó /usr/bin/python3 (3.13). creativos.json no se pidió: ningún creative_id activo faltaba."
+      },
+      "para": []
     }
   },
   "preparacion": {
