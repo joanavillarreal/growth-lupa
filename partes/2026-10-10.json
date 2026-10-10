@@ -64,6 +64,43 @@
         "nota": "python3 del sistema (3.11) no corre scripts con f-strings anidados; se usó /usr/bin/python3 (3.13). creativos.json no se pidió: ningún creative_id activo faltaba."
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:01",
+      "resumen": "Gestión 5.985 seguidores IG (-1 en 7d), alcance 7d 27.938; Taller 125 (+6), alcance 13.511; leads de redes Q4: 3. Panel republicado",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics",
+        "mcp__MCP-Metricool__getBrandSettings"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+        "metricas": {
+          "boxer-gestion": {
+            "seguidores_ig": 5985,
+            "seguidores_delta_7d": -1,
+            "alcance_7d": 27938,
+            "alcance_organico_7d": 1147,
+            "alcance_pago_7d": 26791,
+            "engagement_organico_pct": 6.1
+          },
+          "boxer-taller": {
+            "seguidores_ig": 125,
+            "seguidores_delta_7d": 6,
+            "alcance_7d": 13511,
+            "alcance_organico_7d": 462,
+            "alcance_pago_7d": 13049,
+            "engagement_organico_pct": 8.4
+          },
+          "leads_redes_q4_2026": 3
+        },
+        "ventana": "2026-09-10 a 2026-10-09",
+        "nota": "Metricool rechazó '_fecha' como campo (Field ID must follow the correct structure); sin ese campo el tool devuelve la fecha como última columna, igual que en el crudo anterior. El procedimiento redes_general.md todavía dice '+ _fecha'."
+      },
+      "para": []
     }
   },
   "preparacion": {
