@@ -1,7 +1,25 @@
 {
   "fecha": "2026-10-10",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Funnel actualizado, Monitor republicado; alarma sin novedades; sin origenes nuevos",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+        "alarma": "sin novedades",
+        "origenes_a_decidir": [],
+        "origenes_automaticos": [],
+        "nota": "python3 del sistema es 3.11 y rompe origenes_nuevos.py (f-string anidado); se corrio con /usr/bin/python3 (3.13)"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
