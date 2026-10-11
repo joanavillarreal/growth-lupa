@@ -1,7 +1,34 @@
 {
   "fecha": "2026-10-11",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Funnel al 10/10: 1650 prospectos, 907 derivados, 96 cierres, CPL $3.60, CAC $62. Alarma: Google Ads sin prospectos 2 días.",
+      "error": null,
+      "herramientas": [
+        "x"
+      ],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [
+          "Google Ads sin prospectos 2 días seguidos (09 y 10/10)"
+        ],
+        "metricas": {
+          "prospectos_q": 1650,
+          "derivados_q": 907,
+          "cierres_q": 96,
+          "mrr_cerrado_q": 20170,
+          "cpl_general": 3.6,
+          "cac_general": 62
+        },
+        "nota": "corregido SyntaxError de growth/origenes_nuevos.py (f-string con comillas anidadas, python 3.11); origenes: sin nuevos"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",

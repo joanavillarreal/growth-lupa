@@ -49,6 +49,6 @@ def aplicar(automaticos: list[dict]) -> None:
         bloque = re.search(rf"\n  {a['canal']}:\n(.*?)(?=\n  \w+:\n|\n\S)", texto, re.S)
         lista = re.search(r"origenes: \[(.*?)\]", bloque.group(1), re.S)
         fin = bloque.start(1) + lista.end(1)
-        texto = texto[:fin] + f', "{a['id']}"' + texto[fin:]
+        texto = texto[:fin] + ', "' + a['id'] + '"' + texto[fin:]
     RUTA_CONFIG.write_text(texto, encoding="utf-8")
     Config()  # que el archivo siga abriendo
