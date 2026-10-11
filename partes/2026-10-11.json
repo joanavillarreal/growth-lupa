@@ -8,9 +8,7 @@
       "hora": "07:53",
       "resumen": "Funnel al 10/10: 1650 prospectos, 907 derivados, 96 cierres, CPL $3.60, CAC $62. Alarma: Google Ads sin prospectos 2 días.",
       "error": null,
-      "herramientas": [
-        "x"
-      ],
+      "herramientas": [],
       "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
       "datos": {
         "alertas": [
@@ -25,6 +23,36 @@
           "cac_general": 62
         },
         "nota": "corregido SyntaxError de growth/origenes_nuevos.py (f-string con comillas anidadas, python 3.11); origenes: sin nuevos"
+      },
+      "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Guardia 10/10: gasto 28.445 ARS, 2 alertas enviadas (Remarketing CPL sube 3 días; Webinar Orden Stock CPL sube), Meta 4 leads = CRM 4. Panel republicado.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_enviadas": [
+          "JY | Remarketing: costo por resultado sube hace 3 días (sin leads 08, 09 y 10/10)",
+          "JY | Webinar Orden Stock: costo por resultado sube hace 1 día (1.167 → 1.578 ARS)"
+        ],
+        "alertas_ya_avisadas_silenciadas": 2,
+        "gasto_ayer_ars": 28445,
+        "conciliacion": "Meta 4 leads, CRM 4, avisados por Slack 0, faltan 0",
+        "errores_vivos": 0,
+        "campanas_a_confirmar": [],
+        "cambios_actividad": "9 en la respuesta, 0 nuevos",
+        "nota_crudos": "errores.json, roster.json y los tres JSON chicos inline (campana-total, anuncio-total, anuncio-activos, anuncio-historico) se reescribieron desde el texto de la respuesta del conector, no se copiaron de un archivo; se corrigieron 2 valores mal transcriptos antes de validar. validar_mcp.py: OK. roster de anuncios: 69 filas, no se pudo contar contra el original."
       },
       "para": []
     }

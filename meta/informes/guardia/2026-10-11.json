@@ -1,0 +1,122 @@
+{
+  "corrida": "2026-10-11",
+  "datos_hasta": "2026-10-10",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 439585.05,
+      "gasto_total": 439585.05,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 439585.05,
+      "gasto_total": 439585.05,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 28445.28,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-04": 9,
+      "2026-10-05": 5,
+      "2026-10-06": 7,
+      "2026-10-07": 8,
+      "2026-10-08": 3,
+      "2026-10-09": 5,
+      "2026-10-10": 4
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-04": 6,
+        "2026-10-05": 6,
+        "2026-10-06": 8,
+        "2026-10-07": 7,
+        "2026-10-08": 3,
+        "2026-10-09": 6,
+        "2026-10-10": 4
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-04": 2,
+      "2026-10-05": 0,
+      "2026-10-06": 2,
+      "2026-10-07": 1,
+      "2026-10-08": 2,
+      "2026-10-09": 0,
+      "2026-10-10": 0
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120252701921370427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120252701921370427",
+      "entidad": "Remarketing - Casos de éxito - JUL26",
+      "titulo": "Remarketing - Casos de éxito - JUL26: 3.404 ARS en 3 dias sin un solo resultado (3 dias seguidos)",
+      "detalle": "Campana JY | Remarketing · conjunto Remarketing. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-10-10",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120254261331160427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254261331160427",
+      "entidad": "Oferta | Img | Remarketing | v1 | 2026-09",
+      "titulo": "Oferta | Img | Remarketing | v1 | 2026-09: 9.931 ARS en 3 dias sin un solo resultado (3 dias seguidos)",
+      "detalle": "Campana JY | Remarketing · conjunto Remarketing. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-10-10",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120252700778930427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120252700778930427",
+      "entidad": "JY | Remarketing",
+      "titulo": "JY | Remarketing: el costo por resultado sube hace 3 dias",
+      "detalle": "2026-10-08: sin leads ese dia · 2026-10-09: sin leads ese dia · 2026-10-10: sin leads ese dia — contra un promedio de 2.743 ARS/lead en los 7 dias previos. Subio y no volvio a bajar. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 3,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-11"
+    },
+    {
+      "clave": "G3:cpl:120254717004450427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254717004450427",
+      "entidad": "JY | Webinar Orden Stock (AGENTE META)",
+      "titulo": "JY | Webinar Orden Stock (AGENTE META): el costo por resultado sube hace 1 dia",
+      "detalle": "De 1.167 a 1.578 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-11"
+    }
+  ],
+  "se_mandan": [
+    "G3:cpl:120252700778930427",
+    "G3:cpl:120254717004450427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120252701921370427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120254261331160427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": []
+}
