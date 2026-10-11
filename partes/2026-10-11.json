@@ -55,6 +55,40 @@
         "nota_crudos": "errores.json, roster.json y los tres JSON chicos inline (campana-total, anuncio-total, anuncio-activos, anuncio-historico) se reescribieron desde el texto de la respuesta del conector, no se copiaron de un archivo; se corrigieron 2 valores mal transcriptos antes de validar. validar_mcp.py: OK. roster de anuncios: 69 filas, no se pudo contar contra el original."
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:05",
+      "resumen": "Gestión 5.988 seg (+1), alcance 7d 27.534, eng. 5,5%; Taller 128 seg (+7), alcance 7d 13.953, eng. 7,5%; leads de redes Q4: 3.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "gestion": {
+            "seguidores_ig": 5988,
+            "delta_7d": 1,
+            "alcance_7d": 27534,
+            "alcance_organico": 1097,
+            "alcance_pauta": 26437,
+            "engagement_pct": 5.5
+          },
+          "taller": {
+            "seguidores_ig": 128,
+            "delta_7d": 7,
+            "alcance_7d": 13953,
+            "alcance_organico": 294,
+            "alcance_pauta": 13659,
+            "engagement_pct": 7.5
+          },
+          "leads_redes_q4": 3
+        },
+        "nota": "crudos de Metricool escritos desde el texto de las respuestas (no hay archivo de resultado en llamadas chicas); ig_por_tipo sin filas de tipo vacío, como indica el procedimiento"
+      },
+      "para": []
     }
   },
   "preparacion": {
