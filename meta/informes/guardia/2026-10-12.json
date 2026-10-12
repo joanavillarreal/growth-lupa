@@ -1,0 +1,98 @@
+{
+  "corrida": "2026-10-12",
+  "datos_hasta": "2026-10-11",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 445572.74,
+      "gasto_total": 445572.74,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 445572.74,
+      "gasto_total": 445572.74,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 37747.33,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-05": 5,
+      "2026-10-06": 7,
+      "2026-10-07": 8,
+      "2026-10-08": 3,
+      "2026-10-09": 5,
+      "2026-10-10": 4,
+      "2026-10-11": 8
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-05": 6,
+        "2026-10-06": 8,
+        "2026-10-07": 7,
+        "2026-10-08": 3,
+        "2026-10-09": 6,
+        "2026-10-10": 4,
+        "2026-10-11": 6
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-05": 0,
+      "2026-10-06": 2,
+      "2026-10-07": 1,
+      "2026-10-08": 2,
+      "2026-10-09": 0,
+      "2026-10-10": 0,
+      "2026-10-11": 2
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120252701921370427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120252701921370427",
+      "entidad": "Remarketing - Casos de éxito - JUL26",
+      "titulo": "Remarketing - Casos de éxito - JUL26: 5.722 ARS en 4 dias sin un solo resultado (4 dias seguidos)",
+      "detalle": "Campana JY | Remarketing · conjunto Remarketing. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 4,
+      "primer_aviso": "2026-10-10",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120254717004450427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254717004450427",
+      "entidad": "JY | Webinar Orden Stock (AGENTE META)",
+      "titulo": "JY | Webinar Orden Stock (AGENTE META): el costo por resultado sube hace 2 dias",
+      "detalle": "Subio 253% en 2 dias, de 1.167 a 4.117 ARS. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 2,
+      "primer_aviso": "2026-10-11",
+      "motivo_aviso": "ya avisada"
+    }
+  ],
+  "se_mandan": [],
+  "silenciadas": [
+    {
+      "clave": "G2:120252701921370427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120254717004450427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120254261331160427",
+    "G3:cpl:120252700778930427"
+  ]
+}
