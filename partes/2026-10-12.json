@@ -175,6 +175,20 @@
         }
       },
       "para": []
+    },
+    "limpieza": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:06",
+      "resumen": "Limpieza semanal: nada para borrar (0 elementos, 0 MB).",
+      "error": null,
+      "herramientas": [],
+      "artefacto": null,
+      "datos": {
+        "borrados": 0,
+        "mb": 0.0
+      },
+      "para": []
     }
   },
   "preparacion": {
