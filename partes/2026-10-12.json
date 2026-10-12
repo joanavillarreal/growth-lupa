@@ -68,6 +68,39 @@
         }
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Cargados 8 registros (08/10 a 11/10): Meta USD 87.23 + Google USD 44.85 = USD 132.08.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "cargados": {
+          "desde": "2026-10-08",
+          "hasta": "2026-10-11",
+          "meta_registros": 4,
+          "google_registros": 4,
+          "usd_meta": 87.23,
+          "usd_google": 44.85,
+          "usd_total": 132.08,
+          "ids": [
+            764,
+            766,
+            768,
+            770,
+            772,
+            774,
+            776,
+            778
+          ]
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
