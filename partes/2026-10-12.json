@@ -101,6 +101,80 @@
         }
       },
       "para": []
+    },
+    "redes_semana": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:06",
+      "resumen": "W41 medida y panel publicado. Gestión +4 seguidores (5.990), eng. orgánico 5,0%, 93,7% de views de pauta; Taller +8 (129). Prospectos de redes: 1. Sin reels publicados en la semana.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getBrandSettings",
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics",
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "semana": "2026-W41",
+        "metricas": {
+          "gestion_ig": {
+            "seguidores": 5990,
+            "delta": 4,
+            "alcance_organico": 1053,
+            "pct_views_pauta": 93.7,
+            "engagement_organico_pct": 5.0,
+            "publicaciones": 4
+          },
+          "taller_ig": {
+            "seguidores": 129,
+            "delta": 8,
+            "alcance_organico": 265,
+            "pct_views_pauta": 95.1,
+            "engagement_organico_pct": 3.0,
+            "publicaciones": 2
+          },
+          "prospectos_redes": 1,
+          "awareness_ars": 39412.5,
+          "inversion_spi_usd": 220.74
+        },
+        "alertas": [
+          "Bloque ig_reels vacío en las dos marcas (sin reels publicados en la semana, reintentado una vez)",
+          "Taller: engagement de Post 100% sobre 3 de alcance, no confiable"
+        ]
+      },
+      "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:06",
+      "resumen": "Cuentas al 11/10: Gestión 5.990 seguidores (+4 en 7d), alcance 28.009; Taller 129 (+8), alcance 14.734. Leads de redes Q4: 3.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "fecha_datos_hasta": "2026-10-11",
+        "metricas": {
+          "gestion": {
+            "seguidores": 5990,
+            "delta_7d": 4,
+            "alcance_7d": 28009,
+            "alcance_organico": 1053,
+            "engagement_pct": 5.0
+          },
+          "taller": {
+            "seguidores": 129,
+            "delta_7d": 8,
+            "alcance_7d": 14734,
+            "alcance_organico": 265,
+            "engagement_pct": 3.0
+          },
+          "leads_redes_q4": 3
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {

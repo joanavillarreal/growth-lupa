@@ -1,0 +1,162 @@
+{
+  "semana": "2026-W41",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-10-05",
+  "hasta": "2026-10-11",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 291,
+        "alcance": 3,
+        "interacciones": 3,
+        "engagement_pct": 100.0,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 255,
+        "alcance": 198,
+        "interacciones": 5,
+        "engagement_pct": 2.5,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 193,
+        "alcance": 63,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Story",
+        "views": 3,
+        "alcance": 1,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 742,
+      "alcance": 265,
+      "interacciones": 8,
+      "engagement_pct": 3.0
+    },
+    "pauta": {
+      "views": 14327,
+      "alcance": 14469
+    },
+    "pct_views_de_pauta": 95.1,
+    "alcance_total_cuenta": 14734,
+    "audiencia": {
+      "views_seguidores": 192,
+      "views_no_seguidores": 14860,
+      "pct_seguidores": 1.3,
+      "pct_no_seguidores": 98.6,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 121,
+      "fin": 129,
+      "delta": 8,
+      "delta_pct": 6.6
+    },
+    "publicaciones": 2,
+    "stories_publicadas": 0,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261006",
+        "url": "https://www.instagram.com/p/DeKELU4DJGm/",
+        "texto": "Si llegaste estos días, bienvenido 🔧 Una duda que aparece antes de arrancar con un sistema: Qué hacer con todo lo que ya está en papel.\n\n👉🏼👀 Nada. Boxer Taller arranca por la orden",
+        "views": 88,
+        "alcance": 31,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 6.5
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261010",
+        "url": "https://www.instagram.com/p/DeVAJt5iclm/",
+        "texto": "Una semana para Expomecánico 🚗 El sábado 17 vamos a estar en la UNSAM, de 11 a 19. Para charlar de cómo se lleva un taller y a escuchar cómo lo llevás vos. 🦾💻\n\nSi ganaste entrada e",
+        "views": 66,
+        "alcance": 22,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 4.5
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261006",
+        "url": "https://www.instagram.com/p/DeKELU4DJGm/",
+        "texto": "Si llegaste estos días, bienvenido 🔧 Una duda que aparece antes de arrancar con un sistema: Qué hacer con todo lo que ya está en papel.\n\n👉🏼👀 Nada. Boxer Taller arranca por la orden",
+        "views": 88,
+        "alcance": 31,
+        "interacciones": 2,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 6.5
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261010",
+        "url": "https://www.instagram.com/p/DeVAJt5iclm/",
+        "texto": "Una semana para Expomecánico 🚗 El sábado 17 vamos a estar en la UNSAM, de 11 a 19. Para charlar de cómo se lleva un taller y a escuchar cómo lo llevás vos. 🦾💻\n\nSi ganaste entrada e",
+        "views": 66,
+        "alcance": 22,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 4.5
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 15268,
+    "publicaciones": 2,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 2,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W40",
+    "instagram": {
+      "views_organicas": -80.7,
+      "alcance_organico": -76.0,
+      "interacciones": -96.6,
+      "engagement_pct": -85.8,
+      "seguidores": 6.6,
+      "publicaciones": -81.8,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": 74.9,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

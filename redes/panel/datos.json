@@ -1,81 +1,75 @@
 {
- "generado": "2026-10-11T08:04-03:00",
- "hoy": "2026-10-11",
+ "generado": "2026-10-12T08:06-03:00",
+ "hoy": "2026-10-12",
  "general": {
-  "fecha": "2026-10-11",
-  "datos_hasta": "2026-10-10",
+  "fecha": "2026-10-12",
+  "datos_hasta": "2026-10-11",
   "ventana": {
-   "desde": "2026-10-04",
-   "hasta": "2026-10-10"
+   "desde": "2026-10-05",
+   "hasta": "2026-10-11"
   },
   "previa": {
-   "desde": "2026-09-27",
-   "hasta": "2026-10-03"
+   "desde": "2026-09-28",
+   "hasta": "2026-10-04"
   },
   "marcas": {
    "boxer-gestion": {
     "nombre": "Boxer Gestión",
     "ultimos_7": {
-     "seguidores": 5988,
-     "seguidores_delta": 1,
-     "alcance_organico": 1097,
-     "alcance_pago": 26437,
-     "alcance_total": 27534,
-     "views_organicas": 3004,
-     "pct_views_pauta": 93.3,
-     "interacciones": 60,
-     "engagement_pct": 5.5,
+     "seguidores": 5990,
+     "seguidores_delta": 4,
+     "alcance_organico": 1053,
+     "alcance_pago": 26956,
+     "alcance_total": 28009,
+     "views_organicas": 2830,
+     "pct_views_pauta": 93.7,
+     "interacciones": 53,
+     "engagement_pct": 5.0,
      "muestra_chica": false,
      "engagement_no_confiable": false,
      "fb": {
       "seguidores": 976,
       "seguidores_delta": 2,
-      "views": 28082
+      "views": 28671
      },
      "li": {
-      "seguidores": 105,
-      "seguidores_delta": 0,
-      "impresiones": 59
+      "seguidores": 106,
+      "seguidores_delta": 1,
+      "impresiones": 67
      }
     },
     "previos_7": {
-     "seguidores": 5986,
-     "seguidores_delta": 5,
-     "alcance_organico": 1300,
-     "alcance_pago": 25363,
-     "alcance_total": 26663,
-     "views_organicas": 3746,
-     "pct_views_pauta": 89.5,
-     "interacciones": 97,
-     "engagement_pct": 7.5,
+     "seguidores": 5987,
+     "seguidores_delta": 7,
+     "alcance_organico": 1365,
+     "alcance_pago": 23527,
+     "alcance_total": 24892,
+     "views_organicas": 3918,
+     "pct_views_pauta": 87.3,
+     "interacciones": 104,
+     "engagement_pct": 7.6,
      "muestra_chica": false,
      "engagement_no_confiable": true,
      "fb": {
       "seguidores": 974,
-      "seguidores_delta": 0,
-      "views": 26964
+      "seguidores_delta": -1,
+      "views": 26723
      },
      "li": {
       "seguidores": 105,
       "seguidores_delta": 1,
-      "impresiones": 34
+      "impresiones": 35
      }
     },
     "variacion_pct": {
-     "alcance_organico": -15.6,
-     "alcance_pago": 4.2,
-     "alcance_total": 3.3,
-     "interacciones": -38.1,
-     "engagement_pp": -2.0
+     "alcance_organico": -22.9,
+     "alcance_pago": 14.6,
+     "alcance_total": 12.5,
+     "interacciones": -49.0,
+     "engagement_pp": -2.6
     },
-    "seguidores_delta_30d": 16,
+    "seguidores_delta_30d": 17,
     "serie_30d": [
-     {
-      "fecha": "2026-09-11",
-      "seguidores": 5972,
-      "alcance_organico": 607,
-      "alcance_pago": 3913
-     },
      {
       "fecha": "2026-09-12",
       "seguidores": 5973,
@@ -249,62 +243,62 @@
       "seguidores": 5988,
       "alcance_organico": 145,
       "alcance_pago": 3178
+     },
+     {
+      "fecha": "2026-10-11",
+      "seguidores": 5990,
+      "alcance_organico": 69,
+      "alcance_pago": 2715
      }
     ]
    },
    "boxer-taller": {
     "nombre": "Boxer Taller",
     "ultimos_7": {
-     "seguidores": 128,
-     "seguidores_delta": 7,
-     "alcance_organico": 294,
-     "alcance_pago": 13659,
-     "alcance_total": 13953,
-     "views_organicas": 799,
-     "pct_views_pauta": 94.4,
-     "interacciones": 22,
-     "engagement_pct": 7.5,
+     "seguidores": 129,
+     "seguidores_delta": 8,
+     "alcance_organico": 265,
+     "alcance_pago": 14469,
+     "alcance_total": 14734,
+     "views_organicas": 742,
+     "pct_views_pauta": 95.1,
+     "interacciones": 8,
+     "engagement_pct": 3.0,
      "muestra_chica": false,
      "engagement_no_confiable": false,
      "fb": {
       "seguidores": 2,
       "seguidores_delta": 0,
-      "views": 14859
+      "views": 15268
      }
     },
     "previos_7": {
-     "seguidores": 119,
+     "seguidores": 121,
      "seguidores_delta": 41,
-     "alcance_organico": 1040,
-     "alcance_pago": 9942,
-     "alcance_total": 10982,
-     "views_organicas": 3687,
-     "pct_views_pauta": 75.7,
-     "interacciones": 219,
-     "engagement_pct": 21.1,
+     "alcance_organico": 1106,
+     "alcance_pago": 9438,
+     "alcance_total": 10544,
+     "views_organicas": 3842,
+     "pct_views_pauta": 72.4,
+     "interacciones": 234,
+     "engagement_pct": 21.2,
      "muestra_chica": false,
      "engagement_no_confiable": true,
      "fb": {
       "seguidores": 2,
       "seguidores_delta": 0,
-      "views": 10134
+      "views": 10502
      }
     },
     "variacion_pct": {
-     "alcance_organico": -71.7,
-     "alcance_pago": 37.4,
-     "alcance_total": 27.1,
-     "interacciones": -90.0,
-     "engagement_pp": -13.6
+     "alcance_organico": -76.0,
+     "alcance_pago": 53.3,
+     "alcance_total": 39.7,
+     "interacciones": -96.6,
+     "engagement_pp": -18.2
     },
-    "seguidores_delta_30d": 61,
+    "seguidores_delta_30d": 62,
     "serie_30d": [
-     {
-      "fecha": "2026-09-11",
-      "seguidores": 67,
-      "alcance_organico": 24,
-      "alcance_pago": 1679
-     },
      {
       "fecha": "2026-09-12",
       "seguidores": 67,
@@ -478,6 +472,12 @@
       "seguidores": 128,
       "alcance_organico": 11,
       "alcance_pago": 2068
+     },
+     {
+      "fecha": "2026-10-11",
+      "seguidores": 129,
+      "alcance_organico": 46,
+      "alcance_pago": 1943
      }
     ]
    }
@@ -485,12 +485,12 @@
   "al_dia": true
  },
  "leads": {
-  "corte_snapshot": "2026-10-11",
+  "corte_snapshot": "2026-10-12",
   "trimestres": [
    {
     "etiqueta": "Q4 2026",
     "desde": "2026-10-01",
-    "hasta": "2026-10-11",
+    "hasta": "2026-10-12",
     "en_curso": true,
     "total": 3,
     "por_semana": [
@@ -501,6 +501,10 @@
      {
       "semana": "2026-W41",
       "leads": 1
+     },
+     {
+      "semana": "2026-W42",
+      "leads": 0
      }
     ],
     "derivados": 3,
@@ -577,7 +581,7 @@
     "inactivos": 5,
     "en_gestion": 1,
     "mismo_tramo": {
-     "hasta": "2026-07-11",
+     "hasta": "2026-07-12",
      "total": 4
     }
    }
@@ -585,125 +589,127 @@
   "fuente": "Bitrix24, prospectos con origen del canal Redes Sociales (config/definitions.yaml), snapshot diario del funnel"
  },
  "semana": {
-  "semana": "2026-W40",
+  "semana": "2026-W41",
   "alertas": [
-   "Boxer Gestión: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.",
-   "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).",
-   "Boxer Taller: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.",
-   "Boxer Taller: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero)."
+   "Boxer Gestión: el 93,7% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
+   "Boxer Taller: el alcance orgánico cayó -76,0% contra la semana anterior.",
+   "Boxer Taller: el 95,1% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
+   "Boxer Taller: ninguna pieza de la semana trajo seguidores (0 follows por pieza)."
   ],
   "crm": {
-   "prospectos_redes": 3,
-   "inversion_redes_ars": 34735.14,
-   "costo_por_prospecto_ars": 11578.38,
-   "var_pct": 50.0
+   "prospectos_redes": 1,
+   "inversion_redes_ars": 39412.5,
+   "costo_por_prospecto_ars": 39412.5,
+   "var_pct": -66.7
   },
   "lectura": {
-   "titular": "Taller tuvo su mejor semana de altas (80 a 121, +41) con el sorteo de entradas para Expomecánico y el reel del evento. En Gestión los dos reels con «Comentá CLAUDE» encabezaron el ranking, pero nombrar a Claude sin ese pedido no levantó nada: lo que hace conversar es la palabra clave, no la herramienta.",
+   "titular": "Semana sin reels en las dos cuentas: Gestión publicó 4 carruseles/posts y Taller 2 carruseles. El mejor engagement de Gestión fue un carrusel de ventas (6,0%) y el de mayor alcance, la imagen de Messi (259), sin guardados, compartidos ni altas. Taller sumó +8 seguidores con 95,1% de las views de pauta, sin pieza a la que atribuirlos.",
    "puntos": [
-    "Boxer Gestión, la prueba de Claude: los dos reels con «Comentá CLAUDE» quedaron primero y segundo en engagement (el del 30/9 con 9,3%, 18 interacciones sobre 193 de alcance; el del 29/9 con 5,6%, 8 sobre 143). Los dos carruseles que nombran a Claude sin pedir comentario quedaron en 5,2% y 2,6%, casi igual que el de mostrador sin Claude (2,2%). La herramienta nombrada no explica el rendimiento: lo explica la palabra clave, que ya estaba confirmada.",
-    "Boxer Gestión, captación: la cuenta pasó de 5.980 a 5.987 (+7), y los tres carruseles volvieron a cerrar con 0 follows. Los reels no informan follows: sin dato, no cero. El alcance orgánico subió 58,5%, a 1.365. Volvieron los compartidos (6 en la semana) y los guardados se mantuvieron en 5. El 7,6% de engagement orgánico de la cuenta no sirve: el bloque Post trae 49 interacciones sobre 10 de alcance (490,0%), que es arrastre.",
-    "Boxer Taller: el reel del Expomecánico del 1/10 fue la pieza de mayor alcance (560, 910 views, view rate 43,6%) y el del sorteo del 28/9, que pedía comentar EXPO y seguir la cuenta, el más compartido (4). El alcance orgánico subió 259,1%, a 1.106. Los dos carruseles de pilar quedaron en 32 y 34 de alcance, con 0 compartidos y 0 guardados. Las altas no se pueden atribuir a una pieza (los reels no traen follows), pero coinciden con el sorteo: el salto fue de 84 el 30/9 a 110 el 1/10, el día del cierre.",
-    "La pauta bajó su peso en las dos cuentas: 87,3% de las views de Instagram en Gestión (94,4% la semana anterior) y 72,4% en Taller (94,9%). LinkedIn de Gestión volvió a publicar: 1 pieza, 35 impresiones y +1 seguidor (104 a 105). Facebook de Gestión: 23.862 views (−19,3%) sin cambio en seguidores; Facebook de Taller: 8.732 views (+198,3%), la página sigue en 2.",
-    "Prospectos de origen redes: 3 en la semana, +50,0% contra los 2 de la W39. El gasto en awareness de Meta fue de 34.735,14 ARS y el costo por prospecto, 11.578,38 ARS. La inversión del SPA está completa (7 de 7 días): 195,27 USD. Los prospectos son del canal y no se atribuyen al sorteo ni a ninguna pieza."
+    "Boxer Gestión, contenido: 4 piezas, ningún reel y ninguna con «Comentá CLAUDE» (el CTA pedía guardar y comentar sin palabra clave). Ranking de engagement: carrusel del pedido de siempre (6/10) 6,0%, 9 interacciones sobre 150 de alcance; carrusel de kits (8/10) 5,9%, 13 sobre 219, con 3 guardados y 4 compartidos; imagen de Messi y los drones (8/10) 5,0%, 13 sobre 259 (el mayor alcance de la semana) con 0 guardados y 0 compartidos; carrusel del reclamo \"Esto me lo vendiste vos\" 3,5%, 7 sobre 199.",
+    "Boxer Gestión, captación: la cuenta pasó de 5.986 a 5.990 (+4). Solo una pieza trajo un follow (el carrusel de kits); las otras tres, 0. Guardados 6 (+20,0% contra la W40) y compartidos 5. El engagement orgánico de la cuenta fue 5,0% sobre 1.053 de alcance (−34,2% contra la W40) con 2.830 views orgánicas (−27,8%). El 17,3% del bloque Post no sirve: 43 interacciones sobre 248 de alcance incluye arrastre de otras piezas.",
+    "Boxer Taller: 2 carruseles (6/10 y 10/10), sin reels. El de bienvenida (digitalizar lo que está en papel) sacó 6,5%, 2 interacciones sobre 31 de alcance, y el del Expomecánico 4,5%, 1 sobre 22; 0 guardados y 0 compartidos en los dos. La cuenta pasó de 121 a 129 seguidores (+8, +6,6%); los reels no informan follows y los carruseles cerraron con 0, así que las altas no se atribuyen a ninguna pieza. El alcance orgánico cayó 76,0% (265) contra la semana del sorteo y el reel del evento.",
+    "La pauta pesa casi todo: 93,7% de las views de Instagram en Gestión (42.053 de pauta contra 2.830 orgánicas) y 95,1% en Taller (14.327 contra 742). Facebook de Gestión: 28.671 views (+20,2%), 3 publicaciones, 0 interacciones y +2 seguidores (974 a 976); Facebook de Taller: 15.268 views (+74,9%), 2 publicaciones, 0 interacciones, la página sigue en 2. LinkedIn de Gestión: 1 pieza, 67 impresiones (+91,4%), 3 interacciones (4,5% sobre impresiones) y +1 seguidor (105 a 106).",
+    "Prospectos de origen redes: 1 en la semana (el 8/10), −66,7% contra los 3 de la W40. El gasto en awareness de Meta fue de 39.412,50 ARS y el costo por prospecto, 39.412,50 ARS. La inversión del SPA está completa (7 de 7 días): 220,74 USD. Los prospectos son del canal y no se atribuyen a ninguna pieza."
    ],
    "funciono": [
-    "Boxer Gestión: los dos reels con «Comentá CLAUDE» encabezaron el ranking de engagement (9,3% el del 30/9 y 5,6% el del 29/9).",
-    "Boxer Gestión: el alcance orgánico subió 58,5%, a 1.365 personas, y volvieron los compartidos (6 en la semana).",
-    "Boxer Taller: semana récord de altas, de 80 a 121 seguidores (+41), coincidiendo con el sorteo de entradas para Expomecánico.",
-    "Boxer Taller: el reel del evento del 1/10 fue la pieza de mayor alcance (560 personas, view rate 43,6%) y el del sorteo, la más compartida (4)."
+    "Boxer Gestión: el carrusel de kits del 8/10 dio 5,9% de engagement, 4 compartidos, 3 guardados y la única alta atribuible a una pieza de la semana (1 follow).",
+    "Boxer Gestión: guardados 6 (+20,0%) y compartidos 5, y Facebook subió 20,2% en views (28.671).",
+    "Boxer Gestión: LinkedIn duplicó las impresiones (67, +91,4%) con 1 pieza y sumó 1 seguidor.",
+    "Boxer Taller: +8 seguidores (121 a 129) en una semana de solo carruseles; el de bienvenida llegó a 6,5% de engagement."
    ],
    "no_funciono": [
-    "Boxer Gestión: los tres carruseles cerraron con 0 follows, y los dos que nombran a Claude sin pedir comentario quedaron en 5,2% y 2,6%, a la par del de mostrador (2,2%).",
-    "Boxer Gestión: Facebook bajó 19,3% en views (23.862) y no sumó seguidores.",
-    "Boxer Taller: los dos carruseles de pilar quedaron en 32 y 34 de alcance, con 0 guardados y 0 compartidos."
+    "Boxer Gestión: la imagen de Messi tuvo el mayor alcance (259) con 0 guardados, 0 compartidos y 0 follows; el carrusel del reclamo quedó último con 3,5%.",
+    "Boxer Gestión: el engagement orgánico bajó 34,2% (5,0%) y las interacciones, 49,0%, con 4 publicaciones contra 7 en la semana anterior.",
+    "Boxer Taller: el alcance orgánico cayó 76,0% (265) y los dos carruseles cerraron con 0 guardados, 0 compartidos y 0 follows.",
+    "Prospectos de redes: 1 en la semana, contra 3 en la W40."
    ],
-   "fuente_lectura": "titular y puntos: Lupa de agente-redes (05/10); funcionó / no funcionó: Lupa de growth-lupa (08/10), sobre los mismos números"
+   "fuente_lectura": "Lupa de growth-lupa (12/10/2026), sobre data/2026-W41/. El bloque de reels vino vacío en las dos marcas (sin reels publicados en la semana)."
   },
   "marcas": {
    "boxer-gestion": {
     "nombre": "Boxer Gestión",
     "top_engagement": [
      {
-      "tipo": "Reel",
-      "fecha": "20260930",
-      "url": "https://www.instagram.com/reel/Dd7aXLdDLIx/",
-      "texto": "Ahora con la IA podes concretar ventas más rápido 🚀🤖 En nuestras 3 clases grabadas podes acceder a casos practicos como estos sin costo 🤗 Comentá CLAUDE y te lo",
-      "alcance": 193,
-      "interacciones": 18,
-      "engagement_pct": 9.3,
-      "guardados": 1,
-      "compartidos": 2,
-      "follows": null,
-      "view_rate_pct": 32.199997
-     },
-     {
-      "tipo": "Reel",
-      "fecha": "20260929",
-      "url": "https://www.instagram.com/reel/Dd4kpx_khvD/",
-      "texto": "Incorporá Claude (o Claudio🤖) en tu Casa de Repuestos. Accedé a nuestras 3 clases grabadas sin costo 🚀 Comentá CLAUDE y te las enviamos 🫱🏼‍🫲🏽",
-      "alcance": 143,
-      "interacciones": 8,
-      "engagement_pct": 5.6,
-      "guardados": 1,
-      "compartidos": 1,
-      "follows": null,
-      "view_rate_pct": 36.2
+      "tipo": "Carrusel",
+      "fecha": "20261006",
+      "url": "https://www.instagram.com/p/DeKtCWqDVxK/",
+      "texto": "El pedido de siempre no siempre es el que hace falta. 👀 Lo que sale del mostrador cambia de un mes a otro, y tus ventas de las últimas semanas ya lo muestran. 💻",
+      "alcance": 150,
+      "interacciones": 9,
+      "engagement_pct": 6.0,
+      "guardados": 2,
+      "compartidos": 0,
+      "follows": 0,
+      "view_rate_pct": null
      },
      {
       "tipo": "Carrusel",
-      "fecha": "20260930",
-      "url": "https://www.instagram.com/p/Dd5AFu0j4aE/",
-      "texto": "5 preguntas. Si alguna no la podés contestar con un número, ahí tenés la tarea de octubre. 👀💻",
-      "alcance": 193,
-      "interacciones": 10,
-      "engagement_pct": 5.2,
-      "guardados": 2,
-      "compartidos": 1,
+      "fecha": "20261008",
+      "url": "https://www.instagram.com/p/DePNnwYH8ih/",
+      "texto": "El que viene por la bomba de agua muchas veces no sabe qué más le conviene llevar. 🤔 El vendedor con años se lo ofrece sin pensar. El que entró hace poco, todav",
+      "alcance": 219,
+      "interacciones": 13,
+      "engagement_pct": 5.9,
+      "guardados": 3,
+      "compartidos": 4,
+      "follows": 1,
+      "view_rate_pct": null
+     },
+     {
+      "tipo": "Post",
+      "fecha": "20261008",
+      "url": "https://www.instagram.com/p/DeO-zO0zSSv/",
+      "texto": "Perdón por los drones, nosotros también queríamos estar en la despedida del más grande 🐐💙",
+      "alcance": 259,
+      "interacciones": 13,
+      "engagement_pct": 5.0,
+      "guardados": 0,
+      "compartidos": 0,
       "follows": 0,
       "view_rate_pct": null
      }
     ],
-    "top_seguidores": [],
-    "publicaciones": 7
+    "top_seguidores": [
+     {
+      "tipo": "Carrusel",
+      "fecha": "20261008",
+      "url": "https://www.instagram.com/p/DePNnwYH8ih/",
+      "texto": "El que viene por la bomba de agua muchas veces no sabe qué más le conviene llevar. 🤔 El vendedor con años se lo ofrece sin pensar. El que entró hace poco, todav",
+      "alcance": 219,
+      "interacciones": 13,
+      "engagement_pct": 5.9,
+      "guardados": 3,
+      "compartidos": 4,
+      "follows": 1,
+      "view_rate_pct": null
+     }
+    ],
+    "publicaciones": 4
    },
    "boxer-taller": {
     "nombre": "Boxer Taller",
     "top_engagement": [
      {
-      "tipo": "Post",
-      "fecha": "20260928",
-      "url": "https://www.instagram.com/p/Dd1UbcqCa17/",
-      "texto": "Estaremos presentes en @expo.mecanico 🚀 el evento que reunirá a talleristas que busquen conectar con el rubro 🫱🏼‍🫲🏽",
-      "alcance": 55,
-      "interacciones": 7,
-      "engagement_pct": 12.7,
+      "tipo": "Carrusel",
+      "fecha": "20261006",
+      "url": "https://www.instagram.com/p/DeKELU4DJGm/",
+      "texto": "Si llegaste estos días, bienvenido 🔧 Una duda que aparece antes de arrancar con un sistema: Qué hacer con todo lo que ya está en papel.",
+      "alcance": 31,
+      "interacciones": 2,
+      "engagement_pct": 6.5,
       "guardados": 0,
       "compartidos": 0,
       "follows": 0,
       "view_rate_pct": null
      },
      {
-      "tipo": "Reel",
-      "fecha": "20260928",
-      "url": "https://www.instagram.com/reel/Dd1vBzKDFhC/",
-      "texto": "SORTEO FINALIZADO ⚠️",
-      "alcance": 253,
-      "interacciones": 18,
-      "engagement_pct": 7.1,
-      "guardados": 0,
-      "compartidos": 4,
-      "follows": null,
-      "view_rate_pct": 30.199997
-     },
-     {
       "tipo": "Carrusel",
-      "fecha": "20260929",
-      "url": "https://www.instagram.com/p/Dd2bNrgCTMb/",
-      "texto": "Si trabajás en la administración de un taller, este lunes ya lo conocés 📋",
-      "alcance": 32,
-      "interacciones": 2,
-      "engagement_pct": 6.2,
+      "fecha": "20261010",
+      "url": "https://www.instagram.com/p/DeVAJt5iclm/",
+      "texto": "Una semana para Expomecánico 🚗 El sábado 17 vamos a estar en la UNSAM, de 11 a 19. Para charlar de cómo se lleva un taller y a escuchar cómo lo llevás vos. 🦾💻",
+      "alcance": 22,
+      "interacciones": 1,
+      "engagement_pct": 4.5,
       "guardados": 0,
       "compartidos": 0,
       "follows": 0,
@@ -711,10 +717,10 @@
      }
     ],
     "top_seguidores": [],
-    "publicaciones": 11
+    "publicaciones": 2
    }
   },
-  "desde": "2026-09-28",
-  "hasta": "2026-10-04"
+  "desde": "2026-10-05",
+  "hasta": "2026-10-11"
  }
 }

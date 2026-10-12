@@ -1,0 +1,248 @@
+{
+  "semana": "2026-W41",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-10-05",
+  "hasta": "2026-10-11",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 553,
+        "alcance": 248,
+        "interacciones": 43,
+        "engagement_pct": 17.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 263,
+        "alcance": 145,
+        "interacciones": 10,
+        "engagement_pct": 6.9,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 1898,
+        "alcance": 650,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Story",
+        "views": 116,
+        "alcance": 10,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 2830,
+      "alcance": 1053,
+      "interacciones": 53,
+      "engagement_pct": 5.0
+    },
+    "pauta": {
+      "views": 42053,
+      "alcance": 26956
+    },
+    "pct_views_de_pauta": 93.7,
+    "alcance_total_cuenta": 28009,
+    "audiencia": {
+      "views_seguidores": 5107,
+      "views_no_seguidores": 39772,
+      "pct_seguidores": 11.4,
+      "pct_no_seguidores": 88.6,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 5986,
+      "fin": 5990,
+      "delta": 4,
+      "delta_pct": 0.1
+    },
+    "publicaciones": 4,
+    "stories_publicadas": 0,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261006",
+        "url": "https://www.instagram.com/p/DeKtCWqDVxK/",
+        "texto": "El pedido de siempre no siempre es el que hace falta. 👀 Lo que sale del mostrador cambia de un mes a otro, y tus ventas de las últimas semanas ya lo muestran. 💻 Pedile a Claude que",
+        "views": 383,
+        "alcance": 150,
+        "interacciones": 9,
+        "guardados": 2,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 6.0
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261008",
+        "url": "https://www.instagram.com/p/DePNnwYH8ih/",
+        "texto": "El que viene por la bomba de agua muchas veces no sabe qué más le conviene llevar. 🤔 El vendedor con años se lo ofrece sin pensar. El que entró hace poco, todavía no. Pedile a Clau",
+        "views": 618,
+        "alcance": 219,
+        "interacciones": 13,
+        "guardados": 3,
+        "compartidos": 4,
+        "follows": 1,
+        "engagement_pct": 5.9
+      },
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20261008",
+        "url": "https://www.instagram.com/p/DeO-zO0zSSv/",
+        "texto": "Perdón por los drones, nosotros también queríamos estar en la despedida del más grande 🐐💙\n\n#boxergestion #messi #casasderepuestos",
+        "views": 585,
+        "alcance": 259,
+        "interacciones": 13,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 5.0
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261008",
+        "url": "https://www.instagram.com/p/DeNmY4ejjfn/",
+        "texto": "\"Esto me lo vendiste vos.\" 👀 Y a otro precio, y hace dos semanas. Si para contestar tenés que buscar el talonario y preguntar quién atendió, el reclamo crece delante de los que esp",
+        "views": 526,
+        "alcance": 199,
+        "interacciones": 7,
+        "guardados": 1,
+        "compartidos": 1,
+        "follows": 0,
+        "engagement_pct": 3.5
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261006",
+        "url": "https://www.instagram.com/p/DeKtCWqDVxK/",
+        "texto": "El pedido de siempre no siempre es el que hace falta. 👀 Lo que sale del mostrador cambia de un mes a otro, y tus ventas de las últimas semanas ya lo muestran. 💻 Pedile a Claude que",
+        "views": 383,
+        "alcance": 150,
+        "interacciones": 9,
+        "guardados": 2,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 6.0
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261008",
+        "url": "https://www.instagram.com/p/DePNnwYH8ih/",
+        "texto": "El que viene por la bomba de agua muchas veces no sabe qué más le conviene llevar. 🤔 El vendedor con años se lo ofrece sin pensar. El que entró hace poco, todavía no. Pedile a Clau",
+        "views": 618,
+        "alcance": 219,
+        "interacciones": 13,
+        "guardados": 3,
+        "compartidos": 4,
+        "follows": 1,
+        "engagement_pct": 5.9
+      },
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20261008",
+        "url": "https://www.instagram.com/p/DeO-zO0zSSv/",
+        "texto": "Perdón por los drones, nosotros también queríamos estar en la despedida del más grande 🐐💙\n\n#boxergestion #messi #casasderepuestos",
+        "views": 585,
+        "alcance": 259,
+        "interacciones": 13,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 5.0
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261008",
+        "url": "https://www.instagram.com/p/DeNmY4ejjfn/",
+        "texto": "\"Esto me lo vendiste vos.\" 👀 Y a otro precio, y hace dos semanas. Si para contestar tenés que buscar el talonario y preguntar quién atendió, el reclamo crece delante de los que esp",
+        "views": 526,
+        "alcance": 199,
+        "interacciones": 7,
+        "guardados": 1,
+        "compartidos": 1,
+        "follows": 0,
+        "engagement_pct": 3.5
+      }
+    ],
+    "top_por_seguidores_ganados": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261008",
+        "url": "https://www.instagram.com/p/DePNnwYH8ih/",
+        "texto": "El que viene por la bomba de agua muchas veces no sabe qué más le conviene llevar. 🤔 El vendedor con años se lo ofrece sin pensar. El que entró hace poco, todavía no. Pedile a Clau",
+        "views": 618,
+        "alcance": 219,
+        "interacciones": 13,
+        "guardados": 3,
+        "compartidos": 4,
+        "follows": 1,
+        "engagement_pct": 5.9
+      }
+    ],
+    "guardados_totales": 6,
+    "compartidos_totales": 5,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 28671,
+    "publicaciones": 3,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 974,
+      "fin": 976,
+      "delta": 2
+    }
+  },
+  "linkedin": {
+    "impresiones": 67,
+    "publicaciones": 1,
+    "interacciones": 3,
+    "reacciones": 3,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 2,
+    "engagement_pct_sobre_impresiones": 4.5,
+    "seguidores": {
+      "inicio": 105,
+      "fin": 106,
+      "delta": 1
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W40",
+    "instagram": {
+      "views_organicas": -27.8,
+      "alcance_organico": -22.9,
+      "interacciones": -49.0,
+      "engagement_pct": -34.2,
+      "seguidores": 0.1,
+      "publicaciones": -42.9,
+      "guardados": 20.0
+    },
+    "facebook": {
+      "views_contenido": 20.2,
+      "interacciones": -100.0,
+      "seguidores": 0.1
+    },
+    "linkedin": {
+      "impresiones": 91.4,
+      "interacciones": 200.0,
+      "seguidores": 1.0
+    }
+  }
+}

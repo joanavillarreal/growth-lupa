@@ -133,6 +133,26 @@ direcciones propuestas (para no repetirlas la semana siguiente).
 
 ---
 
+## 2026-W41 — Boxer Gestión y Boxer Taller
+
+Sin informe propio: la lectura está en `data/2026-W41/lectura.json` y en el tablero de redes.
+
+**Titular:** semana sin reels en las dos cuentas (4 piezas en Gestión, 2 carruseles en Taller). Sin
+el CTA «Comentá CLAUDE» ni personas en pantalla, Gestión volvió a un rango de 3,5% a 6,0% y a 4
+altas netas sin pieza a la que atribuirlas; la imagen de Messi tuvo el mayor alcance (259) con 0
+guardados, 0 compartidos y 0 follows.
+
+**Qué funcionó:** el carrusel de kits del 8/10 (5,9%, 3 guardados, 4 compartidos, 1 follow).
+Guardados 6 y compartidos 5 en Gestión. Taller +8 seguidores con solo carruseles.
+
+**Qué no funcionó:** alcance orgánico de Taller −76,0% sin reel ni sorteo; el engagement orgánico de
+Gestión −34,2% con 4 publicaciones contra 7. Prospectos de redes 1 (contra 3).
+
+**Qué hay que mirar:** si la caída de Gestión es la ausencia de reels y de CTA con palabra clave o
+de cadencia; esta semana no la separa (cambiaron las dos cosas a la vez).
+
+---
+
 ## 2026-W40 — Boxer Gestión
 
 Sin informe propio: la lectura está en `data/2026-W40/lectura.json` y en el tablero de redes.
