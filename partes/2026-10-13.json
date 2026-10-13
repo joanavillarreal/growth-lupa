@@ -50,6 +50,42 @@
         ]
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:15",
+      "resumen": "Guardia: 1 alerta nueva (DemoIA v1, 8.014 ARS en 2 dias sin resultados); gasto de ayer 35.199 ARS; Meta 5 leads vs CRM 4. Panel Meta Ads republicado.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_enviadas": [
+          "DemoIA | Video35 | Frio-Repuesteras | v1 | 2026-09: 8.014 ARS en 2 dias sin un solo resultado (G2)"
+        ],
+        "alertas_ya_avisadas": 1,
+        "gasto_ayer_ars": 35199,
+        "conciliacion": {
+          "meta": 5,
+          "crm": 4,
+          "slack": 0,
+          "faltan": 1
+        },
+        "campanas_a_confirmar": [],
+        "errores_mcp": "50 (0 sobre entidades vivas)",
+        "notas": [
+          "anuncio-total.json y errores.json se escribieron de la respuesta inline; anuncio-total corregido (faltaba conversion_type en la ultima fila) y errores.json reconstruido y verificado igual al de ayer; validar_mcp.py OK.",
+          "Bug corregido en meta/scripts/traer_prospectos.py: con ventana de exactamente 50 prospectos Bitrix devuelve la primera pagina de nuevo con start=50 y la paginacion no terminaba (la guardia se colgo 7+ min). Ahora corta cuando una pagina no trae IDs nuevos."
+        ]
+      },
+      "para": []
     }
   },
   "preparacion": {

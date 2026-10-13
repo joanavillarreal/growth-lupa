@@ -162,6 +162,12 @@ def prospectos(desde=None, hasta=None):
         params["start"] = start
         params["order[DATE_CREATE]"] = "ASC"
         lote = llamar("crm.lead.list", params) or []
+        # Bitrix, con `start` igual al total (p. ej. 50 de 50), devuelve la primera
+        # pagina otra vez: sin este corte el bucle no termina (13/10/2026).
+        vistos = {f["ID"] for f in filas}
+        lote = [f for f in lote if f["ID"] not in vistos]
+        if not lote:
+            break
         filas.extend(lote)
         pagina += 1
         print(f"  pagina {pagina}: {len(lote)} prospectos (acumulado {len(filas)})",

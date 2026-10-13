@@ -1,0 +1,95 @@
+{
+  "corrida": "2026-10-13",
+  "datos_hasta": "2026-10-12",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 450091.19,
+      "gasto_total": 450091.19,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 450091.19,
+      "gasto_total": 450091.19,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 35199.11,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-06": 7,
+      "2026-10-07": 8,
+      "2026-10-08": 3,
+      "2026-10-09": 5,
+      "2026-10-10": 4,
+      "2026-10-11": 8,
+      "2026-10-12": 5
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-06": 8,
+        "2026-10-07": 7,
+        "2026-10-08": 3,
+        "2026-10-09": 6,
+        "2026-10-10": 4,
+        "2026-10-11": 6,
+        "2026-10-12": 4
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-06": 2,
+      "2026-10-07": 1,
+      "2026-10-08": 2,
+      "2026-10-09": 0,
+      "2026-10-10": 0,
+      "2026-10-11": 2,
+      "2026-10-12": 0
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120252701921370427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120252701921370427",
+      "entidad": "Remarketing - Casos de éxito - JUL26",
+      "titulo": "Remarketing - Casos de éxito - JUL26: 7.851 ARS en 5 dias sin un solo resultado (5 dias seguidos)",
+      "detalle": "Campana JY | Remarketing · conjunto Remarketing. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 5,
+      "primer_aviso": "2026-10-10",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120254694684830427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254694684830427",
+      "entidad": "DemoIA | Video35 | Frio-Repuesteras | v1 | 2026-09",
+      "titulo": "DemoIA | Video35 | Frio-Repuesteras | v1 | 2026-09: 8.014 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Conversiones · conjunto Conversión - LAL Vieron video 1-3% (AGENTE META). Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-13"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254694684830427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120252701921370427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G3:cpl:120254717004450427"
+  ]
+}
