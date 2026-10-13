@@ -19,7 +19,7 @@ terminar, así que **todo lo que tenga que perdurar va al repo y se pushea a `ma
 | meta     | todos los días | Panel Meta Ads + guardia | #adqui-notificaciones-canales | Turbo (futuro) |
 | inversion | lunes y jueves | (carga al SPA 1052) | #adqui-notificaciones-canales (tabla de lo cargado) | — |
 | redes_general | todos los días | Panel de redes (números al día y leads del Q) | DM D0BRVS7A4A3 | Conti (futuro) |
-| redes_semana  | solo lunes     | Panel de redes (conclusiones de la semana cerrada) | DM D0BRVS7A4A3 | Conti (futuro) |
+| redes_semana  | solo lunes     | Panel de redes (conclusiones de la semana cerrada) | DM D0BRVS7A4A3 | Conti (se dispara su rutina si sale ok) |
 | limpieza | solo lunes, al final | — | DM D0BRVS7A4A3 | — |
 
 **Qué toca hoy no lo decido yo.** Lo decide `python3 que_toca_hoy.py` (lee `agenda.yaml`, la
@@ -29,7 +29,9 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 
 - `agenda.yaml` — qué análisis existen, qué días tocan, qué preparaciones necesitan, qué
   herramientas y variables de entorno usan, dónde se avisa y a quién se dispara después
-  (`disparar_despues`, vacío por ahora).
+  (`disparar_despues`, con la rutina de cada agente en `agentes`).
+- `disparo.py` — arma el texto del disparo a otro agente (solo si el análisis está `ok`) y lo
+  registra en el parte. Hoy: redes_semana → Conti (`procedimientos/redes_semana.md`, paso 9).
 - `paneles.yaml` — el link oficial de cada panel, su archivo en el repo, qué se hace con él en
   ensayo (`comparar` o `publicar`) y el `modo` actual.
 - `que_toca_hoy.py` — devuelve las preparaciones y los análisis pendientes para hoy.
@@ -260,7 +262,9 @@ los lunes, al final de la corrida (análisis `limpieza`): `python3 limpieza.py` 
       "herramientas": ["mcp__<codigo>__getBrandSettings", "..."],
       "artefacto": "link del panel publicado",
       "datos": { "hallazgos": [], "alertas": [], "metricas": {} },
-      "para": []
+      "para": ["conti"],
+      "disparos": { "conti": { "estado": "ok | fallido", "hora": "08:20",
+                               "trigger_id": "trig_...", "sesion": "cse_...", "error": null } }
     }
   }
 }

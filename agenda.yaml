@@ -11,8 +11,9 @@
 #                  cuentan si aparece una herramienta cuyo nombre termina en `__<sufijo>`.
 #                  Si falta alguna después de 3 búsquedas, el análisis se marca fallido.
 #   slack:         dónde se avisa el resultado.
-#   disparar_despues: agentes a los que se les pasa el parte al terminar.
-#                  Vacío por ahora: Orbi, Turbo y Conti todavía no existen.
+#   disparar_despues: agentes (de `agentes`, abajo) cuya rutina se dispara cuando el análisis
+#                  termina `ok`. Si termina fallido no se dispara y se avisa. Cómo: `disparo.py`.
+#                  Orbi y Turbo todavía no existen.
 #   necesita:      preparaciones (abajo) que tienen que correr antes, una sola vez por día
 #                  aunque las usen varios análisis.
 #   entorno:       variables de entorno que tienen que existir (nunca se muestran).
@@ -36,6 +37,16 @@ slack_ensayo: "D0BRVS7A4A3"
 # El resumen de cierre de cada corrida (regla 5) va siempre a este DM de Joana. En oficial,
 # sin "[ensayo]" (Joana, 08/10/2026). Los avisos de cada análisis van a su `slack`.
 slack_resumen: "D0BRVS7A4A3"
+
+# Rutinas de otros agentes que Lupa dispara (fire_trigger) cuando un análisis con
+# `disparar_despues` termina ok. `texto` es lo que va en el disparo; lo arma `disparo.py`.
+agentes:
+  conti:
+    rutina: "Conti · planificación"
+    trigger_id: "trig_01WJUXuorZ5W7948yNGHU85c"
+    # semana_plan: la ISO que empieza hoy; semana_cerrada: la que midió redes_semana.
+    texto: "Planificar {semana_plan} · semana cerrada {semana_cerrada}"
+    # Probado el 13/10/2026 con "PRUEBA DE DISPARO": Conti respondió en el DM.
 
 # Pasos compartidos. Corren una vez por día, antes del primer análisis que los
 # necesita, y su resultado queda en el parte bajo "preparacion".
@@ -100,7 +111,7 @@ analisis:
       - getAnalyticsDataByMetrics
       - ads_get_ad_entities         # gasto de awareness de la semana
     slack: "D0BRVS7A4A3"
-    disparar_despues: []      # futuro: [conti]
+    disparar_despues: [conti]
 
   redes_general:
     descripcion: Seguidores, alcance y engagement al día de hoy + leads de redes del trimestre

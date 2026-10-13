@@ -59,6 +59,16 @@ creativo). Lunes. Marcas: Boxer Gestión (brandId 4938672, IG + FB + LinkedIn) y
    día `redes_general` ya publicó, igual se republica: el panel junta los dos.
 8. `parte.py redes_semana ok` con titular, prospectos, alertas y el link; commit de `redes/` y
    push; mensaje al DM con el titular, el dato más importante y el link.
+9. **Disparo a Conti** (Joana, 13/10/2026). Solo si el paso 8 quedó `ok`:
+   `python3 disparo.py preparar redes_semana --semana <semana>`.
+   - Si devuelve `texto`: verificar `fire_trigger` con ToolSearch por el sufijo (regla 2, hasta 3
+     búsquedas) y llamarlo con ese `trigger_id` y ese `texto` exacto (ej. "Planificar 2026-W44 ·
+     semana cerrada 2026-W43"). Después `python3 disparo.py registrar redes_semana conti
+     --sesion <session_id que devolvió>`, o `--error "<lo que pasó>"` si no se pudo, y push.
+   - Si devuelve `no_disparar`, no se dispara.
+   - **Si redes_semana falla, no se dispara.** En los dos casos (fallido o `no_disparar`) se avisa
+     en el mensaje al DM y en el resumen de cierre: "Conti no se disparó: <motivo>". Conti igual
+     corre su respaldo de los lunes a las 10:30, pero sin el Panel de la semana al día.
 
 El histórico semanal (`redes/data/<semana>/`, la lectura y `redes/memoria/conclusiones.md`) queda
 en el repo para comparar y aprender. No se muestra en el panel.
