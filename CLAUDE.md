@@ -45,7 +45,8 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
   `memoria/pendientes.md`: lo decidido con Joana que espera a algo que todavía no existe (hoy, el
   cruce por pilar y formato con la Planificación de Conti). Revisarlo al empezar cada corrida.
 - `.claude/hooks/session-start.sh` — verifica el entorno y deja la sesión idéntica a `origin/main`
-  (si no hay cambios sin guardar); el commit de arranque va al mensaje de cierre.
+  (sin pisar cambios sin guardar ni commits sin subir: esos los pushea primero); el commit de
+  arranque va al mensaje de cierre.
 - Funnel (copiado de `agente-growth`): `run.py`, `growth/`, `config/definitions.yaml`,
   `data/`, `dashboard/`, `experiments/` y las skills `growth` y `nuevo-experimento`.
   Detalle en `growth/README.md` y en la skill `growth`. La carga de inversión está en

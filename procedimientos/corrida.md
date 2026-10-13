@@ -6,7 +6,9 @@ Esto es lo que hace la rutina diaria (7:50, hora de Argentina). La rutina solo d
 ## 0. Arranque
 
 - El hook de arranque ya verificó Python y las variables de entorno, y dejó el repo idéntico a
-  `origin/main` (`git checkout -B main origin/main`; si había cambios sin guardar no tocó nada).
+  `origin/main` (`git checkout -B main origin/main`). Si había cambios sin guardar no tocó nada;
+  si `main` local tenía commits sin subir (con historia común), los pusheó antes y, si el push
+  no entró, no tocó nada. Un `main` sin historia común con origin se reemplaza.
   Leer lo que imprimió: si dice ERROR o AVISO, eso va al mensaje final. La línea `ARRANQUE:`
   (también en `.git/lupa-arranque`) va tal cual al mensaje final.
 - Si no existe `/home/user/growth-lupa/que_toca_hoy.py`, la rutina no tiene el repo como fuente:

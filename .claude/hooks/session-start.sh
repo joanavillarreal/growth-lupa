@@ -26,9 +26,18 @@ for v in GOOGLE_ADS_CLIENT_ID GOOGLE_ADS_CLIENT_SECRET GOOGLE_ADS_REFRESH_TOKEN 
 done
 
 # 2. Repo idéntico a origin/main (solo en la nube). Con cambios sin guardar no se toca nada.
-#    checkout -B y no pull: un main local viejo o sin historia común (pasó el 13/10/2026) se
-#    descarta en vez de dejar la sesión trabada en él.
+#    - main local sin historia común con origin (la foto vieja del 13/10/2026): se reemplaza.
+#    - main local con historia común y commits sin subir: no se pisa; se avisa y se pushea
+#      primero. Si el push no entra (origin avanzó por otro lado), no se toca nada.
 ARRANQUE_ESTADO="sin verificar (no es la nube)"
+a_main() {
+  if git checkout -q -B main origin/main; then
+    ARRANQUE_ESTADO="= origin/main${1:-}"
+  else
+    ARRANQUE_ESTADO="NO es origin/main: falló git checkout -B main origin/main"
+    echo "ERROR: falló git checkout -B main origin/main"
+  fi
+}
 if [ "${CLAUDE_CODE_REMOTE:-}" = "true" ]; then
   if [ -n "$(git status --porcelain)" ]; then
     ARRANQUE_ESTADO="NO es origin/main: había cambios sin guardar y no toqué nada"
@@ -37,14 +46,35 @@ if [ "${CLAUDE_CODE_REMOTE:-}" = "true" ]; then
   else
     fetch_ok=""
     for i in 1 2 3 4; do git fetch -q origin main && { fetch_ok=1; break; }; sleep $((2 ** i)); done
+    sin_subir=""
+    if git rev-parse -q --verify refs/heads/main >/dev/null \
+       && git merge-base main origin/main >/dev/null 2>&1; then
+      sin_subir="$(git rev-list --count origin/main..main)"
+      [ "$sin_subir" = "0" ] && sin_subir=""
+    fi
     if [ -z "$fetch_ok" ]; then
       ARRANQUE_ESTADO="NO verificado: git fetch origin main falló 4 veces y no toqué nada"
       echo "AVISO: git fetch origin main falló 4 veces; no toco el repo"
-    elif git checkout -q -B main origin/main; then
-      ARRANQUE_ESTADO="= origin/main"
+    elif [ -n "$sin_subir" ]; then
+      echo "AVISO: main local tiene $sin_subir commit(s) sin subir; no lo piso, lo pusheo primero:"
+      git log --oneline origin/main..main | head -10
+      push_ok=""
+      for i in 1 2 3 4; do
+        out="$(git push -q origin main:main 2>&1)" && { push_ok=1; break; }
+        echo "$out" | grep -qiE "rejected|non-fast-forward|fetch first" && break   # no es la red
+        sleep $((2 ** i))
+      done
+      if [ -n "$push_ok" ]; then
+        git fetch -q origin main
+        echo "push ok: $sin_subir commit(s) subidos a origin/main"
+        a_main " (antes pushé $sin_subir commit(s) que estaban sin subir)"
+      else
+        ARRANQUE_ESTADO="NO es origin/main: main local tiene $sin_subir commit(s) sin subir y el push falló; no toqué nada"
+        echo "ERROR: no pude pushear main (¿origin avanzó por otro lado?); no toco el repo:"
+        echo "$out" | grep -v "^hint:" | head -3
+      fi
     else
-      ARRANQUE_ESTADO="NO es origin/main: falló git checkout -B main origin/main"
-      echo "ERROR: falló git checkout -B main origin/main"
+      a_main
     fi
   fi
 fi
