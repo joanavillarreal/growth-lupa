@@ -16,6 +16,40 @@
         "snapshot": "1669 prospectos, 1180 negociaciones"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:11",
+      "resumen": "Gestión 5.993 seguidores (+7), alcance 7d 27.106, engagement orgánico 4,7%; Taller 129 (+9), alcance 15.525, 3,5%; leads de redes Q4: 3. Panel republicado.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "boxer_gestion": {
+            "seguidores": 5993,
+            "delta_7d": 7,
+            "alcance_7d": 27106,
+            "alcance_organico_7d": 1041,
+            "engagement_organico_pct": 4.7
+          },
+          "boxer_taller": {
+            "seguidores": 129,
+            "delta_7d": 9,
+            "alcance_7d": 15525,
+            "alcance_organico_7d": 257,
+            "engagement_organico_pct": 3.5
+          },
+          "leads_redes_q4": 3
+        },
+        "notas": [
+          "Metricool: respuestas inline, escritas tal cual salvo filas de ig_por_tipo con tipo vacío (nota en el crudo). Filas por bloque iguales a las de ayer (143 y 120)."
+        ]
+      },
+      "para": []
     }
   },
   "preparacion": {
