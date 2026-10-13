@@ -5,8 +5,10 @@ Esto es lo que hace la rutina diaria (7:50, hora de Argentina). La rutina solo d
 
 ## 0. Arranque
 
-- El hook de arranque ya verificó Python y las variables de entorno, y dejó el repo
-  en `main` al día. Leer lo que imprimió: si dice ERROR, eso va al mensaje final.
+- El hook de arranque ya verificó Python y las variables de entorno, y dejó el repo idéntico a
+  `origin/main` (`git checkout -B main origin/main`; si había cambios sin guardar no tocó nada).
+  Leer lo que imprimió: si dice ERROR o AVISO, eso va al mensaje final. La línea `ARRANQUE:`
+  (también en `.git/lupa-arranque`) va tal cual al mensaje final.
 - Si no existe `/home/user/growth-lupa/que_toca_hoy.py`, la rutina no tiene el repo como fuente:
   mandar una sola línea al DM D0BRVS7A4A3 diciéndolo y terminar. No intentar clonarlo.
 - Leer `paneles.yaml` → `modo`. En `oficial` (desde el 09/10/2026): cada aviso de análisis a su
@@ -61,9 +63,11 @@ Uno solo por corrida, aunque no haya tocado nada, al DM `slack_resumen`. Formato
 <si aplica: Orígenes nuevos sin canal (decidís vos): <nombre (id)>; y los que sumé solos a Viajes Comerciales>
 Paneles: <links que se publicaron hoy>
 Parte: partes/<AAAA-MM-DD>.json
+Arranque: <contenido de .git/lupa-arranque, ej. "17c7a51 (= origin/main)">
 ```
 
-Si no tocaba nada: `Lupa · <día> <dd/mm>: hoy no tocaba nada (ya estaba hecho: <lista>)`.
+Si no tocaba nada: `Lupa · <día> <dd/mm>: hoy no tocaba nada (ya estaba hecho: <lista>)`, y
+en otra línea el `Arranque:` igual. Si `Arranque` no dice `= origin/main`, avisarlo arriba de todo.
 Al final, commit y push del parte si quedó algo sin pushear.
 
 ## Simular un día
