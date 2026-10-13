@@ -1,7 +1,23 @@
 {
   "fecha": "2026-10-13",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Funnel actualizado (1669 prospectos, 1180 negociaciones); alarma sin novedades; Monitor republicado en https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alarma": "sin novedades",
+        "origenes_sin_canal": [],
+        "snapshot": "1669 prospectos, 1180 negociaciones"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
