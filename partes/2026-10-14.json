@@ -17,6 +17,41 @@
         "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:00",
+      "resumen": "Guardia: 1 alerta enviada (Webinar Orden Stock, costo por resultado sube 3 días); gasto de ayer 40.209 ARS; Meta 7 / CRM 5 / Slack 5; Panel Meta Ads publicado",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_enviadas": [
+          "JY | Webinar Orden Stock (AGENTE META): costo por resultado sube hace 3 días (4.122 → 3.355 → 2.991 ARS/lead vs 1.703 de base)"
+        ],
+        "alertas_silenciadas": 2,
+        "gasto_ayer_ars": 40209,
+        "conciliacion": {
+          "meta": 7,
+          "crm": 5,
+          "slack": 5,
+          "sin_explicar": 0
+        },
+        "campanas_a_confirmar": [],
+        "errores_mcp": "50 (0 sobre entidades vivas)",
+        "cambios_registrados": 2,
+        "panel": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+        "nota": "roster.json y errores.json se escribieron a mano a partir de la respuesta inline (el entorno no dejó archivo de resultado); validar_mcp.py pasó. Dos corridas de guardia_diaria.py: la 2da dio 0 alertas por dedup; el bloque de Slack enviado es el de la 1ra."
+      },
+      "para": []
     }
   },
   "preparacion": {
