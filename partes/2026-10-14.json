@@ -1,7 +1,24 @@
 {
   "fecha": "2026-10-14",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Snapshot 2026-10-14 (1681 prospectos, 1184 negociaciones); Monitor republicado; alarma sin novedades",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alarma": "sin novedades",
+        "origenes_nuevos": [],
+        "gasto_meta_hasta": "2026-10-13",
+        "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
