@@ -52,6 +52,37 @@
         "nota": "roster.json y errores.json se escribieron a mano a partir de la respuesta inline (el entorno no dejó archivo de resultado); validar_mcp.py pasó. Dos corridas de guardia_diaria.py: la 2da dio 0 alertas por dedup; el bloque de Slack enviado es el de la 1ra."
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Gestión 5.994 seg (+13 en 7d), alcance 7d 25.420, engagement 4,8%; Taller 129 seg (+8), alcance 14.554, engagement 4,1%; leads de redes Q4: 3",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "gestion": {
+            "seguidores_ig": 5994,
+            "delta_7d": 13,
+            "alcance_7d": 25420,
+            "engagement_pct": 4.8
+          },
+          "taller": {
+            "seguidores_ig": 129,
+            "delta_7d": 8,
+            "alcance_7d": 14554,
+            "engagement_pct": 4.1
+          },
+          "leads_q4": 3
+        },
+        "panel": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+        "nota": "Los crudos de Metricool (ig_por_tipo, etc.) llegaron inline y se copiaron a mano al JSON (sin archivo de resultado del entorno). Gestión ig_por_tipo sin tipo vacío: 143 filas, igual que ayer."
+      },
+      "para": []
     }
   },
   "preparacion": {
