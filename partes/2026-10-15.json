@@ -1,7 +1,32 @@
 {
   "fecha": "2026-10-15",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Q4: 89 leads, 37 derivados, 35 presupuestados, 3 cerrados (MRR 596 USD); CAC 135,31 USD; sin alarma ni orígenes nuevos",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "hallazgos": [],
+        "alertas": [],
+        "metricas": {
+          "q": "2026-Q4",
+          "generados": 89,
+          "derivados": 37,
+          "presupuestados": 35,
+          "cerrados": 3,
+          "mrr": 596.0,
+          "gasto": 405.94,
+          "cac": 135.31
+        }
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
