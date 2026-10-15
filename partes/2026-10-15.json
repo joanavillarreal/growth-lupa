@@ -57,6 +57,34 @@
         "cambios_en_cuenta": "1 cambio nuevo en el registro de actividad"
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:01",
+      "resumen": "Cargados 6 registros (12–14/10): Meta USD 79,80 + Google USD 41,24 = USD 121,04",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "desde": "2026-10-12",
+        "hasta": "2026-10-14",
+        "registros_creados": 6,
+        "meta_usd": 79.8,
+        "google_usd": 41.24,
+        "total_usd": 121.04,
+        "ids": [
+          780,
+          782,
+          784,
+          786,
+          788,
+          790
+        ]
+      },
+      "para": []
     }
   },
   "preparacion": {
