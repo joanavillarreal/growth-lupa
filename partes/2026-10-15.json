@@ -85,6 +85,39 @@
         ]
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:03",
+      "resumen": "Gestión 5.997 seguidores (+12 en 7d), alcance 25.684, engagement orgánico 4,6%; Taller 129 (+8), alcance 14.325, 3,7% (muestra chica); leads de redes Q4: 3",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics",
+        "mcp__MCP-Metricool__getBrandSettings"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "hallazgos": [],
+        "alertas": [],
+        "metricas": {
+          "gestion": {
+            "seguidores": 5997,
+            "delta_7d": 12,
+            "alcance_7d": 25684,
+            "engagement_organico_pct": 4.6
+          },
+          "taller": {
+            "seguidores": 129,
+            "delta_7d": 8,
+            "alcance_7d": 14325,
+            "engagement_organico_pct": 3.7,
+            "muestra_chica": true
+          },
+          "leads_redes_q4": 3
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
