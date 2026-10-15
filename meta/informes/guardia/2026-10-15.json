@@ -1,0 +1,80 @@
+{
+  "corrida": "2026-10-15",
+  "datos_hasta": "2026-10-14",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 477590.06,
+      "gasto_total": 477590.06,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 477590.06,
+      "gasto_total": 477590.06,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 43851.48,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-08": 3,
+      "2026-10-09": 5,
+      "2026-10-10": 4,
+      "2026-10-11": 8,
+      "2026-10-12": 5,
+      "2026-10-13": 7,
+      "2026-10-14": 7
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-08": 3,
+        "2026-10-09": 6,
+        "2026-10-10": 4,
+        "2026-10-11": 6,
+        "2026-10-12": 4,
+        "2026-10-13": 5,
+        "2026-10-14": 5
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-08": 2,
+      "2026-10-09": 0,
+      "2026-10-10": 0,
+      "2026-10-11": 2,
+      "2026-10-12": 0,
+      "2026-10-13": 5,
+      "2026-10-14": 1
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G3:cpl:120252699641360427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120252699641360427",
+      "entidad": "JY | Conversiones",
+      "titulo": "JY | Conversiones: el costo por resultado sube hace 1 dia",
+      "detalle": "De 3.533 a 5.202 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-15"
+    }
+  ],
+  "se_mandan": [
+    "G3:cpl:120252699641360427"
+  ],
+  "silenciadas": [],
+  "resueltas": [
+    "G2:120252701921370427",
+    "G2:120254694684830427",
+    "G3:cpl:120254717004450427"
+  ]
+}

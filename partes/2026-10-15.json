@@ -25,6 +25,38 @@
         }
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:00",
+      "resumen": "Guardia: 1 alerta (JY | Conversiones, costo por resultado 3.533→5.202 ARS); gasto de ayer 43.851 ARS; Meta 7 leads vs CRM 5 (falta 1); panel publicado",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_enviadas": [
+          "JY | Conversiones: costo por resultado sube de 3.533 a 5.202 ARS en 1 día"
+        ],
+        "gasto_ayer_ars": 43851.48,
+        "conciliacion": {
+          "leads_meta": 7,
+          "leads_crm": 5,
+          "avisados_slack": 1,
+          "faltan": 1
+        },
+        "campanas_a_confirmar": [],
+        "errores_mcp": "50 (0 sobre entidades vivas)",
+        "cambios_en_cuenta": "1 cambio nuevo en el registro de actividad"
+      },
+      "para": []
     }
   },
   "preparacion": {
