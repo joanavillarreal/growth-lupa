@@ -51,6 +51,34 @@
         "panel": "Panel Meta Ads v24 publicado"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:04",
+      "resumen": "Cuentas al 15/10: Gestión 6.000 seguidores IG (+15 en 7d), engagement orgánico 4,6%; Taller 129 (+4), 2,5%. Leads de redes Q4: 3. Panel de redes republicado (v13).",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "cuentas_al": "2026-10-15",
+        "boxer_gestion": {
+          "seguidores_ig": 6000,
+          "delta_7d": 15,
+          "alcance_7d": 26222,
+          "engagement_organico_pct": 4.6
+        },
+        "boxer_taller": {
+          "seguidores_ig": 129,
+          "delta_7d": 4,
+          "alcance_7d": 14231,
+          "engagement_organico_pct": 2.5
+        },
+        "leads_redes_q4": 3
+      },
+      "para": []
     }
   },
   "preparacion": {
