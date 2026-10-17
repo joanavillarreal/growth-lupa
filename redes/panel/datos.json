@@ -1,6 +1,6 @@
 {
- "generado": "2026-10-16T08:03-03:00",
- "hoy": "2026-10-16",
+ "generado": "2026-10-17T07:59-03:00",
+ "hoy": "2026-10-17",
  "general": {
   "fecha": "2026-10-16",
   "datos_hasta": "2026-10-15",
@@ -482,15 +482,15 @@
     ]
    }
   },
-  "al_dia": true
+  "al_dia": false
  },
  "leads": {
-  "corte_snapshot": "2026-10-16",
+  "corte_snapshot": "2026-10-17",
   "trimestres": [
    {
     "etiqueta": "Q4 2026",
     "desde": "2026-10-01",
-    "hasta": "2026-10-16",
+    "hasta": "2026-10-17",
     "en_curso": true,
     "total": 3,
     "por_semana": [
@@ -581,7 +581,7 @@
     "inactivos": 5,
     "en_gestion": 1,
     "mismo_tramo": {
-     "hasta": "2026-07-16",
+     "hasta": "2026-07-17",
      "total": 7
     }
    }

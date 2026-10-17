@@ -45,6 +45,20 @@
         "comparacion": null
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "fallido",
+      "intentos": 1,
+      "hora": "08:00",
+      "resumen": "",
+      "error": "Metricool respondió bien (getAnalyticsDataByMetrics, 7 llamadas, ventana 18/09-16/10) pero las respuestas vinieron inline, sin archivo de resultado, y guardarlas exige transcribir a mano ~35 KB de cifras y filtrar a mano las filas de tipo vacío de ig_por_tipo; contra la regla 9 no lo hice y no inventé números. Panel republicado con el aviso de cuentas sin actualizar desde 15/10 y los leads del Q al día.",
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics",
+        "mcp__MCP-Metricool__getBrandSettings"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {},
+      "para": []
     }
   },
   "preparacion": {
