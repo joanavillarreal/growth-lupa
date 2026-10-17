@@ -1,0 +1,81 @@
+{
+  "corrida": "2026-10-17",
+  "datos_hasta": "2026-10-16",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 490808.71,
+      "gasto_total": 490808.71,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 490808.71,
+      "gasto_total": 490808.71,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 34408.8,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-10": 4,
+      "2026-10-11": 8,
+      "2026-10-12": 5,
+      "2026-10-13": 7,
+      "2026-10-14": 7,
+      "2026-10-15": 3,
+      "2026-10-16": 7
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-10": 4,
+        "2026-10-11": 6,
+        "2026-10-12": 4,
+        "2026-10-13": 5,
+        "2026-10-14": 5,
+        "2026-10-15": 3,
+        "2026-10-16": 5
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-10": 0,
+      "2026-10-11": 2,
+      "2026-10-12": 0,
+      "2026-10-13": 5,
+      "2026-10-14": 1,
+      "2026-10-15": 0,
+      "2026-10-16": 2
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254856365490427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254856365490427",
+      "entidad": "AsesoriaIA | Video | Frio-Repuesteras | v1 | 2026-10",
+      "titulo": "AsesoriaIA | Video | Frio-Repuesteras | v1 | 2026-10: 7.975 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Conversiones · conjunto Conversión segmentación similar. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-17"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254856365490427"
+  ],
+  "silenciadas": [],
+  "resueltas": [
+    "G2:120254585290100427",
+    "G3:cpl:120252699641360427",
+    "G3:cpl:120254602445140427",
+    "G3:cpl:120254717004450427"
+  ]
+}
