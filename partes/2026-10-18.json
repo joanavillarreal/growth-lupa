@@ -1,7 +1,28 @@
 {
   "fecha": "2026-10-18",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Snapshot 18/10: 1720 prospectos, 1205 negociaciones; alarma sin novedades; orígenes todos con canal; Monitor republicado.",
+      "error": null,
+      "herramientas": [
+        "(sin herramientas MCP; Bitrix por webhook)"
+      ],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [],
+        "metricas": {
+          "prospectos": 1720,
+          "negociaciones": 1205,
+          "registros_gasto": 394
+        }
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
