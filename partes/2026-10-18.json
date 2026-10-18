@@ -21,6 +21,49 @@
         }
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:57",
+      "resumen": "Guardia 18/10: 3 alertas enviadas (CPR sube en Cursos y Webinars y Webinar Orden Stock; CTR cae en Estado del rubro). Leads Meta 9 = CRM 9. Panel Meta Ads republicado.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas": [
+          "JY | Cursos y Webinars (AGENTE META): costo por resultado de 522 a 1.472 ARS en 1 día",
+          "JY | Webinar Orden Stock (AGENTE META): costo por resultado de 1.159 a 6.373 ARS en 1 día",
+          "Conocimiento - Estado del rubro: CTR de 3,60% a 2,35% en 1 día"
+        ],
+        "silenciadas": [],
+        "gasto_ayer_ars": 33674,
+        "conciliacion": {
+          "leads_meta": 9,
+          "leads_crm": 9,
+          "avisados_slack": 0,
+          "faltan": 0
+        },
+        "campanas_a_confirmar": [],
+        "notas": [
+          "errores de MCP: 50, 0 sobre entidades vivas",
+          "creativos: ninguno nuevo, no se llamó #11",
+          "anuncio-total, campana-total, errores, roster, anuncio-activos, anuncio-historico y actividad se guardaron copiando el texto exacto de la respuesta desde el registro de la sesión; el resto con cp del archivo de resultado. En un primer intento escribí a mano anuncio-total/campana-total/errores/roster: se compararon con lo exacto y se reemplazaron (roster difería, campana-total tenía un link_click mal tipeado que corregí antes)."
+        ],
+        "panel": {
+          "cambios_marcados": 23,
+          "alertas_vivas_q": 17,
+          "cpl_real_ars": 4594
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {

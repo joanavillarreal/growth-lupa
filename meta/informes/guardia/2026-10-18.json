@@ -1,0 +1,104 @@
+{
+  "corrida": "2026-10-18",
+  "datos_hasta": "2026-10-17",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 495444.47,
+      "gasto_total": 495444.47,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 495444.47,
+      "gasto_total": 495444.47,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 33673.75,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-11": 8,
+      "2026-10-12": 5,
+      "2026-10-13": 7,
+      "2026-10-14": 7,
+      "2026-10-15": 3,
+      "2026-10-16": 7,
+      "2026-10-17": 9
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-11": 6,
+        "2026-10-12": 4,
+        "2026-10-13": 5,
+        "2026-10-14": 5,
+        "2026-10-15": 3,
+        "2026-10-16": 5,
+        "2026-10-17": 9
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-11": 2,
+      "2026-10-12": 0,
+      "2026-10-13": 5,
+      "2026-10-14": 1,
+      "2026-10-15": 0,
+      "2026-10-16": 2,
+      "2026-10-17": 0
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G3:ctr:120252699394250427",
+      "tipo": "ctr_cayendo",
+      "nivel": "anuncio",
+      "entidad_id": "120252699394250427",
+      "entidad": "Conocimiento - Estado del rubro",
+      "titulo": "Conocimiento - Estado del rubro: el CTR cae hace 1 dia",
+      "detalle": "De 3.60% a 2.35% de un dia para el otro. Campana JY | Awareness. Suele ser fatiga de creativo: se confirma mirando la frecuencia del periodo, no subiendo el presupuesto.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-18"
+    },
+    {
+      "clave": "G3:cpl:120254602445140427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254602445140427",
+      "entidad": "JY | Cursos y Webinars (AGENTE META)",
+      "titulo": "JY | Cursos y Webinars (AGENTE META): el costo por resultado sube hace 1 dia",
+      "detalle": "De 522 a 1.472 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-18"
+    },
+    {
+      "clave": "G3:cpl:120254717004450427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254717004450427",
+      "entidad": "JY | Webinar Orden Stock (AGENTE META)",
+      "titulo": "JY | Webinar Orden Stock (AGENTE META): el costo por resultado sube hace 1 dia",
+      "detalle": "De 1.159 a 6.373 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-18"
+    }
+  ],
+  "se_mandan": [
+    "G3:ctr:120252699394250427",
+    "G3:cpl:120254602445140427",
+    "G3:cpl:120254717004450427"
+  ],
+  "silenciadas": [],
+  "resueltas": [
+    "G2:120254856365490427"
+  ]
+}
