@@ -1,0 +1,482 @@
+{
+ "fecha": "2026-10-18",
+ "datos_hasta": "2026-10-17",
+ "ventana": {
+  "desde": "2026-10-11",
+  "hasta": "2026-10-17"
+ },
+ "previa": {
+  "desde": "2026-10-04",
+  "hasta": "2026-10-10"
+ },
+ "marcas": {
+  "boxer-gestion": {
+   "nombre": "Boxer Gestión",
+   "ultimos_7": {
+    "seguidores": 6007,
+    "seguidores_delta": 17,
+    "alcance_organico": 1160,
+    "alcance_pago": 24173,
+    "alcance_total": 25333,
+    "views_organicas": 3110,
+    "pct_views_pauta": 88.1,
+    "interacciones": 46,
+    "engagement_pct": 4.0,
+    "muestra_chica": false,
+    "engagement_no_confiable": false,
+    "fb": {
+     "seguidores": 979,
+     "seguidores_delta": 4,
+     "views": 31270
+    },
+    "li": {
+     "seguidores": 106,
+     "seguidores_delta": 0,
+     "impresiones": 80
+    }
+   },
+   "previos_7": {
+    "seguidores": 5988,
+    "seguidores_delta": 1,
+    "alcance_organico": 1097,
+    "alcance_pago": 26437,
+    "alcance_total": 27534,
+    "views_organicas": 3004,
+    "pct_views_pauta": 93.3,
+    "interacciones": 60,
+    "engagement_pct": 5.5,
+    "muestra_chica": false,
+    "engagement_no_confiable": false,
+    "fb": {
+     "seguidores": 975,
+     "seguidores_delta": 1,
+     "views": 31375
+    },
+    "li": {
+     "seguidores": 105,
+     "seguidores_delta": 0,
+     "impresiones": 59
+    }
+   },
+   "variacion_pct": {
+    "alcance_organico": 5.7,
+    "alcance_pago": -8.6,
+    "alcance_total": -8.0,
+    "interacciones": -23.3,
+    "engagement_pp": -1.5
+   },
+   "seguidores_delta_30d": 37,
+   "serie_30d": [
+    {
+     "fecha": "2026-09-18",
+     "seguidores": 5970,
+     "alcance_organico": 194,
+     "alcance_pago": 3294
+    },
+    {
+     "fecha": "2026-09-19",
+     "seguidores": 5970,
+     "alcance_organico": 158,
+     "alcance_pago": 4251
+    },
+    {
+     "fecha": "2026-09-20",
+     "seguidores": 5972,
+     "alcance_organico": 164,
+     "alcance_pago": 2745
+    },
+    {
+     "fecha": "2026-09-21",
+     "seguidores": 5974,
+     "alcance_organico": 200,
+     "alcance_pago": 4046
+    },
+    {
+     "fecha": "2026-09-22",
+     "seguidores": 5978,
+     "alcance_organico": 327,
+     "alcance_pago": 4827
+    },
+    {
+     "fecha": "2026-09-23",
+     "seguidores": 5972,
+     "alcance_organico": 69,
+     "alcance_pago": 3854
+    },
+    {
+     "fecha": "2026-09-24",
+     "seguidores": 5973,
+     "alcance_organico": 53,
+     "alcance_pago": 4443
+    },
+    {
+     "fecha": "2026-09-25",
+     "seguidores": 5980,
+     "alcance_organico": 35,
+     "alcance_pago": 4775
+    },
+    {
+     "fecha": "2026-09-26",
+     "seguidores": 5981,
+     "alcance_organico": 129,
+     "alcance_pago": 3376
+    },
+    {
+     "fecha": "2026-09-27",
+     "seguidores": 5981,
+     "alcance_organico": 48,
+     "alcance_pago": 4032
+    },
+    {
+     "fecha": "2026-09-28",
+     "seguidores": 5980,
+     "alcance_organico": 164,
+     "alcance_pago": 2929
+    },
+    {
+     "fecha": "2026-09-29",
+     "seguidores": 5982,
+     "alcance_organico": 201,
+     "alcance_pago": 5447
+    },
+    {
+     "fecha": "2026-09-30",
+     "seguidores": 5984,
+     "alcance_organico": 256,
+     "alcance_pago": 3982
+    },
+    {
+     "fecha": "2026-10-01",
+     "seguidores": 5984,
+     "alcance_organico": 227,
+     "alcance_pago": 2545
+    },
+    {
+     "fecha": "2026-10-02",
+     "seguidores": 5984,
+     "alcance_organico": 209,
+     "alcance_pago": 2896
+    },
+    {
+     "fecha": "2026-10-03",
+     "seguidores": 5986,
+     "alcance_organico": 195,
+     "alcance_pago": 3532
+    },
+    {
+     "fecha": "2026-10-04",
+     "seguidores": 5987,
+     "alcance_organico": 113,
+     "alcance_pago": 2196
+    },
+    {
+     "fecha": "2026-10-05",
+     "seguidores": 5986,
+     "alcance_organico": 71,
+     "alcance_pago": 4655
+    },
+    {
+     "fecha": "2026-10-06",
+     "seguidores": 5986,
+     "alcance_organico": 54,
+     "alcance_pago": 4597
+    },
+    {
+     "fecha": "2026-10-07",
+     "seguidores": 5981,
+     "alcance_organico": 117,
+     "alcance_pago": 3927
+    },
+    {
+     "fecha": "2026-10-08",
+     "seguidores": 5985,
+     "alcance_organico": 159,
+     "alcance_pago": 3764
+    },
+    {
+     "fecha": "2026-10-09",
+     "seguidores": 5985,
+     "alcance_organico": 438,
+     "alcance_pago": 4120
+    },
+    {
+     "fecha": "2026-10-10",
+     "seguidores": 5988,
+     "alcance_organico": 145,
+     "alcance_pago": 3178
+    },
+    {
+     "fecha": "2026-10-11",
+     "seguidores": 5990,
+     "alcance_organico": 69,
+     "alcance_pago": 2715
+    },
+    {
+     "fecha": "2026-10-12",
+     "seguidores": 5993,
+     "alcance_organico": 59,
+     "alcance_pago": 3764
+    },
+    {
+     "fecha": "2026-10-13",
+     "seguidores": 5994,
+     "alcance_organico": 57,
+     "alcance_pago": 2908
+    },
+    {
+     "fecha": "2026-10-14",
+     "seguidores": 5997,
+     "alcance_organico": 269,
+     "alcance_pago": 4039
+    },
+    {
+     "fecha": "2026-10-15",
+     "seguidores": 6000,
+     "alcance_organico": 104,
+     "alcance_pago": 4357
+    },
+    {
+     "fecha": "2026-10-16",
+     "seguidores": 6002,
+     "alcance_organico": 383,
+     "alcance_pago": 3309
+    },
+    {
+     "fecha": "2026-10-17",
+     "seguidores": 6007,
+     "alcance_organico": 219,
+     "alcance_pago": 3081
+    }
+   ]
+  },
+  "boxer-taller": {
+   "nombre": "Boxer Taller",
+   "ultimos_7": {
+    "seguidores": 130,
+    "seguidores_delta": 1,
+    "alcance_organico": 220,
+    "alcance_pago": 13849,
+    "alcance_total": 14069,
+    "views_organicas": 600,
+    "pct_views_pauta": 95.8,
+    "interacciones": 5,
+    "engagement_pct": 2.3,
+    "muestra_chica": false,
+    "engagement_no_confiable": false,
+    "fb": {
+     "seguidores": 2,
+     "seguidores_delta": 0,
+     "views": 13912
+    }
+   },
+   "previos_7": {
+    "seguidores": 128,
+    "seguidores_delta": 7,
+    "alcance_organico": 294,
+    "alcance_pago": 13659,
+    "alcance_total": 13953,
+    "views_organicas": 799,
+    "pct_views_pauta": 94.4,
+    "interacciones": 22,
+    "engagement_pct": 7.5,
+    "muestra_chica": false,
+    "engagement_no_confiable": false,
+    "fb": {
+     "seguidores": 2,
+     "seguidores_delta": 0,
+     "views": 15960
+    }
+   },
+   "variacion_pct": {
+    "alcance_organico": -25.2,
+    "alcance_pago": 1.4,
+    "alcance_total": 0.8,
+    "interacciones": -77.3,
+    "engagement_pp": -5.2
+   },
+   "seguidores_delta_30d": 54,
+   "serie_30d": [
+    {
+     "fecha": "2026-09-18",
+     "seguidores": 76,
+     "alcance_organico": 5,
+     "alcance_pago": 1303
+    },
+    {
+     "fecha": "2026-09-19",
+     "seguidores": 76,
+     "alcance_organico": 1324,
+     "alcance_pago": 920
+    },
+    {
+     "fecha": "2026-09-20",
+     "seguidores": 76,
+     "alcance_organico": 230,
+     "alcance_pago": 1297
+    },
+    {
+     "fecha": "2026-09-21",
+     "seguidores": 77,
+     "alcance_organico": 111,
+     "alcance_pago": 1560
+    },
+    {
+     "fecha": "2026-09-22",
+     "seguidores": 77,
+     "alcance_organico": 69,
+     "alcance_pago": 743
+    },
+    {
+     "fecha": "2026-09-23",
+     "seguidores": 77,
+     "alcance_organico": 38,
+     "alcance_pago": 1295
+    },
+    {
+     "fecha": "2026-09-24",
+     "seguidores": 78,
+     "alcance_organico": 31,
+     "alcance_pago": 2090
+    },
+    {
+     "fecha": "2026-09-25",
+     "seguidores": 77,
+     "alcance_organico": 35,
+     "alcance_pago": 1452
+    },
+    {
+     "fecha": "2026-09-26",
+     "seguidores": 78,
+     "alcance_organico": 15,
+     "alcance_pago": 1418
+    },
+    {
+     "fecha": "2026-09-27",
+     "seguidores": 78,
+     "alcance_organico": 9,
+     "alcance_pago": 1637
+    },
+    {
+     "fecha": "2026-09-28",
+     "seguidores": 80,
+     "alcance_organico": 2,
+     "alcance_pago": 2273
+    },
+    {
+     "fecha": "2026-09-29",
+     "seguidores": 81,
+     "alcance_organico": 249,
+     "alcance_pago": 1178
+    },
+    {
+     "fecha": "2026-09-30",
+     "seguidores": 84,
+     "alcance_organico": 155,
+     "alcance_pago": 543
+    },
+    {
+     "fecha": "2026-10-01",
+     "seguidores": 110,
+     "alcance_organico": 45,
+     "alcance_pago": 1011
+    },
+    {
+     "fecha": "2026-10-02",
+     "seguidores": 115,
+     "alcance_organico": 401,
+     "alcance_pago": 1842
+    },
+    {
+     "fecha": "2026-10-03",
+     "seguidores": 119,
+     "alcance_organico": 179,
+     "alcance_pago": 1458
+    },
+    {
+     "fecha": "2026-10-04",
+     "seguidores": 121,
+     "alcance_organico": 75,
+     "alcance_pago": 1133
+    },
+    {
+     "fecha": "2026-10-05",
+     "seguidores": 121,
+     "alcance_organico": 49,
+     "alcance_pago": 1462
+    },
+    {
+     "fecha": "2026-10-06",
+     "seguidores": 120,
+     "alcance_organico": 46,
+     "alcance_pago": 2971
+    },
+    {
+     "fecha": "2026-10-07",
+     "seguidores": 121,
+     "alcance_organico": 53,
+     "alcance_pago": 2240
+    },
+    {
+     "fecha": "2026-10-08",
+     "seguidores": 121,
+     "alcance_organico": 33,
+     "alcance_pago": 1875
+    },
+    {
+     "fecha": "2026-10-09",
+     "seguidores": 125,
+     "alcance_organico": 27,
+     "alcance_pago": 1910
+    },
+    {
+     "fecha": "2026-10-10",
+     "seguidores": 128,
+     "alcance_organico": 11,
+     "alcance_pago": 2068
+    },
+    {
+     "fecha": "2026-10-11",
+     "seguidores": 129,
+     "alcance_organico": 46,
+     "alcance_pago": 1943
+    },
+    {
+     "fecha": "2026-10-12",
+     "seguidores": 129,
+     "alcance_organico": 41,
+     "alcance_pago": 2261
+    },
+    {
+     "fecha": "2026-10-13",
+     "seguidores": 129,
+     "alcance_organico": 10,
+     "alcance_pago": 2036
+    },
+    {
+     "fecha": "2026-10-14",
+     "seguidores": 129,
+     "alcance_organico": 23,
+     "alcance_pago": 2041
+    },
+    {
+     "fecha": "2026-10-15",
+     "seguidores": 129,
+     "alcance_organico": 44,
+     "alcance_pago": 1770
+    },
+    {
+     "fecha": "2026-10-16",
+     "seguidores": 129,
+     "alcance_organico": 23,
+     "alcance_pago": 1688
+    },
+    {
+     "fecha": "2026-10-17",
+     "seguidores": 130,
+     "alcance_organico": 33,
+     "alcance_pago": 2110
+    }
+   ]
+  }
+ }
+}

@@ -64,6 +64,39 @@
         }
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:59",
+      "resumen": "Gestión 6.007 seguidores IG (+17 en 7d), alcance 7d 25.333, eng. 4,0%; Taller 130 (+1), alcance 14.069, eng. 2,3%; leads de redes Q4: 3. Panel de redes republicado.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics",
+        "mcp__MCP-Metricool__getBrandSettings"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "gestion": {
+            "seguidores_ig": 6007,
+            "delta_7d": 17,
+            "alcance_7d": 25333,
+            "engagement_organico_pct": 4.0
+          },
+          "taller": {
+            "seguidores_ig": 130,
+            "delta_7d": 1,
+            "alcance_7d": 14069,
+            "engagement_organico_pct": 2.3
+          },
+          "leads_q4_redes": 3
+        },
+        "notas": [
+          "ventana 18/09-17/10; crudos guardados desde el texto exacto de las respuestas de Metricool (registro de la sesión), filtrando solo las filas de tipo vacío de ig_por_tipo como indica el procedimiento"
+        ]
+      },
+      "para": []
     }
   },
   "preparacion": {
