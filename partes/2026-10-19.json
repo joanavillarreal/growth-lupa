@@ -117,6 +117,51 @@
         "ids": "792-806"
       },
       "para": []
+    },
+    "redes_semana": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "09:29",
+      "resumen": "W42: el reel del webinar de stock («Comentá stock») fue la mejor pieza de Gestión (6,9%, 21 interacciones sobre 306); Gestión +12 seguidores, Taller +1; prospectos de redes 0 con 38.893 ARS de awareness.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getBrandSettings",
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics",
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "hallazgos": [
+          "Volvió un reel con palabra clave a Gestión y fue la mejor pieza de la semana: el del webinar de stock («Comentá stock») sacó 6,9% de engagement, 21 interacciones sobre 306 de alcance, contra 2,8% y 2,2% de los dos carruseles. Gestión sumó +12 seguidores sin pieza a la que atribuirlos y Taller +1; los prospectos de redes fueron 0."
+        ],
+        "alertas": [
+          "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).",
+          "Boxer Taller: ninguna pieza de la semana trajo seguidores (0 follows por pieza).",
+          "Las redes no trajeron ningún prospecto al CRM esta semana."
+        ],
+        "metricas": {
+          "semana": "2026-W42",
+          "prospectos_redes": 0,
+          "inversion_awareness_ars": 38893.58,
+          "boxer-gestion": {
+            "seguidores": 6005,
+            "delta": 12,
+            "alcance_organico": 1326,
+            "engagement_pct": 3.9,
+            "pct_views_pauta": 87.1
+          },
+          "boxer-taller": {
+            "seguidores": 130,
+            "delta": 1,
+            "alcance_organico": 910,
+            "engagement_pct": 2.0,
+            "pct_views_pauta": 85.6
+          }
+        }
+      },
+      "para": [
+        "conti"
+      ]
     }
   },
   "preparacion": {

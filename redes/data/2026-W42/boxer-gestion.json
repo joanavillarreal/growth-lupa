@@ -1,0 +1,212 @@
+{
+  "semana": "2026-W42",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-10-12",
+  "hasta": "2026-10-18",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 233,
+        "alcance": 68,
+        "interacciones": 16,
+        "engagement_pct": 23.5,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 791,
+        "alcance": 379,
+        "interacciones": 26,
+        "engagement_pct": 6.9,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 743,
+        "alcance": 394,
+        "interacciones": 10,
+        "engagement_pct": 2.5,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 1743,
+        "alcance": 485,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 3510,
+      "alcance": 1326,
+      "interacciones": 52,
+      "engagement_pct": 3.9
+    },
+    "pauta": {
+      "views": 23762,
+      "alcance": 24557
+    },
+    "pct_views_de_pauta": 87.1,
+    "alcance_total_cuenta": 25883,
+    "audiencia": {
+      "views_seguidores": 5596,
+      "views_no_seguidores": 21666,
+      "pct_seguidores": 20.5,
+      "pct_no_seguidores": 79.4,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 5993,
+      "fin": 6005,
+      "delta": 12,
+      "delta_pct": 0.2
+    },
+    "publicaciones": 6,
+    "stories_publicadas": 3,
+    "piezas": [
+      {
+        "tipo": "Reel",
+        "fecha": "20261015",
+        "url": "https://www.instagram.com/reel/DehPW34EfjH/",
+        "texto": "Ordenar el stock no se hace en un fin de semana. Se hace de a poco, y hay repuesteros que ya están en eso. 🚀📦\n\nEl jueves 22 de octubre a las 13 h, te contamos experiencias de coleg",
+        "views": 508,
+        "alcance": 306,
+        "interacciones": 21,
+        "guardados": 2,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 34.6,
+        "engagement_pct": 6.9
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261016",
+        "url": "https://www.instagram.com/p/Dekj5dICJjx/",
+        "texto": "¿Qué entró por cada medio de pago? 👀 Si para contestarlo tenés que juntar los cierres del posnet, el home banking y la app de Mercado Pago, manejarlo así es inescalable. Con Boxer,",
+        "views": 461,
+        "alcance": 176,
+        "interacciones": 5,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.8
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261013",
+        "url": "https://www.instagram.com/p/DecurJQAJco/",
+        "texto": "Cuando el negocio depende del dueño, el dueño no puede salir del local. 🤔 Precio, stock, en qué estante está cada repuesto: Si todo eso vive en tu cabeza, cada consulta del mostrad",
+        "views": 381,
+        "alcance": 139,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.2
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "Reel",
+        "fecha": "20261015",
+        "url": "https://www.instagram.com/reel/DehPW34EfjH/",
+        "texto": "Ordenar el stock no se hace en un fin de semana. Se hace de a poco, y hay repuesteros que ya están en eso. 🚀📦\n\nEl jueves 22 de octubre a las 13 h, te contamos experiencias de coleg",
+        "views": 508,
+        "alcance": 306,
+        "interacciones": 21,
+        "guardados": 2,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 34.6,
+        "engagement_pct": 6.9
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261016",
+        "url": "https://www.instagram.com/p/Dekj5dICJjx/",
+        "texto": "¿Qué entró por cada medio de pago? 👀 Si para contestarlo tenés que juntar los cierres del posnet, el home banking y la app de Mercado Pago, manejarlo así es inescalable. Con Boxer,",
+        "views": 461,
+        "alcance": 176,
+        "interacciones": 5,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.8
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261013",
+        "url": "https://www.instagram.com/p/DecurJQAJco/",
+        "texto": "Cuando el negocio depende del dueño, el dueño no puede salir del local. 🤔 Precio, stock, en qué estante está cada repuesto: Si todo eso vive en tu cabeza, cada consulta del mostrad",
+        "views": 381,
+        "alcance": 139,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.2
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 2,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 30637,
+    "publicaciones": 6,
+    "interacciones": 1,
+    "reels_publicados": 1,
+    "views_reels": 77,
+    "seguidores": {
+      "inicio": 977,
+      "fin": 979,
+      "delta": 2
+    }
+  },
+  "linkedin": {
+    "impresiones": 92,
+    "publicaciones": 0,
+    "interacciones": 0,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 0,
+    "engagement_pct_sobre_impresiones": 0.0,
+    "seguidores": {
+      "inicio": 106,
+      "fin": 106,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W41",
+    "instagram": {
+      "views_organicas": 24.0,
+      "alcance_organico": 25.9,
+      "interacciones": -1.9,
+      "engagement_pct": -22.0,
+      "seguidores": 0.3,
+      "publicaciones": 50.0,
+      "guardados": -66.7
+    },
+    "facebook": {
+      "views_contenido": 6.9,
+      "interacciones": null,
+      "seguidores": 0.3
+    },
+    "linkedin": {
+      "impresiones": 37.3,
+      "interacciones": -100.0,
+      "seguidores": 0.0
+    }
+  }
+}

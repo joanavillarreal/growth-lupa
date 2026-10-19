@@ -117,6 +117,10 @@ entradas para el Expomecánico ("Comentá EXPO y seguinos", cierre el 1/10) la c
 a la pieza (los reels no traen follows), pero la coincidencia es fuerte. Lo que hay que ver es **si se
 quedan**: si la W41 y la W42 no devuelven las altas, el sorteo trajo talleristas; si caen, trajo
 cazadores de sorteos. Hasta que no se vea, no se repite como palanca de crecimiento.
+**W42: las altas se quedaron.** Dos semanas después la cuenta está en 130 (121 al cierre del sorteo,
+129 en la W41, 130 en la W42): no hubo caída. Con el criterio que se fijó, el sorteo no trajo cazadores
+de sorteos que se van. Lo que todavía no se sabe es si son talleristas: el dato de quién es cada
+seguidor no lo da Metricool.
 
 **¿Los hashtags suman alcance?** Abierta el 23/9/2026 (consulta C1), sin lectura posible todavía: son
 10 piezas (4 con hashtags, 6 sin) y la cuenta está en modo lanzamiento. La mediana con hashtags (117
@@ -130,6 +134,27 @@ origen en Metricool. Detalle en `data/hashtags/analisis.json`.
 
 Formato de cada entrada: titular · qué funcionó · qué no · qué hay que mirar · hipótesis a probar ·
 direcciones propuestas (para no repetirlas la semana siguiente).
+
+---
+
+## 2026-W42 — Boxer Gestión y Boxer Taller
+
+Sin informe propio: la lectura está en `data/2026-W42/lectura.json` y en el Panel de redes.
+
+**Titular:** volvió un reel con palabra clave a Gestión (el del webinar de stock, «Comentá stock») y
+fue la mejor pieza (6,9%, 21 interacciones sobre 306), contra 2,8% y 2,2% de los dos carruseles.
+Gestión +12 seguidores sin pieza a la que atribuirlos; Taller +1. Prospectos de redes: 0.
+
+**Qué funcionó:** el reel del 15/10. El alcance orgánico de Gestión subió 25,9% y el de Taller se
+multiplicó (910, +243,4%) por la story del 18/10, después del Expomecánico.
+
+**Qué no funcionó:** los carruseles de las dos cuentas (0 guardados, 0 compartidos, 0 follows en
+los cuatro). LinkedIn sin publicar. Prospectos de redes en 0.
+
+**Qué hay que mirar:** la pregunta de la W41 (¿reel o palabra clave?) sigue sin separarse: la única
+pieza con CTA de palabra clave fue también el único reel. Metricool cuenta 6 publicaciones por cuenta
+pero lista 3 piezas en Gestión y 2 en Taller (el 17/10 Taller publicó 4): lo que no está en la lista
+no se pudo medir por pieza.
 
 ---
 

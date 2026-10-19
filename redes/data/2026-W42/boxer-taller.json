@@ -1,0 +1,162 @@
+{
+  "semana": "2026-W42",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-10-12",
+  "hasta": "2026-10-18",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 105,
+        "alcance": 9,
+        "interacciones": 2,
+        "engagement_pct": 22.2,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 132,
+        "alcance": 91,
+        "interacciones": 3,
+        "engagement_pct": 3.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 1747,
+        "alcance": 721,
+        "interacciones": 13,
+        "engagement_pct": 1.8,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 291,
+        "alcance": 89,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 2275,
+      "alcance": 910,
+      "interacciones": 18,
+      "engagement_pct": 2.0
+    },
+    "pauta": {
+      "views": 13471,
+      "alcance": 13773
+    },
+    "pct_views_de_pauta": 85.6,
+    "alcance_total_cuenta": 14683,
+    "audiencia": {
+      "views_seguidores": 449,
+      "views_no_seguidores": 15273,
+      "pct_seguidores": 2.9,
+      "pct_no_seguidores": 97.0,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 129,
+      "fin": 130,
+      "delta": 1,
+      "delta_pct": 0.8
+    },
+    "publicaciones": 6,
+    "stories_publicadas": 4,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261016",
+        "url": "https://www.instagram.com/p/Dekc8cskliN/",
+        "texto": "El presupuesto de palabra funciona… hasta el día de la entrega 🔧\n\nSi el trabajo cambió en el camino, cada uno se acuerda de un número distinto. Con el presupuesto por escrito, con ",
+        "views": 72,
+        "alcance": 24,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 4.2
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261013",
+        "url": "https://www.instagram.com/p/DecurJ7DlqX/",
+        "texto": "Ningún taller anda solo 🔧 Esa red de colegas y repuesteros es parte del oficio 🚀\n\nEste sábado 17 la comunidad se junta la comunidad en Expomecánico, en la UNSAM. ¿Vas? Etiquetá al ",
+        "views": 64,
+        "alcance": 23,
+        "interacciones": 0,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 0.0
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261016",
+        "url": "https://www.instagram.com/p/Dekc8cskliN/",
+        "texto": "El presupuesto de palabra funciona… hasta el día de la entrega 🔧\n\nSi el trabajo cambió en el camino, cada uno se acuerda de un número distinto. Con el presupuesto por escrito, con ",
+        "views": 72,
+        "alcance": 24,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 4.2
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261013",
+        "url": "https://www.instagram.com/p/DecurJ7DlqX/",
+        "texto": "Ningún taller anda solo 🔧 Esa red de colegas y repuesteros es parte del oficio 🚀\n\nEste sábado 17 la comunidad se junta la comunidad en Expomecánico, en la UNSAM. ¿Vas? Etiquetá al ",
+        "views": 64,
+        "alcance": 23,
+        "interacciones": 0,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 0.0
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 13943,
+    "publicaciones": 6,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 2,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W41",
+    "instagram": {
+      "views_organicas": 206.6,
+      "alcance_organico": 243.4,
+      "interacciones": 125.0,
+      "engagement_pct": -33.3,
+      "seguidores": 0.8,
+      "publicaciones": 200.0,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": -8.7,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}
