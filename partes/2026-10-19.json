@@ -168,7 +168,7 @@
           "hora": "09:32",
           "trigger_id": "trig_01WJUXuorZ5W7948yNGHU85c",
           "sesion": null,
-          "error": "no apareció ninguna herramienta que termine en __fire_trigger después de 3 búsquedas (09:30, 09:31 y 09:34); cargaron Slack, Metricool, Meta y GitHub, pero ningún conector de disparo de rutinas"
+          "error": "no apareció ninguna herramienta que termine en __fire_trigger después de 3 búsquedas; cargaron Slack, Metricool, Meta y GitHub, pero ningún conector de disparo de rutinas"
         }
       }
     },
