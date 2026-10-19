@@ -27,6 +27,45 @@
         "origenes_sin_canal": []
       },
       "para": []
+    },
+    "meta": {
+      "estado": "fallido",
+      "intentos": 1,
+      "hora": "07:59",
+      "resumen": "",
+      "error": "Guardia ciega hoy: Meta respondió (ad_entities, roster, errores, activos, histórico, actividad), pero no pude guardar la respuesta exacta de ads_get_errors (la respuesta venía inline, sin archivo del entorno, y mi copia a mano fue interrumpida antes de escribirse). Sin errores.json no se puede validar ni correr la guardia (regla 9); se descartó la carpeta incompleta. Herramientas cargadas: mcp__MCP-Meta__ads_get_ad_entities, ads_get_errors, ads_get_creatives, ads_get_ad_accounts, ads_account_get_activity_logs, mcp__Slack__slack_read_channel. Panel Meta Ads no actualizado hoy.",
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {},
+      "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:59",
+      "resumen": "Cargados 8 registros (15-18/10): Meta USD 101.96 + Google USD 60.82 = USD 162.78",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "desde": "2026-10-15",
+        "hasta": "2026-10-18",
+        "creados": 8,
+        "usd_total": 162.78,
+        "usd_meta": 101.96,
+        "usd_google": 60.82,
+        "ids": "792-806"
+      },
+      "para": []
     }
   },
   "preparacion": {
