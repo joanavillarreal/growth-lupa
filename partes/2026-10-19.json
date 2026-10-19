@@ -1,7 +1,34 @@
 {
   "fecha": "2026-10-19",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Q4: 127 generados, 51 derivados, 3 cerrados (MRR 596). Alarma: Google Ads sin prospectos 2 días seguidos.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [
+          "Google Ads sin prospectos 2 días seguidos (2026-10-17 y 2026-10-18)"
+        ],
+        "metricas": {
+          "q": "2026-Q4",
+          "generados": 127,
+          "derivados": 51,
+          "presupuestados": 42,
+          "cerrados": 3,
+          "mrr": 596.0,
+          "gasto": 549.21,
+          "confiabilidad_dato": "alta"
+        },
+        "origenes_sin_canal": []
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
