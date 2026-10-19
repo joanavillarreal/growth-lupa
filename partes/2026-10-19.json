@@ -194,6 +194,27 @@
         }
       },
       "para": []
+    },
+    "limpieza": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "09:29",
+      "resumen": "Borrados 3 crudos de Metricool/Meta de la W34 (más de 8 semanas); se conserva la foto semanal del CRM.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": null,
+      "datos": {
+        "borrados": [
+          "redes/data/raw/2026-W34/boxer-gestion.json",
+          "redes/data/raw/2026-W34/boxer-taller.json",
+          "redes/data/raw/2026-W34/meta-awareness.json"
+        ],
+        "mb": 0.0,
+        "metricas": {
+          "elementos": 3
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
