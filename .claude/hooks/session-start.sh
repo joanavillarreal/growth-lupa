@@ -11,7 +11,7 @@ if ! command -v python3 >/dev/null; then
   echo "ERROR: falta python3"; exit 0
 fi
 for i in 1 2 3; do
-  pip install -q -r requirements.txt >/tmp/lupa-pip.log 2>&1 && break
+  python3 -m pip install -q -r requirements.txt >/tmp/lupa-pip.log 2>&1 && break
   sleep $((2 ** i))
 done
 python3 -c "import yaml, requests, zoneinfo; zoneinfo.ZoneInfo('America/Argentina/Buenos_Aires')" 2>/dev/null \
