@@ -1,7 +1,42 @@
 {
   "fecha": "2026-10-20",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Q4: 143 generados, 50 derivados, 3 cerrados (MRR 596). Alarma: Google Ads sin prospectos 2 días seguidos. Origen nuevo sin canal: Expomecanico (UC_CCDPGU).",
+      "error": null,
+      "herramientas": [
+        "mcp__Slack__slack_send_message"
+      ],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [
+          "Google Ads sin prospectos 2 días seguidos (2026-10-18 y 2026-10-19)"
+        ],
+        "metricas": {
+          "q": "2026-Q4",
+          "generados": 143,
+          "derivados": 50,
+          "presupuestados": 45,
+          "cerrados": 3,
+          "mrr": 596.0,
+          "gasto": 648.44,
+          "confiabilidad_dato": "alta"
+        },
+        "origenes_sin_canal": [
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 0
+          }
+        ]
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
