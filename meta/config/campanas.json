@@ -263,6 +263,17 @@
       "activa": true,
       "nota": "Agregada por Lupa el 2026-10-08. Joana confirmo el 08/10: producto Boxer Gestion, origen Webinar Ordenar Stock (UC_V7TMQ9). Destino formulario como las otras campanas de webinar (no verificado en Meta: el objetivo no vino en las respuestas del 08/10). Fecha del webinar 22/10/2026 (Joana, 08/10).",
       "fecha_evento": "2026-10-22"
+    },
+    {
+      "nombre": "JY | Provincias Visitadas (AGENTE META)",
+      "id_meta": "120254876324870427",
+      "grupo": "eventual",
+      "bloque": "evento",
+      "destino": "PENDIENTE",
+      "origenes_crm": "PENDIENTE",
+      "activa": true,
+      "a_confirmar": true,
+      "nota": "Agregada por Lupa el 2026-10-20: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento)."
     }
   ],
   "conjuntos_excepcion": [

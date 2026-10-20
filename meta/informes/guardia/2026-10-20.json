@@ -1,0 +1,104 @@
+{
+  "corrida": "2026-10-20",
+  "datos_hasta": "2026-10-19",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 524383.1,
+      "gasto_total": 524383.1,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 524383.1,
+      "gasto_total": 524383.1,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 57327.65,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-13": 7,
+      "2026-10-14": 7,
+      "2026-10-15": 3,
+      "2026-10-16": 7,
+      "2026-10-17": 9,
+      "2026-10-18": 8,
+      "2026-10-19": 14
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-13": 5,
+        "2026-10-14": 5,
+        "2026-10-15": 3,
+        "2026-10-16": 5,
+        "2026-10-17": 9,
+        "2026-10-18": 6,
+        "2026-10-19": 14
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-13": 5,
+      "2026-10-14": 1,
+      "2026-10-15": 0,
+      "2026-10-16": 2,
+      "2026-10-17": 0,
+      "2026-10-18": 3,
+      "2026-10-19": 1
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120252701921370427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120252701921370427",
+      "entidad": "Remarketing - Casos de éxito - JUL26",
+      "titulo": "Remarketing - Casos de éxito - JUL26: 2.336 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Remarketing · conjunto Remarketing. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-20"
+    },
+    {
+      "clave": "G3:ctr:120254261490500427",
+      "tipo": "ctr_cayendo",
+      "nivel": "anuncio",
+      "entidad_id": "120254261490500427",
+      "entidad": "Como tener 2 novias",
+      "titulo": "Como tener 2 novias: el CTR cae hace 1 dia",
+      "detalle": "De 2.32% a 1.58% de un dia para el otro. Campana JY | Awareness. Suele ser fatiga de creativo: se confirma mirando la frecuencia del periodo, no subiendo el presupuesto.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-20"
+    },
+    {
+      "clave": "G3:cpl:120254717004450427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254717004450427",
+      "entidad": "JY | Webinar Orden Stock (AGENTE META)",
+      "titulo": "JY | Webinar Orden Stock (AGENTE META): el costo por resultado sube hace 1 dia",
+      "detalle": "De 1.675 a 6.012 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-20"
+    }
+  ],
+  "se_mandan": [
+    "G2:120252701921370427",
+    "G3:ctr:120254261490500427",
+    "G3:cpl:120254717004450427"
+  ],
+  "silenciadas": [],
+  "resueltas": [
+    "G3:cpl:120252699641360427"
+  ]
+}

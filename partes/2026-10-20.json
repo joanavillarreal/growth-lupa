@@ -35,6 +35,57 @@
         ]
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Guardia: 3 alertas mandadas al canal (Remarketing - Casos de éxito sin resultado 2 días, CPR de Webinar Orden Stock sube, CTR de Como tener 2 novias cae). Gasto de ayer 57.328 ARS; 14 leads Meta = 14 CRM. Campaña nueva a confirmar: JY | Provincias Visitadas (AGENTE META).",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas": [
+          "Remarketing - Casos de éxito - JUL26: 2.336 ARS en 2 días sin resultado (JY | Remarketing)",
+          "JY | Webinar Orden Stock (AGENTE META): el costo por resultado sube hace 1 día (de 1.675 a 6.012 ARS)",
+          "Como tener 2 novias: el CTR cae hace 1 día (de 2.32% a 1.58%)"
+        ],
+        "silenciadas": [],
+        "resueltas": [
+          "G3:cpl JY | Conversiones"
+        ],
+        "metricas": {
+          "gasto_ayer_ars": 57327.65,
+          "leads_ayer": {
+            "meta": 14,
+            "crm": 14,
+            "avisados_slack": 1,
+            "faltan": 0
+          },
+          "errores_mcp": 50,
+          "errores_sobre_vivas": 0,
+          "panel_q4": {
+            "cpl_real_ars": 4286,
+            "derivacion_pct": 18.0,
+            "leads_con_utm": "102 de 106"
+          }
+        },
+        "campanas_a_confirmar": [
+          "JY | Provincias Visitadas (AGENTE META)"
+        ],
+        "hallazgos": [
+          "Registro de actividad leído (15/10 a hoy): 22 cambios nuevos del 19/10, todos de Joana: se activó la campaña JY | Provincias Visitadas (AGENTE META) con 5 conjuntos (Rosario, Mendoza, San Juan, Neuquén, Salta) a 2.000 ARS/día cada uno; se creó el conjunto Conversión - LAL Inscriptos webinars 2% (AGENTE META); se apagaron Conversión - LAL Vieron video 1-3% (AGENTE META) y Conjunto 2 - Similares (Webinar Orden Stock)."
+        ],
+        "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1792494099389829"
+      },
+      "para": []
     }
   },
   "preparacion": {
