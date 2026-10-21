@@ -1,0 +1,24 @@
+{
+  "fecha": "2026-10-21",
+  "modo": "oficial",
+  "analisis": {},
+  "preparacion": {
+    "gasto_meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:51",
+      "resumen": "Gasto de Meta al día hasta 20/10 (18-20/10: 154.111,84 ARS)",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "meta_spend_hasta": "2026-10-20",
+        "meta_adsets_hasta": "2026-10-20",
+        "cambios": "2026-10-19 +362.12 ARS"
+      },
+      "para": []
+    }
+  }
+}
