@@ -1,7 +1,40 @@
 {
   "fecha": "2026-10-21",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Q4: 154 generados, 52 derivados, 47 presupuestados, 3 cerrados (MRR 596). Alarma sin novedades. Origen sin canal: Expomecanico (UC_CCDPGU).",
+      "error": null,
+      "herramientas": [
+        "mcp__Slack__slack_send_message"
+      ],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [],
+        "metricas": {
+          "q": "2026-Q4",
+          "generados": 154,
+          "derivados": 52,
+          "presupuestados": 47,
+          "cerrados": 3,
+          "mrr": 596.0,
+          "gasto": 683.67,
+          "confiabilidad_dato": "alta"
+        },
+        "origenes_sin_canal": [
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 0
+          }
+        ]
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
