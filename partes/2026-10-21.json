@@ -33,6 +33,24 @@
         ]
       },
       "para": []
+    },
+    "meta": {
+      "estado": "fallido",
+      "intentos": 1,
+      "hora": "08:01",
+      "resumen": "",
+      "error": "Meta devolvió el gasto diario en 0 en 3 pedidos seguidos (ads_get_ad_entities con time_increment 1, 07/10 a 20/10): campana-diario suma 0,00 ARS contra 546.002,08 ARS del total del rango; anuncio-diario 7.137,62 ARS. validar_mcp.py: NO CUADRA. La guardia no corrió y el Panel Meta Ads no se republicó. El registro de actividad sí se leyó (6 cambios nuevos del 20/10: Joana pausó JY | Webinar Orden Stock).",
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {},
+      "para": []
     }
   },
   "preparacion": {
