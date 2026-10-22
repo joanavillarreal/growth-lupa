@@ -274,6 +274,17 @@
       "activa": true,
       "a_confirmar": true,
       "nota": "Agregada por Lupa el 2026-10-20: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento)."
+    },
+    {
+      "nombre": "JY | Visitas a tu Local (AGENTE META)",
+      "id_meta": "120254877248420427",
+      "grupo": "eventual",
+      "bloque": "evento",
+      "destino": "PENDIENTE",
+      "origenes_crm": "PENDIENTE",
+      "activa": true,
+      "a_confirmar": true,
+      "nota": "Agregada por Lupa el 2026-10-22: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento)."
     }
   ],
   "conjuntos_excepcion": [

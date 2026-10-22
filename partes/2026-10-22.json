@@ -31,6 +31,63 @@
         ]
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:56",
+      "resumen": "Guardia: 4 alertas al canal (2 anuncios de Provincias Visitadas sin resultados 3 días; costo por resultado sube en Remarketing y en Cursos y Webinars). Gasto de ayer 50.822 ARS; leads Meta 8 / CRM 7, faltan 0. Panel Q4: CPL real 3.995 ARS. Campaña nueva a confirmar: JY | Visitas a tu Local.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas": [
+          "AsesoriaVirtual | Img | Rosario LAL | v1 | 2026-10: 7.080 ARS en 3 días sin resultado (JY | Provincias Visitadas)",
+          "AsesoriaVirtual | Img | Neuquen LAL | v1 | 2026-10: 6.781 ARS en 3 días sin resultado (JY | Provincias Visitadas)",
+          "JY | Remarketing: el costo por resultado sube hace 3 días (5.506 y 5.046 ARS/lead contra 3.855 de base)",
+          "JY | Cursos y Webinars (AGENTE META): el costo por resultado sube hace 3 días (1.991 y 1.832 ARS/lead contra 1.046 de base)"
+        ],
+        "silenciadas": [],
+        "resueltas": [
+          "Remarketing - Casos de éxito - JUL26 sin resultados",
+          "JY | Webinar Orden Stock: costo por resultado",
+          "Como tener 2 novias: CTR"
+        ],
+        "metricas": {
+          "gasto_ayer_ars": 50822.19,
+          "leads_ayer": {
+            "meta": 8,
+            "crm": 7,
+            "avisados_slack": 4,
+            "faltan": 0
+          },
+          "errores_mcp": 50,
+          "errores_sobre_vivas": 0,
+          "panel_q4": {
+            "cpl_real_ars": 3995,
+            "derivacion_pct": 17.7,
+            "leads_con_utm": "116 de 122"
+          }
+        },
+        "campanas_a_confirmar": [
+          "JY | Provincias Visitadas (AGENTE META)",
+          "JY | Visitas a tu Local (AGENTE META)"
+        ],
+        "hallazgos": [
+          "Campaña nueva en Meta: JY | Visitas a tu Local (AGENTE META) (id 120254877248420427), sumada a config/campanas.json como a_confirmar.",
+          "Registro de actividad leído (19/10 a hoy): 98 eventos, 0 cambios nuevos. No trae todavía los del 21/10: la campaña JY | Visitas a tu Local y 4 anuncios (AsesoriaVirtual Video Rosario/Neuquén/Córdoba y Visitas presenciales - Zonas LU) se crearon el 21/10 según created_time de Meta y no figuran en el registro.",
+          "validar_mcp.py: OK, 11 respuestas, totales cuadran (ayer la guardia falló por gasto diario en 0)."
+        ],
+        "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1792666596150019"
+      },
+      "para": []
     }
   },
   "preparacion": {
