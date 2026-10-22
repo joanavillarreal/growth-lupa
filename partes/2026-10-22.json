@@ -155,6 +155,38 @@
         "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1792666646835559"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:58",
+      "resumen": "Gestión 6.010 seguidores (+10 en 7 días), alcance 7d 29.970 (orgánico 1.707), engagement orgánico 5,4%; Taller 131 (+2), alcance 14.132 (orgánico 896), 1,6%. Leads de redes Q4: 3.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "datos_hasta": "2026-10-21",
+          "boxer-gestion": {
+            "seguidores": 6010,
+            "delta_7d": 10,
+            "alcance_7d": 29970,
+            "alcance_organico_7d": 1707,
+            "engagement_pct": 5.4
+          },
+          "boxer-taller": {
+            "seguidores": 131,
+            "delta_7d": 2,
+            "alcance_7d": 14132,
+            "alcance_organico_7d": 896,
+            "engagement_pct": 1.6
+          },
+          "leads_redes_q4": 3
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
