@@ -582,6 +582,9 @@ def ficha_campana(nombre, cfg):
             "formulario": c.get("formulario"),
             # Por que no entra a Bitrix, cuando origenes_crm es [] a proposito.
             "motivo": c.get("motivo"),
+            # La etapa del CRM donde caen sus leads, cuando no se fija un origen
+            # ("Visitas presenciales", Joana 2026-10-22).
+            "etapa": c.get("etapa_crm"),
             "en_config": bool(c)}
 
 
@@ -922,9 +925,8 @@ def resumen(datos):
         res_wa = sum(x.get("resultados_mensaje", 0) for x in d)
         form = [l for l in pagos if l["origen"] != "Meta Ads" or res_wa > 0]
         reing = sum(v for k, v in datos.get("reingresos", {}).items() if k >= q["desde"])
-        print(f"  ubicados Meta -> CRM         : {len(form) / res * 100:.0f}% "
-              f"({len(form)} de {res}); con {reing} re-ingresos: "
-              f"{(len(form) + reing) / res * 100:.0f}%")
+        print(f"  Meta -> CRM                  : {(len(form) + reing) / res * 100:.0f}% "
+              f"({len(form)} prospectos nuevos + {reing} re-ingresos de {res})")
     if cruz and len(pagos):
         print(f"  CPL real                     : {cruz / len(pagos):,.0f} ARS"
               .replace(",", "."))

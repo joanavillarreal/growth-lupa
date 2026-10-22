@@ -16,3 +16,12 @@ Lo ya revisado con Joana que no hay que volver a marcar.
   y de la web. La tarjeta lo topea en 100% y lo explica.
 - `JY | Provincias Visitadas (AGENTE META)` es conversión (Formulario anuncios 1, origen Meta
   Ads Formulario), aunque el nombre diga otra cosa (Joana, 19/10).
+
+## 22/10/2026 — Meta → CRM en un solo %, sin pruebas internas
+
+- Meta → CRM = (prospectos nuevos + re-ingresos) / formularios que cobró Meta (Joana). Que un
+  re-ingreso no cree prospecto está bien. Un solo %, topeado en 100%. Con datos al 21/10:
+  100% (116 nuevos + 18 re-ingresos de 134).
+- Las pruebas internas no cuentan como re-ingreso (la de Joana del 01/10 va en 0).
+- `JY | Visitas a tu Local (AGENTE META)`: sus leads caen en la etapa "Visitas presenciales".
+  No se le fija origen del CRM (`etapa_crm` en `config/campanas.json`); ya no está a confirmar.

@@ -283,10 +283,9 @@
       "grupo": "eventual",
       "bloque": "evento",
       "destino": "formulario",
-      "origenes_crm": "PENDIENTE",
       "activa": true,
-      "a_confirmar": true,
-      "nota": "Agregada por Lupa el 2026-10-22: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento). Destino formulario, activa desde el 21/10 (anuncio 'Visitas presenciales - Zonas LU'), segun agente-meta-ads (22/10). El origen del CRM sigue sin confirmar: preguntarselo a Joana."
+      "nota": "Agregada por Lupa el 2026-10-22. Destino formulario, activa desde el 21/10 (anuncio 'Visitas presenciales - Zonas LU'). Joana (22/10): corresponde a visitas presenciales; sus leads caen en esa etapa. No se fija un origen del CRM.",
+      "etapa_crm": "Visitas presenciales"
     }
   ],
   "conjuntos_excepcion": [

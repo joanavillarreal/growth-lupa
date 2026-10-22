@@ -77,9 +77,13 @@ Si no se puede leer, seguir: G5 corre con dos patas y lo dice.
 **Para el panel, otro conteo** → `datos/meta-ads/reingresos/<AAAA-MM>.json` (un archivo por mes,
 mismo formato; se actualiza sumando los días hasta ayer). Cuenta **solo** los
 `*RE-INGRESO DE LEAD EXISTENTE*` que dicen *Vino de: Formulario Boxer Gestión*. **No** van los
-`RECONTACTO` (WhatsApp por Hyperflow) ni los "Inscripto a Webinar que existe en el CRM". El panel
-los muestra aparte en Meta → CRM (gente que ya estaba en Bitrix: Meta la cobra y el workflow no
-crea prospecto). Es un techo: el aviso no dice si el formulario fue de Meta o de la web.
+`RECONTACTO` (WhatsApp por Hyperflow), ni los "Inscripto a Webinar que existe en el CRM", ni las
+**pruebas internas** (contactos del equipo probando el formulario, como la de Joana del 01/10). Si
+una persona completa dos veces el mismo día cuenta dos: Meta también cobra los dos envíos.
+En el panel, **Meta → CRM = (prospectos nuevos + re-ingresos) / formularios que cobró Meta**
+(Joana, 22/10/2026): un re-ingreso es alguien que ya estaba en Bitrix; que no cree prospecto está
+bien, el workflow le avisa a la SDR. Un solo %, topeado en 100%. Si la suma pasa lo cobrado, la
+tarjeta dice cuántos sobran: el aviso no distingue formulario de Meta y de la web.
 (Agregado el 22/10/2026, del paquete de `agente-meta-ads`.)
 
 ## 2b. Campañas nuevas → `config/campanas.json`
