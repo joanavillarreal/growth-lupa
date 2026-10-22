@@ -39,10 +39,10 @@ inactivo:
 
 costo_por_lead:
   objetivo_operativo:
-    # DEFINIDO POR JOANA PARA META el 2026-09-08. Ya no es heredado.
-    valor_ars: 3000
+    # LIMITE DE JOANA PARA META desde el 2026-10-14 (antes objetivo de 3.000, 2026-09-08).
+    valor_ars: 4000
     base: bruto
-    origen_del_numero: "Joana, 2026-09-08, especifico para Meta"
+    origen_del_numero: "Joana, 2026-10-14, especifico para Meta (antes 3000, 2026-09-08)"
   techo_negocio:
     valor_usd: 200
     base: convertido

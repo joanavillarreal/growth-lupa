@@ -1,0 +1,29 @@
+{
+  "desde": "2026-10-01",
+  "hasta": "2026-10-21",
+  "por_dia": {
+    "2026-10-01": 1,
+    "2026-10-02": 0,
+    "2026-10-03": 2,
+    "2026-10-04": 2,
+    "2026-10-05": 0,
+    "2026-10-06": 0,
+    "2026-10-07": 1,
+    "2026-10-08": 0,
+    "2026-10-09": 0,
+    "2026-10-10": 0,
+    "2026-10-11": 2,
+    "2026-10-12": 0,
+    "2026-10-13": 2,
+    "2026-10-14": 1,
+    "2026-10-15": 0,
+    "2026-10-16": 2,
+    "2026-10-17": 0,
+    "2026-10-18": 3,
+    "2026-10-19": 0,
+    "2026-10-20": 0,
+    "2026-10-21": 3
+  },
+  "fuente": "Avisos '*RE-INGRESO DE LEAD EXISTENTE*' de Botrix en #adqui-automatizaciones (C0BRW04QSUF) con 'Vino de: Formulario Boxer Gestión', por día en hora argentina. Leído por Lupa el 2026-10-22 ~08:00 (búsqueda de Slack, 20 avisos); coincide con el conteo del 01 al 21/10 que mandó agente-meta-ads.",
+  "nota": "El 01/10 es una prueba de Joana. Llega hasta ayer, como los datos de Meta (el 22/10 ya había 1 a las 06:29; entra en la corrida de mañana). Es un techo: el aviso no dice si el formulario fue de Meta o de la web."
+}

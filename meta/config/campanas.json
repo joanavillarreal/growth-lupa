@@ -158,8 +158,8 @@
       "bloque": "evento",
       "destino": "formulario",
       "origenes_crm": "PENDIENTE",
-      "activa": true,
-      "nota": "Creada por Joana 2026-09-30 (Bariloche, 1 conjunto 'Bariloche - Frio - LAL CRM - Placa', 1.561 ARS/dia). Pre-cargada por el agente el 2026-10-05 con origen PENDIENTE: Joana tiene que decir a que origen del CRM manda el formulario de Bariloche (no hay 'Visita Presencial - Bariloche' en la lista de origenes). SIN fecha_evento: Joana tiene que cargar el dia del viaje; sin eso la guardia no puede avisar si la campana sigue gastando despues."
+      "activa": false,
+      "nota": "Creada por Joana 2026-09-30 (Bariloche, 1 conjunto 'Bariloche - Frio - LAL CRM - Placa', 1.561 ARS/dia). Pre-cargada por el agente el 2026-10-05 con origen PENDIENTE: Joana tiene que decir a que origen del CRM manda el formulario de Bariloche (no hay 'Visita Presencial - Bariloche' en la lista de origenes). SIN fecha_evento: Joana tiene que cargar el dia del viaje; sin eso la guardia no puede avisar si la campana sigue gastando despues. CAMPAIGN_PAUSED desde el 19/10/2026 (agente-meta-ads, llego a Lupa el 22/10)."
     },
     {
       "nombre": "JY | Webinar Mostrador - 17 SEPT 2026",
@@ -267,24 +267,26 @@
     {
       "nombre": "JY | Provincias Visitadas (AGENTE META)",
       "id_meta": "120254876324870427",
-      "grupo": "eventual",
-      "bloque": "evento",
-      "destino": "PENDIENTE",
-      "origenes_crm": "PENDIENTE",
+      "grupo": "nucleo",
+      "bloque": "conversion",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Meta Ads Formulario"
+      ],
       "activa": true,
-      "a_confirmar": true,
-      "nota": "Agregada por Lupa el 2026-10-20: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento)."
+      "nota": "Agregada por Lupa el 2026-10-20. Joana confirmo el 19/10 (en agente-meta-ads, llego a Lupa el 22/10): no hay visitas nuevas; es un mensaje de 'estuvimos ahi' y los leads entran con los de conversion, por Formulario anuncios 1 (origen Meta Ads Formulario). Lo habia dicho al reves y lo corrigio.",
+      "formulario": "Formulario anuncios 1"
     },
     {
       "nombre": "JY | Visitas a tu Local (AGENTE META)",
       "id_meta": "120254877248420427",
       "grupo": "eventual",
       "bloque": "evento",
-      "destino": "PENDIENTE",
+      "destino": "formulario",
       "origenes_crm": "PENDIENTE",
       "activa": true,
       "a_confirmar": true,
-      "nota": "Agregada por Lupa el 2026-10-22: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento)."
+      "nota": "Agregada por Lupa el 2026-10-22: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento). Destino formulario, activa desde el 21/10 (anuncio 'Visitas presenciales - Zonas LU'), segun agente-meta-ads (22/10). El origen del CRM sigue sin confirmar: preguntarselo a Joana."
     }
   ],
   "conjuntos_excepcion": [

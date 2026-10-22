@@ -259,6 +259,13 @@ def leer_plataforma(desde, hasta):
     # Segunda pasada: la familia de una campana se decide con TODAS sus filas.
     # Un dia sin resultados atribuidos deja el indicador vacio, y clasificar fila
     # por fila mandaria esa campana a "otra" solo por ese dia.
+    # El bloque que dice config/campanas.json manda sobre el que se adivina por
+    # el nombre: "JY | Provincias Visitadas" no dice "conversion" en el nombre
+    # y sus leads entran por Formulario anuncios 1 (Joana, 2026-10-19).
+    cfg = leer_config_campanas()
+    for n, c in campanas.items():
+        if (cfg.get(n) or {}).get("bloque") in ("conversion", "remarketing", "awareness"):
+            c["bloque"] = cfg[n]["bloque"]
     generadoras = {n for n, c in campanas.items()
                    if c["bloque"] in ("conversion", "remarketing")
                    and c["familia"] in ("lead", "mensaje")}
@@ -266,6 +273,10 @@ def leer_plataforma(desde, hasta):
         if camp in generadoras:
             dias[d]["gasto_nucleo"] += gasto
             dias[d]["resultados_nucleo"] += res
+            # Los de WhatsApp aparte: un lead "Meta Ads" (boton a WhatsApp) solo
+            # se concilia contra Meta si ese dia hubo campanas de mensajes.
+            if campanas[camp]["familia"] == "mensaje":
+                dias[d]["resultados_mensaje"] = dias[d].get("resultados_mensaje", 0) + res
 
     # Tercera pasada: descontar los conjuntos de evento que cuelgan de una
     # campana generadora, y SOLO esos.
@@ -533,6 +544,47 @@ def leer_creativos():
     return out
 
 
+def leer_reingresos():
+    """{dia: n} de avisos de RE-INGRESO de formulario (gente que ya estaba en
+    Bitrix: Meta la cobra y el workflow NO crea prospecto, Joana 2026-09-09).
+    Sale de datos/meta-ads/reingresos/*.json, que se arma leyendo Slack. Es un
+    techo: el aviso no dice si el formulario fue de Meta o de la web."""
+    out = {}
+    for ruta in sorted(glob.glob(os.path.join(RAIZ, "datos", "meta-ads", "reingresos", "*.json"))):
+        try:
+            with open(ruta, encoding="utf-8") as f:
+                out.update(json.load(f).get("por_dia") or {})
+        except Exception:                           # noqa: BLE001
+            continue
+    return out
+
+
+def leer_config_campanas():
+    try:
+        with open(os.path.join(RAIZ, "config", "campanas.json"), encoding="utf-8") as f:
+            return {c["nombre"]: c for c in json.load(f).get("campanas", [])}
+    except Exception:                               # noqa: BLE001
+        return {}
+
+
+def ficha_campana(nombre, cfg):
+    c = cfg.get(nombre, {})
+    bloque = c.get("bloque") or bloque_de(nombre)
+    if bloque == "eventual":
+        bloque = "evento"
+    origenes = c.get("origenes_crm")
+    return {"nombre": nombre, "bloque": bloque,
+            "producto": PRODUCTO.get(c.get("producto"), "Boxer Gestión"),
+            "destino": c.get("destino", ""),
+            # A que origen de Bitrix entran sus leads, y que formulario usa
+            # segun el mapa. "PENDIENTE" o ausente = sin confirmar.
+            "origenes": origenes if isinstance(origenes, list) else None,
+            "formulario": c.get("formulario"),
+            # Por que no entra a Bitrix, cuando origenes_crm es [] a proposito.
+            "motivo": c.get("motivo"),
+            "en_config": bool(c)}
+
+
 def leer_hoy():
     """Lo que esta corriendo hoy, de la corrida diaria mas nueva que lo trajo.
 
@@ -556,28 +608,8 @@ def leer_hoy():
         return None
     activos, conjuntos, historico = (_leer_mcp(os.path.join(carpeta, a)) for a in HOY_ARCHIVOS)
     creativos = leer_creativos()
-    try:
-        with open(os.path.join(RAIZ, "config", "campanas.json"), encoding="utf-8") as f:
-            cfg = {c["nombre"]: c for c in json.load(f).get("campanas", [])}
-    except Exception:                               # noqa: BLE001
-        cfg = {}
-
-    def ficha(nombre):
-        c = cfg.get(nombre, {})
-        bloque = c.get("bloque") or bloque_de(nombre)
-        if bloque == "eventual":
-            bloque = "evento"
-        origenes = c.get("origenes_crm")
-        return {"nombre": nombre, "bloque": bloque,
-                "producto": PRODUCTO.get(c.get("producto"), "Boxer Gestión"),
-                "destino": c.get("destino", ""),
-                # A que origen de Bitrix entran sus leads, y que formulario usa
-                # segun el mapa. "PENDIENTE" o ausente = sin confirmar.
-                "origenes": origenes if isinstance(origenes, list) else None,
-                "formulario": c.get("formulario"),
-                # Por que no entra a Bitrix, cuando origenes_crm es [] a proposito.
-                "motivo": c.get("motivo"),
-                "en_config": bool(c)}
+    cfg = leer_config_campanas()
+    ficha = lambda nombre: ficha_campana(nombre, cfg)
 
     activos = [a for a in activos if a.get("effective_status") == "ACTIVE"]
     campanas = {}
@@ -637,6 +669,114 @@ def leer_hoy():
         "campanas": sorted(campanas.values(), key=lambda c: (c["producto"], c["bloque"], c["nombre"])),
         "anuncios": anuncios,
     }
+
+
+# ------------------------------------------------------------------ presupuesto
+
+# La llamada #12 de referencias/guardia-diaria.md: campanas con presupuesto
+# propio (CBO). Solo hace falta si algun conjunto ACTIVE vino sin presupuesto.
+CAMPANAS_PRESUPUESTO = "campana-presupuestos.json"
+
+
+def presupuesto_de_foto(conjuntos, campanas_cbo, ficha):
+    """Una foto de conjunto-publicos.json -> el presupuesto diario de ese dia.
+
+    **Solo ACTIVE.** Un conjunto ACTIVE de una campana pausada sale como
+    CAMPAIGN_PAUSED, y los WITH_ISSUES de 2024-2025 no gastan: con este filtro
+    alcanza (verificado el 2026-10-19 en las seis fotos que habia).
+
+    **CBO sin doble conteo.** Si la campana tiene el presupuesto, sus conjuntos
+    no traen `daily_budget`: se suma el de la campana UNA vez, y solo si tiene
+    al menos un conjunto ACTIVE. Sin la llamada #12 ese presupuesto no se
+    conoce y queda en `sin_presupuesto`, no estimado.
+
+    **De por vida va aparte.** `lifetime_budget` no es diario: dividirlo por
+    los dias que faltan seria inventar el ritmo de gasto.
+    """
+    cbo = {c.get("name"): c for c in campanas_cbo
+           if c.get("effective_status") == "ACTIVE"}
+    por_campana, de_por_vida, sin_ppto = {}, [], []
+    for x in conjuntos:
+        if x.get("effective_status") != "ACTIVE":
+            continue
+        nombre_c = x.get("campaign_name", "")
+        c = por_campana.setdefault(nombre_c, dict(
+            {k: v for k, v in ficha(nombre_c).items()
+             if k in ("nombre", "producto", "bloque")},
+            subtotal=0.0, cbo=None, conjuntos=[]))
+        diario = moneda(x.get("daily_budget")) or 0.0
+        vida = moneda(x.get("lifetime_budget")) or 0.0
+        c["conjuntos"].append({"nombre": x.get("name", ""),
+                               "presupuesto": diario or None})
+        if diario:
+            c["subtotal"] += diario
+        elif vida:
+            de_por_vida.append({"nivel": "conjunto", "campana": nombre_c,
+                                "nombre": x.get("name", ""), "presupuesto": vida})
+        elif nombre_c in cbo:
+            if c["cbo"] is None:               # una vez por campana
+                cc = cbo[nombre_c]
+                c["cbo"] = moneda(cc.get("daily_budget")) or 0.0
+                c["subtotal"] += c["cbo"]
+                v = moneda(cc.get("lifetime_budget")) or 0.0
+                if not c["cbo"] and v:
+                    de_por_vida.append({"nivel": "campana", "campana": nombre_c,
+                                        "nombre": nombre_c, "presupuesto": v})
+        else:
+            sin_ppto.append({"campana": nombre_c, "nombre": x.get("name", "")})
+    campanas = sorted(por_campana.values(), key=lambda c: -c["subtotal"])
+    for c in campanas:
+        c["conjuntos"].sort(key=lambda k: -(k["presupuesto"] or 0))
+    return {
+        "total": round(sum(c["subtotal"] for c in campanas), 2),
+        "n_conjuntos": sum(len(c["conjuntos"]) for c in campanas),
+        "campanas": campanas,
+        "de_por_vida": de_por_vida,
+        "sin_presupuesto": sin_ppto,
+    }
+
+
+def leer_presupuestos():
+    """Una foto por cada corrida diaria que guardo conjunto-publicos.json.
+
+    La serie tiene huecos (la rutina diaria estuvo apagada del 08 al 18/10) y
+    se dejan a la vista: un dia sin foto es un dia que no se sabe, no un dia
+    con el presupuesto del anterior. Si un dia tiene varias fotos, gana la de
+    esa carpeta (hay una por dia).
+    """
+    cfg = leer_config_campanas()
+    ficha = lambda n: ficha_campana(n, cfg)
+    serie = []
+    for carpeta in sorted(glob.glob(os.path.join(RAIZ, "datos", "meta-ads", "guardia", "*", "mcp"))):
+        ruta = os.path.join(carpeta, "conjunto-publicos.json")
+        if not os.path.isfile(ruta):
+            continue
+        cbo_ruta = os.path.join(carpeta, CAMPANAS_PRESUPUESTO)
+        cbo = _leer_mcp(cbo_ruta) if os.path.isfile(cbo_ruta) else []
+        foto = presupuesto_de_foto(_leer_mcp(ruta), cbo, ficha)
+        foto["d"] = os.path.basename(os.path.dirname(carpeta))
+        serie.append(foto)
+    if not serie:
+        return None
+    ultima = serie[-1]
+    return {
+        "hoy": ultima,
+        # La serie va liviana: el desglose completo solo hace falta de la
+        # ultima foto; de las demas, el total y cuanto puso cada campana.
+        "serie": [{"d": f["d"], "total": f["total"], "n_conjuntos": f["n_conjuntos"],
+                   "sin_presupuesto": len(f["sin_presupuesto"]),
+                   "campanas": {c["nombre"]: c["subtotal"] for c in f["campanas"]},
+                   "bloques": _sumar(f["campanas"], "bloque"),
+                   "productos": _sumar(f["campanas"], "producto")}
+                  for f in serie],
+    }
+
+
+def _sumar(campanas, clave):
+    out = {}
+    for c in campanas:
+        out[c[clave]] = out.get(c[clave], 0.0) + c["subtotal"]
+    return out
 
 
 # ------------------------------------------------------------------ memoria
@@ -739,6 +879,9 @@ def construir(q, hoy=None):
         "cohorte_inmadura_desde": corte_inmaduro,
         # La vista "Dia a dia" y Tendencias. None si ninguna corrida lo trajo.
         "hoy": leer_hoy(),
+        # La tarjeta "Presupuesto diario": la ultima foto y la serie de fotos.
+        "presupuesto": leer_presupuestos(),
+        "reingresos": leer_reingresos(),   # {dia: avisos de re-ingreso de formulario}
         "conjuntos_evento_sin_mapear": plat["sin_mapear"],   # {conjunto: gasto no descontado}
         "limites": {
             "atribucion_por_anuncio_desde": "2026-09-08",
@@ -774,7 +917,14 @@ def resumen(datos):
     print(f"  resultados cruzables (Meta)  : {res}")
     print(f"  leads pagos en el CRM        : {len(pagos)}")
     if res:
-        print(f"  ubicados Meta -> CRM         : {len(pagos) / res * 100:.0f}%")
+        # Igual que el panel: los de WhatsApp solo cuentan si hubo campanas de
+        # mensajes en el tramo, y los re-ingresos se suman aparte.
+        res_wa = sum(x.get("resultados_mensaje", 0) for x in d)
+        form = [l for l in pagos if l["origen"] != "Meta Ads" or res_wa > 0]
+        reing = sum(v for k, v in datos.get("reingresos", {}).items() if k >= q["desde"])
+        print(f"  ubicados Meta -> CRM         : {len(form) / res * 100:.0f}% "
+              f"({len(form)} de {res}); con {reing} re-ingresos: "
+              f"{(len(form) + reing) / res * 100:.0f}%")
     if cruz and len(pagos):
         print(f"  CPL real                     : {cruz / len(pagos):,.0f} ARS"
               .replace(",", "."))
@@ -800,6 +950,19 @@ def resumen(datos):
     else:
         print("  [aviso] no hay anuncio-activos / conjunto-publicos / anuncio-historico en "
               "ninguna corrida: la vista Dia a dia sale vacia.")
+    p = datos.get("presupuesto")
+    if p:
+        u = p["hoy"]
+        print(f"  presupuesto diario ({u['d']}): {u['total']:,.0f} ARS/dia en "
+              f"{u['n_conjuntos']} conjuntos de {len(u['campanas'])} campanas · "
+              f"{len(p['serie'])} fotos en la serie".replace(",", "."))
+        for s in u["sin_presupuesto"]:
+            print(f"  [aviso] '{s['nombre']}' ({s['campana']}) esta ACTIVE sin presupuesto "
+                  f"propio: la campana es CBO y falta {CAMPANAS_PRESUPUESTO} (llamada #12). "
+                  f"No se suma.")
+        for v in u["de_por_vida"]:
+            print(f"  presupuesto de por vida (aparte): {v['nombre']} {v['presupuesto']:,.0f} ARS"
+                  .replace(",", "."))
     print(f"  cambios marcados             : {len(datos['cambios'])}")
     print(f"  alertas vivas en el Q        : {len(datos['alertas'])}")
 
@@ -949,6 +1112,34 @@ def autotest():
     chequear("si utm_campaign trae el nombre real de la campana, se usa",
              campana_del_lead("", "JY | Conversiones", mapa, {"JY | Conversiones"})
              == "JY | Conversiones")
+
+    # Presupuesto diario: solo ACTIVE, CBO una vez por campana, de por vida aparte.
+    ppto = lambda v: {"value": str(v), "unit": "ARS"}
+    conjs = [
+        {"name": "A", "campaign_name": "JY | Conversiones", "effective_status": "ACTIVE",
+         "daily_budget": ppto(16000)},
+        {"name": "B", "campaign_name": "JY | Conversiones", "effective_status": "ACTIVE",
+         "daily_budget": ppto(4500)},
+        {"name": "Viejo", "campaign_name": "JY | 2024", "effective_status": "WITH_ISSUES",
+         "daily_budget": ppto(9999)},
+        {"name": "Pausada", "campaign_name": "JY | Remarketing",
+         "effective_status": "CAMPAIGN_PAUSED", "daily_budget": ppto(5000)},
+        {"name": "CBO 1", "campaign_name": "JY | CBO", "effective_status": "ACTIVE"},
+        {"name": "CBO 2", "campaign_name": "JY | CBO", "effective_status": "ACTIVE"},
+        {"name": "Vida", "campaign_name": "JY | Webinar X", "effective_status": "ACTIVE",
+         "lifetime_budget": ppto(50000)},
+        {"name": "Huerfano", "campaign_name": "JY | CBO sin #12", "effective_status": "ACTIVE"},
+    ]
+    camps = [{"name": "JY | CBO", "effective_status": "ACTIVE", "daily_budget": ppto(3000)}]
+    f = presupuesto_de_foto(conjs, camps, lambda n: ficha_campana(n, {}))
+    chequear("el presupuesto diario suma solo ACTIVE, y el de una campana CBO una vez",
+             f["total"] == 16000 + 4500 + 3000)
+    chequear("el presupuesto de por vida va aparte y no se suma al diario",
+             [v["nombre"] for v in f["de_por_vida"]] == ["Vida"])
+    chequear("un conjunto CBO sin la llamada #12 no se estima: queda sin presupuesto",
+             [s["nombre"] for s in f["sin_presupuesto"]] == ["Huerfano"])
+    chequear("el desglose va de mayor a menor",
+             [c["nombre"] for c in f["campanas"]][0] == "JY | Conversiones")
 
     g = grupos_de_razon()
     chequear("la razon dominante del canal se clasifica como seguimiento, no como pauta",

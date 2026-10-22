@@ -28,7 +28,7 @@ que se trajeron y el parte lo dice ("cambios en la cuenta sin actualizar desde <
 ## 1. Datos de Meta → `datos/meta-ads/guardia/<hoy>/mcp/`
 
 Las llamadas exactas (campos, filtros, ventanas) están en `meta/referencias/guardia-diaria.md`,
-tabla de llamadas #1 a #11. No improvisar parámetros.
+tabla de llamadas #1 a #12. No improvisar parámetros.
 
 **Cada respuesta se guarda exacta, nunca transcrita a mano** (Joana, 08/10/2026):
 - Si es grande, el entorno la deja en un archivo de resultado (`.../tool-results/...`): se copia
@@ -58,6 +58,9 @@ misma validación al arrancar y no corre si no cuadra. (Así se vio que el 25, 2
 | 7 | `conjunto-diario.json` | panel |
 | 8-10 | `anuncio-activos`, `conjunto-publicos`, `anuncio-historico` | panel |
 | 11 | `creativos.json` (`ads_get_creatives`), solo los `creative_id` que no estén ya en ningún `creativos*.json` | panel |
+| 12 | `campana-presupuestos.json`, solo si `panel_meta.py` avisa de un conjunto ACTIVE sin presupuesto (campaña CBO) | panel |
+
+La #9 pide `daily_budget` y `lifetime_budget`: de ahí sale la tarjeta Presupuesto diario del panel.
 
 Si Meta no contesta: reintentar; si sigue, `ads_get_ad_accounts` para ver `is_ads_mcp_enabled`.
 Si no se puede leer, el análisis falla y **se avisa que la guardia está ciega**: un silencio por
@@ -70,6 +73,14 @@ del bot Botrix que empiezan con `*RE-INGRESO DE LEAD EXISTENTE*` o `*RECONTACTO 
 EXISTENTE*`, por día en hora argentina:
 `{"desde": "AAAA-MM-DD", "hasta": "AAAA-MM-DD", "por_dia": {"AAAA-MM-DD": 1}}`.
 Si no se puede leer, seguir: G5 corre con dos patas y lo dice.
+
+**Para el panel, otro conteo** → `datos/meta-ads/reingresos/<AAAA-MM>.json` (un archivo por mes,
+mismo formato; se actualiza sumando los días hasta ayer). Cuenta **solo** los
+`*RE-INGRESO DE LEAD EXISTENTE*` que dicen *Vino de: Formulario Boxer Gestión*. **No** van los
+`RECONTACTO` (WhatsApp por Hyperflow) ni los "Inscripto a Webinar que existe en el CRM". El panel
+los muestra aparte en Meta → CRM (gente que ya estaba en Bitrix: Meta la cobra y el workflow no
+crea prospecto). Es un techo: el aviso no dice si el formulario fue de Meta o de la web.
+(Agregado el 22/10/2026, del paquete de `agente-meta-ads`.)
 
 ## 2b. Campañas nuevas → `config/campanas.json`
 

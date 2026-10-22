@@ -163,7 +163,7 @@ def kpis(rows):
 # --- umbrales (config/umbrales.yaml) ---
 TECHO_NO_UTIL = 15          # heredado del canal de Google Ads, a confirmar
 PISO_DERIVACION = 50        # heredado del canal de Google Ads, a confirmar
-CPL_OBJETIVO_ARS_BRUTO = 3000   # definido por Joana para Meta, 2026-09-08
+CPL_OBJETIVO_ARS_BRUTO = 4000   # limite de Joana para Meta, 2026-10-14 (antes 3000)
 CPL_TECHO_USD_DERIVABLE = 200
 COTIZACION_ARS_USD = 1500
 MIN_LEADS_PARA_DECIDIR = 30   # por segmento, en la ventana de 4 semanas
