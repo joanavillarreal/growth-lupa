@@ -1,6 +1,6 @@
 {
   "desde": "2026-10-01",
-  "hasta": "2026-10-21",
+  "hasta": "2026-10-22",
   "por_dia": {
     "2026-10-01": 0,
     "2026-10-02": 0,
@@ -22,8 +22,9 @@
     "2026-10-18": 3,
     "2026-10-19": 0,
     "2026-10-20": 0,
-    "2026-10-21": 3
+    "2026-10-21": 3,
+    "2026-10-22": 1
   },
-  "fuente": "Avisos '*RE-INGRESO DE LEAD EXISTENTE*' de Botrix en #adqui-automatizaciones (C0BRW04QSUF) con 'Vino de: Formulario Boxer Gestión', por día en hora argentina. Leído por Lupa el 2026-10-22 ~08:00 (búsqueda de Slack, 20 avisos); coincide con el conteo del 01 al 21/10 que mandó agente-meta-ads.",
+  "fuente": "Avisos '*RE-INGRESO DE LEAD EXISTENTE*' de Botrix en #adqui-automatizaciones (C0BRW04QSUF) con 'Vino de: Formulario Boxer Gestión', por día en hora argentina. Leído por Lupa el 2026-10-22 ~08:00 (búsqueda de Slack, 20 avisos); coincide con el conteo del 01 al 21/10 que mandó agente-meta-ads. Lupa sumó el 22/10 el 2026-10-23 ~08:30 (lectura del canal 16 a 22/10).",
   "nota": "Sin pruebas internas (contactos del equipo probando el formulario): el 01/10 fue una prueba de Joana y va en 0 (Joana, 22/10). Si una persona completa dos veces el mismo día cuenta dos: Meta también cobra los dos envíos. Llega hasta ayer, como los datos de Meta. Es un techo: el aviso no dice si el formulario fue de Meta o de la web."
 }

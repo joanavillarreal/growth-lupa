@@ -1,0 +1,123 @@
+{
+  "corrida": "2026-10-23",
+  "datos_hasta": "2026-10-22",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 578852.8,
+      "gasto_total": 578852.8,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 578852.8,
+      "gasto_total": 578852.8,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 45054.48,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-16": 7,
+      "2026-10-17": 9,
+      "2026-10-18": 8,
+      "2026-10-19": 14,
+      "2026-10-20": 8,
+      "2026-10-21": 8,
+      "2026-10-22": 7
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-16": 5,
+        "2026-10-17": 9,
+        "2026-10-18": 6,
+        "2026-10-19": 14,
+        "2026-10-20": 9,
+        "2026-10-21": 7,
+        "2026-10-22": 8
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-16": 2,
+      "2026-10-17": 0,
+      "2026-10-18": 3,
+      "2026-10-19": 1,
+      "2026-10-20": 0,
+      "2026-10-21": 4,
+      "2026-10-22": 2
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254941799240427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254941799240427",
+      "entidad": "AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia",
+      "titulo": "AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia: 3.340 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto San Juan | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-23"
+    },
+    {
+      "clave": "G2:120254957569100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957569100427",
+      "entidad": "Visitas presenciales - Zonas LU",
+      "titulo": "Visitas presenciales - Zonas LU: 6.385 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Lu - Baradero 100km - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-23"
+    },
+    {
+      "clave": "G2:120254957836200427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957836200427",
+      "entidad": "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10",
+      "titulo": "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10: 2.590 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Neuquen | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-23"
+    },
+    {
+      "clave": "G3:cpl:120254602445140427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254602445140427",
+      "entidad": "JY | Cursos y Webinars (AGENTE META)",
+      "titulo": "JY | Cursos y Webinars (AGENTE META): el costo por resultado sube hace 3 dias",
+      "detalle": "2026-10-20: 1.991 ARS/lead · 2026-10-21: 1.837 ARS/lead · 2026-10-22: sin leads ese dia — contra un promedio de 1.061 ARS/lead en los 7 dias previos. Subio y no volvio a bajar. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-10-22",
+      "motivo_aviso": "ya avisada"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254941799240427",
+    "G2:120254957569100427",
+    "G2:120254957836200427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G3:cpl:120254602445140427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120254916711440427",
+    "G2:120254916784780427",
+    "G3:cpl:120252700778930427"
+  ]
+}
