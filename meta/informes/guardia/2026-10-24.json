@@ -1,0 +1,66 @@
+{
+  "corrida": "2026-10-24",
+  "datos_hasta": "2026-10-23",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 584043.56,
+      "gasto_total": 584043.56,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 584043.56,
+      "gasto_total": 584043.56,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 37872.06,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-17": 9,
+      "2026-10-18": 8,
+      "2026-10-19": 14,
+      "2026-10-20": 8,
+      "2026-10-21": 8,
+      "2026-10-22": 7,
+      "2026-10-23": 5
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-17": 9,
+        "2026-10-18": 6,
+        "2026-10-19": 14,
+        "2026-10-20": 9,
+        "2026-10-21": 7,
+        "2026-10-22": 8,
+        "2026-10-23": 9
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-17": 0,
+      "2026-10-18": 3,
+      "2026-10-19": 1,
+      "2026-10-20": 0,
+      "2026-10-21": 4,
+      "2026-10-22": 2,
+      "2026-10-23": 1
+    }
+  },
+  "alertas_que_disparan": [],
+  "se_mandan": [],
+  "silenciadas": [],
+  "resueltas": [
+    "G2:120254941799240427",
+    "G2:120254957569100427",
+    "G2:120254957836200427",
+    "G3:cpl:120254602445140427"
+  ]
+}

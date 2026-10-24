@@ -37,6 +37,59 @@
         ]
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:01",
+      "resumen": "Guardia: sin novedades (se cerraron 3 alertas de anuncios sin resultados y la de costo de Cursos y Webinars). Gasto de ayer 37.872 ARS; leads Meta 5 / CRM 9, faltan 0. Panel Q4: CPL real 4.268 ARS, Meta → CRM 99%.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas": [],
+        "silenciadas": [],
+        "resueltas": [
+          "AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia sin resultados",
+          "Visitas presenciales - Zonas LU sin resultados",
+          "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10 sin resultados",
+          "JY | Cursos y Webinars (AGENTE META): costo por resultado"
+        ],
+        "metricas": {
+          "gasto_ayer_ars": 37872.06,
+          "leads_ayer": {
+            "meta": 5,
+            "crm": 9,
+            "avisados_slack": 1,
+            "faltan": 0
+          },
+          "errores_mcp": 50,
+          "errores_sobre_vivas": 0,
+          "panel_q4": {
+            "cpl_real_ars": 4268,
+            "derivacion_pct": 16.1,
+            "meta_a_crm": "99% (133 nuevos + 19 re-ingresos de 153)",
+            "leads_con_utm": "133 de 139",
+            "presupuesto_diario_ars": 45000
+          }
+        },
+        "campanas_a_confirmar": [],
+        "hallazgos": [
+          "Registro de actividad leído (19/10 a hoy): 35 cambios, 7 nuevos.",
+          "validar_mcp.py: OK, 8 respuestas, totales cuadran.",
+          "Mapa de campañas al día: todas las de Meta están confirmadas.",
+          "Re-ingresos de formulario: 0 el 23/10 (sumado a reingresos/2026-10.json).",
+          "Roster, errores y anuncios activos idénticos a los de ayer."
+        ]
+      },
+      "para": []
     }
   },
   "preparacion": {
