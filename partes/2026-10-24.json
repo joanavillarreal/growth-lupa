@@ -1,0 +1,23 @@
+{
+  "fecha": "2026-10-24",
+  "modo": "oficial",
+  "analisis": {},
+  "preparacion": {
+    "gasto_meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:52",
+      "resumen": "Gasto de Meta al día hasta 23/10 (21-23/10 pedidos; 22/10 +280,94 ARS)",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "meta_spend_hasta": "2026-10-23",
+        "meta_adsets_hasta": "2026-10-23"
+      },
+      "para": []
+    }
+  }
+}
