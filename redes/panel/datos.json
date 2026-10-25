@@ -1,81 +1,75 @@
 {
- "generado": "2026-10-24T08:03-03:00",
- "hoy": "2026-10-24",
+ "generado": "2026-10-25T08:03-03:00",
+ "hoy": "2026-10-25",
  "general": {
-  "fecha": "2026-10-24",
-  "datos_hasta": "2026-10-23",
+  "fecha": "2026-10-25",
+  "datos_hasta": "2026-10-24",
   "ventana": {
-   "desde": "2026-10-17",
-   "hasta": "2026-10-23"
+   "desde": "2026-10-18",
+   "hasta": "2026-10-24"
   },
   "previa": {
-   "desde": "2026-10-10",
-   "hasta": "2026-10-16"
+   "desde": "2026-10-11",
+   "hasta": "2026-10-17"
   },
   "marcas": {
    "boxer-gestion": {
     "nombre": "Boxer Gestión",
     "ultimos_7": {
-     "seguidores": 6011,
-     "seguidores_delta": 4,
-     "alcance_organico": 1762,
-     "alcance_pago": 27682,
-     "alcance_total": 29444,
-     "views_organicas": 3590,
-     "pct_views_pauta": 91.1,
-     "interacciones": 97,
-     "engagement_pct": 5.5,
+     "seguidores": 6012,
+     "seguidores_delta": 7,
+     "alcance_organico": 1645,
+     "alcance_pago": 26865,
+     "alcance_total": 28510,
+     "views_organicas": 3354,
+     "pct_views_pauta": 91.4,
+     "interacciones": 89,
+     "engagement_pct": 5.4,
      "muestra_chica": false,
      "engagement_no_confiable": false,
      "fb": {
       "seguidores": 983,
       "seguidores_delta": 4,
-      "views": 32505
+      "views": 33611
      },
      "li": {
       "seguidores": 106,
       "seguidores_delta": 0,
-      "impresiones": 32
+      "impresiones": 30
      }
     },
     "previos_7": {
-     "seguidores": 6002,
-     "seguidores_delta": 14,
-     "alcance_organico": 1086,
-     "alcance_pago": 24270,
-     "alcance_total": 25356,
-     "views_organicas": 3003,
-     "pct_views_pauta": 88.7,
-     "interacciones": 37,
-     "engagement_pct": 3.4,
+     "seguidores": 6007,
+     "seguidores_delta": 17,
+     "alcance_organico": 1160,
+     "alcance_pago": 24173,
+     "alcance_total": 25333,
+     "views_organicas": 3110,
+     "pct_views_pauta": 88.1,
+     "interacciones": 46,
+     "engagement_pct": 4.0,
      "muestra_chica": false,
      "engagement_no_confiable": false,
      "fb": {
-      "seguidores": 980,
-      "seguidores_delta": 5,
-      "views": 34286
+      "seguidores": 979,
+      "seguidores_delta": 4,
+      "views": 34458
      },
      "li": {
       "seguidores": 106,
-      "seguidores_delta": 1,
-      "impresiones": 86
+      "seguidores_delta": 0,
+      "impresiones": 79
      }
     },
     "variacion_pct": {
-     "alcance_organico": 62.2,
-     "alcance_pago": 14.1,
-     "alcance_total": 16.1,
-     "interacciones": 162.2,
-     "engagement_pp": 2.1
+     "alcance_organico": 41.8,
+     "alcance_pago": 11.1,
+     "alcance_total": 12.5,
+     "interacciones": 93.5,
+     "engagement_pp": 1.4
     },
-    "seguidores_delta_30d": 38,
+    "seguidores_delta_30d": 32,
     "serie_30d": [
-     {
-      "fecha": "2026-09-24",
-      "seguidores": 5973,
-      "alcance_organico": 53,
-      "alcance_pago": 4443
-     },
      {
       "fecha": "2026-09-25",
       "seguidores": 5980,
@@ -249,6 +243,12 @@
       "seguidores": 6011,
       "alcance_organico": 315,
       "alcance_pago": 2912
+     },
+     {
+      "fecha": "2026-10-24",
+      "seguidores": 6012,
+      "alcance_organico": 102,
+      "alcance_pago": 2264
      }
     ]
    },
@@ -257,10 +257,10 @@
     "ultimos_7": {
      "seguidores": 132,
      "seguidores_delta": 2,
-     "alcance_organico": 846,
-     "alcance_pago": 13915,
-     "alcance_total": 14761,
-     "views_organicas": 2088,
+     "alcance_organico": 816,
+     "alcance_pago": 13117,
+     "alcance_total": 13933,
+     "views_organicas": 1976,
      "pct_views_pauta": 86.8,
      "interacciones": 14,
      "engagement_pct": 1.7,
@@ -269,42 +269,36 @@
      "fb": {
       "seguidores": 2,
       "seguidores_delta": 0,
-      "views": 13456
+      "views": 13481
      }
     },
     "previos_7": {
-     "seguidores": 129,
+     "seguidores": 130,
      "seguidores_delta": 1,
-     "alcance_organico": 198,
-     "alcance_pago": 13807,
-     "alcance_total": 14005,
-     "views_organicas": 524,
-     "pct_views_pauta": 96.2,
+     "alcance_organico": 220,
+     "alcance_pago": 13849,
+     "alcance_total": 14069,
+     "views_organicas": 600,
+     "pct_views_pauta": 95.8,
      "interacciones": 5,
-     "engagement_pct": 2.5,
-     "muestra_chica": true,
+     "engagement_pct": 2.3,
+     "muestra_chica": false,
      "engagement_no_confiable": false,
      "fb": {
       "seguidores": 2,
       "seguidores_delta": 0,
-      "views": 15239
+      "views": 15157
      }
     },
     "variacion_pct": {
-     "alcance_organico": 327.3,
-     "alcance_pago": 0.8,
-     "alcance_total": 5.4,
+     "alcance_organico": 270.9,
+     "alcance_pago": -5.3,
+     "alcance_total": -1.0,
      "interacciones": 180.0,
-     "engagement_pp": -0.8
+     "engagement_pp": -0.6
     },
-    "seguidores_delta_30d": 54,
+    "seguidores_delta_30d": 55,
     "serie_30d": [
-     {
-      "fecha": "2026-09-24",
-      "seguidores": 78,
-      "alcance_organico": 31,
-      "alcance_pago": 2090
-     },
      {
       "fecha": "2026-09-25",
       "seguidores": 77,
@@ -478,6 +472,12 @@
       "seguidores": 132,
       "alcance_organico": 9,
       "alcance_pago": 2066
+     },
+     {
+      "fecha": "2026-10-24",
+      "seguidores": 132,
+      "alcance_organico": 3,
+      "alcance_pago": 1312
      }
     ]
    }
@@ -485,14 +485,14 @@
   "al_dia": true
  },
  "leads": {
-  "corte_snapshot": "2026-10-24",
+  "corte_snapshot": "2026-10-25",
   "trimestres": [
    {
     "etiqueta": "Q4 2026",
     "desde": "2026-10-01",
-    "hasta": "2026-10-24",
+    "hasta": "2026-10-25",
     "en_curso": true,
-    "total": 3,
+    "total": 4,
     "por_semana": [
      {
       "semana": "2026-W40",
@@ -508,13 +508,13 @@
      },
      {
       "semana": "2026-W43",
-      "leads": 0
+      "leads": 1
      }
     ],
     "derivados": 3,
     "no_utiles": 0,
     "inactivos": 0,
-    "en_gestion": 0
+    "en_gestion": 1
    },
    {
     "etiqueta": "Q3 2026",
@@ -585,8 +585,8 @@
     "inactivos": 5,
     "en_gestion": 1,
     "mismo_tramo": {
-     "hasta": "2026-07-24",
-     "total": 9
+     "hasta": "2026-07-25",
+     "total": 10
     }
    }
   ],

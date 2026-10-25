@@ -93,6 +93,41 @@
         "aviso_slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1792926077904869"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:04",
+      "resumen": "Gestión 6.012 seguidores (+7 en 7 días), alcance 7d 28.510 (orgánico 1.645), engagement orgánico 5,4%; Taller 132 (+2), alcance 13.933 (orgánico 816), 1,7%. Leads de redes Q4: 4.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "datos_hasta": "2026-10-24",
+          "boxer-gestion": {
+            "seguidores": 6012,
+            "delta_7d": 7,
+            "alcance_7d": 28510,
+            "alcance_organico_7d": 1645,
+            "engagement_pct": 5.4
+          },
+          "boxer-taller": {
+            "seguidores": 132,
+            "delta_7d": 2,
+            "alcance_7d": 13933,
+            "alcance_organico_7d": 816,
+            "engagement_pct": 1.7
+          },
+          "leads_redes_q4": 4
+        },
+        "hallazgos": [
+          "Metricool corrigió hacia arriba días ya traídos (p. ej. views de Facebook de Gestión del 19/10: 5.029 → 5.883; alcance de IG del 23/10 en las dos marcas): se usan los valores de hoy."
+        ]
+      },
+      "para": []
     }
   },
   "preparacion": {
