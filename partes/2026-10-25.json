@@ -1,0 +1,23 @@
+{
+  "fecha": "2026-10-25",
+  "modo": "oficial",
+  "analisis": {},
+  "preparacion": {
+    "gasto_meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:51",
+      "resumen": "",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "meta_spend_hasta": "2026-10-24",
+        "meta_adsets_hasta": "2026-10-24"
+      },
+      "para": []
+    }
+  }
+}
