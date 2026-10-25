@@ -1,0 +1,76 @@
+{
+  "corrida": "2026-10-25",
+  "datos_hasta": "2026-10-24",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 586496.45,
+      "gasto_total": 586496.45,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 586496.45,
+      "gasto_total": 586496.45,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 30769.59,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-18": 8,
+      "2026-10-19": 14,
+      "2026-10-20": 8,
+      "2026-10-21": 8,
+      "2026-10-22": 7,
+      "2026-10-23": 5,
+      "2026-10-24": 5
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-18": 6,
+        "2026-10-19": 14,
+        "2026-10-20": 9,
+        "2026-10-21": 7,
+        "2026-10-22": 8,
+        "2026-10-23": 9,
+        "2026-10-24": 7
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-18": 3,
+      "2026-10-19": 1,
+      "2026-10-20": 0,
+      "2026-10-21": 4,
+      "2026-10-22": 2,
+      "2026-10-23": 1,
+      "2026-10-24": 1
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254917878870427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254917878870427",
+      "entidad": "AsesoriaIA | Video | Frio-Repuesteras | v1 | 2026-10 - Copia",
+      "titulo": "AsesoriaIA | Video | Frio-Repuesteras | v1 | 2026-10 - Copia: 6.354 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Conversiones · conjunto Conversión - LAL Inscriptos webinars 2% (AGENTE META). Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-25"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254917878870427"
+  ],
+  "silenciadas": [],
+  "resueltas": []
+}
