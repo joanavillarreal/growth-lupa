@@ -197,6 +197,41 @@
       "para": [
         "conti"
       ]
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:09",
+      "resumen": "Gestión 6.018 seguidores (+8 en 7 días), alcance 7d 27.967 (orgánico 1.456), engagement orgánico 5,6%; Taller 134 (+4), alcance 13.401 (orgánico 115), 2,6%. Leads de redes Q4: 4.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "datos_hasta": "2026-10-25",
+          "boxer-gestion": {
+            "seguidores": 6018,
+            "delta_7d": 8,
+            "alcance_7d": 27967,
+            "alcance_organico_7d": 1456,
+            "engagement_pct": 5.6
+          },
+          "boxer-taller": {
+            "seguidores": 134,
+            "delta_7d": 4,
+            "alcance_7d": 13401,
+            "alcance_organico_7d": 115,
+            "engagement_pct": 2.6
+          },
+          "leads_redes_q4": 4
+        },
+        "hallazgos": [
+          "La ventana de 7 días (19 a 25/10) coincide con la W43: los números dan igual que redes_semana."
+        ]
+      },
+      "para": []
     }
   },
   "preparacion": {
