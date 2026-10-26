@@ -56,6 +56,13 @@ red. El de Rojas no sirve como prueba: el negocio es taller y casa de repuestos 
 arrastre se repartió entre las tres cuentas. Si un colaborativo de Gestión sola trae altas y
 compartidos, la grilla deja de girar alrededor del calendario de pilares y pasa a girar alrededor de
 a quién se puede coordinar cada mes.
+**W43, primera evidencia del lado de Gestión:** la semana fue la entrevista a Gustavo de Rombo del
+Tejar (un cliente con nombre y local). El reel de presentación (20/10) sacó 10,9% de engagement, 36
+interacciones sobre 330 y los 3 únicos compartidos de la semana; los dos recortes de la misma
+entrevista, 2,8% y 1,7% con 0 compartidos. Gestión sumó +8, sin atribución posible (los reels no
+informan follows). Suma a favor del mecanismo de personas, pero no cierra la hipótesis: no consta
+que haya salido como colaboración compartida con la cuenta del negocio, que es la distribución de un
+tercero que se quería probar.
 
 **¿Los hashtags suman alcance?** Abierta el 23/9/2026 (consulta C1). Con lo que se puede medir, no se
 ve efecto en ninguna dirección: en las 18 piezas de la W35 a la W38 (9 con hashtags en el texto, 9
@@ -134,6 +141,28 @@ origen en Metricool. Detalle en `data/hashtags/analisis.json`.
 
 Formato de cada entrada: titular · qué funcionó · qué no · qué hay que mirar · hipótesis a probar ·
 direcciones propuestas (para no repetirlas la semana siguiente).
+
+---
+
+## 2026-W43 — Boxer Gestión y Boxer Taller
+
+Sin informe propio: la lectura está en `data/2026-W43/lectura.json` y en el Panel de redes.
+
+**Titular:** semana de Rombo del Tejar en Gestión: los tres reels fueron con Gustavo, un cliente
+real. El de presentación (20/10) fue la mejor pieza (10,9%, 36 interacciones sobre 330, 3
+compartidos); los dos recortes de la misma entrevista quedaron en 2,8% y 1,7%. Gestión +8
+seguidores sin pieza a la que atribuirlos; Taller +4 con una sola publicación. Prospectos de redes: 1.
+
+**Qué funcionó:** el reel de presentación de un cliente con nombre y local: los únicos 3
+compartidos de la semana. Engagement orgánico de Gestión 5,6% (+43,6%) e interacciones +55,8%.
+
+**Qué no funcionó:** los recortes de la entrevista, que repetían a la misma persona sin presentarla
+(0 compartidos). LinkedIn sin publicar. Taller con 1 publicación y alcance orgánico de 115.
+
+**Qué hay que mirar:** suma a la hipótesis del colaborativo del lado de Gestión ("En prueba"), sin
+cerrarla: no consta que el reel haya salido como colaboración compartida con la cuenta del negocio,
+y los reels no informan follows, así que las +8 altas no se pueden atribuir. Metricool cuenta 5
+publicaciones en Gestión y lista 3; en Taller cuenta 1 y no lista ninguna.
 
 ---
 

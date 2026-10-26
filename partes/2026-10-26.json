@@ -137,6 +137,66 @@
         "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793012592846029"
       },
       "para": []
+    },
+    "redes_semana": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:06",
+      "resumen": "W43: el reel de presentación de Gustavo de Rombo del Tejar fue la mejor pieza de Gestión (10,9%, 36 interacciones, 3 compartidos). Gestión +8, Taller +4; 1 prospecto de redes.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getBrandSettings",
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics",
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "semana": "2026-W43",
+        "titular": "Semana de Rombo del Tejar en Gestión: los tres reels fueron con Gustavo, un cliente real, y el de presentación (20/10) fue la mejor pieza: 10,9% de engagement, 36 interacciones sobre 330 de alcance y 3 compartidos, contra 2,8% y 1,7% de los dos recortes de la misma entrevista. Gestión +8 seguidores sin pieza a la que atribuirlos; Taller +4 con 1 sola publicación; prospectos de redes: 1.",
+        "hallazgos": [
+          "Boxer Gestión: el reel de presentación de Gustavo de Rombo del Tejar (20/10) fue la mejor pieza: 10,9% de engagement, 36 interacciones sobre 330, 3 compartidos (los únicos de la semana), view rate 34,4%.",
+          "Boxer Gestión: engagement orgánico de Instagram 5,6% (+43,6%), interacciones 81 (+55,8%), alcance orgánico 1.456 (+9,8%), guardados 3 (+50,0%); +8 seguidores (6.010 a 6.018).",
+          "Boxer Taller: +4 seguidores (130 a 134) con una sola publicación; las altas del sorteo de la W40 siguen (121, 129, 130, 134).",
+          "Prospectos de redes: 1, contra 0 en la W42.",
+          "Boxer Gestión: los dos recortes de la misma entrevista quedaron en 2,8% y 1,7%, con 0 compartidos; el recorte «encontrar un sistema apto» tuvo el view rate más bajo (24,1%).",
+          "Boxer Gestión: views orgánicas −15,6% (2.964) y LinkedIn sin publicar (9 impresiones, −90,2%).",
+          "Boxer Taller: 1 publicación en la semana (6 en la W42); alcance orgánico 115 (−87,4%) y Facebook sin publicaciones.",
+          "Costo por prospecto de redes: 37.230,22 ARS de awareness para 1 prospecto."
+        ],
+        "alertas": [
+          "Boxer Gestión: el 92,1% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
+          "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).",
+          "Boxer Taller: alcance orgánico de 115 personas. Con tan poco alcance los % de engagement son ruido: no se sacan conclusiones de ellos.",
+          "Boxer Taller: el alcance orgánico cayó -87,4% contra la semana anterior.",
+          "Boxer Taller: el 98,2% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
+          "Boxer Taller: ninguna pieza de la semana trajo seguidores (0 follows por pieza)."
+        ],
+        "metricas": {
+          "prospectos_redes": 1,
+          "inversion_awareness_ars": 37230.22,
+          "costo_por_prospecto_ars": 37230.22,
+          "boxer-gestion": {
+            "seguidores": 6018,
+            "delta": 8,
+            "alcance_organico": 1456,
+            "engagement_pct": 5.6,
+            "pct_views_pauta": 92.1
+          },
+          "boxer-taller": {
+            "seguidores": 134,
+            "delta": 4,
+            "alcance_organico": 115,
+            "engagement_pct": 2.6,
+            "pct_views_pauta": 98.2
+          }
+        },
+        "notas": [
+          "Metricool: Gestión cuenta 5 publicaciones y lista 3 reels (posts vacíos en dos pedidos); Taller cuenta 1 y no lista piezas."
+        ]
+      },
+      "para": [
+        "conti"
+      ]
     }
   },
   "preparacion": {

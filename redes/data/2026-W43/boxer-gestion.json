@@ -1,0 +1,220 @@
+{
+  "semana": "2026-W43",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-10-19",
+  "hasta": "2026-10-25",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Reel",
+        "views": 1677,
+        "alcance": 865,
+        "interacciones": 63,
+        "engagement_pct": 7.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Post",
+        "views": 132,
+        "alcance": 40,
+        "interacciones": 2,
+        "engagement_pct": 5.0,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 614,
+        "alcance": 385,
+        "interacciones": 16,
+        "engagement_pct": 4.2,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 541,
+        "alcance": 166,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 2964,
+      "alcance": 1456,
+      "interacciones": 81,
+      "engagement_pct": 5.6
+    },
+    "pauta": {
+      "views": 34560,
+      "alcance": 26511
+    },
+    "pct_views_de_pauta": 92.1,
+    "alcance_total_cuenta": 27967,
+    "audiencia": {
+      "views_seguidores": 3932,
+      "views_no_seguidores": 33580,
+      "pct_seguidores": 10.5,
+      "pct_no_seguidores": 89.5,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 6010,
+      "fin": 6018,
+      "delta": 8,
+      "delta_pct": 0.1
+    },
+    "publicaciones": 5,
+    "stories_publicadas": 2,
+    "piezas": [
+      {
+        "tipo": "Reel",
+        "fecha": "20261020",
+        "url": "https://www.instagram.com/reel/Det4jP2zoAR/",
+        "texto": "Les presentamos a Gustavo de @rombodeltejar 🚀🚗 \n\nUna Casa de Repuestos que comenzó en el año 88 y hoy apuesta por la tecnología para agilizar sus procesos internos y brindar una me",
+        "views": 628,
+        "alcance": 330,
+        "interacciones": 36,
+        "guardados": 1,
+        "compartidos": 3,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 34.4,
+        "engagement_pct": 10.9
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20261022",
+        "url": "https://www.instagram.com/reel/DexpUV0MW63/",
+        "texto": "Listas de precios siempre actualizadas en Boxer Gestión 🚀🤩 Mirá la entrevista completa a Gustavo de Rombo del Tejar en nuestro perfil 🙌🏼",
+        "views": 358,
+        "alcance": 253,
+        "interacciones": 7,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 37.0,
+        "engagement_pct": 2.8
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20261020",
+        "url": "https://www.instagram.com/reel/DeuNp1xMiRi/",
+        "texto": "La experiencia de Gustavo de Rombo del Tejar en encontrar un sistema apto para su negocio 👨🏻‍💻🚀\n\n#software #casaderepuestos #boxergestión #sistemapararepuestos",
+        "views": 407,
+        "alcance": 290,
+        "interacciones": 5,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 24.099998,
+        "engagement_pct": 1.7
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "Reel",
+        "fecha": "20261020",
+        "url": "https://www.instagram.com/reel/Det4jP2zoAR/",
+        "texto": "Les presentamos a Gustavo de @rombodeltejar 🚀🚗 \n\nUna Casa de Repuestos que comenzó en el año 88 y hoy apuesta por la tecnología para agilizar sus procesos internos y brindar una me",
+        "views": 628,
+        "alcance": 330,
+        "interacciones": 36,
+        "guardados": 1,
+        "compartidos": 3,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 34.4,
+        "engagement_pct": 10.9
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20261022",
+        "url": "https://www.instagram.com/reel/DexpUV0MW63/",
+        "texto": "Listas de precios siempre actualizadas en Boxer Gestión 🚀🤩 Mirá la entrevista completa a Gustavo de Rombo del Tejar en nuestro perfil 🙌🏼",
+        "views": 358,
+        "alcance": 253,
+        "interacciones": 7,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 37.0,
+        "engagement_pct": 2.8
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20261020",
+        "url": "https://www.instagram.com/reel/DeuNp1xMiRi/",
+        "texto": "La experiencia de Gustavo de Rombo del Tejar en encontrar un sistema apto para su negocio 👨🏻‍💻🚀\n\n#software #casaderepuestos #boxergestión #sistemapararepuestos",
+        "views": 407,
+        "alcance": 290,
+        "interacciones": 5,
+        "guardados": 1,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 24.099998,
+        "engagement_pct": 1.7
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 3,
+    "compartidos_totales": 3,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 36373,
+    "publicaciones": 5,
+    "interacciones": 1,
+    "reels_publicados": 4,
+    "views_reels": 748,
+    "seguidores": {
+      "inicio": 980,
+      "fin": 983,
+      "delta": 3
+    }
+  },
+  "linkedin": {
+    "impresiones": 9,
+    "publicaciones": 0,
+    "interacciones": 0,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 0,
+    "engagement_pct_sobre_impresiones": 0.0,
+    "seguidores": {
+      "inicio": 106,
+      "fin": 106,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W42",
+    "instagram": {
+      "views_organicas": -15.6,
+      "alcance_organico": 9.8,
+      "interacciones": 55.8,
+      "engagement_pct": 43.6,
+      "seguidores": 0.2,
+      "publicaciones": -16.7,
+      "guardados": 50.0
+    },
+    "facebook": {
+      "views_contenido": 18.7,
+      "interacciones": 0.0,
+      "seguidores": 0.4
+    },
+    "linkedin": {
+      "impresiones": -90.2,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}
