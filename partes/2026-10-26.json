@@ -94,6 +94,49 @@
         "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793012514022839"
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:03",
+      "resumen": "Cargados 8 registros al SPA 1052 (22 a 25/10): Meta USD 107,08 y Google USD 33,80, total USD 140,88.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "desde": "2026-10-22",
+        "hasta": "2026-10-25",
+        "creados": {
+          "meta": {
+            "registros": 4,
+            "usd": 107.08,
+            "ids": [
+              820,
+              822,
+              824,
+              826
+            ]
+          },
+          "google": {
+            "registros": 4,
+            "usd": 33.8,
+            "ids": [
+              828,
+              830,
+              832,
+              834
+            ]
+          }
+        },
+        "total_usd": 140.88,
+        "salteados": 0,
+        "pendientes": [],
+        "reporte": "## Carga de inversión — 22/10 a 25/10\n\nCotización: 1500 ARS = 1 USD\n\n- **Meta Ads**: 4 registros creados, USD 107.08\n- **Google Ads**: 4 registros creados, USD 33.80\n- **Total**: USD 140.88\n\n| Día | Canal | ARS | USD | ID |\n|---|---|---:|---:|---|\n| 22/10 | Google Ads | 17,881.22 | 11.92 | 828 |\n| 22/10 | Meta Ads | 45,324.38 | 30.22 | 820 |\n| 23/10 | Google Ads | 16,440.08 | 10.96 | 830 |\n| 23/10 | Meta Ads | 38,026.37 | 25.35 | 822 |\n| 24/10 | Google Ads | 11,006.57 | 7.34 | 832 |\n| 24/10 | Meta Ads | 30,795.46 | 20.53 | 824 |\n| 25/10 | Google Ads | 5,371.70 | 3.58 | 834 |\n| 25/10 | Meta Ads | 46,474.32 | 30.98 | 826 |\n\n",
+        "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793012592846029"
+      },
+      "para": []
     }
   },
   "preparacion": {
