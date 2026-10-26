@@ -41,6 +41,59 @@
         ]
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Guardia: 2 alertas al canal (Visitas presenciales - Zonas LU sin resultados 2 días; CPR de Provincias Visitadas sube) y 1 resuelta. Gasto de ayer 46.473 ARS; leads Meta 12 / CRM 12, faltan 0. Panel Q4: CPL real 4.138 ARS, Meta → CRM 99%.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas": [
+          "Visitas presenciales - Zonas LU: 5.943 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+          "JY | Provincias Visitadas (AGENTE META): el costo por resultado sube hace 1 dia (de 1.091 a 6.240 ARS)"
+        ],
+        "silenciadas": [],
+        "resueltas": [
+          "AsesoriaIA | Video | Frio-Repuesteras | v1 | 2026-10 - Copia: 6.354 ARS en 2 dias sin un solo resultado"
+        ],
+        "metricas": {
+          "gasto_ayer_ars": 46473.29,
+          "leads_ayer": {
+            "meta": 12,
+            "crm": 12,
+            "avisados_slack": 4,
+            "faltan": 0
+          },
+          "errores_mcp": 50,
+          "errores_sobre_vivas": 0,
+          "panel_q4": {
+            "cpl_real_ars": 4138,
+            "derivacion_pct": 16.1,
+            "meta_a_crm": "99% (152 nuevos + 23 re-ingresos de 176)",
+            "leads_con_utm": "152 de 158",
+            "presupuesto_diario_ars": 45000
+          }
+        },
+        "campanas_a_confirmar": [],
+        "hallazgos": [
+          "Registro de actividad leído (21/10 a hoy): 7 cambios, 0 nuevos.",
+          "validar_mcp.py: OK, 10 respuestas, totales cuadran.",
+          "Mapa de campañas al día: todas confirmadas.",
+          "Re-ingresos de formulario del 25/10: 3 (Gerardo y dos de Indiana fabbro a 11 segundos)."
+        ],
+        "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793012514022839"
+      },
+      "para": []
     }
   },
   "preparacion": {

@@ -1,0 +1,91 @@
+{
+  "corrida": "2026-10-26",
+  "datos_hasta": "2026-10-25",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 595150.71,
+      "gasto_total": 595150.71,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 595150.71,
+      "gasto_total": 595150.71,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 46473.29,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-19": 14,
+      "2026-10-20": 8,
+      "2026-10-21": 8,
+      "2026-10-22": 7,
+      "2026-10-23": 5,
+      "2026-10-24": 5,
+      "2026-10-25": 12
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-19": 14,
+        "2026-10-20": 9,
+        "2026-10-21": 7,
+        "2026-10-22": 8,
+        "2026-10-23": 9,
+        "2026-10-24": 7,
+        "2026-10-25": 12
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-19": 1,
+      "2026-10-20": 0,
+      "2026-10-21": 4,
+      "2026-10-22": 2,
+      "2026-10-23": 1,
+      "2026-10-24": 1,
+      "2026-10-25": 4
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254957569100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957569100427",
+      "entidad": "Visitas presenciales - Zonas LU",
+      "titulo": "Visitas presenciales - Zonas LU: 5.943 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Lu - Baradero 100km - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-26"
+    },
+    {
+      "clave": "G3:cpl:120254876324870427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254876324870427",
+      "entidad": "JY | Provincias Visitadas (AGENTE META)",
+      "titulo": "JY | Provincias Visitadas (AGENTE META): el costo por resultado sube hace 1 dia",
+      "detalle": "De 1.091 a 6.240 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-10-26"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254957569100427",
+    "G3:cpl:120254876324870427"
+  ],
+  "silenciadas": [],
+  "resueltas": [
+    "G2:120254917878870427"
+  ]
+}
