@@ -196,7 +196,16 @@
       },
       "para": [
         "conti"
-      ]
+      ],
+      "disparos": {
+        "conti": {
+          "estado": "fallido",
+          "hora": "08:09",
+          "trigger_id": "trig_01WJUXuorZ5W7948yNGHU85c",
+          "sesion": null,
+          "error": "no apareció ninguna herramienta que termine en __fire_trigger después de 3 búsquedas; cargaron Slack, Metricool, Meta y GitHub, pero ningún conector de disparo de rutinas"
+        }
+      }
     },
     "redes_general": {
       "estado": "ok",
@@ -230,6 +239,27 @@
         "hallazgos": [
           "La ventana de 7 días (19 a 25/10) coincide con la W43: los números dan igual que redes_semana."
         ]
+      },
+      "para": []
+    },
+    "limpieza": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:09",
+      "resumen": "Borrados 3 crudos de Metricool/Meta de la W35 (más de 8 semanas); la foto semanal del CRM queda.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": null,
+      "datos": {
+        "borrados": [
+          "redes/data/raw/2026-W35/boxer-gestion.json",
+          "redes/data/raw/2026-W35/boxer-taller.json",
+          "redes/data/raw/2026-W35/meta-awareness.json"
+        ],
+        "conservados": [
+          "redes/data/raw/2026-W35/crm.json (foto semanal, no se borra)"
+        ],
+        "mb": 0.0
       },
       "para": []
     }
