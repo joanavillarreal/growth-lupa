@@ -61,10 +61,13 @@ def resumen(crudo):
          "engagement_no_confiable": any((f.get("engagement_pct") or 0) > 100
                                         for f in ig.get("formatos") or [])}
     if fb := analizar.resumen_facebook(crudo):
-        r["fb"] = {"seguidores": fb["seguidores"]["fin"], "seguidores_delta": fb["seguidores"]["delta"],
+        r["fb"] = {"seguidores": (fb.get("seguidores") or {}).get("fin"),
+                   "seguidores_delta": (fb.get("seguidores") or {}).get("delta"),
                    "views": fb.get("views_contenido")}
     if li := analizar.resumen_linkedin(crudo):
-        r["li"] = {"seguidores": li["seguidores"]["fin"], "seguidores_delta": li["seguidores"]["delta"],
+        # Metricool puede mandar el último día sin seguidores de LinkedIn (sin consolidar).
+        r["li"] = {"seguidores": (li.get("seguidores") or {}).get("fin"),
+                   "seguidores_delta": (li.get("seguidores") or {}).get("delta"),
                    "impresiones": li.get("impresiones")}
     return r
 
