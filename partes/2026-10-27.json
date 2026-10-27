@@ -1,7 +1,48 @@
 {
   "fecha": "2026-10-27",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Q4: 222 generados, 74 derivados, 55 presupuestados, 9 cerrados (MRR 1.768 USD), CPL 4,14, CAC 102,0 USD. Alarma sin novedades. Orígenes sin canal: Itca 2026 (UC_AQMO17, 0) y Expomecanico (UC_CCDPGU, 1).",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [],
+        "hallazgos": [
+          "Alarma diaria: sin novedades (no se manda mensaje al canal).",
+          "Contra el mismo tramo del Q3: generados 222 vs 148, CPL 4,14 vs 5,91 USD, derivados 74 vs 61, presupuestados 55 vs 37 (mejora); win rate 4,1% vs 6,1% (desmejora)."
+        ],
+        "metricas": {
+          "q": "2026-Q4",
+          "generados": 222,
+          "derivados": 74,
+          "presupuestados": 55,
+          "cerrados": 9,
+          "mrr": 1768.0,
+          "gasto": 918.05,
+          "cpl": 4.14,
+          "cac": 102.01
+        },
+        "origenes_sin_canal": [
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          }
+        ]
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
