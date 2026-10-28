@@ -88,6 +88,45 @@
         "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793185195925629"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:05",
+      "resumen": "Gestión 6.032 seguidores (+22 en 7 días), alcance 7d 24.556 (orgánico 1.439), engagement orgánico 6,1%; Taller 137 (+6), alcance 13.360 (orgánico 77), 5,2% (muestra chica). Leads de redes Q4: 5.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "hallazgos": [
+          "Boxer Gestión: 6.032 seguidores en Instagram (+22 en 7 días), alcance 7d 24.556 (orgánico 1.439, pauta 23.117), engagement orgánico 6,1% (88 interacciones). Facebook 985 (+4), LinkedIn 106 (0).",
+          "Boxer Taller: 137 seguidores (+6 en 7 días), alcance 7d 13.360 (orgánico 77, pauta 13.283), engagement orgánico 5,2% con muestra chica (el % es ruido).",
+          "Leads de redes Q4: 5 (al 28/10).",
+          "Metricool volvió a mandar la fila de LinkedIn del último día (27/10) sin seguidores (día sin consolidar); general.py la tolera y usa el último informado (106)."
+        ],
+        "alertas": [],
+        "metricas": {
+          "datos_hasta": "2026-10-27",
+          "boxer-gestion": {
+            "seguidores": 6032,
+            "seguidores_delta_7d": 22,
+            "alcance_7d": 24556,
+            "alcance_organico_7d": 1439,
+            "engagement_pct": 6.1
+          },
+          "boxer-taller": {
+            "seguidores": 137,
+            "seguidores_delta_7d": 6,
+            "alcance_7d": 13360,
+            "alcance_organico_7d": 77,
+            "engagement_pct": 5.2
+          },
+          "leads_redes_q4": 5
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
