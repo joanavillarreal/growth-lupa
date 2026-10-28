@@ -41,6 +41,53 @@
         ]
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Guardia: 1 alerta al canal (Neuquen Video de Provincias Visitadas, 2 días sin resultados) y 5 ya avisadas; se resolvieron 2. Gasto de ayer 40.614 ARS; leads Meta 7 / CRM 9, faltan 0. Panel Q4: CPL real 4.061 ARS, Meta → CRM 99%.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas": [
+          "G2: AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10: 3.805 ARS en 2 dias sin un solo resultado (2 dias seguidos)"
+        ],
+        "silenciadas": [
+          "G2:120254939752100427 (AsesoriaVirtual | Video | Salta LAL | v1 | 2026-10, ya avisada)",
+          "G2:120254941799240427 (AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia, ya avisada)",
+          "G2:120254957569100427 (Visitas presenciales - Zonas LU, ya avisada)",
+          "G2:120254958000380427 (AsesoriaVirtual | Video | Rosario LAL | v1 | 2026-10, ya avisada)",
+          "G3:cpl:120252700778930427 (JY | Remarketing, ya avisada)"
+        ],
+        "hallazgos": [
+          "Gasto de ayer (27/10) 40.614 ARS.",
+          "Leads 27/10: Meta 7, CRM 9, 1 aviso de Slack (RE-INGRESO); faltan 0.",
+          "Panel Q4: CPL real 4.061 ARS, Meta → CRM 99% (171 nuevos + 24 re-ingresos de 196), derivación 14,7% (21 de 143 resueltos).",
+          "Se resolvieron: Mendoza Video sin resultados y CPR de Provincias Visitadas.",
+          "Registro de actividad: 1 cambio nuevo (81 en total). 'Boxer + lectora y impresora de etiquetas' ya no figura activo."
+        ],
+        "metricas": {
+          "gasto_ayer_ars": 40613.81,
+          "leads_meta_ayer": 7,
+          "leads_crm_ayer": 9,
+          "avisos_slack_ayer": 1,
+          "cpl_real_q_ars": 4061,
+          "meta_crm_pct": 99,
+          "derivacion_pct": 14.7
+        },
+        "campanas_a_confirmar": [],
+        "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793185195925629"
+      },
+      "para": []
     }
   },
   "preparacion": {
