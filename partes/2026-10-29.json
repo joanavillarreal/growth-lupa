@@ -92,6 +92,76 @@
         "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793271839714409"
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:04",
+      "resumen": "Cargados 6 registros al SPA 1052 (26/10 a 28/10): Meta USD 80,84 + Google USD 24,59 = USD 105,43.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "hallazgos": [
+          "Cargados 6 registros al SPA 1052 del 26/10 al 28/10 (Meta 3, Google 3). Sin huecos previos."
+        ],
+        "alertas": [],
+        "metricas": {
+          "desde": "2026-10-26",
+          "hasta": "2026-10-28",
+          "meta_usd": 80.84,
+          "google_usd": 24.59,
+          "total_usd": 105.43,
+          "registros": [
+            {
+              "dia": "2026-10-26",
+              "canal": "Google Ads",
+              "ars": 4616.56,
+              "usd": 3.08,
+              "id": 842
+            },
+            {
+              "dia": "2026-10-26",
+              "canal": "Meta Ads",
+              "ars": 38920.16,
+              "usd": 25.95,
+              "id": 836
+            },
+            {
+              "dia": "2026-10-27",
+              "canal": "Google Ads",
+              "ars": 17164.92,
+              "usd": 11.44,
+              "id": 844
+            },
+            {
+              "dia": "2026-10-27",
+              "canal": "Meta Ads",
+              "ars": 40780.26,
+              "usd": 27.19,
+              "id": 838
+            },
+            {
+              "dia": "2026-10-28",
+              "canal": "Google Ads",
+              "ars": 15100.78,
+              "usd": 10.07,
+              "id": 846
+            },
+            {
+              "dia": "2026-10-28",
+              "canal": "Meta Ads",
+              "ars": 41555.51,
+              "usd": 27.7,
+              "id": 840
+            }
+          ]
+        },
+        "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793271880965339"
+      },
+      "para": []
     }
   },
   "preparacion": {
