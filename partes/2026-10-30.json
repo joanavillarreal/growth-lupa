@@ -1,7 +1,51 @@
 {
   "fecha": "2026-10-30",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Q4: 239 generados, 84 derivados, 65 presupuestados, 10 cerrados (MRR 2.029 USD), CPL 4,29, CAC 102,5 USD. Alarma: % inactivo +8,1 pp contra Q3. Orígenes sin canal: Itca 2026 (UC_AQMO17, 0) y Expomecanico (UC_CCDPGU, 1).",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [
+          "% prospecto inactivo en desmejora: +8,1 pp (47,7% vs 39,6%)"
+        ],
+        "hallazgos": [
+          "Alarma diaria con 1 desmejora: mandada a #adqui-notificaciones-canales.",
+          "Contra el mismo tramo del Q3 (01/07–30/07): generados 239 vs 164, CPL 4,29 vs 5,83 USD, derivados 84 vs 72, presupuestados 65 vs 44, días de cierre 35,7 vs 69,6 (mejora); cerrados 10 vs 10, MRR 2.029 vs 2.432 (-16,6%), win rate 4,2% vs 6,1%, CAC 102,51 vs 95,65, % no calificación 12,6 vs 14,6 (estable); % inactivo 47,7 vs 39,6 (desmejora). MRR y win rate dejaron de estar en desmejora respecto de ayer (cerró una venta más)."
+        ],
+        "metricas": {
+          "q": "2026-Q4",
+          "generados": 239,
+          "derivados": 84,
+          "presupuestados": 65,
+          "cerrados": 10,
+          "mrr": 2029.0,
+          "cpl": 4.29,
+          "cac": 102.51,
+          "pct_inactivo": 47.7
+        },
+        "origenes_sin_canal": [
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          }
+        ],
+        "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793357641139139"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
