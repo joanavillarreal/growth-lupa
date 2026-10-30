@@ -97,6 +97,45 @@
         "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793357975503179"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:04",
+      "resumen": "Gestión 6.040 seguidores (+29 en 7 días), alcance 7d 27.510 (orgánico 911), engagement orgánico 4,8%; Taller 136 (+4), alcance 14.535 (orgánico 91), 8,8% (muestra chica). Leads de redes Q4: 6.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "hallazgos": [
+          "Boxer Gestión: 6.040 seguidores en Instagram (+29 en 7 días), alcance 7d 27.510 (orgánico 911, pauta 26.599), engagement orgánico 4,8% (44 interacciones). Alcance orgánico -53,1% e interacciones -53,2% contra los 7 días anteriores; engagement sin cambio (0,0 pp). Facebook 986 (+3), LinkedIn 107 (+1).",
+          "Boxer Taller: 136 seguidores (+4 en 7 días), alcance 7d 14.535 (orgánico 91, pauta 14.444), engagement orgánico 8,8% con muestra chica (el % es ruido).",
+          "Leads de redes Q4: 6 (al 30/10; 2 en la W44).",
+          "Metricool mandó la fila de LinkedIn del último día (29/10) sin seguidores y la de Facebook de Taller del 29/10 con ceros (día sin consolidar); general.py la tolera y usa el último informado."
+        ],
+        "alertas": [],
+        "metricas": {
+          "datos_hasta": "2026-10-29",
+          "boxer-gestion": {
+            "seguidores": 6040,
+            "seguidores_delta_7d": 29,
+            "alcance_7d": 27510,
+            "alcance_organico_7d": 911,
+            "engagement_pct": 4.8
+          },
+          "boxer-taller": {
+            "seguidores": 136,
+            "seguidores_delta_7d": 4,
+            "alcance_7d": 14535,
+            "alcance_organico_7d": 91,
+            "engagement_pct": 8.8
+          },
+          "leads_redes_q4": 6
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
