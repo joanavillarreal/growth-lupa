@@ -93,6 +93,45 @@
         "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1793444476883389"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:04",
+      "resumen": "Gestión 6.042 seguidores (+30 en 7 días), alcance 7d 27.432 (orgánico 655), engagement orgánico 4,3%; Taller 136 (+4), alcance 13.927 (orgánico 87), 9,2% (muestra chica). Leads de redes Q4: 6.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "hallazgos": [
+          "Boxer Gestión: 6.042 seguidores en Instagram (+30 en 7 días), alcance 7d 27.432 (orgánico 655, pauta 26.777), engagement orgánico 4,3% (28 interacciones). Alcance orgánico -64,8% e interacciones -72,8% contra los 7 días anteriores; engagement -1,2 pp. Facebook 986 (+3), LinkedIn 107 (+1).",
+          "Boxer Taller: 136 seguidores (+4 en 7 días), alcance 7d 13.927 (orgánico 87, pauta 13.840), engagement orgánico 9,2% con muestra chica (el % es ruido).",
+          "Leads de redes Q4: 6 (al 31/10).",
+          "Metricool mandó la fila de LinkedIn del 30/10 sin seguidores y la de Facebook de Taller del 30/10 con ceros (día sin consolidar); general.py usa el último informado. También corrigió hacia arriba días recientes y las filas de pauta (AD) de octubre respecto del crudo de ayer."
+        ],
+        "alertas": [],
+        "metricas": {
+          "datos_hasta": "2026-10-30",
+          "boxer-gestion": {
+            "seguidores": 6042,
+            "seguidores_delta_7d": 30,
+            "alcance_7d": 27432,
+            "alcance_organico_7d": 655,
+            "engagement_pct": 4.3
+          },
+          "boxer-taller": {
+            "seguidores": 136,
+            "seguidores_delta_7d": 4,
+            "alcance_7d": 13927,
+            "alcance_organico_7d": 87,
+            "engagement_pct": 9.2
+          },
+          "leads_redes_q4": 6
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
