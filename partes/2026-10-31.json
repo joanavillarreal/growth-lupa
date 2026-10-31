@@ -1,7 +1,50 @@
 {
   "fecha": "2026-10-31",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Q4: 242 generados, 86 derivados, 65 presupuestados, 15 cerrados (MRR 3.120 USD), CPL 4,37, CAC 70,43 USD. Alarma sin novedades. Orígenes sin canal: Itca 2026 (UC_AQMO17, 0) y Expomecanico (UC_CCDPGU, 1).",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [],
+        "hallazgos": [
+          "Alarma diaria sin novedades: no se mandó mensaje al canal.",
+          "Contra el mismo tramo del Q3 (01/07–31/07): generados 242 vs 169, CPL 4,37 vs 5,84 USD, derivados 86 vs 72, presupuestados 65 vs 51, cerrados 15 vs 11, días de cierre 31,7 vs 67,1 (mejora); MRR 3.120 vs 2.682, win rate 6,2% vs 6,5%, CAC 70,43 vs 89,68, % no calificación 12,8 vs 14,8, % inactivo 45,5 vs 39,1 (estable).",
+          "Cerrados del Q4 pasaron de 10 a 15 respecto de ayer (MRR 2.029 → 3.120).",
+          "Gasto de Meta al día hasta 30/10; Google Ads en el SPA hasta 28/10."
+        ],
+        "metricas": {
+          "q": "2026-Q4",
+          "generados": 242,
+          "derivados": 86,
+          "presupuestados": 65,
+          "cerrados": 15,
+          "mrr": 3120.0,
+          "cpl": 4.37,
+          "cac": 70.43,
+          "pct_inactivo": 45.5
+        },
+        "origenes_sin_canal": [
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          }
+        ]
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
