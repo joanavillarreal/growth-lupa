@@ -1,0 +1,159 @@
+{
+  "corrida": "2026-11-01",
+  "datos_hasta": "2026-10-31",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 633254.93,
+      "gasto_total": 633254.93,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 633254.93,
+      "gasto_total": 633254.93,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 57231.09,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-25": 12,
+      "2026-10-26": 9,
+      "2026-10-27": 7,
+      "2026-10-28": 2,
+      "2026-10-29": 1,
+      "2026-10-30": 4,
+      "2026-10-31": 3
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-25": 12,
+        "2026-10-26": 10,
+        "2026-10-27": 9,
+        "2026-10-28": 2,
+        "2026-10-29": 2,
+        "2026-10-30": 5,
+        "2026-10-31": 6
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-25": 4,
+      "2026-10-26": 1,
+      "2026-10-27": 1,
+      "2026-10-28": 0,
+      "2026-10-29": 1,
+      "2026-10-30": 1,
+      "2026-10-31": 0
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254261331160427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254261331160427",
+      "entidad": "Oferta | Img | Remarketing | v1 | 2026-09",
+      "titulo": "Oferta | Img | Remarketing | v1 | 2026-09: 7.190 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Remarketing · conjunto Remarketing. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-01"
+    },
+    {
+      "clave": "G2:120254916890110427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254916890110427",
+      "entidad": "AsesoriaVirtual | Img | Mendoza LAL | v1 | 2026-10",
+      "titulo": "AsesoriaVirtual | Img | Mendoza LAL | v1 | 2026-10: 7.858 ARS en 4 dias sin un solo resultado (4 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Mendoza | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 4,
+      "primer_aviso": "2026-10-30",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120254939752100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254939752100427",
+      "entidad": "AsesoriaVirtual | Video | Salta LAL | v1 | 2026-10",
+      "titulo": "AsesoriaVirtual | Video | Salta LAL | v1 | 2026-10: 4.230 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Salta | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-01"
+    },
+    {
+      "clave": "G2:120254941799240427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254941799240427",
+      "entidad": "AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia",
+      "titulo": "AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia: 13.806 ARS en 7 dias sin un solo resultado (7 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto San Juan | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 7,
+      "primer_aviso": "2026-10-27",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120252699641360427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120252699641360427",
+      "entidad": "JY | Conversiones",
+      "titulo": "JY | Conversiones: el costo por resultado sube hace 1 dia",
+      "detalle": "De 5.222 a 11.279 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "primer_aviso": "2026-10-29",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120252700778930427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120252700778930427",
+      "entidad": "JY | Remarketing",
+      "titulo": "JY | Remarketing: el costo por resultado sube hace 3 dias",
+      "detalle": "2026-10-29: sin leads ese dia · 2026-10-30: sin leads ese dia · 2026-10-31: sin leads ese dia — contra un promedio de 2.694 ARS/lead en los 7 dias previos. Subio y no volvio a bajar. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-10-30",
+      "motivo_aviso": "ya avisada"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254261331160427",
+    "G2:120254939752100427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120254916890110427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120254941799240427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120252699641360427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120252700778930427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120252701921370427",
+    "G2:120254957569100427",
+    "G2:120254957836200427",
+    "G3:cpl:120254876324870427"
+  ]
+}

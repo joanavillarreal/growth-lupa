@@ -45,6 +45,64 @@
         ]
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Guardia: 2 alertas mandadas al canal (Oferta Remarketing y AsesoriaVirtual Video Salta, 2 días sin resultados), 4 silenciadas, 4 resueltas. Gasto 31/10: 57.231 ARS. Panel Q4: CPL real 4.566 ARS, Meta→CRM 99%, derivación 12,8%.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas": [
+          "G2: Oferta | Img | Remarketing | v1 | 2026-09 (JY | Remarketing): 7.190 ARS en 2 días sin un solo resultado",
+          "G2: AsesoriaVirtual | Video | Salta LAL | v1 | 2026-10 (JY | Provincias Visitadas): 4.230 ARS en 2 días sin un solo resultado"
+        ],
+        "silenciadas": [
+          "G2:120254916890110427 (AsesoriaVirtual | Img | Mendoza LAL, ya avisada)",
+          "G2:120254941799240427 (AsesoriaVirtual | Img | San Juan LAL - Copia, ya avisada)",
+          "G3:cpl:120252699641360427 (JY | Conversiones, ya avisada)",
+          "G3:cpl:120252700778930427 (JY | Remarketing, ya avisada)"
+        ],
+        "resueltas": [
+          "G2:120252701921370427 (Remarketing - Casos de éxito - JUL26)",
+          "G2:120254957569100427 (Visitas presenciales - Zonas LU)",
+          "G2:120254957836200427 (AsesoriaVirtual | Video | Neuquen LAL)",
+          "G3:cpl:120254876324870427 (JY | Provincias Visitadas)"
+        ],
+        "hallazgos": [
+          "Gasto de ayer (31/10) 57.231 ARS.",
+          "Leads 31/10: Meta 3, CRM 6, 0 avisos de Slack; faltan 0.",
+          "Errores del MCP: 50, ninguno sobre entidades vivas.",
+          "Panel Q4: CPL real 4.566 ARS, Meta → CRM 99% (186 nuevos + 26 re-ingresos de 214), derivación 12,8% (22 de 172 resueltos).",
+          "Registro de actividad: sin cambios nuevos en campañas, conjuntos ni anuncios desde el 27/10 (solo cobros y reintegros de Meta).",
+          "Re-ingresos de formulario del 31/10: 0."
+        ],
+        "gasto_ayer_ars": 57231.09,
+        "conciliacion": {
+          "fecha": "2026-10-31",
+          "meta": 3,
+          "crm": 6,
+          "slack": 0,
+          "faltan": 0
+        },
+        "campanas_a_confirmar": [],
+        "metricas": {
+          "cpl_real_ars": 4566,
+          "meta_crm_pct": 99,
+          "derivacion_pct": 12.8,
+          "gasto_q_ars": 1188360
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
