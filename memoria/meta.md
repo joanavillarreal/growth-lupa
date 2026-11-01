@@ -25,3 +25,12 @@ Lo ya revisado con Joana que no hay que volver a marcar.
 - Las pruebas internas no cuentan como re-ingreso (la de Joana del 01/10 va en 0).
 - `JY | Visitas a tu Local (AGENTE META)`: sus leads caen en la etapa "Visitas presenciales".
   No se le fija origen del CRM (`etapa_crm` en `config/campanas.json`); ya no está a confirmar.
+
+## 01/11/2026 — Vista Anuncios activos rearmada (pedido de Joana)
+
+- Una pestaña por campaña; adentro, cada conjunto con su público (incluye, intereses, excluye,
+  edad, lugar, presupuesto) y una tabla con sus anuncios activos: botón Ver anuncio, nombre,
+  resultados de Meta, convertidos del CRM (sobre los leads de ese anuncio) y CPL real
+  (gasto / leads en el CRM). Todo desde el 08/09 o desde que se creó el anuncio, hasta ayer.
+- El texto del anuncio queda plegado ("Texto del anuncio") para la SDR. Se sacaron el
+  formulario por anuncio y el link al Administrador.

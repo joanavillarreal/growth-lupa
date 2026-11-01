@@ -310,6 +310,44 @@ button.link:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
   .esquema .flecha{transform:rotate(90deg); height:14px}
 }
 
+/* anuncios activos: pestañas por campaña */
+#ads-indice[role="tablist"]{gap:0; flex-wrap:nowrap; overflow-x:auto; border-bottom:1px solid var(--rule-strong); margin-top:14px}
+#ads-indice[role="tablist"] button{border:0; border-bottom:2px solid transparent; border-radius:0; background:transparent;
+  padding:8px 14px; font-size:13.5px; white-space:nowrap; color:var(--ink-2); margin-bottom:-1px}
+#ads-indice[role="tablist"] button small{color:var(--muted); margin-left:4px}
+#ads-indice[role="tablist"] button[aria-selected="true"]{border-bottom-color:var(--accent); color:var(--accent); font-weight:600}
+#ads-indice[role="tablist"] button:hover{color:var(--accent)}
+.conj-card{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:16px; margin-top:14px}
+.conj-pub{display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); gap:14px}
+@media (max-width:700px){ .conj-pub{grid-template-columns:1fr} }
+.conj-card .scroll{border:0; border-top:1px solid var(--rule); border-radius:0}
+table.t-ads td{vertical-align:top}
+table.t-ads td small{display:block; font-size:11px; font-weight:500; color:var(--muted)}
+table.t-ads td:first-child{min-width:300px}
+.ad-fila{display:flex; gap:12px; align-items:flex-start}
+.ad-fila .ad-nombre{font-size:13.5px}
+.ad-fila details{margin:4px 0 0; border:0; padding:0}
+.ad-fila summary{font-size:12px; font-weight:500}
+.ad-fila .ad-texto{margin-top:6px; font-size:12.5px; max-width:60ch}
+.btn-ver{flex:none; font-size:12.5px; font-weight:600; color:#fff; background:var(--accent); border-radius:4px;
+  padding:5px 10px; text-decoration:none; white-space:nowrap}
+.btn-ver:hover{filter:brightness(1.08)}
+.btn-ver:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.btn-ver.apagado{background:var(--neutro-bg); color:var(--muted)}
+@media (max-width:700px){
+  table.t-ads thead{display:none}
+  table.t-ads, table.t-ads tbody, table.t-ads tr{display:block; width:100%}
+  table.t-ads tr{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px 10px;
+    padding:12px 0; border-bottom:1px solid var(--rule)}
+  table.t-ads tbody tr:last-child{border-bottom:0}
+  table.t-ads td{display:block; border:0; padding:0; text-align:left; white-space:normal; min-width:0}
+  table.t-ads td:first-child{grid-column:1/-1; min-width:0}
+  table.t-ads td[data-l]::before{content:attr(data-l); display:block; font-size:10px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:2px}
+  table.t-ads tr.total td{background:transparent}
+  .ad-fila{flex-direction:column; gap:6px}
+}
+
 /* tendencias */
 .conclusion{background:var(--surface); border:1px solid var(--rule); border-radius:4px;
   padding:16px 18px; margin-top:14px}
@@ -582,7 +620,7 @@ tr.es-top td{background:var(--ok-bg)}
 <section style="margin-top:22px">
   <p class="eyebrow" id="ads-eyebrow">Anuncios activos</p>
   <h2 id="ads-titulo">Todo lo que está corriendo hoy</h2>
-  <p class="sub">Para que la SDR sepa qué vio cada persona antes de dejar sus datos: el texto del anuncio, a qué formulario apunta y a qué origen de Bitrix entra el lead. Tocá una campaña para ir directo.</p>
+  <p class="sub">Una pestaña por campaña. Adentro, cada conjunto con el público al que apunta y sus anuncios activos: qué resultados dio cada uno en Meta, cuántos se convirtieron en el CRM y a qué CPL real.</p>
   <div class="indice" id="ads-indice"></div>
   <div id="ads-campanas"></div>
   <p class="nota" id="ads-nota"></p>
@@ -1598,51 +1636,101 @@ function formDelAnuncio(a, c){
   if(c.formulario) return '<p class="ad-form">Formulario: <b>'+esc(c.formulario)+'</b> <span class="gris">· según el mapa de campañas; este anuncio todavía no trajo leads con UTM.</span></p>';
   return '<p class="ad-form"><span class="duda">Formulario sin confirmar.</span> <span class="gris">Meta no informa el formulario por API y este anuncio todavía no trajo leads con UTM.</span></p>';
 }
+// Pestañas por campaña; adentro, cada conjunto con su público y una tabla de
+// sus anuncios activos: ver anuncio, nombre, resultados de Meta, convertidos
+// del CRM y CPL real (Joana, 2026-11-01). Todo desde que hay UTM por anuncio
+// (ATRIB) o desde que se creó el anuncio.
+var ADS_TAB = 0;
 function pintarAnuncios(){
-  var H=D.hoy, cont=document.getElementById("ads-campanas");
-  if(!H){ cont.innerHTML='<p class="vacio">Todavía no hay una lectura de los anuncios activos.</p>'; return; }
-  var total=H.campanas.reduce(function(s,c){ return s+c.anuncios.length; },0);
-  var conAds=H.campanas.filter(function(c){ return c.anuncios.length; });
+  var H=D.hoy, cont=document.getElementById("ads-campanas"), tabs=document.getElementById("ads-indice");
+  if(!H){ tabs.innerHTML=""; cont.innerHTML='<p class="vacio">Todavía no hay una lectura de los anuncios activos.</p>'; return; }
+  var orden={conversion:0,remarketing:1,evento:2,awareness:3};
+  var conAds=H.campanas.filter(function(c){ return c.anuncios.length; })
+    .sort(function(a,b){ return (a.bloque in orden?orden[a.bloque]:9)-(b.bloque in orden?orden[b.bloque]:9); });
+  var total=conAds.reduce(function(s,c){ return s+c.anuncios.length; },0);
   document.getElementById("ads-eyebrow").textContent="Anuncios activos · "+DMY(H.foto)+"/"+H.foto.slice(0,4);
   document.getElementById("ads-titulo").textContent=total+" anuncios activos en "+conAds.length+" campañas";
-  document.getElementById("ads-indice").innerHTML=conAds.map(function(c,i){
-    return '<button type="button" data-ir="ads-c'+i+'">'+esc(c.nombre)+" · "+c.anuncios.length+"</button>"; }).join("");
-  var orden={conversion:0,remarketing:1,evento:2,awareness:3};
+  if(ADS_TAB>=conAds.length) ADS_TAB=0;
+  var hist={}; (H.anuncios||[]).forEach(function(a){ hist[norm(a.campana)+"||"+norm(a.conjunto)+"||"+norm(a.nombre)]=a; });
+  var leadsPago=D.leads.filter(function(l){ return l.pago && l.ad && l.d>=ATRIB; });
+  function metricas(c, a){
+    var h=hist[norm(c.nombre)+"||"+norm(a.conjunto)+"||"+norm(a.nombre)];
+    var ls=leadsPago.filter(function(l){ return norm(l.ad)===norm(a.nombre) && (!l.conj || norm(l.conj)===norm(a.conjunto)); });
+    var conv=ls.filter(function(l){ return l.bloque==="convertido"; }).length;
+    return {gasto:h?h.gasto:0, res:h?h.resultados:0, ind:h?h.indicador:"", leads:ls.length, conv:conv};
+  }
+  tabs.setAttribute("role","tablist");
+  tabs.setAttribute("aria-label","Campañas con anuncios activos");
+  tabs.innerHTML=conAds.map(function(c,i){
+    return '<button type="button" role="tab" id="ads-t'+i+'" aria-controls="ads-p'+i+'" aria-selected="'+(i===ADS_TAB)+'" tabindex="'+(i===ADS_TAB?0:-1)+'">'+
+      esc(c.nombre)+' <small>'+c.anuncios.length+'</small></button>'; }).join("");
   var out="";
-  conAds.slice().sort(function(a,b){ return (a.bloque in orden?orden[a.bloque]:9)-(b.bloque in orden?orden[b.bloque]:9); }).forEach(function(c){
-    var i=conAds.indexOf(c), r=comoEntra(c);
-    var bl=(BLOQUES.filter(function(b){return b[0]===c.bloque;})[0]||[0,c.bloque])[1];
-    out+='<article class="camp-card" id="ads-c'+i+'"><div class="camp-cab"><h3>'+esc(c.nombre)+'</h3>'+
-      '<span class="chip prod">'+c.producto+'</span><span class="chip '+(c.bloque==="awareness"?"aw":c.bloque==="evento"?"ev":"nuc")+'">'+bl+'</span>'+
-      '<span class="kpi-cap">'+c.anuncios.length+(c.anuncios.length===1?" anuncio":" anuncios")+'</span></div>'+
-      '<div class="ruta"><span class="k">Qué hace</span><span>'+r.accion+'</span><span class="k">Bitrix</span><span>'+r.bitrix+'</span></div>'+
-      '<div class="ads-grid">';
-    c.anuncios.slice().sort(function(a,b){ return a.creado<b.creado?1:-1; }).forEach(function(a){
-      var corto=a.texto.length>220 ? a.texto.slice(0,220).replace(/\s+\S*$/,"")+"…" : a.texto;
-      out+='<div class="ad"><p class="ad-nombre">'+esc(a.nombre)+'</p>'+
-        '<p class="ad-meta">'+esc(a.conjunto)+" · activo desde el "+DMY(a.creado)+(a.tipo?" · "+(TIPO[a.tipo]||esc(a.tipo)):"")+
-          (a.cta?" · botón «"+(CTA[a.cta]||esc(a.cta))+"»":"")+"</p>"+
-        (a.titulo?'<p class="ad-titular">'+esc(a.titulo)+(a.descripcion?' <span class="gris" style="font-weight:400">— '+esc(a.descripcion)+"</span>":"")+"</p>":"")+
-        (a.texto ? (corto===a.texto ? '<p class="ad-texto">'+esc(a.texto)+"</p>"
-                   : '<details><summary>'+esc(corto)+' <span class="mas" style="white-space:nowrap">Ver texto completo</span></summary><p class="ad-texto" style="margin-top:6px">'+esc(a.texto)+"</p></details>")
-                 : (H.con_creativos?"":'<p class="ad-meta">El texto del anuncio no se trajo en esta corrida.</p>'))+
-        formDelAnuncio(a,c)+
-        '<div class="ad-links">'+
-          (a.post?'<a href="https://www.facebook.com/'+encodeURIComponent(a.post)+'" target="_blank" rel="noopener">Ver el anuncio ↗</a>':"")+
-          (a.id?'<a class="sec" href="https://www.facebook.com/adsmanager/manage/ads/edit?act=725901852075382&amp;selected_ad_ids='+encodeURIComponent(a.id)+'" target="_blank" rel="noopener">Abrir en el Administrador ↗</a>':"")+
-        "</div></div>";
+  conAds.forEach(function(c,i){
+    var r=comoEntra(c), gen=familia((c.conjuntos[0]||{}).indicador)!=="visita" && c.bloque!=="awareness";
+    out+='<div role="tabpanel" id="ads-p'+i+'" aria-labelledby="ads-t'+i+'"'+(i===ADS_TAB?"":" hidden")+'>'+
+      '<div class="camp-cab" style="margin-top:16px"><h3>'+esc(c.nombre)+'</h3><span class="chip prod">'+c.producto+'</span>'+chipBloque(c.bloque)+
+      '<span class="kpi-cap">'+c.anuncios.length+(c.anuncios.length===1?" anuncio activo":" anuncios activos")+'</span></div>'+
+      '<div class="ruta"><span class="k">Qué hace</span><span>'+r.accion+'</span><span class="k">Bitrix</span><span>'+r.bitrix+'</span></div>';
+    // conjuntos con anuncios activos, en el orden de los públicos; los que no
+    // están en conjunto-publicos van al final, sin público.
+    var porConj={};
+    c.anuncios.forEach(function(a){ (porConj[norm(a.conjunto)]||(porConj[norm(a.conjunto)]={nombre:a.conjunto,ads:[]})).ads.push(a); });
+    var lista=c.conjuntos.filter(function(k){ return porConj[norm(k.nombre)]; }).map(function(k){ var g=porConj[norm(k.nombre)]; g.k=k; return g; });
+    Object.keys(porConj).forEach(function(n){ if(!porConj[n].k) lista.push(porConj[n]); });
+    lista.forEach(function(g){
+      var k=g.k, P=k&&k.publico;
+      out+='<div class="conj-card"><div class="conj-pub"><div class="col"><p class="esq-lbl">Conjunto · a quién apunta</p><p class="esq-nombre">'+esc(g.nombre)+'</p>';
+      if(P){
+        out+=tags(P.incluye,"inc","Sin públicos propios: se arma con intereses.")+(P.intereses.length?tags(P.intereses,"int",""):"")+
+          '<p class="kpi-cap">Edad '+esc(P.edad)+" · "+esc(P.lugar)+(P.advantage?" · <b>Advantage+ prendido</b>: Meta puede salir de este público":"")+
+          (k.presupuesto?" · "+ARS(k.presupuesto)+" ARS por día":"")+'</p></div>'+
+          '<div class="col"><p class="esq-lbl">Excluye</p>'+tags(P.excluye,"exc","No excluye a nadie.")+'</div>';
+      } else out+='<p class="kpi-cap">El público de este conjunto no vino en la lectura de hoy.</p></div>';
+      out+='</div><div class="scroll" style="margin:12px 0 0"><table class="t-ads"><thead><tr><th>Anuncio</th>'+
+        '<th>Resultados<small>Meta</small></th><th>Convertidos<small>CRM</small></th><th>CPL real<small>gasto / leads CRM</small></th></tr></thead><tbody>';
+      var T={gasto:0,res:0,leads:0,conv:0};
+      g.ads.slice().sort(function(a,b){ return a.creado<b.creado?1:-1; }).forEach(function(a){
+        var m=metricas(c,a); T.gasto+=m.gasto; T.res+=m.res; T.leads+=m.leads; T.conv+=m.conv;
+        var cpl=m.leads&&m.gasto?m.gasto/m.leads:null;
+        out+='<tr><td><div class="ad-fila">'+
+          (a.post?'<a class="btn-ver" href="https://www.facebook.com/'+encodeURIComponent(a.post)+'" target="_blank" rel="noopener">Ver anuncio ↗</a>':'<span class="btn-ver apagado" title="Meta no devolvió el posteo de este anuncio">Sin vista</span>')+
+          '<div><p class="ad-nombre">'+esc(a.nombre)+'</p><p class="ad-meta">activo desde el '+DMY(a.creado)+(a.tipo?" · "+(TIPO[a.tipo]||esc(a.tipo)):"")+
+          (a.cta?" · botón «"+(CTA[a.cta]||esc(a.cta))+"»":"")+'</p>'+
+          (a.texto?'<details><summary>Texto del anuncio</summary><p class="ad-texto">'+(a.titulo?"<b>"+esc(a.titulo)+"</b>\n":"")+esc(a.texto)+'</p></details>':"")+
+          '</div></div></td>'+
+          '<td class="dato" data-l="Resultados (Meta)">'+(m.gasto||m.res?NUM(m.res)+'<small>'+unidad(m.ind,m.res)+'</small>':'<span class="gris">sin gasto</span>')+'</td>'+
+          '<td class="dato" data-l="Convertidos (CRM)">'+(gen?NUM(m.conv)+'<small>de '+m.leads+(m.leads===1?" lead":" leads")+'</small>':'<span class="gris">no genera leads</span>')+'</td>'+
+          '<td class="dato" data-l="CPL real">'+(gen?(cpl?ARS(cpl)+'<small>ARS · '+ARS(m.gasto)+' gastados</small>':(m.gasto?'<span class="gris">sin leads en el CRM</span><small>'+ARS(m.gasto)+' ARS gastados</small>':'—')):'<span class="gris">—</span>')+'</td></tr>';
+      });
+      if(g.ads.length>1) out+='<tr class="total"><td>Conjunto</td><td data-l="Resultados (Meta)">'+NUM(T.res)+'</td><td data-l="Convertidos (CRM)">'+(gen?NUM(T.conv)+'<small>de '+T.leads+' leads</small>':"—")+'</td>'+
+        '<td data-l="CPL real">'+(gen&&T.leads&&T.gasto?ARS(T.gasto/T.leads)+'<small>ARS</small>':"—")+'</td></tr>';
+      out+='</tbody></table></div></div>';
     });
-    out+="</div></article>";
+    out+='</div>';
   });
   cont.innerHTML=out;
-  Array.prototype.forEach.call(document.querySelectorAll("#ads-indice button"),function(b){
-    b.addEventListener("click",function(){ var el=document.getElementById(b.dataset.ir); if(el) el.scrollIntoView({behavior:"smooth",block:"start"}); });
+  var botones=Array.prototype.slice.call(tabs.querySelectorAll('[role="tab"]'));
+  function elegir(i, foco){
+    ADS_TAB=i;
+    botones.forEach(function(b,j){ b.setAttribute("aria-selected", j===i); b.tabIndex = j===i?0:-1;
+      document.getElementById("ads-p"+j).hidden = j!==i; });
+    if(foco) botones[i].focus();
+  }
+  botones.forEach(function(b,i){
+    b.addEventListener("click",function(){ elegir(i,false); });
+    b.addEventListener("keydown",function(ev){
+      var n=botones.length, j=null;
+      if(ev.key==="ArrowRight") j=(i+1)%n; else if(ev.key==="ArrowLeft") j=(i-1+n)%n;
+      else if(ev.key==="Home") j=0; else if(ev.key==="End") j=n-1;
+      if(j!==null){ ev.preventDefault(); elegir(j,true); }
+    });
   });
   document.getElementById("ads-nota").innerHTML=
-    "<strong>Ver el anuncio</strong> abre el posteo del anuncio en Facebook; para quien no tenga sesión iniciada puede pedir entrar. "+
-    "<strong>Abrir en el Administrador</strong> solo funciona con acceso a la cuenta publicitaria. "+
-    "Meta no informa por API a qué formulario apunta cada anuncio: se confirma con los leads que llegan al CRM (n8n manda el nombre del formulario en el UTM) y, mientras no haya leads, se toma del mapa de campañas. "+
-    "Se actualiza todos los días con la corrida de las 8:00.";
+    "<strong>Resultados</strong> son los que cuenta Meta (formularios, conversaciones o visitas al perfil, según la campaña). "+
+    "<strong>Convertidos</strong> son los leads de ese anuncio que en Bitrix ya están en Convertido, sobre los que llegaron al CRM con su UTM; los leads de las últimas 2 semanas todavía se están trabajando. "+
+    "<strong>CPL real</strong> es el gasto del anuncio dividido por los leads que llegaron al CRM, el mismo criterio que el resto del panel. "+
+    "Todo cuenta desde el "+DMY(ATRIB)+" (cuando los leads empezaron a traer UTM) o desde que se creó el anuncio, hasta ayer. "+
+    "<strong>Ver anuncio</strong> abre el posteo en Facebook; sin sesión iniciada puede pedir entrar. Se actualiza todos los días con la corrida de la mañana.";
 }
 
 // --- tendencias ----------------------------------------------------------
