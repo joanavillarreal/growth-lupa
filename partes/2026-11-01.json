@@ -1,7 +1,52 @@
 {
   "fecha": "2026-11-01",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Q4: 249 generados, 86 derivados, 65 presupuestados, 15 cerrados (MRR 3.120 USD), CPL 4,40, CAC 72,98 USD. Alarma: Google Ads sin prospectos 30 y 31/10 (mandada al canal). Orígenes sin canal: Itca 2026 (UC_AQMO17, 0) y Expomecanico (UC_CCDPGU, 1).",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [
+          "Google Ads sin prospectos 2 días seguidos (30/10 y 31/10): mandada al canal."
+        ],
+        "hallazgos": [
+          "Alarma diaria: 1 alerta (Google Ads sin prospectos entre 2026-10-30 y 2026-10-31), mandada a #adqui-notificaciones-canales tal cual la imprimió run.py alarma.",
+          "Contra el mismo tramo del Q3 (01/07–01/08): generados 249 vs 171, CPL 4,40 vs 5,90 USD, derivados 86 vs 72, presupuestados 65 vs 51, cerrados 15 vs 11, días de cierre 31,7 vs 67,1 (mejora); MRR 3.120 vs 2.682, win rate 6,0% vs 6,4%, CAC 72,98 vs 91,78, % no calificación 12,4 vs 14,6, % inactivo 44,2 vs 38,6 (estable).",
+          "Respecto de ayer: generados 242 → 249; derivados, presupuestados, cerrados y MRR sin cambios.",
+          "Gasto de Meta al día hasta 31/10; Google Ads en el SPA hasta 28/10 (el CPL y el CAC del Q no incluyen el gasto de Google del 29 al 31/10). Confiabilidad del dato: alta."
+        ],
+        "metricas": {
+          "q": "2026-Q4",
+          "generados": 249,
+          "derivados": 86,
+          "presupuestados": 65,
+          "cerrados": 15,
+          "mrr": 3120.0,
+          "cpl": 4.4,
+          "cac": 72.98,
+          "pct_inactivo": 44.2
+        },
+        "origenes_sin_canal": [
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          }
+        ]
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
