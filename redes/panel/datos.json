@@ -1,81 +1,75 @@
 {
- "generado": "2026-10-31T08:03-03:00",
- "hoy": "2026-10-31",
+ "generado": "2026-11-01T08:04-03:00",
+ "hoy": "2026-11-01",
  "general": {
-  "fecha": "2026-10-31",
-  "datos_hasta": "2026-10-30",
+  "fecha": "2026-11-01",
+  "datos_hasta": "2026-10-31",
   "ventana": {
-   "desde": "2026-10-24",
-   "hasta": "2026-10-30"
+   "desde": "2026-10-25",
+   "hasta": "2026-10-31"
   },
   "previa": {
-   "desde": "2026-10-17",
-   "hasta": "2026-10-23"
+   "desde": "2026-10-18",
+   "hasta": "2026-10-24"
   },
   "marcas": {
    "boxer-gestion": {
     "nombre": "Boxer Gestión",
     "ultimos_7": {
-     "seguidores": 6042,
-     "seguidores_delta": 30,
-     "alcance_organico": 655,
-     "alcance_pago": 26777,
-     "alcance_total": 27432,
-     "views_organicas": 1972,
-     "pct_views_pauta": 94.9,
-     "interacciones": 28,
-     "engagement_pct": 4.3,
+     "seguidores": 6047,
+     "seguidores_delta": 29,
+     "alcance_organico": 651,
+     "alcance_pago": 27579,
+     "alcance_total": 28230,
+     "views_organicas": 1963,
+     "pct_views_pauta": 95.2,
+     "interacciones": 26,
+     "engagement_pct": 4.0,
      "muestra_chica": false,
      "engagement_no_confiable": false,
      "fb": {
-      "seguidores": 986,
-      "seguidores_delta": 3,
-      "views": 40031
+      "seguidores": 987,
+      "seguidores_delta": 4,
+      "views": 42495
      },
      "li": {
       "seguidores": 107,
       "seguidores_delta": 1,
-      "impresiones": 31
+      "impresiones": 36
      }
     },
     "previos_7": {
-     "seguidores": 6011,
-     "seguidores_delta": 4,
-     "alcance_organico": 1862,
-     "alcance_pago": 30200,
-     "alcance_total": 32062,
-     "views_organicas": 3803,
-     "pct_views_pauta": 91.3,
-     "interacciones": 103,
-     "engagement_pct": 5.5,
+     "seguidores": 6012,
+     "seguidores_delta": 7,
+     "alcance_organico": 1748,
+     "alcance_pago": 29317,
+     "alcance_total": 31065,
+     "views_organicas": 3574,
+     "pct_views_pauta": 91.5,
+     "interacciones": 95,
+     "engagement_pct": 5.4,
      "muestra_chica": false,
      "engagement_no_confiable": false,
      "fb": {
       "seguidores": 983,
       "seguidores_delta": 4,
-      "views": 37131
+      "views": 38021
      },
      "li": {
       "seguidores": 106,
       "seguidores_delta": 0,
-      "impresiones": 32
+      "impresiones": 30
      }
     },
     "variacion_pct": {
-     "alcance_organico": -64.8,
-     "alcance_pago": -11.3,
-     "alcance_total": -14.4,
-     "interacciones": -72.8,
-     "engagement_pp": -1.2
+     "alcance_organico": -62.8,
+     "alcance_pago": -5.9,
+     "alcance_total": -9.1,
+     "interacciones": -72.6,
+     "engagement_pp": -1.4
     },
-    "seguidores_delta_30d": 58,
+    "seguidores_delta_30d": 63,
     "serie_30d": [
-     {
-      "fecha": "2026-10-01",
-      "seguidores": 5984,
-      "alcance_organico": 227,
-      "alcance_pago": 2545
-     },
      {
       "fecha": "2026-10-02",
       "seguidores": 5984,
@@ -249,6 +243,12 @@
       "seguidores": 6042,
       "alcance_organico": 81,
       "alcance_pago": 3365
+     },
+     {
+      "fecha": "2026-10-31",
+      "seguidores": 6047,
+      "alcance_organico": 110,
+      "alcance_pago": 3259
      }
     ]
    },
@@ -256,55 +256,49 @@
     "nombre": "Boxer Taller",
     "ultimos_7": {
      "seguidores": 136,
-     "seguidores_delta": 4,
-     "alcance_organico": 87,
-     "alcance_pago": 13840,
-     "alcance_total": 13927,
-     "views_organicas": 223,
-     "pct_views_pauta": 98.4,
-     "interacciones": 8,
-     "engagement_pct": 9.2,
+     "seguidores_delta": 2,
+     "alcance_organico": 102,
+     "alcance_pago": 13914,
+     "alcance_total": 14016,
+     "views_organicas": 280,
+     "pct_views_pauta": 98.0,
+     "interacciones": 9,
+     "engagement_pct": 8.8,
      "muestra_chica": true,
-     "engagement_no_confiable": false,
+     "engagement_no_confiable": true,
      "fb": {
       "seguidores": 2,
       "seguidores_delta": 0,
-      "views": 12876
+      "views": 12402
      }
     },
     "previos_7": {
      "seguidores": 132,
      "seguidores_delta": 2,
-     "alcance_organico": 857,
-     "alcance_pago": 15506,
-     "alcance_total": 16363,
-     "views_organicas": 2153,
-     "pct_views_pauta": 87.7,
+     "alcance_organico": 826,
+     "alcance_pago": 14614,
+     "alcance_total": 15440,
+     "views_organicas": 2040,
+     "pct_views_pauta": 87.6,
      "interacciones": 14,
-     "engagement_pct": 1.6,
+     "engagement_pct": 1.7,
      "muestra_chica": false,
      "engagement_no_confiable": false,
      "fb": {
       "seguidores": 2,
       "seguidores_delta": 0,
-      "views": 14494
+      "views": 14489
      }
     },
     "variacion_pct": {
-     "alcance_organico": -89.8,
-     "alcance_pago": -10.7,
-     "alcance_total": -14.9,
-     "interacciones": -42.9,
-     "engagement_pp": 7.6
+     "alcance_organico": -87.7,
+     "alcance_pago": -4.8,
+     "alcance_total": -9.2,
+     "interacciones": -35.7,
+     "engagement_pp": 7.1
     },
-    "seguidores_delta_30d": 26,
+    "seguidores_delta_30d": 21,
     "serie_30d": [
-     {
-      "fecha": "2026-10-01",
-      "seguidores": 110,
-      "alcance_organico": 45,
-      "alcance_pago": 1011
-     },
      {
       "fecha": "2026-10-02",
       "seguidores": 115,
@@ -478,6 +472,12 @@
       "seguidores": 136,
       "alcance_organico": 5,
       "alcance_pago": 1772
+     },
+     {
+      "fecha": "2026-10-31",
+      "seguidores": 136,
+      "alcance_organico": 18,
+      "alcance_pago": 1526
      }
     ]
    }
@@ -485,12 +485,12 @@
   "al_dia": true
  },
  "leads": {
-  "corte_snapshot": "2026-10-31",
+  "corte_snapshot": "2026-11-01",
   "trimestres": [
    {
     "etiqueta": "Q4 2026",
     "desde": "2026-10-01",
-    "hasta": "2026-10-31",
+    "hasta": "2026-11-01",
     "en_curso": true,
     "total": 6,
     "por_semana": [
@@ -589,7 +589,7 @@
     "inactivos": 5,
     "en_gestion": 1,
     "mismo_tramo": {
-     "hasta": "2026-07-31",
+     "hasta": "2026-08-01",
      "total": 12
     }
    }

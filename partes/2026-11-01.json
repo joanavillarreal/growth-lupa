@@ -103,6 +103,46 @@
         }
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:05",
+      "resumen": "Gestión 6.047 seguidores (+29 en 7 días), alcance 7d 28.230 (orgánico 651), engagement orgánico 4,0%; Taller 136 (+2), alcance 14.016 (orgánico 102), 8,8% (muestra chica). Leads de redes Q4: 6.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "hallazgos": [
+          "Boxer Gestión: 6.047 seguidores en Instagram (+29 en 7 días), alcance 7d 28.230 (orgánico 651, pauta 27.579), engagement orgánico 4,0% (26 interacciones). Alcance orgánico -62,8% e interacciones -72,6% contra los 7 días anteriores; engagement -1,4 pp. Facebook 987 (+4), LinkedIn 107 (+1).",
+          "Boxer Taller: 136 seguidores (+2 en 7 días), alcance 7d 14.016 (orgánico 102, pauta 13.914), engagement orgánico 8,8% con muestra chica (el % es ruido; general.py además lo marca no confiable).",
+          "Leads de redes Q4: 6 (al 01/11), 4 derivados; contra 12 en el mismo tramo del Q3.",
+          "Metricool mandó la fila de Facebook de Taller del 31/10 con ceros en algunos campos (día sin consolidar) y corrigió hacia arriba el 30/10 de Instagram de Gestión (views 4.321 → 4.492) respecto del crudo de ayer."
+        ],
+        "alertas": [],
+        "metricas": {
+          "datos_hasta": "2026-10-31",
+          "boxer-gestion": {
+            "seguidores": 6047,
+            "seguidores_delta_7d": 29,
+            "alcance_7d": 28230,
+            "alcance_organico_7d": 651,
+            "engagement_pct": 4.0
+          },
+          "boxer-taller": {
+            "seguidores": 136,
+            "seguidores_delta_7d": 2,
+            "alcance_7d": 14016,
+            "alcance_organico_7d": 102,
+            "engagement_pct": 8.8,
+            "muestra_chica": true
+          },
+          "leads_redes_q4": 6
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
