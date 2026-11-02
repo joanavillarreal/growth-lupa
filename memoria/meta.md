@@ -43,3 +43,10 @@ Lo ya revisado con Joana que no hay que volver a marcar.
   "Ver anuncio" y abre Drive; sin link, queda "Ver en Facebook" (solo para administradores).
 - Cuando aparezca un anuncio activo nuevo sin link de Drive, mencionarlo en el mensaje del día
   para que Joana lo pase. Los links no se inventan.
+
+## 02/11/2026 (tarde) — anuncios en revisión en la vista Anuncios activos
+
+- Joana sumó anuncios a media tarde. Se volvieron a pedir #8, #9 y #11 y se reemplazaron en
+  `datos/meta-ads/guardia/2026-11-02/mcp/` (la versión de la mañana queda en git).
+- El panel ahora también muestra los anuncios IN_PROCESS / PENDING_REVIEW, con la marca
+  "En revisión de Meta" (DemoStock salió IN_PROCESS). No cuentan como activos en el título.

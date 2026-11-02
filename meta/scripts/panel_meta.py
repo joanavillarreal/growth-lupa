@@ -607,6 +607,9 @@ def ficha_campana(nombre, cfg):
             "en_config": bool(c)}
 
 
+ESTADOS_ANUNCIO_HOY = ("ACTIVE", "IN_PROCESS", "PENDING_REVIEW")
+
+
 def leer_hoy():
     """Lo que esta corriendo hoy, de la corrida diaria mas nueva que lo trajo.
 
@@ -634,7 +637,9 @@ def leer_hoy():
     ficha = lambda nombre: ficha_campana(nombre, cfg)
     drive = leer_drive_anuncios()
 
-    activos = [a for a in activos if a.get("effective_status") == "ACTIVE"]
+    # Los que Meta todavia esta revisando tambien van: un anuncio cargado a media
+    # tarde sale IN_PROCESS y la SDR tiene que saber que existe (Joana, 2026-11-02).
+    activos = [a for a in activos if a.get("effective_status") in ESTADOS_ANUNCIO_HOY]
     campanas = {}
     for a in activos:
         c = campanas.setdefault(a["campaign_name"], dict(ficha(a["campaign_name"]),
@@ -652,6 +657,7 @@ def leer_hoy():
             "post": cr.get("effective_object_story_id") or "",
             # La pieza en Drive, para quien no tiene acceso a la pagina.
             "drive": drive.get(_clave_anuncio(a.get("name", ""))) or "",
+            "estado": a.get("effective_status", ""),
         })
     for x in conjuntos:
         if x.get("effective_status") != "ACTIVE":
