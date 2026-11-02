@@ -1,0 +1,115 @@
+{
+  "corrida": "2026-11-02",
+  "datos_hasta": "2026-11-01",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 645880.13,
+      "gasto_total": 645880.13,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 645880.13,
+      "gasto_total": 645880.13,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 56482.92,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-26": 9,
+      "2026-10-27": 7,
+      "2026-10-28": 2,
+      "2026-10-29": 1,
+      "2026-10-30": 4,
+      "2026-10-31": 3,
+      "2026-11-01": 6
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-26": 10,
+        "2026-10-27": 9,
+        "2026-10-28": 2,
+        "2026-10-29": 2,
+        "2026-10-30": 5,
+        "2026-10-31": 6,
+        "2026-11-01": 5
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-26": 1,
+      "2026-10-27": 1,
+      "2026-10-28": 0,
+      "2026-10-29": 1,
+      "2026-10-30": 1,
+      "2026-10-31": 0,
+      "2026-11-01": 5
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254939752100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254939752100427",
+      "entidad": "AsesoriaVirtual | Video | Salta LAL | v1 | 2026-10",
+      "titulo": "AsesoriaVirtual | Video | Salta LAL | v1 | 2026-10: 5.595 ARS en 3 dias sin un solo resultado (3 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Salta | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-11-01",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120254941799240427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254941799240427",
+      "entidad": "AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia",
+      "titulo": "AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia: 16.271 ARS en 8 dias sin un solo resultado (8 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto San Juan | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 8,
+      "primer_aviso": "2026-10-27",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120252699641360427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120252699641360427",
+      "entidad": "JY | Conversiones",
+      "titulo": "JY | Conversiones: el costo por resultado sube hace 3 dias",
+      "detalle": "2026-10-30: 5.222 ARS/lead · 2026-10-31: 11.298 ARS/lead · 2026-11-01: 6.366 ARS/lead — contra un promedio de 3.880 ARS/lead en los 7 dias previos. Subio y no volvio a bajar. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-10-29",
+      "motivo_aviso": "ya avisada"
+    }
+  ],
+  "se_mandan": [],
+  "silenciadas": [
+    {
+      "clave": "G2:120254939752100427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120254941799240427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120252699641360427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120254261331160427",
+    "G2:120254916890110427",
+    "G3:cpl:120252700778930427"
+  ]
+}

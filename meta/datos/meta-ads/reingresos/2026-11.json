@@ -1,0 +1,9 @@
+{
+  "desde": "2026-11-01",
+  "hasta": "2026-11-01",
+  "por_dia": {
+    "2026-11-01": 5
+  },
+  "fuente": "Avisos '*RE-INGRESO DE LEAD EXISTENTE*' de Botrix en #adqui-automatizaciones (C0BRW04QSUF) con 'Vino de: Formulario Boxer Gestión', por día en hora argentina. Lupa sumó el 01/11 el 2026-11-02 ~08:30 (lectura del canal 26/10 a 01/11: 5 re-ingresos de formulario el 01/11: Jorgelina 00:14, Yanina, Juan, Elvio y Jorge; ninguno es del equipo).",
+  "nota": "Sin pruebas internas (contactos del equipo probando el formulario). Si una persona completa dos veces el mismo día cuenta dos: Meta también cobra los dos envíos. Llega hasta ayer, como los datos de Meta. Es un techo: el aviso no dice si el formulario fue de Meta o de la web."
+}

@@ -46,6 +46,49 @@
         ]
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:04",
+      "resumen": "Guardia sin novedades (gasto 01/11: 56.483 ARS; Meta 6 / CRM 5, faltan 0). Panel Q4: CPL real 4.688 ARS, Meta->CRM 99%, derivación 12,8%.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas": [],
+        "silenciadas": [
+          "3 alertas que aplican ya estaban avisadas; se cerraron G2:120254261331160427, G2:120254916890110427 y G3:cpl:120252700778930427"
+        ],
+        "hallazgos": [
+          "Guardia SIN NOVEDADES: no se mandó nada al canal.",
+          "Gasto de ayer (01/11): 56.483 ARS.",
+          "Conciliación de ayer: Meta 6 leads, CRM 5, 5 re-ingresos por Slack -> faltan 0.",
+          "Errores del MCP: 50, ninguno sobre entidades vivas.",
+          "Cambios en la cuenta: 2 nuevos (Joana creó el 01/11 la campaña 'JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)' con el conjunto 'Conjunto 1 - Publico Probado', 4.000 ARS/día, que quedó inactivo). Sin gasto todavía, así que no entra al mapa de campañas.",
+          "Panel Q4 al 01/11: gasto 1.244.927 ARS, Meta -> CRM 99% (191 nuevos + 31 re-ingresos de 224), CPL real 4.688 ARS, derivación 12,8% (22 de 172 resueltos), costo por Convertido 41.975 ARS; 6 campañas y 21 anuncios activos; presupuesto diario 45.000 ARS en 12 conjuntos.",
+          "Validación MCP OK (10 respuestas). Nota: en anuncio-total.json corregí un error de copia mío (CTR del anuncio 120254856365490427) antes de validar, contra la respuesta exacta del MCP."
+        ],
+        "metricas": {
+          "gasto_ayer_ars": 56483,
+          "leads_meta_ayer": 6,
+          "leads_crm_ayer": 5,
+          "reingresos_ayer": 5,
+          "cpl_real_q_ars": 4688,
+          "meta_crm_pct": 99,
+          "derivacion_pct": 12.8
+        },
+        "campanas_a_confirmar": [],
+        "comparacion": null
+      },
+      "para": []
     }
   },
   "preparacion": {
