@@ -1,0 +1,208 @@
+{
+  "semana": "2026-W44",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-10-26",
+  "hasta": "2026-11-01",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 53,
+        "alcance": 19,
+        "interacciones": 19,
+        "engagement_pct": 100.0,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 266,
+        "alcance": 156,
+        "interacciones": 7,
+        "engagement_pct": 4.5,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 1439,
+        "alcance": 422,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Story",
+        "views": 38,
+        "alcance": 7,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 1796,
+      "alcance": 604,
+      "interacciones": 26,
+      "engagement_pct": 4.3
+    },
+    "pauta": {
+      "views": 37032,
+      "alcance": 24667
+    },
+    "pct_views_de_pauta": 95.4,
+    "alcance_total_cuenta": 25271,
+    "audiencia": {
+      "views_seguidores": 3035,
+      "views_no_seguidores": 35783,
+      "pct_seguidores": 7.8,
+      "pct_no_seguidores": 92.2,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 6024,
+      "fin": 6057,
+      "delta": 33,
+      "delta_pct": 0.5
+    },
+    "publicaciones": 3,
+    "stories_publicadas": 0,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261026",
+        "url": "https://www.instagram.com/p/De9rC4Bj4Hj/",
+        "texto": "El cliente pide algo que no tenés. 🤔 Y empieza la ronda: Llamar a un proveedor, después a otro, mientras el cliente espera en el mostrador. 👀\n\nEn Boxer ves al instante a qué provee",
+        "views": 474,
+        "alcance": 166,
+        "interacciones": 6,
+        "guardados": 0,
+        "compartidos": 2,
+        "follows": 0,
+        "engagement_pct": 3.6
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261028",
+        "url": "https://www.instagram.com/p/DfDkPEEjLO4/",
+        "texto": "¿Sabés a qué hora necesitas mas personal en el local? 👀 Tus ventas de las últimas semanas y Claude te pueden ayudar y armar una propuesta de turnos.\n\nGuardalo para cuando armes los",
+        "views": 445,
+        "alcance": 143,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.1
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261030",
+        "url": "https://www.instagram.com/p/DfILqRzGxFO/",
+        "texto": "Cambiar de sistema con el mostrador abierto da miedo. 👀 El equipo tiene que aprender y las dudas aparecen en plena venta. 🤔\n\nPor eso con Boxer no arrancás solo: Tenés soporte diari",
+        "views": 328,
+        "alcance": 123,
+        "interacciones": 0,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 0.0
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261026",
+        "url": "https://www.instagram.com/p/De9rC4Bj4Hj/",
+        "texto": "El cliente pide algo que no tenés. 🤔 Y empieza la ronda: Llamar a un proveedor, después a otro, mientras el cliente espera en el mostrador. 👀\n\nEn Boxer ves al instante a qué provee",
+        "views": 474,
+        "alcance": 166,
+        "interacciones": 6,
+        "guardados": 0,
+        "compartidos": 2,
+        "follows": 0,
+        "engagement_pct": 3.6
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261028",
+        "url": "https://www.instagram.com/p/DfDkPEEjLO4/",
+        "texto": "¿Sabés a qué hora necesitas mas personal en el local? 👀 Tus ventas de las últimas semanas y Claude te pueden ayudar y armar una propuesta de turnos.\n\nGuardalo para cuando armes los",
+        "views": 445,
+        "alcance": 143,
+        "interacciones": 3,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 2.1
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261030",
+        "url": "https://www.instagram.com/p/DfILqRzGxFO/",
+        "texto": "Cambiar de sistema con el mostrador abierto da miedo. 👀 El equipo tiene que aprender y las dudas aparecen en plena venta. 🤔\n\nPor eso con Boxer no arrancás solo: Tenés soporte diari",
+        "views": 328,
+        "alcance": 123,
+        "interacciones": 0,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 0.0
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 2,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 43136,
+    "publicaciones": 3,
+    "interacciones": 2,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 985,
+      "fin": 988,
+      "delta": 3
+    }
+  },
+  "linkedin": {
+    "impresiones": 36,
+    "publicaciones": 0,
+    "interacciones": 0,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 2,
+    "engagement_pct_sobre_impresiones": 0.0,
+    "seguidores": {
+      "inicio": 106,
+      "fin": 107,
+      "delta": 1
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W43",
+    "instagram": {
+      "views_organicas": -39.4,
+      "alcance_organico": -58.5,
+      "interacciones": -67.9,
+      "engagement_pct": -23.2,
+      "seguidores": 0.6,
+      "publicaciones": -40.0,
+      "guardados": -100.0
+    },
+    "facebook": {
+      "views_contenido": 18.6,
+      "interacciones": 100.0,
+      "seguidores": 0.5
+    },
+    "linkedin": {
+      "impresiones": 300.0,
+      "interacciones": null,
+      "seguidores": 0.9
+    }
+  }
+}

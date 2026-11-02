@@ -144,6 +144,31 @@ direcciones propuestas (para no repetirlas la semana siguiente).
 
 ---
 
+## 2026-W44 — Boxer Gestión y Boxer Taller
+
+Sin informe propio: la lectura está en `data/2026-W44/lectura.json` y en el Panel de redes.
+
+**Titular:** semana sin personas ni reels en las dos cuentas: Gestión publicó 3 carruseles y Taller
+2, todos con 0 follows y 0 guardados. La mejor pieza de Gestión fue el carrusel de proveedores
+(26/10): 3,6%, 6 interacciones sobre 166, los 2 únicos compartidos. Alcance orgánico de Gestión 604
+(−58,5%). Gestión +33 seguidores sin pieza a la que atribuirlos; Taller +1. Prospectos de redes: 2.
+
+**Qué funcionó:** el carrusel de proveedores entrado por una situación de mostrador (el cliente
+pide algo que no tenés). Prospectos de redes 2 (1 en la W43).
+
+**Qué no funcionó:** el resto de los carruseles: el de turnos con Claude pedía guardarlo y sacó 0
+guardados; el del 30/10, 0 interacciones sobre 123. Interacciones de Gestión −67,9%. LinkedIn sin
+publicar por segunda semana.
+
+**Qué hay que mirar:** la semana vuelve a mostrar lo ya confirmado (el carrusel retiene, no capta;
+lo que capta son las personas): sin personas ni reels, el alcance orgánico cayó 58,5% contra la
+semana de Rombo del Tejar. Las +33 altas de Gestión no salen de ninguna pieza (0 follows en las
+tres); no hay dato para atribuirlas. El carrusel de turnos es otra prueba fallida de pedir el
+guardado en el texto (0 sobre 143), lo que suma a la pregunta abierta del checklist sin cerrarla:
+no era formato checklist.
+
+---
+
 ## 2026-W43 — Boxer Gestión y Boxer Taller
 
 Sin informe propio: la lectura está en `data/2026-W43/lectura.json` y en el Panel de redes.

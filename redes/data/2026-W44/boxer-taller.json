@@ -1,0 +1,162 @@
+{
+  "semana": "2026-W44",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-10-26",
+  "hasta": "2026-11-01",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 28,
+        "alcance": 2,
+        "interacciones": 5,
+        "engagement_pct": 250.0,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 11,
+        "alcance": 7,
+        "interacciones": 1,
+        "engagement_pct": 14.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 174,
+        "alcance": 55,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Reel",
+        "views": 3,
+        "alcance": 2,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 216,
+      "alcance": 66,
+      "interacciones": 6,
+      "engagement_pct": 9.1
+    },
+    "pauta": {
+      "views": 11691,
+      "alcance": 11733
+    },
+    "pct_views_de_pauta": 98.2,
+    "alcance_total_cuenta": 11799,
+    "audiencia": {
+      "views_seguidores": 137,
+      "views_no_seguidores": 11739,
+      "pct_seguidores": 1.2,
+      "pct_no_seguidores": 98.6,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 136,
+      "fin": 137,
+      "delta": 1,
+      "delta_pct": 0.7
+    },
+    "publicaciones": 2,
+    "stories_publicadas": 0,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261027",
+        "url": "https://www.instagram.com/p/DfAWdvLFNAP/",
+        "texto": "Hay sistemas para todos los rubros. Este es solo para talleres 🔧👇\n\nBoxer Taller arranca por la orden de trabajo y desde ahí crece, para cubrir lo que un taller necesita. Vos sabés ",
+        "views": 77,
+        "alcance": 30,
+        "interacciones": 4,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 13.3
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261030",
+        "url": "https://www.instagram.com/p/DfHpQKBFasM/",
+        "texto": "Si cargás las órdenes del taller, esto es para vos 📋 Vos ya sabés qué habría que ordenar. Con Boxer Taller las órdenes quedan en un solo lugar, sin pasar del papel al Excel. 🚀🫱🏼‍🫲🏽",
+        "views": 56,
+        "alcance": 18,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 5.6
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261027",
+        "url": "https://www.instagram.com/p/DfAWdvLFNAP/",
+        "texto": "Hay sistemas para todos los rubros. Este es solo para talleres 🔧👇\n\nBoxer Taller arranca por la orden de trabajo y desde ahí crece, para cubrir lo que un taller necesita. Vos sabés ",
+        "views": 77,
+        "alcance": 30,
+        "interacciones": 4,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 13.3
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261030",
+        "url": "https://www.instagram.com/p/DfHpQKBFasM/",
+        "texto": "Si cargás las órdenes del taller, esto es para vos 📋 Vos ya sabés qué habría que ordenar. Con Boxer Taller las órdenes quedan en un solo lugar, sin pasar del papel al Excel. 🚀🫱🏼‍🫲🏽",
+        "views": 56,
+        "alcance": 18,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 5.6
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": true
+  },
+  "facebook": {
+    "views_contenido": 13132,
+    "publicaciones": 2,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 2,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W43",
+    "instagram": {
+      "views_organicas": -12.9,
+      "alcance_organico": -42.6,
+      "interacciones": 100.0,
+      "engagement_pct": 250.0,
+      "seguidores": 2.2,
+      "publicaciones": 100.0,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": -0.2,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-01T08:04-03:00",
- "hoy": "2026-11-01",
+ "generado": "2026-11-02T08:07-03:00",
+ "hoy": "2026-11-02",
  "general": {
   "fecha": "2026-11-01",
   "datos_hasta": "2026-10-31",
@@ -482,15 +482,15 @@
     ]
    }
   },
-  "al_dia": true
+  "al_dia": false
  },
  "leads": {
-  "corte_snapshot": "2026-11-01",
+  "corte_snapshot": "2026-11-02",
   "trimestres": [
    {
     "etiqueta": "Q4 2026",
     "desde": "2026-10-01",
-    "hasta": "2026-11-01",
+    "hasta": "2026-11-02",
     "en_curso": true,
     "total": 6,
     "por_semana": [
@@ -513,6 +513,10 @@
      {
       "semana": "2026-W44",
       "leads": 2
+     },
+     {
+      "semana": "2026-W45",
+      "leads": 0
      }
     ],
     "derivados": 4,
@@ -589,7 +593,7 @@
     "inactivos": 5,
     "en_gestion": 1,
     "mismo_tramo": {
-     "hasta": "2026-08-01",
+     "hasta": "2026-08-02",
      "total": 12
     }
    }
@@ -597,99 +601,128 @@
   "fuente": "Bitrix24, prospectos con origen del canal Redes Sociales (config/definitions.yaml), snapshot diario del funnel"
  },
  "semana": {
-  "semana": "2026-W43",
+  "semana": "2026-W44",
   "alertas": [
-   "Boxer Gestión: el 92,1% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
-   "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).",
-   "Boxer Taller: alcance orgánico de 115 personas. Con tan poco alcance los % de engagement son ruido: no se sacan conclusiones de ellos.",
-   "Boxer Taller: el alcance orgánico cayó -87,4% contra la semana anterior.",
+   "Boxer Gestión: el alcance orgánico cayó -58,5% contra la semana anterior.",
+   "Boxer Gestión: el 95,4% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
+   "Boxer Gestión: ninguna pieza de la semana trajo seguidores (0 follows por pieza).",
+   "Boxer Taller: alcance orgánico de 66 personas. Con tan poco alcance los % de engagement son ruido: no se sacan conclusiones de ellos.",
+   "Boxer Taller: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.",
+   "Boxer Taller: el alcance orgánico cayó -42,6% contra la semana anterior.",
    "Boxer Taller: el 98,2% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
    "Boxer Taller: ninguna pieza de la semana trajo seguidores (0 follows por pieza)."
   ],
   "crm": {
-   "prospectos_redes": 1,
-   "inversion_redes_ars": 37230.22,
-   "costo_por_prospecto_ars": 37230.22,
-   "var_pct": null
+   "prospectos_redes": 2,
+   "inversion_redes_ars": 39774.21,
+   "costo_por_prospecto_ars": 19887.1,
+   "var_pct": 100.0
   },
   "lectura": {
-   "titular": "Semana de Rombo del Tejar en Gestión: los tres reels fueron con Gustavo, un cliente real, y el de presentación (20/10) fue la mejor pieza: 10,9% de engagement, 36 interacciones sobre 330 de alcance y 3 compartidos, contra 2,8% y 1,7% de los dos recortes de la misma entrevista. Gestión +8 seguidores sin pieza a la que atribuirlos; Taller +4 con 1 sola publicación; prospectos de redes: 1.",
+   "titular": "Semana sin personas ni reels en las dos cuentas: Gestión publicó 3 carruseles y Taller 2, todos con 0 follows y 0 guardados. La mejor pieza de Gestión fue el carrusel de proveedores (26/10, «El cliente pide algo que no tenés»): 3,6%, 6 interacciones sobre 166 y los 2 únicos compartidos. Alcance orgánico de Gestión 604 (−58,5%). Gestión +33 seguidores sin pieza a la que atribuirlos; Taller +1. Prospectos de redes: 2.",
    "puntos": [
-    "Boxer Gestión, contenido: Metricool lista 3 piezas (3 reels, todos de la entrevista a Gustavo de Rombo del Tejar) de las 5 publicaciones que cuenta la cuenta; el bloque de posts vino vacío. Ranking de engagement: reel de presentación (20/10, «Les presentamos a Gustavo de @rombodeltejar») 10,9%, 36 interacciones sobre 330 de alcance, 3 compartidos, 1 guardado, view rate 34,4%; recorte de listas de precios (22/10) 2,8%, 7 sobre 253, view rate 37,0%; recorte «encontrar un sistema apto» (20/10) 1,7%, 5 sobre 290, view rate 24,1%.",
-    "Boxer Gestión, captación: la cuenta pasó de 6.010 a 6.018 (+8). Los reels no informan follows, así que las altas no se atribuyen a ninguna pieza. Guardados 3 (+50,0% contra la W42) y compartidos 3, los tres del reel de presentación. Instagram orgánico: 2.964 views (−15,6%), 1.456 de alcance (+9,8%) y 5,6% de engagement (+43,6%), con 81 interacciones (+55,8%). El bloque reel se llevó 865 de alcance y 63 de las 81 interacciones.",
-    "Boxer Taller: 1 publicación en la semana (24/10) y 1 story; Metricool no lista ninguna pieza (posts y reels vinieron vacíos). Instagram orgánico: 248 views (−89,1%) y 115 de alcance (−87,4%), bajo el umbral de 200: los % son ruido. Seguidores 130 a 134 (+4). Facebook de Taller: 0 publicaciones, 13.158 views (−5,6%), la página sigue en 2.",
-    "La pauta pesa casi todo: 92,1% de las views de Instagram en Gestión (34.560 de pauta contra 2.964 orgánicas) y 98,2% en Taller (13.200 contra 248). Facebook de Gestión: 36.373 views (+18,7%), 5 publicaciones (4 reels, 748 views de reels), 1 interacción y +3 seguidores (980 a 983). LinkedIn de Gestión: 0 publicaciones, 9 impresiones (−90,2%), 0 interacciones, 106 seguidores sin cambio.",
-    "Prospectos de origen redes: 1 en la semana (24/10, en proceso), contra 0 en la W42. El gasto en awareness de Meta fue de 37.230,22 ARS (JY | Awareness Boxer Taller 20.433,62 y JY | Awareness 16.796,60): 37.230,22 ARS por prospecto. La inversión del SPA está completa (7 de 7 días): 281,60 USD. Los prospectos son del canal y no se atribuyen a ninguna pieza."
+    "Boxer Gestión, contenido: 3 publicaciones (−40,0%), las tres carruseles. Ranking de engagement: proveedores (26/10) 3,6%, 6 interacciones sobre 166 de alcance, 2 compartidos; turnos con Claude (28/10, «Guardalo para cuando armes los turnos») 2,1%, 3 sobre 143, 0 guardados; acompañamiento al cambiar de sistema (30/10) 0,0%, 0 sobre 123. Ninguna trajo follows ni guardados.",
+    "Boxer Gestión, captación: la cuenta pasó de 6.024 a 6.057 (+33), con 0 follows en las tres piezas, así que las altas no se atribuyen a ninguna. Instagram orgánico: 1.796 views (−39,4%), 604 de alcance (−58,5%), 26 interacciones (−67,9%) y 4,3% de engagement (−23,2%). Guardados 0 (−100,0%), compartidos 2. Sin reels publicados: el bloque reel (piezas viejas) sumó 266 views y 156 de alcance.",
+    "Boxer Taller: 2 publicaciones (+100,0%), dos carruseles: «Hay sistemas para todos los rubros» (27/10) 13,3%, 4 interacciones sobre 30, y «Si cargás las órdenes del taller» (30/10) 5,6%, 1 sobre 18; 0 compartidos, 0 guardados, 0 follows. Instagram orgánico: 216 views (−12,9%) y 66 de alcance (−42,6%), bajo el umbral de 200: los % son ruido. Seguidores 136 a 137 (+1). Facebook de Taller: 2 publicaciones, 13.132 views (−0,2%), 0 interacciones, la página sigue en 2.",
+    "La pauta pesa casi todo: 95,4% de las views de Instagram en Gestión (37.032 de pauta contra 1.796 orgánicas) y 98,2% en Taller (11.691 contra 216). Facebook de Gestión: 43.136 views (+18,6%), 3 publicaciones, 2 interacciones, +3 seguidores (985 a 988). LinkedIn de Gestión: 0 publicaciones, 36 impresiones (+300,0% sobre una base de 9), 0 interacciones, 2 clics, 106 a 107 seguidores.",
+    "Prospectos de origen redes: 2 en la semana (26/10, inactivo; 29/10, en proceso), contra 1 en la W43. El gasto en awareness de Meta fue de 39.774,21 ARS (JY | Awareness Boxer Taller 21.578,30 y JY | Awareness 18.195,91): 19.887,10 ARS por prospecto. La inversión del SPA está completa (7 de 7 días): 273,61 USD. Los prospectos son del canal y no se atribuyen a ninguna pieza."
    ],
    "funciono": [
-    "Boxer Gestión: el reel de presentación de Gustavo de Rombo del Tejar (20/10) fue la mejor pieza: 10,9% de engagement, 36 interacciones sobre 330, 3 compartidos (los únicos de la semana), view rate 34,4%.",
-    "Boxer Gestión: engagement orgánico de Instagram 5,6% (+43,6%), interacciones 81 (+55,8%), alcance orgánico 1.456 (+9,8%), guardados 3 (+50,0%); +8 seguidores (6.010 a 6.018).",
-    "Boxer Taller: +4 seguidores (130 a 134) con una sola publicación; las altas del sorteo de la W40 siguen (121, 129, 130, 134).",
-    "Prospectos de redes: 1, contra 0 en la W42."
+    "Boxer Gestión: el carrusel de proveedores (26/10) fue la mejor pieza: 3,6%, 6 interacciones sobre 166 y los 2 únicos compartidos de la semana.",
+    "Boxer Gestión: +33 seguidores (6.024 a 6.057), la mayor suba de las últimas semanas, aunque ninguna pieza trajo follows.",
+    "Boxer Taller: 2 publicaciones (contra 1 en la W43); el carrusel del 27/10 sacó 13,3% (4 sobre 30), sobre una muestra chica.",
+    "Prospectos de redes: 2, contra 1 en la W43; costo por prospecto de awareness 19.887,10 ARS (37.230,22 en la W43)."
    ],
    "no_funciono": [
-    "Boxer Gestión: los dos recortes de la misma entrevista quedaron en 2,8% y 1,7%, con 0 compartidos; el recorte «encontrar un sistema apto» tuvo el view rate más bajo (24,1%).",
-    "Boxer Gestión: views orgánicas −15,6% (2.964) y LinkedIn sin publicar (9 impresiones, −90,2%).",
-    "Boxer Taller: 1 publicación en la semana (6 en la W42); alcance orgánico 115 (−87,4%) y Facebook sin publicaciones.",
-    "Costo por prospecto de redes: 37.230,22 ARS de awareness para 1 prospecto."
+    "Boxer Gestión: alcance orgánico 604 (−58,5%), interacciones 26 (−67,9%) y 0 guardados (−100,0%) en una semana de solo carruseles, sin personas ni reels.",
+    "Boxer Gestión: el carrusel del 30/10 quedó en 0 interacciones sobre 123; el de turnos con Claude pedía guardarlo y sacó 0 guardados.",
+    "Las 5 piezas de las dos cuentas cerraron con 0 follows y 0 guardados.",
+    "LinkedIn de Gestión sin publicar por segunda semana; Facebook de Taller con 0 interacciones."
    ],
-   "fuente_lectura": "Lupa de growth-lupa (26/10/2026), sobre data/2026-W43/. Metricool cuenta 5 publicaciones en Gestión y lista 3 reels (el bloque de posts vino vacío en dos pedidos); en Taller cuenta 1 publicación y no lista ninguna pieza (posts y reels vacíos en dos pedidos)."
+   "fuente_lectura": "Lupa de growth-lupa (02/11/2026), sobre data/2026-W44/. Metricool lista 3 piezas en Gestión y 2 en Taller (las mismas que cuenta como publicaciones); el bloque de reels vino vacío en las dos cuentas."
   },
   "marcas": {
    "boxer-gestion": {
     "nombre": "Boxer Gestión",
     "top_engagement": [
      {
-      "tipo": "Reel",
-      "fecha": "20261020",
-      "url": "https://www.instagram.com/reel/Det4jP2zoAR/",
-      "texto": "Les presentamos a Gustavo de @rombodeltejar 🚀🚗 ",
-      "alcance": 330,
-      "interacciones": 36,
-      "engagement_pct": 10.9,
-      "guardados": 1,
-      "compartidos": 3,
-      "follows": null,
-      "view_rate_pct": 34.4
+      "tipo": "Carrusel",
+      "fecha": "20261026",
+      "url": "https://www.instagram.com/p/De9rC4Bj4Hj/",
+      "texto": "El cliente pide algo que no tenés. 🤔 Y empieza la ronda: Llamar a un proveedor, después a otro, mientras el cliente espera en el mostrador. 👀",
+      "alcance": 166,
+      "interacciones": 6,
+      "engagement_pct": 3.6,
+      "guardados": 0,
+      "compartidos": 2,
+      "follows": 0,
+      "view_rate_pct": null
      },
      {
-      "tipo": "Reel",
-      "fecha": "20261022",
-      "url": "https://www.instagram.com/reel/DexpUV0MW63/",
-      "texto": "Listas de precios siempre actualizadas en Boxer Gestión 🚀🤩 Mirá la entrevista completa a Gustavo de Rombo del Tejar en nuestro perfil 🙌🏼",
-      "alcance": 253,
-      "interacciones": 7,
-      "engagement_pct": 2.8,
-      "guardados": 1,
+      "tipo": "Carrusel",
+      "fecha": "20261028",
+      "url": "https://www.instagram.com/p/DfDkPEEjLO4/",
+      "texto": "¿Sabés a qué hora necesitas mas personal en el local? 👀 Tus ventas de las últimas semanas y Claude te pueden ayudar y armar una propuesta de turnos.",
+      "alcance": 143,
+      "interacciones": 3,
+      "engagement_pct": 2.1,
+      "guardados": 0,
       "compartidos": 0,
-      "follows": null,
-      "view_rate_pct": 37.0
+      "follows": 0,
+      "view_rate_pct": null
      },
      {
-      "tipo": "Reel",
-      "fecha": "20261020",
-      "url": "https://www.instagram.com/reel/DeuNp1xMiRi/",
-      "texto": "La experiencia de Gustavo de Rombo del Tejar en encontrar un sistema apto para su negocio 👨🏻‍💻🚀",
-      "alcance": 290,
-      "interacciones": 5,
-      "engagement_pct": 1.7,
-      "guardados": 1,
+      "tipo": "Carrusel",
+      "fecha": "20261030",
+      "url": "https://www.instagram.com/p/DfILqRzGxFO/",
+      "texto": "Cambiar de sistema con el mostrador abierto da miedo. 👀 El equipo tiene que aprender y las dudas aparecen en plena venta. 🤔",
+      "alcance": 123,
+      "interacciones": 0,
+      "engagement_pct": 0.0,
+      "guardados": 0,
       "compartidos": 0,
-      "follows": null,
-      "view_rate_pct": 24.099998
+      "follows": 0,
+      "view_rate_pct": null
      }
     ],
     "top_seguidores": [],
-    "publicaciones": 5
+    "publicaciones": 3
    },
    "boxer-taller": {
     "nombre": "Boxer Taller",
-    "top_engagement": [],
+    "top_engagement": [
+     {
+      "tipo": "Carrusel",
+      "fecha": "20261027",
+      "url": "https://www.instagram.com/p/DfAWdvLFNAP/",
+      "texto": "Hay sistemas para todos los rubros. Este es solo para talleres 🔧👇",
+      "alcance": 30,
+      "interacciones": 4,
+      "engagement_pct": 13.3,
+      "guardados": 0,
+      "compartidos": 0,
+      "follows": 0,
+      "view_rate_pct": null
+     },
+     {
+      "tipo": "Carrusel",
+      "fecha": "20261030",
+      "url": "https://www.instagram.com/p/DfHpQKBFasM/",
+      "texto": "Si cargás las órdenes del taller, esto es para vos 📋 Vos ya sabés qué habría que ordenar. Con Boxer Taller las órdenes quedan en un solo lugar, sin pasar del pa",
+      "alcance": 18,
+      "interacciones": 1,
+      "engagement_pct": 5.6,
+      "guardados": 0,
+      "compartidos": 0,
+      "follows": 0,
+      "view_rate_pct": null
+     }
+    ],
     "top_seguidores": [],
-    "publicaciones": 1
+    "publicaciones": 2
    }
   },
-  "desde": "2026-10-19",
-  "hasta": "2026-10-25"
+  "desde": "2026-10-26",
+  "hasta": "2026-11-01"
  }
 }

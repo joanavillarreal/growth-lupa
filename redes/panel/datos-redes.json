@@ -1,61 +1,61 @@
 {
  "formato": 1,
- "generado": "2026-10-26T08:06-03:00",
+ "generado": "2026-11-02T08:07-03:00",
  "fuente": "Lupa (growth-lupa), análisis redes · semana. Orgánico y pago van separados; null = sin dato, nunca cero.",
  "semana": {
-  "semana": "2026-W43",
-  "desde": "2026-10-19",
-  "hasta": "2026-10-25",
+  "semana": "2026-W44",
+  "desde": "2026-10-26",
+  "hasta": "2026-11-01",
   "marcas": {
    "boxer-gestion": {
     "nombre": "Boxer Gestión",
     "instagram": {
-     "seguidores": 6018,
-     "seguidores_delta": 8,
-     "alcance_organico": 1456,
-     "alcance_pago": 26511,
-     "alcance_total": 27967,
-     "views_organicas": 2964,
-     "views_pago": 34560,
-     "pct_views_pauta": 92.1,
-     "engagement_pct": 5.6,
-     "interacciones": 81,
-     "publicaciones": 5,
-     "stories": 2,
-     "guardados": 3,
-     "compartidos": 3,
+     "seguidores": 6057,
+     "seguidores_delta": 33,
+     "alcance_organico": 604,
+     "alcance_pago": 24667,
+     "alcance_total": 25271,
+     "views_organicas": 1796,
+     "views_pago": 37032,
+     "pct_views_pauta": 95.4,
+     "engagement_pct": 4.3,
+     "interacciones": 26,
+     "publicaciones": 3,
+     "stories": 0,
+     "guardados": 0,
+     "compartidos": 2,
      "muestra_chica": false,
-     "var_alcance_organico": 9.8,
-     "var_engagement": 43.6,
+     "var_alcance_organico": -58.5,
+     "var_engagement": -23.2,
      "formatos": [
       {
-       "formato": "Reel",
-       "views": 1677,
-       "alcance": 865,
-       "interacciones": 63,
-       "engagement_pct": 7.3,
-       "sin_datos_interaccion": false
-      },
-      {
        "formato": "Post",
-       "views": 132,
-       "alcance": 40,
-       "interacciones": 2,
-       "engagement_pct": 5.0,
+       "views": 53,
+       "alcance": 19,
+       "interacciones": 19,
+       "engagement_pct": 100.0,
        "sin_datos_interaccion": false
       },
       {
-       "formato": "Story",
-       "views": 614,
-       "alcance": 385,
-       "interacciones": 16,
-       "engagement_pct": 4.2,
+       "formato": "Reel",
+       "views": 266,
+       "alcance": 156,
+       "interacciones": 7,
+       "engagement_pct": 4.5,
        "sin_datos_interaccion": false
       },
       {
        "formato": "Carrusel",
-       "views": 541,
-       "alcance": 166,
+       "views": 1439,
+       "alcance": 422,
+       "interacciones": null,
+       "engagement_pct": null,
+       "sin_datos_interaccion": true
+      },
+      {
+       "formato": "Story",
+       "views": 38,
+       "alcance": 7,
        "interacciones": null,
        "engagement_pct": null,
        "sin_datos_interaccion": true
@@ -63,100 +63,100 @@
      ]
     },
     "facebook": {
-     "seguidores": 983,
+     "seguidores": 988,
      "seguidores_delta": 3,
-     "views": 36373,
-     "publicaciones": 5
+     "views": 43136,
+     "publicaciones": 3
     },
     "linkedin": {
-     "seguidores": 106,
-     "seguidores_delta": 0,
-     "impresiones": 9,
+     "seguidores": 107,
+     "seguidores_delta": 1,
+     "impresiones": 36,
      "publicaciones": 0,
      "engagement_pct": 0.0
     },
     "mejores_piezas": [
      {
-      "formato": "Reel",
-      "fecha": "20261020",
-      "url": "https://www.instagram.com/reel/Det4jP2zoAR/",
-      "tema": "Les presentamos a Gustavo de @rombodeltejar 🚀🚗 ",
-      "alcance": 330,
-      "interacciones": 36,
-      "engagement_pct": 10.9,
-      "guardados": 1,
-      "compartidos": 3,
-      "follows": null,
-      "views": 628,
-      "view_rate_pct": 34.4
+      "formato": "Carrusel",
+      "fecha": "20261026",
+      "url": "https://www.instagram.com/p/De9rC4Bj4Hj/",
+      "tema": "El cliente pide algo que no tenés. 🤔 Y empieza la ronda: Llamar a un proveedor, después a otro, mientras el cliente espera en el mostrador. 👀",
+      "alcance": 166,
+      "interacciones": 6,
+      "engagement_pct": 3.6,
+      "guardados": 0,
+      "compartidos": 2,
+      "follows": 0,
+      "views": 474,
+      "view_rate_pct": null
      }
     ],
     "peores_piezas": [
      {
-      "formato": "Reel",
-      "fecha": "20261020",
-      "url": "https://www.instagram.com/reel/DeuNp1xMiRi/",
-      "tema": "La experiencia de Gustavo de Rombo del Tejar en encontrar un sistema apto para su negocio 👨🏻‍💻🚀",
-      "alcance": 290,
-      "interacciones": 5,
-      "engagement_pct": 1.7,
-      "guardados": 1,
+      "formato": "Carrusel",
+      "fecha": "20261030",
+      "url": "https://www.instagram.com/p/DfILqRzGxFO/",
+      "tema": "Cambiar de sistema con el mostrador abierto da miedo. 👀 El equipo tiene que aprender y las dudas aparecen en plena venta. 🤔",
+      "alcance": 123,
+      "interacciones": 0,
+      "engagement_pct": 0.0,
+      "guardados": 0,
       "compartidos": 0,
-      "follows": null,
-      "views": 407,
-      "view_rate_pct": 24.099998
+      "follows": 0,
+      "views": 328,
+      "view_rate_pct": null
      }
     ]
    },
    "boxer-taller": {
     "nombre": "Boxer Taller",
     "instagram": {
-     "seguidores": 134,
-     "seguidores_delta": 4,
-     "alcance_organico": 115,
-     "alcance_pago": 13286,
-     "alcance_total": 13401,
-     "views_organicas": 248,
-     "views_pago": 13200,
+     "seguidores": 137,
+     "seguidores_delta": 1,
+     "alcance_organico": 66,
+     "alcance_pago": 11733,
+     "alcance_total": 11799,
+     "views_organicas": 216,
+     "views_pago": 11691,
      "pct_views_pauta": 98.2,
-     "engagement_pct": 2.6,
-     "interacciones": 3,
-     "publicaciones": 1,
-     "stories": 1,
+     "engagement_pct": 9.1,
+     "interacciones": 6,
+     "publicaciones": 2,
+     "stories": 0,
      "guardados": 0,
      "compartidos": 0,
      "muestra_chica": true,
-     "var_alcance_organico": -87.4,
-     "var_engagement": 30.0,
+     "var_alcance_organico": -42.6,
+     "var_engagement": 250.0,
      "formatos": [
       {
-       "formato": "Story",
-       "views": 79,
-       "alcance": 48,
-       "interacciones": 2,
-       "engagement_pct": 4.2,
+       "formato": "Post",
+       "views": 28,
+       "alcance": 2,
+       "interacciones": 5,
+       "engagement_pct": 250.0,
        "sin_datos_interaccion": false
       },
       {
-       "formato": "Reel",
-       "views": 43,
-       "alcance": 25,
+       "formato": "Story",
+       "views": 11,
+       "alcance": 7,
        "interacciones": 1,
-       "engagement_pct": 4.0,
+       "engagement_pct": 14.3,
        "sin_datos_interaccion": false
       },
       {
        "formato": "Carrusel",
-       "views": 100,
-       "alcance": 33,
+       "views": 174,
+       "alcance": 55,
        "interacciones": null,
        "engagement_pct": null,
        "sin_datos_interaccion": true
       },
       {
-       "formato": "Post",
-       "views": 26,
-       "alcance": 9,
+       "formato": "Reel",
+       "views": 3,
+       "alcance": 2,
        "interacciones": null,
        "engagement_pct": null,
        "sin_datos_interaccion": true
@@ -166,51 +166,83 @@
     "facebook": {
      "seguidores": 2,
      "seguidores_delta": 0,
-     "views": 13158,
-     "publicaciones": 0
+     "views": 13132,
+     "publicaciones": 2
     },
     "linkedin": null,
-    "mejores_piezas": [],
-    "peores_piezas": []
+    "mejores_piezas": [
+     {
+      "formato": "Carrusel",
+      "fecha": "20261027",
+      "url": "https://www.instagram.com/p/DfAWdvLFNAP/",
+      "tema": "Hay sistemas para todos los rubros. Este es solo para talleres 🔧👇",
+      "alcance": 30,
+      "interacciones": 4,
+      "engagement_pct": 13.3,
+      "guardados": 0,
+      "compartidos": 0,
+      "follows": 0,
+      "views": 77,
+      "view_rate_pct": null
+     }
+    ],
+    "peores_piezas": [
+     {
+      "formato": "Carrusel",
+      "fecha": "20261030",
+      "url": "https://www.instagram.com/p/DfHpQKBFasM/",
+      "tema": "Si cargás las órdenes del taller, esto es para vos 📋 Vos ya sabés qué habría que ordenar. Con Boxer Taller las órdenes quedan en un solo lugar, sin pasar del papel al Excel. 🚀🫱🏼‍🫲🏽",
+      "alcance": 18,
+      "interacciones": 1,
+      "engagement_pct": 5.6,
+      "guardados": 0,
+      "compartidos": 0,
+      "follows": 0,
+      "views": 56,
+      "view_rate_pct": null
+     }
+    ]
    }
   },
-  "titular": "Semana de Rombo del Tejar en Gestión: los tres reels fueron con Gustavo, un cliente real, y el de presentación (20/10) fue la mejor pieza: 10,9% de engagement, 36 interacciones sobre 330 de alcance y 3 compartidos, contra 2,8% y 1,7% de los dos recortes de la misma entrevista. Gestión +8 seguidores sin pieza a la que atribuirlos; Taller +4 con 1 sola publicación; prospectos de redes: 1.",
+  "titular": "Semana sin personas ni reels en las dos cuentas: Gestión publicó 3 carruseles y Taller 2, todos con 0 follows y 0 guardados. La mejor pieza de Gestión fue el carrusel de proveedores (26/10, «El cliente pide algo que no tenés»): 3,6%, 6 interacciones sobre 166 y los 2 únicos compartidos. Alcance orgánico de Gestión 604 (−58,5%). Gestión +33 seguidores sin pieza a la que atribuirlos; Taller +1. Prospectos de redes: 2.",
   "funciono": [
-   "Boxer Gestión: el reel de presentación de Gustavo de Rombo del Tejar (20/10) fue la mejor pieza: 10,9% de engagement, 36 interacciones sobre 330, 3 compartidos (los únicos de la semana), view rate 34,4%.",
-   "Boxer Gestión: engagement orgánico de Instagram 5,6% (+43,6%), interacciones 81 (+55,8%), alcance orgánico 1.456 (+9,8%), guardados 3 (+50,0%); +8 seguidores (6.010 a 6.018).",
-   "Boxer Taller: +4 seguidores (130 a 134) con una sola publicación; las altas del sorteo de la W40 siguen (121, 129, 130, 134).",
-   "Prospectos de redes: 1, contra 0 en la W42."
+   "Boxer Gestión: el carrusel de proveedores (26/10) fue la mejor pieza: 3,6%, 6 interacciones sobre 166 y los 2 únicos compartidos de la semana.",
+   "Boxer Gestión: +33 seguidores (6.024 a 6.057), la mayor suba de las últimas semanas, aunque ninguna pieza trajo follows.",
+   "Boxer Taller: 2 publicaciones (contra 1 en la W43); el carrusel del 27/10 sacó 13,3% (4 sobre 30), sobre una muestra chica.",
+   "Prospectos de redes: 2, contra 1 en la W43; costo por prospecto de awareness 19.887,10 ARS (37.230,22 en la W43)."
   ],
   "no_funciono": [
-   "Boxer Gestión: los dos recortes de la misma entrevista quedaron en 2,8% y 1,7%, con 0 compartidos; el recorte «encontrar un sistema apto» tuvo el view rate más bajo (24,1%).",
-   "Boxer Gestión: views orgánicas −15,6% (2.964) y LinkedIn sin publicar (9 impresiones, −90,2%).",
-   "Boxer Taller: 1 publicación en la semana (6 en la W42); alcance orgánico 115 (−87,4%) y Facebook sin publicaciones.",
-   "Costo por prospecto de redes: 37.230,22 ARS de awareness para 1 prospecto."
+   "Boxer Gestión: alcance orgánico 604 (−58,5%), interacciones 26 (−67,9%) y 0 guardados (−100,0%) en una semana de solo carruseles, sin personas ni reels.",
+   "Boxer Gestión: el carrusel del 30/10 quedó en 0 interacciones sobre 123; el de turnos con Claude pedía guardarlo y sacó 0 guardados.",
+   "Las 5 piezas de las dos cuentas cerraron con 0 follows y 0 guardados.",
+   "LinkedIn de Gestión sin publicar por segunda semana; Facebook de Taller con 0 interacciones."
   ],
   "alertas": [
-   "Boxer Gestión: el 92,1% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
-   "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).",
-   "Boxer Taller: alcance orgánico de 115 personas. Con tan poco alcance los % de engagement son ruido: no se sacan conclusiones de ellos.",
-   "Boxer Taller: el alcance orgánico cayó -87,4% contra la semana anterior.",
+   "Boxer Gestión: el alcance orgánico cayó -58,5% contra la semana anterior.",
+   "Boxer Gestión: el 95,4% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
+   "Boxer Gestión: ninguna pieza de la semana trajo seguidores (0 follows por pieza).",
+   "Boxer Taller: alcance orgánico de 66 personas. Con tan poco alcance los % de engagement son ruido: no se sacan conclusiones de ellos.",
+   "Boxer Taller: el engagement de Post da más de 100% (interacciones de piezas de semanas anteriores). El % orgánico de la cuenta no es confiable esta semana: vale el ranking pieza por pieza.",
+   "Boxer Taller: el alcance orgánico cayó -42,6% contra la semana anterior.",
    "Boxer Taller: el 98,2% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
    "Boxer Taller: ninguna pieza de la semana trajo seguidores (0 follows por pieza)."
   ],
   "prospectos_redes_semana": {
-   "prospectos_redes": 1,
-   "inversion_redes_ars": 37230.22,
-   "costo_por_prospecto_ars": 37230.22,
-   "var_pct": null
+   "prospectos_redes": 2,
+   "inversion_redes_ars": 39774.21,
+   "costo_por_prospecto_ars": 19887.1,
+   "var_pct": 100.0
   }
  },
  "leads_trimestre": {
-  "corte_snapshot": "2026-10-26",
+  "corte_snapshot": "2026-11-02",
   "trimestres": [
    {
     "etiqueta": "Q4 2026",
     "desde": "2026-10-01",
-    "hasta": "2026-10-26",
+    "hasta": "2026-11-02",
     "en_curso": true,
-    "total": 4,
+    "total": 6,
     "por_semana": [
      {
       "semana": "2026-W40",
@@ -230,12 +262,16 @@
      },
      {
       "semana": "2026-W44",
+      "leads": 2
+     },
+     {
+      "semana": "2026-W45",
       "leads": 0
      }
     ],
-    "derivados": 3,
+    "derivados": 4,
     "no_utiles": 0,
-    "inactivos": 0,
+    "inactivos": 1,
     "en_gestion": 1
    },
    {
@@ -307,8 +343,8 @@
     "inactivos": 5,
     "en_gestion": 1,
     "mismo_tramo": {
-     "hasta": "2026-07-26",
-     "total": 10
+     "hasta": "2026-08-02",
+     "total": 12
     }
    }
   ],
