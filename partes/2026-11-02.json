@@ -89,6 +89,34 @@
         "comparacion": null
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:05",
+      "resumen": "Cargados 8 registros (29/10 a 01/11): Meta USD 134,65 + Google USD 33,53 = USD 168,18.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "hallazgos": [
+          "Cargados 8 registros en el SPA 1052 (29/10 a 01/11): Meta USD 134,65 (IDs 848-854), Google USD 33,53 (IDs 856-862), total USD 168,18. Tabla mandada a #adqui-notificaciones-canales.",
+          "Google Ads gastó 8.331 ARS el 31/10 y 9.510 ARS el 01/11, días en que el CRM no registró ningún prospecto de Google (alarma del funnel): hubo gasto sin leads."
+        ],
+        "alertas": [],
+        "metricas": {
+          "registros": 8,
+          "usd_meta": 134.65,
+          "usd_google": 33.53,
+          "usd_total": 168.18,
+          "desde": "2026-10-29",
+          "hasta": "2026-11-01"
+        },
+        "reporte": "## Carga de inversión — 29/10 a 01/11\n\nCotización: 1500 ARS = 1 USD\n\n- **Meta Ads**: 4 registros creados, USD 134.65\n- **Google Ads**: 4 registros creados, USD 33.53\n- **Total**: USD 168.18\n\n| Día | Canal | ARS | USD | ID |\n|---|---|---:|---:|---|\n| 29/10 | Google Ads | 21,359.83 | 14.24 | 856 |\n| 29/10 | Meta Ads | 41,163.72 | 27.44 | 848 |\n| 30/10 | Google Ads | 11,098.16 | 7.40 | 858 |\n| 30/10 | Meta Ads | 47,006.68 | 31.34 | 850 |\n| 31/10 | Google Ads | 8,331.47 | 5.55 | 860 |\n| 31/10 | Meta Ads | 57,315.22 | 38.21 | 852 |\n| 01/11 | Google Ads | 9,510.10 | 6.34 | 862 |\n| 01/11 | Meta Ads | 56,486.31 | 37.66 | 854 |\n\n"
+      },
+      "para": []
     }
   },
   "preparacion": {
