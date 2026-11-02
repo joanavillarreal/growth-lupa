@@ -33,7 +33,7 @@ Uso:
     python3 scripts/panel_meta.py --q 2026-Q3 --json informes/panel/datos.json
     python3 scripts/panel_meta.py --autotest
 """
-import argparse, csv, datetime, glob, json, os, sys
+import argparse, csv, datetime, glob, json, os, sys, unicodedata
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, "scripts"))
@@ -559,6 +559,25 @@ def leer_reingresos():
     return out
 
 
+def _clave_anuncio(nombre):
+    """Nombre de anuncio comparable: sin tildes, minusculas, espacios simples."""
+    t = unicodedata.normalize("NFD", nombre or "")
+    t = "".join(ch for ch in t if unicodedata.category(ch) != "Mn")
+    return " ".join(t.lower().split())
+
+
+def leer_drive_anuncios():
+    """{nombre normalizado: link de Drive} de config/anuncios-drive.json.
+
+    El boton "Ver anuncio" abre la pieza en Drive cuando hay link: el posteo
+    de Facebook solo lo ve quien administra la pagina (Joana, 2026-11-02)."""
+    try:
+        with open(os.path.join(RAIZ, "config", "anuncios-drive.json"), encoding="utf-8") as f:
+            return {_clave_anuncio(k): v for k, v in (json.load(f).get("anuncios") or {}).items() if v}
+    except Exception:                               # noqa: BLE001
+        return {}
+
+
 def leer_config_campanas():
     try:
         with open(os.path.join(RAIZ, "config", "campanas.json"), encoding="utf-8") as f:
@@ -613,6 +632,7 @@ def leer_hoy():
     creativos = leer_creativos()
     cfg = leer_config_campanas()
     ficha = lambda nombre: ficha_campana(nombre, cfg)
+    drive = leer_drive_anuncios()
 
     activos = [a for a in activos if a.get("effective_status") == "ACTIVE"]
     campanas = {}
@@ -630,6 +650,8 @@ def leer_hoy():
             "cta": cr.get("call_to_action_type") or "", "tipo": cr.get("object_type") or "",
             # pageid_postid: facebook.com/<esto> abre el posteo del anuncio.
             "post": cr.get("effective_object_story_id") or "",
+            # La pieza en Drive, para quien no tiene acceso a la pagina.
+            "drive": drive.get(_clave_anuncio(a.get("name", ""))) or "",
         })
     for x in conjuntos:
         if x.get("effective_status") != "ACTIVE":

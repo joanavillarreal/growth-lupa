@@ -34,3 +34,12 @@ Lo ya revisado con Joana que no hay que volver a marcar.
   (gasto / leads en el CRM). Todo desde el 08/09 o desde que se creó el anuncio, hasta ayer.
 - El texto del anuncio queda plegado ("Texto del anuncio") para la SDR. Se sacaron el
   formulario por anuncio y el link al Administrador.
+
+## 02/11/2026 — "Ver anuncio" abre la pieza en Drive
+
+- Yamila no tiene acceso al Business de Meta y los posteos de los anuncios solo los ve quien
+  administra la página. Joana pasa el link de Drive de cada pieza y va a
+  `meta/config/anuncios-drive.json` (por nombre exacto del anuncio). Con link, el botón dice
+  "Ver anuncio" y abre Drive; sin link, queda "Ver en Facebook" (solo para administradores).
+- Cuando aparezca un anuncio activo nuevo sin link de Drive, mencionarlo en el mensaje del día
+  para que Joana lo pase. Los links no se inventan.

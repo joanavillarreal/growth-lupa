@@ -119,6 +119,10 @@ python3 scripts/panel_meta.py
 
 Reinyecta los datos en `informes/panel-trimestral.html` y avisa si falta algo.
 
+El botón "Ver anuncio" de la vista Anuncios activos abre la pieza en Drive, de
+`config/anuncios-drive.json` (los links los pasa Joana, por nombre de anuncio). Los anuncios
+activos sin link van al mensaje del día ("Anuncios sin link de Drive: …") para que los pase.
+
 ## 5. Publicar o comparar (según `paneles.yaml`)
 
 - **Ensayo:** no se publica. Ver "Cómo se compara en ensayo" en CLAUDE.md.

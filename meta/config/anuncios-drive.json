@@ -1,0 +1,19 @@
+{
+  "_comentario": [
+    "Link de Drive con la pieza de cada anuncio, por nombre exacto del anuncio en Meta.",
+    "El boton 'Ver anuncio' del Panel Meta Ads (vista Anuncios activos) abre este link:",
+    "el posteo de Facebook solo lo ve quien administra la pagina, y Yamila no tiene",
+    "acceso al Business (Joana, 2026-11-02). Los links los pasa Joana; no se inventan.",
+    "Si un anuncio no esta aca, el boton sigue abriendo el posteo de Facebook."
+  ],
+  "anuncios": {
+    "AsesoriaIA | Video | Frio-Repuesteras | v1 | 2026-10 - Copia": "https://drive.google.com/file/d/1bCZJQxl3G18-YvTJRqunfhOM91s8sr0L/view?usp=sharing",
+    "TestimonioJesi | Video | Frio-Repuesteras | v2 | 2026-09": "https://drive.google.com/file/d/1b1tUVW-BaVjXw0vAPoOBuB4W0zyHqKRz/view?usp=sharing",
+    "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10": "https://drive.google.com/file/d/1JkSNnPAwYYbVPHmHIejRmx6QXiATIznz/view?usp=sharing",
+    "AsesoriaVirtual | Video | Córdoba LAL | v1 | 2026-10 - Copia": "https://drive.google.com/file/d/1P7XQ5-ssmQgp2pzU5BTOvbsuUrFEX-Yy/view?usp=sharing",
+    "AsesoriaVirtual | Video | Rosario LAL | v1 | 2026-10": "https://drive.google.com/file/d/1u2pWbmTEgqKEBhOV08sZ4JXFcAHdCgkL/view?usp=sharing",
+    "AsesoriaVirtual | Video | Mendoza LAL | v1 | 2026-10 - Copia": "https://drive.google.com/file/d/1y8mCJXLaCsFrJ5sXkheuqmoVWraVtzD_/view?usp=sharing",
+    "AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia": "https://drive.google.com/file/d/1hAKelXeR2xJs3LQn18n_fXFsBdaLA4zt/view?usp=sharing",
+    "AsesoriaVirtual | Video | Salta LAL | v1 | 2026-10": "https://drive.google.com/file/d/1fU-LBHJj1KLEic32GJqZJMCmDZnoTg1I/view?usp=sharing"
+  }
+}
