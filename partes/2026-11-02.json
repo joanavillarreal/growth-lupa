@@ -176,6 +176,44 @@
       "para": [
         "conti"
       ]
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:10",
+      "resumen": "Gestión 6.057 seguidores (+33 en 7 días), alcance 7d 25.271 (orgánico 604), engagement 4,3%; Taller 137 (+1), alcance 11.799 (orgánico 66), 9,1% (muestra chica). Leads de redes Q4: 6.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "hallazgos": [
+          "Últimos 7 días (26/10 a 01/11) contra los 7 anteriores."
+        ],
+        "alertas": [],
+        "metricas": {
+          "boxer-gestion": {
+            "seguidores": 6057,
+            "seguidores_delta_7d": 33,
+            "alcance_7d": 25271,
+            "alcance_organico": 604,
+            "alcance_pago": 24667,
+            "engagement_pct": 4.3
+          },
+          "boxer-taller": {
+            "seguidores": 137,
+            "seguidores_delta_7d": 1,
+            "alcance_7d": 11799,
+            "alcance_organico": 66,
+            "alcance_pago": 11733,
+            "engagement_pct": 9.1
+          },
+          "leads_redes_q4": 6,
+          "datos_hasta": "2026-11-01"
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
