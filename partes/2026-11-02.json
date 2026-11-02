@@ -214,6 +214,25 @@
         }
       },
       "para": []
+    },
+    "limpieza": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:10",
+      "resumen": "Borrados 3 crudos de Metricool de la W36 (más de 8 semanas).",
+      "error": null,
+      "herramientas": [],
+      "artefacto": null,
+      "datos": {
+        "hallazgos": [
+          "Borrados 3 crudos de Metricool de la 2026-W36 (más de 8 semanas): redes/data/raw/2026-W36/boxer-gestion.json, boxer-taller.json y meta-awareness.json (0,0 MB). Cortes: crudos antes del 2026-09-07, Meta antes del 2026-07-01, fotos diarias del CRM antes del 2026-08-04 (no había ninguna para reducir)."
+        ],
+        "alertas": [],
+        "metricas": {
+          "borrados": 3
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
