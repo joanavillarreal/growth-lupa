@@ -1,7 +1,62 @@
 {
   "fecha": "2026-11-03",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Q4: 263 generados, 91 derivados, 67 presupuestados, 15 cerrados (MRR 3.120 USD), CPL 4,57, CAC 80,09 USD. Alarma sin novedades. Orígenes sin canal: Itca 2026, Expomecanico, Visitas presenciales - Lu y - Santi.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [],
+        "hallazgos": [
+          "Alarma diaria: sin novedades, no se mandó nada al canal.",
+          "Contra el mismo tramo del Q3 (01/07–03/08): generados 263 vs 184, CPL 4,57 vs 5,80 USD (mejora); % no calificación 12,2 (estable).",
+          "Respecto de ayer: generados 257 → 263, derivados 86 → 91, presupuestados 65 → 67; cerrados (15) y MRR (3.120) sin cambios.",
+          "run.py alerts (últimos 7 días vs 7 anteriores): prospectos generales 72 → 37 (-49%), Meta 62 → 28 (-55%); CPL general 3,59 → 6,53, Meta 2,96 → 6,67. Derivación 28 días: general 44,9 → 33,0%, Meta 31,9 → 18,8%.",
+          "Orígenes sin canal (a decidir por Joana): Itca 2026 (UC_AQMO17, 0), Expomecanico (UC_CCDPGU, 1), Visitas presenciales - Lu (UC_ERP4TY, 1), Visitas presenciales - Santi (UC_NCC84N, 0). Los dos de 'Visitas presenciales' no empiezan con 'Visita Presencial', así que la regla automática no los tomó.",
+          "Gasto de Meta al día hasta 02/11; Google Ads en el SPA hasta 01/11."
+        ],
+        "metricas": {
+          "q": "2026-Q4",
+          "generados": 263,
+          "derivados": 91,
+          "presupuestados": 67,
+          "cerrados": 15,
+          "mrr": 3120.0,
+          "cpl": 4.57,
+          "cac": 80.09,
+          "gasto_usd": 1201.4
+        },
+        "origenes_a_decidir": [
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_ERP4TY",
+            "nombre": "Visitas presenciales - Lu",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_NCC84N",
+            "nombre": "Visitas presenciales - Santi",
+            "prospectos": 0
+          }
+        ]
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
