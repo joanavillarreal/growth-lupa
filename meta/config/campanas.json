@@ -286,6 +286,17 @@
       "activa": true,
       "nota": "Agregada por Lupa el 2026-10-22. Destino formulario, activa desde el 21/10 (anuncio 'Visitas presenciales - Zonas LU'). Joana (22/10): corresponde a visitas presenciales; sus leads caen en esa etapa. No se fija un origen del CRM.",
       "etapa_crm": "Visitas presenciales"
+    },
+    {
+      "nombre": "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)",
+      "id_meta": "120255141033740427",
+      "grupo": "eventual",
+      "bloque": "evento",
+      "destino": "PENDIENTE",
+      "origenes_crm": "PENDIENTE",
+      "activa": true,
+      "a_confirmar": true,
+      "nota": "Agregada por Lupa el 2026-11-03: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento)."
     }
   ],
   "conjuntos_excepcion": [

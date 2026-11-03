@@ -55,6 +55,58 @@
         ]
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:57",
+      "resumen": "Guardia: 5 alertas G2 al canal (gasto 02/11: 52.688 ARS; Meta 6 / CRM 6, faltan 0). Panel Q4: CPL real 4.743 ARS, Meta->CRM 99%, derivación 12,9%. Campaña nueva a confirmar: Webinar Decidí mejor con IA.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas": [
+          "G2 TestimonioJesi | Video | Frio-Repuesteras | v2 | 2026-09: 6.335 ARS en 1 día sin resultado",
+          "G2 AsesoriaVirtual | Video | Mendoza LAL | v1 | 2026-10 - Copia: 5.251 ARS en 2 días sin resultado",
+          "G2 AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia: 17.789 ARS en 9 días sin resultado (abierta hace 7 días)",
+          "G2 Visitas presenciales - Zonas LU: 4.525 ARS en 2 días sin resultado",
+          "G2 AsesoriaVirtual | Video | Rosario LAL | v1 | 2026-10: 3.893 ARS en 2 días sin resultado"
+        ],
+        "silenciadas": [
+          "G2:120254939752100427 y G3:cpl:120252699641360427 (ya avisadas)"
+        ],
+        "hallazgos": [
+          "Guardia: 5 alertas G2 mandadas a #adqui-notificaciones-canales tal cual las imprimió guardia_diaria.py.",
+          "Gasto de ayer (02/11): 52.688 ARS.",
+          "Conciliación de ayer: Meta 6 leads, CRM 6, 1 aviso por Slack (RECONTACTO) -> faltan 0.",
+          "Errores del MCP: 50, ninguno sobre entidades vivas.",
+          "Cambios en la cuenta (02/11): Joana activó la campaña 'JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)' y su conjunto, y creó el conjunto 'Santi - La Plata y Sur - LAL IG + video' (2.000 ARS/día) con su anuncio; Yamil Di Nocco reactivó 'Boxer + lectora y impresora de etiquetas'; Joana creó DemoStock y los dos anuncios del webinar.",
+          "Campaña nueva sumada al mapa como a_confirmar: 'JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)' (ya gastó 4.179 ARS y Meta cuenta 3 leads).",
+          "Panel Q4 al 02/11: gasto 1.298.111 ARS, Meta -> CRM 99% (197 nuevos + 31 re-ingresos de 230), CPL real 4.743 ARS, derivación 12,9% (23 de 178 resueltos), costo por Convertido 41.865 ARS; 7 campañas y 26 anuncios activos; presupuesto diario 51.000 ARS en 14 conjuntos.",
+          "Anuncios activos sin link de Drive (17): los dos del webinar Decidí mejor con IA, VisitaLocal Santi-LaPlata, Boxer + lectora y impresora de etiquetas, Visitas presenciales - Zonas LU, las 5 placas Img de Provincias (Salta, Neuquén, Mendoza, San Juan, Rosario), Entradas Expomecanico, Meme reel - IA, Como tener 2 novias, Oferta Img Remarketing, Remarketing Casos de éxito, Conocimiento Precios y proveedores, Conocimiento Estado del rubro.",
+          "Validación MCP OK (11 respuestas). Las respuestas se copiaron exactas: las grandes del archivo de resultado del entorno y las chicas extraídas tal cual del registro de la sesión."
+        ],
+        "metricas": {
+          "gasto_ayer_ars": 52688,
+          "leads_meta_ayer": 6,
+          "leads_crm_ayer": 6,
+          "reingresos_ayer": 1,
+          "cpl_real_q_ars": 4743,
+          "meta_crm_pct": 99,
+          "derivacion_pct": 12.9
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"
+        ]
+      },
+      "para": []
     }
   },
   "preparacion": {
