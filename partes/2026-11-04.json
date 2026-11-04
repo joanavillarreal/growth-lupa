@@ -1,7 +1,32 @@
 {
   "fecha": "2026-11-04",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Monitor publicado; alarma: % prospecto inactivo +9,3 pp (43,9% vs 34,6%)",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "hallazgos": [
+          "Orígenes sin canal a decidir: Itca 2026 (UC_AQMO17), Expomecanico (UC_CCDPGU), Visitas presenciales - Lu (UC_ERP4TY), Visitas presenciales - Santi (UC_NCC84N)"
+        ],
+        "alertas": [
+          "% prospecto inactivo en desmejora: +9,3 pp (Q4 a 35 días 43,9% vs 34,6% en Q3)"
+        ],
+        "metricas": {
+          "snapshot": "2026-11-04",
+          "prospectos": 1869,
+          "negociaciones": 1244
+        },
+        "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
