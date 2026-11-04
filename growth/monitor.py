@@ -353,7 +353,7 @@ def calcular_q(ctx: _Ctx, etiqueta: str, desde: str, hasta: str, previo: tuple |
         "salud": health.revisar(snap, cfg, desde, min(hasta, tope)),
         "comparacion": comparar(ctx, desde, min(hasta, tope), previo),
         "objetivos": objetivos_q(ctx, etiqueta, desde, hasta, min(hasta, tope), base,
-                                 leads_q, len(no_utiles), cerrados),
+                                 leads_q, len(no_utiles), derivados, cerrados),
     }
 
 
@@ -365,12 +365,15 @@ def _objetivos_de(cfg: Config, etiqueta: str) -> dict | None:
 
 
 def objetivos_q(ctx: "_Ctx", etiqueta: str, desde: str, hasta: str, corte: str, base: dict,
-                leads_q: list[dict], no_utiles: int, cerrados: list[dict]) -> dict | None:
+                leads_q: list[dict], no_utiles: int, derivados: list[dict],
+                cerrados: list[dict]) -> dict | None:
     """Cada objetivo con su valor, su meta y si viene bien.
 
-    Los ratios (CAC, ROAS, %) se juzgan contra la meta tal cual. Los leads se
-    acumulan durante el Q, así que se juzgan por ritmo: lo generado hasta hoy
-    proyectado a los días del trimestre.
+    Los ratios (CAC, ROAS, %) se juzgan contra la meta tal cual. Los negocios
+    derivados se acumulan durante el Q, así que se juzgan por ritmo: lo derivado
+    hasta hoy proyectado a los días del trimestre. Derivados y % de casas de
+    repuestos se miden sobre negociaciones con Fecha de derivación en el Q
+    (Joana, 04/11/2026), no sobre prospectos generados.
     """
     obj = _objetivos_de(ctx.cfg, etiqueta)
     if not obj:
@@ -411,20 +414,22 @@ def objetivos_q(ctx: "_Ctx", etiqueta: str, desde: str, hasta: str, corte: str, 
                    "ok": None if pnc is None else pnc <= obj["pct_no_calificados_max"],
                    "provisorio": gen < 30, "detalle": {"n": no_utiles, "generados": gen}})
 
-    # leads del Q, por ritmo
-    proy = round(gen / dias * dias_q) if dias else None
-    salida.append({"clave": "leads", "nombre": "Leads generados", "valor": gen, "meta": obj["leads_q"],
+    # negocios derivados del Q (Fecha de derivación en el Q), por ritmo
+    n_der = len(derivados)
+    meta_der = obj["derivados_q"]
+    proy = round(n_der / dias * dias_q) if dias else None
+    salida.append({"clave": "derivados", "nombre": "Negocios derivados", "valor": n_der, "meta": meta_der,
                    "sentido": "acumulado", "formato": "n",
-                   "ok": None if proy is None else proy >= obj["leads_q"],
+                   "ok": None if proy is None else proy >= meta_der,
                    "provisorio": dias < 14,
                    "detalle": {"proyeccion": proy, "dias": dias, "dias_q": dias_q,
-                               "esperado_hoy": round(obj["leads_q"] * dias / dias_q)}})
+                               "esperado_hoy": round(meta_der * dias / dias_q)}})
 
-    # % casas de repuestos
-    tipos = Counter(ctx.tipo_negocio_lead(l) for l in leads_q)
+    # % casas de repuestos, sobre los negocios derivados del Q
+    tipos = Counter(ctx.tipo_negocio_deal(d) for d in derivados)
     sin_def = sum(tipos.get(t, 0) for t in m.get("tipos_sin_definir", []))
     casas = sum(tipos.get(t, 0) for t in m.get("tipos_casa_repuestos", []))
-    definidos = gen - sin_def
+    definidos = n_der - sin_def
     pcr = _pct(casas, definidos)
     salida.append({"clave": "casas_repuestos", "nombre": "Casas de repuestos", "valor": pcr,
                    "meta": obj["pct_casas_repuestos_min"], "sentido": "min", "formato": "pct",

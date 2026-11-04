@@ -151,8 +151,8 @@ Las metas viven en `monitor.objetivos` del YAML, por Q de inicio.
 | CAC | ≤ US$ 800 | toda la inversión del Q (pauta + otros gastos del SPA) ÷ clientes nuevos del Q |
 | ROAS de pauta | ≥ 2 | MRR cerrado en el Q de Meta, Google y Redes ÷ inversión en esos canales |
 | Leads no calificados | ≤ 15% | Prospecto no útil ÷ generados del Q |
-| Leads generados | 300 en el Q | se juzga por ritmo: lo generado proyectado a los días del Q |
-| Casas de repuestos | ≥ 70% | tipo de negocio del prospecto, sobre los que lo tienen definido |
+| Negocios derivados | 300 en el Q | negociaciones con Fecha de derivación en el Q; se juzga por ritmo: lo derivado proyectado a los días del Q (Joana, 04/11/2026) |
+| Casas de repuestos | ≥ 70% | tipo de negocio de los negocios derivados del Q (el de la negociación; si está vacío, el del prospecto), sobre los que lo tienen definido |
 | Win rate | ≥ 5% | cierres del Q ÷ leads generados del Q |
 | New MRR | US$ 7.500 en el Q | MRR cerrado en el Q, por ritmo (tarjeta grande) |
 | · Acciones en vivo | US$ 1.000 | MRR de clientes cuyo origen empieza con "Curso", "Webinar" o "Charla", por ritmo |
@@ -164,7 +164,7 @@ presupuestados → cerrados, con el % que pasa de un paso al siguiente) y el
 CAC por canal. El % de prospecto inactivo vive en Derivación; el % de leads
 a futuro y el promedio de días de cierre, en Ventas.
 
-En el Q que tiene objetivos, la solapa no repite métricas: leads generados,
+En el Q que tiene objetivos, la solapa no repite métricas:
 % de no calificación, win rate, MRR y CAC general viven solo en las
 tarjetas de objetivos. Los Q sin objetivos muestran el armado anterior.
 El CAC se calcula solo con lo que hay en el CRM, por decisión de Joana.

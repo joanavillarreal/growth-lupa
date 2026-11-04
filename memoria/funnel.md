@@ -29,3 +29,11 @@ revisar.
 - **En ensayo, el Monitor oficial (rutina vieja) sigue con las definiciones viejas**: desde el
   09/10 la comparación va a dar diferencias en Vendedores Viajantes, Viajes Comerciales, Cursos y
   Webinars y Sin atribuir. Son esperadas y no son un error; el total general no cambia.
+
+## 04/11/2026 — Objetivos del Q: derivados en vez de generados (Joana)
+- La meta de 300 del trimestre es de **negocios derivados** (negociaciones con Fecha de
+  derivación dentro del Q), no de leads generados. Clave `derivados_q` en `monitor.objetivos`.
+- El 70% de casas de repuestos se mide sobre esos **negocios derivados del Q** (tipo de negocio
+  de la negociación; si está vacío, el del prospecto), no sobre los generados.
+- Al cambiar: el 04/11 pasó de 269 generados (en ritmo) a 96 derivados (debajo del ritmo,
+  proyección 252), y casas de repuestos de 52,6% (fuera) a 93,3% (84 de 90 con tipo definido).

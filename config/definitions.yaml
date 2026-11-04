@@ -240,8 +240,8 @@ monitor:
       cac_max_usd: 800             # costo de adquisición por cliente
       roas_min: 2                  # MRR cerrado de pauta / inversión en pauta
       pct_no_calificados_max: 15   # Prospecto no útil sobre generados
-      leads_q: 300                 # leads generados en el trimestre
-      pct_casas_repuestos_min: 70  # sobre los leads con tipo de negocio definido
+      derivados_q: 300             # negocios con Fecha de derivación en el trimestre
+      pct_casas_repuestos_min: 70  # sobre los negocios derivados del Q con tipo de negocio definido
       win_rate_min: 5              # cierres del Q / leads generados del Q
       mrr_q_usd: 7500              # new MRR cerrado en el Q
       mrr_en_vivo_usd: 1000        # de ese MRR, lo que viene de acciones en vivo
