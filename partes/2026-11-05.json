@@ -153,6 +153,55 @@
         "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9"
       },
       "para": []
+    },
+    "cursos": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "16:06",
+      "resumen": "Primer monitoreo (en sesión, no en la rutina): Decidí mejor con IA 9 inscriptos (2,2/día, faltan 14 días), Meta $ 16.056,08; Ordenar Stock 57 inscriptos, 26 asistieron, 3 derivados, 1 cierre, sin cambios; Cursos en Vivo republicado",
+      "error": null,
+      "herramientas": [
+        "mcp__Google_Sheets__get_values",
+        "mcp__MCP_Meta__ads_get_ad_entities"
+      ],
+      "artefacto": "https://claude.ai/artifact/7Vh4FWB6jmE8asFYec5w6A",
+      "datos": {
+        "eventos": {
+          "2026-10-webinar-ordenar-stock": {
+            "estado": "realizado",
+            "inscriptos": 57,
+            "asistentes": 26,
+            "derivaciones": 3,
+            "cierres": 1,
+            "inversion_total": 72014.52,
+            "ritmo": null
+          },
+          "2026-11-webinar-decisiones-ia": {
+            "estado": "inscripcion_abierta",
+            "inscriptos": 9,
+            "asistentes": 0,
+            "derivaciones": 0,
+            "cierres": 0,
+            "inversion_total": 16056.08,
+            "ritmo": {
+              "objetivo": "más de 40",
+              "dias_corridos": 4,
+              "faltan_dias": 14,
+              "por_dia": 2.2,
+              "faltan_inscriptos": 32,
+              "necesario_por_dia": 2.3
+            }
+          }
+        },
+        "alertas": [
+          "Webinar: Cómo ordenar tu stock: 1 teléfono(s) inválido(s): no recibieron la confirmación ni entraron al CRM (corregir a mano)",
+          "Webinar: Cómo ordenar tu stock: 1 con «Mensaje Enviado» = No enviado (mirar el historial de n8n)",
+          "Webinar: Cómo ordenar tu stock: 12 «Dice ser cliente — no está en el CRM»: revisar a mano antes de la cosecha",
+          "Webinar: Cómo ordenar tu stock: planilla: la columna A dice «TimestampF» y la plantilla madre dice «Timestamp»"
+        ],
+        "sin_medir": []
+      },
+      "para": []
     }
   },
   "preparacion": {

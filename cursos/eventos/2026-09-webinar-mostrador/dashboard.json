@@ -1,0 +1,326 @@
+{
+  "id": "webinar-mostrador-sept2026",
+  "titulo": "Webinar: Mostrador",
+  "tag": "WEBINAR",
+  "kind": "webinar",
+  "fechas": [
+    "2026-09-17"
+  ],
+  "hora": "13:00",
+  "expositor": "Santiago",
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1-pzR0_UCD8hPdYrRAKNCwh5uXRaBqDFE3DgKmrSZTb4/edit",
+  "origen_crm": "Webinar Mostrador 2026",
+  "origen_source_id": "UC_CQ4N7U",
+  "inversion_total": 52896.6,
+  "inversion_moneda": "$",
+  "stats": {
+    "total": 19,
+    "clientes_si": 5,
+    "clientes_no": 14,
+    "nuevos": 7,
+    "reactivaciones": 7,
+    "asistentes": 12,
+    "meta_leads": 14,
+    "derivaciones": 1,
+    "prospectos_abiertos": 6,
+    "cierres": 0
+  },
+  "etapas_crm": [
+    {
+      "nombre": "Prospecto",
+      "n": 9
+    },
+    {
+      "nombre": "Negociación",
+      "n": 7
+    },
+    {
+      "nombre": "Contacto sin registro",
+      "n": 2
+    },
+    {
+      "nombre": "Negociación cerrada",
+      "n": 1
+    }
+  ],
+  "signups_por_dia": [
+    {
+      "fecha": "2026-09-07",
+      "nuevos": 1,
+      "acumulado": 1
+    },
+    {
+      "fecha": "2026-09-08",
+      "nuevos": 2,
+      "acumulado": 3
+    },
+    {
+      "fecha": "2026-09-09",
+      "nuevos": 2,
+      "acumulado": 5
+    },
+    {
+      "fecha": "2026-09-10",
+      "nuevos": 2,
+      "acumulado": 7
+    },
+    {
+      "fecha": "2026-09-11",
+      "nuevos": 4,
+      "acumulado": 11
+    },
+    {
+      "fecha": "2026-09-13",
+      "nuevos": 2,
+      "acumulado": 13
+    },
+    {
+      "fecha": "2026-09-14",
+      "nuevos": 1,
+      "acumulado": 14
+    },
+    {
+      "fecha": "2026-09-15",
+      "nuevos": 4,
+      "acumulado": 18
+    },
+    {
+      "fecha": "2026-09-16",
+      "nuevos": 1,
+      "acumulado": 19
+    }
+  ],
+  "enrollees": [
+    {
+      "nombre": "Claudio",
+      "apellido": "Rico",
+      "negocio": "repuestos Colon",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": false,
+      "estado_crm": "Existente — reactivación",
+      "crm_id": "23458",
+      "crm_stage": "Negociación",
+      "fecha": "2026-09-07"
+    },
+    {
+      "nombre": "Karina",
+      "apellido": "Evelyn Lilian Camino",
+      "negocio": "Grupo RC",
+      "cliente": "No",
+      "fuente": "ClickUp",
+      "asistio": true,
+      "estado_crm": "Existente — reactivación",
+      "crm_id": "17912",
+      "crm_stage": "Negociación",
+      "fecha": "2026-09-08"
+    },
+    {
+      "nombre": "Cristian",
+      "apellido": "Suarez",
+      "negocio": "Motori-C",
+      "cliente": "Si",
+      "fuente": "ClickUp",
+      "asistio": true,
+      "estado_crm": "Cliente Boxer",
+      "crm_id": "9592",
+      "crm_stage": "Negociación",
+      "fecha": "2026-09-08",
+      "observaciones": "Yo no tengo showroom pero es buena idea"
+    },
+    {
+      "nombre": "Lucas",
+      "apellido": "Emanuel Moreira",
+      "negocio": "Frenos Mitre",
+      "cliente": "Si",
+      "fuente": "ClickUp",
+      "asistio": false,
+      "estado_crm": "Cliente Boxer",
+      "crm_id": "384",
+      "crm_stage": "Negociación",
+      "fecha": "2026-09-09"
+    },
+    {
+      "nombre": "Gisela",
+      "apellido": "Sanchez",
+      "negocio": "MyG Repuestos",
+      "cliente": "No",
+      "fuente": "ClickUp",
+      "asistio": false,
+      "estado_crm": "Existente — prospecto inactivo",
+      "crm_id": "3314",
+      "crm_stage": "Prospecto",
+      "fecha": "2026-09-09"
+    },
+    {
+      "nombre": "Gonzalo",
+      "apellido": "Grosso",
+      "negocio": "Mgr autopartes",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": false,
+      "estado_crm": "Nuevo — creado en CRM",
+      "crm_id": "4618",
+      "crm_stage": "Prospecto",
+      "fecha": "2026-09-10"
+    },
+    {
+      "nombre": "Walter",
+      "apellido": "Chavez",
+      "negocio": "emprendedor",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": false,
+      "estado_crm": "Nuevo — creado en CRM",
+      "crm_id": "4626",
+      "crm_stage": "Prospecto",
+      "fecha": "2026-09-10"
+    },
+    {
+      "nombre": "Matias",
+      "apellido": "Rodoni",
+      "negocio": "Malelo repuestos",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": true,
+      "estado_crm": "Existente — reactivación",
+      "crm_id": "28786",
+      "crm_stage": "Negociación",
+      "fecha": "2026-09-11"
+    },
+    {
+      "nombre": "mario",
+      "apellido": "alberto Bonifasin",
+      "negocio": "bonifasin repuestos",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": false,
+      "estado_crm": "Existente — reactivación",
+      "crm_id": "24062",
+      "crm_stage": "Negociación",
+      "fecha": "2026-09-11"
+    },
+    {
+      "nombre": "marta",
+      "apellido": "del valle rojas",
+      "negocio": "Repuestos Lujan",
+      "cliente": "No",
+      "fuente": "ClickUp",
+      "asistio": false,
+      "estado_crm": "Existente — reactivación",
+      "crm_id": "4140",
+      "crm_stage": "Prospecto",
+      "fecha": "2026-09-11"
+    },
+    {
+      "nombre": "Malvina",
+      "apellido": "Arguet",
+      "negocio": "MDR REPUESTOS SRL",
+      "cliente": "Si",
+      "fuente": "Meta",
+      "asistio": true,
+      "estado_crm": "Dice ser cliente — no está en el CRM",
+      "crm_id": "",
+      "crm_stage": "Contacto sin registro",
+      "fecha": "2026-09-11"
+    },
+    {
+      "nombre": "Javier",
+      "apellido": "Francisco Alegre",
+      "negocio": "Autopartes JFA",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": true,
+      "estado_crm": "Nuevo — creado en CRM",
+      "crm_id": "4664",
+      "crm_stage": "Prospecto",
+      "fecha": "2026-09-13",
+      "observaciones": "es una buen manera de vender como lo explicaste sin esfuerzo del asesoramiento"
+    },
+    {
+      "nombre": "Barbi",
+      "apellido": "Rinaldi",
+      "negocio": "Repuestos mercedes Rosario SRL",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": true,
+      "estado_crm": "Nuevo — creado en CRM",
+      "crm_id": "4668",
+      "crm_stage": "Prospecto",
+      "fecha": "2026-09-13"
+    },
+    {
+      "nombre": "Aldo",
+      "apellido": "Mansilla",
+      "negocio": "mansilla repuestos",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": true,
+      "estado_crm": "Nuevo — creado en CRM",
+      "crm_id": "4682",
+      "crm_stage": "Prospecto",
+      "fecha": "2026-09-14"
+    },
+    {
+      "nombre": "Denise",
+      "apellido": "Garcia",
+      "negocio": "Los dos luises",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": true,
+      "estado_crm": "Existente — reactivación",
+      "crm_id": "22580",
+      "crm_stage": "Negociación",
+      "fecha": "2026-09-15",
+      "observaciones": "Llegó cuando empezó Santi a hablar de Boxer"
+    },
+    {
+      "nombre": "Marcelo",
+      "apellido": "Sanchez",
+      "negocio": "El Carril Repuestos",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": true,
+      "estado_crm": "Nuevo — creado en CRM",
+      "crm_id": "4686",
+      "crm_stage": "Prospecto",
+      "fecha": "2026-09-15"
+    },
+    {
+      "nombre": "Martin",
+      "apellido": "Biosca",
+      "negocio": "Biosca Repuestos",
+      "cliente": "Si",
+      "fuente": "Meta",
+      "asistio": true,
+      "estado_crm": "Cliente Boxer",
+      "crm_id": "",
+      "crm_stage": "Contacto sin registro",
+      "fecha": "2026-09-15"
+    },
+    {
+      "nombre": "Fernández",
+      "apellido": "Alejandro",
+      "negocio": "Auto Repuestos Rosario",
+      "cliente": "Si",
+      "fuente": "Meta",
+      "asistio": true,
+      "estado_crm": "Cliente Boxer",
+      "crm_id": "28752",
+      "crm_stage": "Negociación cerrada",
+      "fecha": "2026-09-15"
+    },
+    {
+      "nombre": "Victoria",
+      "apellido": "Llinás",
+      "negocio": "Todo Diésel",
+      "cliente": "No",
+      "fuente": "Meta",
+      "asistio": true,
+      "estado_crm": "Nuevo — creado en CRM",
+      "crm_id": "4698",
+      "crm_stage": "Prospecto",
+      "fecha": "2026-09-16"
+    }
+  ]
+}

@@ -30,3 +30,8 @@ paneles:
     link: https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9   # creado el 08/10/2026, es el oficial
     archivo: redes/panel/index.html
     en_ensayo: publicar
+  cursos_en_vivo:
+    nombre: Cursos en Vivo
+    link: https://claude.ai/artifact/7Vh4FWB6jmE8asFYec5w6A   # el de siempre: lo publicaba Vent hasta el 05/11/2026
+    archivo: cursos/panel/dist/index.html
+    en_ensayo: comparar        # desde el 05/11/2026 lo publica solo Lupa (análisis cursos)

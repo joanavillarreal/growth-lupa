@@ -20,7 +20,7 @@ python3 -c "import yaml, requests, zoneinfo; zoneinfo.ZoneInfo('America/Argentin
 
 # Variables de entorno (solo si existen; nunca su valor)
 [ -n "${BITRIX_WEBHOOK_URL:-}" ] && echo "BITRIX_WEBHOOK_URL: definida" \
-  || echo "ERROR: falta BITRIX_WEBHOOK_URL (funnel, meta e inversion no pueden leer Bitrix)"
+  || echo "ERROR: falta BITRIX_WEBHOOK_URL (funnel, meta, inversion y cursos no pueden leer Bitrix)"
 for v in GOOGLE_ADS_CLIENT_ID GOOGLE_ADS_CLIENT_SECRET GOOGLE_ADS_REFRESH_TOKEN GOOGLE_ADS_CUSTOMER_ID GOOGLE_ADS_LOGIN_CUSTOMER_ID; do
   [ -n "${!v:-}" ] || echo "ERROR: falta $v (inversion no puede leer Google Ads)"
 done

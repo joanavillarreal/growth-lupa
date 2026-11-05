@@ -1,0 +1,1228 @@
+<title>Cursos en Vivo Boxer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Panel de tema claro fijo: un solo mundo visual, cada color pintado explícito. */
+  :root {
+    color-scheme: light;
+    --bg:             #f6f5f1;
+    --sidebar:        #ffffff;
+    --surface:        #ffffff;
+    --surface-2:      #f3f1ec;
+    --ink:            #1b1a17;
+    --ink-2:          #52514e;
+    --ink-3:          #85827a;
+    --rule:           #e6e3dc;
+    --hairline:       rgba(20,18,14,0.09);
+    --blue:           #2a6fc4;
+    --orange:         #c8541f;
+    --violet:         #6c5fd0;
+    --good:           #2b8a30;
+    --bad:            #c23a2b;
+    --font-display: "Archivo", system-ui, sans-serif;
+    --font-body: "IBM Plex Sans", system-ui, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .app { display: flex; min-height: 100vh; align-items: flex-start; }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar {
+    width: 232px; flex: 0 0 232px; background: var(--sidebar);
+    border-right: 1px solid var(--hairline);
+    padding: 22px 14px; position: sticky; top: 0; align-self: stretch;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; padding: 2px 8px 24px; }
+  .brand-mark {
+    width: 34px; height: 34px; flex: 0 0 34px; border-radius: 10px;
+    background: linear-gradient(140deg, var(--orange), #e57a42);
+    display: grid; place-items: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 14px;
+    color: #ffffff; letter-spacing: -.02em;
+  }
+  .brand-name { font-family: var(--font-display); font-weight: 600; font-size: 14px; letter-spacing: -.01em; }
+  .brand-sub { font-size: 11px; color: var(--ink-3); margin-top: 1px; }
+  .rail-label {
+    font-size: 10px; font-weight: 600; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: .08em;
+    padding: 0 10px 8px;
+  }
+  .course-btn {
+    display: block; width: 100%; text-align: left; cursor: pointer;
+    background: none; border: 1px solid transparent; border-radius: 10px;
+    padding: 11px 11px; margin-bottom: 4px; font-family: inherit; color: inherit;
+  }
+  .course-btn:hover { background: var(--surface-2); }
+  .course-btn[aria-current="true"] { background: var(--surface-2); border-color: var(--hairline); }
+  .course-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
+  .course-btn .cb-title, .course-btn .cb-meta { display: block; }
+  .course-btn .cb-title {
+    font-family: var(--font-display); font-weight: 600; font-size: 12.5px;
+    line-height: 1.3; margin-bottom: 4px;
+  }
+  .course-btn .cb-meta { font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+  /* ---------- Main ---------- */
+  .main { flex: 1 1 auto; min-width: 0; padding: 26px 30px 64px; }
+  .topbar {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 16px; flex-wrap: wrap; margin-bottom: 20px;
+  }
+  h1 {
+    font-family: var(--font-display); font-weight: 700; font-size: 21px;
+    letter-spacing: -.015em; margin: 0 0 5px; text-wrap: balance;
+  }
+  .lede { color: var(--ink-3); font-size: 12.5px; margin: 0; max-width: 62ch; }
+  .stamp {
+    font-size: 11px; color: var(--ink-3); text-align: right;
+    font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+
+  .method {
+    background: var(--surface); border: 1px solid var(--hairline);
+    border-left: 3px solid var(--orange); border-radius: 10px;
+    padding: 12px 15px; font-size: 12.5px; color: var(--ink-2);
+    line-height: 1.55; margin-bottom: 26px; max-width: 100%;
+  }
+  .method b { color: var(--ink); font-weight: 600; }
+  .method em { color: var(--ink); font-style: normal; font-weight: 500; }
+
+  h2.band {
+    font-size: 10px; font-weight: 600; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: .09em;
+    margin: 0 0 11px;
+  }
+  h2.band.band-gap { margin-top: 32px; }
+
+  .kpi, .tile, .panel, .method, .goal { box-shadow: 0 1px 2px rgba(20,18,14,0.04); }
+
+  /* ---------- KPI cards ---------- */
+  .kpis { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 13px; }
+  .kpi {
+    background: var(--surface); border: 1px solid var(--hairline);
+    border-radius: 14px; padding: 17px 18px; position: relative;
+    display: flex; flex-direction: column;
+  }
+  .kpi-glyph {
+    position: absolute; top: 15px; right: 15px;
+    width: 32px; height: 32px; border-radius: 9px;
+    display: grid; place-items: center; font-size: 14px; line-height: 1;
+  }
+  .kpi-label {
+    font-size: 10.5px; font-weight: 600; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: .06em;
+    margin-bottom: 12px; padding-right: 40px;
+  }
+  .kpi-num {
+    font-family: var(--font-display); font-weight: 700; font-size: 28px;
+    line-height: 1; letter-spacing: -.02em; margin-bottom: 7px;
+  }
+  .kpi-num.void { color: var(--ink-3); }
+  .kpi-note { font-size: 11.5px; color: var(--ink-2); line-height: 1.45; margin-top: auto; }
+  .kpi-note.idle { color: var(--ink-3); }
+
+  /* ---------- Tiles ---------- */
+  .tiles { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 11px; }
+  .tile {
+    background: var(--surface); border: 1px solid var(--hairline);
+    border-radius: 12px; padding: 13px 14px 12px;
+  }
+  .tile-label {
+    font-size: 10px; font-weight: 600; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .tile-num {
+    font-family: var(--font-display); font-weight: 600; font-size: 23px;
+    line-height: 1; letter-spacing: -.02em;
+  }
+  .tile-note { font-size: 10.5px; color: var(--ink-3); margin-top: 5px; font-variant-numeric: tabular-nums; }
+
+  /* ---------- Panels ---------- */
+  .trio { display: grid; grid-template-columns: 1.35fr 0.85fr 0.9fr; gap: 13px; }
+  .panel {
+    background: var(--surface); border: 1px solid var(--hairline);
+    border-radius: 14px; padding: 17px 19px; min-width: 0;
+  }
+  .panel h3 {
+    font-family: var(--font-display); font-weight: 600; font-size: 13px;
+    margin: 0 0 15px; letter-spacing: -.005em; text-wrap: balance;
+  }
+  .panel-foot {
+    font-size: 11px; color: var(--ink-3); line-height: 1.5; margin-top: 13px;
+    padding-top: 11px; border-top: 1px solid var(--rule);
+  }
+
+  .donut-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .legend { display: flex; flex-direction: column; gap: 11px; font-size: 12.5px; min-width: 0; }
+  .legend-item { display: flex; align-items: center; gap: 9px; }
+  .swatch { width: 9px; height: 9px; border-radius: 50%; flex: 0 0 9px; }
+  .legend-name { color: var(--ink-2); }
+  .legend-num { font-weight: 600; margin-left: auto; padding-left: 16px; font-variant-numeric: tabular-nums; }
+
+  /* ---------- Bars ---------- */
+  .bar { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; font-size: 12px; }
+  .bar-name {
+    flex: 0 0 auto; width: 152px; color: var(--ink-2); text-align: right;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .bar-name.wide { width: 96px; }
+  .bar-track { flex: 1 1 auto; height: 13px; background: var(--rule); border-radius: 4px; overflow: hidden; min-width: 20px; }
+  .bar-fill { height: 100%; border-radius: 4px; background: var(--blue); }
+  .bar-num { flex: 0 0 30px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  /* ---------- Table ---------- */
+  .controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+  .controls input, .controls select {
+    font-family: inherit; font-size: 12.5px; padding: 8px 11px;
+    background: var(--surface-2); color: var(--ink);
+    border: 1px solid var(--hairline); border-radius: 8px;
+  }
+  .controls input { min-width: 220px; }
+  .controls input::placeholder { color: var(--ink-3); }
+  .controls input:focus-visible, .controls select:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
+  .twrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th {
+    text-align: left; padding: 9px 10px; white-space: nowrap;
+    font-size: 10px; font-weight: 600; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: .06em;
+    border-bottom: 1px solid var(--rule);
+  }
+  th.ctr, td.ctr { text-align: center; }
+  td { padding: 9px 10px; border-bottom: 1px solid var(--rule); color: var(--ink-2); vertical-align: top; }
+  td.who { color: var(--ink); font-weight: 500; white-space: nowrap; }
+  tbody tr:hover td { background: var(--surface-2); }
+  .chip {
+    display: inline-block; padding: 2px 9px; border-radius: 20px;
+    font-size: 10.5px; font-weight: 600; white-space: nowrap;
+  }
+  .chip.cli { background: rgba(43,138,48,0.12); color: #23762a; }
+  .chip.nocli { background: var(--surface-2); color: var(--ink-2); }
+  .yes { color: #23762a; font-weight: 700; }
+  .no { color: var(--ink-3); }
+  .crmid {
+    font-family: var(--font-mono); font-size: 10.5px; white-space: nowrap;
+    padding: 2px 7px; border-radius: 6px;
+    background: var(--surface-2); border: 1px solid var(--hairline); color: var(--ink-2);
+  }
+  .rowcount { font-size: 11px; color: var(--ink-3); margin-top: 12px; font-variant-numeric: tabular-nums; }
+
+  footer { margin-top: 34px; text-align: center; font-size: 11px; color: var(--ink-3); line-height: 1.6; }
+
+  @media (max-width: 1150px) { .trio { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 1020px) { .kpis { grid-template-columns: repeat(2, minmax(0,1fr)); } .tiles { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+  @media (max-width: 820px) {
+    .app { flex-direction: column; align-items: stretch; }
+    .sidebar { width: 100%; flex: none; position: static; border-right: none; border-bottom: 1px solid var(--hairline); }
+    .main { padding: 22px 18px 50px; }
+    .trio { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) { .kpis, .tiles { grid-template-columns: repeat(2, minmax(0,1fr)); } .bar-name { width: 104px; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+  .tag {
+    display: inline-block; padding: 2px 7px; border-radius: 5px;
+    font-family: var(--font-body); font-size: 9.5px; font-weight: 600;
+    letter-spacing: .07em; text-transform: uppercase; white-space: nowrap;
+  }
+  .tag.curso   { background: rgba(42,111,196,0.12);  color: #1f5ba3; }
+  .tag.charla  { background: rgba(200,84,31,0.12);   color: #a8431a; }
+  .tag.webinar { background: rgba(108,95,208,0.12);  color: #5246b3; }
+  .cb-head { display: flex; align-items: center; gap: 7px; margin-bottom: 5px; }
+  .title-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 5px; }
+  .title-row h1 { margin: 0; }
+  /* ---------- Tabs del trimestre ---------- */
+  .tabs {
+    display: flex; gap: 4px; overflow-x: auto; margin: 0 0 22px;
+    border-bottom: 1px solid var(--rule); scrollbar-width: thin;
+  }
+  .tab-btn {
+    flex: 0 0 auto; display: flex; align-items: center; gap: 7px;
+    background: none; border: none; border-bottom: 2px solid transparent;
+    padding: 9px 12px 10px; margin-bottom: -1px; cursor: pointer;
+    font-family: var(--font-display); font-weight: 600; font-size: 12.5px;
+    color: var(--ink-3); white-space: nowrap;
+  }
+  .tab-btn:hover { color: var(--ink-2); }
+  .tab-btn[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--orange); }
+  .tab-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; border-radius: 6px; }
+  .tab-btn .tag { font-size: 8.5px; padding: 1px 5px; }
+
+  /* ---------- Calendario ---------- */
+  .months { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 13px; }
+  .month h3 { text-transform: capitalize; }
+  .cal { display: grid; grid-template-columns: repeat(7, minmax(0,1fr)); gap: 3px; }
+  .cal-dow {
+    font-size: 9.5px; font-weight: 600; color: var(--ink-3); text-align: center;
+    text-transform: uppercase; letter-spacing: .06em; padding-bottom: 5px;
+  }
+  .cal-day {
+    min-height: 62px; border-radius: 7px; padding: 4px 4px 5px;
+    background: #f5f3ee; min-width: 0;
+    display: flex; flex-direction: column; gap: 3px;
+  }
+  .cal-day.out { background: none; }
+  .cal-day.weekend { background: #faf9f6; }
+  .cal-num { font-size: 10.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; padding-left: 2px; }
+  .cal-day.today { box-shadow: inset 0 0 0 1.5px var(--orange); }
+  .cal-day.today .cal-num { color: var(--ink); font-weight: 600; }
+  .cal-chip {
+    display: block; width: 100%; text-align: left; cursor: pointer;
+    border: none; border-radius: 4px; padding: 2px 4px;
+    font-family: var(--font-body); font-size: 9.5px; font-weight: 600; line-height: 1.25;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .cal-chip:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
+  .cal-chip.curso   { background: rgba(42,111,196,0.14);  color: #1f5ba3; }
+  .cal-chip.charla  { background: rgba(200,84,31,0.14);   color: #a8431a; }
+  .cal-chip.webinar { background: rgba(108,95,208,0.14);  color: #5246b3; }
+  .cal-chip.hito    { background: none; box-shadow: inset 0 0 0 1px var(--rule); color: var(--ink-2); font-weight: 500; }
+  .cal-chip.past    { opacity: .55; }
+
+  .agenda td.when { white-space: nowrap; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .agenda tbody tr { cursor: pointer; }
+  .agenda .past td { color: var(--ink-3); }
+  .estado { font-size: 11px; white-space: nowrap; }
+  .estado.soon { color: #a8431a; font-weight: 600; }
+
+  @media (max-width: 1150px) { .months { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 820px) {
+    .rail-q { display: flex; gap: 6px; overflow-x: auto; }
+    .rail-q .course-btn { flex: 0 0 auto; width: auto; margin: 0; }
+  }
+  @media (max-width: 700px) {
+    .months { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 420px) {
+    .cal-day { min-height: 40px; }
+    .cal-chip { font-size: 0; height: 7px; padding: 0; }
+    .cal-chip.curso { background: var(--blue); }
+    .cal-chip.charla { background: var(--orange); }
+    .cal-chip.webinar { background: var(--violet); }
+    .cal-chip.hito { box-shadow: inset 0 0 0 1px var(--ink-3); }
+  }
+
+  /* ---------- Objetivos ---------- */
+  .goals { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 13px; }
+  .goal {
+    background: var(--surface); border: 1px solid var(--hairline);
+    border-radius: 14px; padding: 17px 19px 16px;
+  }
+  .goal-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .goal-label {
+    font-size: 10.5px; font-weight: 600; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: .06em;
+  }
+  .goal-target { font-size: 12px; color: var(--ink-2); margin-top: 3px; }
+  .goal-num {
+    font-family: var(--font-display); font-weight: 700; font-size: 30px;
+    line-height: 1; letter-spacing: -.02em; margin-bottom: 12px;
+  }
+  .goal-num small { font-size: 13px; font-weight: 500; color: var(--ink-3); letter-spacing: 0; margin-left: 6px; }
+  .meter { position: relative; height: 12px; background: var(--rule); border-radius: 6px; margin: 4px 0 8px; }
+  .meter-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; background: var(--blue); }
+  .meter-fill.ok { background: var(--good); }
+  .meter-mark { position: absolute; top: -5px; bottom: -5px; width: 2px; background: var(--ink); border-radius: 1px; }
+  .meter-scale { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; position: relative; height: 14px; }
+  .meter-scale span.mk { position: absolute; transform: translateX(-50%); color: var(--ink); font-weight: 600; }
+  .goal-note { font-size: 11.5px; color: var(--ink-2); line-height: 1.45; margin-top: 8px; }
+  .status {
+    display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 20px;
+    font-size: 11px; font-weight: 600; white-space: nowrap;
+  }
+  .status.ok   { background: rgba(43,138,48,0.12); color: #23762a; }
+  .status.bad  { background: rgba(194,58,43,0.11); color: #a8311f; }
+  .status.wait { background: var(--surface-2); color: var(--ink-2); }
+  .desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.6; max-width: 80ch; margin: 0; }
+  .tiles.five { grid-template-columns: repeat(5, minmax(0,1fr)); }
+  .duo { display: grid; grid-template-columns: 1.4fr 1fr; gap: 13px; }
+  @media (max-width: 1020px) { .tiles.five { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+  @media (max-width: 820px) { .goals, .duo { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .tiles.five { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+
+  .empty {
+    padding: 22px 4px; text-align: center; color: var(--ink-3);
+    font-size: 12.5px; line-height: 1.6;
+  }
+</style>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">AB</div>
+      <div>
+        <div class="brand-name">AIT &middot; Boxer</div>
+        <div class="brand-sub">Cursos &amp; Webinars</div>
+      </div>
+    </div>
+    <div class="rail-label">Trimestres</div>
+    <div id="rail" class="rail-q"></div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <div class="title-row"><h1 id="title">Cursos en Vivo Boxer</h1><span class="tag" id="title-tag"></span></div>
+        <p class="lede">Inscriptos desde Google Sheets &middot; embudo y etapas desde el CRM Bitrix24 &middot; se actualiza solo con la rutina diaria de Lupa</p>
+      </div>
+      <div class="stamp" id="stamp"></div>
+    </div>
+
+    <div class="tabs" id="tabs" role="tablist" aria-label="Calendario y eventos del trimestre"></div>
+    <div id="body"></div>
+
+    <footer>
+      Datos de Google Sheets y Bitrix24 (AIT Solutions).<br>
+      Este panel lo republica Lupa en su corrida diaria, cuando hay alg&uacute;n evento abierto.
+    </footer>
+  </main>
+</div>
+
+<script>
+const DATA = __DATA__;
+const courses = DATA;
+
+const nf = new Intl.NumberFormat('es-AR');
+const money = (v, c) => (c || '$') + '\u00a0' + nf.format(v);
+const shortDate = iso => new Date(iso + 'T00:00:00')
+  .toLocaleDateString('es-AR', { day: '2-digit', month: 'short' });
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, m =>
+  ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' })[m]);
+
+const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto',
+  'septiembre','octubre','noviembre','diciembre'];
+const pad = n => String(n).padStart(2, '0');
+const isoOf = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const HOY = isoOf(new Date());
+const qKey = iso => { const [y, m] = iso.split('-').map(Number); return `${y}-Q${Math.floor((m - 1) / 3) + 1}`; };
+const qName = k => k.split('-')[1] + ' ' + k.split('-')[0];
+const qMonths = k => { const [y, q] = k.split('-Q').map(Number); return [0, 1, 2].map(i => ({ y, m: (q - 1) * 3 + i })); };
+const qRange = k => { const ms = qMonths(k), a = ms[0], b = ms[2];
+  return [`${a.y}-${pad(a.m + 1)}-01`, isoOf(new Date(b.y, b.m + 1, 0))]; };
+const evQ = c => qKey((c.fechas || [])[0] || HOY);
+
+// Un trimestre por cada evento, más el trimestre en curso aunque todavía no tenga nada.
+const quarters = [...new Set([qKey(HOY), ...courses.map(evQ)])].sort().reverse();
+const eventsOf = k => courses.filter(c => evQ(c) === k)
+  .sort((a, b) => (a.fechas[0] || '').localeCompare(b.fechas[0] || ''));
+
+// Todo lo que tiene fecha: cada fecha del evento (una por clase en un curso) y los hitos de `agenda`.
+const ITEMS = courses.flatMap(c => [
+  ...(c.fechas || []).map((f, k) => ({
+    fecha: f, hora: c.hora || '', ev: c, hito: false,
+    que: c.kind === 'curso' && c.fechas.length > 1 ? `Clase ${k + 1}` : ''
+  })),
+  ...(c.agenda || []).map(a => ({ fecha: a.fecha, hora: a.hora || '', ev: c, hito: true, que: a.que || '' }))
+]).sort((a, b) => (a.fecha + a.hora).localeCompare(b.fecha + b.hora));
+
+let activeQ = quarters[0];
+let activeTab = 'cal';   // 'cal' o el id del evento
+
+function drawRail() {
+  document.getElementById('rail').innerHTML = quarters.map(k => {
+    const evs = eventsOf(k);
+    const ms = qMonths(k);
+    const rango = MESES[ms[0].m].slice(0, 3) + ' – ' + MESES[ms[2].m].slice(0, 3);
+    const actual = k === qKey(HOY);
+    return `
+    <button class="course-btn" aria-current="${k === activeQ}" data-q="${k}">
+      <span class="cb-title">${qName(k)}${actual ? ' <span class="tag charla" style="margin-left:5px">En curso</span>' : ''}</span>
+      <span class="cb-meta">${rango} · ${evs.length ? evs.length + ' evento' + (evs.length === 1 ? '' : 's') : 'sin eventos'}</span>
+    </button>`;
+  }).join('');
+  document.querySelectorAll('#rail .course-btn').forEach(b =>
+    b.addEventListener('click', () => go(b.dataset.q, 'cal')));
+}
+
+function drawTabs() {
+  const evs = eventsOf(activeQ);
+  const tab = (id, html) => `<button class="tab-btn" role="tab" data-t="${esc(id)}"
+    aria-selected="${id === activeTab}" tabindex="${id === activeTab ? 0 : -1}">${html}</button>`;
+  const host = document.getElementById('tabs');
+  host.innerHTML = tab('cal', 'Calendario') + evs.map(c =>
+    tab(c.id, `<span class="tag ${c.tag.toLowerCase()}">${esc(c.tag)}</span>${esc(c.titulo)}`)).join('');
+  const btns = [...host.querySelectorAll('.tab-btn')];
+  btns.forEach((b, i) => {
+    b.addEventListener('click', () => go(activeQ, b.dataset.t));
+    b.addEventListener('keydown', e => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      const n = btns[(i + d + btns.length) % btns.length];
+      go(activeQ, n.dataset.t);
+      document.querySelector(`.tab-btn[data-t="${n.dataset.t}"]`).focus();
+    });
+  });
+}
+
+function estadoDe(fecha) {
+  if (fecha < HOY) return '<span class="estado">Pasó</span>';
+  if (fecha === HOY) return '<span class="estado soon">Hoy</span>';
+  const dias = Math.round((new Date(fecha + 'T00:00:00') - new Date(HOY + 'T00:00:00')) / 86400000);
+  return `<span class="estado${dias <= 7 ? ' soon' : ''}">${dias === 1 ? 'Mañana' : 'Faltan ' + dias + ' días'}</span>`;
+}
+
+function drawCalendar(k) {
+  const [desde, hasta] = qRange(k);
+  const items = ITEMS.filter(it => it.fecha >= desde && it.fecha <= hasta);
+  const byDay = {};
+  items.forEach(it => (byDay[it.fecha] = byDay[it.fecha] || []).push(it));
+  const label = it => it.hito ? it.que : (it.que ? it.que + ' · ' : '') + it.ev.titulo;
+  // En la celda va un texto corto; el detalle queda en el tooltip y en la lista de abajo.
+  const corto = it => it.hito ? it.que
+    : it.que ? it.que.replace('Clase ', 'Cl. ') : (it.hora ? it.hora.replace(':00', ' h') : ({ webinar: 'Web', curso: 'Curso', charla: 'Charla' })[it.ev.kind] || it.ev.tag);
+  const chip = it => `<button class="cal-chip ${it.hito ? 'hito' : it.ev.kind}${it.fecha < HOY ? ' past' : ''}"
+    data-ev="${esc(it.ev.id)}" title="${esc((it.hora ? it.hora + ' · ' : '') + label(it) + (it.hito ? ' (' + it.ev.titulo + ')' : ''))}">${esc(corto(it))}</button>`;
+
+  const months = qMonths(k).map(({ y, m }) => {
+    const first = new Date(y, m, 1), last = new Date(y, m + 1, 0).getDate();
+    const lead = (first.getDay() + 6) % 7;          // la semana arranca el lunes
+    const cells = [];
+    for (let i = 0; i < lead; i++) cells.push('<div class="cal-day out"></div>');
+    for (let d = 1; d <= last; d++) {
+      const iso = `${y}-${pad(m + 1)}-${pad(d)}`;
+      const wd = new Date(y, m, d).getDay();
+      const cls = ['cal-day', (wd === 0 || wd === 6) ? 'weekend' : '', iso === HOY ? 'today' : ''].join(' ');
+      cells.push(`<div class="${cls}"><span class="cal-num">${d}</span>${(byDay[iso] || []).map(chip).join('')}</div>`);
+    }
+    return `<section class="panel month"><h3>${MESES[m]} ${y}</h3>
+      <div class="cal">${['L','M','M','J','V','S','D'].map(w => `<div class="cal-dow">${w}</div>`).join('')}${cells.join('')}</div>
+    </section>`;
+  }).join('');
+
+  const rows = items.map(it => `
+    <tr class="${it.fecha < HOY ? 'past' : ''}" data-ev="${esc(it.ev.id)}">
+      <td class="when">${new Date(it.fecha + 'T00:00:00').toLocaleDateString('es-AR', { weekday: 'short', day: 'numeric', month: 'short' })}</td>
+      <td>${esc(it.hora) || '—'}</td>
+      <td><span class="tag ${it.ev.tag.toLowerCase()}">${esc(it.ev.tag)}</span></td>
+      <td class="who">${esc(it.ev.titulo)}${it.que ? ` <span style="color:var(--ink-3);font-weight:400">· ${esc(it.que)}</span>` : ''}</td>
+      <td>${esc(it.ev.expositor) || '—'}</td>
+      <td>${estadoDe(it.fecha)}</td>
+    </tr>`).join('');
+
+  document.getElementById('body').innerHTML = `
+    <h2 class="band">Calendario del trimestre</h2>
+    <div class="months">${months}</div>
+    <h2 class="band band-gap">Lo que hay en el trimestre</h2>
+    <section class="panel">
+      ${items.length ? `<div class="twrap"><table class="agenda">
+        <thead><tr><th>Fecha</th><th>Hora</th><th>Tipo</th><th>Evento</th><th>Responsable</th><th>Estado</th></tr></thead>
+        <tbody>${rows}</tbody></table></div>`
+      : `<div class="empty">Todavía no hay nada con fecha en ${qName(k)}.<br>
+          Un evento aparece acá en cuanto tiene su <code style="font-family:var(--font-mono)">dashboard.json</code> con fecha.</div>`}
+    </section>`;
+
+  document.querySelectorAll('#body [data-ev]').forEach(el =>
+    el.addEventListener('click', () => {
+      const c = courses.find(x => x.id === el.dataset.ev);
+      if (c) go(evQ(c), c.id);
+    }));
+}
+
+const origenDe = c => c.origen_crm || 'Curso en vivo IA';
+
+function drawKpis(c) {
+  const s = c.stats, cur = c.inversion_moneda || '$';
+  const inv = c.inversion_total;
+  const cac = (inv && s.cierres > 0) ? inv / s.cierres : null;
+  const cpl = (inv && s.meta_leads > 0) ? inv / s.meta_leads : null;
+  const otros = (c.inversion_otros || []).map(o =>
+    `<br>+ ${o.aprox ? 'unos ' : ''}${esc(o.moneda)} ${o.monto} en ${esc(o.concepto)}`).join('');
+
+  const card = (label, glyph, tint, numHtml, noteHtml, idle) => `
+    <div class="kpi">
+      <div class="kpi-glyph" style="background:${tint}">${glyph}</div>
+      <div class="kpi-label">${label}</div>
+      <div class="kpi-num${idle ? ' void' : ''}">${numHtml}</div>
+      <div class="kpi-note${idle ? ' idle' : ''}">${noteHtml}</div>
+    </div>`;
+
+  document.getElementById('kpis').innerHTML = [
+    card('Inversi\u00f3n total', '$', 'rgba(217,89,38,0.17)',
+      inv ? money(inv, cur) : '\u2014',
+      (inv ? 'invertido en Meta Ads' : 'Sin datos \u2014 pasala por chat') + otros, !inv),
+    card('Cierres', '\u2713', 'rgba(53,178,58,0.17)',
+      s.cierres,
+      s.cierres === 0 && c.kind !== 'curso' && !c.origen_crm
+        ? 'Todav\u00eda no hay origen del evento en Bitrix24'
+        : s.cierres === 0
+        ? `Nadie con origen \u201c${esc(origenDe(c))}\u201d lleg\u00f3 todav\u00eda al pipeline Seguimiento Clientes`
+        : `origen \u201c${esc(origenDe(c))}\u201d en Seguimiento Clientes`,
+      s.cierres === 0),
+    card('CAC', '\u25ce', 'rgba(57,135,229,0.17)',
+      cac ? money(Math.round(cac), cur) : '\u2014',
+      cac ? 'por cliente cerrado' : (s.cierres === 0 ? 'Sin cierres todav\u00eda' : 'Falta la inversi\u00f3n'),
+      !cac),
+    card('CPL \u00b7 costo por lead', '\u27f6', 'rgba(144,133,233,0.19)',
+      cpl ? money(Math.round(cpl), cur) : '\u2014',
+      cpl ? `${s.meta_leads} inscriptos con fuente Meta` : 'Falta la inversi\u00f3n',
+      !cpl)
+  ].join('');
+}
+
+function drawTiles(c) {
+  const s = c.stats;
+  const pct = n => Math.round(n / s.total * 100) + '% del total';
+  const t = (label, num, note) => `
+    <div class="tile">
+      <div class="tile-label">${label}</div>
+      <div class="tile-num">${num}</div>
+      ${note ? `<div class="tile-note">${note}</div>` : ''}
+    </div>`;
+  document.getElementById('tiles').innerHTML = [
+    t('Total inscriptos', s.total, ''),
+    t('Clientes Boxer', s.clientes_si, pct(s.clientes_si)),
+    t('No clientes', s.clientes_no, pct(s.clientes_no)),
+    t('Asisti\u00f3 clase 1', s.clase1, pct(s.clase1)),
+    t('Asisti\u00f3 clase 2', s.clase2, pct(s.clase2)),
+    t('Asisti\u00f3 clase 3', s.clase3, pct(s.clase3))
+  ].join('');
+}
+
+function drawLine(c) {
+  const d = c.signups_por_dia || [];
+  if (!d.length) {
+    const host = document.getElementById('line');
+    if (host && host.parentNode) {
+      host.parentNode.innerHTML =
+        '<h3>Inscriptos acumulados por d\u00eda</h3>' +
+        '<div class="empty">Todav\u00eda no hay inscripciones cargadas.<br>' +
+        'La curva se dibuja sola en cuanto entre la primera.</div>';
+    }
+    return;
+  }
+  const W = 620, H = 210, L = 34, R = 12, T = 14, B = 30;
+  const iw = W - L - R, ih = H - T - B;
+  const goal = c.objetivos && c.objetivos.inscriptos_min;
+  const max = Math.max(...d.map(p => p.acumulado), goal ? Math.ceil(goal * 1.15) : 1, 1);
+  const x = i => L + (d.length === 1 ? iw / 2 : (i / (d.length - 1)) * iw);
+  const y = v => T + ih - (v / max) * ih;
+  const path = d.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)} ${y(p.acumulado).toFixed(1)}`).join(' ');
+  const area = `${path} L${x(d.length - 1).toFixed(1)} ${T + ih} L${x(0).toFixed(1)} ${T + ih} Z`;
+  const grid = [0, 0.5, 1].map(f => {
+    const yy = T + ih * (1 - f);
+    return `<line x1="${L}" y1="${yy}" x2="${W - R}" y2="${yy}" stroke="var(--rule)" stroke-width="1"/>
+      <text x="${L - 7}" y="${yy + 3.5}" text-anchor="end" font-size="9.5" fill="var(--ink-3)"
+        font-family="var(--font-mono)">${Math.round(max * f)}</text>`;
+  }).join('');
+  const step = Math.max(1, Math.ceil(d.length / 6));
+  const ticks = d.map((p, i) => i % step === 0 || i === d.length - 1
+    ? `<text x="${x(i)}" y="${H - 9}" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">${shortDate(p.fecha)}</text>` : '').join('');
+  const last = d.length - 1;
+  document.getElementById('line').innerHTML = `
+    <defs><linearGradient id="fadeBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${'#2a6fc4'}" stop-opacity=".18"/>
+      <stop offset="100%" stop-color="${'#2a6fc4'}" stop-opacity="0"/>
+    </linearGradient></defs>
+    ${grid}
+    ${goal ? `<line x1="${L}" y1="${y(goal)}" x2="${W - R}" y2="${y(goal)}" stroke="var(--ink-2)"
+        stroke-width="1.2" stroke-dasharray="4 4"/>
+      <text x="${L + 6}" y="${y(goal) - 6}" font-size="10" fill="var(--ink-2)">objetivo: más de ${goal}</text>` : ''}
+    <path d="${area}" fill="url(#fadeBlue)"/>
+    <path d="${path}" fill="none" stroke="var(--blue)" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="${x(last)}" cy="${y(d[last].acumulado)}" r="4.5" fill="var(--blue)"
+      stroke="var(--surface)" stroke-width="2"/>
+    <text x="${x(last) - 6}" y="${y(d[last].acumulado) - 11}" text-anchor="end"
+      font-size="11.5" font-weight="600" fill="var(--ink)"
+      font-family="var(--font-display)">${d[last].acumulado}</text>
+    ${ticks}`;
+}
+
+function drawDonut(c) {
+  const s = c.stats, tot = s.clientes_si + s.clientes_no;
+  const r = 56, cx = 75, cy = 75, sw = 19, circ = 2 * Math.PI * r;
+  const a = tot ? (s.clientes_si / tot) * circ : 0;
+  const b = tot ? (s.clientes_no / tot) * circ : 0;
+  document.getElementById('donut').innerHTML = `
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--rule)" stroke-width="${sw}"/>
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--blue)" stroke-width="${sw}"
+      stroke-dasharray="${a} ${circ - a}" transform="rotate(-90 ${cx} ${cy})"/>
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--orange)" stroke-width="${sw}"
+      stroke-dasharray="${b} ${circ - b}" stroke-dashoffset="${-a}" transform="rotate(-90 ${cx} ${cy})"/>
+    <text x="${cx}" y="${cy - 1}" text-anchor="middle" font-size="22" font-weight="700"
+      fill="var(--ink)" font-family="var(--font-display)">${tot}</text>
+    <text x="${cx}" y="${cy + 15}" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">inscriptos</text>`;
+  document.getElementById('donut-legend').innerHTML = `
+    <div class="legend-item"><span class="swatch" style="background:var(--blue)"></span>
+      <span class="legend-name">Clientes Boxer</span><span class="legend-num">${s.clientes_si}</span></div>
+    <div class="legend-item"><span class="swatch" style="background:var(--orange)"></span>
+      <span class="legend-name">No clientes</span><span class="legend-num">${s.clientes_no}</span></div>`;
+}
+
+function drawOrigin(c) {
+  const s = c.stats;
+  const p = s.leads_curso_ia_prospecto || 0, n = s.leads_curso_ia_negociacion || 0;
+  const max = Math.max(p, n, 1);
+  const row = (name, val, color) => `
+    <div class="bar">
+      <div class="bar-name wide">${name}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(val / max * 100).toFixed(1)}%;background:${color}"></div></div>
+      <div class="bar-num">${val}</div>
+    </div>`;
+  document.getElementById('origin').innerHTML =
+    row('Prospecto', p, 'var(--blue)') +
+    row('Negociaci\u00f3n', n, 'var(--orange)') +
+    `<div class="panel-foot">${p + n} registro${p + n === 1 ? '' : 's'} en Bitrix24 con ese origen, contados directo del CRM
+      (<code style="font-family:var(--font-mono);font-size:10.5px">crm.lead.list</code> /
+       <code style="font-family:var(--font-mono);font-size:10.5px">crm.deal.list</code>).
+      Incluye registros que no figuran en la hoja de inscriptos.</div>`;
+}
+
+function drawStages(c) {
+  const counts = {};
+  c.enrollees.forEach(e => { if (e.crm_stage) counts[e.crm_stage] = (counts[e.crm_stage] || 0) + 1; });
+  const list = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  const max = list.length ? list[0][1] : 1;
+  const s = c.stats;
+  document.getElementById('stages').innerHTML = `
+    <h3>Etapa actual de los ${s.con_crm_id} inscriptos con ficha en el CRM</h3>
+    ${list.map(([name, n]) => `
+      <div class="bar">
+        <div class="bar-name" title="${esc(name)}">${esc(name)}</div>
+        <div class="bar-track"><div class="bar-fill" style="width:${(n / max * 100).toFixed(1)}%"></div></div>
+        <div class="bar-num">${n}</div>
+      </div>`).join('')}
+    <div class="panel-foot">Los ${s.total - s.con_crm_id} inscriptos restantes no tienen ID de prospecto
+      ni de negociaci\u00f3n cargado en la hoja, as\u00ed que no se consulta su etapa.</div>`;
+}
+
+function drawRoster(c) {
+  const rows = c.enrollees.map(e => {
+    const cli = (e.cliente || '').trim().toLowerCase() === 'si';
+    const mark = v => v ? '<span class="yes">\u2713</span>' : '<span class="no">\u2013</span>';
+    return `<tr data-cli="${cli ? 'si' : 'no'}"
+      data-q="${esc((e.nombre + ' ' + e.apellido + ' ' + e.negocio).toLowerCase())}">
+      <td class="who">${esc((e.nombre + ' ' + e.apellido).trim()) || '\u2014'}</td>
+      <td>${esc(e.negocio) || '\u2014'}</td>
+      <td><span class="chip ${cli ? 'cli' : 'nocli'}">${cli ? 'S\u00ed' : 'No'}</span></td>
+      <td>${esc(e.fuente) || '\u2014'}</td>
+      <td class="ctr">${mark(e.clase1)}</td>
+      <td class="ctr">${mark(e.clase2)}</td>
+      <td class="ctr">${mark(e.clase3)}</td>
+      <td>${e.crm_id ? `<span class="crmid">${e.crm_tipo === 'NEGOCIACION' ? 'Neg' : 'Pro'} ${esc(e.crm_id)}</span>` : '\u2014'}</td>
+      <td>${esc(e.crm_stage) || '\u2014'}</td></tr>`;
+  }).join('');
+
+  document.getElementById('roster').innerHTML = `
+    <div class="controls">
+      <input type="text" id="q" placeholder="Buscar por nombre o negocio\u2026" aria-label="Buscar inscripto">
+      <select id="fcli" aria-label="Filtrar por tipo de cliente">
+        <option value="">Clientes y no clientes</option>
+        <option value="si">Solo clientes Boxer</option>
+        <option value="no">Solo no clientes</option>
+      </select>
+    </div>
+    <div class="twrap">
+      <table>
+        <thead><tr>
+          <th>Nombre</th><th>Negocio</th><th>Cliente</th><th>Fuente</th>
+          <th class="ctr">Cl. 1</th><th class="ctr">Cl. 2</th><th class="ctr">Cl. 3</th>
+          <th>CRM</th><th>Etapa</th>
+        </tr></thead>
+        <tbody id="tbody">${rows}</tbody>
+      </table>
+    </div>
+    <div class="rowcount" id="rowcount"></div>`;
+
+  const q = document.getElementById('q'), f = document.getElementById('fcli');
+  const apply = () => {
+    const term = q.value.trim().toLowerCase(), want = f.value;
+    let shown = 0;
+    document.querySelectorAll('#tbody tr').forEach(tr => {
+      const ok = (!term || tr.dataset.q.includes(term)) && (!want || tr.dataset.cli === want);
+      tr.style.display = ok ? '' : 'none';
+      if (ok) shown++;
+    });
+    document.getElementById('rowcount').textContent =
+      `Mostrando ${shown} de ${c.enrollees.length} inscriptos`;
+  };
+  q.addEventListener('input', apply);
+  f.addEventListener('change', apply);
+  apply();
+}
+
+const CURSO_SHELL = `
+  <div class="method">
+    <b>Cómo se calcula:</b> asistencia desde las columnas <em>CLASE 1 / CLASE 2 / CLASE 3</em> de la hoja.
+    <em>CPL</em> = inversión ÷ inscriptos con fuente “Meta”.
+    <em>Cierres</em> = negociaciones con origen “Curso en vivo IA” que están en el pipeline
+    <em>Seguimiento Clientes</em> del CRM. <em>CAC</em> = inversión ÷ cierres.
+    La inversión en Meta Ads se actualiza a mano cuando la pasás por chat.
+  </div>
+  <h2 class="band">Resultados de negocio</h2>
+  <div class="kpis" id="kpis"></div>
+  <h2 class="band band-gap">Inscriptos y asistencia</h2>
+  <div class="tiles" id="tiles"></div>
+  <h2 class="band band-gap">Tendencia y composición</h2>
+  <div class="trio">
+    <section class="panel">
+      <h3>Inscriptos acumulados por día</h3>
+      <svg id="line" viewBox="0 0 620 210" width="100%" height="210" role="img"
+        aria-label="Curva de inscriptos acumulados por día"></svg>
+    </section>
+    <section class="panel">
+      <h3>Clientes Boxer vs. no clientes</h3>
+      <div class="donut-row">
+        <svg id="donut" viewBox="0 0 150 150" width="136" height="136" role="img"
+          aria-label="Proporción de clientes Boxer"></svg>
+        <div class="legend" id="donut-legend"></div>
+      </div>
+    </section>
+    <section class="panel">
+      <h3>Leads nuevos — origen “Curso en vivo IA”</h3>
+      <div id="origin"></div>
+    </section>
+  </div>
+  <h2 class="band band-gap">Embudo en el CRM</h2>
+  <section class="panel" id="stages"></section>
+  <h2 class="band band-gap">Listado de inscriptos</h2>
+  <section class="panel" id="roster"></section>`;
+
+const CHARLA_SHELL = `
+  <div class="method">
+    <b>Cómo se calcula:</b> <em>Inscriptos presencial</em> y <em>Solicitan material</em> son la cantidad
+    de registros en cada solapa de la hoja. <em>Nuevos leads</em> son los prospectos creados en Bitrix24
+    bajo el origen “Entrevista Campana Repuestos”, y <em>Derivados</em> los que de esos ya pasaron a
+    etapa <em>Convertido</em>.
+  </div>
+  <h2 class="band">Resultados de la charla</h2>
+  <div class="kpis" id="kpis"></div>
+  <h2 class="band band-gap">Registros que no son clientes Boxer</h2>
+  <section class="panel" id="prospects"></section>`;
+
+function drawCharlaKpis(c) {
+  const s = c.stats;
+  const card = (label, glyph, tint, num, note, idle) => `
+    <div class="kpi">
+      <div class="kpi-glyph" style="background:${tint}">${glyph}</div>
+      <div class="kpi-label">${label}</div>
+      <div class="kpi-num${idle ? ' void' : ''}">${num}</div>
+      <div class="kpi-note${idle ? ' idle' : ''}">${note}</div>
+    </div>`;
+  const conv = s.nuevos_leads > 0
+    ? Math.round(s.leads_derivados / s.nuevos_leads * 100) + '% de los leads nuevos'
+    : 'Ninguno derivado todavía';
+  document.getElementById('kpis').innerHTML = [
+    card('Inscriptos presencial', '⚑', 'rgba(57,135,229,0.17)', s.inscriptos_presencial,
+      'registros en la solapa Inscripción Presencial', s.inscriptos_presencial === 0),
+    card('Solicitan material', '⤓', 'rgba(217,89,38,0.17)', s.solicitan_material,
+      'registros en la solapa Piden descarga del material', s.solicitan_material === 0),
+    card('Nuevos leads generados', '✦', 'rgba(144,133,233,0.19)', s.nuevos_leads,
+      'prospectos con este origen en Bitrix24', s.nuevos_leads === 0),
+    card('Nuevos leads derivados', '✓', 'rgba(53,178,58,0.17)', s.leads_derivados,
+      conv, s.leads_derivados === 0)
+  ].join('');
+}
+
+function drawCharlaProspects(c) {
+  const list = c.no_clientes || [];
+  const host = document.getElementById('prospects');
+  if (!list.length) {
+    host.innerHTML = `
+      <div class="empty">
+        Todav&iacute;a no hay registros de no clientes en esta charla.<br>
+        En cuanto se carguen en la hoja aparecen ac&aacute; con su solapa de origen y su etapa en el CRM.
+      </div>`;
+    return;
+  }
+  const rows = list.map(r => `
+    <tr data-q="${esc((r.nombre + ' ' + r.negocio).toLowerCase())}">
+      <td class="who">${esc(r.nombre) || '—'}</td>
+      <td>${esc(r.negocio) || '—'}</td>
+      <td><span class="tag ${r.solapa === 'Presencial' ? 'curso' : 'charla'}">${esc(r.solapa)}</span></td>
+      <td>${r.crm_id ? `<span class="crmid">${esc(r.crm_id)}</span>` : '—'}</td>
+      <td>${esc(r.crm_stage) || '—'}</td>
+    </tr>`).join('');
+  host.innerHTML = `
+    <div class="controls">
+      <input type="text" id="q" placeholder="Buscar por nombre o negocio…" aria-label="Buscar registro">
+    </div>
+    <div class="twrap">
+      <table>
+        <thead><tr>
+          <th>Nombre</th><th>Negocio</th><th>Solapa</th><th>CRM</th><th>Etapa en el CRM</th>
+        </tr></thead>
+        <tbody id="tbody">${rows}</tbody>
+      </table>
+    </div>
+    <div class="rowcount" id="rowcount"></div>`;
+  const q = document.getElementById('q');
+  const apply = () => {
+    const t = q.value.trim().toLowerCase();
+    let n = 0;
+    document.querySelectorAll('#tbody tr').forEach(tr => {
+      const ok = !t || tr.dataset.q.includes(t);
+      tr.style.display = ok ? '' : 'none';
+      if (ok) n++;
+    });
+    document.getElementById('rowcount').textContent =
+      `Mostrando ${n} de ${list.length} registros que no son clientes`;
+  };
+  q.addEventListener('input', apply);
+  apply();
+}
+
+const WEBINAR_SHELL = `
+  <div id="preaviso"></div>
+  <div class="method">
+    <b>Cómo se calcula:</b> <em>Datos nuevos</em> y <em>Reactivaciones</em> salen de la columna
+    <em>Estado CRM</em> de la planilla. <em>Asistentes</em> de la columna <em>Asistió</em>.
+    <em>CPL</em> = inversión ÷ inscriptos con fuente “Meta”. <em>Derivaciones</em> son los prospectos
+    con este origen que ya pasaron a etapa <em>Convertido</em> en Bitrix24, y <em>Cierres</em> las
+    negociaciones con este origen que llegaron al pipeline <em>Seguimiento Clientes</em>.
+    <em>CAC</em> = inversión ÷ cierres.
+  </div>
+  <h2 class="band">Resultados de negocio</h2>
+  <div class="kpis" id="kpis"></div>
+  <h2 class="band band-gap">Inscriptos y asistencia</h2>
+  <div class="tiles" id="tiles"></div>
+  <h2 class="band band-gap">Tendencia y composición</h2>
+  <div class="trio">
+    <section class="panel">
+      <h3>Inscriptos acumulados por día</h3>
+      <svg id="line" viewBox="0 0 620 210" width="100%" height="210" role="img"
+        aria-label="Curva de inscriptos acumulados por día"></svg>
+    </section>
+    <section class="panel">
+      <h3>Clientes Boxer vs. no clientes</h3>
+      <div class="donut-row">
+        <svg id="donut" viewBox="0 0 150 150" width="136" height="136" role="img"
+          aria-label="Proporción de clientes Boxer"></svg>
+        <div class="legend" id="donut-legend"></div>
+      </div>
+    </section>
+    <section class="panel">
+      <h3>Derivaciones</h3>
+      <div id="derivaciones"></div>
+    </section>
+  </div>
+  <h2 class="band band-gap">Situación en el CRM</h2>
+  <section class="panel" id="etapas"></section>
+  <h2 class="band band-gap">Listado de inscriptos</h2>
+  <section class="panel" id="roster"></section>`;
+
+function drawPreaviso(c) {
+  const host = document.getElementById('preaviso');
+  if (!host) return;
+  const primera = (c.fechas || [])[0];
+  if (!primera) return;
+  const cuando = new Date(primera + 'T00:00:00');
+  const hoy = new Date(); hoy.setHours(0, 0, 0, 0);
+  if (cuando < hoy) { host.innerHTML = ''; return; }
+  const dias = Math.round((cuando - hoy) / 86400000);
+  const falta = dias === 0 ? 'es hoy' : dias === 1 ? 'es mañana' : `faltan ${dias} días`;
+  const fecha = cuando.toLocaleDateString('es-AR', { day: 'numeric', month: 'long' });
+  host.innerHTML = `
+    <div class="method" style="border-left-color:var(--blue)">
+      <b>Evento por delante:</b> ${esc(c.titulo)} se hace el ${fecha}${c.hora ? ' a las ' + esc(c.hora) : ''}
+      — ${falta}.${c.expositor ? ' Expone ' + esc(c.expositor) + '.' : ''}
+      Los números arrancan en cero y se llenan solos a medida que entren las inscripciones.
+    </div>`;
+}
+
+function drawWebinarTiles(c) {
+  const s = c.stats;
+  const pct = n => s.total ? Math.round(n / s.total * 100) + '% del total' : '';
+  const t = (label, num, note) => `
+    <div class="tile">
+      <div class="tile-label">${label}</div>
+      <div class="tile-num">${num}</div>
+      ${note ? `<div class="tile-note">${note}</div>` : ''}
+    </div>`;
+  const show = s.total ? Math.round(s.asistentes / s.total * 100) + '% show rate' : 'Sin inscriptos aún';
+  document.getElementById('tiles').innerHTML = [
+    t('Total inscriptos', s.total, ''),
+    t('Clientes Boxer', s.clientes_si, pct(s.clientes_si)),
+    t('No clientes', s.clientes_no, pct(s.clientes_no)),
+    t('Datos nuevos', s.nuevos, pct(s.nuevos)),
+    t('Reactivaciones', s.reactivaciones, pct(s.reactivaciones)),
+    t('Asistentes', s.asistentes, show)
+  ].join('');
+}
+
+function drawDerivaciones(c) {
+  const s = c.stats;
+  const der = s.derivaciones || 0;
+  const abiertos = s.prospectos_abiertos || 0;
+  const tot = der + abiertos;
+  const max = Math.max(der, abiertos, 1);
+  const row = (name, val, color) => `
+    <div class="bar">
+      <div class="bar-name wide">${name}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(val / max * 100).toFixed(1)}%;background:${color}"></div></div>
+      <div class="bar-num">${val}</div>
+    </div>`;
+  const tasa = tot ? Math.round(der / tot * 100) + '%' : '\u2014';
+  document.getElementById('derivaciones').innerHTML =
+    row('Convertidos', der, 'var(--good)') +
+    row('Aún prospecto', abiertos, 'var(--blue)') +
+    `<div class="panel-foot">Tasa de derivación <b style="color:var(--ink)">${tasa}</b> sobre
+      ${tot} prospecto${tot === 1 ? '' : 's'} con origen “${esc(c.origen_crm || '')}”.
+      Se cuenta directo en Bitrix24: convertidos son los que ya pasaron a etapa
+      <b style="color:var(--ink)">Convertido</b>.</div>`;
+}
+
+function drawEtapas(c) {
+  const list = (c.etapas_crm || []).slice().sort((a, b) => b.n - a.n);
+  const host = document.getElementById('etapas');
+  if (!list.length) {
+    host.innerHTML = `
+      <h3>Qué son hoy en el CRM los inscriptos</h3>
+      <div class="empty">Todav&iacute;a no hay inscriptos procesados por el flujo.<br>
+        En cuanto n8n empiece a cargarlos aparecen ac&aacute; repartidos entre prospecto,
+        negociaci&oacute;n y contacto sin registro.</div>`;
+    return;
+  }
+  const max = list[0].n;
+  host.innerHTML = `
+    <h3>Qué son hoy en el CRM los inscriptos</h3>
+    ${list.map(e => `
+      <div class="bar">
+        <div class="bar-name" title="${esc(e.nombre)}">${esc(e.nombre)}</div>
+        <div class="bar-track"><div class="bar-fill" style="width:${(e.n / max * 100).toFixed(1)}%"></div></div>
+        <div class="bar-num">${e.n}</div>
+      </div>`).join('')}`;
+}
+
+function drawWebinarRoster(c) {
+  const list = c.enrollees || [];
+  const host = document.getElementById('roster');
+  if (!list.length) {
+    host.innerHTML = `
+      <div class="empty">Todav&iacute;a no hay inscriptos.<br>
+        Cuando el formulario empiece a recibir registros, cada uno aparece ac&aacute; con su estado
+        en el CRM, si asisti&oacute; y en qu&eacute; etapa qued&oacute;.</div>`;
+    return;
+  }
+  const rows = list.map(e => {
+    const cli = (e.cliente || '').trim().toLowerCase() === 'si';
+    return `<tr data-cli="${cli ? 'si' : 'no'}"
+      data-q="${esc((e.nombre + ' ' + e.apellido + ' ' + e.negocio).toLowerCase())}">
+      <td class="who">${esc((e.nombre + ' ' + e.apellido).trim()) || '\u2014'}</td>
+      <td>${esc(e.negocio) || '\u2014'}</td>
+      <td><span class="chip ${cli ? 'cli' : 'nocli'}">${cli ? 'S\u00ed' : 'No'}</span></td>
+      <td>${esc(e.fuente) || '\u2014'}</td>
+      <td class="ctr">${e.asistio ? '<span class="yes">\u2713</span>' : '<span class="no">\u2013</span>'}</td>
+      <td>${esc(e.estado_crm) || '\u2014'}</td>
+      <td>${e.crm_id ? `<span class="crmid">${esc(e.crm_id)}</span>` : '\u2014'}</td>
+      <td>${esc(e.crm_stage) || '\u2014'}</td>
+    </tr>`;
+  }).join('');
+  host.innerHTML = `
+    <div class="controls">
+      <input type="text" id="q" placeholder="Buscar por nombre o negocio\u2026" aria-label="Buscar inscripto">
+      <select id="fcli" aria-label="Filtrar por tipo de cliente">
+        <option value="">Clientes y no clientes</option>
+        <option value="si">Solo clientes Boxer</option>
+        <option value="no">Solo no clientes</option>
+      </select>
+    </div>
+    <div class="twrap">
+      <table>
+        <thead><tr>
+          <th>Nombre</th><th>Negocio</th><th>Cliente</th><th>Fuente</th>
+          <th class="ctr">Asistió</th><th>Estado CRM</th><th>CRM</th><th>Tipo en Bitrix</th>
+        </tr></thead>
+        <tbody id="tbody">${rows}</tbody>
+      </table>
+    </div>
+    <div class="rowcount" id="rowcount"></div>`;
+  const q = document.getElementById('q'), f = document.getElementById('fcli');
+  const apply = () => {
+    const term = q.value.trim().toLowerCase(), want = f.value;
+    let shown = 0;
+    document.querySelectorAll('#tbody tr').forEach(tr => {
+      const ok = (!term || tr.dataset.q.includes(term)) && (!want || tr.dataset.cli === want);
+      tr.style.display = ok ? '' : 'none';
+      if (ok) shown++;
+    });
+    document.getElementById('rowcount').textContent = `Mostrando ${shown} de ${list.length} inscriptos`;
+  };
+  q.addEventListener('input', apply);
+  f.addEventListener('change', apply);
+  apply();
+}
+
+const OBJ_SHELL = `
+  <div id="desc"></div>
+  <h2 class="band">Objetivos del webinar</h2>
+  <div class="goals" id="goals"></div>
+  <h2 class="band band-gap">Resultados de negocio</h2>
+  <div class="kpis" id="kpis"></div>
+  <h2 class="band band-gap">Inscriptos y asistencia</h2>
+  <div class="tiles five" id="tiles"></div>
+  <h2 class="band band-gap">Tendencia y origen</h2>
+  <div class="duo">
+    <section class="panel">
+      <h3>Inscriptos acumulados por día</h3>
+      <svg id="line" viewBox="0 0 620 210" width="100%" height="210" role="img"
+        aria-label="Curva de inscriptos acumulados por día"></svg>
+    </section>
+    <section class="panel">
+      <h3 id="origin-title">Leads nuevos con el origen del evento</h3>
+      <div id="origin"></div>
+    </section>
+  </div>`;
+
+function drawDesc(c) {
+  const host = document.getElementById('desc');
+  if (!host || !c.descripcion) return;
+  host.innerHTML = `<section class="panel" style="margin-bottom:22px">
+    <h3>De qué se trata</h3><p class="desc">${esc(c.descripcion)}</p></section>`;
+}
+
+function drawGoals(c) {
+  const s = c.stats, o = c.objetivos || {};
+  const yaPaso = (c.fechas || [])[0] < HOY;
+  const minIns = o.inscriptos_min, minDer = o.derivacion_pct_min;
+  const total = s.total || 0, der = s.derivaciones || 0;
+  const pctDer = total ? der / total * 100 : null;
+  const fmtPct = v => (Math.round(v * 10) / 10).toString().replace('.', ',') + '%';
+
+  // ok: cumple; bad: no cumple con el evento ya hecho; wait: todavía se está midiendo
+  const estado = (cumple, sinDatos) => cumple
+    ? '<span class="status ok">✓ Cumple</span>'
+    : sinDatos ? '<span class="status wait">Sin datos todavía</span>'
+    : yaPaso ? '<span class="status bad">✕ No cumple</span>'
+    : '<span class="status wait">En camino</span>';
+
+  const meter = (val, mark, max, cumple, fmt) => {
+    const w = Math.min(val / max, 1) * 100, m = mark / max * 100;
+    return `<div class="meter" role="img" aria-label="${fmt(val)} sobre un objetivo de ${fmt(mark)}">
+        <div class="meter-fill${cumple ? ' ok' : ''}" style="width:${w.toFixed(1)}%"></div>
+        <div class="meter-mark" style="left:calc(${m.toFixed(1)}% - 1px)"></div>
+      </div>
+      <div class="meter-scale"><span>${fmt(0)}</span>
+        <span class="mk" style="left:${m.toFixed(1)}%">objetivo ${fmt(mark)}</span>
+        <span>${fmt(max)}</span></div>`;
+  };
+
+  const cards = [];
+  if (minIns != null) {
+    const ok = total > minIns, max = Math.max(minIns * 1.5, total);
+    const faltan = minIns + 1 - total;
+    cards.push(`<div class="goal">
+      <div class="goal-head"><div><div class="goal-label">Inscriptos</div>
+        <div class="goal-target">Objetivo: más de ${minIns}</div></div>${estado(ok, false)}</div>
+      <div class="goal-num">${total}<small>inscriptos</small></div>
+      ${meter(total, minIns, Math.ceil(max / 10) * 10, ok, v => Math.round(v))}
+      <div class="goal-note">${ok ? `Pasamos el objetivo por ${total - minIns}.`
+        : `Faltan ${faltan} para pasar los ${minIns}.`}</div>
+    </div>`);
+  }
+  if (minDer != null) {
+    const ok = pctDer != null && pctDer > minDer;
+    const max = Math.max(minDer * 2, pctDer || 0);
+    cards.push(`<div class="goal">
+      <div class="goal-head"><div><div class="goal-label">Porcentaje de derivación</div>
+        <div class="goal-target">Objetivo: más del ${minDer}% de los inscriptos derivados a ventas</div></div>
+        ${estado(ok, pctDer == null)}</div>
+      <div class="goal-num">${pctDer == null ? '—' : fmtPct(pctDer)}<small>${der} derivado${der === 1 ? '' : 's'} de ${total}</small></div>
+      ${meter(pctDer || 0, minDer, Math.ceil(max / 5) * 5, ok, v => Math.round(v) + '%')}
+      <div class="goal-note">${pctDer == null ? 'Se calcula cuando haya inscriptos.'
+        : ok ? 'La derivación está por encima del objetivo.'
+        : `Para pasar el ${minDer}% hace${Math.floor(total * minDer / 100) + 1 === 1 ? '' : 'n'} falta ${Math.floor(total * minDer / 100) + 1} derivado${Math.floor(total * minDer / 100) + 1 === 1 ? '' : 's'} con ${total} inscriptos.`}</div>
+    </div>`);
+  }
+  document.getElementById('goals').innerHTML = cards.join('');
+}
+
+function drawObjTiles(c) {
+  const s = c.stats, yaPaso = (c.fechas || [])[0] < HOY;
+  const pct = n => s.total ? Math.round(n / s.total * 100) + '% del total' : '';
+  const t = (label, num, note) => `
+    <div class="tile">
+      <div class="tile-label">${label}</div>
+      <div class="tile-num">${num}</div>
+      ${note ? `<div class="tile-note">${note}</div>` : ''}
+    </div>`;
+  document.getElementById('tiles').innerHTML = [
+    t('Inscriptos', s.total, ''),
+    t('Clientes Boxer', s.clientes_si, pct(s.clientes_si)),
+    t('No clientes', s.clientes_no, pct(s.clientes_no)),
+    t('Asistieron', yaPaso ? s.asistentes : '—', yaPaso ? '' : 'Se carga después del evento'),
+    t('% de asistencia', yaPaso && s.total ? Math.round(s.asistentes / s.total * 100) + '%' : '—',
+      !yaPaso ? 'Se mide después del evento' : s.total ? `${s.asistentes} de ${s.total} inscriptos` : 'Sin inscriptos')
+  ].join('');
+}
+
+function drawObjOrigin(c) {
+  const s = c.stats;
+  document.getElementById('origin-title').textContent = c.origen_crm
+    ? `Leads nuevos — origen “${c.origen_crm}”` : 'Leads nuevos con el origen del evento';
+  const p = s.leads_prospecto || 0, n = s.leads_negociacion || 0;
+  const max = Math.max(p, n, 1);
+  const row = (name, val, color) => `
+    <div class="bar">
+      <div class="bar-name wide">${name}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(val / max * 100).toFixed(1)}%;background:${color}"></div></div>
+      <div class="bar-num">${val}</div>
+    </div>`;
+  document.getElementById('origin').innerHTML =
+    row('Prospecto', p, 'var(--blue)') + row('Negociación', n, 'var(--orange)') +
+    `<div class="panel-foot">${c.origen_crm
+      ? `${p + n} registro${p + n === 1 ? '' : 's'} en Bitrix24 con ese origen, contados directo del CRM.`
+      : 'Falta crear el origen del evento en Bitrix24. Hasta entonces no hay qué contar.'}</div>`;
+}
+
+function drawEvent(c) {
+  const body = document.getElementById('body');
+  if (c.objetivos) {
+    body.innerHTML = OBJ_SHELL;
+    drawDesc(c); drawGoals(c);
+    drawKpis(c); drawObjTiles(c);
+    drawLine(c); drawObjOrigin(c);
+  } else if (c.kind === 'charla') {
+    body.innerHTML = CHARLA_SHELL;
+    drawCharlaKpis(c);
+    drawCharlaProspects(c);
+  } else if (c.kind === 'webinar') {
+    body.innerHTML = WEBINAR_SHELL;
+    drawPreaviso(c);
+    drawKpis(c); drawWebinarTiles(c);
+    drawLine(c); drawDonut(c); drawDerivaciones(c);
+    drawEtapas(c); drawWebinarRoster(c);
+  } else {
+    body.innerHTML = CURSO_SHELL;
+    drawKpis(c); drawTiles(c);
+    drawLine(c); drawDonut(c); drawOrigin(c);
+    drawStages(c); drawRoster(c);
+  }
+}
+
+function go(k, tab) {
+  activeQ = k;
+  const c = tab === 'cal' ? null : courses.find(x => x.id === tab);
+  activeTab = c ? c.id : 'cal';
+  const tag = document.getElementById('title-tag');
+  if (c) {
+    document.getElementById('title').textContent = c.titulo;
+    tag.textContent = c.tag;
+    tag.className = 'tag ' + c.tag.toLowerCase();
+    tag.hidden = false;
+  } else {
+    document.getElementById('title').textContent = 'Calendario · ' + qName(k);
+    tag.hidden = true;
+  }
+  drawRail();
+  drawTabs();
+  if (c) drawEvent(c); else drawCalendar(k);
+  window.scrollTo({ top: 0, behavior: 'auto' });
+}
+
+document.getElementById('stamp').textContent = 'Actualizado ' +
+  new Date().toLocaleString('es-AR', { dateStyle: 'medium', timeStyle: 'short' });
+go(activeQ, 'cal');
+</script>
+
+</body></html>

@@ -48,6 +48,18 @@ def leer_parte(fecha):
     return parte.get("analisis", {}), parte.get("preparacion", {})
 
 
+def condicion(cfg, fecha):
+    """True si el análisis cumple su `solo_si` (además de `dias`)."""
+    regla = cfg.get("solo_si")
+    if not regla:
+        return True
+    if regla == "eventos_abiertos":
+        sys.path.insert(0, str(RAIZ / "cursos"))
+        from monitoreo import eventos_abiertos
+        return bool(eventos_abiertos(fecha))
+    raise ValueError(f"solo_si desconocido: {regla}")
+
+
 def calcular(fecha=None):
     agenda = yaml.safe_load((RAIZ / "agenda.yaml").read_text(encoding="utf-8"))
     if fecha is None:
@@ -59,7 +71,7 @@ def calcular(fecha=None):
     pendientes, ya_hechos, agotados, no_tocan = [], [], [], []
     for nombre, cfg in agenda["analisis"].items():
         registro = parte.get(nombre, {})
-        if not toca(cfg["dias"], dia_semana):
+        if not toca(cfg["dias"], dia_semana) or not condicion(cfg, fecha):
             no_tocan.append(nombre)
         elif registro.get("estado") == "ok":
             ya_hechos.append(nombre)
@@ -89,7 +101,15 @@ def calcular(fecha=None):
         "no_tocan": no_tocan,
         "intentos": {n: parte.get(n, {}).get("intentos", 0) for n in pendientes + agotados},
         "detalle": {n: agenda["analisis"][n] for n in pendientes},
+        "eventos_abiertos": _eventos(fecha),
     }
+
+
+def _eventos(fecha):
+    """{slug: estado} de los eventos de cursos que no están cerrados (para `cursos`)."""
+    sys.path.insert(0, str(RAIZ / "cursos"))
+    from monitoreo import eventos_abiertos
+    return {k: v for k, v in eventos_abiertos(fecha).items()}
 
 
 def main():

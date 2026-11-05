@@ -1,0 +1,34 @@
+{
+  "id": "slug-del-evento",
+  "titulo": "Webinar: [nombre]",
+  "tag": "WEBINAR",
+  "kind": "webinar",
+  "fechas": [
+    "2026-01-01"
+  ],
+  "hora": "13:00",
+  "expositor": "[nombre]",
+  "descripcion": "[de qué se trata, 3 a 5 líneas, la misma de la ficha]",
+  "sheet_url": "",
+  "origen_crm": "[nombre del origen en Bitrix]",
+  "origen_source_id": "",
+  "inversion_total": null,
+  "inversion_moneda": "$",
+  "objetivos": {
+    "inscriptos_min": 40,
+    "derivacion_pct_min": 15
+  },
+  "stats": {
+    "total": 0,
+    "clientes_si": 0,
+    "clientes_no": 0,
+    "asistentes": 0,
+    "meta_leads": 0,
+    "derivaciones": 0,
+    "cierres": 0,
+    "leads_prospecto": 0,
+    "leads_negociacion": 0
+  },
+  "signups_por_dia": [],
+  "agenda": []
+}

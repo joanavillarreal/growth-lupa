@@ -1,0 +1,130 @@
+{
+  "id": "webinar-ordenar-stock-oct2026",
+  "titulo": "Webinar: Cómo ordenar tu stock",
+  "tag": "WEBINAR",
+  "kind": "webinar",
+  "fechas": [
+    "2026-10-22"
+  ],
+  "hora": "13:00",
+  "expositor": "Santi",
+  "descripcion": "Un webinar para dueños y encargados de casas de repuestos que quieren ordenar el stock y que no se les vuelva a desarmar. Santi te cuenta cómo lo hicieron otros colegas repuesteros: por qué el orden del stock arranca por el orden del depósito, cómo encararlo sin frenar el mostrador y cómo pasarlo a la computadora de a poco. Consejos probados en el mostrador, no teoría.",
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1vitUz3BV1fsFku_gweVBYBoCO3rbxnTSgwq94o7tKSs/edit",
+  "origen_crm": "Webinar Ordenar Stock",
+  "origen_source_id": "UC_V7TMQ9",
+  "inversion_total": 72014.52,
+  "inversion_moneda": "$",
+  "inversion_otros": [
+    {
+      "fecha": "2026-10-13",
+      "concepto": "recontacto por WhatsApp a Reactivar Presupuesto",
+      "monto": 5,
+      "moneda": "USD",
+      "aprox": true
+    }
+  ],
+  "objetivos": {
+    "inscriptos_min": 40,
+    "derivacion_pct_min": 15
+  },
+  "stats": {
+    "total": 57,
+    "clientes_si": 23,
+    "clientes_no": 34,
+    "asistentes": 26,
+    "meta_leads": 39,
+    "derivaciones": 3,
+    "cierres": 1,
+    "leads_prospecto": 21,
+    "leads_negociacion": 22,
+    "prospectos_abiertos": 17
+  },
+  "signups_por_dia": [
+    {
+      "fecha": "2026-10-08",
+      "nuevos": 1,
+      "acumulado": 1
+    },
+    {
+      "fecha": "2026-10-09",
+      "nuevos": 5,
+      "acumulado": 6
+    },
+    {
+      "fecha": "2026-10-10",
+      "nuevos": 2,
+      "acumulado": 8
+    },
+    {
+      "fecha": "2026-10-11",
+      "nuevos": 1,
+      "acumulado": 9
+    },
+    {
+      "fecha": "2026-10-12",
+      "nuevos": 1,
+      "acumulado": 10
+    },
+    {
+      "fecha": "2026-10-13",
+      "nuevos": 13,
+      "acumulado": 23
+    },
+    {
+      "fecha": "2026-10-14",
+      "nuevos": 12,
+      "acumulado": 35
+    },
+    {
+      "fecha": "2026-10-15",
+      "nuevos": 4,
+      "acumulado": 39
+    },
+    {
+      "fecha": "2026-10-16",
+      "nuevos": 4,
+      "acumulado": 43
+    },
+    {
+      "fecha": "2026-10-17",
+      "nuevos": 1,
+      "acumulado": 44
+    },
+    {
+      "fecha": "2026-10-18",
+      "nuevos": 3,
+      "acumulado": 47
+    },
+    {
+      "fecha": "2026-10-19",
+      "nuevos": 4,
+      "acumulado": 51
+    },
+    {
+      "fecha": "2026-10-20",
+      "nuevos": 3,
+      "acumulado": 54
+    },
+    {
+      "fecha": "2026-10-21",
+      "nuevos": 1,
+      "acumulado": 55
+    },
+    {
+      "fecha": "2026-10-22",
+      "nuevos": 2,
+      "acumulado": 57
+    }
+  ],
+  "agenda": [],
+  "etapas_crm": [
+    {
+      "nombre": "Webinars",
+      "n": 17
+    },
+    {
+      "nombre": "Convertido",
+      "n": 3
+    }
+  ]
+}

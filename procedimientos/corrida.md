@@ -44,9 +44,10 @@ Seguir su `procedimiento` (en `agenda.yaml`). Al terminar cada uno, sin esperar 
    main`, resolver conservando los datos de los dos lados, y volver a pushear.
 3. Los avisos propios del análisis (la alarma del funnel, el bloque de la guardia, la tabla de la
    inversión) se mandan **tal cual** los imprime su script, al destino que corresponda según el
-   modo. Si el script dice que no hay novedades, no se manda ese aviso aparte.
+   modo. Si el script dice que no hay novedades, no se manda ese aviso aparte. `cursos` no tiene
+   aviso aparte: sus alertas van en el mensaje final (paso 4).
 
-En **oficial**, el Monitor y el Panel Meta Ads se publican en su link (leyéndolo antes, regla
+En **oficial**, el Monitor, el Panel Meta Ads y Cursos en Vivo se publican en su link (leyéndolo antes, regla
 7) y la inversión se carga de verdad (sin `--dry-run`). En **ensayo**, en cambio, la comparación de "Cómo se compara en ensayo" (CLAUDE.md) para el funnel,
 meta e inversión, con el resultado en `--datos` → `comparacion`.
 
@@ -63,6 +64,7 @@ Uno solo por corrida, aunque no haya tocado nada, al DM `slack_resumen`. Formato
 <si aplica: Gasto de Meta sin actualizar desde dd/mm>
 <si aplica: Campañas a confirmar (producto y origen del CRM): <nombres>>
 <si aplica: Orígenes nuevos sin canal (decidís vos): <nombre (id)>; y los que sumé solos a Viajes Comerciales>
+<si corrió cursos: las líneas 🎓 de `cursos/monitoreo.py resumen`, una por evento con sus ⚠️ alertas>
 Paneles: <links que se publicaron hoy>
 Parte: partes/<AAAA-MM-DD>.json
 Arranque: <contenido de .git/lupa-arranque, ej. "17c7a51 (= origin/main)">

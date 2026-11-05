@@ -1,0 +1,72 @@
+# Eventos del canal educativo (cursos, webinars y charlas) que monitorea Lupa.
+#
+# Un bloque por evento, con la clave = carpeta en cursos/eventos/<slug>/ (ahí vive su
+# dashboard.json, lo que se ve en Cursos en Vivo). Los datos los pasa Vent cuando define el
+# evento (procedimientos/eventos.md); Lupa no los inventa ni los saca del repo de Vent.
+#
+# Campos:
+#   nombre, tipo (curso | webinar | charla), fechas (una por clase), hora
+#   apertura:  día en que se abre la inscripción. Antes de esa fecha el evento está "por abrir".
+#   objetivos: inscriptos_min y derivacion_pct_min (los del canal: más de 40 y más del 15%).
+#   planilla:  ID del Google Sheet de inscriptos (hoja "Inscriptos").
+#   origen_crm / source_id: el origen propio del evento en Bitrix.
+#   meta:      cuenta y campañas dedicadas al evento (solo esas; nunca campañas generales
+#              como «JY | Cursos y Webinars»). Sin campañas: inversión null, no 0.
+#   cerrado:   fecha en que Vent pidió cerrarlo. Un evento cerrado no se monitorea más.
+#
+# Estado, calculado por cursos/monitoreo.py contra la fecha de hoy:
+#   por_abrir           hoy < apertura
+#   inscripcion_abierta apertura <= hoy <= última fecha del evento
+#   realizado           pasó la última fecha y no tiene `cerrado`
+#   cerrado             tiene `cerrado`
+# Lupa corre el monitoreo y republica el panel solo si hay alguno en los tres primeros.
+
+eventos:
+  2026-08-curso-ia-boxer:
+    nombre: "Curso en vivo: IA aplicada a Casas de Repuestos"
+    tipo: curso
+    fechas: [2026-08-10, 2026-08-12, 2026-08-14]
+    planilla: 1pPCV3m68bMENWS8KTk21dTSeAAbH-hbgNrRQsXyM9FY
+    origen_crm: Curso en vivo IA
+    source_id: UC_AZSX3J
+    cerrado: 2026-10-07        # su resultados.md entró al repo de Vent ese día; se copió cerrado
+
+  2026-09-webinar-mostrador:
+    nombre: "Webinar: Mostrador"
+    tipo: webinar
+    fechas: [2026-09-17]
+    hora: "13:00"
+    planilla: 1-pzR0_UCD8hPdYrRAKNCwh5uXRaBqDFE3DgKmrSZTb4
+    origen_crm: Webinar Mostrador 2026
+    source_id: UC_CQ4N7U
+    cerrado: 2026-10-07        # su resultados.md entró al repo de Vent ese día; se copió cerrado
+
+  2026-10-webinar-ordenar-stock:
+    nombre: "Webinar: Cómo ordenar tu stock"
+    tipo: webinar
+    fechas: [2026-10-22]
+    hora: "13:00"
+    apertura: 2026-10-08
+    objetivos: {inscriptos_min: 40, derivacion_pct_min: 15}
+    planilla: 1vitUz3BV1fsFku_gweVBYBoCO3rbxnTSgwq94o7tKSs
+    origen_crm: Webinar Ordenar Stock
+    source_id: UC_V7TMQ9
+    meta:
+      cuenta: "725901852075382"
+      campanas:
+        - {id: "120254717004450427", nombre: "JY | Webinar Orden Stock (AGENTE META)"}
+
+  2026-11-webinar-decisiones-ia:
+    nombre: "Webinar: Decidí mejor con IA"
+    tipo: webinar
+    fechas: [2026-11-19]
+    hora: "13:00"
+    apertura: 2026-11-02
+    objetivos: {inscriptos_min: 40, derivacion_pct_min: 15}
+    planilla: 1sBHMzu-t_oDxPbkjeJnFPUzg8YevDGPCO8ACRmMiiu0
+    origen_crm: Webinar - Decisiones usando IA
+    source_id: UC_T93XNH
+    meta:
+      cuenta: "725901852075382"
+      campanas:
+        - {id: "120255141033740427", nombre: "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"}

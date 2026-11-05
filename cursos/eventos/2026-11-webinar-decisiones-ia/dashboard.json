@@ -1,0 +1,62 @@
+{
+  "id": "webinar-decisiones-ia-nov2026",
+  "titulo": "Webinar: Decidí mejor con IA",
+  "tag": "WEBINAR",
+  "kind": "webinar",
+  "fechas": [
+    "2026-11-19"
+  ],
+  "hora": "13:00",
+  "expositor": "Joana Villarreal",
+  "descripcion": "Un webinar para dueños y encargados de casas de repuestos. Te mostramos en vivo cómo, con inteligencia artificial, armás un panel con los números de tu propio negocio (ventas, stock, cuenta corriente) y lo usás para decidir mejor: qué reponer, qué está parado en el estante y a quién hay que cobrarle. No hace falta saber de computación: le pasás tus datos y le pedís lo que querés ver.",
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1sBHMzu-t_oDxPbkjeJnFPUzg8YevDGPCO8ACRmMiiu0/edit",
+  "origen_crm": "Webinar - Decisiones usando IA",
+  "origen_source_id": "UC_T93XNH",
+  "inversion_total": 16056.08,
+  "inversion_moneda": "$",
+  "objetivos": {
+    "inscriptos_min": 40,
+    "derivacion_pct_min": 15
+  },
+  "stats": {
+    "total": 9,
+    "clientes_si": 5,
+    "clientes_no": 4,
+    "asistentes": 0,
+    "meta_leads": 7,
+    "derivaciones": 0,
+    "cierres": 0,
+    "leads_prospecto": 4,
+    "leads_negociacion": 3,
+    "prospectos_abiertos": 3
+  },
+  "signups_por_dia": [
+    {
+      "fecha": "2026-11-02",
+      "nuevos": 3,
+      "acumulado": 3
+    },
+    {
+      "fecha": "2026-11-03",
+      "nuevos": 4,
+      "acumulado": 7
+    },
+    {
+      "fecha": "2026-11-04",
+      "nuevos": 1,
+      "acumulado": 8
+    },
+    {
+      "fecha": "2026-11-05",
+      "nuevos": 1,
+      "acumulado": 9
+    }
+  ],
+  "agenda": [],
+  "etapas_crm": [
+    {
+      "nombre": "Webinars",
+      "n": 3
+    }
+  ]
+}

@@ -10,3 +10,7 @@ meta/datos/crm/**/LEAD_*.csv
 meta/datos/crm/**/*-raw.csv
 .env
 *secretos.env
+
+# Cursos: las respuestas de las planillas de inscriptos traen nombres, teléfonos y emails.
+# Se guardan tal cual vinieron (regla 9) pero no se commitean: la base vive en Drive.
+cursos/datos/crudos/**/*planilla*

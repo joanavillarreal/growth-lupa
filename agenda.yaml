@@ -19,6 +19,9 @@
 #   entorno:       variables de entorno que tienen que existir (nunca se muestran).
 #   Lupa no lee el repo de ningún otro agente: lo que viene de otro agente llega por su parte.
 #   procedimiento: los pasos del análisis.
+#   solo_si:       condición extra además de `dias`. Hoy hay una: `eventos_abiertos` (corre solo
+#                  si cursos/eventos.yaml tiene algún evento por abrir, con inscripción abierta o
+#                  realizado sin cerrar; si no, va a `no_tocan` y el panel no se republica).
 
 zona_horaria: America/Argentina/Buenos_Aires
 
@@ -121,6 +124,20 @@ analisis:
     entorno: [BITRIX_WEBHOOK_URL]
     herramientas:
       - getAnalyticsDataByMetrics
+    slack: "D0BRVS7A4A3"
+    disparar_despues: []
+
+  cursos:
+    descripcion: Monitoreo de cursos y webinars (planilla, Bitrix y Meta) + Cursos en Vivo (copiado de Vent el 05/11/2026)
+    dias: todos
+    solo_si: eventos_abiertos
+    artefacto: cursos_en_vivo
+    procedimiento: procedimientos/cursos.md
+    entorno: [BITRIX_WEBHOOK_URL]   # Bitrix por webhook, como el funnel
+    herramientas:
+      - get_values                  # Google Sheets: la planilla de inscriptos de cada evento
+      - ads_get_ad_entities         # gasto de la campaña de Meta de cada evento
+    # Sin aviso aparte: las alertas del monitoreo van en el resumen de cierre (slack_resumen).
     slack: "D0BRVS7A4A3"
     disparar_despues: []
 
