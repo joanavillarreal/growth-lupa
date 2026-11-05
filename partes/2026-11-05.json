@@ -31,6 +31,53 @@
         "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Guardia: 4 alertas al canal (2 anuncios de Provincias sin resultado 3 días, costo por resultado subiendo en Remarketing y Provincias); gasto de ayer 56.491 ARS; panel publicado",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "hallazgos": [
+          "Panel Meta Ads publicado con datos hasta 04/11: Q4 1.405.119 ARS de gasto, CPL real 4.846 ARS, Meta -> CRM 100% (209 nuevos + 35 re-ingresos de 245), derivación 14,7% (29 de 197 resueltos)",
+          "El Panel Meta Ads publicado antes de esta corrida decía 'generado 2026-11-04', versión que no estaba en el repo: la corrida del 04/11 llegó a publicarlo pero no commiteó meta ni la registró en el parte",
+          "Anuncios activos sin link de Drive (19): los 17 de antes + ControlNegocio | Video35 | LAL-VideoProducto | v1 | 2026-11 y DemoStock | Video35 | LAL-VideoProducto | v1 | 2026-11"
+        ],
+        "alertas": [
+          "AsesoriaVirtual | Video | Córdoba LAL: 5.814 ARS en 3 días sin resultado",
+          "AsesoriaVirtual | Video | Neuquen LAL: 6.500 ARS en 3 días sin resultado",
+          "JY | Remarketing: costo por resultado de 1.387 a 5.743 ARS en 1 día",
+          "JY | Provincias Visitadas: costo por resultado sube hace 3 días"
+        ],
+        "metricas": {
+          "gasto_ayer_ars": 56491.35,
+          "silenciadas": 3,
+          "conciliacion_ayer": {
+            "meta": 7,
+            "crm": 6,
+            "slack": 1,
+            "faltan": 0
+          },
+          "errores_vivos": 0,
+          "campanas_a_confirmar": [
+            "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"
+          ],
+          "cambios_actividad_nuevos": 11
+        },
+        "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+        "comparacion": null
+      },
+      "para": []
     }
   },
   "preparacion": {
