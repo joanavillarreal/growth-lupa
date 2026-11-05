@@ -78,6 +78,40 @@
         "comparacion": null
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:03",
+      "resumen": "6 registros cargados al SPA 1052 (02/11–04/11), USD 127.18 (Meta 106.46, Google 20.72)",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "hallazgos": [
+          "Cargados 6 registros al SPA 1052 (02/11 a 04/11): Meta USD 106.46 (IDs 864, 866, 868), Google USD 20.72 (IDs 870, 872, 874). Total USD 127.18. Sin salteados ni huecos."
+        ],
+        "alertas": [],
+        "metricas": {
+          "desde": "2026-11-02",
+          "hasta": "2026-11-04",
+          "meta_usd": 106.46,
+          "google_usd": 20.72,
+          "total_usd": 127.18,
+          "registros": 6,
+          "ids": [
+            864,
+            866,
+            868,
+            870,
+            872,
+            874
+          ]
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
