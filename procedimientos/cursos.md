@@ -51,8 +51,8 @@ Para cada evento de `eventos_abiertos`, con `C=cursos/datos/crudos/<hoy>`:
 
 Google Sheets (para `get_values`) y Meta Ads (`ads_get_ad_entities`), más Slack que ya usa toda
 corrida. Al 05/11/2026 la rutina "Lupa · corrida diaria" (`trig_01McumqJBeuquCkoSywDC1YB`) tenía
-Metricool, Meta y Slack: **le faltaba Google Sheets**, que se agrega desde la pantalla de rutinas
-de claude.ai. Mientras falte, `cursos` sale fallido por regla 2 y el panel no se republica.
+Metricool, Meta y Slack; Joana le agregó Google Sheets ese mismo día (verificado en la rutina).
+Si algún día falta, `cursos` sale fallido por regla 2 y el panel no se republica.
 Bitrix no necesita conector: va por `BITRIX_WEBHOOK_URL`, que el entorno ya tiene.
 
 La rutina vieja de Vent ("Boxer — Monitoreo de cursos y webinars (diario)",
