@@ -112,6 +112,47 @@
         }
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:05",
+      "resumen": "Gestión 6.071 seguidores (+31 en 7 días), engagement orgánico 7,4%; Taller 140 (+4), 6,4% (muestra chica); leads de redes Q4: 6",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "hallazgos": [
+          "Panel de redes publicado con cuentas al 04/11. El panel publicado antes decía generado 04/11 08:06, versión que no estaba en el repo: la corrida del 04/11 lo publicó pero no commiteó ni registró redes_general en el parte (tampoco quedó el crudo de Metricool de ese día)"
+        ],
+        "alertas": [],
+        "metricas": {
+          "boxer-gestion": {
+            "seguidores": 6071,
+            "seguidores_delta_7d": 31,
+            "alcance_7d": 25271,
+            "alcance_organico_7d": 1253,
+            "alcance_pago_7d": 24018,
+            "engagement_organico_pct": 7.4,
+            "muestra_chica": false
+          },
+          "boxer-taller": {
+            "seguidores": 140,
+            "seguidores_delta_7d": 4,
+            "alcance_7d": 10906,
+            "alcance_organico_7d": 140,
+            "alcance_pago_7d": 10766,
+            "engagement_organico_pct": 6.4,
+            "muestra_chica": true
+          },
+          "leads_redes_q4": 6,
+          "datos_hasta": "2026-11-04"
+        },
+        "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9"
+      },
+      "para": []
     }
   },
   "preparacion": {
