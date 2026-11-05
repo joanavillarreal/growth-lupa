@@ -1,4 +1,12 @@
-# Análisis `meta` — guardia diaria y Panel Meta Ads
+# Análisis `meta` — Panel Meta Ads (y la guardia, sin avisos)
+
+**Sin alertas de Meta por ahora** (Joana, 05/11/2026). El análisis corre todos los días solo
+para actualizar y republicar el Panel Meta Ads: se siguen trayendo los datos de Meta y del CRM
+que el panel necesita. La guardia (paso 3) se sigue corriendo porque el panel muestra sus
+alertas (`memoria/guardia.jsonl`), pero **su mensaje no se manda a Slack**: ni al canal
+#adqui-notificaciones-canales ni al DM. En el resumen de cierre, de Meta va una sola línea: si
+el panel se republicó o no y por qué. Las alertas de Meta las va a mandar **Turbo**, cuando
+Joana lo decida.
 
 Copiado de la rutina "Agente Meta - Guardia diaria" de `agente-meta-ads` (pasos 1 a 6) y de
 `meta/referencias/panel.md`. Desde el 08/10/2026 no lee nada de ese repo. Todo se corre desde `meta/` (`cd meta`). **Solo lectura**: no se
@@ -95,7 +103,7 @@ python3 scripts/campanas_nuevas.py datos/meta-ads/guardia/<hoy>/ --json datos/me
 El mapa campaña → origen del CRM lo mantengo yo (Joana, 08/10/2026). Cada campaña que está en
 Meta (roster o gasto de 14 días) y no en el mapa se suma con `a_confirmar: true`,
 `origenes_crm: "PENDIENTE"` y el bloque sugerido por el nombre. **No invento el producto ni el
-origen**: las que siguen `a_confirmar` van al mensaje del día ("Campañas a confirmar: …"), todos
+origen**: las que siguen `a_confirmar` van al parte (`campanas_a_confirmar`; desde el 05/11/2026 no al mensaje del día, donde de Meta va una sola línea), todos
 los días, hasta que Joana conteste. Cuando contesta, cargo `origenes_crm`, `producto`,
 `destino` (y `fecha_evento` si es un evento) y borro `a_confirmar`. Cuando exista Turbo, las
 campañas nuevas me llegan por su parte, ya con su origen.
@@ -106,9 +114,10 @@ campañas nuevas me llegan por su parte, ya con su origen.
 python3 scripts/guardia_diaria.py datos/meta-ads/guardia/<hoy>/ --json informes/guardia/<hoy>.json
 ```
 
-Imprime `SIN NOVEDADES` o un bloque `MENSAJE DE SLACK` ya redactado. El bloque se manda **tal
-cual**, sin reescribirlo (ver "Slack" en CLAUDE.md para el destino según el modo). Las reglas
-G0-G5 y lo que la guardia no puede afirmar están en `meta/referencias/guardia-diaria.md`.
+Imprime `SIN NOVEDADES` o un bloque `MENSAJE DE SLACK` ya redactado. **Ese bloque no se manda**
+(Joana, 05/11/2026): queda en `informes/guardia/<hoy>.json` y sus alertas llegan al panel por
+`memoria/guardia.jsonl`. Las reglas G0-G5 y lo que la guardia no puede afirmar están en
+`meta/referencias/guardia-diaria.md`.
 
 ## 4. Panel
 
@@ -121,7 +130,7 @@ Reinyecta los datos en `informes/panel-trimestral.html` y avisa si falta algo.
 
 El botón "Ver anuncio" de la vista Anuncios activos abre la pieza en Drive, de
 `config/anuncios-drive.json` (los links los pasa Joana, por nombre de anuncio). Los anuncios
-activos sin link van al mensaje del día ("Anuncios sin link de Drive: …") para que los pase.
+activos sin link van al parte (`anuncios_sin_drive`); no al mensaje del día (05/11/2026).
 
 ## 5. Publicar o comparar (según `paneles.yaml`)
 
@@ -131,6 +140,6 @@ activos sin link van al mensaje del día ("Anuncios sin link de Drive: …") par
 
 ## 6. Parte y commit
 
-`parte.py meta ok` con `--datos` = alertas que se mandaron, silenciadas, gasto de ayer,
+`parte.py meta ok` con `--datos` = alertas que detectó la guardia (no enviadas), silenciadas, gasto de ayer,
 conciliación Meta/CRM/Slack, `campanas_a_confirmar` y el resultado de la comparación. Commit de la carpeta del día,
 `informes/guardia/<hoy>.json`, `memoria/guardia.jsonl`, `config/campanas.json`, el CSV del CRM, el panel y su JSON.
