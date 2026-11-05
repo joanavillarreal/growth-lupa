@@ -1,7 +1,38 @@
 {
   "fecha": "2026-11-05",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Monitor publicado; Q4: 102 derivados de 300 (esperado hoy 117); alarma: origen sin mapear Visitas presenciales - Santi",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "hallazgos": [
+          "Orígenes sin canal a decidir: Itca 2026 (UC_AQMO17), Expomecanico (UC_CCDPGU), Visitas presenciales - Lu (UC_ERP4TY), Visitas presenciales - Santi (UC_NCC84N)",
+          "Q4 al 05/11: 102 negocios derivados de 300 (esperado hoy 117, proyección 261); MRR 3.120 de 7.500 (proyección 7.973)"
+        ],
+        "alertas": [
+          "Origen sin mapear: Visitas presenciales - Santi (1 prospecto ayer)"
+        ],
+        "metricas": {
+          "snapshot": "2026-11-05",
+          "prospectos": 1878,
+          "negociaciones": 1250,
+          "q4_generados": 278,
+          "q4_derivados": 102,
+          "q4_cerrados": 15,
+          "q4_mrr": 3120.0,
+          "q4_cac": 84.85
+        },
+        "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
