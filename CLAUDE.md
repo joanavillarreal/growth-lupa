@@ -17,7 +17,7 @@ terminar, así que **todo lo que tenga que perdurar va al repo y se pushea a `ma
 | Análisis | Cuándo         | Panel             | Avisos en Slack                 | Después lee el parte |
 |----------|----------------|-------------------|---------------------------------|----------------------|
 | funnel   | todos los días | Monitor de Growth | #adqui-notificaciones-canales   | Orbi (futuro)        |
-| meta     | todos los días | Panel Meta Ads + guardia | #adqui-notificaciones-canales | Turbo (futuro) |
+| meta     | todos los días | Panel Meta Ads (la guardia corre sin avisar) | — (sin alertas; una línea en el resumen de cierre) | Turbo (futuro) |
 | inversion | lunes y jueves | (carga al SPA 1052) | #adqui-notificaciones-canales (tabla de lo cargado) | — |
 | redes_general | todos los días | Panel de redes (números al día y leads del Q) | DM D0BRVS7A4A3 | Conti (futuro) |
 | redes_semana  | solo lunes     | Panel de redes (conclusiones de la semana cerrada) | DM D0BRVS7A4A3 | Conti (se dispara su rutina si sale ok) |
@@ -83,13 +83,20 @@ fecha en hora de Argentina y el parte del día). Hago exactamente lo que devuelv
 5. Mensaje final a Slack siempre (regla 5), incluyendo lo que quedó en `agotados`.
 
 **Slack según el modo.** En `oficial` (el modo actual, desde el 09/10/2026), cada aviso va al
-`slack` de su análisis en `agenda.yaml`: la alarma del funnel, la guardia de Meta y la tabla de
+`slack` de su análisis en `agenda.yaml`: la alarma del funnel y la tabla de
 la inversión a #adqui-notificaciones-canales (`C0C2XKTLT9N`), como hacían las rutinas viejas, y
 solo si el script dice que hay algo para avisar (la tabla de la inversión va siempre que se
 cargue algo). El resumen de cierre de cada corrida va siempre al DM de Joana (`slack_resumen`,
 D0BRVS7A4A3), sin "[ensayo]". En `ensayo`, **todo** va al DM `slack_ensayo` (D0BRVS7A4A3) con "[ensayo]" adelante, para no
 duplicar en el canal del equipo lo que mandan las rutinas viejas. `slack_send_message` se
 verifica en todas las corridas (`herramientas_siempre`).
+
+**Sin alertas de Meta** (Joana, 05/11/2026). Por ahora no va ninguna alerta de Meta: la guardia
+no manda nada a Slack, ni al canal ni al DM (`slack: null` en `agenda.yaml`). El análisis `meta`
+sigue todos los días, solo para actualizar y republicar el Panel Meta Ads; la guardia se sigue
+corriendo porque el panel muestra sus alertas, pero su mensaje no se envía. En el resumen de
+cierre, de Meta va **una sola línea**: si el panel se republicó o no y por qué. Las alertas de
+Meta las va a mandar **Turbo**, cuando Joana lo decida.
 
 ### Funnel
 
@@ -125,7 +132,8 @@ no lo asigno yo.
    la cuenta: lo que está en `agotados` no se corre y se menciona en el mensaje final.
 5. **Nunca termino en silencio.** Toda corrida manda un mensaje a Slack, aunque sea "hoy no
    tocaba nada" o "todo en orden": el resumen de cierre al DM D0BRVS7A4A3. Los avisos de
-   funnel, Meta e inversión → #adqui-notificaciones-canales; redes → DM D0BRVS7A4A3.
+   funnel e inversión → #adqui-notificaciones-canales; redes → DM D0BRVS7A4A3. De Meta no va
+   ningún aviso (ver "Sin alertas de Meta").
 6. **Diagnostico con hechos.** Si algo falla, digo qué herramientas cargó la sesión y qué error
    devolvió. Nada de suposiciones. Si no sé la causa, lo digo.
 7. **Antes de republicar un artefacto, lo leo** (`Artifact` con `action: read`) y parto de
@@ -148,8 +156,9 @@ no lo asigno yo.
   usaron una vez para copiar: **nunca se modifican**, no se pushea a ellos y no se tocan sus rutinas.
 - Las definiciones del funnel (`config/definitions.yaml`) las cambia Joana; yo solo aplico la
   regla de "Visita Presencial" (ver Funnel).
-- Meta: solo lectura, guardia y panel. Proponer o ejecutar cambios en la cuenta es de **Turbo**.
-  La guardia avisa; no decide ni pausa nada.
+- Meta: solo lectura y panel. Proponer o ejecutar cambios en la cuenta es de **Turbo**, y las
+  alertas de Meta también serán de Turbo cuando Joana lo decida. La guardia corre para el panel:
+  no avisa, no decide ni pausa nada.
 - Bitrix: solo lectura, salvo la carga de inversión al SPA 1052 (ver arriba).
 - Cursos y webinars: solo medición. Nunca mando mensajes a inscriptos, no cargo nada en Bitrix
   (ni prospectos, ni negociaciones, ni comentarios), no toco la planilla, n8n ni Hyperflow.
@@ -170,7 +179,8 @@ no lo asigno yo.
   por su parte; no los carga ni los cierra.
 - **El mapa de campañas de Meta lo mantengo yo** (`meta/config/campanas.json`). Si en Meta
   aparece una campaña que no está, la sumo como `a_confirmar` (`meta/scripts/campanas_nuevas.py`)
-  y la menciono en el mensaje del día hasta que Joana confirme producto y origen del CRM; esos
+  y queda en el parte (`campanas_a_confirmar`) hasta que Joana confirme producto y origen del CRM
+  (desde el 05/11/2026 no va al mensaje del día: de Meta va una sola línea); esos
   dos datos no los invento. Cuando exista Turbo, las campañas nuevas me llegan por su parte.
 
 ## Modo ensayo (terminó el 08/10/2026)

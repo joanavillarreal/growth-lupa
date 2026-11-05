@@ -10,7 +10,8 @@
 #                  que en la rutina puede venir como un código). Se buscan con ToolSearch y
 #                  cuentan si aparece una herramienta cuyo nombre termina en `__<sufijo>`.
 #                  Si falta alguna después de 3 búsquedas, el análisis se marca fallido.
-#   slack:         dónde se avisa el resultado.
+#   slack:         dónde se avisa el resultado. `null` = el análisis no manda avisos propios
+#                  (solo cuenta en el resumen de cierre, que va a `slack_resumen`).
 #   disparar_despues: agentes (de `agentes`, abajo) cuya rutina se dispara cuando el análisis
 #                  termina `ok`. Si termina fallido no se dispara y se avisa. Cómo: `disparo.py`.
 #                  Orbi y Turbo todavía no existen.
@@ -75,7 +76,12 @@ analisis:
     disparar_despues: []      # futuro: [orbi]
 
   meta:
-    descripcion: Guardia diaria de Meta Ads + Panel Meta Ads (solo lectura)
+    descripcion: Panel Meta Ads (solo lectura). La guardia corre para el panel, pero no avisa
+    # Sin alertas de Meta por ahora (Joana, 05/11/2026): ni al canal ni al DM. La guardia
+    # (guardia_diaria.py) sigue corriendo porque el panel lee sus alertas de
+    # memoria/guardia.jsonl, pero su mensaje no se envía. En el resumen de cierre, de Meta va
+    # una sola línea: si el panel se republicó o no y por qué. Las alertas de Meta las va a
+    # mandar Turbo, cuando Joana lo decida.
     dias: todos
     artefacto: panel_meta_ads
     procedimiento: procedimientos/meta.md
@@ -87,9 +93,9 @@ analisis:
       - ads_get_creatives
       - ads_get_ad_accounts
       - ads_account_get_activity_logs   # cambios en la cuenta
-      - slack_read_channel          # re-ingresos de #adqui-automatizaciones
-    slack: "#adqui-notificaciones-canales"
-    disparar_despues: []      # futuro: [turbo]
+      - slack_read_channel          # re-ingresos de #adqui-automatizaciones (los usa el panel)
+    slack: null               # sin avisos de Meta (Joana, 05/11/2026); antes "#adqui-notificaciones-canales"
+    disparar_despues: []      # futuro: [turbo], que va a mandar las alertas de Meta
 
   inversion:
     descripcion: Carga del gasto de Meta y Google Ads al SPA 1052 de Bitrix (única escritura permitida)
@@ -137,8 +143,7 @@ analisis:
     herramientas:
       - get_values                  # Google Sheets: la planilla de inscriptos de cada evento
       - ads_get_ad_entities         # gasto de la campaña de Meta de cada evento
-    # Sin aviso aparte: las alertas del monitoreo van en el resumen de cierre (slack_resumen).
-    slack: "D0BRVS7A4A3"
+    slack: null               # sin aviso aparte: las alertas van en el resumen de cierre (slack_resumen)
     disparar_despues: []
 
   limpieza:

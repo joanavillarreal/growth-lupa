@@ -61,8 +61,10 @@ def main():
         cfg = preparaciones[args.analisis]
         artefacto = None
         # una preparación avisa donde avisan los análisis que la usan
+        # (un análisis con `slack: null` no avisa: no suma destino)
         cfg = {**cfg, "slack": ", ".join(sorted({a["slack"] for a in agenda["analisis"].values()
-                                              if args.analisis in a.get("necesita", [])}))}
+                                              if args.analisis in a.get("necesita", [])
+                                              and a.get("slack")}))}
     else:
         cfg = agenda["analisis"][args.analisis]
     if not es_prep and not cfg.get("artefacto"):
@@ -92,7 +94,8 @@ def main():
     r = seccion[args.analisis]
     print(f"parte actualizado: {ruta.relative_to(RAIZ)} → {args.analisis}: {args.estado} (intento {r['intentos']})")
     if args.estado == "fallido" and r["intentos"] >= agenda.get("max_intentos_por_dia", 3):
-        print(f"TOPE ALCANZADO: avisar por Slack ({cfg['slack']}) que {args.analisis} "
+        destino = cfg.get("slack") or agenda.get("slack_resumen")
+        print(f"TOPE ALCANZADO: avisar por Slack ({destino}) que {args.analisis} "
               "no se reintenta hasta mañana")
 
 

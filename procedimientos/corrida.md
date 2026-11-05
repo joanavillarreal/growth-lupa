@@ -15,8 +15,8 @@ Esto es lo que hace la rutina diaria (7:50, hora de Argentina). La rutina solo d
   mandar una sola línea al DM D0BRVS7A4A3 diciéndolo y terminar. No intentar clonarlo.
 - Leer `paneles.yaml` → `modo`. En `oficial` (desde el 09/10/2026): cada aviso de análisis a su
   `slack` de `agenda.yaml` (#adqui-notificaciones-canales = `C0C2XKTLT9N` para la alarma del
-  funnel, la guardia y la tabla de inversión; redes y limpieza al DM) y el resumen de cierre al
-  DM `slack_resumen`, sin "[ensayo]". En `ensayo`, todo al DM D0BRVS7A4A3 con "[ensayo]" adelante.
+  funnel y la tabla de inversión; redes y limpieza al DM; Meta no avisa nada, `slack: null`) y
+  el resumen de cierre al DM `slack_resumen`, sin "[ensayo]". En `ensayo`, todo al DM D0BRVS7A4A3 con "[ensayo]" adelante.
 
 ## 1. Qué toca
 
@@ -42,10 +42,11 @@ Seguir su `procedimiento` (en `agenda.yaml`). Al terminar cada uno, sin esperar 
 2. `git add` de lo que generó + `partes/` y `git commit` (`Lupa <AAAA-MM-DD>: <analisis>`),
    `git push origin HEAD:main`. Si se rechaza porque `main` avanzó: `git pull --no-rebase origin
    main`, resolver conservando los datos de los dos lados, y volver a pushear.
-3. Los avisos propios del análisis (la alarma del funnel, el bloque de la guardia, la tabla de la
-   inversión) se mandan **tal cual** los imprime su script, al destino que corresponda según el
-   modo. Si el script dice que no hay novedades, no se manda ese aviso aparte. `cursos` no tiene
-   aviso aparte: sus alertas van en el mensaje final (paso 4).
+3. Los avisos propios del análisis (la alarma del funnel, la tabla de la inversión) se mandan
+   **tal cual** los imprime su script, al destino que corresponda según el modo. Si el script
+   dice que no hay novedades, no se manda ese aviso aparte. Un análisis con `slack: null` no
+   manda avisos propios: hoy, `meta` (el bloque de la guardia **no se envía**, Joana 05/11/2026) y `cursos` (sus
+   alertas van en el mensaje final, paso 4).
 
 En **oficial**, el Monitor, el Panel Meta Ads y Cursos en Vivo se publican en su link (leyéndolo antes, regla
 7) y la inversión se carga de verdad (sin `--dry-run`). En **ensayo**, en cambio, la comparación de "Cómo se compara en ensayo" (CLAUDE.md) para el funnel,
@@ -59,10 +60,11 @@ Uno solo por corrida, aunque no haya tocado nada, al DM `slack_resumen`. Formato
 ```
 [ensayo] Lupa · <día> <dd/mm> · <hh:mm>
 ✅ <análisis> — <resumen en una línea, con su número principal>
+   (meta, una sola línea y nada más de Meta: "✅ meta — Panel Meta Ads republicado" o
+   "❌ meta — Panel Meta Ads sin republicar: <por qué>")
 ❌ <análisis> — <qué falló, con el error real> (intento n de 3)
 ⏸ <análisis> — agotado: no se reintenta hasta mañana
 <si aplica: Gasto de Meta sin actualizar desde dd/mm>
-<si aplica: Campañas a confirmar (producto y origen del CRM): <nombres>>
 <si aplica: Orígenes nuevos sin canal (decidís vos): <nombre (id)>; y los que sumé solos a Viajes Comerciales>
 <si corrió cursos: las líneas 🎓 de `cursos/monitoreo.py resumen`, una por evento con sus ⚠️ alertas>
 Paneles: <links que se publicaron hoy>
