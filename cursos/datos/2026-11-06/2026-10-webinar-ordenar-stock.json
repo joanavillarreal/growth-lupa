@@ -1,0 +1,159 @@
+{
+  "slug": "2026-10-webinar-ordenar-stock",
+  "nombre": "Webinar: Cómo ordenar tu stock",
+  "estado": "realizado",
+  "fecha": "2026-11-06",
+  "evento": [
+    "2026-10-22"
+  ],
+  "stats": {
+    "total": 57,
+    "clientes_si": 23,
+    "clientes_no": 34,
+    "asistentes": 26,
+    "meta_leads": 39,
+    "derivaciones": 3,
+    "cierres": 1,
+    "leads_prospecto": 21,
+    "leads_negociacion": 22,
+    "prospectos_abiertos": 17
+  },
+  "inversion_total": 72014.52,
+  "inversion_detalle": [
+    {
+      "id": "120254717004450427",
+      "nombre": "JY | Webinar Orden Stock (AGENTE META)",
+      "gasto": 72014.52
+    }
+  ],
+  "signups_por_dia": [
+    {
+      "fecha": "2026-10-08",
+      "nuevos": 1,
+      "acumulado": 1
+    },
+    {
+      "fecha": "2026-10-09",
+      "nuevos": 5,
+      "acumulado": 6
+    },
+    {
+      "fecha": "2026-10-10",
+      "nuevos": 2,
+      "acumulado": 8
+    },
+    {
+      "fecha": "2026-10-11",
+      "nuevos": 1,
+      "acumulado": 9
+    },
+    {
+      "fecha": "2026-10-12",
+      "nuevos": 1,
+      "acumulado": 10
+    },
+    {
+      "fecha": "2026-10-13",
+      "nuevos": 13,
+      "acumulado": 23
+    },
+    {
+      "fecha": "2026-10-14",
+      "nuevos": 12,
+      "acumulado": 35
+    },
+    {
+      "fecha": "2026-10-15",
+      "nuevos": 4,
+      "acumulado": 39
+    },
+    {
+      "fecha": "2026-10-16",
+      "nuevos": 4,
+      "acumulado": 43
+    },
+    {
+      "fecha": "2026-10-17",
+      "nuevos": 1,
+      "acumulado": 44
+    },
+    {
+      "fecha": "2026-10-18",
+      "nuevos": 3,
+      "acumulado": 47
+    },
+    {
+      "fecha": "2026-10-19",
+      "nuevos": 4,
+      "acumulado": 51
+    },
+    {
+      "fecha": "2026-10-20",
+      "nuevos": 3,
+      "acumulado": 54
+    },
+    {
+      "fecha": "2026-10-21",
+      "nuevos": 1,
+      "acumulado": 55
+    },
+    {
+      "fecha": "2026-10-22",
+      "nuevos": 2,
+      "acumulado": 57
+    }
+  ],
+  "etapas_crm": [
+    {
+      "nombre": "Webinars",
+      "n": 17
+    },
+    {
+      "nombre": "Convertido",
+      "n": 3
+    }
+  ],
+  "composicion": {
+    "estado_crm": {
+      "Existente — reactivación": 13,
+      "Nuevo — creado en CRM": 21,
+      "Dice ser cliente — no está en el CRM": 12,
+      "Cliente Boxer": 10,
+      "No procesado": 1
+    },
+    "tipo_bitrix": {
+      "Negociación": 22,
+      "Prospecto": 21,
+      "Contacto sin registro": 12,
+      "Prospecto cerrado": 1,
+      "—": 1
+    },
+    "fuente": {
+      "Meta": 39,
+      "ClickUp": 13,
+      "WhatsApp": 5
+    },
+    "asistentes_por_estado_crm": {
+      "Dice ser cliente — no está en el CRM": 8,
+      "Cliente Boxer": 6,
+      "Existente — reactivación": 5,
+      "Nuevo — creado en CRM": 6,
+      "No procesado": 1
+    }
+  },
+  "bitrix": {
+    "prospectos": 20,
+    "negociaciones": 3,
+    "derivaciones": 3,
+    "prospectos_abiertos": 17,
+    "cierres": 1
+  },
+  "ritmo": null,
+  "alertas": [
+    "1 teléfono(s) inválido(s): no recibieron la confirmación ni entraron al CRM (corregir a mano)",
+    "1 con «Mensaje Enviado» = No enviado (mirar el historial de n8n)",
+    "12 «Dice ser cliente — no está en el CRM»: revisar a mano antes de la cosecha",
+    "planilla: la columna A dice «TimestampF» y la plantilla madre dice «Timestamp»"
+  ],
+  "cambios": []
+}

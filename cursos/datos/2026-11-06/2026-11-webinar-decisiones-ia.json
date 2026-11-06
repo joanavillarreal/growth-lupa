@@ -1,0 +1,95 @@
+{
+  "slug": "2026-11-webinar-decisiones-ia",
+  "nombre": "Webinar: Decidí mejor con IA",
+  "estado": "inscripcion_abierta",
+  "fecha": "2026-11-06",
+  "evento": [
+    "2026-11-19"
+  ],
+  "stats": {
+    "total": 9,
+    "clientes_si": 5,
+    "clientes_no": 4,
+    "asistentes": 0,
+    "meta_leads": 7,
+    "derivaciones": 0,
+    "cierres": 0,
+    "leads_prospecto": 4,
+    "leads_negociacion": 3,
+    "prospectos_abiertos": 3
+  },
+  "inversion_total": 17982.82,
+  "inversion_detalle": [
+    {
+      "id": "120255141033740427",
+      "nombre": "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)",
+      "gasto": 17982.82
+    }
+  ],
+  "signups_por_dia": [
+    {
+      "fecha": "2026-11-02",
+      "nuevos": 3,
+      "acumulado": 3
+    },
+    {
+      "fecha": "2026-11-03",
+      "nuevos": 4,
+      "acumulado": 7
+    },
+    {
+      "fecha": "2026-11-04",
+      "nuevos": 1,
+      "acumulado": 8
+    },
+    {
+      "fecha": "2026-11-05",
+      "nuevos": 1,
+      "acumulado": 9
+    }
+  ],
+  "etapas_crm": [
+    {
+      "nombre": "Webinars",
+      "n": 3
+    }
+  ],
+  "composicion": {
+    "estado_crm": {
+      "Cliente Boxer": 4,
+      "Nuevo — creado en CRM": 3,
+      "Existente — reactivación": 1,
+      "Dice ser cliente — no está en el CRM": 1
+    },
+    "tipo_bitrix": {
+      "Negociación": 3,
+      "Prospecto": 4,
+      "Contacto sin registro": 1,
+      "Negociación cerrada": 1
+    },
+    "fuente": {
+      "Meta": 7,
+      "ClickUp": 2
+    },
+    "asistentes_por_estado_crm": {}
+  },
+  "bitrix": {
+    "prospectos": 3,
+    "negociaciones": 0,
+    "derivaciones": 0,
+    "prospectos_abiertos": 3,
+    "cierres": 0
+  },
+  "ritmo": {
+    "objetivo": "más de 40",
+    "dias_corridos": 5,
+    "faltan_dias": 13,
+    "por_dia": 1.8,
+    "faltan_inscriptos": 32,
+    "necesario_por_dia": 2.5
+  },
+  "alertas": [],
+  "cambios": [
+    "inversion_total: 16056.08 → 17982.82"
+  ]
+}
