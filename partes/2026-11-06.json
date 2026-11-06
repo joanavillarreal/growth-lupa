@@ -50,6 +50,45 @@
         "origenes_automaticos": []
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:56",
+      "resumen": "Panel Meta Ads republicado; guardia corrida sin enviar (3 alertas en el panel); gasto de ayer 52.969 ARS; leads ayer Meta 11 / CRM 11",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "hallazgos": [
+          "Panel Meta Ads republicado (datos al 05/11)",
+          "Guardia: 3 alertas detectadas (no enviadas, Joana 05/11): Rosario video sin resultado 2 días (3.958 ARS); Visitas a tu Local costo por resultado sube (1.319 → 4.210 ARS); Conocimiento - Estado del rubro CTR cae (3,55% → 2,60%)"
+        ],
+        "alertas_no_enviadas": 3,
+        "silenciadas": 2,
+        "metricas": {
+          "gasto_ayer_ars": 52969,
+          "leads_ayer_meta": 11,
+          "leads_ayer_crm": 11,
+          "avisados_slack_ayer": 2,
+          "faltan": 0,
+          "cpl_real_q_ars": 4763,
+          "meta_crm_pct": 100,
+          "cambios_actividad_nuevos": 8
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"
+        ],
+        "creativos_traidos": 3
+      },
+      "para": []
     }
   },
   "preparacion": {

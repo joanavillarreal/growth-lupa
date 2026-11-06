@@ -1,0 +1,141 @@
+{
+  "corrida": "2026-11-06",
+  "datos_hasta": "2026-11-05",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 652272.65,
+      "gasto_total": 652272.65,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 652272.65,
+      "gasto_total": 652272.65,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 52969.3,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-10-30": 4,
+      "2026-10-31": 3,
+      "2026-11-01": 6,
+      "2026-11-02": 6,
+      "2026-11-03": 7,
+      "2026-11-04": 7,
+      "2026-11-05": 11
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-10-30": 5,
+        "2026-10-31": 6,
+        "2026-11-01": 5,
+        "2026-11-02": 6,
+        "2026-11-03": 6,
+        "2026-11-04": 6,
+        "2026-11-05": 11
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-10-30": 1,
+      "2026-10-31": 0,
+      "2026-11-01": 5,
+      "2026-11-02": 1,
+      "2026-11-03": 4,
+      "2026-11-04": 1,
+      "2026-11-05": 2
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254957791250427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957791250427",
+      "entidad": "AsesoriaVirtual | Video | Córdoba LAL | v1 | 2026-10 - Copia",
+      "titulo": "AsesoriaVirtual | Video | Córdoba LAL | v1 | 2026-10 - Copia: 8.814 ARS en 4 dias sin un solo resultado (4 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Córdoba | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 4,
+      "primer_aviso": "2026-11-05",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120254957836200427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957836200427",
+      "entidad": "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10",
+      "titulo": "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10: 8.380 ARS en 4 dias sin un solo resultado (4 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Neuquen | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 4,
+      "primer_aviso": "2026-11-05",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120254958000380427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254958000380427",
+      "entidad": "AsesoriaVirtual | Video | Rosario LAL | v1 | 2026-10",
+      "titulo": "AsesoriaVirtual | Video | Rosario LAL | v1 | 2026-10: 3.958 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Rosario | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-06"
+    },
+    {
+      "clave": "G3:ctr:120252699394250427",
+      "tipo": "ctr_cayendo",
+      "nivel": "anuncio",
+      "entidad_id": "120252699394250427",
+      "entidad": "Conocimiento - Estado del rubro",
+      "titulo": "Conocimiento - Estado del rubro: el CTR cae hace 1 dia",
+      "detalle": "De 3.55% a 2.60% de un dia para el otro. Campana JY | Awareness. Suele ser fatiga de creativo: se confirma mirando la frecuencia del periodo, no subiendo el presupuesto.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-06"
+    },
+    {
+      "clave": "G3:cpl:120254877248420427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254877248420427",
+      "entidad": "JY | Visitas a tu Local (AGENTE META)",
+      "titulo": "JY | Visitas a tu Local (AGENTE META): el costo por resultado sube hace 1 dia",
+      "detalle": "De 1.319 a 4.210 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-06"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254958000380427",
+    "G3:ctr:120252699394250427",
+    "G3:cpl:120254877248420427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120254957791250427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120254957836200427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120254939441560427",
+    "G2:120254939752100427",
+    "G2:120254941799240427",
+    "G3:cpl:120252700778930427",
+    "G3:cpl:120254876324870427"
+  ]
+}
