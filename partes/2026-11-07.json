@@ -55,6 +55,47 @@
         "origenes_automaticos": []
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:56",
+      "resumen": "Panel Meta Ads republicado; guardia corrida sin enviar (4 alertas en el panel); gasto de ayer 48.628 ARS; leads ayer Meta 3 / CRM 3",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "hallazgos": [
+          "Panel Meta Ads republicado (datos al 06/11)",
+          "Guardia: 4 alertas detectadas (no enviadas, Joana 05/11): DemoStock | Video35 | Frio-Repuesteras sin resultado 1 día (13.236 ARS); Placa Visita | Córdoba LAL IG sin resultado 2 días (2.864 ARS); JY | Conversiones costo por resultado sube (1.973 → 8.866 ARS); JY | Webinar Decidí mejor con IA costo por resultado sube hace 3 días (promedio previo 2.033 ARS/lead)",
+          "Se resolvieron 3 alertas: AsesoriaVirtual Córdoba sin resultado; Visitas a tu Local costo por resultado; Conocimiento - Estado del rubro CTR"
+        ],
+        "alertas_no_enviadas": 4,
+        "silenciadas": 2,
+        "metricas": {
+          "gasto_ayer_ars": 48628,
+          "leads_ayer_meta": 3,
+          "leads_ayer_crm": 3,
+          "avisados_slack_ayer": 3,
+          "faltan": 0,
+          "cpl_real_q_ars": 4835,
+          "meta_crm_pct": 100,
+          "cambios_actividad_nuevos": 0
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"
+        ],
+        "creativos_traidos": 0,
+        "reingresos_formulario_06_11": 1
+      },
+      "para": []
     }
   },
   "preparacion": {
