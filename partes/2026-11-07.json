@@ -1,7 +1,62 @@
 {
   "fecha": "2026-11-07",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Monitor publicado; Q4: 115 derivados de 300 (esperado hoy 124, proyección 278); alarma: origen sin mapear Agente Apper",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "hallazgos": [
+          "Q4: 115 negocios derivados de 300 (esperado hoy 124, proyección 278)"
+        ],
+        "alertas": [
+          "Origen sin mapear: Agente Apper (1 prospecto ayer)"
+        ],
+        "metricas": {
+          "derivados_q": 115,
+          "meta_derivados_q": 300,
+          "esperado_hoy": 124,
+          "proyeccion": 278,
+          "generados_q": 297,
+          "mrr_q": 3120.0
+        },
+        "origenes_a_decidir": [
+          {
+            "id": "AGENTE_APPER",
+            "nombre": "Agente Apper",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_ERP4TY",
+            "nombre": "Visitas presenciales - Lu",
+            "prospectos": 3
+          },
+          {
+            "id": "UC_NCC84N",
+            "nombre": "Visitas presenciales - Santi",
+            "prospectos": 1
+          }
+        ],
+        "origenes_automaticos": []
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
