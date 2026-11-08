@@ -12,22 +12,22 @@
   "sheet_url": "https://docs.google.com/spreadsheets/d/1sBHMzu-t_oDxPbkjeJnFPUzg8YevDGPCO8ACRmMiiu0/edit",
   "origen_crm": "Webinar - Decisiones usando IA",
   "origen_source_id": "UC_T93XNH",
-  "inversion_total": 20827.62,
+  "inversion_total": 25003.47,
   "inversion_moneda": "$",
   "objetivos": {
     "inscriptos_min": 40,
     "derivacion_pct_min": 15
   },
   "stats": {
-    "total": 9,
+    "total": 10,
     "clientes_si": 5,
-    "clientes_no": 4,
+    "clientes_no": 5,
     "asistentes": 0,
-    "meta_leads": 7,
+    "meta_leads": 8,
     "derivaciones": 0,
     "cierres": 0,
     "leads_prospecto": 4,
-    "leads_negociacion": 3,
+    "leads_negociacion": 4,
     "prospectos_abiertos": 3
   },
   "signups_por_dia": [
@@ -50,6 +50,11 @@
       "fecha": "2026-11-05",
       "nuevos": 1,
       "acumulado": 9
+    },
+    {
+      "fecha": "2026-11-07",
+      "nuevos": 1,
+      "acumulado": 10
     }
   ],
   "agenda": [],
