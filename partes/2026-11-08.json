@@ -1,7 +1,60 @@
 {
   "fecha": "2026-11-08",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:54",
+      "resumen": "Monitor publicado; Q4: 115 derivados de 300 (esperado hoy 127, proyección 271); alarma: Google Ads sin prospectos 06-07/11",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "hallazgos": [
+          "Q4: 115 negocios derivados de 300 (esperado hoy 127, proyección 271)"
+        ],
+        "alertas": [
+          "Google Ads sin prospectos 2 días seguidos (06/11 y 07/11)"
+        ],
+        "metricas": {
+          "derivados_q": 115,
+          "meta_derivados_q": 300,
+          "esperado_hoy": 127,
+          "proyeccion": 271
+        },
+        "origenes_a_decidir": [
+          {
+            "id": "AGENTE_APPER",
+            "nombre": "Agente Apper",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_ERP4TY",
+            "nombre": "Visitas presenciales - Lu",
+            "prospectos": 3
+          },
+          {
+            "id": "UC_NCC84N",
+            "nombre": "Visitas presenciales - Santi",
+            "prospectos": 1
+          }
+        ],
+        "origenes_automaticos": []
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
