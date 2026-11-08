@@ -53,6 +53,48 @@
         "origenes_automaticos": []
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:57",
+      "resumen": "Panel Meta Ads republicado; guardia corrida sin enviar (2 alertas nuevas en el panel); gasto de ayer 41.776 ARS; leads ayer Meta 3 / CRM 2 (+1 re-ingreso)",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "hallazgos": [
+          "Panel Meta Ads republicado (datos al 07/11)",
+          "Guardia: 2 alertas nuevas detectadas (no enviadas, Joana 05/11): AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia sin resultado 2 días (3.089 ARS); Visitas presenciales - Zonas LU sin resultado 2 días (3.031 ARS); 3 ya avisadas",
+          "Se resolvieron 3 alertas: DemoStock | Video35 | Frio-Repuesteras sin resultado; JY | Conversiones costo por resultado; JY | Webinar Decidí mejor con IA costo por resultado"
+        ],
+        "alertas_no_enviadas": 2,
+        "silenciadas": 3,
+        "metricas": {
+          "gasto_ayer_ars": 41776,
+          "leads_ayer_meta": 3,
+          "leads_ayer_crm": 2,
+          "avisados_slack_ayer": 1,
+          "faltan": 0,
+          "cpl_real_q_ars": 4902,
+          "meta_crm_pct": 100,
+          "cambios_actividad_nuevos": 0
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"
+        ],
+        "creativos_traidos": 0,
+        "anuncios_sin_drive": null,
+        "reingresos_formulario_07_11": 1
+      },
+      "para": []
     }
   },
   "preparacion": {

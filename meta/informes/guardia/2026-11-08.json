@@ -1,0 +1,142 @@
+{
+  "corrida": "2026-11-08",
+  "datos_hasta": "2026-11-07",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 674210.92,
+      "gasto_total": 674210.92,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 674210.92,
+      "gasto_total": 674210.92,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 41776.37,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-11-01": 6,
+      "2026-11-02": 6,
+      "2026-11-03": 7,
+      "2026-11-04": 7,
+      "2026-11-05": 11,
+      "2026-11-06": 3,
+      "2026-11-07": 3
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-11-01": 5,
+        "2026-11-02": 6,
+        "2026-11-03": 6,
+        "2026-11-04": 6,
+        "2026-11-05": 11,
+        "2026-11-06": 3,
+        "2026-11-07": 2
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-11-01": 5,
+      "2026-11-02": 1,
+      "2026-11-03": 4,
+      "2026-11-04": 1,
+      "2026-11-05": 2,
+      "2026-11-06": 3,
+      "2026-11-07": 1
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254941799240427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254941799240427",
+      "entidad": "AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia",
+      "titulo": "AsesoriaVirtual | Img | San Juan LAL | v1 | 2026-10 - Copia: 3.089 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto San Juan | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-08"
+    },
+    {
+      "clave": "G2:120254957569100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957569100427",
+      "entidad": "Visitas presenciales - Zonas LU",
+      "titulo": "Visitas presenciales - Zonas LU: 3.031 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Lu - Baradero 100km - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-08"
+    },
+    {
+      "clave": "G2:120254957836200427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957836200427",
+      "entidad": "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10",
+      "titulo": "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10: 11.688 ARS en 6 dias sin un solo resultado (6 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Neuquen | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 6,
+      "primer_aviso": "2026-11-05",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120254958000380427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254958000380427",
+      "entidad": "AsesoriaVirtual | Video | Rosario LAL | v1 | 2026-10",
+      "titulo": "AsesoriaVirtual | Video | Rosario LAL | v1 | 2026-10: 7.397 ARS en 4 dias sin un solo resultado (4 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Rosario | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 4,
+      "primer_aviso": "2026-11-06",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120255226387970427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255226387970427",
+      "entidad": "Placa Visita | Córdoba LAL IG",
+      "titulo": "Placa Visita | Córdoba LAL IG: 4.948 ARS en 3 dias sin un solo resultado (3 dias seguidos)",
+      "detalle": "Campana JY | Viajes Presenciales Luciana · conjunto Córdoba - Frio - LAL IG + Negociaciones - Video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-11-07",
+      "motivo_aviso": "ya avisada"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254941799240427",
+    "G2:120254957569100427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120254957836200427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120254958000380427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120255226387970427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120255159529830427",
+    "G3:cpl:120252699641360427",
+    "G3:cpl:120255141033740427"
+  ]
+}
