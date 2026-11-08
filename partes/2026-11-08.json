@@ -95,6 +95,46 @@
         "reingresos_formulario_07_11": 1
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:58",
+      "resumen": "Panel de redes republicado: Gestión 6.082 seguidores (+25 en 7 días, engagement orgánico 7,0%), Taller 142 (+5, 6,1%); leads de redes Q4: 6",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "hallazgos": [
+          "Gestión 6.082 seguidores (+25 en 7 días), engagement orgánico 7,0%",
+          "Taller 142 (+5), engagement orgánico 6,1%",
+          "Leads de redes Q4: 6"
+        ],
+        "alertas": [],
+        "metricas": {
+          "marcas": {
+            "boxer-gestion": {
+              "seguidores": 6082,
+              "seguidores_delta_7d": 25,
+              "alcance_7d": 27539,
+              "alcance_organico_7d": 1761,
+              "engagement_organico_pct": 7.0
+            },
+            "boxer-taller": {
+              "seguidores": 142,
+              "seguidores_delta_7d": 5,
+              "alcance_7d": 11347,
+              "alcance_organico_7d": 212,
+              "engagement_organico_pct": 6.1
+            }
+          },
+          "leads_redes_q4": 6,
+          "datos_hasta": "2026-11-07"
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
