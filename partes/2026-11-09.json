@@ -101,6 +101,88 @@
         "cambios_actividad": "0 cambios nuevos (registro leído hasta 09/11 06:12)"
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:03",
+      "resumen": "8 registros creados en el SPA 1052 (05/11 a 08/11): Meta USD 134,50 y Google USD 20,37.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "rango": {
+          "desde": "2026-11-05",
+          "hasta": "2026-11-08"
+        },
+        "cotizacion": 1500,
+        "creados": [
+          {
+            "dia": "2026-11-05",
+            "canal": "Google Ads",
+            "ars": 17776.16,
+            "usd": 11.85,
+            "id": 884
+          },
+          {
+            "dia": "2026-11-05",
+            "canal": "Meta Ads",
+            "ars": 53121.33,
+            "usd": 35.41,
+            "id": 876
+          },
+          {
+            "dia": "2026-11-06",
+            "canal": "Google Ads",
+            "ars": 8215.89,
+            "usd": 5.48,
+            "id": 886
+          },
+          {
+            "dia": "2026-11-06",
+            "canal": "Meta Ads",
+            "ars": 48831.7,
+            "usd": 32.55,
+            "id": 878
+          },
+          {
+            "dia": "2026-11-07",
+            "canal": "Google Ads",
+            "ars": 3128.97,
+            "usd": 2.09,
+            "id": 888
+          },
+          {
+            "dia": "2026-11-07",
+            "canal": "Meta Ads",
+            "ars": 41796.36,
+            "usd": 27.86,
+            "id": 880
+          },
+          {
+            "dia": "2026-11-08",
+            "canal": "Google Ads",
+            "ars": 1430.92,
+            "usd": 0.95,
+            "id": 890
+          },
+          {
+            "dia": "2026-11-08",
+            "canal": "Meta Ads",
+            "ars": 58021.87,
+            "usd": 38.68,
+            "id": 882
+          }
+        ],
+        "total_usd": 154.87,
+        "meta_usd": 134.5,
+        "google_usd": 20.37,
+        "salteados": [],
+        "pendientes": []
+      },
+      "para": []
     }
   },
   "preparacion": {
