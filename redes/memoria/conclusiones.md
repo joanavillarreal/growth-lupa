@@ -144,6 +144,32 @@ direcciones propuestas (para no repetirlas la semana siguiente).
 
 ---
 
+## 2026-W45 — Boxer Gestión y Boxer Taller
+
+Sin informe propio: la lectura está en `data/2026-W45/lectura.json` y en el Panel de redes.
+
+**Titular:** vuelven las personas a Gestión: el reel de la entrevista a Campana Repuestos (03/11)
+sacó 8,7%, 77 interacciones sobre 889, 6 compartidos y 2 guardados. Alcance orgánico de Gestión
+1.817 (+200,8%), interacciones 126 (+384,6%). Gestión +26, Taller +3. Prospectos de redes: 0.
+
+**Qué funcionó:** la entrevista con un cliente con nombre y local (Campana Repuestos), muy por
+encima del reel del webinar (5,8%, 22 sobre 379) y de la imagen de Córdoba (3,7%, 5 sobre 135). En
+Taller, el reel de la expo ITCA (view rate 34,8%).
+
+**Qué no funcionó:** 0 prospectos de redes (2 en la W44). La imagen de visitas en Córdoba con
+«Comentá CÓRDOBA» no conversó (5 interacciones, 0 compartidos, 0 follows). LinkedIn sin publicar
+por tercera semana.
+
+**Qué hay que mirar:** la semana repite lo confirmado (lo que capta son las personas): con la
+entrevista, el alcance orgánico se triplicó contra la W44 de solo carruseles. Suma evidencia a la
+pregunta del colaborativo del lado de Gestión, sin cerrarla: el texto agradece a
+@campana_repuestos_lubricentro, pero Metricool no dice si salió como colaboración compartida. Las +26
+altas no se atribuyen (los reels no informan follows). El CTA de palabra clave no rescató la imagen
+de Córdoba ni el reel del webinar, en línea con lo ya descartado (el CTA no rescata una pieza que no
+engancha).
+
+---
+
 ## 2026-W44 — Boxer Gestión y Boxer Taller
 
 Sin informe propio: la lectura está en `data/2026-W44/lectura.json` y en el Panel de redes.

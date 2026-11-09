@@ -1,0 +1,216 @@
+{
+  "semana": "2026-W45",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-11-02",
+  "hasta": "2026-11-08",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Reel",
+        "views": 2289,
+        "alcance": 1342,
+        "interacciones": 116,
+        "engagement_pct": 8.6,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Post",
+        "views": 274,
+        "alcance": 143,
+        "interacciones": 7,
+        "engagement_pct": 4.9,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 468,
+        "alcance": 208,
+        "interacciones": 3,
+        "engagement_pct": 1.4,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 560,
+        "alcance": 124,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 3591,
+      "alcance": 1817,
+      "interacciones": 126,
+      "engagement_pct": 6.9
+    },
+    "pauta": {
+      "views": 29332,
+      "alcance": 29658
+    },
+    "pct_views_de_pauta": 89.1,
+    "alcance_total_cuenta": 31475,
+    "audiencia": {
+      "views_seguidores": 4649,
+      "views_no_seguidores": 28265,
+      "pct_seguidores": 14.1,
+      "pct_no_seguidores": 85.9,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 6061,
+      "fin": 6087,
+      "delta": 26,
+      "delta_pct": 0.4
+    },
+    "publicaciones": 7,
+    "stories_publicadas": 4,
+    "piezas": [
+      {
+        "tipo": "Reel",
+        "fecha": "20261103",
+        "url": "https://www.instagram.com/reel/DfSekSnzMbX/",
+        "texto": "La juventud en la gestión del negocio con @campana_repuestos_lubricentro! 🚀🙌🏼 En esta entrevista Dani y Bruno nos cuentan cómo nació el negocio, cómo es trabajar día a día y lo que",
+        "views": 1530,
+        "alcance": 889,
+        "interacciones": 77,
+        "guardados": 2,
+        "compartidos": 6,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 39.8,
+        "engagement_pct": 8.7
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20261102",
+        "url": "https://www.instagram.com/reel/DfQEOWdTyOD/",
+        "texto": "¡Nuevo Webinar! 🚀 Aprendé a usar Artefactos y Conectores en Claude para analizar los datos de tu Casa de Repuestos y tomar decisiones 🤖📊\n\n📆 19 de Noviembre a las 13:00h\n🙌🏼 Vía Goog",
+        "views": 572,
+        "alcance": 379,
+        "interacciones": 22,
+        "guardados": 0,
+        "compartidos": 2,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 22.900002,
+        "engagement_pct": 5.8
+      },
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20261105",
+        "url": "https://www.instagram.com/p/DfXSbnglyon/",
+        "texto": "¿Consultás precios proveedor por proveedor? 👀 Entrás a la página de uno, después a la del otro, y el cliente espera.\n\nSi tenés tu casa de repuestos en Córdoba capital, del 18 al 25",
+        "views": 245,
+        "alcance": 135,
+        "interacciones": 5,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 3.7
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "Reel",
+        "fecha": "20261103",
+        "url": "https://www.instagram.com/reel/DfSekSnzMbX/",
+        "texto": "La juventud en la gestión del negocio con @campana_repuestos_lubricentro! 🚀🙌🏼 En esta entrevista Dani y Bruno nos cuentan cómo nació el negocio, cómo es trabajar día a día y lo que",
+        "views": 1530,
+        "alcance": 889,
+        "interacciones": 77,
+        "guardados": 2,
+        "compartidos": 6,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 39.8,
+        "engagement_pct": 8.7
+      },
+      {
+        "tipo": "Reel",
+        "fecha": "20261102",
+        "url": "https://www.instagram.com/reel/DfQEOWdTyOD/",
+        "texto": "¡Nuevo Webinar! 🚀 Aprendé a usar Artefactos y Conectores en Claude para analizar los datos de tu Casa de Repuestos y tomar decisiones 🤖📊\n\n📆 19 de Noviembre a las 13:00h\n🙌🏼 Vía Goog",
+        "views": 572,
+        "alcance": 379,
+        "interacciones": 22,
+        "guardados": 0,
+        "compartidos": 2,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 22.900002,
+        "engagement_pct": 5.8
+      },
+      {
+        "tipo": "FEED_IMAGE",
+        "fecha": "20261105",
+        "url": "https://www.instagram.com/p/DfXSbnglyon/",
+        "texto": "¿Consultás precios proveedor por proveedor? 👀 Entrás a la página de uno, después a la del otro, y el cliente espera.\n\nSi tenés tu casa de repuestos en Córdoba capital, del 18 al 25",
+        "views": 245,
+        "alcance": 135,
+        "interacciones": 5,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 3.7
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 2,
+    "compartidos_totales": 8,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 55099,
+    "publicaciones": 4,
+    "interacciones": 2,
+    "reels_publicados": 2,
+    "views_reels": 447,
+    "seguidores": {
+      "inicio": 989,
+      "fin": 994,
+      "delta": 5
+    }
+  },
+  "linkedin": {
+    "impresiones": 3,
+    "publicaciones": 0,
+    "interacciones": 0,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 0,
+    "engagement_pct_sobre_impresiones": 0.0,
+    "seguidores": {
+      "inicio": 107,
+      "fin": 108,
+      "delta": 1
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W44",
+    "instagram": {
+      "views_organicas": 99.9,
+      "alcance_organico": 200.8,
+      "interacciones": 384.6,
+      "engagement_pct": 60.5,
+      "seguidores": 0.5,
+      "publicaciones": 133.3,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": 27.7,
+      "interacciones": 0.0,
+      "seguidores": 0.6
+    },
+    "linkedin": {
+      "impresiones": -91.7,
+      "interacciones": null,
+      "seguidores": 0.9
+    }
+  }
+}

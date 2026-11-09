@@ -1,0 +1,140 @@
+{
+  "semana": "2026-W45",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-11-02",
+  "hasta": "2026-11-08",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 36,
+        "alcance": 3,
+        "interacciones": 3,
+        "engagement_pct": 100.0,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Story",
+        "views": 37,
+        "alcance": 29,
+        "interacciones": 3,
+        "engagement_pct": 10.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 218,
+        "alcance": 156,
+        "interacciones": 7,
+        "engagement_pct": 4.5,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 135,
+        "alcance": 28,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 426,
+      "alcance": 216,
+      "interacciones": 13,
+      "engagement_pct": 6.0
+    },
+    "pauta": {
+      "views": 13037,
+      "alcance": 12924
+    },
+    "pct_views_de_pauta": 96.8,
+    "alcance_total_cuenta": 13140,
+    "audiencia": {
+      "views_seguidores": 147,
+      "views_no_seguidores": 13287,
+      "pct_seguidores": 1.1,
+      "pct_no_seguidores": 98.7,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 139,
+      "fin": 142,
+      "delta": 3,
+      "delta_pct": 2.2
+    },
+    "publicaciones": 2,
+    "stories_publicadas": 1,
+    "piezas": [
+      {
+        "tipo": "Reel",
+        "fecha": "20261103",
+        "url": "https://www.instagram.com/reel/DfSzScXS0Zo/",
+        "texto": "Estuvimos en la expo de @itca.oficial y aprovechamos para charlar con Julián, analista de desarrollo profesional 🚀🙌🏼 Le hicimos algunas preguntas frecuentes que hace nuestra comuni",
+        "views": 205,
+        "alcance": 151,
+        "interacciones": 7,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 34.800003,
+        "engagement_pct": 4.6
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "Reel",
+        "fecha": "20261103",
+        "url": "https://www.instagram.com/reel/DfSzScXS0Zo/",
+        "texto": "Estuvimos en la expo de @itca.oficial y aprovechamos para charlar con Julián, analista de desarrollo profesional 🚀🙌🏼 Le hicimos algunas preguntas frecuentes que hace nuestra comuni",
+        "views": 205,
+        "alcance": 151,
+        "interacciones": 7,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 34.800003,
+        "engagement_pct": 4.6
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 11613,
+    "publicaciones": 1,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 2,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W44",
+    "instagram": {
+      "views_organicas": 97.2,
+      "alcance_organico": 227.3,
+      "interacciones": 116.7,
+      "engagement_pct": -34.1,
+      "seguidores": 3.6,
+      "publicaciones": 0.0,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": -11.6,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

@@ -183,6 +183,59 @@
         "pendientes": []
       },
       "para": []
+    },
+    "redes_semana": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:08",
+      "resumen": "W45: entrevista a Campana Repuestos 8,7% (77 sobre 889, 6 compartidos); alcance orgánico Gestión 1.817 (+200,8%); prospectos de redes 0.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getBrandSettings",
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics",
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "semana": "2026-W45",
+        "titular": "Vuelven las personas a Gestión: el reel de la entrevista a Campana Repuestos (03/11) sacó 8,7%, 77 interacciones sobre 889 de alcance, 6 compartidos y 2 guardados, la mejor pieza en semanas. Alcance orgánico de Gestión 1.817 (+200,8%) e interacciones 126 (+384,6%). Gestión +26 seguidores, Taller +3. Prospectos de redes: 0 (2 en la W44).",
+        "hallazgos": [
+          "Boxer Gestión: la entrevista a Campana Repuestos (03/11) fue la mejor pieza: 8,7%, 77 interacciones sobre 889, 6 compartidos y 2 guardados.",
+          "Boxer Gestión: con dos reels y personas, el alcance orgánico subió a 1.817 (+200,8%) y las interacciones a 126 (+384,6%) contra la W44 de solo carruseles.",
+          "Boxer Gestión: +26 seguidores (6.061 a 6.087); Taller +3 (139 a 142).",
+          "Boxer Taller: el reel de la expo ITCA sacó un view rate de 34,8% y llevó el alcance orgánico a 216 (+227,3%)."
+        ],
+        "alertas": [
+          "Prospectos de redes: 0 en la semana (2 en la W44), con 38.257,93 ARS de awareness en Meta.",
+          "Boxer Gestión: la imagen de visitas en Córdoba (05/11, «Comentá CÓRDOBA») quedó en 3,7%, 5 interacciones sobre 135, 0 compartidos y 0 follows.",
+          "Boxer Gestión: el reel del webinar pedía «Comentá IA» y sacó 22 interacciones sobre 379 y 0 guardados, menos de un tercio de la entrevista.",
+          "LinkedIn de Gestión sin publicar por tercera semana; Facebook de Taller con 0 interacciones."
+        ],
+        "metricas": {
+          "gestion": {
+            "seguidores": 6087,
+            "delta": 26,
+            "alcance_organico": 1817,
+            "engagement_pct": 6.9,
+            "pct_views_pauta": 89.1
+          },
+          "taller": {
+            "seguidores": 142,
+            "delta": 3,
+            "alcance_organico": 216,
+            "engagement_pct": 6.0,
+            "pct_views_pauta": 96.8
+          },
+          "prospectos_redes": 0,
+          "awareness_ars": 38257.93
+        },
+        "para": [
+          "conti"
+        ]
+      },
+      "para": [
+        "conti"
+      ]
     }
   },
   "preparacion": {
