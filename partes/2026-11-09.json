@@ -320,6 +320,25 @@
         "sin_medir": []
       },
       "para": []
+    },
+    "limpieza": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:11",
+      "resumen": "3 crudos de la W37 borrados (más de 8 semanas).",
+      "error": null,
+      "herramientas": [],
+      "artefacto": null,
+      "datos": {
+        "borrados": [
+          "redes/data/raw/2026-W37/boxer-gestion.json",
+          "redes/data/raw/2026-W37/boxer-taller.json",
+          "redes/data/raw/2026-W37/meta-awareness.json"
+        ],
+        "motivo": "crudos de Metricool/Meta de más de 8 semanas (W37, terminó 13/09)",
+        "mb": 0.0
+      },
+      "para": []
     }
   },
   "preparacion": {
