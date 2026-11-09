@@ -1,0 +1,139 @@
+{
+  "corrida": "2026-11-09",
+  "datos_hasta": "2026-11-08",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 685473.83,
+      "gasto_total": 685473.83,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 685473.83,
+      "gasto_total": 685473.83,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 58011.08,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-11-02": 6,
+      "2026-11-03": 7,
+      "2026-11-04": 7,
+      "2026-11-05": 11,
+      "2026-11-06": 3,
+      "2026-11-07": 3,
+      "2026-11-08": 8
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-11-02": 6,
+        "2026-11-03": 6,
+        "2026-11-04": 6,
+        "2026-11-05": 11,
+        "2026-11-06": 3,
+        "2026-11-07": 2,
+        "2026-11-08": 7
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-11-02": 1,
+      "2026-11-03": 4,
+      "2026-11-04": 1,
+      "2026-11-05": 2,
+      "2026-11-06": 3,
+      "2026-11-07": 1,
+      "2026-11-08": 4
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254957569100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957569100427",
+      "entidad": "Visitas presenciales - Zonas LU",
+      "titulo": "Visitas presenciales - Zonas LU: 5.279 ARS en 3 dias sin un solo resultado (3 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Lu - Baradero 100km - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-11-08",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120254957791250427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957791250427",
+      "entidad": "AsesoriaVirtual | Video | Córdoba LAL | v1 | 2026-10 - Copia",
+      "titulo": "AsesoriaVirtual | Video | Córdoba LAL | v1 | 2026-10 - Copia: 5.292 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Córdoba | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-09"
+    },
+    {
+      "clave": "G2:120255155078120427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255155078120427",
+      "entidad": "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11",
+      "titulo": "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11: 3.636 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Santi - La Plata y Sur - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-09"
+    },
+    {
+      "clave": "G2:120255226387970427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255226387970427",
+      "entidad": "Placa Visita | Córdoba LAL IG",
+      "titulo": "Placa Visita | Córdoba LAL IG: 7.381 ARS en 4 dias sin un solo resultado (4 dias seguidos)",
+      "detalle": "Campana JY | Viajes Presenciales Luciana · conjunto Córdoba - Frio - LAL IG + Negociaciones - Video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 4,
+      "primer_aviso": "2026-11-07",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120255141033740427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120255141033740427",
+      "entidad": "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)",
+      "titulo": "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META): el costo por resultado sube hace 3 dias",
+      "detalle": "2026-11-06: sin leads ese dia · 2026-11-07: 3.362 ARS/lead · 2026-11-08: sin leads ese dia — contra un promedio de 2.432 ARS/lead en los 7 dias previos. Subio y no volvio a bajar. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 3,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-09"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254957791250427",
+    "G2:120255155078120427",
+    "G3:cpl:120255141033740427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120254957569100427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120255226387970427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120254941799240427",
+    "G2:120254957836200427",
+    "G2:120254958000380427"
+  ]
+}

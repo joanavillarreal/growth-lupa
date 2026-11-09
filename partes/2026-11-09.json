@@ -57,6 +57,50 @@
         "origenes_automaticos": []
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Panel Meta Ads republicado (datos al 08/11). Guardia: 3 alertas detectadas, no enviadas.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_guardia_no_enviadas": [
+          "AsesoriaVirtual | Video | Córdoba LAL | v1 | 2026-10 - Copia: 5.292 ARS en 2 días sin resultado",
+          "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11: 3.636 ARS en 2 días sin resultado",
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META): costo por resultado sube hace 3 días"
+        ],
+        "silenciadas": 2,
+        "gasto_ayer_ars": 58011.08,
+        "conciliacion": {
+          "leads_meta_ayer": 8,
+          "crm_ayer": 7,
+          "avisos_slack_ayer": 4,
+          "faltan": 0
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"
+        ],
+        "panel": {
+          "gasto_q_ars": 1606937,
+          "cpl_real_ars": 4904,
+          "meta_crm_pct": 100,
+          "derivacion_pct": 16.6,
+          "anuncios_activos": 27
+        },
+        "reingresos_nota": "08/11: 4 re-ingresos de formulario; Luis y David apuntan al mismo contacto 23422 (responsable Joana): si fue prueba, son 2",
+        "cambios_actividad": "0 cambios nuevos (registro leído hasta 09/11 06:12)"
+      },
+      "para": []
     }
   },
   "preparacion": {
