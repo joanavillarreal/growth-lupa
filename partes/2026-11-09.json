@@ -235,7 +235,16 @@
       },
       "para": [
         "conti"
-      ]
+      ],
+      "disparos": {
+        "conti": {
+          "estado": "fallido",
+          "hora": "08:11",
+          "trigger_id": "trig_01WJUXuorZ5W7948yNGHU85c",
+          "sesion": null,
+          "error": "no apareció ninguna herramienta que termine en __fire_trigger después de 3 búsquedas con ToolSearch; la sesión cargó Slack, Meta, Metricool, Google-Sheets y GitHub"
+        }
+      }
     },
     "redes_general": {
       "estado": "ok",
