@@ -1,0 +1,47 @@
+{
+  "source_id": "UC_V7TMQ9",
+  "prospectos": 20,
+  "negociaciones": 5,
+  "derivaciones": 5,
+  "prospectos_abiertos": 15,
+  "cierres": 1,
+  "etapas_crm": [
+    {
+      "nombre": "Webinars",
+      "n": 15
+    },
+    {
+      "nombre": "Convertido",
+      "n": 5
+    }
+  ],
+  "ids_prospectos": [
+    "4994",
+    "5014",
+    "5058",
+    "5066",
+    "5068",
+    "5074",
+    "5080",
+    "5084",
+    "5088",
+    "5098",
+    "5100",
+    "5106",
+    "5110",
+    "5124",
+    "5153",
+    "5168",
+    "5180",
+    "5182",
+    "5198",
+    "5202"
+  ],
+  "ids_negociaciones": [
+    "29016",
+    "29018",
+    "29070",
+    "29108",
+    "29110"
+  ]
+}
