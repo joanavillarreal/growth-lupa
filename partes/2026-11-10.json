@@ -104,6 +104,42 @@
         "notas_transcripcion": "Respuestas chicas del MCP escritas tal cual; dos errores de copia detectados y corregidos antes de validar (anuncio-historico Carrousel de Tips resultados 153→11; actividad campaign_id de un 'Ad delivered'). validar_mcp OK y control cruzado total=suma de diarios OK."
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:11",
+      "resumen": "Gestión 6.094 seguidores (+31 en 7 días), engagement orgánico 6,8%; Taller 142 (+4), 6,0%. Leads de redes Q4: 6.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "hallazgos": [],
+        "alertas": [],
+        "metricas": {
+          "boxer-gestion": {
+            "seguidores": 6094,
+            "seguidores_delta_7d": 31,
+            "alcance_7d": 32599,
+            "alcance_organico_7d": 1830,
+            "alcance_pago_7d": 30769,
+            "engagement_pct": 6.8
+          },
+          "boxer-taller": {
+            "seguidores": 142,
+            "seguidores_delta_7d": 4,
+            "alcance_7d": 13108,
+            "alcance_organico_7d": 216,
+            "alcance_pago_7d": 12892,
+            "engagement_pct": 6.0
+          }
+        },
+        "leads_redes_q4": 6,
+        "datos_hasta": "2026-11-09"
+      },
+      "para": []
     }
   },
   "preparacion": {
