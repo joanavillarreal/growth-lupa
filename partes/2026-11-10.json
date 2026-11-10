@@ -58,6 +58,52 @@
         "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1794308233545509"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:09",
+      "resumen": "Panel Meta Ads republicado. Guardia corrida sin enviar (5 alertas). Gasto 09/11: 57.089 ARS; CPL real Q4 4.982 ARS.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_guardia_no_enviadas": [
+          "AsesoriaVirtual | Img | San Juan LAL: 3.778 ARS en 2 días sin resultados",
+          "Img - Webinar Decidí mejor con IA: 6.845 ARS en 2 días sin resultados",
+          "JY | Conversiones: costo por resultado sube hace 1 día (2.834 → 5.473 ARS)",
+          "JY | Provincias Visitadas: costo por resultado sube hace 1 día (3.283 → 10.983 ARS)",
+          "JY | Visitas a tu Local: costo por resultado sube hace 3 días (sin leads 07-09/11)"
+        ],
+        "silenciadas": 4,
+        "gasto_ayer_ars": 57089.48,
+        "conciliacion": {
+          "leads_meta_ayer": 4,
+          "leads_crm_ayer": 4,
+          "reingresos_slack_ayer": 1,
+          "faltan": 0
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"
+        ],
+        "cambios_cuenta": "registro de actividad leído desde 04/11: 0 cambios nuevos (último 05/11)",
+        "panel": {
+          "cpl_real_ars": 4982,
+          "meta_a_crm_pct": 100,
+          "derivacion_pct": 16.6,
+          "campanas_activas": 8,
+          "anuncios_activos": 27
+        },
+        "notas_transcripcion": "Respuestas chicas del MCP escritas tal cual; dos errores de copia detectados y corregidos antes de validar (anuncio-historico Carrousel de Tips resultados 153→11; actividad campaign_id de un 'Ad delivered'). validar_mcp OK y control cruzado total=suma de diarios OK."
+      },
+      "para": []
     }
   },
   "preparacion": {
