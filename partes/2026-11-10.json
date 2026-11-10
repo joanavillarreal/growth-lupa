@@ -1,7 +1,65 @@
 {
   "fecha": "2026-11-10",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:57",
+      "resumen": "Q4 al 10/11: 312 generados, 115 derivados (meta 300), 15 cierres; CPL USD 4,76. Alarma: Google Ads sin prospectos 08-09/11.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "hallazgos": [
+          "Q4 al 10/11: 312 leads generados, 115 negocios derivados (meta 300), 75 presupuestados, 15 cierres, MRR USD 3.120, CPL USD 4,76, CAC USD 99,11"
+        ],
+        "alertas": [
+          "Google Ads sin prospectos 2 días seguidos (08/11 y 09/11)"
+        ],
+        "metricas": {
+          "generados": 312,
+          "derivados": 115,
+          "presupuestados": 75,
+          "cerrados": 15,
+          "mrr": 3120.0,
+          "gasto_usd": 1486.58,
+          "cpl": 4.76,
+          "cac": 99.11
+        },
+        "origenes_a_decidir": [
+          {
+            "id": "AGENTE_APPER",
+            "nombre": "Agente Apper",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_ERP4TY",
+            "nombre": "Visitas presenciales - Lu",
+            "prospectos": 3
+          },
+          {
+            "id": "UC_NCC84N",
+            "nombre": "Visitas presenciales - Santi",
+            "prospectos": 1
+          }
+        ],
+        "origenes_automaticos": [],
+        "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1794308233545509"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
