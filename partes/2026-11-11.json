@@ -59,6 +59,54 @@
         "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:57",
+      "resumen": "Panel Meta Ads republicado. Guardia corrida sin enviar (5 alertas). Gasto 10/11: 54.667 ARS; CPL real Q4 4.993 ARS.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_guardia_no_enviadas": [
+          "Oferta | Img | Remarketing | v1 | 2026-09: 10.035 ARS en 2 días sin resultados",
+          "AsesoriaVirtual | Video | Rosario LAL | v1 | 2026-10: 4.342 ARS en 2 días sin resultados",
+          "Video Visita | Córdoba LAL IG: 3.218 ARS en 2 días sin resultados",
+          "JY | Remarketing: costo por resultado sube hace 3 días",
+          "JY | Webinar Decidí mejor con IA: costo por resultado sube hace 3 días"
+        ],
+        "silenciadas": 5,
+        "resueltas": 4,
+        "gasto_ayer_ars": 54666.69,
+        "conciliacion": {
+          "leads_meta_ayer": 6,
+          "leads_crm_ayer": 6,
+          "reingresos_slack_ayer": 1,
+          "faltan": 0
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"
+        ],
+        "cambios_cuenta": "registro de actividad leído desde 04/11: 1 cambio nuevo (Img - Webinar Decidí mejor con IA pausado 10/11 por Joana)",
+        "panel": {
+          "cpl_real_ars": 4993,
+          "meta_a_crm_pct": 100,
+          "derivacion_pct": 16.6,
+          "campanas_activas": 8,
+          "anuncios_activos": 26
+        },
+        "notas_transcripcion": "Todas las respuestas del MCP guardadas exactas: las grandes con cp del archivo de resultado; las chicas extraídas byte a byte del transcript de la sesión (sin retipear). validar_mcp OK.",
+        "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
+      },
+      "para": []
     }
   },
   "preparacion": {
