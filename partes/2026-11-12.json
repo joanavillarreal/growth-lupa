@@ -1,7 +1,70 @@
 {
   "fecha": "2026-11-12",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Q4 al 12/11: 339 generados, 125 derivados (meta 300), 15 cierres; CPL USD 4,62. Alarma: origen sin mapear Agente Apper.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "metricas": {
+          "generados": 339,
+          "derivados": 125,
+          "presupuestados": 76,
+          "cerrados": 15,
+          "mrr": 3120.0,
+          "cpl": 4.62,
+          "cac": 104.48,
+          "pct_no_calificacion": 12.7,
+          "pct_inactivo": 38.6
+        },
+        "hallazgos": [
+          "Q4 al 12/11 (43 días): 339 generados, 125 derivados (meta 300), 15 cierres, MRR USD 3.120; CPL USD 4,62, CAC USD 104,48"
+        ],
+        "alertas": [
+          "Origen sin mapear: Agente Apper (1 prospecto ayer)"
+        ],
+        "origenes_a_decidir": [
+          {
+            "id": "AGENTE_APPER",
+            "nombre": "Agente Apper",
+            "prospectos": 3
+          },
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_ERP4TY",
+            "nombre": "Visitas presenciales - Lu",
+            "prospectos": 3
+          },
+          {
+            "id": "UC_NCC84N",
+            "nombre": "Visitas presenciales - Santi",
+            "prospectos": 2
+          }
+        ],
+        "origenes_automaticos": [],
+        "slack": {
+          "canal": "C0C2XKTLT9N",
+          "ts": "1794480818.313509"
+        },
+        "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
