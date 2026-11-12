@@ -128,6 +128,76 @@
         "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:57",
+      "resumen": "Cargados 6 registros (09/11 a 11/11): Meta USD 118,67 + Google USD 17,50 = USD 136,17",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "desde": "2026-11-09",
+        "hasta": "2026-11-11",
+        "cotizacion": 1500,
+        "creados": [
+          {
+            "dia": "2026-11-09",
+            "canal": "Google Ads",
+            "ars": 6057.27,
+            "usd": 4.04,
+            "id": 898
+          },
+          {
+            "dia": "2026-11-09",
+            "canal": "Meta Ads",
+            "ars": 57265.79,
+            "usd": 38.18,
+            "id": 892
+          },
+          {
+            "dia": "2026-11-10",
+            "canal": "Google Ads",
+            "ars": 13988.44,
+            "usd": 9.33,
+            "id": 900
+          },
+          {
+            "dia": "2026-11-10",
+            "canal": "Meta Ads",
+            "ars": 55080.02,
+            "usd": 36.72,
+            "id": 894
+          },
+          {
+            "dia": "2026-11-11",
+            "canal": "Google Ads",
+            "ars": 6191.98,
+            "usd": 4.13,
+            "id": 902
+          },
+          {
+            "dia": "2026-11-11",
+            "canal": "Meta Ads",
+            "ars": 65651.28,
+            "usd": 43.77,
+            "id": 896
+          }
+        ],
+        "total_usd": 136.17,
+        "meta_usd": 118.67,
+        "google_usd": 17.5,
+        "salteados": [],
+        "huecos": [],
+        "slack": {
+          "canal": "C0C2XKTLT9N",
+          "ts": "1794481069.308159"
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {
