@@ -120,11 +120,15 @@
   "etapas_crm": [
     {
       "nombre": "Webinars",
-      "n": 15
+      "n": 13
     },
     {
       "nombre": "Convertido",
       "n": 5
+    },
+    {
+      "nombre": "Prospecto inactivo",
+      "n": 2
     }
   ]
 }
