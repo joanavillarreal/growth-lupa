@@ -1,0 +1,22 @@
+{
+  "source_id": "UC_T93XNH",
+  "prospectos": 5,
+  "negociaciones": 0,
+  "derivaciones": 0,
+  "prospectos_abiertos": 5,
+  "cierres": 0,
+  "etapas_crm": [
+    {
+      "nombre": "Webinars",
+      "n": 5
+    }
+  ],
+  "ids_prospectos": [
+    "5436",
+    "5446",
+    "5484",
+    "5560",
+    "5580"
+  ],
+  "ids_negociaciones": []
+}

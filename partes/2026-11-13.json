@@ -164,6 +164,56 @@
         ]
       },
       "para": []
+    },
+    "cursos": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:58",
+      "resumen": "Ordenar Stock: 57 inscriptos, 26 asistieron, 5 derivados, 1 cierre (sin cerrar hace 22 días). Decidí mejor con IA: 13 inscriptos, 1,1/día, hacen falta 4,7/día en los 6 que quedan. Cursos en Vivo republicado; lo publicado coincidía con el dashboard de ayer.",
+      "error": null,
+      "herramientas": [
+        "mcp__Google-Sheets__get_values",
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": "https://claude.ai/artifact/7Vh4FWB6jmE8asFYec5w6A",
+      "datos": {
+        "eventos": {
+          "2026-10-webinar-ordenar-stock": {
+            "estado": "realizado",
+            "inscriptos": 57,
+            "asistentes": 26,
+            "derivaciones": 5,
+            "cierres": 1,
+            "inversion_total": 72014.52,
+            "ritmo": null
+          },
+          "2026-11-webinar-decisiones-ia": {
+            "estado": "inscripcion_abierta",
+            "inscriptos": 13,
+            "asistentes": 0,
+            "derivaciones": 0,
+            "cierres": 0,
+            "inversion_total": 51725.95,
+            "ritmo": {
+              "objetivo": "más de 40",
+              "dias_corridos": 12,
+              "faltan_dias": 6,
+              "por_dia": 1.1,
+              "faltan_inscriptos": 28,
+              "necesario_por_dia": 4.7
+            }
+          }
+        },
+        "alertas": [
+          "Webinar: Cómo ordenar tu stock: 1 teléfono(s) inválido(s): no recibieron la confirmación ni entraron al CRM (corregir a mano)",
+          "Webinar: Cómo ordenar tu stock: 1 con «Mensaje Enviado» = No enviado (mirar el historial de n8n)",
+          "Webinar: Cómo ordenar tu stock: 12 «Dice ser cliente — no está en el CRM»: revisar a mano antes de la cosecha",
+          "Webinar: Cómo ordenar tu stock: pasó hace 22 días y sigue sin cerrar: falta que Vent lo cierre",
+          "Webinar: Cómo ordenar tu stock: planilla: la columna A dice «TimestampF» y la plantilla madre dice «Timestamp»"
+        ],
+        "sin_medir": []
+      },
+      "para": []
     }
   },
   "preparacion": {
