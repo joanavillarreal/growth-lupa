@@ -61,6 +61,74 @@
         "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:56",
+      "resumen": "Panel Meta Ads republicado (datos al 13/11). Guardia: 5 alertas detectadas (no enviadas). Gasto ayer 54.712 ARS.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_guardia_no_enviadas": [
+          "Oferta | Img | Remarketing | v1 | 2026-09: 9.385 ARS en 2 días sin un solo resultado (2 días seguidos)",
+          "Video - Webinar Decidí mejor con IA - Similares: 6.463 ARS en 2 días sin un solo resultado (2 días seguidos)",
+          "JY | Viajes Presenciales Luciana: el costo por resultado sube hace 1 día (de 4.444 a 9.415 ARS)",
+          "Conocimiento - Estado del rubro: el CTR cae hace 1 día (de 3,87% a 2,54%)",
+          "DemoStock | Video35 | Frio-Repuesteras | v1 | 2026-11: el CTR cae hace 1 día (de 4,32% a 2,38%)"
+        ],
+        "resueltas": [
+          "Visitas presenciales - Zonas LU (2 días sin resultado)",
+          "DemoStock | Video35 | Frio-Repuesteras (1 día sin resultado)",
+          "JY | Conversiones (costo por resultado)",
+          "JY | Visitas a tu Local (costo por resultado)",
+          "ControlNegocio | Video35 (CTR)"
+        ],
+        "silenciadas": 3,
+        "gasto_ayer_ars": 54712,
+        "conciliacion": {
+          "fecha": "2026-11-13",
+          "leads_meta": 4,
+          "leads_crm": 4,
+          "reingresos_slack": 0,
+          "faltan": 0
+        },
+        "errores_mcp": {
+          "total": 50,
+          "sobre_entidades_vivas": 0
+        },
+        "cambios_cuenta": {
+          "nuevos": 2,
+          "total": 117,
+          "hasta": "2026-11-14"
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"
+        ],
+        "anuncios_sin_drive": null,
+        "reingresos_formulario_13_11": 0,
+        "panel": {
+          "gasto_q_ars": 1895996,
+          "cpl_real_ars": 5013,
+          "meta_a_crm_pct": 100,
+          "derivacion_pct": 15.8,
+          "costo_por_convertido_ars": 36901,
+          "campanas_activas": 8,
+          "anuncios_activos": 23,
+          "presupuesto_diario_ars": 59000
+        },
+        "notas_transcripcion": "Respuestas grandes copiadas con cp del archivo de resultado; las chicas extraídas tal cual del registro de la sesión (sin retipear). validar_mcp: OK, 10 respuestas. No hubo creativos faltantes (#11 no se llamó) ni conjuntos CBO sin presupuesto (#12 no se llamó).",
+        "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
+      },
+      "para": []
     }
   },
   "preparacion": {
