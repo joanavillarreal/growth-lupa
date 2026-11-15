@@ -123,6 +123,48 @@
         "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:57",
+      "resumen": "Gestión 6.112 seguidores (+25 en 7 días), engagement orgánico 3,6%; Taller 144 (+2), 0,0% (muestra chica). Leads de redes Q4: 7.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "boxer-gestion": {
+            "seguidores": 6112,
+            "seguidores_delta_7d": 25,
+            "alcance_7d": 33391,
+            "alcance_organico_7d": 576,
+            "alcance_pago_7d": 32815,
+            "engagement_pct": 3.6
+          },
+          "boxer-taller": {
+            "seguidores": 144,
+            "seguidores_delta_7d": 2,
+            "alcance_7d": 14174,
+            "alcance_organico_7d": 24,
+            "alcance_pago_7d": 14150,
+            "engagement_pct": 0.0,
+            "muestra_chica": true
+          }
+        },
+        "leads_redes_q4": 7,
+        "datos_hasta": "2026-11-14",
+        "hallazgos": [],
+        "alertas": [],
+        "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+        "notas": [
+          "LinkedIn de Gestión: Metricool devolvió para el 14/11 una fila sin seguidores (null) y métricas en 0; se guardó tal cual.",
+          "Taller: 24 de alcance orgánico en 7 días y 0 interacciones: engagement 0,0%."
+        ]
+      },
+      "para": []
     }
   },
   "preparacion": {
