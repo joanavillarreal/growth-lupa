@@ -189,6 +189,68 @@
         "slack": "Tabla enviada a #adqui-notificaciones-canales"
       },
       "para": []
+    },
+    "redes_semana": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:59",
+      "resumen": "W46: Gestión 2 piezas, alcance orgánico 605 (−66,7%), +25 seguidores; Taller sin publicar, +2. Prospectos de redes: 1.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getBrandSettings",
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics",
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "semana": "2026-W46",
+        "titular": "Semana corta de contenido: Gestión publicó 2 piezas (publicaciones −71,4% contra la W45) y el alcance orgánico de Instagram cayó a 605 (−66,7%), con 21 interacciones (−83,3%). Taller no publicó en el feed. Gestión +25 seguidores, Taller +2. Prospectos de redes: 1 (0 en la W45).",
+        "prospectos_redes": 1,
+        "inversion_awareness_ars": 38584.39,
+        "costo_por_prospecto_ars": 38584.39,
+        "alertas": [
+          "Boxer Gestión: el alcance orgánico cayó -66,7% contra la semana anterior.",
+          "Boxer Gestión: el 94,2% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
+          "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).",
+          "Boxer Taller no publicó nada en Instagram esta semana.",
+          "Boxer Taller: alcance orgánico de 25 personas. Con tan poco alcance los % de engagement son ruido: no se sacan conclusiones de ellos.",
+          "Boxer Taller: el alcance orgánico cayó -88,4% contra la semana anterior.",
+          "Boxer Taller: el 99,5% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico."
+        ],
+        "hallazgos": [
+          "Prospectos de redes: 1 en la semana (0 en la W45), ya convertido.",
+          "Boxer Gestión: +25 seguidores (6.094 a 6.119), en línea con la W45 (+26); Taller +2 (142 a 144).",
+          "Boxer Gestión: el reel del webinar de listas de precios fue la mejor pieza de la semana con 4,8% (6 interacciones sobre 126)."
+        ],
+        "no_funciono": [
+          "Boxer Gestión: con 2 piezas (−71,4% de publicaciones), el alcance orgánico cayó a 605 (−66,7%) y las interacciones a 21 (−83,3%); 0 guardados y 0 compartidos en la semana.",
+          "Boxer Gestión: el carrusel del depósito (10/11) quedó en 0,7%, 1 interacción sobre 143 y 0 follows.",
+          "Boxer Taller: ninguna publicación en el feed; 0 interacciones orgánicas.",
+          "LinkedIn de Gestión sin publicar por cuarta semana; Facebook de Taller sin publicaciones."
+        ],
+        "metricas": {
+          "boxer-gestion": {
+            "seguidores": 6119,
+            "seguidores_delta": 25,
+            "alcance_organico": 605,
+            "engagement_pct": 3.5,
+            "publicaciones": 2
+          },
+          "boxer-taller": {
+            "seguidores": 144,
+            "seguidores_delta": 2,
+            "alcance_organico": 25,
+            "engagement_pct": 0.0,
+            "publicaciones": 0,
+            "muestra_chica": true
+          }
+        },
+        "pendientes": "Cruce por pilar y formato con la Planificación de Conti: sigue esperando (memoria/pendientes.md).",
+        "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9"
+      },
+      "para": [
+        "conti"
+      ]
     }
   },
   "preparacion": {

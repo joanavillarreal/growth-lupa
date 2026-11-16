@@ -144,6 +144,29 @@ direcciones propuestas (para no repetirlas la semana siguiente).
 
 ---
 
+## 2026-W46 — Boxer Gestión y Boxer Taller
+
+Sin informe propio: la lectura está en `data/2026-W46/lectura.json` y en el Panel de redes.
+
+**Titular:** semana corta de contenido: Gestión publicó 2 piezas (−71,4% de publicaciones) y el alcance orgánico de
+Instagram cayó a 605 (−66,7%), con 21 interacciones (−83,3%). Taller no publicó en el feed.
+Gestión +25, Taller +2. Prospectos de redes: 1 (0 en la W45).
+
+**Qué funcionó:** el reel del webinar de listas de precios para clientes (13/11, «comentá LISTAS»)
+fue la mejor pieza con 4,8% (6 sobre 126). Volvió un prospecto de redes (1, ya convertido).
+
+**Qué no funcionó:** el carrusel del depósito (10/11) quedó en 0,7% (1 sobre 143, 0 follows).
+0 guardados y 0 compartidos en Gestión. Taller sin publicaciones; LinkedIn de Gestión sin
+publicar por cuarta semana.
+
+**Qué hay que mirar:** sin piezas de personas, la cuenta volvió a valores bajos, en línea con lo
+confirmado (lo que capta son las personas; el carrusel retiene, no capta). Con solo 2 piezas no
+hay base para abrir ni cerrar ninguna hipótesis. Las +25 altas de Gestión no se atribuyen a
+ninguna pieza. El cruce por pilar y formato con la Planificación de Conti sigue pendiente
+(`memoria/pendientes.md`).
+
+---
+
 ## 2026-W45 — Boxer Gestión y Boxer Taller
 
 Sin informe propio: la lectura está en `data/2026-W45/lectura.json` y en el Panel de redes.

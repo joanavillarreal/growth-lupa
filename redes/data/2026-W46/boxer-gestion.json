@@ -1,0 +1,186 @@
+{
+  "semana": "2026-W46",
+  "marca": "boxer-gestion",
+  "nombre": "Boxer Gestion",
+  "modo_lectura": "optimizacion",
+  "desde": "2026-11-09",
+  "hasta": "2026-11-15",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 144,
+        "alcance": 67,
+        "interacciones": 4,
+        "engagement_pct": 6.0,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Reel",
+        "views": 691,
+        "alcance": 316,
+        "interacciones": 17,
+        "engagement_pct": 5.4,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 882,
+        "alcance": 206,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Story",
+        "views": 257,
+        "alcance": 16,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 1974,
+      "alcance": 605,
+      "interacciones": 21,
+      "engagement_pct": 3.5
+    },
+    "pauta": {
+      "views": 32094,
+      "alcance": 33495
+    },
+    "pct_views_de_pauta": 94.2,
+    "alcance_total_cuenta": 34100,
+    "audiencia": {
+      "views_seguidores": 4555,
+      "views_no_seguidores": 29497,
+      "pct_seguidores": 13.4,
+      "pct_no_seguidores": 86.6,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 6094,
+      "fin": 6119,
+      "delta": 25,
+      "delta_pct": 0.4
+    },
+    "publicaciones": 2,
+    "stories_publicadas": 0,
+    "piezas": [
+      {
+        "tipo": "Reel",
+        "fecha": "20261113",
+        "url": "https://www.instagram.com/reel/DfsqNPTDSuy/",
+        "texto": "Exclusivo Clientes Boxer 📣💙 Llega un webinar dedicado a listas de precios, donde podrás aprender más de la mano de nuestro equipo que te acompaña día a dia 🤗\n\nSi aún no te anotaste",
+        "views": 204,
+        "alcance": 126,
+        "interacciones": 6,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 19.099998,
+        "engagement_pct": 4.8
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261110",
+        "url": "https://www.instagram.com/p/Dfk76f3pX2m/",
+        "texto": "El cliente pregunta por un repuesto y alguien le grita al depósito para saber dónde está. 👀 Si la ubicación la sabe una sola persona, cada venta espera. En Boxer, el que atiende ve",
+        "views": 409,
+        "alcance": 143,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 0.7
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "Reel",
+        "fecha": "20261113",
+        "url": "https://www.instagram.com/reel/DfsqNPTDSuy/",
+        "texto": "Exclusivo Clientes Boxer 📣💙 Llega un webinar dedicado a listas de precios, donde podrás aprender más de la mano de nuestro equipo que te acompaña día a dia 🤗\n\nSi aún no te anotaste",
+        "views": 204,
+        "alcance": 126,
+        "interacciones": 6,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": null,
+        "retencion_pct": null,
+        "view_rate_pct": 19.099998,
+        "engagement_pct": 4.8
+      },
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261110",
+        "url": "https://www.instagram.com/p/Dfk76f3pX2m/",
+        "texto": "El cliente pregunta por un repuesto y alguien le grita al depósito para saber dónde está. 👀 Si la ubicación la sabe una sola persona, cada venta espera. En Boxer, el que atiende ve",
+        "views": 409,
+        "alcance": 143,
+        "interacciones": 1,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 0.7
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": false
+  },
+  "facebook": {
+    "views_contenido": 49424,
+    "publicaciones": 2,
+    "interacciones": 1,
+    "reels_publicados": 1,
+    "views_reels": 9,
+    "seguidores": {
+      "inicio": 995,
+      "fin": 999,
+      "delta": 4
+    }
+  },
+  "linkedin": {
+    "impresiones": 0,
+    "publicaciones": 0,
+    "interacciones": 0,
+    "reacciones": 0,
+    "comentarios": 0,
+    "compartidos": 0,
+    "clics": 0,
+    "engagement_pct_sobre_impresiones": null,
+    "seguidores": {
+      "inicio": 108,
+      "fin": 108,
+      "delta": 0
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W45",
+    "instagram": {
+      "views_organicas": -45.0,
+      "alcance_organico": -66.7,
+      "interacciones": -83.3,
+      "engagement_pct": -49.3,
+      "seguidores": 0.5,
+      "publicaciones": -71.4,
+      "guardados": -100.0
+    },
+    "facebook": {
+      "views_contenido": -10.3,
+      "interacciones": -50.0,
+      "seguidores": 0.5
+    },
+    "linkedin": {
+      "impresiones": -100.0,
+      "interacciones": null,
+      "seguidores": 0.0
+    }
+  }
+}

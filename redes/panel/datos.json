@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-15T07:57-03:00",
- "hoy": "2026-11-15",
+ "generado": "2026-11-16T07:58-03:00",
+ "hoy": "2026-11-16",
  "general": {
   "fecha": "2026-11-15",
   "datos_hasta": "2026-11-14",
@@ -482,15 +482,15 @@
     ]
    }
   },
-  "al_dia": true
+  "al_dia": false
  },
  "leads": {
-  "corte_snapshot": "2026-11-15",
+  "corte_snapshot": "2026-11-16",
   "trimestres": [
    {
     "etiqueta": "Q4 2026",
     "desde": "2026-10-01",
-    "hasta": "2026-11-15",
+    "hasta": "2026-11-16",
     "en_curso": true,
     "total": 7,
     "por_semana": [
@@ -521,6 +521,10 @@
      {
       "semana": "2026-W46",
       "leads": 1
+     },
+     {
+      "semana": "2026-W47",
+      "leads": 0
      }
     ],
     "derivados": 5,
@@ -597,7 +601,7 @@
     "inactivos": 5,
     "en_gestion": 1,
     "mismo_tramo": {
-     "hasta": "2026-08-15",
+     "hasta": "2026-08-16",
      "total": 15
     }
    }
@@ -605,41 +609,43 @@
   "fuente": "Bitrix24, prospectos con origen del canal Redes Sociales (config/definitions.yaml), snapshot diario del funnel"
  },
  "semana": {
-  "semana": "2026-W45",
+  "semana": "2026-W46",
   "alertas": [
+   "Boxer Gestión: el alcance orgánico cayó -66,7% contra la semana anterior.",
+   "Boxer Gestión: el 94,2% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
    "Boxer Gestión: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).",
-   "Boxer Taller: el 96,8% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico.",
-   "Boxer Taller: ningún post o carrusel trajo seguidores (0 follows); los reels no informan follows (sin dato, no cero).",
-   "Las redes no trajeron ningún prospecto al CRM esta semana."
+   "Boxer Taller no publicó nada en Instagram esta semana.",
+   "Boxer Taller: alcance orgánico de 25 personas. Con tan poco alcance los % de engagement son ruido: no se sacan conclusiones de ellos.",
+   "Boxer Taller: el alcance orgánico cayó -88,4% contra la semana anterior.",
+   "Boxer Taller: el 99,5% de las views de Instagram fueron pauta. Lo que se dice del contenido sale del orgánico."
   ],
   "crm": {
-   "prospectos_redes": 0,
-   "inversion_redes_ars": 38257.93,
-   "costo_por_prospecto_ars": null,
-   "var_pct": -100.0
+   "prospectos_redes": 1,
+   "inversion_redes_ars": 38584.39,
+   "costo_por_prospecto_ars": 38584.39,
+   "var_pct": null
   },
   "lectura": {
-   "titular": "Vuelven las personas a Gestión: el reel de la entrevista a Campana Repuestos (03/11) sacó 8,7%, 77 interacciones sobre 889 de alcance, 6 compartidos y 2 guardados, la mejor pieza en semanas. Alcance orgánico de Gestión 1.817 (+200,8%) e interacciones 126 (+384,6%). Gestión +26 seguidores, Taller +3. Prospectos de redes: 0 (2 en la W44).",
+   "titular": "Semana corta de contenido: Gestión publicó 2 piezas (publicaciones −71,4% contra la W45) y el alcance orgánico de Instagram cayó a 605 (−66,7%), con 21 interacciones (−83,3%). Taller no publicó en el feed. Gestión +25 seguidores, Taller +2. Prospectos de redes: 1 (0 en la W45).",
    "puntos": [
-    "Boxer Gestión, contenido: 3 piezas en el feed (2 reels y 1 imagen). Ranking de engagement: entrevista a Campana Repuestos (reel, 03/11) 8,7%, 77 interacciones sobre 889, 6 compartidos, 2 guardados, view rate 39,8%; reel del webinar «Decidí mejor con IA» (02/11, «Comentá IA») 5,8%, 22 sobre 379, 2 compartidos, 0 guardados, view rate 22,9%; imagen de visitas en Córdoba (05/11, «Comentá CÓRDOBA») 3,7%, 5 sobre 135, 0 compartidos, 0 guardados, 0 follows.",
-    "Boxer Gestión, captación: 6.061 a 6.087 (+26). Los reels no informan follows y la imagen trajo 0, así que las altas no se atribuyen a ninguna pieza. Instagram orgánico: 3.591 views (+99,9%), 1.817 de alcance (+200,8%), 126 interacciones (+384,6%) y 6,9% de engagement (+60,5%). Guardados 2, compartidos 8. Por formato: reel 2.289 views y 8,6%; post 274 y 4,9%; story 468 y 1,4%; carrusel (piezas viejas) 560 views sin dato de interacción.",
-    "Boxer Taller: 1 pieza en el feed, el reel de la expo ITCA con Julián (03/11): 4,6%, 7 interacciones sobre 151, 0 compartidos, 0 guardados, view rate 34,8%. Instagram orgánico: 426 views (+97,2%), 216 de alcance (+227,3%), 13 interacciones, 6,0% (−34,1%). Seguidores 139 a 142 (+3). Facebook de Taller: 1 publicación, 11.613 views (−11,6%), 0 interacciones, la página sigue en 2.",
-    "La pauta pesa casi todo: 89,1% de las views de Instagram en Gestión (29.332 de pauta contra 3.591 orgánicas) y 96,8% en Taller (13.037 contra 426). Facebook de Gestión: 55.099 views (+27,7%), 4 publicaciones, 2 interacciones, +5 seguidores (989 a 994). LinkedIn de Gestión: 0 publicaciones por tercera semana, 3 impresiones (−91,7%), 107 a 108 seguidores.",
-    "Prospectos de origen redes: 0 en la semana, contra 2 en la W44. El gasto en awareness de Meta fue de 38.257,93 ARS (JY | Awareness Boxer Taller 21.023,33 y JY | Awareness 17.234,60), sin prospecto sobre el cual calcular costo. La inversión del SPA está completa (7 de 7 días): 282,05 USD. Los prospectos son del canal y no se atribuyen a ninguna pieza."
+    "Boxer Gestión, contenido: 2 piezas en el feed. El reel del webinar de listas de precios para clientes (13/11, «comentá LISTAS») sacó 4,8%, 6 interacciones sobre 126 de alcance, 0 compartidos, 0 guardados, view rate 19,1%. El carrusel del depósito («El cliente pregunta por un repuesto…», 10/11) sacó 0,7%, 1 interacción sobre 143, 409 views, 0 compartidos, 0 guardados y 0 follows.",
+    "Boxer Gestión, captación: 6.094 a 6.119 (+25). El reel no informa follows y el carrusel trajo 0, así que las altas no se atribuyen a ninguna pieza. Instagram orgánico: 1.974 views (−45,0%), 605 de alcance (−66,7%), 21 interacciones (−83,3%) y 3,5% de engagement (−49,3%). Guardados 0, compartidos 0.",
+    "Boxer Taller: 0 publicaciones en el feed. Instagram orgánico: 78 views, 25 de alcance, 0 interacciones (muestra chica, bajo el umbral de 200). Seguidores 142 a 144 (+2). Facebook de Taller: 0 publicaciones, 12.614 views (+8,6%), la página sigue en 2.",
+    "La pauta pesa casi todo: 94,2% de las views de Instagram en Gestión (32.094 de pauta contra 1.974 orgánicas) y 99,5% en Taller (14.184 contra 78). Facebook de Gestión: 49.424 views (−10,3%), 2 publicaciones, 1 interacción, +4 seguidores (995 a 999). LinkedIn de Gestión: 0 publicaciones por cuarta semana, 0 impresiones, 108 seguidores.",
+    "Prospectos de origen redes: 1 en la semana (11/11, ya convertido), contra 0 en la W45. El gasto en awareness de Meta fue de 38.584,39 ARS (JY | Awareness Boxer Taller 20.935,43 y JY | Awareness 17.648,96): 38.584,39 ARS por prospecto. La inversión del SPA está completa (7 de 7 días): 299,35 USD. Los prospectos son del canal y no se atribuyen a ninguna pieza."
    ],
    "funciono": [
-    "Boxer Gestión: la entrevista a Campana Repuestos (03/11) fue la mejor pieza: 8,7%, 77 interacciones sobre 889, 6 compartidos y 2 guardados.",
-    "Boxer Gestión: con dos reels y personas, el alcance orgánico subió a 1.817 (+200,8%) y las interacciones a 126 (+384,6%) contra la W44 de solo carruseles.",
-    "Boxer Gestión: +26 seguidores (6.061 a 6.087); Taller +3 (139 a 142).",
-    "Boxer Taller: el reel de la expo ITCA sacó un view rate de 34,8% y llevó el alcance orgánico a 216 (+227,3%)."
+    "Prospectos de redes: 1 en la semana (0 en la W45), ya convertido.",
+    "Boxer Gestión: +25 seguidores (6.094 a 6.119), en línea con la W45 (+26); Taller +2 (142 a 144).",
+    "Boxer Gestión: el reel del webinar de listas de precios fue la mejor pieza de la semana con 4,8% (6 interacciones sobre 126)."
    ],
    "no_funciono": [
-    "Prospectos de redes: 0 en la semana (2 en la W44), con 38.257,93 ARS de awareness en Meta.",
-    "Boxer Gestión: la imagen de visitas en Córdoba (05/11, «Comentá CÓRDOBA») quedó en 3,7%, 5 interacciones sobre 135, 0 compartidos y 0 follows.",
-    "Boxer Gestión: el reel del webinar pedía «Comentá IA» y sacó 22 interacciones sobre 379 y 0 guardados, menos de un tercio de la entrevista.",
-    "LinkedIn de Gestión sin publicar por tercera semana; Facebook de Taller con 0 interacciones."
+    "Boxer Gestión: con 2 piezas (−71,4% de publicaciones), el alcance orgánico cayó a 605 (−66,7%) y las interacciones a 21 (−83,3%); 0 guardados y 0 compartidos en la semana.",
+    "Boxer Gestión: el carrusel del depósito (10/11) quedó en 0,7%, 1 interacción sobre 143 y 0 follows.",
+    "Boxer Taller: ninguna publicación en el feed; 0 interacciones orgánicas.",
+    "LinkedIn de Gestión sin publicar por cuarta semana; Facebook de Taller sin publicaciones."
    ],
-   "fuente_lectura": "Lupa de growth-lupa (09/11/2026), sobre data/2026-W45/. Metricool lista 3 piezas en Gestión (2 reels y 1 imagen) y 1 en Taller (reel); el bloque de posts de Taller vino vacío."
+   "fuente_lectura": "Lupa de growth-lupa (16/11/2026), sobre data/2026-W46/. Metricool lista 2 piezas en Gestión (1 reel y 1 carrusel) y ninguna en Taller (los bloques de posts y reels de Taller vinieron vacíos)."
   },
   "marcas": {
    "boxer-gestion": {
@@ -647,38 +653,25 @@
     "top_engagement": [
      {
       "tipo": "Reel",
-      "fecha": "20261103",
-      "url": "https://www.instagram.com/reel/DfSekSnzMbX/",
-      "texto": "La juventud en la gestión del negocio con @campana_repuestos_lubricentro! 🚀🙌🏼 En esta entrevista Dani y Bruno nos cuentan cómo nació el negocio, cómo es trabaja",
-      "alcance": 889,
-      "interacciones": 77,
-      "engagement_pct": 8.7,
-      "guardados": 2,
-      "compartidos": 6,
-      "follows": null,
-      "view_rate_pct": 39.8
-     },
-     {
-      "tipo": "Reel",
-      "fecha": "20261102",
-      "url": "https://www.instagram.com/reel/DfQEOWdTyOD/",
-      "texto": "¡Nuevo Webinar! 🚀 Aprendé a usar Artefactos y Conectores en Claude para analizar los datos de tu Casa de Repuestos y tomar decisiones 🤖📊",
-      "alcance": 379,
-      "interacciones": 22,
-      "engagement_pct": 5.8,
+      "fecha": "20261113",
+      "url": "https://www.instagram.com/reel/DfsqNPTDSuy/",
+      "texto": "Exclusivo Clientes Boxer 📣💙 Llega un webinar dedicado a listas de precios, donde podrás aprender más de la mano de nuestro equipo que te acompaña día a dia 🤗",
+      "alcance": 126,
+      "interacciones": 6,
+      "engagement_pct": 4.8,
       "guardados": 0,
-      "compartidos": 2,
+      "compartidos": 0,
       "follows": null,
-      "view_rate_pct": 22.900002
+      "view_rate_pct": 19.099998
      },
      {
-      "tipo": "Post",
-      "fecha": "20261105",
-      "url": "https://www.instagram.com/p/DfXSbnglyon/",
-      "texto": "¿Consultás precios proveedor por proveedor? 👀 Entrás a la página de uno, después a la del otro, y el cliente espera.",
-      "alcance": 135,
-      "interacciones": 5,
-      "engagement_pct": 3.7,
+      "tipo": "Carrusel",
+      "fecha": "20261110",
+      "url": "https://www.instagram.com/p/Dfk76f3pX2m/",
+      "texto": "El cliente pregunta por un repuesto y alguien le grita al depósito para saber dónde está. 👀 Si la ubicación la sabe una sola persona, cada venta espera. En Boxe",
+      "alcance": 143,
+      "interacciones": 1,
+      "engagement_pct": 0.7,
       "guardados": 0,
       "compartidos": 0,
       "follows": 0,
@@ -686,30 +679,16 @@
      }
     ],
     "top_seguidores": [],
-    "publicaciones": 7
+    "publicaciones": 2
    },
    "boxer-taller": {
     "nombre": "Boxer Taller",
-    "top_engagement": [
-     {
-      "tipo": "Reel",
-      "fecha": "20261103",
-      "url": "https://www.instagram.com/reel/DfSzScXS0Zo/",
-      "texto": "Estuvimos en la expo de @itca.oficial y aprovechamos para charlar con Julián, analista de desarrollo profesional 🚀🙌🏼 Le hicimos algunas preguntas frecuentes que",
-      "alcance": 151,
-      "interacciones": 7,
-      "engagement_pct": 4.6,
-      "guardados": 0,
-      "compartidos": 0,
-      "follows": null,
-      "view_rate_pct": 34.800003
-     }
-    ],
+    "top_engagement": [],
     "top_seguidores": [],
-    "publicaciones": 2
+    "publicaciones": 0
    }
   },
-  "desde": "2026-11-02",
-  "hasta": "2026-11-08"
+  "desde": "2026-11-09",
+  "hasta": "2026-11-15"
  }
 }
