@@ -1,0 +1,23 @@
+{
+  "fecha": "2026-11-16",
+  "modo": "oficial",
+  "analisis": {},
+  "preparacion": {
+    "gasto_meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:51",
+      "resumen": "Gasto de Meta al día hasta 15/11 (13-15/11 pedidos; 14/11 corrigió +89,96 ARS)",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "meta_spend_hasta": "2026-11-15",
+        "meta_adsets_hasta": "2026-11-15"
+      },
+      "para": []
+    }
+  }
+}
