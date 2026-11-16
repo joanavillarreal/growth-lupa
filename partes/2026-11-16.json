@@ -60,6 +60,91 @@
         "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:56",
+      "resumen": "Panel Meta Ads republicado (datos al 15/11). Guardia: 5 alertas detectadas (no enviadas). Gasto ayer 67.529 ARS.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_guardia_no_enviadas": [
+          "Visitas presenciales - Zonas LU: 3.665 ARS en 2 días sin un solo resultado (2 días seguidos)",
+          "JY | Conversiones: el costo por resultado sube hace 1 día (de 3.958 a 5.750 ARS)",
+          "JY | Viajes Presenciales Luciana: el costo por resultado sube hace 3 días",
+          "JY | Provincias Visitadas (AGENTE META): el costo por resultado sube hace 3 días (13 a 15/11 sin leads)",
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META): el costo por resultado sube hace 1 día (de 2.586 a 9.839 ARS)"
+        ],
+        "resueltas": [
+          "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10 (2 días sin resultado)",
+          "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11 (2 días sin resultado)"
+        ],
+        "silenciadas": 3,
+        "gasto_ayer_ars": 67529,
+        "conciliacion": {
+          "fecha": "2026-11-15",
+          "leads_meta": 5,
+          "leads_crm": 4,
+          "avisos_slack": 1,
+          "faltan": 0
+        },
+        "errores_mcp": {
+          "total": 50,
+          "sobre_entidades_vivas": 0
+        },
+        "cambios_cuenta": {
+          "nuevos": 0,
+          "total": 117,
+          "hasta": "2026-11-16"
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"
+        ],
+        "anuncios_sin_drive": [
+          "Video Visita | Córdoba LAL video + perfil",
+          "Video - Webinar Decidí mejor con IA - Similares",
+          "Video Visita | Córdoba LAL IG - Copia",
+          "Placa Visita | Córdoba LAL CRM",
+          "ControlNegocio | Video35 | LAL-VideoProducto | v1 | 2026-11",
+          "DemoStock | Video35 | LAL-VideoProducto | v1 | 2026-11",
+          "Boxer + lectora y impresora de etiquetas",
+          "Video - Webinar Decidí mejor con IA",
+          "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11",
+          "Visitas presenciales - Zonas LU",
+          "AsesoriaVirtual | Img | Neuquen LAL | v1 | 2026-10",
+          "AsesoriaVirtual | Img | Rosario LAL | v1 | 2026-10",
+          "Entradas Expomecanico",
+          "Meme reel - IA",
+          "Como tener 2 novias",
+          "Oferta | Img | Remarketing | v1 | 2026-09",
+          "Remarketing - Casos de éxito - JUL26",
+          "Conocimiento - Funcionalidad - Precios y proveedores",
+          "Conocimiento - Estado del rubro"
+        ],
+        "reingresos_formulario_15_11": 1,
+        "panel": {
+          "gasto_q_ars": 2015202,
+          "cpl_real_ars": 5076,
+          "meta_a_crm_pct": 100,
+          "derivacion_pct": 15.8,
+          "costo_por_convertido_ars": 38492,
+          "campanas_activas": 8,
+          "anuncios_activos": 23,
+          "presupuesto_diario_ars": 59000
+        },
+        "notas_transcripcion": "Las respuestas chicas del MCP se guardaron extrayendo el texto exacto del registro de la sesión (sin retipear); las grandes, copiando el archivo de resultado. validar_mcp.py: OK, los totales cuadran.",
+        "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
+      },
+      "para": []
     }
   },
   "preparacion": {
