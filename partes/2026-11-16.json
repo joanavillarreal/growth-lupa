@@ -352,6 +352,25 @@
         "sin_medir": []
       },
       "para": []
+    },
+    "limpieza": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:01",
+      "resumen": "3 crudos de Metricool/Meta de la W38 borrados (más de 8 semanas); la foto semanal del CRM se conserva.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": null,
+      "datos": {
+        "borrados": [
+          "redes/data/raw/2026-W38/boxer-gestion.json",
+          "redes/data/raw/2026-W38/boxer-taller.json",
+          "redes/data/raw/2026-W38/meta-awareness.json"
+        ],
+        "mb": 0.0,
+        "motivo": "crudos de 2026-W38 (terminó el 2026-09-20), más de 8 semanas"
+      },
+      "para": []
     }
   },
   "preparacion": {
