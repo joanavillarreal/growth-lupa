@@ -1,0 +1,134 @@
+{
+  "slug": "2026-11-webinar-decisiones-ia",
+  "nombre": "Webinar: Decidí mejor con IA",
+  "estado": "inscripcion_abierta",
+  "fecha": "2026-11-16",
+  "evento": [
+    "2026-11-19"
+  ],
+  "stats": {
+    "total": 19,
+    "clientes_si": 6,
+    "clientes_no": 13,
+    "asistentes": 0,
+    "meta_leads": 17,
+    "derivaciones": 0,
+    "cierres": 0,
+    "leads_prospecto": 8,
+    "leads_negociacion": 9,
+    "prospectos_abiertos": 7
+  },
+  "inversion_total": 77198.31,
+  "inversion_detalle": [
+    {
+      "id": "120255141033740427",
+      "nombre": "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)",
+      "gasto": 77198.31
+    }
+  ],
+  "signups_por_dia": [
+    {
+      "fecha": "2026-11-02",
+      "nuevos": 3,
+      "acumulado": 3
+    },
+    {
+      "fecha": "2026-11-03",
+      "nuevos": 4,
+      "acumulado": 7
+    },
+    {
+      "fecha": "2026-11-04",
+      "nuevos": 1,
+      "acumulado": 8
+    },
+    {
+      "fecha": "2026-11-05",
+      "nuevos": 1,
+      "acumulado": 9
+    },
+    {
+      "fecha": "2026-11-07",
+      "nuevos": 1,
+      "acumulado": 10
+    },
+    {
+      "fecha": "2026-11-10",
+      "nuevos": 1,
+      "acumulado": 11
+    },
+    {
+      "fecha": "2026-11-11",
+      "nuevos": 2,
+      "acumulado": 13
+    },
+    {
+      "fecha": "2026-11-13",
+      "nuevos": 2,
+      "acumulado": 15
+    },
+    {
+      "fecha": "2026-11-14",
+      "nuevos": 3,
+      "acumulado": 18
+    },
+    {
+      "fecha": "2026-11-15",
+      "nuevos": 1,
+      "acumulado": 19
+    }
+  ],
+  "etapas_crm": [
+    {
+      "nombre": "Webinars",
+      "n": 7
+    }
+  ],
+  "composicion": {
+    "estado_crm": {
+      "Cliente Boxer": 5,
+      "Nuevo — creado en CRM": 7,
+      "Existente — reactivación": 6,
+      "Dice ser cliente — no está en el CRM": 1
+    },
+    "tipo_bitrix": {
+      "Negociación": 9,
+      "Prospecto": 8,
+      "Contacto sin registro": 1,
+      "Negociación cerrada": 1
+    },
+    "fuente": {
+      "Meta": 17,
+      "ClickUp": 2
+    },
+    "asistentes_por_estado_crm": {}
+  },
+  "bitrix": {
+    "prospectos": 7,
+    "negociaciones": 0,
+    "derivaciones": 0,
+    "prospectos_abiertos": 7,
+    "cierres": 0
+  },
+  "ritmo": {
+    "objetivo": "más de 40",
+    "dias_corridos": 15,
+    "faltan_dias": 3,
+    "por_dia": 1.3,
+    "faltan_inscriptos": 22,
+    "necesario_por_dia": 7.3
+  },
+  "alertas": [
+    "ritmo de inscripción bajo: 19 inscriptos a 3 días (menos de la mitad del objetivo de más de 40)"
+  ],
+  "cambios": [
+    "total: 18 → 19",
+    "clientes_no: 12 → 13",
+    "meta_leads: 16 → 17",
+    "leads_prospecto: 7 → 8",
+    "prospectos_abiertos: 6 → 7",
+    "inversion_total: 67461.64 → 77198.31",
+    "signups_por_dia: actualizado",
+    "etapas_crm: actualizado"
+  ]
+}
