@@ -1,0 +1,159 @@
+{
+  "corrida": "2026-11-17",
+  "datos_hasta": "2026-11-16",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 773857.51,
+      "gasto_total": 773857.51,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 773857.51,
+      "gasto_total": 773857.51,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 56747.15,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-11-10": 6,
+      "2026-11-11": 10,
+      "2026-11-12": 3,
+      "2026-11-13": 4,
+      "2026-11-14": 6,
+      "2026-11-15": 5,
+      "2026-11-16": 10
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-11-10": 5,
+        "2026-11-11": 9,
+        "2026-11-12": 5,
+        "2026-11-13": 4,
+        "2026-11-14": 4,
+        "2026-11-15": 4,
+        "2026-11-16": 10
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-11-10": 1,
+      "2026-11-11": 2,
+      "2026-11-12": 0,
+      "2026-11-13": 0,
+      "2026-11-14": 4,
+      "2026-11-15": 1,
+      "2026-11-16": 0
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120252699641370427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120252699641370427",
+      "entidad": "Video Lu - Actualización de precios y stock",
+      "titulo": "Video Lu - Actualización de precios y stock: 9.415 ARS en 1 dia sin un solo resultado",
+      "detalle": "Campana JY | Conversiones · conjunto Conversión segmentación similar. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-17"
+    },
+    {
+      "clave": "G2:120254957569100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957569100427",
+      "entidad": "Visitas presenciales - Zonas LU",
+      "titulo": "Visitas presenciales - Zonas LU: 5.754 ARS en 3 dias sin un solo resultado (3 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Lu - Baradero 100km - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-11-16",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120255324964940427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255324964940427",
+      "entidad": "Video - Webinar Decidí mejor con IA - Similares",
+      "titulo": "Video - Webinar Decidí mejor con IA - Similares: 6.755 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META) · conjunto Conjunto 2 - Similares. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-17"
+    },
+    {
+      "clave": "G2:120255325138520427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255325138520427",
+      "entidad": "Video Visita | Córdoba LAL video + perfil",
+      "titulo": "Video Visita | Córdoba LAL video + perfil: 30.924 ARS en 6 dias sin un solo resultado (6 dias seguidos)",
+      "detalle": "Campana JY | Viajes Presenciales Luciana · conjunto Córdoba - Frio - LAL video + perfil - Video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 6,
+      "primer_aviso": "2026-11-13",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:ctr:120255185335240427",
+      "tipo": "ctr_cayendo",
+      "nivel": "anuncio",
+      "entidad_id": "120255185335240427",
+      "entidad": "ControlNegocio | Video35 | LAL-VideoProducto | v1 | 2026-11",
+      "titulo": "ControlNegocio | Video35 | LAL-VideoProducto | v1 | 2026-11: el CTR cae hace 3 dias",
+      "detalle": "2026-11-14: 0.96% · 2026-11-15: 0.60% · 2026-11-16: 0.99% — contra 1.40% de base (7 dias previos). Cayo y no volvio a subir. Campana JY | Conversiones. Suele ser fatiga de creativo: se confirma mirando la frecuencia del periodo, no subiendo el presupuesto.",
+      "valor": 3,
+      "primer_aviso": "2026-11-15",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120254876324870427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254876324870427",
+      "entidad": "JY | Provincias Visitadas (AGENTE META)",
+      "titulo": "JY | Provincias Visitadas (AGENTE META): el costo por resultado sube hace 3 dias",
+      "detalle": "2026-11-14: sin leads ese dia · 2026-11-15: sin leads ese dia · 2026-11-16: sin leads ese dia — contra un promedio de 7.024 ARS/lead en los 7 dias previos. Subio y no volvio a bajar. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-11-16",
+      "motivo_aviso": "ya avisada"
+    }
+  ],
+  "se_mandan": [
+    "G2:120252699641370427",
+    "G2:120255324964940427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120254957569100427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120255325138520427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G3:ctr:120255185335240427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120254876324870427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120254958000380427",
+    "G3:cpl:120252699641360427",
+    "G3:cpl:120254099466780427",
+    "G3:cpl:120255141033740427"
+  ]
+}

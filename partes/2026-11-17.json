@@ -58,6 +58,93 @@
         "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:07",
+      "resumen": "Panel Meta Ads republicado (datos al 16/11). Guardia: 2 alertas nuevas detectadas (no enviadas). Gasto ayer 56.747 ARS.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_guardia_no_enviadas": [
+          "Video Lu - Actualización de precios y stock: 9.415 ARS en 1 día sin un solo resultado",
+          "Video - Webinar Decidí mejor con IA - Similares: 6.755 ARS en 2 días sin un solo resultado (2 días seguidos)"
+        ],
+        "ya_avisadas": 4,
+        "resueltas": [
+          "AsesoriaVirtual | Video | Rosario LAL | v1 | 2026-10 (2 días sin resultado)",
+          "JY | Conversiones: costo por resultado en suba",
+          "JY | Viajes Presenciales Luciana: costo por resultado en suba",
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META): costo por resultado en suba"
+        ],
+        "gasto_ayer_ars": 56747,
+        "conciliacion": {
+          "fecha": "2026-11-16",
+          "leads_meta": 10,
+          "leads_crm": 10,
+          "avisos_slack": 0,
+          "faltan": 0
+        },
+        "errores_mcp": {
+          "total": 50,
+          "sobre_entidades_vivas": 0
+        },
+        "cambios_cuenta": {
+          "nuevos": 11,
+          "total": 128,
+          "hasta": "2026-11-17"
+        },
+        "campanas_nuevas": [
+          "JY | Clientes potenciales Boxer Taller (AGENTE META) (120255330571790427), sumada como a_confirmar"
+        ],
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)",
+          "JY | Clientes potenciales Boxer Taller (AGENTE META)"
+        ],
+        "anuncios_sin_drive": [
+          "Nuevo anuncio de Clientes potenciales - Copia",
+          "Nuevo anuncio de Clientes potenciales",
+          "Video Visita | Córdoba LAL IG - Copia",
+          "Placa Visita | Córdoba LAL CRM",
+          "Video - Webinar Decidí mejor con IA",
+          "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11",
+          "Visitas presenciales - Zonas LU",
+          "AsesoriaVirtual | Img | Neuquen LAL | v1 | 2026-10",
+          "Entradas Expomecanico",
+          "Meme reel - IA",
+          "Como tener 2 novias",
+          "Oferta | Img | Remarketing | v1 | 2026-09",
+          "Remarketing - Casos de éxito - JUL26",
+          "Conocimiento - Funcionalidad - Precios y proveedores",
+          "Conocimiento - Estado del rubro",
+          "Video Lu - Actualización de precios y stock",
+          "ControlNegocio | Video35 | LAL-VideoProducto | v1 | 2026-11",
+          "DemoStock | Video35 | LAL-VideoProducto | v1 | 2026-11"
+        ],
+        "reingresos_formulario_16_11": 0,
+        "panel": {
+          "gasto_q_ars": 2072207,
+          "cpl_real_ars": 5025,
+          "meta_a_crm_pct": 100,
+          "derivacion_pct": 15.7,
+          "costo_por_convertido_ars": 36464,
+          "campanas_activas": 9,
+          "anuncios_activos": 20,
+          "presupuesto_diario_ars": 45000
+        },
+        "notas_transcripcion": "Las respuestas grandes se copiaron del archivo de resultado; las chicas se escribieron tal cual vinieron. Se detectó y corrigió antes de validar un error de transcripción en anuncio-historico (campaña de 'Carrousel de Tips'). errores.json salió idéntico al de ayer. validar_mcp.py: OK, los totales cuadran.",
+        "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
+      },
+      "para": []
     }
   },
   "preparacion": {

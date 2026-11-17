@@ -297,6 +297,17 @@
       "activa": true,
       "a_confirmar": true,
       "nota": "Agregada por Lupa el 2026-11-03: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM (y fecha_evento, si es un evento)."
+    },
+    {
+      "nombre": "JY | Clientes potenciales Boxer Taller (AGENTE META)",
+      "id_meta": "120255330571790427",
+      "grupo": "nucleo",
+      "bloque": "conversion",
+      "destino": "PENDIENTE",
+      "origenes_crm": "PENDIENTE",
+      "activa": true,
+      "a_confirmar": true,
+      "nota": "Agregada por Lupa el 2026-11-17: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM."
     }
   ],
   "conjuntos_excepcion": [
