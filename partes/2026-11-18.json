@@ -1,7 +1,67 @@
 {
   "fecha": "2026-11-18",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Q4 al 18/11: 391 generados, 144 derivados (meta 300, proyección 270), 18 cierres; CPL USD 4,65. Alarma: origen sin mapear Agente Apper.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "metricas": {
+          "generados": 391,
+          "derivados": 144,
+          "presupuestados": 84,
+          "cerrados": 18,
+          "mrr": 3898.0,
+          "cpl": 4.65,
+          "cac": 100.96,
+          "pct_no_calificacion": 12.0,
+          "pct_inactivo": 41.4
+        },
+        "hallazgos": [
+          "Q4 al 18/11: 391 generados, 144 derivados (meta 300, proyección 270), 18 cierres, MRR USD 3.898; CPL USD 4,65, CAC USD 100,96"
+        ],
+        "alertas": [
+          "Origen sin mapear: Agente Apper (1 prospecto ayer)"
+        ],
+        "alarma": "Enviada a #adqui-notificaciones-canales: Origen sin mapear: Agente Apper",
+        "origenes_a_decidir": [
+          {
+            "id": "AGENTE_APPER",
+            "nombre": "Agente Apper",
+            "prospectos": 5
+          },
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_ERP4TY",
+            "nombre": "Visitas presenciales - Lu",
+            "prospectos": 4
+          },
+          {
+            "id": "UC_NCC84N",
+            "nombre": "Visitas presenciales - Santi",
+            "prospectos": 3
+          }
+        ],
+        "origenes_automaticos": [],
+        "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
