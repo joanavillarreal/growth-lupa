@@ -24,11 +24,11 @@
     "clientes_no": 13,
     "asistentes": 0,
     "meta_leads": 17,
-    "derivaciones": 0,
+    "derivaciones": 1,
     "cierres": 0,
     "leads_prospecto": 8,
     "leads_negociacion": 9,
-    "prospectos_abiertos": 6
+    "prospectos_abiertos": 5
   },
   "signups_por_dia": [
     {
@@ -91,7 +91,11 @@
   "etapas_crm": [
     {
       "nombre": "Webinars",
-      "n": 6
+      "n": 5
+    },
+    {
+      "nombre": "Convertido",
+      "n": 1
     }
   ]
 }
