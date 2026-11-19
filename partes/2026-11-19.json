@@ -58,6 +58,78 @@
         "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:55",
+      "resumen": "Panel Meta Ads republicado (datos al 18/11). Guardia: 2 alertas detectadas (ya avisadas, no enviadas), sin novedades. Gasto ayer 43.571 ARS.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_guardia_no_enviadas": [
+          "Visitas presenciales - Zonas LU: 10.220 ARS en 5 dias sin un solo resultado (5 dias seguidos)",
+          "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11: 6.308 ARS en 3 dias sin un solo resultado (3 dias seguidos)"
+        ],
+        "ya_avisadas": 2,
+        "resueltas": [
+          "G2:120255160036220427",
+          "G2:120255409590820427",
+          "G3:cpl:120255141033740427"
+        ],
+        "gasto_ayer_ars": 43571,
+        "conciliacion": {
+          "fecha": "2026-11-18",
+          "leads_meta": 11,
+          "leads_crm": 9,
+          "avisos_slack": 5,
+          "faltan": 0
+        },
+        "errores_mcp": {
+          "total": 50,
+          "sobre_entidades_vivas": 0
+        },
+        "cambios_cuenta": {
+          "nuevos": 0,
+          "total": 131,
+          "hasta": "2026-11-19"
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)",
+          "JY | Clientes potenciales Boxer Taller (AGENTE META)"
+        ],
+        "anuncios_sin_drive": [
+          "Nuevo anuncio de Clientes potenciales - Copia",
+          "Nuevo anuncio de Clientes potenciales",
+          "Video Visita | Córdoba LAL IG - Copia",
+          "Placa Visita | Córdoba LAL CRM",
+          "ControlNegocio | Video35 | LAL-VideoProducto | v1 | 2026-11",
+          "DemoStock | Video35 | LAL-VideoProducto | v1 | 2026-11",
+          "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11",
+          "Visitas presenciales - Zonas LU",
+          "AsesoriaVirtual | Img | Neuquen LAL | v1 | 2026-10",
+          "Entradas Expomecanico",
+          "Meme reel - IA",
+          "Como tener 2 novias",
+          "Oferta | Img | Remarketing | v1 | 2026-09",
+          "Remarketing - Casos de éxito - JUL26",
+          "Conocimiento - Funcionalidad - Precios y proveedores",
+          "Conocimiento - Estado del rubro",
+          "Video Lu - Actualización de precios y stock"
+        ],
+        "reingresos_18_11": 3,
+        "guardia_mensaje": "SIN NOVEDADES (no se envía, Joana 05/11/2026)",
+        "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
+      },
+      "para": []
     }
   },
   "preparacion": {

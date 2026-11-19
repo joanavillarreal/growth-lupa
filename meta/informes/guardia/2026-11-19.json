@@ -1,0 +1,99 @@
+{
+  "corrida": "2026-11-19",
+  "datos_hasta": "2026-11-18",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 757569.4,
+      "gasto_total": 757569.4,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 757569.4,
+      "gasto_total": 757569.4,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 43571.37,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-11-12": 3,
+      "2026-11-13": 4,
+      "2026-11-14": 6,
+      "2026-11-15": 5,
+      "2026-11-16": 10,
+      "2026-11-17": 12,
+      "2026-11-18": 11
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-11-12": 5,
+        "2026-11-13": 4,
+        "2026-11-14": 4,
+        "2026-11-15": 4,
+        "2026-11-16": 10,
+        "2026-11-17": 12,
+        "2026-11-18": 9
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-11-12": 0,
+      "2026-11-13": 0,
+      "2026-11-14": 4,
+      "2026-11-15": 1,
+      "2026-11-16": 0,
+      "2026-11-17": 4,
+      "2026-11-18": 5
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254957569100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957569100427",
+      "entidad": "Visitas presenciales - Zonas LU",
+      "titulo": "Visitas presenciales - Zonas LU: 10.220 ARS en 5 dias sin un solo resultado (5 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Lu - Baradero 100km - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 5,
+      "primer_aviso": "2026-11-16",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120255155078120427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255155078120427",
+      "entidad": "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11",
+      "titulo": "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11: 6.308 ARS en 3 dias sin un solo resultado (3 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Santi - La Plata y Sur - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-11-18",
+      "motivo_aviso": "ya avisada"
+    }
+  ],
+  "se_mandan": [],
+  "silenciadas": [
+    {
+      "clave": "G2:120254957569100427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120255155078120427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120255160036220427",
+    "G2:120255409590820427",
+    "G3:cpl:120255141033740427"
+  ]
+}
