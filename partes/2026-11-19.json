@@ -172,6 +172,48 @@
         "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1795085782469779"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:57",
+      "resumen": "Gestión 6.147 seguidores (+44 en 7 días), engagement orgánico 5,9%; Taller 146 (+3), 3,4% (muestra chica). Leads de redes Q4: 8.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "boxer-gestion": {
+            "seguidores": 6147,
+            "seguidores_delta_7d": 44,
+            "alcance_7d": 34401,
+            "alcance_organico_7d": 524,
+            "alcance_pago_7d": 33877,
+            "engagement_pct": 5.9
+          },
+          "boxer-taller": {
+            "seguidores": 146,
+            "seguidores_delta_7d": 3,
+            "alcance_7d": 14008,
+            "alcance_organico_7d": 29,
+            "alcance_pago_7d": 13979,
+            "engagement_pct": 3.4,
+            "muestra_chica": true
+          }
+        },
+        "leads_redes_q4": 8,
+        "datos_hasta": "2026-11-18",
+        "hallazgos": [],
+        "alertas": [],
+        "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+        "notas": [
+          "LinkedIn de Gestión: Metricool devolvió para el 18/11 una fila sin seguidores (null) y métricas en 0; se guardó tal cual.",
+          "Facebook de Taller: la fila del 18/11 vino con métricas en 0 (FBEV34, FBEV21, FBEV22); se guardó tal cual."
+        ]
+      },
+      "para": []
     }
   },
   "preparacion": {
