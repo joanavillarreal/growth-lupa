@@ -61,21 +61,31 @@
     },
     "meta": {
       "estado": "fallido",
-      "intentos": 1,
-      "hora": "08:02",
+      "intentos": 2,
+      "hora": "08:07",
       "resumen": "",
-      "error": "validar_mcp.py: NO CUADRA. anuncio-diario (level ad, 06-19/11, time_increment 1) trae 420 filas (30 anuncios x 14 días) pero 15 anuncios vienen con gasto 0 todos los días: suma diaria 260.260,52 ARS vs total 740.854,62 ARS (anuncio-total y campana-total sí cuadran entre sí). Se volvió a pedir 2 veces (igual y por object_ids): respuesta idéntica byte a byte. Pedido de 1 anuncio y 3 días sí trae gasto (ej. 120255185335240427: 8.687,20 el 17/11). Guardia no corrió; Panel Meta Ads sin republicar.",
+      "error": "Reintento a las ~08:30: anuncio-diario sigue igual (420 filas, 15 de 30 anuncios con gasto 0 todos los días; suma diaria 260.262,10 vs total 740.854,62 ARS). validar_mcp.py: NO CUADRA. Guardia no corrió; Panel Meta Ads sin republicar.",
       "herramientas": [
-        "mcp__MCP-Meta__ads_get_ad_entities",
-        "mcp__MCP-Meta__ads_get_errors",
-        "mcp__MCP-Meta__ads_get_creatives",
-        "mcp__MCP-Meta__ads_get_ad_accounts",
-        "mcp__MCP-Meta__ads_account_get_activity_logs",
-        "mcp__Slack__slack_read_channel"
+        "mcp__MCP-Meta__ads_get_ad_entities"
       ],
       "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
       "datos": {},
-      "para": []
+      "para": [],
+      "intentos_previos": [
+        {
+          "estado": "fallido",
+          "hora": "08:02",
+          "error": "validar_mcp.py: NO CUADRA. anuncio-diario (level ad, 06-19/11, time_increment 1) trae 420 filas (30 anuncios x 14 días) pero 15 anuncios vienen con gasto 0 todos los días: suma diaria 260.260,52 ARS vs total 740.854,62 ARS (anuncio-total y campana-total sí cuadran entre sí). Se volvió a pedir 2 veces (igual y por object_ids): respuesta idéntica byte a byte. Pedido de 1 anuncio y 3 días sí trae gasto (ej. 120255185335240427: 8.687,20 el 17/11). Guardia no corrió; Panel Meta Ads sin republicar.",
+          "herramientas": [
+            "mcp__MCP-Meta__ads_get_ad_entities",
+            "mcp__MCP-Meta__ads_get_errors",
+            "mcp__MCP-Meta__ads_get_creatives",
+            "mcp__MCP-Meta__ads_get_ad_accounts",
+            "mcp__MCP-Meta__ads_account_get_activity_logs",
+            "mcp__Slack__slack_read_channel"
+          ]
+        }
+      ]
     },
     "redes_general": {
       "estado": "ok",
