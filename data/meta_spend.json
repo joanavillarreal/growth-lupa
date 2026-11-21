@@ -1,6 +1,6 @@
 {
   "_nota": "Gasto diario de la cuenta publicitaria de Meta, leído del conector MCP y separado por campaña. `redes_ars` es lo que corresponde a las campañas clasificadas como Redes Sociales; `performance_ars` es todo el resto, que es el canal Meta Ads. El dashboard divide estos montos por la cotización para expresarlos en dólares. Se lee de acá y NO del SPA de Bitrix, porque el SPA guarda un único monto diario y ahí adentro no se puede distinguir qué parte fue awareness. Lo actualiza el skill de growth.",
-  "generado_en": "2026-11-20",
+  "generado_en": "2026-11-21",
   "cuenta": "725901852075382",
   "campanas_redes": [
     {
@@ -1170,9 +1170,14 @@
       "performance_ars": 41477.48
     },
     "2026-11-19": {
-      "total_ars": 36292.04,
+      "total_ars": 36518.31,
       "redes_ars": 2003.2,
-      "performance_ars": 34288.84
+      "performance_ars": 34515.11
+    },
+    "2026-11-20": {
+      "total_ars": 32973.04,
+      "redes_ars": 2639.08,
+      "performance_ars": 30333.96
     }
   }
 }
