@@ -1,0 +1,122 @@
+{
+  "corrida": "2026-11-21",
+  "datos_hasta": "2026-11-20",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 725222.23,
+      "gasto_total": 725222.23,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 725222.23,
+      "gasto_total": 725222.23,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 32973.04,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-11-14": 6,
+      "2026-11-15": 5,
+      "2026-11-16": 10,
+      "2026-11-17": 12,
+      "2026-11-18": 11,
+      "2026-11-19": 9,
+      "2026-11-20": 9
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-11-14": 4,
+        "2026-11-15": 4,
+        "2026-11-16": 10,
+        "2026-11-17": 12,
+        "2026-11-18": 9,
+        "2026-11-19": 7,
+        "2026-11-20": 6
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-11-14": 4,
+      "2026-11-15": 1,
+      "2026-11-16": 0,
+      "2026-11-17": 4,
+      "2026-11-18": 5,
+      "2026-11-19": 1,
+      "2026-11-20": 3
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254957569100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957569100427",
+      "entidad": "Visitas presenciales - Zonas LU",
+      "titulo": "Visitas presenciales - Zonas LU: 13.453 ARS en 7 dias sin un solo resultado (7 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Lu - Baradero 100km - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 7,
+      "primer_aviso": "2026-11-16",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120254957836200427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957836200427",
+      "entidad": "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10",
+      "titulo": "AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10: 4.440 ARS en 3 dias sin un solo resultado (3 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Neuquen | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 3,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-21"
+    },
+    {
+      "clave": "G2:120255155078120427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255155078120427",
+      "entidad": "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11",
+      "titulo": "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11: 9.802 ARS en 5 dias sin un solo resultado (5 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Santi - La Plata y Sur - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 5,
+      "primer_aviso": "2026-11-18",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120252700778930427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120252700778930427",
+      "entidad": "JY | Remarketing",
+      "titulo": "JY | Remarketing: el costo por resultado sube hace 1 dia",
+      "detalle": "De 1.620 a 4.630 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-21"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254957836200427",
+    "G3:cpl:120252700778930427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120254957569100427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120255155078120427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": []
+}
