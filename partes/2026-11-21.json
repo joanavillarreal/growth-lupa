@@ -105,6 +105,41 @@
         "nota": "El detalle diario por anuncio volvió a traer el gasto de los 30 anuncios (725.222,23 ARS, cuadra con el total); el 20/11 había fallado por eso."
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:04",
+      "resumen": "Gestión 6.152 seguidores (+40 en 7 días), alcance 7d 35.335, engagement orgánico 3,7%; Taller 147 (+3), alcance 7d 14.261, 3,4% (muestra chica). Leads de redes Q4: 8.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "boxer-gestion": {
+            "seguidores": 6152,
+            "seguidores_delta_7d": 40,
+            "alcance_7d": 35335,
+            "alcance_organico_7d": 749,
+            "engagement_organico_pct": 3.7,
+            "muestra_chica": false
+          },
+          "boxer-taller": {
+            "seguidores": 147,
+            "seguidores_delta_7d": 3,
+            "alcance_7d": 14261,
+            "alcance_organico_7d": 29,
+            "engagement_organico_pct": 3.4,
+            "muestra_chica": true
+          }
+        },
+        "leads_redes_q4": 8,
+        "datos_hasta": "2026-11-20",
+        "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9"
+      },
+      "para": []
     }
   },
   "preparacion": {
