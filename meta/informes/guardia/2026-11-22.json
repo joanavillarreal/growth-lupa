@@ -1,0 +1,138 @@
+{
+  "corrida": "2026-11-22",
+  "datos_hasta": "2026-11-21",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 713746.58,
+      "gasto_total": 713746.58,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 713746.58,
+      "gasto_total": 713746.58,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 30054.45,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-11-15": 5,
+      "2026-11-16": 10,
+      "2026-11-17": 12,
+      "2026-11-18": 11,
+      "2026-11-19": 9,
+      "2026-11-20": 9,
+      "2026-11-21": 5
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-11-15": 4,
+        "2026-11-16": 10,
+        "2026-11-17": 12,
+        "2026-11-18": 9,
+        "2026-11-19": 7,
+        "2026-11-20": 6,
+        "2026-11-21": 4
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-11-15": 1,
+      "2026-11-16": 0,
+      "2026-11-17": 4,
+      "2026-11-18": 5,
+      "2026-11-19": 1,
+      "2026-11-20": 3,
+      "2026-11-21": 2
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254957569100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957569100427",
+      "entidad": "Visitas presenciales - Zonas LU",
+      "titulo": "Visitas presenciales - Zonas LU: 15.229 ARS en 8 dias sin un solo resultado (8 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Lu - Baradero 100km - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 8,
+      "primer_aviso": "2026-11-16",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120255155078120427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255155078120427",
+      "entidad": "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11",
+      "titulo": "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11: 11.195 ARS en 6 dias sin un solo resultado (6 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Santi - La Plata y Sur - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 6,
+      "primer_aviso": "2026-11-18",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120255185335240427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255185335240427",
+      "entidad": "ControlNegocio | Video35 | LAL-VideoProducto | v1 | 2026-11",
+      "titulo": "ControlNegocio | Video35 | LAL-VideoProducto | v1 | 2026-11: 6.020 ARS en 1 dia sin un solo resultado",
+      "detalle": "Campana JY | Conversiones · conjunto Conversión - LAL Vieron videos producto 2% (AGENTE META). Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-22"
+    },
+    {
+      "clave": "G3:cpl:120252699641360427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120252699641360427",
+      "entidad": "JY | Conversiones",
+      "titulo": "JY | Conversiones: el costo por resultado sube hace 1 dia",
+      "detalle": "De 2.854 a 3.861 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-22"
+    },
+    {
+      "clave": "G3:cpl:120254876324870427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254876324870427",
+      "entidad": "JY | Provincias Visitadas (AGENTE META)",
+      "titulo": "JY | Provincias Visitadas (AGENTE META): el costo por resultado sube hace 3 dias",
+      "detalle": "2026-11-19: sin leads ese dia · 2026-11-20: sin leads ese dia · 2026-11-21: sin leads ese dia — contra un promedio de 3.651 ARS/lead en los 7 dias previos. Subio y no volvio a bajar. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 3,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-22"
+    }
+  ],
+  "se_mandan": [
+    "G2:120255185335240427",
+    "G3:cpl:120252699641360427",
+    "G3:cpl:120254876324870427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120254957569100427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120255155078120427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120254957836200427",
+    "G3:cpl:120252700778930427"
+  ]
+}
