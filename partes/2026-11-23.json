@@ -63,7 +63,7 @@
       "estado": "ok",
       "intentos": 1,
       "hora": "08:02",
-      "resumen": "Panel Meta Ads republicado (datos al 22/11). Guardia corrida sin enviar: 1 alerta nueva (Visitas presenciales - Zonas LU sin resultados 9 días), 2 silenciadas; conciliación Meta/CRM sin faltantes.",
+      "resumen": "Panel Meta Ads republicado (datos al 22/11). Guardia corrida sin enviar: 3 alertas detectadas (1 nueva para mandar, 2 ya avisadas), conciliación Meta/CRM sin faltantes.",
       "error": null,
       "herramientas": [
         "mcp__MCP-Meta__ads_get_ad_entities",
@@ -76,7 +76,9 @@
       "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
       "datos": {
         "alertas_detectadas_no_enviadas": [
-          "G2:120254957569100427"
+          "G2:120254957569100427",
+          "G2:120255155078120427",
+          "G3:cpl:120252699641360427"
         ],
         "silenciadas": 2,
         "resueltas": [
