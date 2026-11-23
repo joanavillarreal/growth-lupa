@@ -1,7 +1,65 @@
 {
   "fecha": "2026-11-23",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Q4 al 23/11: 435 generados, 157 derivados (meta 300, proyección 267), 19 cierres; CPL USD 4,49. Alarma sin novedades.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "metricas": {
+          "generados": 435,
+          "derivados": 157,
+          "presupuestados": 88,
+          "cerrados": 19,
+          "mrr": 4156.0,
+          "cpl": 4.49,
+          "cac": 102.69,
+          "pct_no_calificacion": 10.8,
+          "pct_inactivo": 44.4,
+          "proyeccion_derivados": 267
+        },
+        "hallazgos": [
+          "Q4 al 23/11: 435 generados, 157 derivados (meta 300, proyección 267), 19 cierres, MRR USD 4.156; CPL USD 4,49, CAC USD 102,69"
+        ],
+        "alertas": [],
+        "alarma": "Sin novedades: la alarma diaria no manda mensaje.",
+        "origenes_a_decidir": [
+          {
+            "id": "AGENTE_APPER",
+            "nombre": "Agente Apper",
+            "prospectos": 6
+          },
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_ERP4TY",
+            "nombre": "Visitas presenciales - Lu",
+            "prospectos": 4
+          },
+          {
+            "id": "UC_NCC84N",
+            "nombre": "Visitas presenciales - Santi",
+            "prospectos": 3
+          }
+        ],
+        "origenes_automaticos": []
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
