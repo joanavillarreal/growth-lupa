@@ -1,0 +1,128 @@
+{
+  "semana": "2026-W47",
+  "marca": "boxer-taller",
+  "nombre": "Boxer Taller",
+  "modo_lectura": "lanzamiento",
+  "desde": "2026-11-16",
+  "hasta": "2026-11-22",
+  "instagram": {
+    "formatos": [
+      {
+        "formato": "Post",
+        "views": 28,
+        "alcance": 7,
+        "interacciones": 1,
+        "engagement_pct": 14.3,
+        "sin_datos_interaccion": false
+      },
+      {
+        "formato": "Carrusel",
+        "views": 96,
+        "alcance": 26,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      },
+      {
+        "formato": "Reel",
+        "views": 13,
+        "alcance": 9,
+        "interacciones": null,
+        "engagement_pct": null,
+        "sin_datos_interaccion": true
+      }
+    ],
+    "organico": {
+      "views": 137,
+      "alcance": 42,
+      "interacciones": 1,
+      "engagement_pct": 2.4
+    },
+    "pauta": {
+      "views": 14879,
+      "alcance": 14778
+    },
+    "pct_views_de_pauta": 99.1,
+    "alcance_total_cuenta": 14820,
+    "audiencia": {
+      "views_seguidores": 55,
+      "views_no_seguidores": 14945,
+      "pct_seguidores": 0.4,
+      "pct_no_seguidores": 99.5,
+      "incluye_pauta": true,
+      "advertencia": "Incluye pauta: Metricool no permite cruzar audiencia con tipo de contenido. Con pauta alta, el % de no seguidores mide la campaña, no el alcance del contenido."
+    },
+    "seguidores": {
+      "inicio": 144,
+      "fin": 148,
+      "delta": 4,
+      "delta_pct": 2.8
+    },
+    "publicaciones": 1,
+    "stories_publicadas": 0,
+    "piezas": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261121",
+        "url": "https://www.instagram.com/p/DgAgp-ulLuc/",
+        "texto": "Hay talleres que entregan cada auto el día que dijeron. ¿Adivinás qué hacen distinto? 🔧 Te dejamos tres opciones en el carrusel. Una pista: No tiene que ver con trabajar más horas.",
+        "views": 37,
+        "alcance": 14,
+        "interacciones": 0,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 0.0
+      }
+    ],
+    "top_por_engagement": [
+      {
+        "tipo": "FEED_CAROUSEL_ALBUM",
+        "fecha": "20261121",
+        "url": "https://www.instagram.com/p/DgAgp-ulLuc/",
+        "texto": "Hay talleres que entregan cada auto el día que dijeron. ¿Adivinás qué hacen distinto? 🔧 Te dejamos tres opciones en el carrusel. Una pista: No tiene que ver con trabajar más horas.",
+        "views": 37,
+        "alcance": 14,
+        "interacciones": 0,
+        "guardados": 0,
+        "compartidos": 0,
+        "follows": 0,
+        "engagement_pct": 0.0
+      }
+    ],
+    "top_por_seguidores_ganados": [],
+    "guardados_totales": 0,
+    "compartidos_totales": 0,
+    "muestra_chica": true
+  },
+  "facebook": {
+    "views_contenido": 15535,
+    "publicaciones": 1,
+    "interacciones": 0,
+    "reels_publicados": 0,
+    "views_reels": 0,
+    "seguidores": {
+      "inicio": 2,
+      "fin": 3,
+      "delta": 1
+    }
+  },
+  "comparativa": {
+    "hay_semana_previa": true,
+    "semana_previa": "2026-W46",
+    "instagram": {
+      "views_organicas": 75.6,
+      "alcance_organico": 68.0,
+      "interacciones": null,
+      "engagement_pct": null,
+      "seguidores": 2.8,
+      "publicaciones": null,
+      "guardados": null
+    },
+    "facebook": {
+      "views_contenido": 23.2,
+      "interacciones": null,
+      "seguidores": 50.0
+    }
+  }
+}

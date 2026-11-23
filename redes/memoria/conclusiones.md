@@ -144,6 +144,31 @@ direcciones propuestas (para no repetirlas la semana siguiente).
 
 ---
 
+## 2026-W47 — Boxer Gestión y Boxer Taller
+
+Sin informe propio: la lectura está en `data/2026-W47/lectura.json` y en el Panel de redes.
+
+**Titular:** otra semana corta de contenido: Gestión tuvo 1 pieza en el detalle de Metricool (la
+evolución cuenta 3 publicaciones) y el orgánico de Instagram quedó parejo con la W46: 625 de
+alcance (+3,3%), 25 interacciones (+19,0%), 4,0%. Gestión +31, Taller +4. Prospectos de redes: 1.
+
+**Qué funcionó:** Gestión sumó +31 (más que las +25 de la W46) sin que ninguna pieza traiga
+follows. Facebook de Taller subió a 15.535 views (+23,2%).
+
+**Qué no funcionó:** el carrusel de IA del 19/11 con «comentá BOXER» quedó en 2,4% (3 sobre 125,
+1 guardado, 0 compartidos, 0 follows). El carrusel de Taller del 21/11, 0 interacciones sobre 14.
+Facebook de Gestión con 3 publicaciones y 0 interacciones. LinkedIn sin publicar por quinta semana.
+
+**Qué hay que mirar:** segunda semana seguida sin piezas de personas; los valores siguen bajos,
+en línea con lo confirmado (lo que capta son las personas; el carrusel retiene, no capta). El
+carrusel de IA pedía palabra clave y no conversó: va con lo confirmado de que el CTA no rescata
+una pieza que no enganchó. Con 1 pieza no hay base para abrir ni cerrar hipótesis. Metricool
+cuenta 3 publicaciones en Gestión pero el detalle trae 1: las otras 2 (18/11) no se pueden leer
+por pieza. El cruce por pilar y formato con la Planificación de Conti sigue pendiente
+(`memoria/pendientes.md`).
+
+---
+
 ## 2026-W46 — Boxer Gestión y Boxer Taller
 
 Sin informe propio: la lectura está en `data/2026-W46/lectura.json` y en el Panel de redes.
