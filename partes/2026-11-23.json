@@ -111,6 +111,50 @@
         "nota_transcripcion": "roster.json: al escribir la respuesta 3 se coló por error un campo que no venía ('effective_status_dummy'); se detectó y se sacó antes de validar."
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:03",
+      "resumen": "Cargados 8 registros al SPA 1052 (19/11 a 22/11): Meta USD 94,97 y Google USD 6,89; total USD 101,86.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__Slack__slack_send_message"
+      ],
+      "artefacto": null,
+      "datos": {
+        "desde": "2026-11-19",
+        "hasta": "2026-11-22",
+        "creados": {
+          "meta": {
+            "registros": 4,
+            "usd": 94.97,
+            "ids": [
+              932,
+              934,
+              936,
+              938
+            ]
+          },
+          "google": {
+            "registros": 4,
+            "usd": 6.89,
+            "ids": [
+              940,
+              942,
+              944,
+              946
+            ]
+          }
+        },
+        "total_usd": 101.86,
+        "cotizacion": 1500,
+        "salteados": [],
+        "pendientes": [],
+        "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1795431791561169"
+      },
+      "para": []
     }
   },
   "preparacion": {
