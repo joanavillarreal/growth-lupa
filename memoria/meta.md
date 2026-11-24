@@ -50,3 +50,11 @@ Lo ya revisado con Joana que no hay que volver a marcar.
   `datos/meta-ads/guardia/2026-11-02/mcp/` (la versión de la mañana queda en git).
 - El panel ahora también muestra los anuncios IN_PROCESS / PENDING_REVIEW, con la marca
   "En revisión de Meta" (DemoStock salió IN_PROCESS). No cuentan como activos en el título.
+
+## 24/11/2026 — Torta del CRM por anuncio (pedido de Joana)
+
+- En Anuncios activos, las campañas de conversión (clientes potenciales) y remarketing tienen
+  una columna "En el CRM" con una torta por anuncio y por conjunto: al centro, cuántos leads
+  entraron; alrededor, derivados (`convertido`), no pasaron de SDR (`inactivo`), no calificados
+  (`no_util`), en curso (`abierta`) y, si hay, los que pasaron a otro canal (`otra`).
+- Mismos leads que "Convertidos" y "CPL real": con UTM del anuncio, desde el 08/09.

@@ -334,6 +334,15 @@ table.t-ads td:first-child{min-width:300px}
 .btn-ver:hover{filter:brightness(1.08)}
 .btn-ver:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
 .btn-ver.apagado{background:var(--neutro-bg); color:var(--muted)}
+.torta{display:flex; align-items:center; gap:10px; justify-content:flex-start}
+.torta svg{width:64px; height:64px; flex:none}
+.torta-n{font-family:Archivo,sans-serif; font-size:17px; font-weight:700; fill:var(--ink)}
+.torta-l{font-size:7.5px; fill:var(--muted)}
+.torta-ley{list-style:none; margin:0; padding:0; font-size:11.5px; font-weight:500; color:var(--ink-2); line-height:1.5; text-align:left}
+.torta-ley li{display:flex; align-items:center; gap:6px; white-space:nowrap}
+.torta-ley i{width:9px; height:9px; border-radius:2px; flex:none}
+.torta-ley b{color:var(--ink); font-weight:600}
+table.t-ads td.td-torta{text-align:left; min-width:220px}
 .btn-ver.sec{background:var(--surface); color:var(--accent); border:1px solid var(--rule-strong)}
 @media (max-width:700px){
   table.t-ads thead{display:none}
@@ -342,7 +351,7 @@ table.t-ads td:first-child{min-width:300px}
     padding:12px 0; border-bottom:1px solid var(--rule)}
   table.t-ads tbody tr:last-child{border-bottom:0}
   table.t-ads td{display:block; border:0; padding:0; text-align:left; white-space:normal; min-width:0}
-  table.t-ads td:first-child{grid-column:1/-1; min-width:0}
+  table.t-ads td:first-child, table.t-ads td.td-torta{grid-column:1/-1; min-width:0}
   table.t-ads td[data-l]::before{content:attr(data-l); display:block; font-size:10px; letter-spacing:.06em;
     text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:2px}
   table.t-ads tr.total td{background:transparent}
@@ -1642,6 +1651,33 @@ function formDelAnuncio(a, c){
 // del CRM y CPL real (Joana, 2026-11-01). Todo desde que hay UTM por anuncio
 // (ATRIB) o desde que se creó el anuncio.
 var ADS_TAB = 0;
+// Torta de lo que pasó en el CRM con los leads de un anuncio (Joana, 2026-11-24):
+// cuántos entraron (al centro), cuántos se derivaron, cuántos no pasaron de la SDR
+// (inactivos), cuántos no calificaron y cuántos siguen en curso. Los colores son
+// los del gráfico de la SDR. "otra": el lead pasó a etapas de otro canal.
+var ETAPAS_TORTA = [
+  ["convertido","Derivados","var(--st-good)"],
+  ["inactivo","No pasaron de SDR","var(--st-warn)"],
+  ["no_util","No calificados","var(--st-crit)"],
+  ["abierta","En curso","var(--neutro-mark)"],
+  ["otra","Pasaron a otro canal","var(--axis)"]];
+function tortaCRM(n, et){
+  if(!n) return '<span class="gris">sin leads en el CRM</span>';
+  var R=26, C=2*Math.PI*R, acc=0, arcos="", ley="", txt=[];
+  ETAPAS_TORTA.forEach(function(e){
+    var v=et[e[0]]||0; if(!v) return;
+    var largo=C*v/n;
+    arcos+='<circle r="'+R+'" cx="32" cy="32" fill="none" stroke="'+e[2]+'" stroke-width="11" '+
+      'stroke-dasharray="'+largo.toFixed(2)+' '+(C-largo).toFixed(2)+'" stroke-dashoffset="'+(-acc).toFixed(2)+'" transform="rotate(-90 32 32)"></circle>';
+    acc+=largo;
+    ley+='<li><i style="background:'+e[2]+'"></i>'+e[1]+' <b>'+v+'</b></li>';
+    txt.push(v+" "+e[1].charAt(0).toLowerCase()+e[1].slice(1));
+  });
+  return '<div class="torta"><svg viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="'+n+(n===1?" entró":" entraron")+": "+txt.join(", ")+'">'+
+    '<circle r="'+R+'" cx="32" cy="32" fill="none" stroke="var(--grid)" stroke-width="11"></circle>'+arcos+
+    '<text x="32" y="31" text-anchor="middle" class="torta-n">'+n+'</text><text x="32" y="41" text-anchor="middle" class="torta-l">'+(n===1?"entró":"entraron")+'</text></svg>'+
+    '<ul class="torta-ley">'+ley+'</ul></div>';
+}
 // Un anuncio recién cargado sale IN_PROCESS o PENDING_REVIEW hasta que Meta lo aprueba.
 function enRevision(a){ return a.estado==="IN_PROCESS" || a.estado==="PENDING_REVIEW"; }
 function pintarAnuncios(){
@@ -1662,7 +1698,9 @@ function pintarAnuncios(){
     var h=hist[norm(c.nombre)+"||"+norm(a.conjunto)+"||"+norm(a.nombre)];
     var ls=leadsPago.filter(function(l){ return norm(l.ad)===norm(a.nombre) && (!l.conj || norm(l.conj)===norm(a.conjunto)); });
     var conv=ls.filter(function(l){ return l.bloque==="convertido"; }).length;
-    return {gasto:h?h.gasto:0, res:h?h.resultados:0, ind:h?h.indicador:"", leads:ls.length, conv:conv};
+    var et={convertido:0,inactivo:0,no_util:0,abierta:0,otra:0};
+    ls.forEach(function(l){ et[l.bloque in et?l.bloque:"otra"]++; });
+    return {gasto:h?h.gasto:0, res:h?h.resultados:0, ind:h?h.indicador:"", leads:ls.length, conv:conv, et:et};
   }
   tabs.setAttribute("role","tablist");
   tabs.setAttribute("aria-label","Campañas con anuncios activos");
@@ -1672,6 +1710,8 @@ function pintarAnuncios(){
   var out="";
   conAds.forEach(function(c,i){
     var r=comoEntra(c), gen=familia((c.conjuntos[0]||{}).indicador)!=="visita" && c.bloque!=="awareness";
+    // La torta del CRM va en las campañas de clientes potenciales: conversión y remarketing (Joana, 2026-11-24).
+    var torta=gen && (c.bloque==="conversion" || c.bloque==="remarketing");
     out+='<div role="tabpanel" id="ads-p'+i+'" aria-labelledby="ads-t'+i+'"'+(i===ADS_TAB?"":" hidden")+'>'+
       '<div class="camp-cab" style="margin-top:16px"><h3>'+esc(c.nombre)+'</h3><span class="chip prod">'+c.producto+'</span>'+chipBloque(c.bloque)+
       '<span class="kpi-cap">'+c.anuncios.length+(c.anuncios.length===1?" anuncio activo":" anuncios activos")+'</span></div>'+
@@ -1692,10 +1732,11 @@ function pintarAnuncios(){
           '<div class="col"><p class="esq-lbl">Excluye</p>'+tags(P.excluye,"exc","No excluye a nadie.")+'</div>';
       } else out+='<p class="kpi-cap">El público de este conjunto no vino en la lectura de hoy.</p></div>';
       out+='</div><div class="scroll" style="margin:12px 0 0"><table class="t-ads"><thead><tr><th>Anuncio</th>'+
-        '<th>Resultados<small>Meta</small></th><th>Convertidos<small>CRM</small></th><th>CPL real<small>gasto / leads CRM</small></th></tr></thead><tbody>';
-      var T={gasto:0,res:0,leads:0,conv:0};
+        '<th>Resultados<small>Meta</small></th><th>Convertidos<small>CRM</small></th><th>CPL real<small>gasto / leads CRM</small></th>'+(torta?'<th>En el CRM<small>qué pasó con los que entraron</small></th>':'')+'</tr></thead><tbody>';
+      var T={gasto:0,res:0,leads:0,conv:0,et:{convertido:0,inactivo:0,no_util:0,abierta:0,otra:0}};
       g.ads.slice().sort(function(a,b){ return a.creado<b.creado?1:-1; }).forEach(function(a){
         var m=metricas(c,a); T.gasto+=m.gasto; T.res+=m.res; T.leads+=m.leads; T.conv+=m.conv;
+        Object.keys(T.et).forEach(function(k){ T.et[k]+=m.et[k]; });
         var cpl=m.leads&&m.gasto?m.gasto/m.leads:null;
         out+='<tr><td><div class="ad-fila">'+
           (a.drive?'<a class="btn-ver" href="'+esc(a.drive)+'" target="_blank" rel="noopener" title="Abre la pieza en Drive">Ver anuncio ↗</a>'
@@ -1707,10 +1748,12 @@ function pintarAnuncios(){
           '</div></div></td>'+
           '<td class="dato" data-l="Resultados (Meta)">'+(m.gasto||m.res?NUM(m.res)+'<small>'+unidad(m.ind,m.res)+'</small>':'<span class="gris">sin gasto</span>')+'</td>'+
           '<td class="dato" data-l="Convertidos (CRM)">'+(gen?NUM(m.conv)+'<small>de '+m.leads+(m.leads===1?" lead":" leads")+'</small>':'<span class="gris">no genera leads</span>')+'</td>'+
-          '<td class="dato" data-l="CPL real">'+(gen?(cpl?ARS(cpl)+'<small>ARS · '+ARS(m.gasto)+' gastados</small>':(m.gasto?'<span class="gris">sin leads en el CRM</span><small>'+ARS(m.gasto)+' ARS gastados</small>':'—')):'<span class="gris">—</span>')+'</td></tr>';
+          '<td class="dato" data-l="CPL real">'+(gen?(cpl?ARS(cpl)+'<small>ARS · '+ARS(m.gasto)+' gastados</small>':(m.gasto?'<span class="gris">sin leads en el CRM</span><small>'+ARS(m.gasto)+' ARS gastados</small>':'—')):'<span class="gris">—</span>')+'</td>'+
+          (torta?'<td class="td-torta" data-l="En el CRM">'+tortaCRM(m.leads,m.et)+'</td>':'')+'</tr>';
       });
       if(g.ads.length>1) out+='<tr class="total"><td>Conjunto</td><td data-l="Resultados (Meta)">'+NUM(T.res)+'</td><td data-l="Convertidos (CRM)">'+(gen?NUM(T.conv)+'<small>de '+T.leads+' leads</small>':"—")+'</td>'+
-        '<td data-l="CPL real">'+(gen&&T.leads&&T.gasto?ARS(T.gasto/T.leads)+'<small>ARS</small>':"—")+'</td></tr>';
+        '<td data-l="CPL real">'+(gen&&T.leads&&T.gasto?ARS(T.gasto/T.leads)+'<small>ARS</small>':"—")+'</td>'+
+        (torta?'<td class="td-torta" data-l="En el CRM">'+tortaCRM(T.leads,T.et)+'</td>':'')+'</tr>';
       out+='</tbody></table></div></div>';
     });
     out+='</div>';
@@ -1736,6 +1779,8 @@ function pintarAnuncios(){
     "<strong>Resultados</strong> son los que cuenta Meta (formularios, conversaciones o visitas al perfil, según la campaña). "+
     "<strong>Convertidos</strong> son los leads de ese anuncio que en Bitrix ya están en Convertido, sobre los que llegaron al CRM con su UTM; los leads de las últimas 2 semanas todavía se están trabajando. "+
     "<strong>CPL real</strong> es el gasto del anuncio dividido por los leads que llegaron al CRM, el mismo criterio que el resto del panel. "+
+    "<strong>En el CRM</strong> (campañas de conversión y remarketing): al centro, cuántos leads de ese anuncio entraron; alrededor, en qué etapa están hoy: "+
+    "derivados, los que no pasaron de la SDR (inactivos), los no calificados y los que todavía están en curso. Si alguno pasó a etapas de otro canal, se muestra aparte. "+
     "Todo cuenta desde el "+DMY(ATRIB)+" (cuando los leads empezaron a traer UTM) o desde que se creó el anuncio, hasta ayer. "+
     "<strong>Ver anuncio</strong> abre la pieza en Drive, para verla sin entrar a Meta. Los anuncios que todavía no tienen su link de Drive muestran <strong>Ver en Facebook</strong>, que solo abre para quien administra la página. Se actualiza todos los días con la corrida de la mañana.";
 }
