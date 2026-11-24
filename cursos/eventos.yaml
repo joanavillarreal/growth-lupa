@@ -70,3 +70,21 @@ eventos:
       cuenta: "725901852075382"
       campanas:
         - {id: "120255141033740427", nombre: "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"}
+
+  # Alta del 24/11/2026 con datos pendientes de Vent: el nombre se aprueba el 30/11 (mientras
+  # tanto se muestra «Webinar: contenido con IA»); la planilla, el origen en Bitrix y las
+  # campañas de Meta todavía no existen. Hasta que Vent los pase, no se mide (no hay de dónde)
+  # y en el resumen sale como "faltan datos de Vent". La apertura es la planificada.
+  2026-12-webinar-contenido-ia:
+    nombre: "Webinar: contenido con IA"   # PENDIENTE: nombre definitivo el 30/11
+    tipo: webinar
+    fechas: [2026-12-10]
+    hora: "13:00"
+    apertura: 2026-12-02                   # planificada; Vent avisa cuando abra de verdad
+    objetivos: {inscriptos_min: 40, derivacion_pct_min: 15}
+    planilla: null                         # PENDIENTE
+    origen_crm: null                       # PENDIENTE
+    source_id: null                        # PENDIENTE
+    meta:
+      cuenta: "725901852075382"
+      campanas: []                         # PENDIENTE; solo las dedicadas, nunca «JY | Cursos y Webinars»

@@ -17,6 +17,11 @@ registro histórico) están en `cursos/datos.md`.
 
 Para cada evento de `eventos_abiertos`, con `C=cursos/datos/crudos/<hoy>`:
 
+Un evento dado de alta sin `planilla` o sin `source_id` (Vent todavía no los pasó) **no se
+mide**: se saltean los pasos 1 a 4 para él, no es un error ni hace fallar el análisis, y el
+`resumen` lo lista como "falta planilla, source_id (lo pasa Vent)". Su tarjeta en el panel queda
+en cero. Si ya pasó la apertura y sigue sin planilla, decirlo en el resumen de cierre.
+
 1. **Planilla** (conector de Google Sheets): `get_values` con `spreadsheetId` = `planilla` del
    evento y `range` = `Inscriptos!A1:Q500`. Guardar la respuesta **tal cual** (regla 9) en
    `$C/<slug>-planilla.json`. Ese archivo tiene nombres, teléfonos y emails: está en

@@ -72,6 +72,11 @@ def estado(cfg, fecha):
     return "realizado"
 
 
+def faltan_datos(cfg):
+    """Lo que Vent todavía no pasó y sin lo cual el evento no se puede medir."""
+    return [c for c in ("planilla", "source_id") if not cfg.get(c)]
+
+
 def eventos_abiertos(fecha=None):
     """Lo que usa que_toca_hoy.py: {slug: estado} de los que no están cerrados."""
     fecha = fecha or hoy()
@@ -336,6 +341,8 @@ def cmd_medir(args):
     if args.slug not in eventos:
         sys.exit(f"{args.slug} no está en cursos/eventos.yaml")
     cfg = eventos[args.slug]
+    if faltan := faltan_datos(cfg):
+        sys.exit(f"{args.slug}: falta {', '.join(faltan)} en cursos/eventos.yaml (lo pasa Vent); no se mide")
     filas, avisos = leer_planilla(args.planilla)
     try:
         bitrix = json.loads(Path(args.bitrix).read_text(encoding="utf-8"))
@@ -362,7 +369,10 @@ def cmd_resumen(args):
     abiertos = eventos_abiertos(fecha)
     medidos = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in sorted(carpeta.glob("*.json"))
                if p.stem != "parte"} if carpeta.exists() else {}
-    sin_medir = [s for s in abiertos if s not in medidos]
+    eventos = cargar_eventos()
+    sin_datos = {s: faltan_datos(eventos[s]) for s in abiertos
+                 if s not in medidos and faltan_datos(eventos[s])}
+    sin_medir = [s for s in abiertos if s not in medidos and s not in sin_datos]
     datos = {
         "eventos": {s: {"estado": r["estado"], "inscriptos": r["stats"]["total"],
                         "asistentes": r["stats"]["asistentes"],
@@ -371,6 +381,7 @@ def cmd_resumen(args):
                     for s, r in medidos.items()},
         "alertas": [f"{r['nombre']}: {a}" for r in medidos.values() for a in r["alertas"]],
         "sin_medir": sin_medir,
+        "sin_datos": sin_datos,
     }
     (carpeta / "parte.json").parent.mkdir(parents=True, exist_ok=True)
     (carpeta / "parte.json").write_text(json.dumps(datos, ensure_ascii=False, indent=2) + "\n",
@@ -388,6 +399,8 @@ def cmd_resumen(args):
             print(f"   ⚠️ {a}")
     for s in sin_medir:
         print(f"🎓 {s}: no se midió hoy")
+    for s, faltan in sin_datos.items():
+        print(f"🎓 {eventos[s]['nombre']}: {abiertos[s]}, sin medir: falta {', '.join(faltan)} (lo pasa Vent)")
 
 
 def main():
