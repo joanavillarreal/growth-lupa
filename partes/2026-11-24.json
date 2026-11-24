@@ -60,6 +60,56 @@
         "origenes_automaticos": []
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:56",
+      "resumen": "Panel Meta Ads republicado (datos al 23/11). Guardia corrida sin enviar: 4 alertas detectadas (2 nuevas, 2 ya avisadas), conciliación Meta/CRM sin faltantes.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_detectadas_no_enviadas": [
+          "G3:ctr:120255185335240427",
+          "G3:cpl:120252700778930427"
+        ],
+        "silenciadas": 2,
+        "resueltas": [
+          "JY | Conversiones (costo por resultado en suba)"
+        ],
+        "gasto_ayer_ars": 42766.44,
+        "conciliacion": {
+          "leads_meta_ayer": 12,
+          "crm_ayer": 10,
+          "avisados_slack": 2,
+          "faltan": 0
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)",
+          "JY | Clientes potenciales Boxer Taller (AGENTE META)"
+        ],
+        "anuncios_sin_drive": [],
+        "cambios_actividad": "14 en la respuesta (16/11 a 24/11), 0 nuevos. Ninguna respuesta se transcribió a mano: las chicas se copiaron de la transcripción de la sesión (texto exacto de la herramienta) y las grandes del archivo de resultado.",
+        "panel": {
+          "gasto_q_ars": 2348249,
+          "meta_crm_pct": 99,
+          "cpl_real_ars": 4806,
+          "derivacion_pct": 15.0,
+          "campanas_activas": 8,
+          "anuncios_activos": 19
+        },
+        "reingresos_23_11": 2,
+        "validar_mcp": "OK: 10 respuestas abren y los totales cuadran"
+      },
+      "para": []
     }
   },
   "preparacion": {

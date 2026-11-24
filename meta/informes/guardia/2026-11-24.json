@@ -1,0 +1,124 @@
+{
+  "corrida": "2026-11-24",
+  "datos_hasta": "2026-11-23",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 683853.06,
+      "gasto_total": 683853.06,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 683853.06,
+      "gasto_total": 683853.06,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 42766.44,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-11-17": 12,
+      "2026-11-18": 11,
+      "2026-11-19": 9,
+      "2026-11-20": 9,
+      "2026-11-21": 5,
+      "2026-11-22": 9,
+      "2026-11-23": 12
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-11-17": 12,
+        "2026-11-18": 9,
+        "2026-11-19": 7,
+        "2026-11-20": 6,
+        "2026-11-21": 4,
+        "2026-11-22": 7,
+        "2026-11-23": 10
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-11-17": 4,
+      "2026-11-18": 5,
+      "2026-11-19": 1,
+      "2026-11-20": 3,
+      "2026-11-21": 2,
+      "2026-11-22": 2,
+      "2026-11-23": 2
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254957569100427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957569100427",
+      "entidad": "Visitas presenciales - Zonas LU",
+      "titulo": "Visitas presenciales - Zonas LU: 19.591 ARS en 10 dias sin un solo resultado (10 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Lu - Baradero 100km - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 10,
+      "primer_aviso": "2026-11-16",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120255155078120427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255155078120427",
+      "entidad": "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11",
+      "titulo": "VisitaLocal | Video30 | Santi-LaPlata | v1 | 2026-11: 16.050 ARS en 8 dias sin un solo resultado (8 dias seguidos)",
+      "detalle": "Campana JY | Visitas a tu Local (AGENTE META) · conjunto Santi - La Plata y Sur - LAL IG + video. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 8,
+      "primer_aviso": "2026-11-18",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:ctr:120255185335240427",
+      "tipo": "ctr_cayendo",
+      "nivel": "anuncio",
+      "entidad_id": "120255185335240427",
+      "entidad": "ControlNegocio | Video35 | LAL-VideoProducto | v1 | 2026-11",
+      "titulo": "ControlNegocio | Video35 | LAL-VideoProducto | v1 | 2026-11: el CTR cae hace 1 dia",
+      "detalle": "De 1.67% a 0.98% de un dia para el otro. Campana JY | Conversiones. Suele ser fatiga de creativo: se confirma mirando la frecuencia del periodo, no subiendo el presupuesto.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-24"
+    },
+    {
+      "clave": "G3:cpl:120252700778930427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120252700778930427",
+      "entidad": "JY | Remarketing",
+      "titulo": "JY | Remarketing: el costo por resultado sube hace 1 dia",
+      "detalle": "De 1.997 a 3.052 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-24"
+    }
+  ],
+  "se_mandan": [
+    "G3:ctr:120255185335240427",
+    "G3:cpl:120252700778930427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120254957569100427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G2:120255155078120427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G3:cpl:120252699641360427"
+  ]
+}
