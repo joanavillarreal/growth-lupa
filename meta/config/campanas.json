@@ -311,6 +311,17 @@
       "nota": "Agregada por Lupa el 2026-11-17. Joana confirmo el 24/11: los leads entran con origen Meta Ads Formulario. El formulario sale del UTM de los leads (UTM Campaign 'Formulario Boxer Taller - Leads'); el producto, del nombre de la campaña y del formulario. En Bitrix no hubo ningun lead de esta campaña hasta el 24/11: ese dia entraron 3 juntos (15:18-15:19, hora del portal), contra 7 resultados que contaba Meta al 23/11.",
       "formulario": "Formulario Boxer Taller - Leads",
       "producto": "boxer_taller"
+    },
+    {
+      "nombre": "JY | Conversiones Entre Rios (AGENTE META)",
+      "id_meta": "120255551393030427",
+      "grupo": "nucleo",
+      "bloque": "conversion",
+      "destino": "PENDIENTE",
+      "origenes_crm": "PENDIENTE",
+      "activa": true,
+      "a_confirmar": true,
+      "nota": "Agregada por Lupa el 2026-11-24: estaba en Meta y no en el mapa (creada ese dia a las 11:14, objetivo OUTCOME_LEADS, 2 conjuntos de 2.000 ARS/dia en Entre Rios). Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM."
     }
   ],
   "conjuntos_excepcion": [

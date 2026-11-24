@@ -71,3 +71,11 @@ Lo ya revisado con Joana que no hay que volver a marcar.
 - Vista Anuncios activos: cada anuncio muestra lo que gastó en los últimos 3 días (hasta ayer,
   de anuncio-diario.json) y "Casi sin entrega" si se llevó menos del 5% del gasto de su conjunto
   en ese tramo (Meta concentra el presupuesto). Activo en Meta ≠ circulando.
+
+## 24/11/2026 (tarde) — Campaña nueva: JY | Conversiones Entre Rios (AGENTE META)
+
+- Creada el 24/11 a las 11:14, objetivo OUTCOME_LEADS, 2 conjuntos de 2.000 ARS/día en Entre
+  Ríos y 2 anuncios. Sumada al mapa como `a_confirmar` (bloque conversion por el nombre): falta
+  que Joana confirme producto y origen del CRM.
+- No había entrado al panel porque la llamada #8 pedía solo ACTIVE y sus anuncios estaban en
+  revisión. Desde el 24/11 la #8 pide ACTIVE, IN_PROCESS y PENDING_REVIEW.
