@@ -303,11 +303,14 @@
       "id_meta": "120255330571790427",
       "grupo": "nucleo",
       "bloque": "conversion",
-      "destino": "PENDIENTE",
-      "origenes_crm": "PENDIENTE",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Meta Ads Formulario"
+      ],
       "activa": true,
-      "a_confirmar": true,
-      "nota": "Agregada por Lupa el 2026-11-17: estaba en Meta y no en el mapa. Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM."
+      "nota": "Agregada por Lupa el 2026-11-17. Joana confirmo el 24/11: los leads entran con origen Meta Ads Formulario. El formulario sale del UTM de los leads (UTM Campaign 'Formulario Boxer Taller - Leads'); el producto, del nombre de la campaña y del formulario. En Bitrix no hubo ningun lead de esta campaña hasta el 24/11: ese dia entraron 3 juntos (15:18-15:19, hora del portal), contra 7 resultados que contaba Meta al 23/11.",
+      "formulario": "Formulario Boxer Taller - Leads",
+      "producto": "boxer_taller"
     }
   ],
   "conjuntos_excepcion": [

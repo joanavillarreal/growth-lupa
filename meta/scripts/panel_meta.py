@@ -607,6 +607,28 @@ def ficha_campana(nombre, cfg):
             "en_config": bool(c)}
 
 
+DIAS_ENTREGA = 3
+
+
+def gasto_reciente(carpeta):
+    """{id de anuncio: gasto ARS de los ultimos DIAS_ENTREGA dias con datos} de la
+    llamada #1 (anuncio-diario.json, hasta ayer). {} si no esta: el panel no
+    marca nada en vez de suponer que no gasto."""
+    ruta = os.path.join(carpeta, "anuncio-diario.json")
+    if not os.path.isfile(ruta):
+        return {}
+    filas = _leer_mcp(ruta)
+    dias = sorted({f.get("date_start") for f in filas if f.get("date_start")})[-DIAS_ENTREGA:]
+    out = {}
+    for f in filas:
+        if f.get("date_start") in dias:
+            k = str(f.get("id", ""))
+            out[k] = round(out.get(k, 0.0) + (moneda(f.get("amount_spent")) or 0.0), 2)
+    # Un anuncio sin fila en esos dias no gasto: va en 0 solo si el archivo trae
+    # esos dias (el filtro de la llamada #1 es amount_spent > 0).
+    return {"_dias": dias, **out}
+
+
 ESTADOS_ANUNCIO_HOY = ("ACTIVE", "IN_PROCESS", "PENDING_REVIEW")
 
 
@@ -640,6 +662,7 @@ def leer_hoy():
     # Los que Meta todavia esta revisando tambien van: un anuncio cargado a media
     # tarde sale IN_PROCESS y la SDR tiene que saber que existe (Joana, 2026-11-02).
     activos = [a for a in activos if a.get("effective_status") in ESTADOS_ANUNCIO_HOY]
+    entrega = gasto_reciente(carpeta)
     campanas = {}
     for a in activos:
         c = campanas.setdefault(a["campaign_name"], dict(ficha(a["campaign_name"]),
@@ -658,6 +681,9 @@ def leer_hoy():
             # La pieza en Drive, para quien no tiene acceso a la pagina.
             "drive": drive.get(_clave_anuncio(a.get("name", ""))) or "",
             "estado": a.get("effective_status", ""),
+            # Activo no es lo mismo que circulando: Meta concentra el presupuesto
+            # y deja anuncios ACTIVE casi sin entrega (Joana, 2026-11-24).
+            "gasto_3d": entrega.get(str(a.get("id", "")), 0.0) if entrega else None,
         })
     for x in conjuntos:
         if x.get("effective_status") != "ACTIVE":
@@ -699,6 +725,7 @@ def leer_hoy():
                                        and str(a.get("creative_id")) not in creativos}),
         "campanas": sorted(campanas.values(), key=lambda c: (c["producto"], c["bloque"], c["nombre"])),
         "anuncios": anuncios,
+        "entrega_dias": entrega.get("_dias") or [],   # los dias de gasto_3d
     }
 
 

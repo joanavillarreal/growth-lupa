@@ -58,3 +58,16 @@ Lo ya revisado con Joana que no hay que volver a marcar.
   entraron; alrededor, derivados (`convertido`), no pasaron de SDR (`inactivo`), no calificados
   (`no_util`), en curso (`abierta`) y, si hay, los que pasaron a otro canal (`otra`).
 - Mismos leads que "Convertidos" y "CPL real": con UTM del anuncio, desde el 08/09.
+
+## 24/11/2026 (tarde) — Clientes potenciales Boxer Taller y anuncios "casi sin entrega"
+
+- `JY | Clientes potenciales Boxer Taller (AGENTE META)`: Joana confirmó origen Meta Ads
+  Formulario. Formulario "Formulario Boxer Taller - Leads" (UTM Campaign de sus leads), producto
+  Boxer Taller. En Bitrix no hubo ningún lead suyo hasta el 24/11; ese día entraron 3 juntos
+  (15:18-15:19, hora del portal), contra 7 resultados que contaba Meta al 23/11. El cruce por
+  UTM (anuncio + conjunto) los toma: entran al panel en la corrida del 25/11.
+- Joana apagó el 24/11 a las 9:18 la campaña Viajes Presenciales Luciana y a las 9:27 el
+  conjunto Santi - La Plata y Sur, después de la corrida. Se volvieron a traer #8 y #9 ese día.
+- Vista Anuncios activos: cada anuncio muestra lo que gastó en los últimos 3 días (hasta ayer,
+  de anuncio-diario.json) y "Casi sin entrega" si se llevó menos del 5% del gasto de su conjunto
+  en ese tramo (Meta concentra el presupuesto). Activo en Meta ≠ circulando.
