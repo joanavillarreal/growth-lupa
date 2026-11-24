@@ -131,6 +131,7 @@ Reinyecta los datos en `informes/panel-trimestral.html` y avisa si falta algo.
 El botón "Ver anuncio" de la vista Anuncios activos abre la pieza en Drive, de
 `config/anuncios-drive.json` (los links los pasa Joana, por nombre de anuncio). Los anuncios
 activos sin link van al parte (`anuncios_sin_drive`); no al mensaje del día (05/11/2026).
+No se le piden a Joana los links que faltan (24/11/2026): se suman solo cuando ella los pasa.
 
 ## 5. Publicar o comparar (según `paneles.yaml`)
 

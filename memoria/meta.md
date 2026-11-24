@@ -82,3 +82,5 @@ Lo ya revisado con Joana que no hay que volver a marcar.
 - Joana confirmó el 24/11: Conversiones Entre Rios entra como Meta Ads Formulario, producto
   Boxer Gestión. Esa tarde la campaña pasó a 6 anuncios (4 cargados 11:34-11:35 y uno con
   creativo nuevo); 5 en revisión de Meta y 1 activo.
+- Joana (24/11): los anuncios que no tienen link de Drive quedan así ("Ver en Facebook"). No
+  pedirle los links que faltan; se suman cuando ella los pase.
