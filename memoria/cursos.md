@@ -23,3 +23,15 @@ es alerta se anota acá, con fecha y evento.)_
 - Es el segundo webinar de IA en tres semanas (antecedente: «Decidí mejor con IA», 19/11).
   Joana quiere que este recupere los datos que ese no trajo (p. ej. «Asistió» sin cargar).
 - Nombre, planilla, origen en Bitrix y campañas de Meta: PENDIENTES. No estimarlos.
+
+## Webinar del 28/12 (2026-12-webinar-28-dic) — contexto que pasó Vent el 24/11/2026
+
+- Slug y nombre provisorios: el tema se define la semana del 30/11 y Vent avisa el slug nuevo.
+  Mientras tanto se muestra «Webinar del 28/12».
+- Inscripción de 18 días (abre el 10/12 14 hs, planificado, cuando termina el webinar de
+  contenido con IA: usan el mismo flujo de inscripción) que cruza Navidad; el evento cae entre
+  Navidad y Año Nuevo. El canal nunca hizo un evento en diciembre: no hay con qué comparar.
+- Referencias: Ordenar Stock llegó a 57 con 15 días de inscripción; Mostrador a 19 con 10.
+- Uno de cada cinco se anota el día del evento (Curso IA: 16 de 91 el 10/08). Un ritmo bajo a
+  mitad de la inscripción no está perdido.
+- Hora, orador, planilla, origen en Bitrix y campañas de Meta: PENDIENTES. No estimarlos.

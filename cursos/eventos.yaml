@@ -88,3 +88,23 @@ eventos:
     meta:
       cuenta: "725901852075382"
       campanas: []                         # PENDIENTE; solo las dedicadas, nunca «JY | Cursos y Webinars»
+
+  # Alta del 24/11/2026 con datos pendientes de Vent: slug y nombre provisorios (el tema se
+  # define la semana del 30/11; mientras tanto se muestra «Webinar del 28/12»); hora, orador,
+  # planilla, origen en Bitrix y campañas de Meta todavía no están. Hasta que Vent pase planilla
+  # y source_id, no se mide. La apertura es la planificada: cuando termina el webinar del 10/12,
+  # porque usan el mismo flujo de inscripción; Vent avisa cuando abra de verdad.
+  # El contexto que pasó Vent para el objetivo está en memoria/cursos.md.
+  2026-12-webinar-28-dic:              # slug provisorio
+    nombre: "Webinar del 28/12"        # PENDIENTE: tema a definir la semana del 30/11
+    tipo: webinar
+    fechas: [2026-12-28]
+    hora: null                         # PENDIENTE (hora de Argentina)
+    apertura: 2026-12-10               # planificada (14:00)
+    objetivos: {inscriptos_min: 40, derivacion_pct_min: 15}
+    planilla: null                     # PENDIENTE
+    origen_crm: null                   # PENDIENTE
+    source_id: null                    # PENDIENTE
+    meta:
+      cuenta: "725901852075382"
+      campanas: []                     # PENDIENTE; solo las dedicadas, nunca «JY | Cursos y Webinars»
