@@ -79,3 +79,6 @@ Lo ya revisado con Joana que no hay que volver a marcar.
   que Joana confirme producto y origen del CRM.
 - No había entrado al panel porque la llamada #8 pedía solo ACTIVE y sus anuncios estaban en
   revisión. Desde el 24/11 la #8 pide ACTIVE, IN_PROCESS y PENDING_REVIEW.
+- Joana confirmó el 24/11: Conversiones Entre Rios entra como Meta Ads Formulario, producto
+  Boxer Gestión. Esa tarde la campaña pasó a 6 anuncios (4 cargados 11:34-11:35 y uno con
+  creativo nuevo); 5 en revisión de Meta y 1 activo.

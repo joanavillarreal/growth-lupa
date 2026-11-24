@@ -317,11 +317,12 @@
       "id_meta": "120255551393030427",
       "grupo": "nucleo",
       "bloque": "conversion",
-      "destino": "PENDIENTE",
-      "origenes_crm": "PENDIENTE",
+      "destino": "formulario",
+      "origenes_crm": [
+        "Meta Ads Formulario"
+      ],
       "activa": true,
-      "a_confirmar": true,
-      "nota": "Agregada por Lupa el 2026-11-24: estaba en Meta y no en el mapa (creada ese dia a las 11:14, objetivo OUTCOME_LEADS, 2 conjuntos de 2.000 ARS/dia en Entre Rios). Bloque sugerido por el nombre. Falta que Joana confirme producto y origen del CRM."
+      "nota": "Agregada por Lupa el 2026-11-24 (creada ese dia a las 11:14, objetivo OUTCOME_LEADS, 2 conjuntos de 2.000 ARS/dia en Entre Rios). Joana confirmo el 24/11: origen Meta Ads Formulario, producto Boxer Gestion."
     }
   ],
   "conjuntos_excepcion": [
