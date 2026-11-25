@@ -71,6 +71,9 @@ eventos:
       cuenta: "725901852075382"
       campanas:
         - {id: "120255141033740427", nombre: "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)"}
+    cerrado: 2026-11-25        # pedido de Vent: NO SE HIZO (suspendido por no llegar al objetivo de
+                               # inscriptos; a los anotados les escribieron por privado para derivar).
+                               # En el panel: "suspendido" en su dashboard.json.
 
   # Alta del 24/11/2026 con datos pendientes de Vent: el nombre se aprueba el 30/11 (mientras
   # tanto se muestra «Webinar: contenido con IA»); la planilla, el origen en Bitrix y las

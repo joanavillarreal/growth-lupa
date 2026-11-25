@@ -35,3 +35,12 @@ es alerta se anota acá, con fecha y evento.)_
 - Uno de cada cinco se anota el día del evento (Curso IA: 16 de 91 el 10/08). Un ritmo bajo a
   mitad de la inscripción no está perdido.
 - Hora, orador, planilla, origen en Bitrix y campañas de Meta: PENDIENTES. No estimarlos.
+
+## Webinar: Decidí mejor con IA (2026-11-webinar-decisiones-ia) — cerrado el 25/11/2026 a pedido de Vent
+
+- **No se hizo**: se suspendió por no llegar al objetivo de inscriptos (20 de más de 40). A los
+  anotados el equipo les escribió por privado para derivar a ventas. «Asistió» vacía no es un
+  error del circuito: no hubo evento. En el panel va como suspendido (`suspendido` en su
+  dashboard.json), no como evento con 0 asistentes.
+- Única derivación del origen: prospecto convertido el 18/11 (Bitrix, `DATE_CLOSED`/`MOVED_TIME`),
+  antes de la fecha; al 25/11 ninguna derivación con ese origen salió de los mensajes por privado.

@@ -23,6 +23,10 @@ los eventos. **`dist/index.html` es generado: no se edita a mano**, se pisa en c
 
 Un evento con `"oculto": true` no se publica.
 
+Un evento que se suspendió lleva `"suspendido": {"cerrado": "AAAA-MM-DD", "motivo": "..."}`:
+el panel muestra un cartel arriba, la asistencia como «no se hizo» y en el calendario
+«Suspendido · no se hizo» (desde el 25/11/2026, «Decidí mejor con IA»).
+
 ## Cómo está organizado
 
 - **A la izquierda, los trimestres** (Q4 2026, Q3 2026…), del más nuevo al más viejo.

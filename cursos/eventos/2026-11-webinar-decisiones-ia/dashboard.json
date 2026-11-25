@@ -9,6 +9,10 @@
   "hora": "13:00",
   "expositor": "Joana Villarreal",
   "descripcion": "Un webinar para dueños y encargados de casas de repuestos. Te mostramos en vivo cómo, con inteligencia artificial, armás un panel con los números de tu propio negocio (ventas, stock, cuenta corriente) y lo usás para decidir mejor: qué reponer, qué está parado en el estante y a quién hay que cobrarle. No hace falta saber de computación: le pasás tus datos y le pedís lo que querés ver.",
+  "suspendido": {
+    "cerrado": "2026-11-25",
+    "motivo": "No llegó al objetivo de inscriptos (20 de más de 40) y se suspendió. A los anotados el equipo les escribió por privado para derivarlos a ventas."
+  },
   "sheet_url": "https://docs.google.com/spreadsheets/d/1sBHMzu-t_oDxPbkjeJnFPUzg8YevDGPCO8ACRmMiiu0/edit",
   "origen_crm": "Webinar - Decisiones usando IA",
   "origen_source_id": "UC_T93XNH",

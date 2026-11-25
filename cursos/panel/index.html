@@ -343,6 +343,10 @@
   .status.ok   { background: rgba(43,138,48,0.12); color: #23762a; }
   .status.bad  { background: rgba(194,58,43,0.11); color: #a8311f; }
   .status.wait { background: var(--surface-2); color: var(--ink-2); }
+  .susp { border-left: 4px solid #a8311f; margin-bottom: 22px; }
+  .susp h3 { color: #a8311f; }
+  .cal-chip.susp { text-decoration: line-through; }
+  .estado.susp { color: #a8311f; font-weight: 600; }
   .desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.6; max-width: 80ch; margin: 0; }
   .tiles.five { grid-template-columns: repeat(5, minmax(0,1fr)); }
   .duo { display: grid; grid-template-columns: 1.4fr 1fr; gap: 13px; }
@@ -464,7 +468,8 @@ function drawTabs() {
   });
 }
 
-function estadoDe(fecha) {
+function estadoDe(fecha, ev) {
+  if (ev && ev.suspendido) return '<span class="estado susp">Suspendido · no se hizo</span>';
   if (fecha < HOY) return '<span class="estado">Pasó</span>';
   if (fecha === HOY) return '<span class="estado soon">Hoy</span>';
   const dias = Math.round((new Date(fecha + 'T00:00:00') - new Date(HOY + 'T00:00:00')) / 86400000);
@@ -480,7 +485,7 @@ function drawCalendar(k) {
   // En la celda va un texto corto; el detalle queda en el tooltip y en la lista de abajo.
   const corto = it => it.hito ? it.que
     : it.que ? it.que.replace('Clase ', 'Cl. ') : (it.hora ? it.hora.replace(':00', ' h') : ({ webinar: 'Web', curso: 'Curso', charla: 'Charla' })[it.ev.kind] || it.ev.tag);
-  const chip = it => `<button class="cal-chip ${it.hito ? 'hito' : it.ev.kind}${it.fecha < HOY ? ' past' : ''}"
+  const chip = it => `<button class="cal-chip ${it.hito ? 'hito' : it.ev.kind}${it.fecha < HOY ? ' past' : ''}${it.ev.suspendido ? ' susp' : ''}"
     data-ev="${esc(it.ev.id)}" title="${esc((it.hora ? it.hora + ' · ' : '') + label(it) + (it.hito ? ' (' + it.ev.titulo + ')' : ''))}">${esc(corto(it))}</button>`;
 
   const months = qMonths(k).map(({ y, m }) => {
@@ -506,7 +511,7 @@ function drawCalendar(k) {
       <td><span class="tag ${it.ev.tag.toLowerCase()}">${esc(it.ev.tag)}</span></td>
       <td class="who">${esc(it.ev.titulo)}${it.que ? ` <span style="color:var(--ink-3);font-weight:400">· ${esc(it.que)}</span>` : ''}</td>
       <td>${esc(it.ev.expositor) || '—'}</td>
-      <td>${estadoDe(it.fecha)}</td>
+      <td>${estadoDe(it.fecha, it.ev)}</td>
     </tr>`).join('');
 
   document.getElementById('body').innerHTML = `
@@ -1076,8 +1081,13 @@ const OBJ_SHELL = `
 
 function drawDesc(c) {
   const host = document.getElementById('desc');
-  if (!host || !c.descripcion) return;
-  host.innerHTML = `<section class="panel" style="margin-bottom:22px">
+  if (!host) return;
+  const sp = c.suspendido;
+  const banner = sp ? `<section class="panel susp"><h3>Suspendido: el ${esc(c.kind)} no se hizo</h3>
+    <p class="desc">${esc(sp.motivo || '')}${sp.cerrado ? ` Cerrado el ${new Date(sp.cerrado + 'T00:00:00').toLocaleDateString('es-AR')}.` : ''}
+    No hubo asistencia que medir: los números de abajo son de la inscripción y del CRM.</p></section>` : '';
+  if (!c.descripcion) { host.innerHTML = banner; return; }
+  host.innerHTML = banner + `<section class="panel" style="margin-bottom:22px">
     <h3>De qué se trata</h3><p class="desc">${esc(c.descripcion)}</p></section>`;
 }
 
@@ -1150,7 +1160,9 @@ function drawObjTiles(c) {
     t('Inscriptos', s.total, ''),
     t('Clientes Boxer', s.clientes_si, pct(s.clientes_si)),
     t('No clientes', s.clientes_no, pct(s.clientes_no)),
-    t('Asistieron', yaPaso ? s.asistentes : '—', yaPaso ? '' : 'Se carga después del evento'),
+    c.suspendido ? t('Asistieron', '—', 'No se hizo: suspendido')
+      : t('Asistieron', yaPaso ? s.asistentes : '—', yaPaso ? '' : 'Se carga después del evento'),
+    c.suspendido ? t('% de asistencia', '—', 'No aplica') :
     t('% de asistencia', yaPaso && s.total ? Math.round(s.asistentes / s.total * 100) + '%' : '—',
       !yaPaso ? 'Se mide después del evento' : s.total ? `${s.asistentes} de ${s.total} inscriptos` : 'Sin inscriptos')
   ].join('');
