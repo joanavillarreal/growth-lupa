@@ -323,6 +323,20 @@
       ],
       "activa": true,
       "nota": "Agregada por Lupa el 2026-11-24 (creada ese dia a las 11:14, objetivo OUTCOME_LEADS, 2 conjuntos de 2.000 ARS/dia en Entre Rios). Joana confirmo el 24/11: origen Meta Ads Formulario, producto Boxer Gestion."
+    },
+    {
+      "nombre": "JY | Lead Magnet Calculadora Fiado (AGENTE META)",
+      "id_meta": "120255364860950427",
+      "grupo": "eventual",
+      "bloque": "evento",
+      "destino": "formulario",
+      "origenes_crm": "PENDIENTE",
+      "activa": true,
+      "a_confirmar": true,
+      "producto": "boxer_gestion",
+      "conjunto": "Frio repuesteras - LAL CRM + intereses (id 120255364867800427), 5.000 ARS/dia, formulario instantaneo",
+      "objetivo_leads": 50,
+      "nota": "Agregada por Lupa el 2026-11-25 por aviso de Turbo (activa desde el 25/11, tarde). Lead magnet: calculadora '¿Cuanta plata perdes por fiar?' para casas de repuestos, producto Boxer Gestion (segun Turbo). 4 anuncios CalcFiado-Numero/Diagnostico/Pregunta/Costo (mismo texto, cambia la placa). SIN fecha_evento: no es un evento. Objetivo 50 leads del formulario sin duplicados (roca 'Recurso para el repuestero... con >=50 leads'), no resultados de Meta. Eventual: no entra en el CPL del nucleo. ORIGEN PENDIENTE de Joana: Turbo propone 'Lead Magnet' (UC_CT8131); ese origen tiene 2 leads viejos de otro lead magnet, asi que al confirmarlo se cuenta desde el 2026-11-25. Leads a Bitrix SIN n8n por ahora: Joana baja el formulario y Turbo los carga a mano (responsable Yamila); dias de demora Meta -> CRM no son perdida. Turbo avisa cuando este el workflow nuevo."
     }
   ],
   "conjuntos_excepcion": [
