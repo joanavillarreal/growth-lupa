@@ -55,6 +55,7 @@ eventos:
       cuenta: "725901852075382"
       campanas:
         - {id: "120254717004450427", nombre: "JY | Webinar Orden Stock (AGENTE META)"}
+    cerrado: 2026-11-25        # lo pidió Vent; medición final ese día (cursos/datos/2026-11-25/)
 
   2026-11-webinar-decisiones-ia:
     nombre: "Webinar: Decidí mejor con IA"
