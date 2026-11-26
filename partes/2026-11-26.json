@@ -63,6 +63,63 @@
         "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:01",
+      "resumen": "Panel Meta Ads republicado (datos al 25/11). Guardia corrida sin enviar: 4 alertas (3 nuevas, 1 ya avisada); conciliación de ayer: Meta 12, CRM 6, 4 re-ingresos, faltan 2.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_detectadas_no_enviadas": [
+          "G2: AsesoriaVirtual | Video | Córdoba LAL | v1 | 2026-10 - Copia (8.779 ARS en 2 días sin resultados)",
+          "G2: GanasTiempo | Img | EntreRios | v1 | 2026-11 (3.381 ARS en 2 días sin resultados)",
+          "G3:cpr JY | Provincias Visitadas (AGENTE META) (costo por resultado sube hace 3 días vs 2.789 ARS/lead)"
+        ],
+        "silenciadas": 1,
+        "resueltas": [
+          "Visitas presenciales - Zonas LU (G2)",
+          "Nuevo anuncio de Clientes potenciales (G2)",
+          "JY | Conversiones (G3 cpr)",
+          "Conocimiento - Estado del rubro (G3 ctr)"
+        ],
+        "gasto_ayer_ars": 45926.19,
+        "conciliacion": {
+          "leads_meta_ayer": 12,
+          "crm_ayer": 6,
+          "avisados_slack": 4,
+          "faltan": 2
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)",
+          "JY | Lead Magnet Calculadora Fiado (AGENTE META)"
+        ],
+        "anuncios_sin_drive": [],
+        "cambios_actividad": "12 en la respuesta (desde 23/11), 3 nuevos. Respuestas grandes copiadas del archivo de resultado; las chicas escritas tal cual vinieron.",
+        "slack_reingresos": "25/11 leído del canal (4 RE-INGRESO de formulario); 19/11 a 24/11 del conteo de la corrida del 25/11.",
+        "panel": {
+          "gasto_q_ars": 2436941,
+          "meta_crm_pct": 99,
+          "cpl_real_ars": 4793,
+          "derivacion_pct": 15.0,
+          "campanas_activas": 8,
+          "anuncios_activos": 22,
+          "presupuesto_diario_ars": 44000
+        },
+        "reingresos_25_11": 4,
+        "validar_mcp": "OK: 10 respuestas abren y los totales cuadran",
+        "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
+      },
+      "para": []
     }
   },
   "preparacion": {

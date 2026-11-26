@@ -1,0 +1,124 @@
+{
+  "corrida": "2026-11-26",
+  "datos_hasta": "2026-11-25",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 651456.0,
+      "gasto_total": 651456.0,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 651456.0,
+      "gasto_total": 651456.0,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 45926.19,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-11-19": 9,
+      "2026-11-20": 9,
+      "2026-11-21": 5,
+      "2026-11-22": 9,
+      "2026-11-23": 12,
+      "2026-11-24": 7,
+      "2026-11-25": 12
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-11-19": 7,
+        "2026-11-20": 6,
+        "2026-11-21": 4,
+        "2026-11-22": 7,
+        "2026-11-23": 10,
+        "2026-11-24": 10,
+        "2026-11-25": 6
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-11-19": 1,
+      "2026-11-20": 3,
+      "2026-11-21": 2,
+      "2026-11-22": 2,
+      "2026-11-23": 2,
+      "2026-11-24": 1,
+      "2026-11-25": 4
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120254957791250427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120254957791250427",
+      "entidad": "AsesoriaVirtual | Video | Córdoba LAL | v1 | 2026-10 - Copia",
+      "titulo": "AsesoriaVirtual | Video | Córdoba LAL | v1 | 2026-10 - Copia: 8.779 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Provincias Visitadas (AGENTE META) · conjunto Córdoba | LAL video + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-26"
+    },
+    {
+      "clave": "G2:120255552787020427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255552787020427",
+      "entidad": "GanasTiempo | Img | EntreRios | v1 | 2026-11",
+      "titulo": "GanasTiempo | Img | EntreRios | v1 | 2026-11: 3.381 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Conversiones Entre Rios (AGENTE META) · conjunto Entre Rios | LAL CRM + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-26"
+    },
+    {
+      "clave": "G3:cpl:120252700778930427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120252700778930427",
+      "entidad": "JY | Remarketing",
+      "titulo": "JY | Remarketing: el costo por resultado sube hace 3 dias",
+      "detalle": "Subio 199% en 3 dias, de 1.997 a 5.973 ARS. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-11-24",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120254876324870427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254876324870427",
+      "entidad": "JY | Provincias Visitadas (AGENTE META)",
+      "titulo": "JY | Provincias Visitadas (AGENTE META): el costo por resultado sube hace 3 dias",
+      "detalle": "2026-11-23: sin leads ese dia · 2026-11-24: 5.994 ARS/lead · 2026-11-25: sin leads ese dia — contra un promedio de 2.789 ARS/lead en los 7 dias previos. Subio y no volvio a bajar. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 3,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-26"
+    }
+  ],
+  "se_mandan": [
+    "G2:120254957791250427",
+    "G2:120255552787020427",
+    "G3:cpl:120254876324870427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G3:cpl:120252700778930427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120254957569100427",
+    "G2:120255409590820427",
+    "G3:cpl:120252699641360427",
+    "G3:ctr:120252699394250427"
+  ]
+}
