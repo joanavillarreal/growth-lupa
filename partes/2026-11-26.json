@@ -157,6 +157,50 @@
         "aviso": "Tabla enviada a #adqui-notificaciones-canales"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:04",
+      "resumen": "Cuentas al 25/11: Gestión 6.176 seguidores (+28 en 7 días), alcance 7d 32.452 (orgánico 617), engagement 3,6%; Taller 149 (+2), alcance 15.334 (orgánico 64, muestra chica). Leads de redes Q4: 8.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "metricas": {
+          "boxer-gestion": {
+            "seguidores": 6176,
+            "seguidores_delta_7d": 28,
+            "alcance_7d": 32452,
+            "alcance_organico_7d": 617,
+            "engagement_pct": 3.6
+          },
+          "boxer-taller": {
+            "seguidores": 149,
+            "seguidores_delta_7d": 2,
+            "alcance_7d": 15334,
+            "alcance_organico_7d": 64,
+            "engagement_pct": 0.0,
+            "muestra_chica": true
+          },
+          "leads_q4": {
+            "total": 8,
+            "derivados": 5,
+            "en_gestion": 0,
+            "inactivos": 3
+          }
+        },
+        "ventana": {
+          "desde": "2026-11-19",
+          "hasta": "2026-11-25"
+        },
+        "hallazgos": [],
+        "alertas": [],
+        "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9"
+      },
+      "para": []
     }
   },
   "preparacion": {
