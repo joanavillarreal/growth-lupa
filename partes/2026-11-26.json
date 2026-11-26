@@ -120,6 +120,43 @@
         "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
       },
       "para": []
+    },
+    "inversion": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:02",
+      "resumen": "Cargados 6 registros al SPA 1052 (23/11 a 25/11): Meta USD 87,64 + Google USD 24,65 = USD 112,29.",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": null,
+      "datos": {
+        "desde": "2026-11-23",
+        "hasta": "2026-11-25",
+        "creados": {
+          "meta": [
+            948,
+            950,
+            952
+          ],
+          "google": [
+            954,
+            956,
+            958
+          ]
+        },
+        "usd": {
+          "meta": 87.64,
+          "google": 24.65,
+          "total": 112.29
+        },
+        "salteados": [],
+        "pendientes": [],
+        "tabla": "## Carga de inversión — 23/11 a 25/11\n\nCotización: 1500 ARS = 1 USD\n\n- **Meta Ads**: 3 registros creados, USD 87.64\n- **Google Ads**: 3 registros creados, USD 24.65\n- **Total**: USD 112.29\n\n| Día | Canal | ARS | USD | ID |\n|---|---|---:|---:|---|\n| 23/11 | Google Ads | 6,470.27 | 4.31 | 954 |\n| 23/11 | Meta Ads | 42,841.16 | 28.56 | 948 |\n| 24/11 | Google Ads | 16,952.26 | 11.30 | 956 |\n| 24/11 | Meta Ads | 42,690.62 | 28.46 | 950 |\n| 25/11 | Google Ads | 13,558.08 | 9.04 | 958 |\n| 25/11 | Meta Ads | 45,927.95 | 30.62 | 952 |\n\n",
+        "aviso": "Tabla enviada a #adqui-notificaciones-canales"
+      },
+      "para": []
     }
   },
   "preparacion": {
