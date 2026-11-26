@@ -1,7 +1,70 @@
 {
   "fecha": "2026-11-26",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Q4 al 26/11: 471 generados, 163 derivados (meta 300, proyección 263), 19 cierres; CPL USD 4,34. Alarma: inactivos +8,2 pp y 2 orígenes sin mapear.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "metricas": {
+          "generados": 471,
+          "derivados": 163,
+          "presupuestados": 89,
+          "cerrados": 19,
+          "mrr": 4156.0,
+          "cpl": 4.34,
+          "cac": 107.67,
+          "pct_no_calificacion": 10.6,
+          "pct_inactivo": 46.3,
+          "proyeccion_derivados": 263
+        },
+        "hallazgos": [
+          "Q4 al 26/11: 471 generados, 163 derivados (meta 300, proyección 263), 19 cierres, MRR USD 4.156; CPL USD 4,34, CAC USD 107,67"
+        ],
+        "alertas": [
+          "% prospecto inactivo en desmejora: +8,2 pp (46,3% vs 38,1% Q3 a 57 días)",
+          "Origen sin mapear: Visitas presenciales - Lu (1 ayer)",
+          "Origen sin mapear: Agente Apper (5 ayer)"
+        ],
+        "alarma": "Enviada a #adqui-notificaciones-canales",
+        "origenes_a_decidir": [
+          {
+            "id": "AGENTE_APPER",
+            "nombre": "Agente Apper",
+            "prospectos": 11
+          },
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_ERP4TY",
+            "nombre": "Visitas presenciales - Lu",
+            "prospectos": 5
+          },
+          {
+            "id": "UC_NCC84N",
+            "nombre": "Visitas presenciales - Santi",
+            "prospectos": 3
+          }
+        ],
+        "origenes_automaticos": [],
+        "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
