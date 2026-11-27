@@ -1,0 +1,138 @@
+{
+  "corrida": "2026-11-27",
+  "datos_hasta": "2026-11-26",
+  "ventana_dias": 14,
+  "controles": {
+    "anuncio": {
+      "gasto_diario_sumado": 648787.49,
+      "gasto_total": 648787.49,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "campana": {
+      "gasto_diario_sumado": 648787.49,
+      "gasto_total": 648787.49,
+      "diferencia_pct": 0.0,
+      "cuadra": true
+    },
+    "gasto_de_ayer": 52980.44,
+    "errores": {
+      "errores_leidos": 50,
+      "sobre_entidades_vivas": 0
+    },
+    "resultados_que_van_al_crm": {
+      "2026-11-20": 9,
+      "2026-11-21": 5,
+      "2026-11-22": 9,
+      "2026-11-23": 12,
+      "2026-11-24": 7,
+      "2026-11-25": 12,
+      "2026-11-26": 13
+    },
+    "crm": {
+      "leads_por_dia": {
+        "2026-11-20": 6,
+        "2026-11-21": 4,
+        "2026-11-22": 7,
+        "2026-11-23": 10,
+        "2026-11-24": 10,
+        "2026-11-25": 6,
+        "2026-11-26": 15
+      },
+      "origenes": [
+        "Meta Ads Formulario",
+        "Meta Ads"
+      ]
+    },
+    "avisos_slack": {
+      "2026-11-20": 3,
+      "2026-11-21": 2,
+      "2026-11-22": 2,
+      "2026-11-23": 2,
+      "2026-11-24": 1,
+      "2026-11-25": 4,
+      "2026-11-26": 1
+    }
+  },
+  "alertas_que_disparan": [
+    {
+      "clave": "G2:120255552656560427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255552656560427",
+      "entidad": "DolorMostrador | Anim30 | EntreRios | v1 | 2026-11",
+      "titulo": "DolorMostrador | Anim30 | EntreRios | v1 | 2026-11: 2.139 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Conversiones Entre Rios (AGENTE META) · conjunto Entre Rios | Interaccion IG 120d | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-27"
+    },
+    {
+      "clave": "G2:120255552787020427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255552787020427",
+      "entidad": "GanasTiempo | Img | EntreRios | v1 | 2026-11",
+      "titulo": "GanasTiempo | Img | EntreRios | v1 | 2026-11: 5.169 ARS en 3 dias sin un solo resultado (3 dias seguidos)",
+      "detalle": "Campana JY | Conversiones Entre Rios (AGENTE META) · conjunto Entre Rios | LAL CRM + perfil | Provincias. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-11-26",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G2:120255577283510427",
+      "tipo": "sin_resultados",
+      "nivel": "anuncio",
+      "entidad_id": "120255577283510427",
+      "entidad": "CalcFiado-Numero | Img | Frio-Repuesteras | v1 | 2026-11",
+      "titulo": "CalcFiado-Numero | Img | Frio-Repuesteras | v1 | 2026-11: 2.672 ARS en 2 dias sin un solo resultado (2 dias seguidos)",
+      "detalle": "Campana JY | Lead Magnet Calculadora Fiado (AGENTE META) · conjunto Frio repuesteras - LAL CRM + intereses. Ojo: puede ser que el lead haya entrado al CRM y Meta no lo atribuya — el cruce real es el del lunes.",
+      "valor": 2,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-27"
+    },
+    {
+      "clave": "G3:cpl:120254876324870427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120254876324870427",
+      "entidad": "JY | Provincias Visitadas (AGENTE META)",
+      "titulo": "JY | Provincias Visitadas (AGENTE META): el costo por resultado sube hace 3 dias",
+      "detalle": "2026-11-24: 5.994 ARS/lead · 2026-11-25: sin leads ese dia · 2026-11-26: 6.566 ARS/lead — contra un promedio de 2.707 ARS/lead en los 7 dias previos. Subio y no volvio a bajar. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 3,
+      "primer_aviso": "2026-11-26",
+      "motivo_aviso": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120255330571790427",
+      "tipo": "cpl_subiendo",
+      "nivel": "campana",
+      "entidad_id": "120255330571790427",
+      "entidad": "JY | Clientes potenciales Boxer Taller (AGENTE META)",
+      "titulo": "JY | Clientes potenciales Boxer Taller (AGENTE META): el costo por resultado sube hace 1 dia",
+      "detalle": "De 478 a 2.033 ARS de un dia para el otro. Este es el costo que reporta Meta, no el CPL real sobre leads que llegaron al CRM: el que gobierna se calcula el lunes.",
+      "valor": 1,
+      "motivo_aviso": "nueva",
+      "primer_aviso": "2026-11-27"
+    }
+  ],
+  "se_mandan": [
+    "G2:120255552656560427",
+    "G2:120255577283510427",
+    "G3:cpl:120255330571790427"
+  ],
+  "silenciadas": [
+    {
+      "clave": "G2:120255552787020427",
+      "motivo": "ya avisada"
+    },
+    {
+      "clave": "G3:cpl:120254876324870427",
+      "motivo": "ya avisada"
+    }
+  ],
+  "resueltas": [
+    "G2:120254957791250427",
+    "G3:cpl:120252700778930427"
+  ]
+}
