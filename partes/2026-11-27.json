@@ -140,6 +140,34 @@
         "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9"
       },
       "para": []
+    },
+    "cursos": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:57",
+      "resumen": "Contenido con IA (10/12) y Webinar del 28/12: por abrir, sin medir: falta planilla y source_id (lo pasa Vent). Cursos en Vivo republicado sin cambios (lo publicado coincidía con el repo).",
+      "error": null,
+      "herramientas": [
+        "mcp__Google-Sheets__get_values",
+        "mcp__MCP-Meta__ads_get_ad_entities"
+      ],
+      "artefacto": "https://claude.ai/artifact/7Vh4FWB6jmE8asFYec5w6A",
+      "datos": {
+        "eventos": {},
+        "alertas": [],
+        "sin_medir": [],
+        "sin_datos": {
+          "2026-12-webinar-contenido-ia": [
+            "planilla",
+            "source_id"
+          ],
+          "2026-12-webinar-28-dic": [
+            "planilla",
+            "source_id"
+          ]
+        }
+      },
+      "para": []
     }
   },
   "preparacion": {

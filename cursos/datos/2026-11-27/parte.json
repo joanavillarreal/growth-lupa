@@ -1,0 +1,15 @@
+{
+  "eventos": {},
+  "alertas": [],
+  "sin_medir": [],
+  "sin_datos": {
+    "2026-12-webinar-contenido-ia": [
+      "planilla",
+      "source_id"
+    ],
+    "2026-12-webinar-28-dic": [
+      "planilla",
+      "source_id"
+    ]
+  }
+}
