@@ -102,6 +102,44 @@
         "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:57",
+      "resumen": "Panel de redes republicado (cuentas al 26/11). Gestión 6.185 seguidores (+33 en 7 días), engagement orgánico 7,7%; Taller 151 (+4). Leads de redes Q4: 8 (5 derivados).",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "marcas": {
+          "boxer-gestion": {
+            "seguidores": 6185,
+            "seguidores_delta_7d": 33,
+            "alcance_7d": 33626,
+            "alcance_organico_7d": 692,
+            "engagement_organico_pct": 7.7,
+            "muestra_chica": false
+          },
+          "boxer-taller": {
+            "seguidores": 151,
+            "seguidores_delta_7d": 4,
+            "alcance_7d": 14932,
+            "alcance_organico_7d": 67,
+            "engagement_organico_pct": 1.5,
+            "muestra_chica": true
+          }
+        },
+        "datos_hasta": "2026-11-26",
+        "leads_q4": {
+          "total": 8,
+          "fuente": "snapshot del funnel 2026-11-27 (panel_redes.py)"
+        },
+        "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9"
+      },
+      "para": []
     }
   },
   "preparacion": {
