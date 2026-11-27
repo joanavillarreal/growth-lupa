@@ -1,7 +1,54 @@
 {
   "fecha": "2026-11-27",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Monitor republicado. Alarma: CAC Q4 $110,83 (+40% vs mismo tramo Q3); origen sin mapear Agente Apper.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [
+          "CAC en desmejora +40%: Q4 a 58 días $110,83 vs $79,22 mismo tramo Q3",
+          "Origen sin mapear: Agente Apper (1 prospecto ayer)"
+        ],
+        "origenes_a_decidir": [
+          {
+            "id": "AGENTE_APPER",
+            "nombre": "Agente Apper",
+            "prospectos": 12
+          },
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_ERP4TY",
+            "nombre": "Visitas presenciales - Lu",
+            "prospectos": 5
+          },
+          {
+            "id": "UC_NCC84N",
+            "nombre": "Visitas presenciales - Santi",
+            "prospectos": 3
+          }
+        ],
+        "origenes_automaticos": [],
+        "snapshot": "2026-11-27: 2090 prospectos, 1308 negociaciones",
+        "slack": "https://somosait.slack.com/archives/C0C2XKTLT9N/p1795776798579189"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
