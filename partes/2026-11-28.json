@@ -113,6 +113,46 @@
         "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
       },
       "para": []
+    },
+    "redes_general": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:05",
+      "resumen": "Panel de redes republicado (cuentas al 27/11). Gestión 6.194 seguidores (+42 en 7 días), engagement orgánico 10,3%; Taller 151 (+4). Leads de redes Q4: 8 (5 derivados).",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Metricool__getAnalyticsDataByMetrics"
+      ],
+      "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9",
+      "datos": {
+        "marcas": {
+          "boxer-gestion": {
+            "seguidores": 6194,
+            "seguidores_delta_7d": 42,
+            "alcance_7d": 34827,
+            "alcance_organico_7d": 673,
+            "engagement_organico_pct": 10.3,
+            "muestra_chica": false
+          },
+          "boxer-taller": {
+            "seguidores": 151,
+            "seguidores_delta_7d": 4,
+            "alcance_7d": 14751,
+            "alcance_organico_7d": 64,
+            "engagement_organico_pct": 1.6,
+            "muestra_chica": true
+          }
+        },
+        "datos_hasta": "2026-11-27",
+        "leads_q4": {
+          "total": 8,
+          "derivados": 5,
+          "fuente": "snapshot del funnel 2026-11-28 (panel_redes.py)"
+        },
+        "nota_metricool": "LinkedIn de Gestión y Facebook de Taller trajeron el 27/11 con valores 0/null (día recién cerrado en Metricool); se guardó tal cual vino.",
+        "artefacto": "https://claude.ai/artifact/7CvY69B57dbuAACEgjHwr9"
+      },
+      "para": []
     }
   },
   "preparacion": {
