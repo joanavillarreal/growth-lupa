@@ -57,6 +57,62 @@
         "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
       },
       "para": []
+    },
+    "meta": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "08:03",
+      "resumen": "Panel Meta Ads republicado. Gasto 27/11: 48.507 ARS; guardia corrió (5 alertas detectadas, no enviadas por regla).",
+      "error": null,
+      "herramientas": [
+        "mcp__MCP-Meta__ads_get_ad_entities",
+        "mcp__MCP-Meta__ads_get_errors",
+        "mcp__MCP-Meta__ads_get_creatives",
+        "mcp__MCP-Meta__ads_get_ad_accounts",
+        "mcp__MCP-Meta__ads_account_get_activity_logs",
+        "mcp__Slack__slack_read_channel"
+      ],
+      "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12",
+      "datos": {
+        "alertas_detectadas_no_enviadas": [
+          "G2: Video Lu - Actualización de precios y stock (11.148 ARS en 1 día sin resultados)",
+          "G2: Visitas presenciales - Zonas LU (3.656 ARS en 2 días sin resultados)",
+          "G2: AsesoriaVirtual | Video | Neuquen LAL | v1 | 2026-10 (4.258 ARS en 2 días sin resultados)",
+          "G2: CalcFiado-Diagnostico | Img | Frio-Repuesteras | v1 | 2026-11 (4.408 ARS en 2 días sin resultados)",
+          "G3:cpl JY | Conversiones (costo por resultado de 2.053 a 4.540 ARS en 1 día)"
+        ],
+        "silenciadas": 4,
+        "resueltas": [
+          "JY | Clientes potenciales Boxer Taller (AGENTE META) (G3 cpl)"
+        ],
+        "gasto_ayer_ars": 48507,
+        "conciliacion": {
+          "leads_meta_ayer": 6,
+          "crm_ayer": 5,
+          "avisados_slack": 0,
+          "faltan": 1
+        },
+        "campanas_a_confirmar": [
+          "JY | Webinar Decidí mejor con IA - 19 NOV 2026 (AGENTE META)",
+          "JY | Lead Magnet Calculadora Fiado (AGENTE META)"
+        ],
+        "anuncios_sin_drive": "no verificado hoy: panel_meta.py no expone la lista y no la armo a mano",
+        "cambios_actividad": "4 en la respuesta (desde 25/11), 0 nuevos. Respuestas grandes copiadas del archivo de resultado; las chicas escritas tal cual vinieron (en anuncio-total un error de copia mío lo detectó la validación JSON y se corrigió contra la respuesta original antes de validar).",
+        "slack_reingresos": "25/11 a 27/11 leídos del canal: 27/11 sin RE-INGRESO ni RECONTACTO.",
+        "creativos": "ninguno faltante: no se llamó ads_get_creatives",
+        "panel": {
+          "gasto_q_ars": 2538827,
+          "meta_crm_pct": 99,
+          "cpl_real_ars": 4726,
+          "derivacion_pct": 15.3,
+          "campanas_activas": 9,
+          "anuncios_activos": 26,
+          "presupuesto_diario_ars": 49000
+        },
+        "validar_mcp": "OK: 10 respuestas abren y los totales cuadran",
+        "artefacto": "https://claude.ai/artifact/GVEEa9pDVDPmV6Yzn7gS12"
+      },
+      "para": []
     }
   },
   "preparacion": {
