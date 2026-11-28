@@ -1,7 +1,64 @@
 {
   "fecha": "2026-11-28",
   "modo": "oficial",
-  "analisis": {},
+  "analisis": {
+    "funnel": {
+      "estado": "ok",
+      "intentos": 1,
+      "hora": "07:53",
+      "resumen": "Monitor republicado. Q4 al 28/11: 503 leads, 19 cierres, CPL USD 4,25, CAC USD 112,54. Alarma sin novedades.",
+      "error": null,
+      "herramientas": [],
+      "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y",
+      "datos": {
+        "alertas": [],
+        "alarma": "Sin novedades: la alarma diaria no manda mensaje.",
+        "metricas": {
+          "q": "2026-Q4",
+          "corte": "2026-11-28",
+          "generados": 503,
+          "derivados": 170,
+          "presupuestados": 94,
+          "cerrados": 19,
+          "mrr": 4156.0,
+          "gasto_usd": 2138.27,
+          "cpl": 4.25,
+          "cac": 112.54
+        },
+        "origenes_a_decidir": [
+          {
+            "id": "AGENTE_APPER",
+            "nombre": "Agente Apper",
+            "prospectos": 12
+          },
+          {
+            "id": "UC_AQMO17",
+            "nombre": "Itca 2026",
+            "prospectos": 0
+          },
+          {
+            "id": "UC_CCDPGU",
+            "nombre": "Expomecanico",
+            "prospectos": 1
+          },
+          {
+            "id": "UC_ERP4TY",
+            "nombre": "Visitas presenciales - Lu",
+            "prospectos": 5
+          },
+          {
+            "id": "UC_NCC84N",
+            "nombre": "Visitas presenciales - Santi",
+            "prospectos": 3
+          }
+        ],
+        "origenes_automaticos": [],
+        "snapshot": "2026-11-28: 2103 prospectos, 1308 negociaciones",
+        "artefacto": "https://claude.ai/artifact/3G7z5oWCzP6hjALXubjU1Y"
+      },
+      "para": []
+    }
+  },
   "preparacion": {
     "gasto_meta": {
       "estado": "ok",
